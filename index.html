@@ -13,30 +13,34 @@
   <meta property="og:site_name" content="英語学習サービス比較ナビ">
   <meta name="twitter:card" content="summary">
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
 :root {
-  --primary: #1e40af;
-  --primary-light: #3b82f6;
-  --primary-pale: #eff6ff;
-  --accent: #f59e0b;
-  --accent-dark: #d97706;
-  --text: #111827;
-  --text-muted: #6b7280;
-  --bg: #ffffff;
-  --bg-gray: #f9fafb;
-  --border: #e5e7eb;
-  --shadow: 0 1px 3px rgba(0,0,0,0.10);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
-  --radius: 8px;
-  --radius-lg: 12px;
+  --primary: #b85c45;
+  --primary-light: #d4735f;
+  --primary-pale: #fdf0ec;
+  --accent: #3a9e72;
+  --accent-dark: #2d8059;
+  --accent-pale: #e8f5ef;
+  --text: #2c2520;
+  --text-muted: #7a6e68;
+  --bg: #fffbf7;
+  --bg-gray: #fdf5ef;
+  --border: #e8d5c4;
+  --shadow: 0 2px 10px rgba(100,60,40,0.08);
+  --shadow-md: 0 8px 28px rgba(100,60,40,0.14);
+  --radius: 12px;
+  --radius-lg: 20px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI",
-    "Meiryo", sans-serif;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Yu Gothic UI", "Meiryo", sans-serif;
   font-size: 16px;
-  line-height: 1.85;
+  line-height: 1.9;
   color: var(--text);
   background: var(--bg);
 }
@@ -49,143 +53,210 @@ img { max-width: 100%; height: auto; }
 
 /* Header */
 .site-header {
-  background: var(--primary);
+  background: #2c2520;
   color: white;
   padding: 14px 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
 }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; }
-.site-header .logo { font-size: 1.2rem; font-weight: 700; color: white; text-decoration: none; }
-.site-header nav a {
-  color: rgba(255,255,255,0.88);
+.site-header .logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
   text-decoration: none;
-  margin-left: 20px;
-  font-size: 0.9rem;
+  letter-spacing: 0.03em;
 }
-.site-header nav a:hover { color: white; }
+.site-header .logo span { color: #f0a080; }
+.site-header nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 0.88rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.site-header nav a:hover { color: white; border-color: #f0a080; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
-  color: white;
-  padding: 64px 0 56px;
+  background: var(--bg-gray);
+  color: var(--text);
+  padding: 60px 0 52px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
 }
-.hero h1 { font-size: 1.9rem; font-weight: 800; line-height: 1.4; margin-bottom: 16px; }
-.hero p { font-size: 1.05rem; opacity: 0.92; max-width: 600px; margin: 0 auto 28px; }
-.hero .badge {
-  display: inline-block;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 0.85rem;
-  margin-bottom: 20px;
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #d4b8a8 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.hero > * { position: relative; }
+.hero h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.45;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+.hero h1 em { font-style: normal; color: var(--primary); }
+.hero p { font-size: 1.02rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 28px; }
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  box-shadow: var(--shadow);
+}
+.hero-badge strong { color: var(--primary); font-size: 1rem; }
+.hero-updated {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 8px;
 }
 
 /* Sections */
-.section { padding: 60px 0; }
+.section { padding: 64px 0; }
 .section-alt { background: var(--bg-gray); }
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 8px;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.section-title::after {
+.section-title::before {
   content: '';
-  display: block;
-  width: 48px;
-  height: 4px;
+  display: inline-block;
+  width: 6px;
+  height: 1.4em;
   background: var(--primary);
-  margin: 12px auto 0;
-  border-radius: 2px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.section-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  padding-left: 16px;
 }
 
 /* Ranking cards */
-.ranking-list { display: flex; flex-direction: column; gap: 20px; }
+.ranking-list { display: flex; flex-direction: column; gap: 16px; }
 .ranking-card {
   background: white;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: 20px 24px;
   display: grid;
-  grid-template-columns: 52px 1fr auto;
+  grid-template-columns: 56px 1fr auto;
   gap: 16px;
   align-items: center;
   box-shadow: var(--shadow);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
 }
-.ranking-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
-.ranking-card.rank-1 { border-left: 4px solid #f59e0b; }
-.ranking-card.rank-2 { border-left: 4px solid #9ca3af; }
-.ranking-card.rank-3 { border-left: 4px solid #cd7c2f; }
+.ranking-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--primary-light);
+}
+.ranking-card.rank-1 { border-color: #e8b84b; background: linear-gradient(to right, #fffdf5, white 120px); }
+.ranking-card.rank-2 { border-color: #b0b8c1; background: linear-gradient(to right, #f8f9fa, white 120px); }
+.ranking-card.rank-3 { border-color: #c89060; background: linear-gradient(to right, #fdf7f0, white 120px); }
 .rank-badge {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   flex-shrink: 0;
 }
-.rank-1 .rank-badge { background: #fef3c7; color: #d97706; }
-.rank-2 .rank-badge { background: #f3f4f6; color: #6b7280; }
-.rank-3 .rank-badge { background: #fef9c3; color: #92400e; }
-.rank-badge.rank-other { background: var(--primary-pale); color: var(--primary); font-size: 1rem; }
-.card-body h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
-.card-body .price { color: var(--primary); font-weight: 600; font-size: 0.9rem; }
-.card-body .features { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
-.feature-tag {
-  background: var(--primary-pale);
-  color: var(--primary);
-  border-radius: 4px;
-  padding: 2px 8px;
-  font-size: 0.78rem;
+.rank-1 .rank-badge { background: linear-gradient(135deg, #fde68a, #f0b429); color: #7c5a00; box-shadow: 0 3px 8px rgba(240,180,41,0.35); }
+.rank-2 .rank-badge { background: linear-gradient(135deg, #e5e7eb, #9ca3af); color: #374151; box-shadow: 0 3px 8px rgba(156,163,175,0.35); }
+.rank-3 .rank-badge { background: linear-gradient(135deg, #fde8cc, #c89060); color: #6b3a10; box-shadow: 0 3px 8px rgba(200,144,96,0.35); }
+.rank-badge.rank-other { background: var(--bg-gray); color: var(--text-muted); font-size: 1rem; border: 1px solid var(--border); }
+.card-body h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+.card-body .card-target {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 6px;
 }
-.stars { color: #f59e0b; font-size: 1.1rem; }
-.score { font-weight: 700; color: var(--text); margin-left: 4px; }
-.card-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; flex-shrink: 0; }
+.card-body .card-target::before { content: "こんな人に "; color: var(--text-muted); font-weight: 400; }
+.card-body .price { color: var(--primary); font-weight: 700; font-size: 0.92rem; margin-bottom: 8px; }
+.card-body .features { display: flex; flex-wrap: wrap; gap: 5px; }
+.feature-tag {
+  background: var(--accent-pale);
+  color: var(--accent-dark);
+  border-radius: 6px;
+  padding: 2px 9px;
+  font-size: 0.76rem;
+  font-weight: 500;
+}
+.stars { color: #e8b84b; font-size: 1.05rem; letter-spacing: 1px; }
+.score { font-weight: 700; color: var(--text); margin-left: 4px; font-size: 0.92rem; }
+.card-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; flex-shrink: 0; min-width: 130px; }
 .btn-primary {
   display: inline-block;
-  background: var(--accent);
+  background: var(--primary);
   color: white;
-  padding: 10px 20px;
+  padding: 11px 20px;
   border-radius: var(--radius);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 3px 10px rgba(184,92,69,0.3);
 }
-.btn-primary:hover { background: var(--accent-dark); color: white; }
+.btn-primary:hover { background: var(--primary-light); color: white; transform: translateY(-1px); }
 .btn-secondary {
   display: inline-block;
   background: white;
-  color: var(--primary);
-  border: 1px solid var(--primary);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
   padding: 8px 16px;
   border-radius: var(--radius);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
-.btn-secondary:hover { background: var(--primary-pale); }
+.btn-secondary:hover { background: var(--primary-pale); color: var(--primary); border-color: var(--primary-light); }
 
 /* Article grid */
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 .article-card {
   background: white;
@@ -193,21 +264,23 @@ img { max-width: 100%; height: auto; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.25s, transform 0.25s;
 }
-.article-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.article-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.article-card-accent { height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
 .article-card-body { padding: 20px; }
 .article-category {
   display: inline-block;
   background: var(--primary-pale);
   color: var(--primary);
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   padding: 3px 10px;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-bottom: 10px;
+  letter-spacing: 0.04em;
 }
-.article-card h3 { font-size: 0.95rem; line-height: 1.5; }
+.article-card h3 { font-size: 0.93rem; line-height: 1.55; font-weight: 600; }
 .article-card a { text-decoration: none; color: var(--text); }
 .article-card a:hover h3 { color: var(--primary); }
 
@@ -219,17 +292,25 @@ img { max-width: 100%; height: auto; }
   padding: 40px 0;
 }
 .article-content { min-width: 0; }
-.article-content h1 { font-size: 1.6rem; line-height: 1.4; margin-bottom: 20px; }
+.article-content h1 { font-size: 1.55rem; line-height: 1.45; margin-bottom: 20px; font-weight: 800; }
 .article-content h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin: 36px 0 16px;
-  padding: 12px 16px;
-  background: var(--primary-pale);
+  margin: 40px 0 16px;
+  padding: 13px 18px;
+  background: var(--bg-gray);
   border-left: 4px solid var(--primary);
   border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--text);
 }
-.article-content h3 { font-size: 1.1rem; font-weight: 700; margin: 24px 0 12px; color: var(--primary); }
+.article-content h3 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: var(--primary);
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+}
 .article-content p { margin-bottom: 16px; }
 .article-content ul, .article-content ol { margin: 16px 0 16px 24px; }
 .article-content li { margin-bottom: 8px; }
@@ -238,81 +319,100 @@ img { max-width: 100%; height: auto; }
   border-collapse: collapse;
   margin: 24px 0;
   font-size: 0.9rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 .article-content th {
   background: var(--primary);
   color: white;
-  padding: 10px 14px;
+  padding: 11px 16px;
   text-align: left;
+  font-weight: 600;
 }
-.article-content td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+.article-content td { padding: 11px 16px; border-bottom: 1px solid var(--border); }
 .article-content tr:nth-child(even) td { background: var(--bg-gray); }
 
 /* Sidebar */
 .sidebar {}
 .sidebar-widget {
-  background: var(--bg-gray);
+  background: white;
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
 }
-.sidebar-widget h4 { font-size: 1rem; font-weight: 700; margin-bottom: 14px; color: var(--primary); }
+.sidebar-widget h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--bg-gray);
+}
 .sidebar-service-list { display: flex; flex-direction: column; gap: 10px; }
 .sidebar-service-item { display: flex; align-items: center; justify-content: space-between; }
-.sidebar-service-item a { font-size: 0.9rem; text-decoration: none; }
+.sidebar-service-item a { font-size: 0.88rem; text-decoration: none; color: var(--text); }
+.sidebar-service-item a:hover { color: var(--primary); }
 
 /* TOC */
 .toc {
   background: var(--bg-gray);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
   padding: 20px 24px;
   margin: 24px 0 32px;
 }
-.toc h4 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+.toc h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; color: var(--accent-dark); }
 .toc ol { margin-left: 20px; }
-.toc li { margin-bottom: 6px; font-size: 0.9rem; }
+.toc li { margin-bottom: 6px; font-size: 0.88rem; }
+.toc a { color: var(--text-muted); text-decoration: none; }
+.toc a:hover { color: var(--primary); }
 
 /* Breadcrumb */
 .breadcrumb {
   padding: 12px 0;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
 }
 .breadcrumb a { color: var(--text-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--primary); }
-.breadcrumb span { margin: 0 8px; }
+.breadcrumb span { margin: 0 6px; color: var(--border); }
 
 /* CTA Box */
 .cta-box {
-  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  background: linear-gradient(135deg, #b85c45, #d4735f);
   color: white;
   border-radius: var(--radius-lg);
   padding: 28px 32px;
   text-align: center;
-  margin: 32px 0;
+  margin: 36px 0;
+  box-shadow: 0 8px 24px rgba(184,92,69,0.25);
 }
-.cta-box h3 { font-size: 1.2rem; margin-bottom: 10px; }
-.cta-box p { opacity: 0.9; margin-bottom: 20px; font-size: 0.95rem; }
+.cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; }
+.cta-box p { opacity: 0.9; margin-bottom: 20px; font-size: 0.93rem; }
 .btn-cta-white {
   display: inline-block;
   background: white;
   color: var(--primary);
-  padding: 12px 28px;
+  padding: 13px 32px;
   border-radius: var(--radius);
   font-weight: 700;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.15s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
-.btn-cta-white:hover { opacity: 0.9; color: var(--primary); }
+.btn-cta-white:hover { opacity: 0.92; color: var(--primary); transform: translateY(-1px); }
 
 /* Footer */
 .site-footer {
-  background: #1f2937;
-  color: rgba(255,255,255,0.7);
-  padding: 40px 0 20px;
-  margin-top: 60px;
-  font-size: 0.9rem;
+  background: #2c2520;
+  color: rgba(255,255,255,0.65);
+  padding: 48px 0 24px;
+  margin-top: 72px;
+  font-size: 0.88rem;
 }
 .footer-grid {
   display: grid;
@@ -320,33 +420,48 @@ img { max-width: 100%; height: auto; }
   gap: 32px;
   margin-bottom: 32px;
 }
-.site-footer h4 { color: white; font-size: 1rem; margin-bottom: 12px; }
+.site-footer h4 { color: rgba(255,255,255,0.9); font-size: 0.95rem; margin-bottom: 14px; }
 .site-footer ul { list-style: none; }
-.site-footer li { margin-bottom: 8px; }
-.site-footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
-.site-footer a:hover { color: white; }
+.site-footer li { margin-bottom: 9px; }
+.site-footer a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+.site-footer a:hover { color: #f0a080; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 20px;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
 }
 .disclaimer {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 16px;
-  font-size: 0.8rem;
-  color: #6b7280;
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
   margin-top: 40px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 1.4rem; }
-  .ranking-card { grid-template-columns: 44px 1fr; }
-  .card-actions { display: none; }
+  .hero h1 { font-size: 1.45rem; }
+  .hero-badges { gap: 8px; }
+  .ranking-card {
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto auto;
+    padding: 16px;
+  }
+  .card-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    min-width: unset;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .card-actions .btn-primary { flex: 1; text-align: center; }
+  .card-actions .btn-secondary { flex: 0 0 auto; }
   .article-layout { grid-template-columns: 1fr; }
   .sidebar { display: none; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -366,17 +481,20 @@ img { max-width: 100%; height: auto; }
 </header>
 <section class="hero">
   <div class="container">
-    <div class="badge">2026年最新版</div>
-    <h1>英語学習サービス<br>おすすめランキング</h1>
-    <p>オンライン英会話から英語コーチングまで徹底比較。<br>目的・予算に合ったサービスが見つかります。</p>
+    <h1>英語学習サービス<br><em>おすすめランキング 2026年版</em></h1>
+    <p>オンライン英会話・英語コーチングを実際に調べて比較。<br>目的と予算に合ったサービスが見つかります。</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><strong>12</strong>サービスを比較</span>
+      <span class="hero-badge"><strong>27</strong>本の解説記事</span>
+      <span class="hero-badge"><strong>毎週</strong>情報更新</span>
+    </div>
+    <p class="hero-updated">最終更新: 2026年02月20日</p>
   </div>
 </section>
 <section class="section">
   <div class="container">
     <h2 class="section-title">オンライン英会話 おすすめランキング</h2>
-    <p style="text-align:center;color:#6b7280;margin-top:-24px;margin-bottom:32px;">
-      コスパ重視・続けやすさで選ぶならオンライン英会話
-    </p>
+    <p class="section-subtitle">コスパ重視・続けやすさで選ぶならオンライン英会話</p>
     <div class="ranking-list">
   <div class="ranking-card rank-1">
     <div class="rank-badge">1</div>
@@ -384,11 +502,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/dmm-eikaiwa/" style="text-decoration:none;color:inherit;">DMM英会話</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.5</span></div>
       <div class="price">月額1,980円〜</div>
+      <div class="card-target">毎日コツコツ練習したい社会人・学生</div>
       <div class="features"><span class="feature-tag">講師数15,000人以上</span><span class="feature-tag">24時間365日対応</span><span class="feature-tag">1レッスン25分</span></div>
     </div>
     <div class="card-actions">
       <a href="https://eikaiwa.dmm.com/" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/dmm-eikaiwa/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/dmm-eikaiwa/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card rank-2">
@@ -397,11 +516,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/rarejob/" style="text-decoration:none;color:inherit;">レアジョブ英会話</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.3</span></div>
       <div class="price">月額1,430円〜</div>
+      <div class="card-target">ビジネス英語を体系的に学びたい社会人</div>
       <div class="features"><span class="feature-tag">講師7,000人以上</span><span class="feature-tag">独自開発テキスト</span><span class="feature-tag">ビジネス英語特化コース</span></div>
     </div>
     <div class="card-actions">
       <a href="https://px.a8.net/svt/ejp?a8mat=4AXFOG+JNCII+1SVU+686ZM" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/rarejob/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/rarejob/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card rank-3">
@@ -410,11 +530,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/nativecamp/" style="text-decoration:none;color:inherit;">ネイティブキャンプ</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.2</span></div>
       <div class="price">月額6,480円（無制限）</div>
+      <div class="card-target">隙間時間を活用して量をこなしたい人</div>
       <div class="features"><span class="feature-tag">レッスン回数無制限</span><span class="feature-tag">予約不要でスキマ時間に</span><span class="feature-tag">講師7,000人以上</span></div>
     </div>
     <div class="card-actions">
       <a href="https://px.a8.net/svt/ejp?a8mat=44WLF2+BW2OQA+35VG+6LWTE" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/nativecamp/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/nativecamp/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card ">
@@ -423,11 +544,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/studysapuri-english/" style="text-decoration:none;color:inherit;">スタディサプリENGLISH</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.1</span></div>
       <div class="price">月額2,178円〜</div>
+      <div class="card-target">TOEIC対策・体系的なカリキュラムが好きな人</div>
       <div class="features"><span class="feature-tag">動画講義1,000本以上</span><span class="feature-tag">AIスピーキング練習</span><span class="feature-tag">TOEICコース充実</span></div>
     </div>
     <div class="card-actions">
       <a href="https://px.a8.net/svt/ejp?a8mat=4AXFOG+1X2BQ2+3AQG+ZS5GI" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/studysapuri-english/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/studysapuri-english/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card ">
@@ -436,11 +558,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/cambly/" style="text-decoration:none;color:inherit;">Cambly（キャンブリー）</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.0</span></div>
       <div class="price">月額3,600円〜（15分/週）</div>
+      <div class="card-target">本場の英語を身に付けたい上級者・ビジネスパーソン</div>
       <div class="features"><span class="feature-tag">ネイティブ講師のみ</span><span class="feature-tag">会話録画機能あり</span><span class="feature-tag">即時接続（スタンバイ機能）</span></div>
     </div>
     <div class="card-actions">
       <a href="https://px.a8.net/svt/ejp?a8mat=44WTZ2+TRP0Y+428Q+HVFKY" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/cambly/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/cambly/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card ">
@@ -449,11 +572,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/bizmates/" style="text-decoration:none;color:inherit;">Bizmates（ビズメイツ）</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.2</span></div>
       <div class="price">月額6,500円〜</div>
+      <div class="card-target">グローバルビジネスで即戦力になりたい社会人</div>
       <div class="features"><span class="feature-tag">ビジネス経験のある講師のみ</span><span class="feature-tag">独自のBiZmatesメソッド</span><span class="feature-tag">プレゼン・交渉特化コース</span></div>
     </div>
     <div class="card-actions">
       <a href="https://www.bizmates.jp/" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/bizmates/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/bizmates/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card ">
@@ -462,11 +586,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/esports-eikaiwa/" style="text-decoration:none;color:inherit;">eスポーツ英会話</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.1</span></div>
       <div class="price">月額4,980円〜</div>
+      <div class="card-target">ゲームが好きで楽しく英語を学びたい10〜30代</div>
       <div class="features"><span class="feature-tag">ゲームしながら英会話</span><span class="feature-tag">ネイティブ講師在籍</span><span class="feature-tag">ゲーム・アニメ・映画題材</span></div>
     </div>
     <div class="card-actions">
       <a href="https://px.a8.net/svt/ejp?a8mat=44WLF2+BUADWY+5LPE+5YJRM" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/esports-eikaiwa/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/esports-eikaiwa/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card ">
@@ -475,23 +600,22 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/italki/" style="text-decoration:none;color:inherit;">italki（アイトーキー）</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.2</span></div>
       <div class="price">1レッスン1,000円〜（講師により異なる）</div>
+      <div class="card-target">英語以外の言語も含め多言語を学びたい人・格安でマンツーマンレッスンを受けたい人</div>
       <div class="features"><span class="feature-tag">150以上の言語に対応</span><span class="feature-tag">世界中のプロ・コミュニティ講師</span><span class="feature-tag">完全マンツーマン</span></div>
     </div>
     <div class="card-actions">
       <a href="https://px.a8.net/svt/ejp?a8mat=44WLF2+BWO4C2+5NSE+5YJRM" class="btn-primary" target="_blank" rel="nofollow noopener">無料体験する</a>
-      <a href="/services/italki/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/italki/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section">
   <div class="container">
     <h2 class="section-title">本気で習得したいなら英語コーチング</h2>
-    <p style="text-align:center;color:#6b7280;margin-top:-24px;margin-bottom:32px;">
-      短期集中で確実に成果を出したい人向け。無料カウンセリングあり。
-    </p>
+    <p class="section-subtitle">短期集中で確実に成果を出したい人向け。無料カウンセリングあり。</p>
     <div class="ranking-list">
   <div class="ranking-card rank-1">
     <div class="rank-badge">1</div>
@@ -499,11 +623,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/progrit/" style="text-decoration:none;color:inherit;">プログリット</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.6</span></div>
       <div class="price">3ヶ月プラン：¥109,780〜</div>
+      <div class="card-target">3〜6ヶ月で確実に英語を習得したい社会人</div>
       <div class="features"><span class="feature-tag">専属コンサルタントによる毎日サポート</span><span class="feature-tag">AI×人間の最適学習設計</span><span class="feature-tag">受講生の95%が目標達成</span></div>
     </div>
     <div class="card-actions">
       <a href="https://www.progrit.co.jp/" class="btn-primary" target="_blank" rel="nofollow noopener">無料カウンセリングを見る</a>
-      <a href="/services/progrit/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/progrit/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card rank-2">
@@ -512,11 +637,12 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/toraiz/" style="text-decoration:none;color:inherit;">トライズ</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.4</span></div>
       <div class="price">月額100,000円〜（1年プラン）</div>
+      <div class="card-target">1年で英語をビジネスレベルにしたい社会人</div>
       <div class="features"><span class="feature-tag">1,000時間のトレーニング</span><span class="feature-tag">専属コーチ制</span><span class="feature-tag">完全オンライン対応</span></div>
     </div>
     <div class="card-actions">
       <a href="https://toraiz.jp/" class="btn-primary" target="_blank" rel="nofollow noopener">無料カウンセリングを見る</a>
-      <a href="/services/toraiz/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/toraiz/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
   <div class="ranking-card rank-3">
@@ -525,51 +651,59 @@ img { max-width: 100%; height: auto; }
       <h3><a href="/services/english-company/" style="text-decoration:none;color:inherit;">THE ENGLISH COMPANY</a></h3>
       <div><span class="stars">★★★★☆</span><span class="score">4.5</span></div>
       <div class="price">3ヶ月プラン：¥99,000〜</div>
+      <div class="card-target">理論的・体系的なアプローチで英語を習得したい社会人</div>
       <div class="features"><span class="feature-tag">科学的根拠に基づくカリキュラム</span><span class="feature-tag">専属トレーナー制</span><span class="feature-tag">脳科学・認知科学を活用</span></div>
     </div>
     <div class="card-actions">
       <a href="https://theenglishcompany.jp/" class="btn-primary" target="_blank" rel="nofollow noopener">無料カウンセリングを見る</a>
-      <a href="/services/english-company/" class="btn-secondary">詳細レビューを見る</a>
+      <a href="/services/english-company/" class="btn-secondary">詳細を見る</a>
     </div>
   </div>
     </div>
   </div>
 </section>
-<section class="section">
+<section class="section section-alt">
   <div class="container">
     <h2 class="section-title">英語学習コラム</h2>
+    <p class="section-subtitle">選び方・続け方・効果の出し方をまとめました</p>
     <div class="articles-grid">
   <div class="article-card">
+    <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">継続・挫折</span>
       <h3><a href="/articles/online-eikaiwa-not-continue-reasons/">オンライン英会話が続かない12の理由と、3ヶ月以上続けるための対策</a></h3>
     </div>
   </div>
   <div class="article-card">
+    <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">継続・挫折</span>
       <h3><a href="/articles/busy-worker-online-eikaiwa-guide/">忙しい社会人がオンライン英会話を続ける方法【1日15分でOKな現実プラン】</a></h3>
     </div>
   </div>
   <div class="article-card">
+    <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">年代別</span>
       <h3><a href="/articles/40s-online-eikaiwa-guide/">40代からのオンライン英会話、本当に効果はある？3ヶ月で変わった体験談</a></h3>
     </div>
   </div>
   <div class="article-card">
+    <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">比較・選び方</span>
       <h3><a href="/articles/english-coaching-vs-online-eikaiwa/">英語コーチングとオンライン英会話、どっちを選ぶべきか【費用対効果で判断】</a></h3>
     </div>
   </div>
   <div class="article-card">
+    <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">英語コーチング</span>
       <h3><a href="/articles/progrit-review/">プログリット（PROGRIT）の評判は？実際の効果・料金・3ヶ月で変わること</a></h3>
     </div>
   </div>
   <div class="article-card">
+    <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">英語コーチング</span>
       <h3><a href="/articles/toraiz-review/">トライズの評判・口コミまとめ【1,000時間プログラムの実態と料金を解説】</a></h3>
