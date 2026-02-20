@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://hikaku.native-real.com/sitemap.xml
+Sitemap: https://native-real.com/sitemap.xml
