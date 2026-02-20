@@ -267,8 +267,44 @@ img { max-width: 100%; height: auto; }
   transition: box-shadow 0.25s, transform 0.25s;
 }
 .article-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.article-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
 .article-card-accent { height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
 .article-card-body { padding: 20px; }
+
+/* Review hero image */
+.review-hero-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 28px;
+  display: block;
+  box-shadow: var(--shadow-md);
+}
+.review-hero-credit {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: -22px;
+  margin-bottom: 24px;
+  text-align: right;
+}
+.review-hero-credit a { color: var(--text-muted); }
+
+/* Article hero image */
+.article-hero-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 28px;
+  display: block;
+  box-shadow: var(--shadow);
+}
 .article-category {
   display: inline-block;
   background: var(--primary-pale);
@@ -484,6 +520,7 @@ img { max-width: 100%; height: auto; }
   <p style="color:#6b7280;margin-bottom:32px;">オンライン英会話の選び方・英語学習のコツを分かりやすく解説します</p>
   <div class="articles-grid">
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxzdHVkeSUyMG1vdGl2YXRpb24lMjBwZXJzaXN0ZW5jZSUyMGhhYml0fGVufDB8MHx8fDE3NzE1OTY5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="オンライン英会話が続かない12の理由と、3ヶ月以上続けるための対策" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">継続・挫折</span>
@@ -492,6 +529,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxzdHVkeSUyMG1vdGl2YXRpb24lMjBwZXJzaXN0ZW5jZSUyMGhhYml0fGVufDB8MHx8fDE3NzE1OTY5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="忙しい社会人がオンライン英会話を続ける方法【1日15分でOKな現実プラン】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">継続・挫折</span>
@@ -500,6 +538,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">年代別</span>
@@ -508,6 +547,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1762329388386-22bf162a9368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxjaG9vc2luZyUyMGNvbXBhcmluZyUyMG9ubGluZSUyMGNvdXJzZXxlbnwwfDB8fHwxNzcxNTk2OTg2fDA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="英語コーチングとオンライン英会話、どっちを選ぶべきか【費用対効果で判断】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">比較・選び方</span>
@@ -516,6 +556,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1646579886135-068c73800308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwY29hY2hpbmclMjBpbnRlbnNpdmUlMjBwcm9ncmFtfGVufDB8MHx8fDE3NzE1OTY5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="プログリット（PROGRIT）の評判は？実際の効果・料金・3ヶ月で変わること" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">英語コーチング</span>
@@ -524,6 +565,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1646579886135-068c73800308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwY29hY2hpbmclMjBpbnRlbnNpdmUlMjBwcm9ncmFtfGVufDB8MHx8fDE3NzE1OTY5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="トライズの評判・口コミまとめ【1,000時間プログラムの実態と料金を解説】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">英語コーチング</span>
@@ -532,6 +574,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1567057420215-0afa9aa9253a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxraWRzJTIwZW5nbGlzaCUyMGxlYXJuaW5nJTIwZWR1Y2F0aW9ufGVufDB8MHx8fDE3NzE1OTY5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="子供の英語教育いつから始める？年齢別オンライン英会話の選び方【小学生対応】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">子供・教育</span>
@@ -540,6 +583,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1646579886135-068c73800308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwY29hY2hpbmclMjBpbnRlbnNpdmUlMjBwcm9ncmFtfGVufDB8MHx8fDE3NzE1OTY5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="英語コーチングおすすめランキング【2026年版】社会人向け厳選7社を比較" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">英語コーチング</span>
@@ -548,6 +592,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1673515335586-f9f662c01482?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxmcmVlJTIwdHJpYWwlMjBvbmxpbmUlMjBsZWFybmluZ3xlbnwwfDB8fHwxNzcxNTk2OTkwfDA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="オンライン英会話の無料体験をはしごする方法【全社比較・2026年版】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">お得情報</span>
@@ -556,6 +601,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1650525218265-d6fef4ada666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwbGVhcm5pbmclMjBzdHVkeSUyMG1ldGhvZHxlbnwwfDB8fHwxNzcxNTk2OTkxfDA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="オンライン英会話は週何回受けると効果が出る？科学的根拠から最適頻度を解説" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">学習法</span>
@@ -564,6 +610,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1650525218265-d6fef4ada666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwbGVhcm5pbmclMjBzdHVkeSUyMG1ldGhvZHxlbnwwfDB8fHwxNzcxNTk2OTkxfDA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="英語スピーキングが伸びない人の3つの共通点と、今日からできる改善法" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">学習法</span>
@@ -572,6 +619,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1673515335586-f9f662c01482?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxmcmVlJTIwdHJpYWwlMjBvbmxpbmUlMjBsZWFybmluZ3xlbnwwfDB8fHwxNzcxNTk2OTkwfDA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="オンライン英会話の月額料金を安い順に徹底比較【2026年最新・コスパ最強はここ】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">お得情報</span>
@@ -580,6 +628,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1650525218265-d6fef4ada666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwbGVhcm5pbmclMjBzdHVkeSUyMG1ldGhvZHxlbnwwfDB8fHwxNzcxNTk2OTkxfDA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="日本人が絶対に苦手な英語発音5つと、正しい矯正方法【動画解説付き】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">学習法</span>
@@ -588,6 +637,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    <img src="https://images.unsplash.com/photo-1756032433560-56547efed550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHx0b2VpYyUyMHRlc3QlMjBwcmVwYXJhdGlvbiUyMGV4YW18ZW58MHwwfHx8MTc3MTU5Njk5NHww&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="TOEIC800点を取るためのオンライン英会話活用術【点数別スコアアップ戦略】" loading="lazy">
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">資格対策</span>
@@ -596,6 +646,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
+    
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">キャリア</span>
