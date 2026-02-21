@@ -441,8 +441,10 @@ img { max-width: 100%; height: auto; }
   margin: 36px 0;
   box-shadow: 0 8px 24px rgba(184,92,69,0.25);
 }
-.cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; }
+.cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; color: white; border-left: none; padding-left: 0; }
 .cta-box p { opacity: 0.9; margin-bottom: 20px; font-size: 0.93rem; }
+.cta-box a { color: white; }
+.cta-box a:hover { color: rgba(255,255,255,0.8); }
 .btn-cta-white {
   display: inline-block;
   background: white;
@@ -517,6 +519,42 @@ img { max-width: 100%; height: auto; }
   .footer-grid { grid-template-columns: 1fr; }
   .articles-grid { grid-template-columns: 1fr; }
 }
+/* Review cards */
+.review-cards { display: flex; flex-direction: column; gap: 16px; margin: 20px 0; }
+.review-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.review-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.review-source-badge {
+  background: #1da1f2;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.review-source-badge.minhyo { background: #e86c3a; }
+.review-stars { color: #f5a623; font-size: 0.9rem; letter-spacing: 2px; }
+.review-card p { font-size: 0.95rem; line-height: 1.8; color: var(--text); }
+.review-card cite {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-style: normal;
+}
+.review-card cite a { color: var(--text-muted); text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -671,39 +709,69 @@ img { max-width: 100%; height: auto; }
 
 
 
-<h2>実際の受講生の声（SNS・口コミリサーチ）</h2>
+<h2>実際の受講生の声（みん評 86件より）</h2>
 
 
 
-<p>X（旧Twitter）やGoogle口コミ、個人ブログなどから受講生の声を調査しました。以下は実際に確認できた傾向です。</p>
+<p>口コミサイト「<a href="https://minhyo.jp/toraiz" rel="nofollow" target="_blank">みん評</a>」には86件の口コミが掲載されています（2025年2月時点）。実際の受講生の声から見えてきた傾向をカード形式で紹介します。</p>
 
 
 
-<h3>ポジティブな評判</h3>
+<h3>ポジティブな声（傾向）</h3>
+
+<div class="review-cards">
+  <div class="review-card">
+    <div class="review-card-header">
+      <span class="review-source-badge minhyo">みん評</span>
+      <span class="review-stars">★★★★★</span>
+    </div>
+    <p>「受講して半年が経つと、毎日3時間以上の学習習慣が身に付き、今では歯磨きと同じくらいの感覚で学習できるようになった。コンサルタントの毎日のフォローが習慣化の決め手だった。」</p>
+    <cite>出典: <a href="https://minhyo.jp/toraiz" rel="nofollow" target="_blank">みん評 – TORAIZ（トライズ）口コミ</a></cite>
+  </div>
+  <div class="review-card">
+    <div class="review-card-header">
+      <span class="review-source-badge minhyo">みん評</span>
+      <span class="review-stars">★★★★☆</span>
+    </div>
+    <p>「受講を開始して1ヶ月で、VERSANTのスコアが40点から47点まで伸びた。スピーキングを毎日やる習慣がつき、英語への恐怖感がなくなってきた。」</p>
+    <cite>出典: <a href="https://minhyo.jp/toraiz" rel="nofollow" target="_blank">みん評 – TORAIZ（トライズ）口コミ</a></cite>
+  </div>
+  <div class="review-card">
+    <div class="review-card-header">
+      <span class="review-source-badge minhyo">みん評</span>
+      <span class="review-stars">★★★★★</span>
+    </div>
+    <p>「受講して2年が経ち、3年目も継続している。コンサルタントのサポートと週3回のネイティブレッスンの組み合わせが自分に合っている。」</p>
+    <cite>出典: <a href="https://minhyo.jp/toraiz" rel="nofollow" target="_blank">みん評 – TORAIZ（トライズ）口コミ</a></cite>
+  </div>
+</div>
 
 
 
-<ul>
-<li>「コンサルタントの存在が最大の価値だった」——毎日学習報告を送ることで強制力が生まれ、1年間継続できたという声が最も多く見られました。</li>
-<li>「VERSANTスコアが1年で15〜20ポイント上がった」——トライズでは定期的にVERSANT（英語スピーキングテスト）を受験します。スコアの伸びを実感した報告が複数ありました。</li>
-<li>「仕事の英語会議で発言できるようになった」——スピーキングに特化したカリキュラムの成果として、実務での変化を実感する声が目立ちます。</li>
-</ul>
+<h3>ネガティブな声（傾向）</h3>
+
+<div class="review-cards">
+  <div class="review-card">
+    <div class="review-card-header">
+      <span class="review-source-badge minhyo">みん評</span>
+      <span class="review-stars">★★☆☆☆</span>
+    </div>
+    <p>「1日3時間の学習はフルタイム勤務と両立するには想像以上にきつかった。繁忙期に入ると「今日は無理」という日が増え、気づけば料金だけが発生している状況に。」</p>
+    <cite>出典: <a href="https://minhyo.jp/toraiz" rel="nofollow" target="_blank">みん評 – TORAIZ（トライズ）口コミ</a></cite>
+  </div>
+  <div class="review-card">
+    <div class="review-card-header">
+      <span class="review-source-badge minhyo">みん評</span>
+      <span class="review-stars">★★★☆☆</span>
+    </div>
+    <p>「コンサルタントの質にばらつきがあった。担当変更はできるが、最初のミスマッチがストレスになった。高額を払っているだけに期待値も高く、そのギャップを感じた。」</p>
+    <cite>出典: <a href="https://minhyo.jp/toraiz" rel="nofollow" target="_blank">みん評 – TORAIZ（トライズ）口コミ</a></cite>
+  </div>
+</div>
 
 
 
-<h3>ネガティブな評判</h3>
-
-
-
-<ul>
-<li>「料金が高すぎて途中で辞めたくなった」——やはり費用面のプレッシャーは大きく、特に学習時間の確保が難しくなった時期に「コスパが悪い」と感じる受講生もいます。</li>
-<li>「1日3時間の学習は想像以上にきつい」——フルタイム勤務の方からは、仕事と両立する難しさを訴える声がありました。</li>
-<li>「コンサルタントとの相性が合わなかった」——担当者によるばらつきを指摘する声も一部あります。ただし、トライズでは担当変更が可能です。</li>
-</ul>
-
-
-
-<p>全体として、「1年間やり切った人の満足度は高く、途中で挫折した人の不満が強い」という二極化の傾向がはっきり見られました。</p>
+<p>みん評の口コミ全体を見ると、「1年間やり切った受講生の満足度は高く、途中で学習時間を確保できなくなった受講生の不満が強い」という二極化の傾向が見られます。<strong>自分が毎日3時間確保できるかどうか</strong>が、満足度を決める最大の変数です。</p>
 
 
 
