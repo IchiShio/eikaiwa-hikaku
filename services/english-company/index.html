@@ -31,6 +31,59 @@
   }
 }
 </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "THE ENGLISH COMPANY",
+  "description": "英語習得の科学的メソッドを体系化したコーチングサービス。個人のレベルに合わせた最適なカリキュラムを提供。",
+  "url": "https://native-real.com/services/english-company/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "42"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "99000",
+    "priceCurrency": "JPY",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "99000",
+      "priceCurrency": "JPY",
+      "unitText": "3ヶ月プラン"
+    }
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://native-real.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "サービス比較",
+      "item": "https://native-real.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "THE ENGLISH COMPANY",
+      "item": "https://native-real.com/services/english-company/"
+    }
+  ]
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -445,8 +498,10 @@ img { max-width: 100%; height: auto; }
   margin: 36px 0;
   box-shadow: 0 8px 24px rgba(184,92,69,0.25);
 }
-.cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; }
+.cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; color: white; border-left: none; padding-left: 0; }
 .cta-box p { opacity: 0.9; margin-bottom: 20px; font-size: 0.93rem; }
+.cta-box a { color: white; }
+.cta-box a:hover { color: rgba(255,255,255,0.8); }
 .btn-cta-white {
   display: inline-block;
   background: white;
@@ -497,6 +552,106 @@ img { max-width: 100%; height: auto; }
   line-height: 1.7;
 }
 
+
+/* FAQ Section */
+.faq-section {
+  margin-top: 48px;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.faq-item[open] {
+  box-shadow: var(--shadow);
+}
+.faq-question {
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--text);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+  content: '+';
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--primary);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-item[open] .faq-question::after {
+  content: '-';
+}
+.faq-answer {
+  padding: 0 20px 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+.faq-answer p { margin-bottom: 0; }
+
+/* Related Articles */
+.related-articles {
+  margin-top: 48px;
+}
+.related-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.related-article-card {
+  display: block;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+}
+.related-article-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--primary-light);
+  color: var(--text);
+}
+.related-article-card:hover h3 {
+  color: var(--primary);
+}
+.related-article-card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.2s;
+}
+.related-article-category {
+  display: inline-block;
+  background: var(--primary-pale);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 { font-size: 1.45rem; }
@@ -520,6 +675,63 @@ img { max-width: 100%; height: auto; }
   .sidebar { display: none; }
   .footer-grid { grid-template-columns: 1fr; }
   .articles-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(184, 92, 69, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(184, 92, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 92, 69, 0); }
+}
+.btn-primary { animation: pulse 2s infinite; }
+
+/* Sticky CTA bar */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary);
+  z-index: 999;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.15);
+  padding: 10px 0;
+}
+.sticky-cta-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.sticky-cta-name {
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sticky-cta-btn {
+  display: inline-block;
+  background: white;
+  color: var(--primary);
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.sticky-cta-btn:hover { opacity: 0.92; color: var(--primary); transform: translateY(-1px); }
+@media (max-width: 768px) {
+  .sticky-cta-inner { flex-direction: column; gap: 6px; text-align: center; }
+  .sticky-cta-name { font-size: 0.85rem; }
+  .sticky-cta-btn { width: 100%; text-align: center; padding: 12px 16px; }
 }
 </style>
 </head>
@@ -867,6 +1079,50 @@ img { max-width: 100%; height: auto; }
       <div class="disclaimer">
         ※当記事はアフィリエイトリンクを含みます。料金・サービス内容は変更される場合があります。最新情報は各公式サイトでご確認ください。
       </div>
+
+      <section class="faq-section">
+        <h2 class="section-title">よくある質問</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Q. 無料体験はありますか？</summary>
+            <div class="faq-answer"><p>はい、THE ENGLISH COMPANYでは無料体験トレーニングを実施しています。科学的メソッドに基づいたトレーニングを実際に体験できます。</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Q. 料金はいくらですか？</summary>
+            <div class="faq-answer"><p>3ヶ月プランで99,000円〜です。科学的根拠に基づくカリキュラムと専属トレーナーによる個別指導が含まれています。</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Q. 途中で解約できますか？</summary>
+            <div class="faq-answer"><p>はい、途中解約は可能です。30日間全額返金保証があるため、安心して始められます。</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Q. どんな人に向いていますか？</summary>
+            <div class="faq-answer"><p>理論的・体系的なアプローチで英語を習得したい社会人の方に特におすすめです。脳科学・認知科学を活用した効率的な学習法で、短期間で英語力を伸ばせます。</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Q. 他のコーチングとの違いは？</summary>
+            <div class="faq-answer"><p>THE ENGLISH COMPANYは「第二言語習得研究」の知見に基づいたメソッドが特徴です。感覚的な指導ではなく、科学的根拠のあるトレーニングで効率的に英語力を向上させます。</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="related-articles">
+        <h2 class="section-title">関連記事</h2>
+        <div class="related-articles-grid">
+          <a href="/articles/english-coaching-ranking/" class="related-article-card">
+            <div class="related-article-category">英語コーチング</div>
+            <h3>英語コーチングおすすめランキング【2026年版】社会人向け厳選7社を比較</h3>
+          </a>
+          <a href="/articles/english-coaching-vs-online-eikaiwa/" class="related-article-card">
+            <div class="related-article-category">比較・選び方</div>
+            <h3>英語コーチングとオンライン英会話、どっちを選ぶべきか【費用対効果で判断】</h3>
+          </a>
+          <a href="/articles/english-speaking-improvement/" class="related-article-card">
+            <div class="related-article-category">学習法</div>
+            <h3>英語スピーキングが伸びない人の3つの共通点と、今日からできる改善法</h3>
+          </a>
+        </div>
+      </section>
     </main>
     <aside class="sidebar">
       <div class="sidebar-widget">
@@ -936,6 +1192,12 @@ img { max-width: 100%; height: auto; }
       <p>© 2026 英語学習サービス比較ナビ. All rights reserved.</p>
     </div>
   </div>
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-inner">
+    <span class="sticky-cta-name">THE ENGLISH COMPANYの無料体験</span>
+    <a href="https://theenglishcompany.jp/" class="sticky-cta-btn" target="_blank" rel="noopener">今すぐ無料体験する →</a>
+  </div>
+</div>
 </footer>
 </body>
 </html>
