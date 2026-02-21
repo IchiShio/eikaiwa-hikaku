@@ -1,0 +1,10 @@
+# Environment & Secrets
+.env
+*.key
+secrets.json
+
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
