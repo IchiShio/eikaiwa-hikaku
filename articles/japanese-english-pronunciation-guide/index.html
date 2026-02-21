@@ -27,6 +27,44 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "大人になってからでも英語の発音は矯正できますか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "はい、できます。成人の脳にも可塑性があり、意識的な訓練で音素の聞き分け・発音ともに改善することが複数の研究で確認されています。"}
+    },
+    {
+      "@type": "Question",
+      "name": "発音矯正にはどのくらいの期間が必要ですか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "個人差はありますが、毎日15〜20分の練習を続ければ、3か月程度で周囲が変化に気づくレベルになる方が多いです。"}
+    },
+    {
+      "@type": "Question",
+      "name": "LとRの発音を簡単に見分けるコツはありますか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Lは舌先が前歯の裏に触れ、Rは舌先がどこにも触れません。「舌が触れるかどうか」を基準にすると区別しやすくなります。"}
+    },
+    {
+      "@type": "Question",
+      "name": "発音矯正アプリだけで十分ですか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "基礎練習にはアプリが有効ですが、実際の会話で通じるかどうかの確認には、講師からのリアルタイムフィードバックが重要です。アプリと英会話レッスンの併用がおすすめです。"}
+    },
+    {
+      "@type": "Question",
+      "name": "イギリス英語とアメリカ英語、どちらの発音を学ぶべきですか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "どちらでも構いませんが、学習教材が豊富で日本人に馴染みがあるのはアメリカ英語です。大切なのはどちらかに統一して練習することです。"}
+    },
+    {
+      "@type": "Question",
+      "name": "カタカナ英語のクセが強すぎて自信がありません。どこから始めるべきですか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "まずは本記事のステップ1「音の違いを耳で認識する」から始めてください。聞き分けができるようになるだけで、発音は自然と改善に向かいます。"}
+    }
+  ]
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -441,8 +479,10 @@ img { max-width: 100%; height: auto; }
   margin: 36px 0;
   box-shadow: 0 8px 24px rgba(184,92,69,0.25);
 }
-.cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; }
+.cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; color: white; border-left: none; padding-left: 0; }
 .cta-box p { opacity: 0.9; margin-bottom: 20px; font-size: 0.93rem; }
+.cta-box a { color: white; }
+.cta-box a:hover { color: rgba(255,255,255,0.8); }
 .btn-cta-white {
   display: inline-block;
   background: white;
@@ -492,6 +532,8 @@ img { max-width: 100%; height: auto; }
   margin-top: 40px;
   line-height: 1.7;
 }
+
+.related-posts{margin:2rem 0;padding:1.5rem 2rem;background:#f8f9fa;border-radius:var(--radius);border-left:4px solid var(--primary)}.related-posts__title{font-size:1rem;font-weight:700;color:var(--primary);margin:0 0 1rem}.related-posts__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}.related-posts__item a{color:var(--primary);text-decoration:none;font-size:.95rem}.related-posts__item a:hover{text-decoration:underline}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -855,6 +897,14 @@ img { max-width: 100%; height: auto; }
       <div class="disclaimer">
         ※当記事はアフィリエイトリンクを含みます。料金・サービス内容は変更される場合があります。最新情報は各公式サイトでご確認ください。
       </div>
+      <section class="related-posts">
+        <h3 class="related-posts__title">関連記事</h3>
+        <ul class="related-posts__list">
+          <li class="related-posts__item"><a href="/articles/english-speaking-improvement/">英語スピーキングが伸びない人の3つの共通点と、今日からできる改善法</a></li>
+          <li class="related-posts__item"><a href="/articles/online-eikaiwa-frequency-guide/">オンライン英会話は週何回受けると効果が出る？科学的根拠から最適頻度を解説</a></li>
+          <li class="related-posts__item"><a href="/articles/english-coaching-ranking/">英語コーチングおすすめランキング【2026年版】社会人向け厳選7社を比較</a></li>
+        </ul>
+      </section>
     </main>
     <aside class="sidebar">
       <div class="sidebar-widget">
