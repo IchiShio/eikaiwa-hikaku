@@ -137,6 +137,19 @@ img { max-width: 100%; height: auto; }
   color: var(--text-muted);
   margin-top: 8px;
 }
+.hero-owner {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.hero-owner a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.hero-owner a:hover {
+  color: var(--primary-light);
+}
 
 /* Sections */
 .section { padding: 64px 0; }
@@ -472,6 +485,33 @@ img { max-width: 100%; height: auto; }
   font-size: 0.78rem;
   color: rgba(255,255,255,0.4);
 }
+.footer-owner {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-owner-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+}
+.footer-owner a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.footer-owner a:hover {
+  color: #f0a080;
+}
+.footer-owner svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
 .disclaimer {
   background: var(--bg-gray);
   border: 1px solid var(--border);
@@ -555,6 +595,7 @@ img { max-width: 100%; height: auto; }
       <span class="hero-badge"><strong>毎週</strong>情報更新</span>
     </div>
     <p class="hero-updated">最終更新: 2026年02月20日</p>
+    <p class="hero-owner"><a href="https://x.com/ichi_eigo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> @ichi_eigo</a> が運営しています</p>
   </div>
 </section>
 <section class="section">
@@ -794,6 +835,10 @@ img { max-width: 100%; height: auto; }
         <h4>英語学習サービス比較ナビ</h4>
         <p>プロが選ぶオンライン英会話・英語アプリ徹底比較</p>
         <p style="margin-top:12px;">※当サイトはアフィリエイトリンクを含みます。</p>
+        <div class="footer-owner">
+          <span class="footer-owner-label">運営者</span>
+          <a href="https://x.com/ichi_eigo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@ichi_eigo</a>
+        </div>
       </div>
       <div>
         <h4>サービス一覧</h4>
