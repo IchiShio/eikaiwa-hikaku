@@ -288,6 +288,22 @@ img { max-width: 100%; height: auto; }
   object-fit: cover;
   display: block;
 }
+.article-card-eyecatch {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.article-card-eyecatch::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 50%);
+}
 .article-card-accent { height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
 .article-card-body { padding: 20px; }
 
@@ -775,7 +791,7 @@ img { max-width: 100%; height: auto; }
     <p class="section-subtitle">選び方・続け方・効果の出し方をまとめました</p>
     <div class="articles-grid">
   <div class="article-card">
-    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxzdHVkeSUyMG1vdGl2YXRpb24lMjBwZXJzaXN0ZW5jZSUyMGhhYml0fGVufDB8MHx8fDE3NzE1OTY5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="オンライン英会話が続かない12の理由と、3ヶ月以上続けるための対策" loading="lazy">
+    <div class="article-card-eyecatch" style="background:linear-gradient(135deg,#d4735f,#b85c45);">&#x1F525;</div>
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">継続・挫折</span>
@@ -783,7 +799,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
-    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxzdHVkeSUyMG1vdGl2YXRpb24lMjBwZXJzaXN0ZW5jZSUyMGhhYml0fGVufDB8MHx8fDE3NzE1OTY5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="忙しい社会人がオンライン英会話を続ける方法【1日15分でOKな現実プラン】" loading="lazy">
+    <div class="article-card-eyecatch" style="background:linear-gradient(135deg,#e8984b,#c87030);">&#x23F0;</div>
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">継続・挫折</span>
@@ -791,7 +807,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
-    
+    <div class="article-card-eyecatch" style="background:linear-gradient(135deg,#5b8cc9,#3a6ea5);">&#x1F331;</div>
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">年代別</span>
@@ -799,7 +815,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
-    <img src="https://images.unsplash.com/photo-1762329388386-22bf162a9368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxjaG9vc2luZyUyMGNvbXBhcmluZyUyMG9ubGluZSUyMGNvdXJzZXxlbnwwfDB8fHwxNzcxNTk2OTg2fDA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="英語コーチングとオンライン英会話、どっちを選ぶべきか【費用対効果で判断】" loading="lazy">
+    <div class="article-card-eyecatch" style="background:linear-gradient(135deg,#3a9e72,#2d8059);">&#x2696;&#xFE0F;</div>
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">比較・選び方</span>
@@ -807,7 +823,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
-    <img src="https://images.unsplash.com/photo-1646579886135-068c73800308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwY29hY2hpbmclMjBpbnRlbnNpdmUlMjBwcm9ncmFtfGVufDB8MHx8fDE3NzE1OTY5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="プログリット（PROGRIT）の評判は？実際の効果・料金・3ヶ月で変わること" loading="lazy">
+    <div class="article-card-eyecatch" style="background:linear-gradient(135deg,#7c5bbf,#5a3d99);">&#x1F680;</div>
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">英語コーチング</span>
@@ -815,7 +831,7 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="article-card">
-    <img src="https://images.unsplash.com/photo-1646579886135-068c73800308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzkxMDZ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwY29hY2hpbmclMjBpbnRlbnNpdmUlMjBwcm9ncmFtfGVufDB8MHx8fDE3NzE1OTY5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080" class="article-card-img" alt="トライズの評判・口コミまとめ【1,000時間プログラムの実態と料金を解説】" loading="lazy">
+    <div class="article-card-eyecatch" style="background:linear-gradient(135deg,#9065c0,#6b45a0);">&#x1F3AF;</div>
     <div class="article-card-accent"></div>
     <div class="article-card-body">
       <span class="article-category">英語コーチング</span>
