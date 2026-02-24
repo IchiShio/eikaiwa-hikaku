@@ -25,12 +25,21 @@
 ## listening/ の構成
 
 - 455問（beginner: 155 / intermediate: 139 / advanced: 161）
-- 464 MP3ファイル（`audio/q001.mp3`〜）
+- 464 MP3ファイル（`audio/q001.mp3`〜）、音声: `en-US-AriaNeural`（単一女性音声）
 - **適応型難易度アルゴリズム**（2026-02-24実装）:
   - intermediate（中級）からスタート
   - 連続2問正解 → 1段階上へ
   - 1問不正解 → 1段階下へ（即時）、不正解問題は新しいレベルのプールに再挿入
   - 難易度ラベルはユーザーに非表示
+
+## listening/ のCSS設計（2026-02-24更新）
+
+- **ブレークポイント**: base(mobile) / 640px(tablet) / 1024px(desktop 2カラム)
+- **高さクエリ**: `@media (max-height: 700px)` — iPhone SE等の短い画面向け圧縮
+- **タップ領域**: `opt-btn` / `next-btn` に `min-height: 44px`、`play-btn` に `min-height: 48px`、`reset-btn` に `min-height: 44px`（iOS HIG準拠）
+- **デスクトップ**: 1024px以上で `.question-view.show` が `flex-direction: row`（音声カード左・選択肢右の2カラム）
+- **loading timeout**: 400ms（ハードコードデータのため短縮、API接続時は実通信時間に合わせて変更）
+- **回答後**: `nextBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' })` で自動スクロール
 
 ## 作業ルール
 
