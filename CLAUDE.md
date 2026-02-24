@@ -25,7 +25,7 @@
 ## listening/ の構成
 
 - 455問（beginner: 155 / intermediate: 139 / advanced: 161）
-- 464 MP3ファイル（`audio/q001.mp3`〜）、音声: `en-US-AriaNeural`（単一女性音声）
+- 464 MP3ファイル（`audio/q001.mp3`〜）、音声: `en-US-AriaNeural`（単一女性音声・無料版）、有料版は ElevenLabs を予定
 - **適応型難易度アルゴリズム**（2026-02-24実装）:
   - intermediate（中級）からスタート
   - 連続2問正解 → 1段階上へ
