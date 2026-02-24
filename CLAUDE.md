@@ -14,18 +14,31 @@
 
 ## 構成
 
-- `index.html` -- トップページ
+- `index.html` -- トップページ（診断ウィジェット・フィルタータブ・クイズ cross-promo 含む）
+- `articles/index.html` -- 記事一覧（15記事・カテゴリフィルタータブ付き）
 - `articles/` -- SEO記事（英語学習ガイド、比較記事など）
 - `services/` -- 各英会話サービスの個別ページ
-- `assets/` -- 画像・CSS等の静的ファイル
+- `assets/ogp.png` -- OGP画像（1200×630px、Pillowで生成）
 - `CNAME` -- カスタムドメイン設定（`native-real.com`）
 - `sitemap.xml` / `robots.txt` -- SEO設定
 - `listening/` -- 英語リスニングクイズ（455問・464 MP3・適応型難易度アルゴリズム）
 
+## index.html の主な機能（2026-02-25更新）
+
+- **診断ウィジェット**: 目標選択（コスパ/ビジネス/スキマ時間/ネイティブ）→ おすすめ表示 + フィルター自動適用
+- **フィルタータブ**: すべて/コスパ重視/ビジネス英語/スキマ時間/ネイティブ講師（`data-tags` 属性でフィルタリング）
+- **OGP**: `og:image` = `assets/ogp.png`、`twitter:card` = `summary_large_image`
+
+## articles/index.html の主な機能（2026-02-25更新）
+
+- **ヒーローセクション**: `.hero` クラス適用
+- **カテゴリフィルタータブ**: すべて/学習法・継続/コーチング/お得情報/資格・キャリア/その他（`data-cat` 属性でフィルタリング）
+- **ナビ**: リスニングクイズリンク追加、現在ページに `.active` クラス
+
 ## listening/ の構成
 
 - 455問（beginner: 155 / intermediate: 139 / advanced: 161）
-- 464 MP3ファイル（`audio/q001.mp3`〜）、音声: `en-US-AriaNeural`（単一女性音声・無料版）、有料版は ElevenLabs を予定
+- 464 MP3ファイル（`audio/q001.mp3`〜）、5種音声ローテーション（AriaNeural/SoniaNeural/GuyNeural/NatashaNeural/RyanNeural）
 - **適応型難易度アルゴリズム**（2026-02-24実装）:
   - intermediate（中級）からスタート
   - 連続2問正解 → 1段階上へ
@@ -36,6 +49,9 @@
   - 不正解 → 再出題（2回目）: キーフレーズ（`kp`）をアンバー色パネルで表示
   - 再出題（3回目以降）: キーフレーズ + 解説（`expl`）を表示
   - `hintLevel` プロパティを問題オブジェクトに付与して管理（0=なし / 1=kp / 2=kp+expl）
+- **日本語仮訳**（2026-02-25実装）:
+  - 各問題に `ja` フィールド追加（Claude Haiku で生成）
+  - 回答後のトランスクリプト欄に英文スクリプトの下に表示
 
 ## listening/ のCSS設計（2026-02-24更新）
 
