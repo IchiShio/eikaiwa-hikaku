@@ -1613,6 +1613,112 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
+    /* ── LP STICKY NAV ── */
+    .lp-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(255,255,255,0);
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      border-bottom: 1px solid transparent;
+      transform: translateY(-100%);
+      transition: transform 0.35s cubic-bezier(0.16,1,0.3,1),
+                  background 0.3s, border-color 0.3s;
+    }
+    .lp-nav.visible {
+      transform: translateY(0);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom-color: var(--border);
+    }
+    .lp-nav-inner {
+      max-width: 900px; margin: 0 auto;
+      padding: 0 20px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .lp-nav-logo {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 15px; font-weight: 800; letter-spacing: -0.4px;
+      color: var(--text-1);
+      text-decoration: none;
+    }
+    .lp-nav-logo svg { width: 20px; height: 20px; color: var(--gold); }
+    .lp-nav-right { display: flex; align-items: center; gap: 20px; }
+    .lp-nav-link {
+      font-size: 13px; font-weight: 600;
+      color: var(--text-2); text-decoration: none;
+      transition: color var(--t);
+    }
+    .lp-nav-link:hover { color: var(--text-1); }
+    .lp-nav-cta {
+      background: linear-gradient(135deg, #E09520 0%, #F5A623 50%, #F8C347 100%);
+      color: #000; font-size: 13px; font-weight: 800;
+      border: none; border-radius: 50px;
+      padding: 10px 20px; cursor: pointer;
+      box-shadow: 0 2px 14px rgba(245,166,35,0.28);
+      transition: all var(--t);
+      white-space: nowrap;
+    }
+    .lp-nav-cta:hover {
+      filter: brightness(1.06);
+      box-shadow: 0 4px 22px rgba(245,166,35,0.45);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 480px) {
+      .lp-nav-link { display: none; }
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0;
+      padding: 48px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .stat-item {
+      flex: 1;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .stat-divider {
+      width: 1px;
+      background: var(--border);
+      align-self: stretch;
+      margin: 8px 0;
+    }
+    .stat-num {
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, var(--gold) 0%, #F8C347 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-2);
+      letter-spacing: 0.02em;
+    }
+    .stat-unit {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+    @media (max-width: 500px) {
+      .stats-strip { gap: 0; }
+      .stat-item { padding: 0 12px; }
+      .stat-num { font-size: clamp(28px, 8vw, 40px); }
+    }
   </style>
 </head>
 <body>
@@ -1620,6 +1726,20 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+<!-- LP Sticky Nav -->
+<nav class="lp-nav" id="lpNav">
+  <div class="lp-nav-inner">
+    <a class="lp-nav-logo" href="/listening/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+      ListenUp
+    </a>
+    <div class="lp-nav-right">
+      <a class="lp-nav-link" href="#pricingSection">料金プラン</a>
+      <button class="lp-nav-cta" onclick="startFreeQuiz()">今日の練習を始める</button>
+    </div>
+  </div>
+</nav>
 
 <!-- Background Orbs -->
 <div class="orb orb-1"></div>
@@ -1655,7 +1775,7 @@
   <section class="lp-hero">
     <div class="lp-hero-inner">
       <h1 class="hero-h1">英語が、<br><span class="text-gold">聴こえ始める</span>。</h1>
-      <p class="hero-sub">毎日5分。英語が「聴こえる」感覚が、変わる。</p>
+      <p class="hero-sub">455問のネイティブ音声で、毎日5分。<br>「なんとなく聴こえた」を、確かな直感に変える。</p>
       <div class="returning-stats" id="returningStats">
         <div class="rs-item"><span id="rsTotalAnswered">—</span><small>累計回答</small></div>
         <div class="rs-divider"></div>
@@ -1741,6 +1861,24 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
       </span>
       <div class="feature-text"><strong>毎日5問 無料</strong></div>
+    </div>
+  </div>
+
+  <!-- ── STATS ── -->
+  <div class="stats-strip reveal">
+    <div class="stat-item">
+      <div class="stat-num" id="statQ">0</div>
+      <div class="stat-label">収録問題数</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num" id="statV">0</div>
+      <div class="stat-label">ネイティブ音声</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num" id="statL">0</div>
+      <div class="stat-label">難易度レベル</div>
     </div>
   </div>
 
@@ -1885,12 +2023,16 @@
   <!-- ── SECTION 6: Bottom CTA ── -->
   <div class="lp-bottom-cta reveal">
     <div class="lp-wrap">
-      <h2>今日から、始めよう。</h2>
+      <h2>耳が変わる実感を、<br><span class="text-gold">今日の5問</span>で。</h2>
       <button class="btn-primary-lg" id="bottomStartBtn" onclick="startFreeQuiz()">今日の練習を始める</button>
     </div>
   </div>
 
   <div class="lp-footer">
+    <div style="margin-bottom:8px">
+      <a href="/privacy/" style="color:var(--text-3);text-decoration:none;margin:0 10px;font-size:12px;transition:color 0.18s" onmouseover="this.style.color='var(--text-2)'" onmouseout="this.style.color='var(--text-3)'">プライバシーポリシー</a>
+      <a href="https://native-real.com/" style="color:var(--text-3);text-decoration:none;margin:0 10px;font-size:12px;transition:color 0.18s" onmouseover="this.style.color='var(--text-2)'" onmouseout="this.style.color='var(--text-3)'">英会話サービス比較</a>
+    </div>
     © 2026 ListenUp · 毎日5問まで無料
   </div>
 
@@ -3268,6 +3410,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     tick();
     setInterval(tick, 1000);
+  })();
+
+  // ── LP STICKY NAV ──
+  (function() {
+    const nav = document.getElementById('lpNav');
+    if (!nav) return;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 80) nav.classList.add('visible');
+      else nav.classList.remove('visible');
+    }, { passive: true });
+  })();
+
+  // ── ANIMATED STATS COUNTER ──
+  (function() {
+    const targets = { statQ: 455, statV: 5, statL: 3 };
+    const suffixes = { statQ: '問', statV: '種', statL: '段階' };
+    let started = false;
+    function animateCount(el, target, suffix) {
+      const dur = 1200;
+      const start = performance.now();
+      function step(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target) + (suffix || '');
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = target + (suffix || '');
+      }
+      requestAnimationFrame(step);
+    }
+    const statsEl = document.querySelector('.stats-strip');
+    if (!statsEl) return;
+    const obs = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting && !started) {
+        started = true;
+        Object.keys(targets).forEach(function(id) {
+          const el = document.getElementById(id);
+          if (el) animateCount(el, targets[id], suffixes[id]);
+        });
+      }
+    }, { threshold: 0.4 });
+    obs.observe(statsEl);
   })();
 
 </script>
