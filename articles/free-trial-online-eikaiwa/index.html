@@ -37,30 +37,32 @@
 </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
 :root {
-  --primary: #b85c45;
-  --primary-light: #d4735f;
-  --primary-pale: #fdf0ec;
-  --accent: #3a9e72;
-  --accent-dark: #2d8059;
-  --accent-pale: #e8f5ef;
-  --text: #2c2520;
-  --text-muted: #7a6e68;
-  --bg: #fffbf7;
-  --bg-gray: #fdf5ef;
-  --border: #e8d5c4;
-  --shadow: 0 2px 10px rgba(100,60,40,0.08);
-  --shadow-md: 0 8px 28px rgba(100,60,40,0.14);
-  --radius: 12px;
-  --radius-lg: 20px;
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --primary-pale: #eff6ff;
+  --accent: #10b981;
+  --accent-dark: #059669;
+  --accent-pale: #ecfdf5;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --bg: #ffffff;
+  --bg-gray: #f9fafb;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.05);
+  --radius: 10px;
+  --radius-lg: 14px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
-    "Yu Gothic UI", "Meiryo", sans-serif;
+  font-family: "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Yu Gothic UI", sans-serif;
+  letter-spacing: 0.01em;
   font-size: 16px;
   line-height: 1.9;
   color: var(--text);
@@ -75,25 +77,25 @@ img { max-width: 100%; height: auto; }
 
 /* Header */
 .site-header {
-  background: #2c2520;
-  color: white;
+  background: #ffffff;
+  color: var(--text);
   padding: 14px 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 0 var(--border);
 }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; }
 .site-header .logo {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   font-weight: 700;
-  color: white;
+  color: var(--text);
   text-decoration: none;
   letter-spacing: 0.03em;
 }
-.site-header .logo span { color: #f0a080; }
+.site-header .logo span { color: var(--primary); }
 .site-header nav a {
-  color: rgba(255,255,255,0.8);
+  color: var(--text-muted);
   text-decoration: none;
   margin-left: 24px;
   font-size: 0.88rem;
@@ -101,7 +103,7 @@ img { max-width: 100%; height: auto; }
   padding-bottom: 2px;
   transition: color 0.2s, border-color 0.2s;
 }
-.site-header nav a:hover { color: white; border-color: #f0a080; }
+.site-header nav a:hover { color: var(--text); border-color: var(--primary); }
 /* Hamburger menu */
 .hamburger {
   display: none;
@@ -118,7 +120,7 @@ img { max-width: 100%; height: auto; }
   display: block;
   width: 22px;
   height: 2px;
-  background: white;
+  background: var(--text);
   margin: 5px auto;
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
@@ -130,7 +132,7 @@ img { max-width: 100%; height: auto; }
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(44,37,32,0.95);
+  background: rgba(17,24,39,0.95);
   z-index: 101;
   flex-direction: column;
   align-items: center;
@@ -163,7 +165,7 @@ img { max-width: 100%; height: auto; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, #d4b8a8 1px, transparent 1px);
+  background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
   background-size: 28px 28px;
   opacity: 0.35;
   pointer-events: none;
@@ -498,7 +500,7 @@ img { max-width: 100%; height: auto; }
 .cta-box h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; color: white; border-left: none; padding-left: 0; }
 .cta-box p { opacity: 0.9; margin-bottom: 20px; font-size: 0.93rem; }
 .cta-box a { color: white; }
-.cta-box a:hover { color: rgba(255,255,255,0.8); }
+.cta-box a:hover { color: var(--text-muted); }
 .cta-box .btn-cta-white { color: var(--primary); }
 .btn-cta-white {
   display: inline-block;
