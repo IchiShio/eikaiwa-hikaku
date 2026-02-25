@@ -2489,41 +2489,6 @@ function closeEmailGate(continuePlay) {
   if (continuePlay) loadQ();
 }
 
-document.getElementById('egForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const email   = document.getElementById('egInput').value.trim();
-  const btn     = document.getElementById('egSubmit');
-  const errorEl = document.getElementById('egError');
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    errorEl.textContent = '有効なメールアドレスを入力してください';
-    errorEl.style.display = 'block';
-    return;
-  }
-  btn.disabled = true;
-  btn.textContent = '登録中...';
-  errorEl.style.display = 'none';
-  // Beehiivへ送信
-  try {
-    if (BEEHIIV_PUB_ID !== 'YOUR_BEEHIIV_PUB_ID') {
-      await fetch(`https://app.beehiiv.com/api/v1/publications/${BEEHIIV_PUB_ID}/subscriptions`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, referring_site: 'native-real.com/listening' })
-      });
-    }
-  } catch (_) { /* サイレントフェイル */ }
-  // localStorageに登録済みフラグ
-  localStorage.setItem(EG_REG_KEY, email);
-  btn.textContent = '✓ 登録完了！続きをどうぞ';
-  setTimeout(() => closeEmailGate(true), 900);
-});
-
-document.getElementById('egSkip').addEventListener('click', function() {
-  localStorage.setItem(EG_SKIP_KEY, new Date().toDateString());
-  document.getElementById('egOverlay').style.display = 'none';
-  document.body.style.overflow = '';
-  next(); // スキップ後はそのまま次の問題へ（ゲートをスルー）
-});
 
 // ─────────────────────────────────────────
 // NEXT
@@ -2731,7 +2696,41 @@ function shuffle(arr) {
 // ─────────────────────────────────────────
 // PAGE INIT
 // ─────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', showReturningStats);
+document.addEventListener('DOMContentLoaded', function() {
+  showReturningStats();
+
+  document.getElementById('egForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email   = document.getElementById('egInput').value.trim();
+    const btn     = document.getElementById('egSubmit');
+    const errorEl = document.getElementById('egError');
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errorEl.textContent = '有効なメールアドレスを入力してください';
+      errorEl.style.display = 'block';
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = '登録中...';
+    errorEl.style.display = 'none';
+    try {
+      await fetch(`https://app.beehiiv.com/api/v1/publications/${BEEHIIV_PUB_ID}/subscriptions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, referring_site: 'native-real.com/listening' })
+      });
+    } catch (_) { /* サイレントフェイル */ }
+    localStorage.setItem(EG_REG_KEY, email);
+    btn.textContent = '✓ 登録完了！続きをどうぞ';
+    setTimeout(() => closeEmailGate(true), 900);
+  });
+
+  document.getElementById('egSkip').addEventListener('click', function() {
+    localStorage.setItem(EG_SKIP_KEY, new Date().toDateString());
+    document.getElementById('egOverlay').style.display = 'none';
+    document.body.style.overflow = '';
+    next();
+  });
+});
 
 </script>
 <canvas id="confettiCanvas" style="position:fixed;inset:0;pointer-events:none;z-index:9999;display:none"></canvas>
