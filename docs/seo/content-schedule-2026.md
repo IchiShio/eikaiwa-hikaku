@@ -170,11 +170,11 @@ SERPで「〇〇 vs △△」「〇〇 評判」を狙う。サービスペー�
 
 | # | スラッグ | ステータス | 公開日 |
 |---|----------|-----------|--------|
-| 1 | english-coaching-worth-it | ⬜ 未着手 | 3/3 |
-| 2 | kids-online-eikaiwa-effects | ⬜ 未着手 | 3/6 |
-| 3 | english-coaching-cheap | ⬜ 未着手 | 3/10 |
-| 4 | junior-high-online-eikaiwa | ⬜ 未着手 | 3/13 |
-| 5 | business-english-online-eikaiwa | ⬜ 未着手 | 3/17 |
+| 1 | english-coaching-worth-it | ✅ 公開済 | 2/26 |
+| 2 | kids-online-eikaiwa-effects | ✅ 公開済 | 2/26 |
+| 3 | english-coaching-cheap | ✅ 公開済 | 2/26 |
+| 4 | junior-high-online-eikaiwa | ✅ 公開済 | 2/26 |
+| 5 | business-english-online-eikaiwa | ✅ 公開済 | 2/26 |
 | 6 | english-coaching-individual | ⬜ 未着手 | 3/20 |
 | 7 | senior-online-eikaiwa | ⬜ 未着手 | 3/24 |
 | 8 | adult-online-eikaiwa-guide | ⬜ 未着手 | 3/28 |
