@@ -349,39 +349,39 @@
       padding: 0 24px;
     }
     .philosophy-eyebrow {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: rgba(245,166,35,.55);
-      margin-bottom: 36px;
+      color: var(--gold);
+      margin-bottom: 40px;
       text-align: center;
     }
-    /* 感情的フック — 中サイズ、中央揃え */
+    /* 感情的フック */
     .philosophy-hook {
-      font-size: clamp(18px, 2.4vw, 22px);
-      color: rgba(0,0,0,.55);
-      line-height: 1.85;
+      font-size: clamp(20px, 2.6vw, 24px);
+      color: rgba(0,0,0,.78);
+      font-weight: 500;
+      line-height: 1.9;
       text-align: center;
-      text-wrap: balance;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
     }
-    /* 説明文 — 小さめ、左揃え、読みやすい */
+    /* 説明文 */
     .philosophy-desc {
-      font-size: clamp(13px, 1.6vw, 14px);
-      color: rgba(0,0,0,.42);
-      line-height: 2.1;
+      font-size: clamp(15px, 1.8vw, 16px);
+      color: rgba(0,0,0,.65);
+      line-height: 1.9;
       margin-bottom: 32px;
     }
-    /* 大きな問いかけ — 太字・中央 */
+    /* 大きな問いかけ */
     .philosophy-question {
-      font-size: clamp(19px, 2.8vw, 24px);
-      font-weight: 700;
-      color: rgba(0,0,0,.82);
-      line-height: 1.65;
+      font-size: clamp(22px, 3.2vw, 30px);
+      font-weight: 800;
+      color: rgba(0,0,0,.88);
+      line-height: 1.55;
       text-align: center;
-      text-wrap: balance;
       margin-bottom: 56px;
+      letter-spacing: -0.5px;
     }
     .philosophy-question em {
       font-style: normal;
@@ -393,60 +393,59 @@
       background: linear-gradient(to bottom, transparent, rgba(245,166,35,.35), transparent);
       margin: 0 auto 48px;
     }
-    /* 洞察テキスト — 左揃え */
+    /* 洞察テキスト */
     .philosophy-insight {
-      font-size: clamp(15px, 1.9vw, 16px);
-      color: rgba(0,0,0,.55);
-      line-height: 2.0;
+      font-size: clamp(16px, 2vw, 18px);
+      color: rgba(0,0,0,.72);
+      line-height: 1.95;
       margin-bottom: 20px;
     }
     .philosophy-insight:last-of-type { margin-bottom: 44px; }
-    .philosophy-insight strong { color: rgba(0,0,0,.85); font-weight: 700; }
+    .philosophy-insight strong { color: rgba(0,0,0,.88); font-weight: 700; }
     /* 引用ブロック */
     .philosophy-quote {
       border: none;
-      padding: 28px 24px 28px 28px;
+      padding: 32px 28px 32px 32px;
       margin: 0 0 44px;
-      background: rgba(245,166,35,.06);
-      border-left: 3px solid var(--gold);
-      border-radius: 0 12px 12px 0;
+      background: rgba(245,166,35,.07);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 14px 14px 0;
     }
     .philosophy-quote p {
-      font-size: clamp(16px, 2.4vw, 21px);
+      font-size: clamp(18px, 2.5vw, 23px);
       font-weight: 700;
-      color: var(--gold);
+      color: rgba(0,0,0,.80);
       line-height: 1.75;
-      font-style: italic;
     }
-    /* 締めテキスト — 左揃え */
+    /* 締めテキスト */
     .philosophy-body {
-      font-size: clamp(14px, 1.8vw, 15px);
-      color: rgba(0,0,0,.52);
-      line-height: 2.1;
+      font-size: clamp(15px, 1.9vw, 17px);
+      color: rgba(0,0,0,.68);
+      line-height: 1.95;
       margin-bottom: 0;
     }
-    .philosophy-body strong { color: rgba(0,0,0,.82); }
+    .philosophy-body strong { color: rgba(0,0,0,.88); }
     /* 結論ボックス */
     .philosophy-conclusion {
       margin-top: 48px;
-      padding: 28px 28px;
-      background: rgba(0,0,0,.05);
-      border: 1px solid rgba(245,166,35,.16);
-      border-radius: 14px;
+      padding: 32px;
+      background: #fff;
+      border: 1px solid rgba(245,166,35,.22);
+      border-radius: 16px;
       text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,.05);
     }
     .philosophy-conclusion p {
-      font-size: clamp(14px, 1.9vw, 17px);
-      color: rgba(0,0,0,.72);
-      line-height: 1.9;
-      margin-bottom: 6px;
-      text-wrap: balance;
+      font-size: clamp(16px, 2vw, 19px);
+      color: rgba(0,0,0,.80);
+      line-height: 1.85;
+      margin-bottom: 8px;
     }
     .philosophy-conclusion p:last-child { margin-bottom: 0; }
     .philosophy-conclusion strong { color: var(--gold); }
     .philosophy-tagline {
-      font-size: 12px !important;
-      color: rgba(0,0,0,.38) !important;
+      font-size: 14px !important;
+      color: rgba(0,0,0,.50) !important;
       font-style: italic;
       margin-top: 12px !important;
     }
