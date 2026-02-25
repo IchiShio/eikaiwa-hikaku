@@ -1775,7 +1775,7 @@
   <section class="lp-hero">
     <div class="lp-hero-inner">
       <h1 class="hero-h1">英語が、<br><span class="text-gold">聴こえ始める</span>。</h1>
-      <p class="hero-sub">455問のネイティブ音声で、毎日5分。<br>「なんとなく聴こえた」を、確かな直感に変える。</p>
+      <p class="hero-sub">455問のAI生成英語音声で、毎日5分。<br>「なんとなく聴こえた」を、確かな直感に変える。</p>
       <div class="returning-stats" id="returningStats">
         <div class="rs-item"><span id="rsTotalAnswered">—</span><small>累計回答</small></div>
         <div class="rs-divider"></div>
@@ -1831,7 +1831,7 @@
         <button class="btn-primary-lg" id="freeTrialBtn" onclick="startFreeQuiz()">今日の練習を始める</button>
         <button class="btn-ghost" onclick="openWaitlist()">ウェイトリストに登録 →</button>
       </div>
-      <p class="hero-fine">毎日5問まで無料 · メール登録で15問まで · プレミアムは近日公開</p>
+      <p class="hero-fine">毎日5問まで無料 · メール登録で20問＋進捗管理 · プレミアムは近日公開</p>
     </div>
   </section>
 
@@ -1842,7 +1842,7 @@
       <span class="feature-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
       </span>
-      <div class="feature-text"><strong>ネイティブ音声</strong></div>
+      <div class="feature-text"><strong>AI生成音声</strong></div>
     </div>
     <div class="feature-item reveal reveal-delay-2">
       <span class="feature-icon">
@@ -1873,7 +1873,7 @@
     <div class="stat-divider"></div>
     <div class="stat-item">
       <div class="stat-num" id="statV">0</div>
-      <div class="stat-label">ネイティブ音声</div>
+      <div class="stat-label">AI音声バリエーション</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item">
@@ -1926,7 +1926,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
           </div>
           <h3>聴く</h3>
-          <p>ネイティブの自然な会話を、繰り返し聴く。</p>
+          <p>自然な英語の会話を、繰り返し聴く。</p>
         </div>
         <div class="step-connector">→</div>
         <div class="step-card reveal reveal-delay-2">
@@ -1992,7 +1992,8 @@
           <ul class="plan-feats">
             <li class="feat-ok">毎日5問（登録不要）</li>
             <li class="feat-ok">解説・キーフレーズ</li>
-            <li class="feat-ok">メール登録で15問まで無料</li>
+            <li class="feat-ok">メール登録で<strong>20問</strong>まで無料</li>
+            <li class="feat-ok">学習進捗管理（メール登録後）</li>
             <li class="feat-ng">毎日 無制限（プレミアム）</li>
           </ul>
           <button class="plan-btn plan-btn-ghost" onclick="startFreeQuiz()">今日の練習を試す（無料）</button>
@@ -2051,7 +2052,7 @@
         <span class="dm-dot" id="dmDot3"></span>
         <span class="dm-dot" id="dmDot4"></span>
       </span>
-      今日 <span id="freeAnsweredCount">0</span>/15問
+      今日 <span id="freeAnsweredCount">0</span>/20問
       <a onclick="openWaitlist()">→ ウェイトリスト登録</a>
     </div>
 
@@ -2124,7 +2125,7 @@
     <div class="paywall-crown">👑</div>
     <h2 class="paywall-title" id="paywallTitle">今日の練習が終わりました</h2>
     <p class="paywall-sub" id="paywallSub">
-      今日の15問が完了しました。<br>
+      今日の20問が完了しました。<br>
       毎日続けることが上達への近道です。明日また練習しましょう。
     </p>
     <ul class="paywall-feats">
@@ -2645,7 +2646,7 @@ const DIFF_META = {
 };
 
 const FREE_LIMIT = 3; // legacy (未使用)
-const FREE_DAILY_LIMIT = 15; // メール登録済みユーザーの1日上限
+const FREE_DAILY_LIMIT = 20; // メール登録済みユーザーの1日上限
 
 // ─────────────────────────────────────────
 // LOCAL STORAGE
@@ -2870,7 +2871,7 @@ function showPaywall(reason) {
   if (reason === 'daily') {
     document.getElementById('paywallTitle').textContent = '今日の練習が終わりました';
     document.getElementById('paywallSub').innerHTML =
-      '今日の15問が完了しました。<br>毎日続けることが上達への近道です。明日また練習しましょう。';
+      '今日の20問が完了しました。<br>毎日続けることが上達への近道です。明日また練習しましょう。';
   } else {
     document.getElementById('paywallTitle').textContent = '無制限で練習したい方へ';
     document.getElementById('paywallSub').innerHTML =
@@ -3464,7 +3465,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="eg-body">
       <div class="eg-emoji">🎉</div>
       <h2 class="eg-title">5問クリア！</h2>
-      <p class="eg-sub">続きは<span class="eg-gold">メール登録</span>で無制限に</p>
+      <p class="eg-sub">登録で<span class="eg-gold">20問＋進捗管理</span>が無料で使える</p>
       <p class="eg-desc">英語リスニングのコツや学習法を定期的にお届けします。<br>登録は無料・いつでも解除できます。</p>
       <div class="eg-stats" id="egStats"></div>
       <form class="eg-form" id="egForm" novalidate>
