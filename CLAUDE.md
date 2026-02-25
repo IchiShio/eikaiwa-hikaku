@@ -100,6 +100,32 @@
 - CTAボタンとスティッキーCTAバーの両方を差し替えること
 - `rel="nofollow noopener"` を必ず付与すること
 
+## アナリティクス・計測設定（2026-02-25設定）
+
+### Google Tag Manager
+- **コンテナID**: `GTM-PS9R9844`
+- 全33ページの `<head>` および `<body>` 直後に設置済み
+- タグ:
+  - `GA4 - 設定`（Google タグ / All Pages）
+  - `GA4 - クリック計測`（GA4イベント / 全リンククリック）
+- トリガー: `全リンククリック`（リンクのみ・全クリック）
+- 変数: Click Element / Classes / ID / Target / Text / URL（有効化済み）
+- イベントパラメータ: `click_url` / `click_text` / `click_classes`
+
+### Google Analytics 4
+- **測定ID**: `G-5B9WEBKYEP`
+- プロパティ名: `native-real.com`
+- GTM経由で配信（直接コード埋め込みなし）
+- GA4でクリックデータを確認: レポート → エンゲージメント → イベント → `click`
+
+### Google Search Console
+- 認証: `index.html` の `google-site-verification` メタタグ（ドメイン全体に有効）
+- サイトマップ: `https://native-real.com/sitemap.xml` 送信済み（30ページ検出）
+
+### 新規ページを追加する際のチェックリスト
+1. `sitemap.xml` に URL を追加（`noindex` ページは除く）
+2. GTM スニペットは自動適用されるため追加作業不要（既設置済み）
+
 ## 作業ルール
 
 - APIキー・シークレット情報は `.env` に記載し `.gitignore` で除外すること
