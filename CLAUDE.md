@@ -65,6 +65,32 @@
   - `max-width: 620px`、`text-wrap: balance` で行均等化
   - クラス構成: `.philosophy-hook`（感情フック）→ `.philosophy-desc`（旧学習法の描写、薄色）→ `.philosophy-question`（大きな問いかけ）→ `.philosophy-insight`（洞察）→ `.philosophy-quote`（blockquote、ゴールドボーダー）→ `.philosophy-body` → `.philosophy-conclusion`
 
+## listening/ のプラン設計（2026-02-25更新）
+
+### 無料・登録・プレミアムの区分け
+
+| 機能 | 未登録 | メール登録済み | プレミアム |
+|---|---|---|---|
+| 1日の問題数 | 5問 | 15問 | 予定 |
+| 難易度適応 | ✅ | ✅ | ✅ |
+| ヒント機能 | ✅ | ✅ | ✅ |
+| 苦手問題の自動復習 | ✅（無料の目玉） | ✅ | ✅ |
+| 進捗ダッシュボード | ❌ | ❌ | 近日公開 |
+| クロスデバイス同期 | ❌ | ❌ | 近日公開 |
+
+### プレミアムプラン（Waitlist 方式）
+- **価格**: ¥490/月（予定）
+- **現状**: Waitlist 受付中（Google Forms で収集）→ 公開時に通知
+- **Waitlist フォーム**: Google Forms（URLは実装時に記録）
+- **Waitlist データ**: Google スプレッドシートに自動保存
+- **Beehiiv との区分け**: Waitlist は Google Forms、ニュースレターは Beehiiv（Beehiiv 無料プランのため API タグ付け不可）
+- **将来の進捗管理**: Firebase（Firestore）を予定（実装時期未定）
+
+### 苦手問題の自動復習（未実装・次期実装予定）
+- localStorage で不正解問題IDを蓄積
+- 「苦手問題を復習する」ボタンで専用セッション開始
+- 無料ユーザーへの差別化ポイントとして前面に出す
+
 ## listening/ のCSS設計（2026-02-25更新）
 
 - **ブレークポイント**: base(mobile) / 640px(tablet) / 1024px(desktop 2カラム)
