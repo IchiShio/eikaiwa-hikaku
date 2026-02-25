@@ -1279,7 +1279,7 @@
         <button class="btn-primary-lg" onclick="startPremiumTrial()">7日間 無料で試す →</button>
         <button class="btn-ghost" id="freeTrialBtn" onclick="startFreeQuiz()">今日の練習を始める</button>
       </div>
-      <p class="hero-fine">1日5問まで無料 · クレジットカード不要</p>
+      <p class="hero-fine">メール登録で1日15問まで無料 · クレジットカード不要</p>
     </div>
   </section>
 
@@ -1431,7 +1431,7 @@
         <span class="dm-dot" id="dmDot3"></span>
         <span class="dm-dot" id="dmDot4"></span>
       </span>
-      今日 <span id="freeAnsweredCount">0</span>/5問
+      今日 <span id="freeAnsweredCount">0</span>/15問
       <a onclick="scrollToDiffAndUpgrade()">→ プレミアムで続ける</a>
     </div>
 
@@ -1504,7 +1504,7 @@
     <div class="paywall-crown">👑</div>
     <h2 class="paywall-title" id="paywallTitle">今日の練習が終わりました</h2>
     <p class="paywall-sub" id="paywallSub">
-      今日の5問が完了しました。<br>
+      今日の15問が完了しました。<br>
       毎日続けることが上達への近道です。明日また練習しましょう。
     </p>
     <ul class="paywall-feats">
@@ -2025,7 +2025,7 @@ const DIFF_META = {
 };
 
 const FREE_LIMIT = 3; // legacy (未使用)
-const FREE_DAILY_LIMIT = 5;
+const FREE_DAILY_LIMIT = 15; // メール登録済みユーザーの1日上限
 
 // ─────────────────────────────────────────
 // LOCAL STORAGE
@@ -2178,6 +2178,13 @@ function scrollToDiffAndUpgrade() {
 // START
 // ─────────────────────────────────────────
 function startFreeQuiz() {
+  // 未登録ユーザー: freeMode制限なし → 10問でメールゲート
+  if (!isRegistered()) {
+    freeMode = false;
+    beginQuiz();
+    return;
+  }
+  // メール登録済みユーザー: 1日15問の制限を適用
   freeMode = true;
   const p    = loadProgress();
   const today = getToday();
@@ -2240,7 +2247,7 @@ function showPaywall(reason) {
   if (reason === 'daily') {
     document.getElementById('paywallTitle').textContent = '今日の練習が終わりました';
     document.getElementById('paywallSub').innerHTML =
-      '今日の5問が完了しました。<br>毎日続けることが上達への近道です。明日また練習しましょう。';
+      '今日の15問が完了しました。<br>毎日続けることが上達への近道です。明日また練習しましょう。';
   } else {
     document.getElementById('paywallTitle').textContent = '無制限で練習したい方へ';
     document.getElementById('paywallSub').innerHTML =
@@ -2751,7 +2758,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <button type="submit" class="eg-submit" id="egSubmit">登録して続ける →</button>
       </form>
       <p class="eg-error" id="egError"></p>
-      <button class="eg-skip" id="egSkip">今はスキップ（本日5問まで）</button>
+      <button class="eg-skip" id="egSkip">今はスキップ（本日はあと少しだけ続けられます）</button>
     </div>
   </div>
 </div>
