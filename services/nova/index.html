@@ -819,6 +819,23 @@ img { max-width: 100%; height: auto; }
   .sticky-cta-name { font-size: 0.85rem; }
   .sticky-cta-btn { width: 100%; text-align: center; padding: 12px 16px; }
 }
+
+/* ── QUIZ PROMO ── */
+.quiz-promo{position:relative;overflow:hidden;background:linear-gradient(135deg,#060C1B,#0f1a35);border:1px solid rgba(251,191,36,.25);border-radius:16px;padding:20px 24px;margin:32px 0;box-shadow:0 0 40px rgba(251,191,36,.07),0 4px 24px rgba(0,0,0,.25);}
+.quiz-promo-orb{position:absolute;width:220px;height:220px;background:radial-gradient(circle,rgba(251,191,36,.13),transparent 70%);top:-60px;right:-40px;border-radius:50%;pointer-events:none;}
+.quiz-promo-inner{position:relative;z-index:1;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.quiz-promo-icon{font-size:2rem;flex-shrink:0;line-height:1;}
+.quiz-promo-body{flex:1;min-width:140px;}
+.quiz-promo-title{color:rgba(255,255,255,.92);font-weight:700;font-size:.98rem;margin-bottom:4px;}
+.quiz-promo-sub{color:rgba(255,255,255,.45);font-size:.78rem;}
+.quiz-promo-btn{display:inline-block;background:linear-gradient(135deg,#F59E0B,#FBBF24);color:#1a1000 !important;font-weight:700;font-size:.86rem;padding:11px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 16px rgba(251,191,36,.28);transition:transform .18s ease,box-shadow .18s ease;flex-shrink:0;}
+.quiz-promo-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(251,191,36,.42);color:#1a1000 !important;}
+.quiz-promo-widget{position:relative;overflow:hidden;background:linear-gradient(135deg,#060C1B,#0f1a35) !important;border:1px solid rgba(251,191,36,.25) !important;}
+.quiz-promo-widget .quiz-promo-orb{width:130px;height:130px;top:-30px;right:-20px;}
+.quiz-promo-widget-label{font-size:.7rem;color:rgba(251,191,36,.85);font-weight:700;letter-spacing:.8px;text-transform:uppercase;position:relative;z-index:1;}
+.quiz-promo-widget-title{color:rgba(255,255,255,.9);font-weight:700;font-size:.95rem;margin-top:8px;line-height:1.45;position:relative;z-index:1;}
+.quiz-promo-widget-sub{color:rgba(255,255,255,.4);font-size:.75rem;margin-top:5px;position:relative;z-index:1;}
+.quiz-promo-widget .quiz-promo-btn{width:100%;text-align:center;display:block;margin-top:14px;position:relative;z-index:1;}
 </style>
 </head>
 <body>
@@ -1183,7 +1200,19 @@ img { max-width: 100%; height: auto; }
         ※当記事はアフィリエイトリンクを含みます。料金・サービス内容は変更される場合があります。最新情報は各公式サイトでご確認ください。
       </div>
 
-      <section class="faq-section">
+      
+      <div class="quiz-promo">
+        <div class="quiz-promo-orb"></div>
+        <div class="quiz-promo-inner">
+          <span class="quiz-promo-icon">🎧</span>
+          <div class="quiz-promo-body">
+            <p class="quiz-promo-title">英語リスニング力を無料診断</p>
+            <p class="quiz-promo-sub">455問・3レベル・適応型アルゴリズム</p>
+          </div>
+          <a href="/listening/" class="quiz-promo-btn">今すぐ試す →</a>
+        </div>
+      </div>
+<section class="faq-section">
         <h2 class="section-title">よくある質問（FAQ）</h2>
         <div class="faq-list">
           <details class="faq-item">

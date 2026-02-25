@@ -1189,6 +1189,32 @@
       .quiz-left  { flex: 0 0 40%; position: sticky; top: 72px; }
       .quiz-right { flex: 1; min-width: 0; }
     }
+
+  /* ── EMAIL GATE MODAL ── */
+  .eg-overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;animation:egFadeIn .25s ease;}
+  @keyframes egFadeIn{from{opacity:0}to{opacity:1}}
+  .eg-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#07102a,#0d1a38);border:1px solid rgba(251,191,36,.32);border-radius:24px;padding:40px 32px 32px;max-width:420px;width:100%;box-shadow:0 0 80px rgba(251,191,36,.1),0 32px 80px rgba(0,0,0,.55);animation:egSlideUp .38s cubic-bezier(.16,1,.3,1);}
+  @keyframes egSlideUp{from{transform:translateY(28px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .eg-orb-1{position:absolute;width:260px;height:260px;background:radial-gradient(circle,rgba(251,191,36,.14),transparent 70%);top:-80px;right:-60px;border-radius:50%;pointer-events:none;filter:blur(40px);}
+  .eg-orb-2{position:absolute;width:180px;height:180px;background:radial-gradient(circle,rgba(59,91,219,.22),transparent 70%);bottom:-50px;left:-30px;border-radius:50%;pointer-events:none;filter:blur(40px);}
+  .eg-body{position:relative;z-index:1;text-align:center;}
+  .eg-emoji{font-size:3rem;margin-bottom:10px;}
+  .eg-title{font-size:1.75rem;font-weight:900;color:rgba(255,255,255,.95);margin-bottom:6px;}
+  .eg-sub{font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:6px;}
+  .eg-gold{color:#FBBF24;font-weight:700;}
+  .eg-desc{font-size:.78rem;color:rgba(255,255,255,.38);line-height:1.75;margin-bottom:18px;}
+  .eg-stats{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:11px 16px;margin-bottom:22px;font-size:.85rem;color:rgba(255,255,255,.65);}
+  .eg-form{display:flex;flex-direction:column;gap:10px;}
+  .eg-input{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 18px;color:rgba(255,255,255,.92);font-size:1rem;outline:none;transition:border-color .18s;}
+  .eg-input:focus{border-color:rgba(251,191,36,.55);}
+  .eg-input::placeholder{color:rgba(255,255,255,.28);}
+  .eg-submit{width:100%;background:linear-gradient(135deg,#F59E0B,#FBBF24);color:#1a1000;font-weight:800;font-size:1rem;padding:15px;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 20px rgba(251,191,36,.35);transition:transform .18s,box-shadow .18s;min-height:48px;}
+  .eg-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(251,191,36,.5);}
+  .eg-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+  .eg-error{color:#F87171;font-size:.78rem;margin-top:6px;display:none;}
+  .eg-skip{background:none;border:none;color:rgba(255,255,255,.28);font-size:.75rem;cursor:pointer;margin-top:14px;text-decoration:underline;transition:color .18s;display:block;width:100%;}
+  .eg-skip:hover{color:rgba(255,255,255,.55);}
+  @media(max-width:480px){.eg-card{padding:28px 20px 24px;}.eg-title{font-size:1.45rem;}}
   </style>
 </head>
 <body>
@@ -2436,9 +2462,79 @@ function toggleTranscript() {
 }
 
 // ─────────────────────────────────────────
+// EMAIL GATE
+// ─────────────────────────────────────────
+const EG_TRIGGER   = 10;
+const EG_REG_KEY   = 'listenup_registered';
+const EG_SKIP_KEY  = 'listenup_gate_skipped';
+// ★ BeehiivパブリケーションID（設定が必要）
+const BEEHIIV_PUB_ID = 'YOUR_BEEHIIV_PUB_ID';
+
+function isRegistered() {
+  return !!localStorage.getItem(EG_REG_KEY);
+}
+
+function showEmailGate() {
+  const pct = total > 0 ? Math.round(score / total * 100) : 0;
+  document.getElementById('egStats').textContent =
+    `📊 正解率 ${score}/${total}問 (${pct}%) — ここまでよくできました！`;
+  document.getElementById('egOverlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('egInput').focus(), 100);
+}
+
+function closeEmailGate(continuePlay) {
+  document.getElementById('egOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+  if (continuePlay) loadQ();
+}
+
+document.getElementById('egForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email   = document.getElementById('egInput').value.trim();
+  const btn     = document.getElementById('egSubmit');
+  const errorEl = document.getElementById('egError');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errorEl.textContent = '有効なメールアドレスを入力してください';
+    errorEl.style.display = 'block';
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = '登録中...';
+  errorEl.style.display = 'none';
+  // Beehiivへ送信
+  try {
+    if (BEEHIIV_PUB_ID !== 'YOUR_BEEHIIV_PUB_ID') {
+      await fetch(`https://app.beehiiv.com/api/v1/publications/${BEEHIIV_PUB_ID}/subscriptions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, referring_site: 'native-real.com/listening' })
+      });
+    }
+  } catch (_) { /* サイレントフェイル */ }
+  // localStorageに登録済みフラグ
+  localStorage.setItem(EG_REG_KEY, email);
+  btn.textContent = '✓ 登録完了！続きをどうぞ';
+  setTimeout(() => closeEmailGate(true), 900);
+});
+
+document.getElementById('egSkip').addEventListener('click', function() {
+  localStorage.setItem(EG_SKIP_KEY, new Date().toDateString());
+  closeEmailGate(false); // スキップは続きをしない（無料制限内で継続）
+});
+
+// ─────────────────────────────────────────
 // NEXT
 // ─────────────────────────────────────────
 function next() {
+  // メール登録ゲート（10問後・未登録・本日未スキップ）
+  if (total === EG_TRIGGER && !isRegistered()) {
+    const skippedToday = localStorage.getItem(EG_SKIP_KEY) === new Date().toDateString();
+    if (!skippedToday) {
+      showEmailGate();
+      return;
+    }
+  }
   if (freeMode && dailyFreeAnswered >= FREE_DAILY_LIMIT) {
     showMissionComplete();
     return;
@@ -2637,5 +2733,26 @@ document.addEventListener('DOMContentLoaded', showReturningStats);
 
 </script>
 <canvas id="confettiCanvas" style="position:fixed;inset:0;pointer-events:none;z-index:9999;display:none"></canvas>
+
+<!-- Email Gate Modal -->
+<div id="egOverlay" class="eg-overlay" style="display:none" role="dialog" aria-modal="true">
+  <div class="eg-card">
+    <div class="eg-orb-1"></div>
+    <div class="eg-orb-2"></div>
+    <div class="eg-body">
+      <div class="eg-emoji">🎉</div>
+      <h2 class="eg-title">10問クリア！</h2>
+      <p class="eg-sub">続きは<span class="eg-gold">メール登録</span>で無制限に</p>
+      <p class="eg-desc">英語リスニングのコツや学習法を定期的にお届けします。<br>登録は無料・いつでも解除できます。</p>
+      <div class="eg-stats" id="egStats"></div>
+      <form class="eg-form" id="egForm" novalidate>
+        <input type="email" id="egInput" class="eg-input" placeholder="your@email.com" autocomplete="email" required>
+        <button type="submit" class="eg-submit" id="egSubmit">登録して続ける →</button>
+      </form>
+      <p class="eg-error" id="egError"></p>
+      <button class="eg-skip" id="egSkip">今はスキップ（本日5問まで）</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
