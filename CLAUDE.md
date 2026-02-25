@@ -62,6 +62,32 @@
 - **loading timeout**: 400ms（ハードコードデータのため短縮、API接続時は実通信時間に合わせて変更）
 - **回答後**: `nextBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' })` で自動スクロール
 
+## アフィリエイト提携状況（2026-02-25更新）
+
+### ASP: A8.net（メディアID: a25010338349）
+
+| サービス | 状況 | 掲載ページ |
+|---|---|---|
+| レアジョブ英会話 | ✅ 提携済み・リンク設置済み | `services/rarejob/` |
+| ネイティブキャンプ | ✅ 提携済み・リンク設置済み | `services/nativecamp/` |
+| Cambly | ✅ 提携済み・リンク設置済み | `services/cambly/` |
+| italki | ✅ 提携済み・リンク設置済み | `services/italki/` |
+| 駅前留学NOVA | ✅ 提携済み・リンク設置済み | `services/nova/` |
+| eスポーツ英会話 | ✅ 提携済み・リンク設置済み | `services/esports-eikaiwa/` |
+| スタディサプリENGLISH | ✅ 提携済み・リンク設置済み | `services/studysapuri-english/` |
+| Bizmates（オンライン英会話） | ✅ 提携済み・リンク設置済み | `services/bizmates/`、`index.html` |
+| Bizmates Plus（コーチング） | ✅ 提携済み・リンク設置済み | `articles/english-coaching-ranking/`、`articles/english-coaching-vs-online-eikaiwa/` |
+| DMM英会話 | ⏳ 審査中 | `services/dmm-eikaiwa/`（リンク未設置） |
+| PROGRIT | ⏳ 審査中 | `services/progrit/`（リンク未設置） |
+| トライズ | ⏳ 審査中 | `services/toraiz/`（リンク未設置） |
+| THE ENGLISH COMPANY | ⏳ 審査中（別ASP） | `services/english-company/`（リンク未設置） |
+
+### リンク設置ルール
+- A8.netリンク形式: `https://px.a8.net/svt/ejp?a8mat={コード}`
+- トラッキングピクセル: `<img border="0" width="1" height="1" src="https://www1X.a8.net/0.gif?a8mat={コード}" alt="">` をCTAボックス内に1つ設置
+- CTAボタンとスティッキーCTAバーの両方を差し替えること
+- `rel="nofollow noopener"` を必ず付与すること
+
 ## 作業ルール
 
 - APIキー・シークレット情報は `.env` に記載し `.gitignore` で除外すること
