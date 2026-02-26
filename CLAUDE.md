@@ -208,7 +208,35 @@ affiliate-forge の `content_gen.py`（Claude API）が生成するコンテン�
 - CTAボックス内に `<div class="note">本記事はアフィリエイト広告を含みます。</div>` を設置するだけでOK
 - 「著者が実際に受講したわけではありません」等の追加免責は不要
 
+### 記事作成・publish フロー（2026-02-27 確定版）
+
+```
+[1] 生成
+    cd ~/projects/claude/affiliate-forge
+    python3 main.py
+
+[2] 統計チェック（必須・publishの前に必ず実行）
+    python3 check_stats.py
+    → 要確認箇所をリストアップ
+    → WebSearch で疑わしいものを検証
+    → 確認できないものは定性表現に置換
+    → 再実行して残件が許容範囲か確認
+
+[3] publish
+    eikaiwa-hikaku/articles/ に配置 → sitemap.xml 更新 → git push
+
+[4] X投稿（任意）
+    x-scheduler の reply_url に記事URL設定 → 「要約を生成」→ 翌朝自動投稿
+```
+
+**check_stats.py の許容済み残件（スルーしてOK）**
+- Zoltán Dörnyei・Patricia Kuhl・Carol Dweck・DeKeyser・Hartshorne et al.（全て実在の著名研究者）
+- IIBC スコア分布・文科省「英語教育実施状況調査」（公的機関・実在）
+- 「公式サイトによると〜」と明示された自社公開データ
+- World English Online URL付き引用（URL実在・数値は「約8割」と訂正済み）
+- 「検索練習効果」「分散学習効果」等の一般的な認知心理学概念（%なし）
+
 ### 2026-02-27 修正済み記事（参考）
-affiliate-forge 生成の情報記事13本を検証・修正済み。主な修正内容:
-- FSI誤用（2記事）・捏造アンケート%値・未検証の組織統計・誤ったURL引用数値を全て置換
+affiliate-forge 生成の情報記事13本＋toraiz-review を検証・修正済み（計14本）。主な修正内容:
+- FSI誤用（3記事）・捏造アンケート%値・未検証の組織統計・誤ったURL引用数値を全て置換
 - 確認済みの引用（Hartshorne, Kuhl, Dweck, Lally, Krashen, プログリット自社データ等）はそのまま維持
