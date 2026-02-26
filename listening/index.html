@@ -1341,6 +1341,47 @@
     }
     .mission-btn-premium:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(245,166,35,0.5); }
 
+    /* ── MISSION: ARTICLE LINKS ── */
+    .mission-articles {
+      border-top: 1px solid var(--border);
+      padding-top: 14px; margin: 4px 0 18px; text-align: left;
+    }
+    .mission-articles-label {
+      font-size: 11px; font-weight: 700; color: var(--text-3);
+      letter-spacing: 0.6px; text-align: center; margin-bottom: 10px;
+    }
+    .mission-article-link {
+      display: flex; align-items: flex-start; gap: 7px;
+      padding: 7px 10px; border-radius: 8px; margin-bottom: 3px;
+      font-size: 12.5px; color: var(--text-2); text-decoration: none;
+      transition: all var(--t); line-height: 1.45;
+    }
+    .mission-article-link::before { content: "→"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .mission-article-link:hover { background: var(--surface); color: var(--text-1); }
+
+    /* ── LP: ARTICLE COLUMN SECTION ── */
+    .lp-articles {
+      padding: 52px 24px; border-top: 1px solid var(--border);
+    }
+    .lp-articles-inner { max-width: 720px; margin: 0 auto; }
+    .lp-articles-eyebrow {
+      font-size: 11px; font-weight: 700; color: var(--text-3);
+      letter-spacing: 1.5px; text-align: center; margin-bottom: 8px;
+    }
+    .lp-articles-h { font-size: 18px; font-weight: 800; color: var(--text-1); text-align: center; margin-bottom: 24px; }
+    .lp-articles-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    }
+    @media (max-width: 520px) { .lp-articles-grid { grid-template-columns: 1fr; } }
+    .lp-article-card {
+      display: block; padding: 14px 16px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 12px;
+      text-decoration: none; transition: all var(--t);
+    }
+    .lp-article-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .lp-article-tag { font-size: 10px; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; margin-bottom: 5px; }
+    .lp-article-title { font-size: 13px; font-weight: 600; color: var(--text-1); line-height: 1.5; }
+
     /* ── LANDING: STREAK STATUS ── */
     .streak-status-wrap {
       display: none; align-items: center; justify-content: center;
@@ -2094,6 +2135,32 @@
     </div>
   </div>
 
+  <!-- ── 英語学習コラム ── -->
+  <div class="lp-articles reveal">
+    <div class="lp-articles-inner">
+      <div class="lp-articles-eyebrow">LEARNING COLUMN</div>
+      <h2 class="lp-articles-h">リスニングと一緒に読みたい<span class="text-gold">英語学習コラム</span></h2>
+      <div class="lp-articles-grid">
+        <a class="lp-article-card" href="/articles/english-speaking-improvement/">
+          <div class="lp-article-tag">SPEAKING</div>
+          <div class="lp-article-title">スピーキングが伸びない3つの共通点と、今日からできる改善法</div>
+        </a>
+        <a class="lp-article-card" href="/articles/english-habit-guide/">
+          <div class="lp-article-tag">習慣化</div>
+          <div class="lp-article-title">社会人が英語を習慣化する方法【挫折しない7つのコツ】</div>
+        </a>
+        <a class="lp-article-card" href="/articles/english-pronunciation-correction/">
+          <div class="lp-article-tag">発音</div>
+          <div class="lp-article-title">英語の発音矯正におすすめの方法・サービス比較【2026年版】</div>
+        </a>
+        <a class="lp-article-card" href="/articles/online-eikaiwa-frequency-guide/">
+          <div class="lp-article-tag">継続</div>
+          <div class="lp-article-title">オンライン英会話は週何回受けると効果が出る？科学的根拠から解説</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="lp-footer">
     <div style="margin-bottom:8px">
       <a href="/privacy/" style="color:var(--text-3);text-decoration:none;margin:0 10px;font-size:12px;transition:color 0.18s" onmouseover="this.style.color='var(--text-2)'" onmouseout="this.style.color='var(--text-3)'">プライバシーポリシー</a>
@@ -2224,6 +2291,12 @@
       </div>
     </div>
     <div class="mission-week" id="missionWeek"></div>
+    <div class="mission-articles">
+      <div class="mission-articles-label">📖 次に読む</div>
+      <a class="mission-article-link" href="/articles/english-speaking-improvement/">スピーキングが伸びない3つの共通点と今日からできる改善法</a>
+      <a class="mission-article-link" href="/articles/english-habit-guide/">社会人が英語を習慣化する方法【挫折しない7つのコツ】</a>
+      <a class="mission-article-link" href="/articles/online-eikaiwa-frequency-guide/">英会話は週何回受けると効果が出る？科学的根拠から解説</a>
+    </div>
     <button class="mission-btn-back" onclick="closeMissionComplete()">← TOPに戻る</button>
     <button class="mission-btn-premium" onclick="openWaitlist()">モニターに応募する →</button>
   </div>
