@@ -735,6 +735,119 @@
     .feat-star { color: var(--text-1); font-weight: 600; }
     .feat-star::before { content: '★'; color: #14B8A6; font-weight: 700; flex-shrink: 0; }
 
+    /* ── COMPARISON TABLE ── */
+    .compare-section {
+      padding: 60px 24px 0;
+    }
+    .compare-inner { max-width: 760px; margin: 0 auto; }
+    .compare-lead {
+      text-align: center; margin-bottom: 28px;
+    }
+    .compare-lead p {
+      font-size: 14px; color: var(--text-2); margin-top: 6px; line-height: 1.6;
+    }
+    .compare-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .compare-table {
+      width: 100%; border-collapse: collapse; min-width: 520px;
+      font-size: 13px;
+    }
+    .compare-table th {
+      padding: 10px 12px; font-weight: 700; font-size: 12px;
+      letter-spacing: 0.3px; border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    .compare-table th.col-self {
+      background: rgba(245,166,35,0.08);
+      border-bottom-color: var(--gold);
+      color: var(--gold);
+    }
+    .compare-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--border);
+      color: var(--text-2); vertical-align: middle;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td.col-self {
+      background: rgba(245,166,35,0.04);
+      font-weight: 700; color: var(--text-1);
+    }
+    .compare-table td.col-label {
+      font-weight: 600; color: var(--text-1); font-size: 13px; white-space: nowrap;
+    }
+    .compare-mark-ok  { color: var(--success); font-weight: 800; }
+    .compare-mark-ng  { color: var(--error);   font-weight: 700; opacity: 0.6; }
+    .compare-mark-mid { color: var(--text-3);  font-weight: 600; }
+    .compare-price-self { color: var(--gold); font-weight: 800; font-size: 15px; }
+
+    /* ── PREMIUM TEASER / AI PREVIEW ── */
+    .premium-teaser {
+      background: linear-gradient(135deg, rgba(245,166,35,0.06) 0%, rgba(245,166,35,0.02) 100%);
+      border: 1px solid rgba(245,166,35,0.25);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-top: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .premium-teaser::before {
+      content: '';
+      position: absolute; top: 0; right: 0; width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(245,166,35,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .pt-eyebrow {
+      font-size: 10px; font-weight: 800; letter-spacing: 1.2px;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 6px;
+    }
+    .pt-title {
+      font-size: 18px; font-weight: 800; letter-spacing: -0.3px;
+      color: var(--text-1); margin-bottom: 16px;
+    }
+    .pt-mockup {
+      background: #fff; border: 1px solid var(--border); border-radius: 14px;
+      padding: 16px 18px; margin-bottom: 14px; position: relative;
+    }
+    .pt-mockup-title {
+      font-size: 12px; font-weight: 700; color: var(--text-3);
+      letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .pt-stat-row {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;
+    }
+    .pt-stat {
+      flex: 1; min-width: 80px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 12px; text-align: center;
+    }
+    .pt-stat-val { font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
+    .pt-stat-val.weak  { color: var(--error); }
+    .pt-stat-val.ok    { color: var(--success); }
+    .pt-stat-val.mid   { color: var(--gold); }
+    .pt-stat-lbl { font-size: 10px; color: var(--text-3); margin-top: 2px; }
+    .pt-kw-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .pt-kw {
+      background: rgba(220,38,38,0.08); border: 1px solid rgba(220,38,38,0.2);
+      color: var(--error); font-size: 12px; font-weight: 600;
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .pt-lock {
+      position: absolute; inset: 0; background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(4px); border-radius: 14px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 6px;
+    }
+    .pt-lock-icon { font-size: 28px; }
+    .pt-lock-text { font-size: 13px; font-weight: 700; color: var(--text-2); }
+    .pt-cta {
+      width: 100%;
+      background: linear-gradient(135deg, #E09520 0%, #F5A623 50%, #F8C347 100%);
+      color: #000; border: none; border-radius: 12px;
+      padding: 14px; font-size: 15px; font-weight: 800;
+      cursor: pointer; transition: all var(--t);
+      box-shadow: 0 4px 20px rgba(245,166,35,0.3);
+    }
+    .pt-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(245,166,35,0.5); }
+    .pt-note { font-size: 11px; color: var(--text-3); text-align: center; margin-top: 8px; }
+
     /* ── DIFFICULTY SELECTION (within landing) ── */
     .diff-select-wrap {
       max-width: 560px;
@@ -2082,6 +2195,74 @@
   </section>
 
   <!-- ── SECTION 4: Pricing ── -->
+  <!-- ── COMPARISON TABLE ── -->
+  <div class="compare-section reveal">
+    <div class="compare-inner">
+      <div class="compare-lead">
+        <div class="section-eyebrow">COMPARISON</div>
+        <h2 class="section-h2">他のリスニングアプリと比べてみてください</h2>
+        <p>同じ1,500円でも、クイズ形式・AI診断・リスニング特化度がここまで違います。</p>
+      </div>
+      <div class="compare-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th style="text-align:left">項目</th>
+              <th class="col-self">Native-real<br><small style="font-size:10px;font-weight:600">プレミアム</small></th>
+              <th>スタサプ<br><small style="font-size:10px;font-weight:400">ENGLISH</small></th>
+              <th>Cake<br><small style="font-size:10px;font-weight:400">Plus</small></th>
+              <th>シャドテン</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-label">月額料金</td>
+              <td class="col-self"><span class="compare-price-self">¥1,500</span></td>
+              <td>¥2,178</td>
+              <td>¥1,500</td>
+              <td>¥21,780</td>
+            </tr>
+            <tr>
+              <td class="col-label">リスニング特化</td>
+              <td class="col-self"><span class="compare-mark-ok">◎</span></td>
+              <td><span class="compare-mark-ng">✗</span> 総合学習</td>
+              <td><span class="compare-mark-mid">△</span> 動画中心</td>
+              <td><span class="compare-mark-mid">△</span> 発声中心</td>
+            </tr>
+            <tr>
+              <td class="col-label">クイズ形式</td>
+              <td class="col-self"><span class="compare-mark-ok">◎</span> 455問</td>
+              <td><span class="compare-mark-mid">△</span> ドラマ式</td>
+              <td><span class="compare-mark-ng">✗</span> 動画視聴</td>
+              <td><span class="compare-mark-ng">✗</span> 録音のみ</td>
+            </tr>
+            <tr>
+              <td class="col-label">AI弱点診断</td>
+              <td class="col-self"><span class="compare-mark-ok">◎</span> 単語・速度・文型</td>
+              <td><span class="compare-mark-mid">△</span> 総合のみ</td>
+              <td><span class="compare-mark-mid">△</span> 発音のみ</td>
+              <td><span class="compare-mark-ng">✗</span> 人間添削</td>
+            </tr>
+            <tr>
+              <td class="col-label">毎日続けやすさ</td>
+              <td class="col-self"><span class="compare-mark-ok">◎</span> 5〜10分完結</td>
+              <td><span class="compare-mark-mid">△</span> 散漫になりがち</td>
+              <td><span class="compare-mark-mid">△</span> 受動的</td>
+              <td><span class="compare-mark-ng">✗</span> 高額プレッシャー</td>
+            </tr>
+            <tr>
+              <td class="col-label">解約の自由度</td>
+              <td class="col-self"><span class="compare-mark-ok">◎</span> いつでも1クリック</td>
+              <td><span class="compare-mark-ok">◎</span></td>
+              <td><span class="compare-mark-ok">◎</span></td>
+              <td><span class="compare-mark-mid">△</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <section class="lp-section-alt reveal" id="pricingSection">
     <div class="lp-wrap">
       <div class="section-eyebrow">PRICING</div>
@@ -2107,7 +2288,62 @@
           <button class="plan-btn plan-btn-ghost" onclick="startFreeQuiz()">今日の練習を試す（無料）</button>
         </div>
 
-        <!-- Monitor / Premium Plan (hidden) -->
+        <!-- Premium Plan -->
+        <div class="pricing-card pricing-featured reveal reveal-delay-2">
+          <div class="plan-rec-badge">おすすめ</div>
+          <div class="plan-label">プレミアム</div>
+          <div class="plan-price-wrap">
+            <span class="plan-price">¥1,500</span>
+            <span class="plan-per">/月</span>
+          </div>
+          <div class="plan-trial-text">年払い ¥12,000（月833円・44%お得）</div>
+          <ul class="plan-feats">
+            <li class="feat-ok">全455問＋<strong>毎週新10問</strong>追加</li>
+            <li class="feat-ok">3難易度すべて開放</li>
+            <li class="feat-ok">AI弱点診断（単語・速度・文型）</li>
+            <li class="feat-ok">苦手問題の自動復習</li>
+            <li class="feat-ok">進捗ダッシュボード（近日公開）</li>
+            <li class="feat-ok">クロスデバイス同期（近日公開）</li>
+          </ul>
+          <button class="plan-btn plan-btn-gold" onclick="openWaitlist()">Waitlist登録（優先案内）→</button>
+          <p style="font-size:11px;color:var(--text-3);text-align:center;margin-top:10px">解約はいつでも1クリック</p>
+        </div>
+      </div>
+
+      <!-- AI診断ティザー -->
+      <div class="premium-teaser reveal">
+        <div class="pt-eyebrow">🔬 PREMIUM FEATURE PREVIEW</div>
+        <div class="pt-title">AI弱点診断で「聞き取れない理由」がわかる</div>
+        <div class="pt-mockup">
+          <div class="pt-mockup-title">📊 今日のリスニング診断レポート</div>
+          <div class="pt-stat-row">
+            <div class="pt-stat">
+              <div class="pt-stat-val weak">62%</div>
+              <div class="pt-stat-lbl">速い音声 正答率</div>
+            </div>
+            <div class="pt-stat">
+              <div class="pt-stat-val ok">91%</div>
+              <div class="pt-stat-lbl">ゆっくり音声</div>
+            </div>
+            <div class="pt-stat">
+              <div class="pt-stat-val mid">74%</div>
+              <div class="pt-stat-lbl">全体正答率</div>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--text-3);margin-bottom:8px;font-weight:600">聞き取れなかったキーフレーズ</div>
+          <div class="pt-kw-row">
+            <span class="pt-kw">been standing here</span>
+            <span class="pt-kw">on hold for</span>
+            <span class="pt-kw">gone bad</span>
+            <span class="pt-kw">over asking price</span>
+          </div>
+          <div class="pt-lock">
+            <div class="pt-lock-icon">🔒</div>
+            <div class="pt-lock-text">プレミアムで解放</div>
+          </div>
+        </div>
+        <button class="pt-cta" onclick="openWaitlist()">Waitlist登録でAI診断を一番先に使う →</button>
+        <p class="pt-note">公開時にメールでお知らせします。登録は無料・解除可能。</p>
       </div>
 
       <div class="diff-select-wrap" id="diffSelectWrap"></div>
@@ -2272,6 +2508,7 @@
       <a class="mission-article-link" href="/articles/english-habit-guide/">社会人が英語を習慣化する方法【挫折しない7つのコツ】</a>
       <a class="mission-article-link" href="/articles/online-eikaiwa-frequency-guide/">英会話は週何回受けると効果が出る？科学的根拠から解説</a>
     </div>
+    <button class="mission-btn-premium" onclick="openWaitlist()">🚀 無制限＋AI診断 → Waitlist登録</button>
     <button class="mission-btn-back" onclick="closeMissionComplete()">← TOPに戻る</button>
   </div>
 </div>
