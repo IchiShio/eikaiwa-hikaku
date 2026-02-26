@@ -1,0 +1,3187 @@
+[
+  {
+    "idx": 0,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "Ugh, the line is so long. I've been standing here for twenty"
+  },
+  {
+    "idx": 1,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 13,
+    "text": "Can you turn that down a little? I'm trying to get some slee"
+  },
+  {
+    "idx": 2,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "I think I left my umbrella on the train. It was brand new to"
+  },
+  {
+    "idx": 3,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 11,
+    "text": "Table for two, please. Do you have anything near the window?"
+  },
+  {
+    "idx": 4,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "My back is killing me. I think I slept in a weird position."
+  },
+  {
+    "idx": 5,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 15,
+    "text": "Do you have this in a size medium? I can't find it on the ra"
+  },
+  {
+    "idx": 6,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 11,
+    "text": "I completely blanked during the presentation. My mind just w"
+  },
+  {
+    "idx": 7,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 10,
+    "text": "Hey, you dropped something! Here, I think this is yours."
+  },
+  {
+    "idx": 8,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "The Wi-Fi keeps cutting out. I can't get anything done worki"
+  },
+  {
+    "idx": 9,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 15,
+    "text": "I passed! I can't believe it. Three attempts and I finally g"
+  },
+  {
+    "idx": 10,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 12,
+    "text": "Could I get an extra blanket? It's a bit cold in here."
+  },
+  {
+    "idx": 11,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 10,
+    "text": "I've been on hold for forty minutes. This is ridiculous."
+  },
+  {
+    "idx": 12,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 10,
+    "text": "Watch your step! The floor's wet — they just mopped."
+  },
+  {
+    "idx": 13,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "Do you mind if I sit here? All the other seats are taken."
+  },
+  {
+    "idx": 14,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 9,
+    "text": "The milk's gone bad. I just bought it yesterday!"
+  },
+  {
+    "idx": 15,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 9,
+    "text": "Surprise! Happy birthday! We've been planning this for weeks"
+  },
+  {
+    "idx": 16,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "I think I took a wrong turn. Can you pull up the map?"
+  },
+  {
+    "idx": 17,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 11,
+    "text": "I can't find my keys anywhere. I'm going to be late!"
+  },
+  {
+    "idx": 18,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 8,
+    "text": "This steak is amazing. Compliments to the chef!"
+  },
+  {
+    "idx": 19,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 12,
+    "text": "My flight got cancelled because of the storm. I need to rebo"
+  },
+  {
+    "idx": 20,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 8,
+    "text": "He proposed last night! Look at this ring!"
+  },
+  {
+    "idx": 21,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "Can you proofread this email before I send it? I want to mak"
+  },
+  {
+    "idx": 22,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "I just got back from the gym. I'm absolutely exhausted but I"
+  },
+  {
+    "idx": 23,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "Excuse me, is this seat taken? I just need somewhere to char"
+  },
+  {
+    "idx": 24,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "I burned the rice again. I really need to get a rice cooker."
+  },
+  {
+    "idx": 25,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I've been studying Japanese for two years now, and I finally"
+  },
+  {
+    "idx": 26,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 9,
+    "text": "The printer is jammed again. Third time this week."
+  },
+  {
+    "idx": 27,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 10,
+    "text": "She just texted saying she'll be fifteen minutes late. Typic"
+  },
+  {
+    "idx": 28,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "I need to cancel my gym membership. I've only been twice thi"
+  },
+  {
+    "idx": 29,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "My neighbor's dog barks every night around two in the mornin"
+  },
+  {
+    "idx": 30,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 12,
+    "text": "I'm calling to confirm my reservation for Saturday — two nig"
+  },
+  {
+    "idx": 31,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 16,
+    "text": "I just realized I double-booked myself. I have two meetings "
+  },
+  {
+    "idx": 32,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "Could you wrap this as a gift, please? It's for my mom's bir"
+  },
+  {
+    "idx": 33,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 10,
+    "text": "The ATM swallowed my card and won't give it back."
+  },
+  {
+    "idx": 34,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "I think I'm coming down with something. My throat's been sor"
+  },
+  {
+    "idx": 35,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "Can I get a receipt for this? I need it for my expense repor"
+  },
+  {
+    "idx": 36,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "We're out of toilet paper again. Can you grab some on your w"
+  },
+  {
+    "idx": 37,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 15,
+    "text": "My laptop battery is at two percent. Does anyone have a char"
+  },
+  {
+    "idx": 38,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 15,
+    "text": "The cherry blossoms are at full bloom. Let's grab a spot bef"
+  },
+  {
+    "idx": 39,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "I accidentally sent that email to the wrong person. This is "
+  },
+  {
+    "idx": 40,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "I'm so full I can't move. That was the best barbecue I've ev"
+  },
+  {
+    "idx": 41,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 13,
+    "text": "Attention passengers: the northbound line is experiencing de"
+  },
+  {
+    "idx": 42,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "I can't remember if I locked the front door. I'm already on "
+  },
+  {
+    "idx": 43,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 13,
+    "text": "Could you lower the blinds? The sun is shining right in my e"
+  },
+  {
+    "idx": 44,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 11,
+    "text": "He finally asked me out! We're going for dinner on Friday."
+  },
+  {
+    "idx": 45,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 14,
+    "text": "This is my first time doing a job interview in English. I'm "
+  },
+  {
+    "idx": 46,
+    "old": "beginner",
+    "new": "lv1",
+    "words": 11,
+    "text": "The vending machine took my money and didn't give me anythin"
+  },
+  {
+    "idx": 47,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 17,
+    "text": "I'm trying to cut back on coffee. I've already had four cups"
+  },
+  {
+    "idx": 48,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 16,
+    "text": "We need to talk about what happened in the meeting today. Do"
+  },
+  {
+    "idx": 49,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 16,
+    "text": "I swear the portion sizes here have gotten smaller. This use"
+  },
+  {
+    "idx": 50,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 12,
+    "text": "I think I need reading glasses. The text is getting blurry l"
+  },
+  {
+    "idx": 51,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "Excuse me, do you know if there's a pharmacy nearby? I reall"
+  },
+  {
+    "idx": 52,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I can't believe how much my electric bill went up this month"
+  },
+  {
+    "idx": 53,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "Hey, I just wanted to let you know the meeting's been pushed"
+  },
+  {
+    "idx": 54,
+    "old": "beginner",
+    "new": "lv4",
+    "words": 19,
+    "text": "My laptop keeps freezing up every time I try to open more th"
+  },
+  {
+    "idx": 55,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "Attention passengers: the 4:15 train to Chicago has been del"
+  },
+  {
+    "idx": 56,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I scored two tickets to the game on Saturday. You wanna come"
+  },
+  {
+    "idx": 57,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "Hello, I'd like to schedule an appointment for a teeth clean"
+  },
+  {
+    "idx": 58,
+    "old": "beginner",
+    "new": "lv4",
+    "words": 18,
+    "text": "I'm seriously considering quitting my job. The hours are ins"
+  },
+  {
+    "idx": 59,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 16,
+    "text": "Oh wow, is that a new haircut? It looks great on you! Really"
+  },
+  {
+    "idx": 60,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "The neighbors upstairs are stomping around at midnight every"
+  },
+  {
+    "idx": 61,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I'm thinking about getting a dog. My apartment allows pets a"
+  },
+  {
+    "idx": 62,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "The forecast says there's a 90% chance of rain this weekend."
+  },
+  {
+    "idx": 63,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 15,
+    "text": "I'm sorry, but your credit card was declined. Do you have an"
+  },
+  {
+    "idx": 64,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "Hey, do you know how to get to the central library from here"
+  },
+  {
+    "idx": 65,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "My flight got cancelled because of the snowstorm. Now I'm st"
+  },
+  {
+    "idx": 66,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I'm looking for something for my mom's birthday. She likes g"
+  },
+  {
+    "idx": 67,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "It's been raining non-stop for three days. The basement is s"
+  },
+  {
+    "idx": 68,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I got a promotion! I'm now the head of the marketing departm"
+  },
+  {
+    "idx": 69,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 16,
+    "text": "My son just started high school and he's already stressed ab"
+  },
+  {
+    "idx": 70,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 16,
+    "text": "I can't find my keys anywhere. I've looked in every single r"
+  },
+  {
+    "idx": 71,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "Is this seat taken? The café is totally packed today. Would "
+  },
+  {
+    "idx": 72,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I'm returning this blender. It made a weird burning smell th"
+  },
+  {
+    "idx": 73,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I'm planning a surprise party for my husband's 40th birthday"
+  },
+  {
+    "idx": 74,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "There's a sale at the bookstore this weekend. Everything is "
+  },
+  {
+    "idx": 75,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I'm having lunch with my old college roommate today. We have"
+  },
+  {
+    "idx": 76,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "The school just sent a notice saying classes are canceled to"
+  },
+  {
+    "idx": 77,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "The hotel we booked is right on the beach. I cannot wait. We"
+  },
+  {
+    "idx": 78,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "We just planted a vegetable garden. Tomatoes, zucchini, basi"
+  },
+  {
+    "idx": 79,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I just realized I've been paying for a streaming service I n"
+  },
+  {
+    "idx": 80,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "I just found out my company is being acquired. Nobody really"
+  },
+  {
+    "idx": 81,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "Excuse me, do you have this jacket in a medium? I couldn't f"
+  },
+  {
+    "idx": 82,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "This is the third time this week the copier has jammed. I've"
+  },
+  {
+    "idx": 83,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "I've been commuting 90 minutes each way for the past three y"
+  },
+  {
+    "idx": 84,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "The auditor found some discrepancies in the accounts from la"
+  },
+  {
+    "idx": 85,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "Hey, are you watching the game tonight? I'm thinking of orde"
+  },
+  {
+    "idx": 86,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 18,
+    "text": "My daughter has her school play tonight. She has the lead ro"
+  },
+  {
+    "idx": 87,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been dealing with this tax refund issue for three month"
+  },
+  {
+    "idx": 88,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 16,
+    "text": "I can't believe how expensive childcare is. We're spending m"
+  },
+  {
+    "idx": 89,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "The Wi-Fi at this coffee shop is actually pretty fast. I mig"
+  },
+  {
+    "idx": 90,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "This is their third time rescheduling the appointment. I've "
+  },
+  {
+    "idx": 91,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "I volunteered to coordinate the office charity drive this ye"
+  },
+  {
+    "idx": 92,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I got a noise complaint from my landlord. Apparently my neig"
+  },
+  {
+    "idx": 93,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I think we have mice. I saw droppings in the back of the kit"
+  },
+  {
+    "idx": 94,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "The power went out in the whole neighborhood around 8 PM. It"
+  },
+  {
+    "idx": 95,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I got into an argument with a coworker about the project tim"
+  },
+  {
+    "idx": 96,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I'm so tired of this commute. Same crowded train, same delay"
+  },
+  {
+    "idx": 97,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 16,
+    "text": "This is your boarding announcement for Flight 304 to London."
+  },
+  {
+    "idx": 98,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I can't believe how long it takes to get anything approved a"
+  },
+  {
+    "idx": 99,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I'm thinking about growing a beard. I've never had one but I"
+  },
+  {
+    "idx": 100,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "I managed to negotiate a four-day workweek with my employer."
+  },
+  {
+    "idx": 101,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I twisted my knee during yoga class. Nothing serious, but I "
+  },
+  {
+    "idx": 102,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I threw my back out lifting boxes. I can barely bend over. I"
+  },
+  {
+    "idx": 103,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 18,
+    "text": "We're hosting an exchange student for three months this fall"
+  },
+  {
+    "idx": 104,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I tried a floatation tank experience for the first time. You"
+  },
+  {
+    "idx": 105,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I found out my favorite restaurant is closing at the end of "
+  },
+  {
+    "idx": 106,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I just finished a 5-day hiking trip in the mountains. No cel"
+  },
+  {
+    "idx": 107,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 18,
+    "text": "The grocery store I always go to is being replaced by a luxu"
+  },
+  {
+    "idx": 108,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 18,
+    "text": "There's a huge garage sale in our neighborhood this Saturday"
+  },
+  {
+    "idx": 109,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 18,
+    "text": "The restaurant was fantastic but the service was really slow"
+  },
+  {
+    "idx": 110,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I just finished paying off my car loan. Five years of paymen"
+  },
+  {
+    "idx": 111,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 18,
+    "text": "I'm thinking of adopting a more minimalist lifestyle. I want"
+  },
+  {
+    "idx": 112,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "My dog chewed through the cord of my laptop charger. Again. "
+  },
+  {
+    "idx": 113,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I tried to fix the leaking tap myself using a YouTube tutori"
+  },
+  {
+    "idx": 114,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I finally cleared out my email inbox. I had over 4,000 unrea"
+  },
+  {
+    "idx": 115,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 19,
+    "text": "My doctor recommended I reduce my sodium intake. I guess I r"
+  },
+  {
+    "idx": 116,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I just discovered there's a great hiking trail only 20 minut"
+  },
+  {
+    "idx": 117,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I've been studying for the GMAT for four months. I take the "
+  },
+  {
+    "idx": 118,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I accidentally threw out an important document with the recy"
+  },
+  {
+    "idx": 119,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "We just had a big thunderstorm. There's water seeping in und"
+  },
+  {
+    "idx": 120,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I just finished reading all seven Harry Potter books for the"
+  },
+  {
+    "idx": 121,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I started reading before bed instead of looking at my phone."
+  },
+  {
+    "idx": 122,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I'm considering getting solar panels. The upfront cost is hi"
+  },
+  {
+    "idx": 123,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "My company just announced a mandatory return to office five "
+  },
+  {
+    "idx": 124,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "I can't believe how much kids' birthday parties cost these d"
+  },
+  {
+    "idx": 125,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I just signed up for a language exchange. I'll teach someone"
+  },
+  {
+    "idx": 126,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I went to the emergency room at 2 AM with chest pains. Turns"
+  },
+  {
+    "idx": 127,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I made the mistake of shopping on an empty stomach. I ended "
+  },
+  {
+    "idx": 128,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "We adopted a goldfish for the kids six months ago. Nobody th"
+  },
+  {
+    "idx": 129,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 16,
+    "text": "I'm trying to reduce my carbon footprint. I've been taking s"
+  },
+  {
+    "idx": 130,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I'm spending the holidays with my partner's family this year"
+  },
+  {
+    "idx": 131,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've been offered a book deal. A small publisher wants to pu"
+  },
+  {
+    "idx": 132,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 16,
+    "text": "We are now boarding rows 20 through 35. Please have your boa"
+  },
+  {
+    "idx": 133,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I've started cold showers every morning. It sounds miserable"
+  },
+  {
+    "idx": 134,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've decided I'm going to hike the Appalachian Trail next ye"
+  },
+  {
+    "idx": 135,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I think someone is using my Netflix account without my permi"
+  },
+  {
+    "idx": 136,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I've started fostering rescue cats. It's only temporary but "
+  },
+  {
+    "idx": 137,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I just realized I've been paying for two gym memberships for"
+  },
+  {
+    "idx": 138,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been working on a side project — a mobile app to help p"
+  },
+  {
+    "idx": 139,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I found a $20 bill in an old coat pocket. Small victories. I"
+  },
+  {
+    "idx": 140,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "I'm trying to figure out how to say no to people without fee"
+  },
+  {
+    "idx": 141,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 17,
+    "text": "My dog is having surgery tomorrow. It's minor but I'm a nerv"
+  },
+  {
+    "idx": 142,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 16,
+    "text": "My teenager is refusing to get off his phone at dinner. We'v"
+  },
+  {
+    "idx": 143,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 21,
+    "text": "I'm going to visit my old neighborhood this weekend. I moved"
+  },
+  {
+    "idx": 144,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I've been learning origami from YouTube videos. I started wi"
+  },
+  {
+    "idx": 145,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I got a 5% raise this year. It's not amazing but given the e"
+  },
+  {
+    "idx": 146,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I tried making sushi at home for the first time. It looked t"
+  },
+  {
+    "idx": 147,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I've been having trouble concentrating lately. I think it mi"
+  },
+  {
+    "idx": 148,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 16,
+    "text": "I accidentally hit reply-all to a company-wide email with a "
+  },
+  {
+    "idx": 149,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 15,
+    "text": "I've been volunteering at a homeless shelter on Sunday morni"
+  },
+  {
+    "idx": 150,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 19,
+    "text": "My parents bought me a gym membership as a birthday gift. I "
+  },
+  {
+    "idx": 151,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 18,
+    "text": "I accidentally double-booked two dentist appointments on the"
+  },
+  {
+    "idx": 152,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 15,
+    "text": "I've been job searching for five months with no offers. I'm "
+  },
+  {
+    "idx": 153,
+    "old": "beginner",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've started taking my lunch break outside every day. Just 3"
+  },
+  {
+    "idx": 154,
+    "old": "beginner",
+    "new": "lv2",
+    "words": 17,
+    "text": "I've been doing 10 minutes of journaling every morning and i"
+  },
+  {
+    "idx": 155,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I've been studying Japanese for about six months now. I can "
+  },
+  {
+    "idx": 156,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I got rear-ended on the way to work this morning. Nobody was"
+  },
+  {
+    "idx": 157,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 23,
+    "text": "I think I left my wallet in the cab. I had everything in the"
+  },
+  {
+    "idx": 158,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 19,
+    "text": "We're almost out of coffee. Can you add it to the shopping l"
+  },
+  {
+    "idx": 159,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've had this cough for like two weeks. It's not getting any"
+  },
+  {
+    "idx": 160,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "My landlord finally agreed to fix the heating. I've been ask"
+  },
+  {
+    "idx": 161,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 19,
+    "text": "This is your captain speaking. We're currently cruising at 3"
+  },
+  {
+    "idx": 162,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I stayed up way too late last night watching that new series"
+  },
+  {
+    "idx": 163,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 19,
+    "text": "I've been saving up to buy a new camera. I'm really into pho"
+  },
+  {
+    "idx": 164,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 20,
+    "text": "We're having a potluck on Friday. If you wanna come, just br"
+  },
+  {
+    "idx": 165,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've got to cut back on eating out. I did the math and I spe"
+  },
+  {
+    "idx": 166,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 21,
+    "text": "There's a new Korean BBQ place that just opened downtown. I "
+  },
+  {
+    "idx": 167,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 18,
+    "text": "I'm hosting Thanksgiving this year and I've never cooked a t"
+  },
+  {
+    "idx": 168,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "The gym I go to is raising their membership fee by 30%. I'm "
+  },
+  {
+    "idx": 169,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 20,
+    "text": "My cat got into the pantry and knocked over a whole bag of f"
+  },
+  {
+    "idx": 170,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 19,
+    "text": "I think I've been putting on weight lately. I need to start "
+  },
+  {
+    "idx": 171,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 22,
+    "text": "My internet has been going out every day around the same tim"
+  },
+  {
+    "idx": 172,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 16,
+    "text": "Sorry, could you repeat that? The connection is really bad a"
+  },
+  {
+    "idx": 173,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 18,
+    "text": "My daughter got into her first-choice university. We're so p"
+  },
+  {
+    "idx": 174,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been having a lot of trouble sleeping lately. I wake up"
+  },
+  {
+    "idx": 175,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I hit 10,000 followers on Instagram today! I know it's not a"
+  },
+  {
+    "idx": 176,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I have to give a presentation to the board next Monday and I"
+  },
+  {
+    "idx": 177,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I found a lump in my neck. It's probably nothing but my wife"
+  },
+  {
+    "idx": 178,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 20,
+    "text": "I just adopted a rescue dog. She's a bit shy but already war"
+  },
+  {
+    "idx": 179,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 19,
+    "text": "I'm exhausted. I've been on call all week and last night the"
+  },
+  {
+    "idx": 180,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "There's a really beautiful view from up here. You can see th"
+  },
+  {
+    "idx": 181,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "My parents are coming to visit for two weeks next month. I l"
+  },
+  {
+    "idx": 182,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I sprained my ankle playing soccer. It's swollen and I can b"
+  },
+  {
+    "idx": 183,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "We're completely snowed in. There's like two feet of snow ou"
+  },
+  {
+    "idx": 184,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "My kids want a trampoline for the backyard. I'm a little ner"
+  },
+  {
+    "idx": 185,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've started volunteering at the local food bank on weekends"
+  },
+  {
+    "idx": 186,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "Wow, I didn't realize how much I'd missed live music. That c"
+  },
+  {
+    "idx": 187,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 22,
+    "text": "I just locked myself out of the house. My phone is inside to"
+  },
+  {
+    "idx": 188,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I'm doing a digital detox for the weekend. No phone, no soci"
+  },
+  {
+    "idx": 189,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I need to get my car emissions tested before I can renew my "
+  },
+  {
+    "idx": 190,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 16,
+    "text": "I think our upstairs neighbors are renovating. There's been "
+  },
+  {
+    "idx": 191,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I'm teaching myself to code. I've been watching tutorials on"
+  },
+  {
+    "idx": 192,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 23,
+    "text": "My grandfather just turned 90. We threw him a big party with"
+  },
+  {
+    "idx": 193,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "My boss asked me to work overtime this weekend without extra"
+  },
+  {
+    "idx": 194,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I just started seeing a therapist. I've been dealing with an"
+  },
+  {
+    "idx": 195,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I've been going through old photos and found pictures from m"
+  },
+  {
+    "idx": 196,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I asked for a window seat but they gave me a middle seat bet"
+  },
+  {
+    "idx": 197,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 24,
+    "text": "I got a free sample of this new protein powder at the gym. I"
+  },
+  {
+    "idx": 198,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 22,
+    "text": "I've got an early morning flight tomorrow. I need to leave t"
+  },
+  {
+    "idx": 199,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "We've been trying to get pregnant for two years. We just fou"
+  },
+  {
+    "idx": 200,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 24,
+    "text": "I'm at the post office to mail a gift to my cousin overseas."
+  },
+  {
+    "idx": 201,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 18,
+    "text": "Our team won the championship! We were the underdogs but we "
+  },
+  {
+    "idx": 202,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 23,
+    "text": "We put in an offer on a house yesterday. The sellers are goi"
+  },
+  {
+    "idx": 203,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 22,
+    "text": "I found a really good deal on a flight to Miami — only $89 e"
+  },
+  {
+    "idx": 204,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I'm trying to find a good gift for someone who already has e"
+  },
+  {
+    "idx": 205,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I got the job! It took three rounds of interviews but they f"
+  },
+  {
+    "idx": 206,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "We had a really bad hailstorm last night. It cracked the win"
+  },
+  {
+    "idx": 207,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I'm starting to think I need glasses. Things at a distance l"
+  },
+  {
+    "idx": 208,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 24,
+    "text": "I need to get my hair cut soon. I keep putting it off. It's "
+  },
+  {
+    "idx": 209,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 23,
+    "text": "You know what, I think I'm just going to apply. The worst th"
+  },
+  {
+    "idx": 210,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I just started a new job and I still don't know anyone. Lunc"
+  },
+  {
+    "idx": 211,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 24,
+    "text": "My child's teacher called today to say he's been acting up i"
+  },
+  {
+    "idx": 212,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I'm completely lost. I followed the GPS but I ended up in so"
+  },
+  {
+    "idx": 213,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 18,
+    "text": "My phone screen cracked after I dropped it. I thought the ca"
+  },
+  {
+    "idx": 214,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I signed up for a cooking class and learned how to make past"
+  },
+  {
+    "idx": 215,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've decided to go back to school. I want to get my master's"
+  },
+  {
+    "idx": 216,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I ordered something on eBay a month ago and it still hasn't "
+  },
+  {
+    "idx": 217,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 17,
+    "text": "I went to an outdoor concert yesterday and completely forgot"
+  },
+  {
+    "idx": 218,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been trying to cut plastic out of my life. I use reusab"
+  },
+  {
+    "idx": 219,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 16,
+    "text": "I'm really struggling with jet lag. I've been awake since 3 "
+  },
+  {
+    "idx": 220,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I applied for a credit card but got rejected. I guess my cre"
+  },
+  {
+    "idx": 221,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I finally watched that movie everyone was talking about last"
+  },
+  {
+    "idx": 222,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "My son just got his acceptance letter from MIT. I still can'"
+  },
+  {
+    "idx": 223,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I forgot my phone at home today. I feel so disconnected. It'"
+  },
+  {
+    "idx": 224,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I'm so nervous about meeting my girlfriend's parents for the"
+  },
+  {
+    "idx": 225,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've been doing intermittent fasting. I only eat between noo"
+  },
+  {
+    "idx": 226,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I need to find a summer camp for my kids. They're 8 and 11. "
+  },
+  {
+    "idx": 227,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I think I'm allergic to something in this hotel room. My nos"
+  },
+  {
+    "idx": 228,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I've been going to therapy for a year and I finally feel lik"
+  },
+  {
+    "idx": 229,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I witnessed a car accident on the highway. I pulled over and"
+  },
+  {
+    "idx": 230,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I've been growing herbs on my balcony — basil, mint, rosemar"
+  },
+  {
+    "idx": 231,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 18,
+    "text": "I'm taking an online Spanish course. I'm not sure if I'm mak"
+  },
+  {
+    "idx": 232,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 22,
+    "text": "I feel like I'm invisible at work. My ideas never get listen"
+  },
+  {
+    "idx": 233,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I ordered my groceries online this week. It was so convenien"
+  },
+  {
+    "idx": 234,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I got selected for jury duty. I've always been curious about"
+  },
+  {
+    "idx": 235,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 21,
+    "text": "I've been offered a position in another city. The pay is gre"
+  },
+  {
+    "idx": 236,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I'm not sure how to tell my roommate that her cooking smells"
+  },
+  {
+    "idx": 237,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I bought two plants last year and they're both thriving. I'm"
+  },
+  {
+    "idx": 238,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 20,
+    "text": "I finally confronted my boss about being passed over for pro"
+  },
+  {
+    "idx": 239,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "My kid got in trouble at school again. This time he threw a "
+  },
+  {
+    "idx": 240,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been learning to surf. It's way harder than it looks. I"
+  },
+  {
+    "idx": 241,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 22,
+    "text": "This is the third pharmacy I've tried. They're all out of st"
+  },
+  {
+    "idx": 242,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I tried to return some shoes without a receipt but the store"
+  },
+  {
+    "idx": 243,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I made a donation to a wildlife charity today. I saw a docum"
+  },
+  {
+    "idx": 244,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 22,
+    "text": "My landlord finally agreed to let me paint the walls. I've h"
+  },
+  {
+    "idx": 245,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I think I need to update my resume. I haven't touched it in "
+  },
+  {
+    "idx": 246,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've started composting. I have this bin in the backyard and"
+  },
+  {
+    "idx": 247,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "My manager just pulled me aside and said my performance revi"
+  },
+  {
+    "idx": 248,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I got a follow-back from my favorite author on Twitter. I ne"
+  },
+  {
+    "idx": 249,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I got offered a full-time job but I'm not sure I want to giv"
+  },
+  {
+    "idx": 250,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "My flight was overbooked and they asked for volunteers to ta"
+  },
+  {
+    "idx": 251,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I'm really impressed by how fluent my neighbor is in four la"
+  },
+  {
+    "idx": 252,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I got a terrible review online for my small business. It was"
+  },
+  {
+    "idx": 253,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've been using a budgeting app for three months and I've fi"
+  },
+  {
+    "idx": 254,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I got upgraded to business class for the first time. I have "
+  },
+  {
+    "idx": 255,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 23,
+    "text": "I've been eating the same lunch at the same place for the pa"
+  },
+  {
+    "idx": 256,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "There was a gas leak in our building this morning. Everyone "
+  },
+  {
+    "idx": 257,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been documenting my travels on Instagram and I actually"
+  },
+  {
+    "idx": 258,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 18,
+    "text": "I volunteered to organize the company Christmas party and no"
+  },
+  {
+    "idx": 259,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 24,
+    "text": "I found out there was a recall on the baby formula I've been"
+  },
+  {
+    "idx": 260,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 23,
+    "text": "I've been looking for a part-time job on top of my full-time"
+  },
+  {
+    "idx": 261,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've started playing chess online. I was terrible at first b"
+  },
+  {
+    "idx": 262,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 19,
+    "text": "I've been meal-prepping lunches for work and I've saved abou"
+  },
+  {
+    "idx": 263,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "Our team lost in the playoffs but honestly we played our bes"
+  },
+  {
+    "idx": 264,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 24,
+    "text": "I've just finished watching the final episode of my favorite"
+  },
+  {
+    "idx": 265,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I'm going to visit my grandmother in the nursing home today."
+  },
+  {
+    "idx": 266,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 23,
+    "text": "I sprained my wrist at work lifting something. I need to wea"
+  },
+  {
+    "idx": 267,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've signed up for a 30-day writing challenge. One page a da"
+  },
+  {
+    "idx": 268,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 19,
+    "text": "I've got a big dinner party this weekend. 12 people. I'm coo"
+  },
+  {
+    "idx": 269,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 23,
+    "text": "I ran into an old classmate at the grocery store. We hadn't "
+  },
+  {
+    "idx": 270,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 21,
+    "text": "I need to get my eyes checked. I haven't had an eye exam in "
+  },
+  {
+    "idx": 271,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "My toddler drew all over the walls in permanent marker. I've"
+  },
+  {
+    "idx": 272,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've started collecting vinyl records. It started with just "
+  },
+  {
+    "idx": 273,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I got a standing ovation at the end of my presentation. I ne"
+  },
+  {
+    "idx": 274,
+    "old": "intermediate",
+    "new": "lv2",
+    "words": 16,
+    "text": "I overslept and missed the first two sessions of the confere"
+  },
+  {
+    "idx": 275,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've got to renew my gym membership but honestly I haven't g"
+  },
+  {
+    "idx": 276,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I bought concert tickets six months ago and forgot about the"
+  },
+  {
+    "idx": 277,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I didn't realize the coupon had expired. I was embarrassed a"
+  },
+  {
+    "idx": 278,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been going to the farmers market every Saturday for a y"
+  },
+  {
+    "idx": 279,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've just started learning to swim at 40. The kids at the po"
+  },
+  {
+    "idx": 280,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I got a noise complaint from my downstairs neighbor because "
+  },
+  {
+    "idx": 281,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I finally cleaned out the garage. There was so much junk in "
+  },
+  {
+    "idx": 282,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 23,
+    "text": "I got a cavity filled without any painkillers. The dentist s"
+  },
+  {
+    "idx": 283,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I just got back from a silent meditation retreat. Four days,"
+  },
+  {
+    "idx": 284,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've been following this fitness influencer online and final"
+  },
+  {
+    "idx": 285,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been dog-sitting my neighbor's golden retriever for the"
+  },
+  {
+    "idx": 286,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been thinking about going back to my home country. I've"
+  },
+  {
+    "idx": 287,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I had a really insightful conversation with an elderly woman"
+  },
+  {
+    "idx": 288,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've just started learning to code in Python. It's been two "
+  },
+  {
+    "idx": 289,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 19,
+    "text": "I just realized I've been mispronouncing a word in English f"
+  },
+  {
+    "idx": 290,
+    "old": "intermediate",
+    "new": "lv4",
+    "words": 23,
+    "text": "I've been eating really well all week. I deserve a treat. I'"
+  },
+  {
+    "idx": 291,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "My husband surprised me with flowers for no reason. No anniv"
+  },
+  {
+    "idx": 292,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've signed up for a half-day pottery class this Saturday. I"
+  },
+  {
+    "idx": 293,
+    "old": "intermediate",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been going to the same coffee shop every morning for th"
+  },
+  {
+    "idx": 294,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "Uh, yeah, I'll have the grilled salmon with a side salad, pl"
+  },
+  {
+    "idx": 295,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "We should probably leave by seven if we want to beat the tra"
+  },
+  {
+    "idx": 296,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "Could you turn that down a bit? I'm trying to get the baby t"
+  },
+  {
+    "idx": 297,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I checked in online last night so I should be good. Do I sti"
+  },
+  {
+    "idx": 298,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "So, I'm thinking of going vegetarian. I've been reading a lo"
+  },
+  {
+    "idx": 299,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 19,
+    "text": "Can I borrow fifty bucks until payday? I ran out of cash and"
+  },
+  {
+    "idx": 300,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I passed my driving test on the first try! I was so nervous "
+  },
+  {
+    "idx": 301,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "Welcome to Fresh Greens! Can I take your order? We've got a "
+  },
+  {
+    "idx": 302,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I just got the results from my blood test and my cholesterol"
+  },
+  {
+    "idx": 303,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 19,
+    "text": "I finally finished my dissertation. Five years of work and i"
+  },
+  {
+    "idx": 304,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I signed up for a half marathon next spring. I've never run "
+  },
+  {
+    "idx": 305,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "Could I get a refund for this jacket? I bought it last week "
+  },
+  {
+    "idx": 306,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 19,
+    "text": "I downloaded that meditation app everyone's been talking abo"
+  },
+  {
+    "idx": 307,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "I got a text saying my package will be delivered between 2 a"
+  },
+  {
+    "idx": 308,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "I'm trying to reduce my screen time. I've been on my phone f"
+  },
+  {
+    "idx": 309,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I ordered a large pepperoni pizza, a Caesar salad, and two c"
+  },
+  {
+    "idx": 310,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "We're thinking about renovating the kitchen. It's pretty dat"
+  },
+  {
+    "idx": 311,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I think I'm coming down with something. My throat is scratch"
+  },
+  {
+    "idx": 312,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "Can you cover my shift on Sunday? I have a family thing I fo"
+  },
+  {
+    "idx": 313,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I forgot it was trash day again. The truck already came and "
+  },
+  {
+    "idx": 314,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "My back has been killing me since I started working from hom"
+  },
+  {
+    "idx": 315,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I got a notification that someone tried to log into my accou"
+  },
+  {
+    "idx": 316,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 21,
+    "text": "I'm watching my neighbor's house while she's in Florida for "
+  },
+  {
+    "idx": 317,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 19,
+    "text": "I'm so full I can barely move. That was the best Thanksgivin"
+  },
+  {
+    "idx": 318,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I just got a parking ticket. I was only gone for five minute"
+  },
+  {
+    "idx": 319,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I adopted a vegan diet three months ago and my energy levels"
+  },
+  {
+    "idx": 320,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I won a gift card in our office raffle. It's for a spa. I've"
+  },
+  {
+    "idx": 321,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I accidentally sent an email to the entire company instead o"
+  },
+  {
+    "idx": 322,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I need to cancel my gym membership but they're making it rea"
+  },
+  {
+    "idx": 323,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "I need to be at work in 20 minutes and my car won't start. T"
+  },
+  {
+    "idx": 324,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I'm studying for my bar exam. It's in six weeks and I feel l"
+  },
+  {
+    "idx": 325,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "We're thinking of going on a road trip this summer. Just ren"
+  },
+  {
+    "idx": 326,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I almost got scammed today. Someone called claiming to be fr"
+  },
+  {
+    "idx": 327,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I finally got my driver's license at 35. Better late than ne"
+  },
+  {
+    "idx": 328,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I've been trying to learn to play guitar for six months. I c"
+  },
+  {
+    "idx": 329,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "I've been on hold for 45 minutes. The music is still playing"
+  },
+  {
+    "idx": 330,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 20,
+    "text": "I'm trying to cut back on alcohol. I've been drinking every "
+  },
+  {
+    "idx": 331,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I finally bit the bullet and booked tickets to Japan. I've b"
+  },
+  {
+    "idx": 332,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "My colleague just resigned. She was the only one who knew ho"
+  },
+  {
+    "idx": 333,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I think I'm developing an allergy to cats. Every time I visi"
+  },
+  {
+    "idx": 334,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I think I left the stove on. I'm already ten minutes from ho"
+  },
+  {
+    "idx": 335,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 20,
+    "text": "I need to cancel tomorrow's appointment. Something urgent ca"
+  },
+  {
+    "idx": 336,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I've been saving up for this for two years and I finally bou"
+  },
+  {
+    "idx": 337,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 20,
+    "text": "My flight lands at midnight. Is there still public transport"
+  },
+  {
+    "idx": 338,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 18,
+    "text": "My nephew just started walking. He's ten months old. He's so"
+  },
+  {
+    "idx": 339,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "I accidentally dyed my hair too dark. I was going for a warm"
+  },
+  {
+    "idx": 340,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I'm trying to find a plumber. The one I usually use retired "
+  },
+  {
+    "idx": 341,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "We're doing a dry January. No alcohol for the whole month. D"
+  },
+  {
+    "idx": 342,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I got a scholarship to study abroad for a semester. I've nev"
+  },
+  {
+    "idx": 343,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "My subscription box arrived and this month's theme was self-"
+  },
+  {
+    "idx": 344,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I can't believe my kids are already back in school. Summer w"
+  },
+  {
+    "idx": 345,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I've been saving up for years but the housing market is comp"
+  },
+  {
+    "idx": 346,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 26,
+    "text": "I locked my keys in my car again. This is the third time. I "
+  },
+  {
+    "idx": 347,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "My husband and I are finally planning our honeymoon. We got "
+  },
+  {
+    "idx": 348,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I'm not very tech-savvy, but my granddaughter set up a video"
+  },
+  {
+    "idx": 349,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I just realized I double-booked myself. I have a wedding and"
+  },
+  {
+    "idx": 350,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I just saw that my ex is engaged. We broke up only eight mon"
+  },
+  {
+    "idx": 351,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I was in a minor fender bender in the parking lot. No injuri"
+  },
+  {
+    "idx": 352,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I just got back from my first pottery class. I made the ugli"
+  },
+  {
+    "idx": 353,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "My uncle left me some money in his will. It's not a fortune "
+  },
+  {
+    "idx": 354,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I got bitten by a dog at the park. It wasn't too deep but I "
+  },
+  {
+    "idx": 355,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 19,
+    "text": "I've started a podcast. I only have three episodes out and a"
+  },
+  {
+    "idx": 356,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I just asked my neighbor if she could turn down her music an"
+  },
+  {
+    "idx": 357,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I won the auction! I bid on a vintage watch online and I act"
+  },
+  {
+    "idx": 358,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've decided to take a gap year before starting university. "
+  },
+  {
+    "idx": 359,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I found a book at the thrift store that I've been looking fo"
+  },
+  {
+    "idx": 360,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I spilled coffee all over my keyboard. It still works someho"
+  },
+  {
+    "idx": 361,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I've been training for a 5K charity run. I could barely run "
+  },
+  {
+    "idx": 362,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I bought a standing desk and it has totally changed how I fe"
+  },
+  {
+    "idx": 363,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I need to find a new GP. Mine just retired after 20 years an"
+  },
+  {
+    "idx": 364,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I'm renovating my bathroom myself. It's a huge project but I"
+  },
+  {
+    "idx": 365,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I can't stop watching cooking videos on YouTube. I don't eve"
+  },
+  {
+    "idx": 366,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I was at the gym and someone took my stuff out of the locker"
+  },
+  {
+    "idx": 367,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I'm thinking of downsizing. The kids have moved out and the "
+  },
+  {
+    "idx": 368,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I found mold in the corner of my bathroom. I've scrubbed it "
+  },
+  {
+    "idx": 369,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I'm preparing for a job interview tomorrow. I've done so muc"
+  },
+  {
+    "idx": 370,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I'm trying to teach my dog to stop jumping on guests. He get"
+  },
+  {
+    "idx": 371,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I need to replace my mattress. I've had this one for 12 year"
+  },
+  {
+    "idx": 372,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I got into a bidding war on a house and ended up paying $30,"
+  },
+  {
+    "idx": 373,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I went to a wine tasting with some colleagues. I don't reall"
+  },
+  {
+    "idx": 374,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I'm learning how to knit. I've made one scarf that looks mor"
+  },
+  {
+    "idx": 375,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I saw a therapist for the first time today. It was scary to "
+  },
+  {
+    "idx": 376,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 26,
+    "text": "My cat keeps waking me up at 4 AM. She sits on my face. I do"
+  },
+  {
+    "idx": 377,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I've been feeling really homesick lately. I moved here six m"
+  },
+  {
+    "idx": 378,
+    "old": "advanced",
+    "new": "lv2",
+    "words": 19,
+    "text": "I accidentally booked a non-refundable hotel room and now I "
+  },
+  {
+    "idx": 379,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "Ugh, I think I missed a spot shaving. I'll just have to live"
+  },
+  {
+    "idx": 380,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I made my own kombucha for the first time. It took two weeks"
+  },
+  {
+    "idx": 381,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I have a 7 AM meeting tomorrow and I live an hour away. I'm "
+  },
+  {
+    "idx": 382,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I've started going to a book club. It's made me read books I"
+  },
+  {
+    "idx": 383,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I've been skipping breakfast for a year now. People say it's"
+  },
+  {
+    "idx": 384,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been gardening every weekend this summer and my pumpkin"
+  },
+  {
+    "idx": 385,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I've been putting off this one task for three weeks. It'll t"
+  },
+  {
+    "idx": 386,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I'm making my own baby food. I've been pureeing vegetables a"
+  },
+  {
+    "idx": 387,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I'm trying to be more social this year. I said yes to three "
+  },
+  {
+    "idx": 388,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I can't believe I agreed to run the raffle at the school fai"
+  },
+  {
+    "idx": 389,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 20,
+    "text": "I've been thinking about adopting a minimalist wardrobe. Jus"
+  },
+  {
+    "idx": 390,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I've been trying to find a work-life balance and I think I'm"
+  },
+  {
+    "idx": 391,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I took a free online course in digital marketing and now I'v"
+  },
+  {
+    "idx": 392,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I've been putting together IKEA furniture for eight hours. O"
+  },
+  {
+    "idx": 393,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 19,
+    "text": "I am absolutely exhausted. I've been looking after three kid"
+  },
+  {
+    "idx": 394,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I'm learning how to meditate. I'm not sure if I'm doing it r"
+  },
+  {
+    "idx": 395,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I've been craving sushi all week and I finally gave in and o"
+  },
+  {
+    "idx": 396,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I finally got around to repainting the front door. It was pe"
+  },
+  {
+    "idx": 397,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I went to my first spin class today. I thought I was fit but"
+  },
+  {
+    "idx": 398,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 19,
+    "text": "My daughter just started kindergarten. She was brave and did"
+  },
+  {
+    "idx": 399,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I got a zero for an assignment because I forgot to hit submi"
+  },
+  {
+    "idx": 400,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I just found out I'm pregnant. We're totally shocked but rea"
+  },
+  {
+    "idx": 401,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "Ugh, I totally blanked on the exam. I studied so hard but my"
+  },
+  {
+    "idx": 402,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I need to renew my passport before our trip. The problem is "
+  },
+  {
+    "idx": 403,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 19,
+    "text": "I've been freelancing for a year now and honestly? I love th"
+  },
+  {
+    "idx": 404,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "I just got back from a two-week trip to Italy. The food was "
+  },
+  {
+    "idx": 405,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "My roommate and I are really not getting along. She leaves d"
+  },
+  {
+    "idx": 406,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "I just applied for a small business loan. I've been wanting "
+  },
+  {
+    "idx": 407,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 26,
+    "text": "We finally sold the house after six months on the market. It"
+  },
+  {
+    "idx": 408,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I was supposed to meet her at noon but she never showed up a"
+  },
+  {
+    "idx": 409,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I burned the roast chicken. I set a timer and everything but"
+  },
+  {
+    "idx": 410,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I made a sourdough bread from scratch for the first time. It"
+  },
+  {
+    "idx": 411,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "My dentist told me I need a root canal. I was hoping it was "
+  },
+  {
+    "idx": 412,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I went to the farmers market this morning and picked up some"
+  },
+  {
+    "idx": 413,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been binge-watching a true crime series and now I'm sca"
+  },
+  {
+    "idx": 414,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "We spent the whole afternoon baking Christmas cookies with t"
+  },
+  {
+    "idx": 415,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "My lease is up in two months and my landlord is raising the "
+  },
+  {
+    "idx": 416,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I have so much stuff I never use. I think I'm going to do a "
+  },
+  {
+    "idx": 417,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I can't decide whether to lease or buy a car. I've been rese"
+  },
+  {
+    "idx": 418,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I fell asleep on the train and missed my stop by three stati"
+  },
+  {
+    "idx": 419,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I've been vegetarian for 10 years but I just tried a burger "
+  },
+  {
+    "idx": 420,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I've started meal prepping on Sundays. It takes a couple hou"
+  },
+  {
+    "idx": 421,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I've got a huge deadline tomorrow and my internet just went "
+  },
+  {
+    "idx": 422,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I lent my umbrella to someone at work three weeks ago and I'"
+  },
+  {
+    "idx": 423,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "We had our first team meeting in person since the pandemic. "
+  },
+  {
+    "idx": 424,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've started waking up at 5 AM to exercise before work. It's"
+  },
+  {
+    "idx": 425,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "My sister just moved to a new city for a job. I miss her so "
+  },
+  {
+    "idx": 426,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I've been asked to be the maid of honor for my best friend's"
+  },
+  {
+    "idx": 427,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I've been reading a lot of self-help books lately. I don't k"
+  },
+  {
+    "idx": 428,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I thought I was going to a casual dinner, but it turned out "
+  },
+  {
+    "idx": 429,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "I'm going through a really tough time at the moment. I lost "
+  },
+  {
+    "idx": 430,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "The ice cream truck just came around. I haven't heard that m"
+  },
+  {
+    "idx": 431,
+    "old": "advanced",
+    "new": "lv5",
+    "words": 27,
+    "text": "I got a message from HR saying I need to take the rest of my"
+  },
+  {
+    "idx": 432,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I accidentally left my sunglasses at the restaurant. When I "
+  },
+  {
+    "idx": 433,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "I had the most stressful week of my life but it's Friday and"
+  },
+  {
+    "idx": 434,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I finally got around to learning how to ride a bike at 30. M"
+  },
+  {
+    "idx": 435,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "I've been trying to get into classical music. My friend gave"
+  },
+  {
+    "idx": 436,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I got rear-ended at a stoplight. No serious injuries but my "
+  },
+  {
+    "idx": 437,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 23,
+    "text": "I got a birthday text from someone and I have no idea who th"
+  },
+  {
+    "idx": 438,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "I thought I was going for a quick walk but I ended up hiking"
+  },
+  {
+    "idx": 439,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 19,
+    "text": "The checkout line at the supermarket was so long. I switched"
+  },
+  {
+    "idx": 440,
+    "old": "advanced",
+    "new": "lv5",
+    "words": 27,
+    "text": "I just found out my best friend is moving to another country"
+  },
+  {
+    "idx": 441,
+    "old": "advanced",
+    "new": "lv5",
+    "words": 31,
+    "text": "I need to return this item, but I bought it online and the r"
+  },
+  {
+    "idx": 442,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 24,
+    "text": "I asked for a raise and my boss said the company couldn't af"
+  },
+  {
+    "idx": 443,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I was walking home when someone on a bike cut in front of me"
+  },
+  {
+    "idx": 444,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 22,
+    "text": "I'm trying out intermittent fasting. I skipped breakfast and"
+  },
+  {
+    "idx": 445,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "My car's check engine light has been on for two months. I ke"
+  },
+  {
+    "idx": 446,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "The restaurant has a dress code but nobody told me when I ma"
+  },
+  {
+    "idx": 447,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I've been offered a role in a local theater production. I us"
+  },
+  {
+    "idx": 448,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 25,
+    "text": "I had to euthanize my dog of 14 years today. I knew it was t"
+  },
+  {
+    "idx": 449,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 24,
+    "text": "I've been taking a break from social media and honestly I fe"
+  },
+  {
+    "idx": 450,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 23,
+    "text": "My sister and I used to fight constantly but we've gotten so"
+  },
+  {
+    "idx": 451,
+    "old": "advanced",
+    "new": "lv4",
+    "words": 26,
+    "text": "I've been meaning to learn how to change a tire for years. I"
+  },
+  {
+    "idx": 452,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 22,
+    "text": "I told my boss I was overwhelmed and needed to reduce my wor"
+  },
+  {
+    "idx": 453,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 21,
+    "text": "I've been procrastinating on filing my taxes for so long tha"
+  },
+  {
+    "idx": 454,
+    "old": "advanced",
+    "new": "lv3",
+    "words": 20,
+    "text": "I found an old journal from when I was 16. It's so cringe-wo"
+  }
+]
