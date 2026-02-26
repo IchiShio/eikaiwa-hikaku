@@ -3151,6 +3151,7 @@ function render() {
 // ANSWER
 // ─────────────────────────────────────────
 function choose(selected) {
+  console.log('[DBG choose] called: answered='+answered+' selected='+selected);
   if (answered) return;
   answered = true;
   total++;
@@ -3210,8 +3211,11 @@ function choose(selected) {
     }
     saveProgress(p);
   }
+  console.log('[DBG choose] updateScore呼び出し中');
   updateScore();
+  console.log('[DBG choose] updateScore完了 freeMode='+freeMode);
   if (freeMode) { updateFreeRemaining(); updateMissionDots(); }
+  console.log('[DBG choose] UI更新完了');
 
   // GA4: クイズ回答イベント
   console.log('[DBG choose] gtag check: typeof gtag='+typeof gtag);
