@@ -717,7 +717,7 @@
 
     /* ── COMPARISON TABLE ── */
     .compare-section {
-      padding: 60px 24px 0;
+      padding: 60px 24px 60px;
     }
     .compare-inner { max-width: 760px; margin: 0 auto; }
     .compare-lead {
@@ -880,6 +880,89 @@
     }
     .mission-article-link::before { content: "→"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
     .mission-article-link:hover { background: var(--surface); color: var(--text-1); }
+
+    /* ── LP: BOTTOM EMAIL CTA ── */
+    .lp-bottom-cta {
+      background: linear-gradient(160deg, #060d1a 0%, #0b1a30 55%, #081320 100%);
+      padding: 72px 24px 80px;
+      text-align: center;
+    }
+    .lp-bcta-wrap { max-width: 480px; margin: 0 auto; }
+    .lp-bcta-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
+    }
+    .lp-bcta-h {
+      font-size: clamp(22px, 6vw, 30px); font-weight: 900; letter-spacing: -0.8px;
+      line-height: 1.3; color: #fff; margin-bottom: 10px;
+    }
+    .lp-bcta-sub {
+      font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 28px;
+    }
+    .lp-bcta-form { display: flex; flex-direction: column; gap: 10px; }
+    .lp-bcta-input {
+      width: 100%; background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.18); border-radius: 12px;
+      padding: 14px 16px; font-size: 15px; color: #fff; outline: none;
+      transition: border-color 0.18s; box-sizing: border-box;
+    }
+    .lp-bcta-input::placeholder { color: rgba(255,255,255,0.32); }
+    .lp-bcta-input:focus { border-color: rgba(245,166,35,0.65); }
+    .lp-bcta-field-group { margin-bottom: 2px; text-align: left; }
+    .lp-bcta-field-label {
+      font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.5);
+      margin-bottom: 7px; display: block;
+    }
+    .lp-bcta-radio-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .lp-bcta-radio-btn { cursor: pointer; }
+    .lp-bcta-radio-btn input { display: none; }
+    .lp-bcta-radio-btn span {
+      display: inline-block; padding: 5px 10px;
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;
+      font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5);
+      transition: all 0.15s;
+    }
+    .lp-bcta-radio-btn input:checked + span {
+      background: rgba(245,166,35,0.18); border-color: var(--gold); color: var(--gold);
+    }
+    .lp-bcta-radio-btn:hover span { border-color: rgba(245,166,35,0.4); }
+    .lp-bcta-select {
+      width: 100%; background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.18); border-radius: 12px;
+      padding: 12px 16px; font-size: 14px; color: rgba(255,255,255,0.7);
+      outline: none; transition: border-color 0.18s; cursor: pointer;
+      -webkit-appearance: none; box-sizing: border-box;
+    }
+    .lp-bcta-select option { background: #0d1a30; color: #fff; }
+    .lp-bcta-select:focus { border-color: rgba(245,166,35,0.55); }
+    .lp-bcta-submit {
+      width: 100%; background: linear-gradient(135deg, #E09520 0%, #F5A623 50%, #F8C347 100%);
+      color: #1a1000; border: none; border-radius: 12px;
+      padding: 16px; font-size: 16px; font-weight: 800;
+      cursor: pointer; transition: all 0.18s;
+      box-shadow: 0 4px 24px rgba(245,166,35,0.35);
+      min-height: 52px; margin-top: 4px;
+    }
+    .lp-bcta-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(245,166,35,0.5); }
+    .lp-bcta-submit:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+    .lp-bcta-consent {
+      font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; margin-top: 2px;
+    }
+    .lp-bcta-consent a { color: rgba(255,255,255,0.45); text-decoration: underline; }
+    .lp-bcta-skip {
+      font-size: 13px; color: rgba(255,255,255,0.38); text-decoration: underline;
+      cursor: pointer; background: none; border: none; margin-top: 16px;
+      transition: color 0.15s; display: block; width: 100%;
+    }
+    .lp-bcta-skip:hover { color: rgba(255,255,255,0.6); }
+
+    /* ── LP: FOOTER ── */
+    .lp-footer {
+      padding: 24px 20px; text-align: center;
+      font-size: 12px; color: var(--text-3);
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
 
     /* ── LP: ARTICLE COLUMN SECTION ── */
     .lp-articles {
@@ -1889,11 +1972,42 @@
     </div>
   </div>
 
-  <!-- ── SECTION 6: Bottom CTA ── -->
+  <!-- ── SECTION 6: Bottom Email CTA ── -->
   <div class="lp-bottom-cta reveal">
-    <div class="lp-wrap">
-      <h2>耳が変わる実感を、<br><span class="text-gold">今日の練習</span>で。</h2>
-      <button class="btn-primary-lg" id="bottomStartBtn" onclick="startFreeQuiz()">今日の練習を始める</button>
+    <div class="lp-bcta-wrap">
+      <div class="lp-bcta-eyebrow">FREE · 455問</div>
+      <h2 class="lp-bcta-h">耳が変わる実感を、<br><span style="color:var(--gold)">今日の練習</span>で。</h2>
+      <p class="lp-bcta-sub">メールを登録すれば455問すべてを制限なく練習できます。<br>週1回のリスニング上達ニュースレターもお届け。</p>
+      <form class="lp-bcta-form" id="lpEmailForm" novalidate>
+        <input type="email" id="lpEmailInput" class="lp-bcta-input" placeholder="your@email.com" autocomplete="email" required>
+        <div class="lp-bcta-field-group">
+          <span class="lp-bcta-field-label">年代</span>
+          <div class="lp-bcta-radio-row">
+            <label class="lp-bcta-radio-btn"><input type="radio" name="lpAge" value="10代"><span>10代</span></label>
+            <label class="lp-bcta-radio-btn"><input type="radio" name="lpAge" value="20代"><span>20代</span></label>
+            <label class="lp-bcta-radio-btn"><input type="radio" name="lpAge" value="30代"><span>30代</span></label>
+            <label class="lp-bcta-radio-btn"><input type="radio" name="lpAge" value="40代"><span>40代</span></label>
+            <label class="lp-bcta-radio-btn"><input type="radio" name="lpAge" value="50代"><span>50代</span></label>
+            <label class="lp-bcta-radio-btn"><input type="radio" name="lpAge" value="60代以上"><span>60代+</span></label>
+          </div>
+        </div>
+        <div class="lp-bcta-field-group">
+          <span class="lp-bcta-field-label">TOEICスコア</span>
+          <select id="lpToeicScore" class="lp-bcta-select">
+            <option value="">選択してください</option>
+            <option value="〜499点">〜499点</option>
+            <option value="500〜599点">500〜599点</option>
+            <option value="600〜699点">600〜699点</option>
+            <option value="700〜799点">700〜799点</option>
+            <option value="800〜899点">800〜899点</option>
+            <option value="900〜990点">900〜990点</option>
+            <option value="未受験">未受験</option>
+          </select>
+        </div>
+        <button type="submit" class="lp-bcta-submit" id="lpEmailSubmit" disabled>登録して練習を始める →</button>
+        <p class="lp-bcta-consent">登録することで<a href="/privacy/">プライバシーポリシー</a>・<a href="/privacy/#third-party">第三者提供について</a>に同意したものとみなします</p>
+      </form>
+      <button class="lp-bcta-skip" onclick="startFreeQuiz()">先に5問だけ試す（登録は後でOK）</button>
     </div>
   </div>
 
@@ -3234,6 +3348,69 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.textContent = '✓ 登録完了！続きをどうぞ';
     setTimeout(() => closeEmailGate(true), 900);
   });
+
+  // ── LP Bottom Email Form ──
+  (function() {
+    const form      = document.getElementById('lpEmailForm');
+    const emailIn   = document.getElementById('lpEmailInput');
+    const submitBtn = document.getElementById('lpEmailSubmit');
+    const toeicSel  = document.getElementById('lpToeicScore');
+    if (!form) return;
+
+    function checkLpFormReady() {
+      const email    = emailIn.value.trim();
+      const age      = document.querySelector('input[name="lpAge"]:checked');
+      const toeic    = toeicSel.value;
+      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      submitBtn.disabled = !(validEmail && age && toeic);
+    }
+    emailIn.addEventListener('input', checkLpFormReady);
+    form.querySelectorAll('input[name="lpAge"]').forEach(r => r.addEventListener('change', checkLpFormReady));
+    toeicSel.addEventListener('change', checkLpFormReady);
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email    = emailIn.value.trim();
+      const ageGroup = document.querySelector('input[name="lpAge"]:checked')?.value || '';
+      const toeicScore = toeicSel.value;
+      submitBtn.disabled = true;
+      submitBtn.textContent = '登録中...';
+      try {
+        await fetch(`https://app.beehiiv.com/api/v1/publications/${BEEHIIV_PUB_ID}/subscriptions`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            referring_site: 'native-real.com/listening/lp',
+            custom_fields: [
+              { name: 'age_group',    value: ageGroup   },
+              { name: 'toeic_score',  value: toeicScore }
+            ]
+          })
+        });
+      } catch (_) {}
+      localStorage.setItem(EG_REG_KEY, email);
+      try {
+        const _p = loadProgress();
+        const profile = {
+          age_group: ageGroup, toeic_score: toeicScore,
+          registration_accuracy: _p.totalAnswered > 0 ? Math.round(_p.totalCorrect / _p.totalAnswered * 100) : 0,
+          registration_questions: _p.totalAnswered,
+          registration_streak: _p.dailyStreak
+        };
+        localStorage.setItem('listenup_profile', JSON.stringify(profile));
+        gtag('set', 'user_properties', {
+          registered_user: 'true', age_group: ageGroup, toeic_score: toeicScore,
+          registration_accuracy: profile.registration_accuracy,
+          registration_questions: profile.registration_questions,
+          registration_streak: profile.registration_streak
+        });
+      } catch(_) {}
+      gtag('event', 'email_gate_register', { age_group: ageGroup, toeic_score: toeicScore, source: 'lp_bottom' });
+      submitBtn.textContent = '✓ 登録完了！練習を開始します...';
+      setTimeout(() => startFreeQuiz(), 800);
+    });
+  })();
 
   document.getElementById('egSkip').addEventListener('click', function() {
     localStorage.setItem(EG_SKIP_KEY, new Date().toDateString());
