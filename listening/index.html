@@ -3214,13 +3214,19 @@ function choose(selected) {
   if (freeMode) { updateFreeRemaining(); updateMissionDots(); }
 
   // GA4: クイズ回答イベント
-  gtag('event', 'quiz_answer', {
-    answer_correct: ok,
-    question_number: total,
-    difficulty: LEVELS[currentLevel],
-    play_count: playCount
-  });
+  console.log('[DBG choose] gtag check: typeof gtag='+typeof gtag);
+  try {
+    gtag('event', 'quiz_answer', {
+      answer_correct: ok,
+      question_number: total,
+      difficulty: LEVELS[currentLevel],
+      play_count: playCount
+    });
+  } catch(e) {
+    console.error('[DBG choose] gtag error:', e);
+  }
 
+  console.log('[DBG choose] ボタン着色開始');
   document.querySelectorAll('.opt-btn').forEach((btn) => {
     btn.disabled = true;
     const text = btn.querySelector('.opt-text').textContent;
@@ -3235,6 +3241,7 @@ function choose(selected) {
 
   if (ok) launchConfetti();
 
+  console.log('[DBG choose] 解説表示開始');
   const el = document.getElementById('explEl');
   document.getElementById('explVerdict').className = 'expl-verdict ' + (ok ? 'ok' : 'ng');
   document.getElementById('explVerdict').textContent = ok ? '✅ 正解！' : '❌ 不正解... 🔁 あとで再出題します';
