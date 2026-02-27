@@ -189,7 +189,17 @@ h2.section-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 20px; }
   .related-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
-  </style>
+  
+/* FAQ */
+.faq-section { padding: 48px 0; }
+.faq-list { display: flex; flex-direction: column; gap: 8px; max-width: 720px; }
+.faq-item { border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.faq-q { display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-size: 0.95rem; font-weight: 700; cursor: pointer; list-style: none; }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::before { content: 'Q'; font-size: 0.75rem; font-weight: 800; color: white; background: var(--primary); border-radius: 4px; padding: 2px 7px; flex-shrink: 0; }
+.faq-a { padding: 0 20px 16px 20px; font-size: 0.875rem; line-height: 1.8; color: var(--text-muted); }
+details[open] .faq-q { border-bottom: 1px solid var(--border); }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -343,6 +353,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </div>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="section-label">よくある質問</div>
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-q">ChatGPTとClaude、どちらで使えますか？</summary>
+        <div class="faq-a"><p>どちらでも使えます。どちらもテキストチャット形式のAIで、このプロンプトをそのまま貼り付けて使用できます。ChatGPT（GPT-4o）はOpenAI、ClaudeはAnthropicがそれぞれ提供しています。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">無料版でも使えますか？</summary>
+        <div class="faq-a"><p>はい。ChatGPT（GPT-4o無料プラン）およびClaude（無料プラン）どちらでも使用できます。ただし無料プランは利用回数に制限がある場合があります。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">AIの回答は必ず正しいですか？</summary>
+        <div class="faq-a"><p>概ね正確ですが、まれに誤りが含まれることがあります。特に文法の細かいルールや専門的な内容については、辞書や文法書でも確認することをおすすめします。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">会話がすぐに詰まってしまいますが大丈夫ですか？</summary>
+        <div class="faq-a"><p>はい。詰まったときは「I need a hint」や「日本語でヒントをください」とそのまま書けば、AIが次の表現を提案してくれます。詰まることも練習のうちです。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">毎回同じテーマで練習しても効果がありますか？</summary>
+        <div class="faq-a"><p>同じテーマでも毎回異なる会話の流れになります。ただし新しいテーマを選ぶ方が語彙の幅が広がります。週1回テーマを変えるのがおすすめです。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
 
 <footer class="site-footer">
   <div class="container">
