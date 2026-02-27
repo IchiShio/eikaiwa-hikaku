@@ -107,6 +107,41 @@ python3 get_prompt.py --count 100
 - **音声ローテーション**: AriaNeural / SoniaNeural / GuyNeural / NatashaNeural / RyanNeural の5種
 - **`.env`**: `ANTHROPIC_API_KEY` が必要（generate_questions.py用）
 
+### axis フィールドの経緯と状態（2026-02-27）
+
+| 項目 | 内容 |
+|---|---|
+| 導入コミット | `6f12cd2` "Switch to Sonnet 4.6, add axis field for fine-grained difficulty" |
+| 目的 | lv1-lv5 の5段階 × 5軸 = 25通りの細分化による適応型難易度の精度向上 |
+| 既存問題への適用状態 | **未適用**（460問すべて axis なし）← `classify_axis.py` で一括付与する |
+| 新規問題 | generate_questions.py / get_prompt.py のプロンプトに axis 生成指示を追加済み |
+
+#### classify_axis.py（既存問題一括分類）
+
+```bash
+cd /Users/yusuke/projects/claude/eikaiwa-hikaku
+
+# dry-run（最初の30問のみ・questions.js 非更新）
+python3 classify_axis.py --dry-run
+
+# 本番（全460問分類 → questions.js 更新）
+python3 classify_axis.py
+```
+
+- **途中保存**: `listening/axis_cache.json`（gitignore 推奨）
+- **再実行**: キャッシュ済みの問題はスキップして続きから処理
+- **モデル**: デフォルト claude-haiku-4-5（分類タスクなので Haiku で十分）
+
+#### axis の定義
+
+| axis | 内容 |
+|---|---|
+| `speed` | 発話が速い・詰まった話し方（"Didja hear that?" 等） |
+| `reduction` | gonna/wanna/kinda/dunno/lemme 等の音変化・リンキング・脱落 |
+| `vocab` | 低頻度語・イディオム・スラング・比喩表現 |
+| `context` | 前後文脈・話者トーン・感情から正解を推論する必要がある |
+| `distractor` | 誤答が非常に紛らわしく、表面的理解では正解できない |
+
 ## listening/ のプラン設計（2026-02-25更新）
 
 ### 無料・登録・プレミアムの区分け
