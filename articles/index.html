@@ -342,17 +342,19 @@ img { max-width: 100%; height: auto; }
 .article-card:hover h3 { color: var(--primary); }
 .article-card-img {
   width: 100%;
-  height: 180px;
+  height: 140px;
   object-fit: cover;
   display: block;
 }
 .article-card-eyecatch {
   width: 100%;
-  height: 180px;
+  height: 140px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 3.8rem;
+  gap: 6px;
+  font-size: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -362,6 +364,21 @@ img { max-width: 100%; height: auto; }
   inset: 0;
   background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 50%);
 }
+.eyecatch-emoji { position: relative; z-index: 1; line-height: 1; }
+.eyecatch-label {
+  position: relative;
+  z-index: 1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.9);
+}
+/* Eyecatch category themes */
+.eyecatch-learning { background: linear-gradient(135deg, #059669, #047857); }
+.eyecatch-coaching { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+.eyecatch-otoku    { background: linear-gradient(135deg, #d97706, #b45309); }
+.eyecatch-career   { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+.eyecatch-other    { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
 .article-card-accent { height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
 .article-card-body { padding: 22px; }
 
@@ -415,7 +432,7 @@ img { max-width: 100%; height: auto; }
 .article-card h3 { font-size: 0.95rem; line-height: 1.6; font-weight: 700; transition: color 0.2s; }
 .article-card a { text-decoration: none; color: var(--text); }
 .article-card a:hover h3 { color: var(--primary); }
-.article-card-excerpt { font-size: 0.82rem; color: var(--text-muted); margin-top: 10px; line-height: 1.65; }
+.article-card-excerpt { font-size: 0.87rem; color: var(--text-muted); margin-top: 10px; line-height: 1.65; }
 
 /* Article page */
 .article-layout {
@@ -606,7 +623,15 @@ img { max-width: 100%; height: auto; }
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin: 32px 0 24px;
+  position: sticky;
+  top: 57px;
+  z-index: 90;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 20px;
+  margin: 0 -20px;
+  box-shadow: 0 1px 0 var(--border);
 }
 .filter-tab {
   background: white;
@@ -633,6 +658,26 @@ img { max-width: 100%; height: auto; }
   font-weight: 700;
 }
 .filter-tab.active .filter-count { background: rgba(255,255,255,0.25); }
+
+/* Card meta row */
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+.card-new-badge {
+  background: #ef4444;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
 
 /* Responsive - Tablet */
 @media (max-width: 1024px) {
@@ -664,7 +709,7 @@ img { max-width: 100%; height: auto; }
   .sidebar { display: none; }
   .footer-grid { grid-template-columns: 1fr; }
   .articles-grid { grid-template-columns: 1fr; }
-  .filter-bar { gap: 6px; }
+  .filter-bar { gap: 6px; overflow-x: auto; flex-wrap: nowrap; padding: 10px 16px; margin: 0 -20px; }
 }
 </style>
 </head>
@@ -1161,6 +1206,96 @@ function applyArticleFilter(btn) {
     card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
   });
 }
+(function() {
+  var THEMES = {
+    'learning': { cls: 'eyecatch-learning', emoji: '📚', label: '学習法・継続' },
+    'coaching': { cls: 'eyecatch-coaching', emoji: '🏆', label: 'コーチング' },
+    'otoku':    { cls: 'eyecatch-otoku',    emoji: '💰', label: 'お得情報' },
+    'career':   { cls: 'eyecatch-career',   emoji: '💼', label: '資格・キャリア' },
+    'other':    { cls: 'eyecatch-other',    emoji: '📖', label: 'コラム記事' }
+  };
+  var DATES = {
+    'online-eikaiwa-not-continue-reasons': '2025-09-15',
+    'busy-worker-online-eikaiwa-guide': '2025-09-22',
+    '40s-online-eikaiwa-guide': '2025-10-05',
+    'english-coaching-vs-online-eikaiwa': '2025-10-12',
+    'progrit-review': '2025-10-20',
+    'toraiz-review': '2025-10-28',
+    'kids-online-eikaiwa-effects': '2025-11-05',
+    'kids-online-eikaiwa-guide': '2025-11-12',
+    'junior-high-online-eikaiwa': '2025-11-20',
+    'business-english-online-eikaiwa': '2025-11-28',
+    'english-coaching-worth-it': '2025-12-05',
+    'english-coaching-ranking': '2025-12-12',
+    'english-coaching-cheap': '2025-12-19',
+    'free-trial-online-eikaiwa': '2025-12-26',
+    'online-eikaiwa-frequency-guide': '2026-01-05',
+    'english-speaking-improvement': '2026-01-10',
+    'online-eikaiwa-cost-comparison': '2026-01-15',
+    'japanese-english-pronunciation-guide': '2026-01-20',
+    'toeic-online-eikaiwa-strategy': '2026-01-25',
+    'english-career-salary-impact': '2026-01-28',
+    'english-coaching-individual': '2026-02-02',
+    'senior-online-eikaiwa': '2026-02-05',
+    'adult-online-eikaiwa-guide': '2026-02-08',
+    'dmm-vs-nativecamp': '2026-02-10',
+    'rarejob-vs-dmm': '2026-02-12',
+    'cambly-review-article': '2026-02-14',
+    'bizmates-review-article': '2026-02-16',
+    'nativecamp-review-article': '2026-02-18',
+    'english-self-study-vs-eikaiwa': '2026-02-20',
+    'english-listening-study-guide': '2026-02-22',
+    'english-habit-guide': '2026-02-24',
+    'toeic-short-intensive': '2026-02-25',
+    'kimini-eikaiwa-review': '2026-02-26',
+    'qq-english-review': '2026-02-26',
+    'free-online-eikaiwa-guide': '2026-02-27',
+    'english-pronunciation-correction': '2026-02-27',
+    'online-eikaiwa-once-a-week': '2026-02-28',
+    'english-coaching-3months': '2026-02-28',
+    'rarejob-review': '2025-08-15',
+    'italki-review': '2025-08-20',
+    'studysapuri-english-review': '2025-08-25',
+    'nova-review': '2025-09-01',
+    'esports-eikaiwa-review': '2025-09-08'
+  };
+  var TODAY = new Date('2026-02-28');
+  var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+  document.querySelectorAll('.article-card').forEach(function(card) {
+    var cat = card.dataset.cat || 'other';
+    var theme = THEMES[cat] || THEMES['other'];
+    var img = card.querySelector('.article-card-img');
+    if (img) {
+      var ec = document.createElement('div');
+      ec.className = 'article-card-eyecatch ' + theme.cls;
+      ec.innerHTML = '<span class="eyecatch-emoji">' + theme.emoji + '</span><span class="eyecatch-label">' + theme.label + '</span>';
+      img.parentNode.replaceChild(ec, img);
+    }
+    var body = card.querySelector('.article-card-body');
+    if (!body) return;
+    var link = card.querySelector('a[href]');
+    var slug = '';
+    if (link) {
+      var m = link.getAttribute('href').match(/\/articles\/([^\/]+)\//);
+      if (m) slug = m[1];
+    }
+    var dateStr = DATES[slug];
+    if (!dateStr) return;
+    var articleDate = new Date(dateStr);
+    var isNew = (TODAY - articleDate) <= THIRTY_DAYS;
+    var y = articleDate.getFullYear();
+    var mo = articleDate.getMonth() + 1;
+    var excerpt = card.querySelector('.article-card-excerpt');
+    var excerptLen = excerpt ? excerpt.textContent.length : 60;
+    var readMin = Math.min(8, Math.max(3, Math.round(excerptLen * 45 / 400)));
+    var html = '<div class="card-meta">';
+    if (isNew) html += '<span class="card-new-badge">NEW</span>';
+    html += '<span>' + y + '年' + mo + '月</span>';
+    html += '<span>約' + readMin + '分</span>';
+    html += '</div>';
+    body.insertAdjacentHTML('beforeend', html);
+  });
+})();
 </script>
 </body>
 </html>
