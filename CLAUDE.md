@@ -113,7 +113,7 @@ python3 get_prompt.py --count 100
 |---|---|
 | 導入コミット | `6f12cd2` "Switch to Sonnet 4.6, add axis field for fine-grained difficulty" |
 | 目的 | lv1-lv5 の5段階 × 5軸 = 25通りの細分化による適応型難易度の精度向上 |
-| 既存問題への適用状態 | **未適用**（460問すべて axis なし）← `classify_axis.py` で一括付与する |
+| 既存問題への適用状態 | **適用済み**（460問・コミット `32eac3a`）vocab:140 / context:242 / distractor:74 / reduction:4 / speed:0 |
 | 新規問題 | generate_questions.py / get_prompt.py のプロンプトに axis 生成指示を追加済み |
 
 #### classify_axis.py（既存問題一括分類）
