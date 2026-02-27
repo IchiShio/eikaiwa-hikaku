@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PS9R9844');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>英文履歴書・職務経歴書をClaudeで作る方法【転職者向けプロンプト】 | 英語学習サービス比較ナビ</title>
+  <meta name="description" content="外資系・グローバル企業への転職を目指す30代向けに、ClaudeのAIを活用して英文履歴書・職務経歴書・カバーレターを効率的に作成する具体的なプロンプトとブラッシュアップのコツを徹底解説します。">
+  <link rel="canonical" href="https://native-real.com/articles/english-resume-prompt/">
+  <meta property="og:title" content="英文履歴書・職務経歴書をClaudeで作る方法【転職者向けプロンプト】">
+  <meta property="og:description" content="外資系・グローバル企業への転職を目指す30代向けに、ClaudeのAIを活用して英文履歴書・職務経歴書・カバーレターを効率的に作成する具体的なプロンプトとブラッシュアップのコツを徹底解説します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://native-real.com/articles/english-resume-prompt/">
+  <meta property="og:site_name" content="英語学習サービス比較ナビ">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "英文履歴書・職務経歴書をClaudeで作る方法【転職者向けプロンプト】",
+  "description": "外資系・グローバル企業への転職を目指す30代向けに、ClaudeのAIを活用して英文履歴書・職務経歴書・カバーレターを効率的に作成する具体的なプロンプトとブラッシュアップのコツを徹底解説します。",
+  "datePublished": "2026-02-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "英語学習サービス比較ナビ"
+  }
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>:root{--primary:#2563eb;--primary-light:#3b82f6;--primary-dark:#1d4ed8;--primary-pale:#eff6ff;--accent:#10b981;--accent-dark:#059669;--accent-pale:#ecfdf5;--text:#111827;--text-muted:#6b7280;--bg:#ffffff;--bg-gray:#f9fafb;--border:#e5e7eb;--shadow:0 1px 3px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.04);--shadow-md:0 4px 16px rgba(0,0,0,0.08),0 8px 24px rgba(0,0,0,0.05);--radius:10px;--radius-lg:14px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Inter","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI",sans-serif;letter-spacing:.01em;font-size:16px;line-height:1.9;color:var(--text);background:var(--bg);}
+a{color:var(--primary);}a:hover{color:var(--primary-light);}
+img{max-width:100%;height:auto;}
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+.site-header{background:#fff;color:var(--text);padding:14px 0;position:sticky;top:0;z-index:100;box-shadow:0 1px 0 var(--border);}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;}
+.site-header .logo{font-size:1rem;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:.03em;}
+.site-header .logo span{color:var(--primary);}
+.site-header nav a{color:var(--text-muted);text-decoration:none;margin-left:24px;font-size:.88rem;border-bottom:2px solid transparent;padding-bottom:2px;transition:color .2s,border-color .2s;}
+.site-header nav a:hover{color:var(--text);border-color:var(--primary);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;width:36px;height:36px;position:relative;z-index:102;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);margin:5px auto;border-radius:2px;transition:transform .3s,opacity .3s;}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-nav-overlay{display:none;position:fixed;inset:0;background:rgba(17,24,39,.95);z-index:101;flex-direction:column;align-items:center;justify-content:center;gap:24px;}
+.mobile-nav-overlay.active{display:flex;}
+.mobile-nav-overlay a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:600;padding:12px 24px;border-radius:var(--radius);transition:background .2s;}
+.mobile-nav-overlay a:hover{background:rgba(255,255,255,.1);}
+.breadcrumb{padding:12px 0;font-size:.82rem;color:var(--text-muted);}
+.breadcrumb a{color:var(--text-muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--primary);}
+.breadcrumb span{margin:0 6px;color:var(--border);}
+.article-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;padding:40px 0;}
+.article-content{min-width:0;}
+.article-content h1{font-size:1.55rem;line-height:1.45;margin-bottom:20px;font-weight:800;}
+.article-content h2{font-size:1.25rem;font-weight:700;margin:40px 0 16px;padding:13px 18px;background:var(--bg-gray);border-left:4px solid var(--primary);border-radius:0 var(--radius) var(--radius) 0;color:var(--text);}
+.article-content h3{font-size:1.08rem;font-weight:700;margin:28px 0 12px;color:var(--primary);padding-left:12px;border-left:3px solid var(--accent);}
+.article-content p{margin-bottom:16px;}
+.article-content ul,.article-content ol{margin:16px 0 16px 24px;}
+.article-content li{margin-bottom:8px;}
+.article-content table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.9rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.article-content th{background:var(--primary);color:#fff;padding:11px 16px;text-align:left;font-weight:600;}
+.article-content td{padding:11px 16px;border-bottom:1px solid var(--border);}
+.article-content tr:nth-child(even) td{background:var(--bg-gray);}
+.toc{background:var(--bg-gray);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:20px 24px;margin:24px 0 32px;}
+.toc h4{font-size:.95rem;font-weight:700;margin-bottom:12px;color:var(--accent-dark);}
+.toc ol{margin-left:20px;}
+.toc li{margin-bottom:6px;font-size:.88rem;}
+.toc a{color:var(--text-muted);text-decoration:none;}
+.toc a:hover{color:var(--primary);}
+.cta-box{background:linear-gradient(135deg,#059669,#10b981);color:#fff;border-radius:var(--radius-lg);padding:28px 32px;text-align:center;margin:36px 0;box-shadow:0 8px 24px rgba(5,150,105,.25);}
+.cta-box h3{font-size:1.15rem;margin-bottom:10px;font-weight:700;color:#fff;border-left:none;padding-left:0;}
+.cta-box p{opacity:.9;margin-bottom:20px;font-size:.93rem;}
+.btn-primary{display:inline-block;background:var(--primary);color:#fff;padding:11px 20px;border-radius:var(--radius);font-weight:700;font-size:.88rem;text-decoration:none;text-align:center;white-space:nowrap;transition:background .2s,transform .15s;box-shadow:0 3px 10px rgba(37,99,235,.3);}
+.btn-primary:hover{background:var(--primary-light);color:#fff;transform:translateY(-1px);}
+.disclaimer{background:var(--bg-gray);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;font-size:.78rem;color:var(--text-muted);margin-top:40px;line-height:1.7;}
+.sidebar-widget{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.sidebar-widget h4{font-size:.95rem;font-weight:700;margin-bottom:14px;color:var(--text);padding-bottom:10px;border-bottom:2px solid var(--bg-gray);}
+.sidebar-service-item a{font-size:.88rem;text-decoration:none;color:var(--text);}
+.sidebar-service-item a:hover{color:var(--primary);}
+.sidebar-service-list{display:flex;flex-direction:column;gap:10px;}
+.quiz-promo{position:relative;overflow:hidden;background:linear-gradient(135deg,#060C1B,#0f1a35);border:1px solid rgba(251,191,36,.25);border-radius:16px;padding:20px 24px;margin:32px 0;box-shadow:0 0 40px rgba(251,191,36,.07),0 4px 24px rgba(0,0,0,.25);}
+.quiz-promo-orb{position:absolute;width:220px;height:220px;background:radial-gradient(circle,rgba(251,191,36,.13),transparent 70%);top:-60px;right:-40px;border-radius:50%;pointer-events:none;}
+.quiz-promo-inner{position:relative;z-index:1;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.quiz-promo-icon{font-size:2rem;flex-shrink:0;line-height:1;}
+.quiz-promo-body{flex:1;min-width:140px;}
+.quiz-promo-title{color:rgba(255,255,255,.92);font-weight:700;font-size:.98rem;margin-bottom:4px;}
+.quiz-promo-sub{color:rgba(255,255,255,.45);font-size:.78rem;}
+.quiz-promo-btn{display:inline-block;background:linear-gradient(135deg,#F59E0B,#FBBF24);color:#1a1000 !important;font-weight:700;font-size:.86rem;padding:11px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 16px rgba(251,191,36,.28);transition:transform .18s ease,box-shadow .18s ease;flex-shrink:0;}
+.quiz-promo-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(251,191,36,.42);color:#1a1000 !important;}
+.quiz-promo-widget{position:relative;overflow:hidden;background:linear-gradient(135deg,#060C1B,#0f1a35) !important;border:1px solid rgba(251,191,36,.25) !important;}
+.quiz-promo-widget .quiz-promo-orb{width:130px;height:130px;top:-30px;right:-20px;}
+.quiz-promo-widget-label{font-size:.7rem;color:rgba(251,191,36,.85);font-weight:700;letter-spacing:.8px;text-transform:uppercase;position:relative;z-index:1;}
+.quiz-promo-widget-title{color:rgba(255,255,255,.9);font-weight:700;font-size:.95rem;margin-top:8px;line-height:1.45;position:relative;z-index:1;}
+.quiz-promo-widget-sub{color:rgba(255,255,255,.4);font-size:.75rem;margin-top:5px;position:relative;z-index:1;}
+.quiz-promo-widget .quiz-promo-btn{width:100%;text-align:center;display:block;margin-top:14px;position:relative;z-index:1;}
+.site-footer{background:#2c2520;color:rgba(255,255,255,.65);padding:48px 0 24px;margin-top:72px;font-size:.88rem;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;margin-bottom:32px;}
+.site-footer h4{color:rgba(255,255,255,.9);font-size:.95rem;margin-bottom:14px;}
+.site-footer ul{list-style:none;}
+.site-footer li{margin-bottom:9px;}
+.site-footer a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+.site-footer a:hover{color:#f0a080;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:.78rem;color:rgba(255,255,255,.4);}
+@media(max-width:768px){.site-header nav{display:none;}.hamburger{display:block;}.article-layout{grid-template-columns:1fr;}.sidebar{display:none;}.footer-grid{grid-template-columns:1fr;}}</style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">英語学習サービス比較ナビ</a>
+    <nav><a href="/">ランキング</a><a href="/articles/">学習コラム</a><a href="/real-phrases/">フレーズ集</a><a href="/listening/">リスニングクイズ</a><a href="/prompts/">AIプロンプト</a></nav>
+    <button class="hamburger" aria-label="メニューを開く" onclick="document.querySelector('.hamburger').classList.toggle('active');document.querySelector('.mobile-nav-overlay').classList.toggle('active');document.body.style.overflow=document.querySelector('.mobile-nav-overlay').classList.contains('active')?'hidden':'';">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-nav-overlay" onclick="if(event.target===this||event.target.tagName==='A'){this.classList.remove('active');document.querySelector('.hamburger').classList.remove('active');document.body.style.overflow='';}">
+  <a href="/">ランキング</a><a href="/articles/">学習コラム</a><a href="/real-phrases/">フレーズ集</a><a href="/listening/">リスニングクイズ</a><a href="/prompts/">AIプロンプト</a>
+</div>
+<div class="breadcrumb container">
+  <a href="/">ホーム</a><span>›</span><a href="/articles/">学習コラム</a><span>›</span>英文履歴書・職務経歴書をClaudeで作る方法【転職者向けプ...
+</div>
+<div class="container">
+  <div class="article-layout">
+    <main class="article-content">
+      <span style="display:inline-block;background:var(--primary-pale);color:var(--primary);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:16px;">転職・キャリア×英語</span>
+      <h1>英文履歴書・職務経歴書をClaudeで作る方法【転職者向けプロンプト】</h1>
+      <div class="toc"><h4>目次</h4><ol><li><a href="#------------------">英文履歴書の基本構成と日本語との違い</a></li>
+<li><a href="#-----------------">職務経歴を英語に変換するプロンプト</a></li>
+<li><a href="#------------------">アピールポイントを引き出すプロンプト</a></li>
+<li><a href="#--------------">英文カバーレターのプロンプト</a></li>
+<li><a href="#claude----------">Claudeの出力をブラッシュア</a></li></ol></div>
+      <h1>英文履歴書・職務経歴書をClaudeで作る方法【転職者向けプロンプト】</h1>
+<p>本記事はアフィリエイト広告を含みます。</p>
+<p>外資系・グローバル企業への転職を目指す30代にとって、英文履歴書の作成は最初の大きな壁です。AIアシスタントのClaudeを活用すれば、英語に自信がなくても質の高い書類を効率的に仕上げることができます。本記事では、実際に使えるプロンプトを中心に、英文履歴書作成の全プロセスをわかりやすく解説します。</p>
+<p>---</p>
+<h2 id="------------------">英文履歴書の基本構成と日本語との違い</h2>
+<p>英文履歴書を作成する前に、日本の履歴書・職務経歴書との根本的な違いを理解しておくことが重要です。この違いを知らないまま作業を始めると、せっかくClaudeに良い情報を与えても、的外れな書類が出来上がってしまうことがあります。</p>
+<p>まず形式の自由度が大きく異なります。日本では市販の履歴書フォーマットを使うのが一般的ですが、英文履歴書（レジュメ）は自分でレイアウトをデザインするのが基本です。フォントや余白、セクションの並び順なども応募者が自由に決められます。</p>
+<p>次に記載する情報の種類が異なります。日本の履歴書には顔写真・生年月日・性別・住所を詳しく書くのが通例ですが、欧米の採用文化では、これらの個人情報を記載しないことが一般的です。とくに顔写真・年齢・性別は、採用における無意識バイアスや差別を避ける観点から、記載しないことが強く推奨されています。</p>
+<p>英文レジュメの一般的な構成要素は以下のとおりです。</p>
+<h3>Contact Information（連絡先）</h3>
+<p>名前・メールアドレス・電話番号・LinkedInプロフィールのURLなどを簡潔に記載します。住所は市区町村レベルまでで十分です。</p>
+<h3>Professional Summary（職務サマリー）</h3>
+<p>3〜5文程度で自分の強みとキャリアの方向性をまとめた導入文です。採用担当者が最初に目を通す部分であり、ここで興味を引けるかどうかが書類選考の鍵を握ります。</p>
+<h3>Work Experience（職務経験）</h3>
+<p>直近の職歴から遡る逆年代順で記載します。各職歴には会社名・役職・在籍期間を書き、その下に箇条書きで担当業務と実績を記述します。実績は「数字」を使って具体的に表現することが強く求められます。</p>
+<h3>Skills（スキル）</h3>
+<p>使用できるツール・プログラミング言語・語学力などを記載します。</p>
+<h3>Education（学歴）</h3>
+<p>学校名・学部・卒業年を記載します。日本のように入学年を並記する必要はありません。</p>
+<p>日本語の職務経歴書が「何をやってきたか」を丁寧に説明するスタイルであるのに対し、英文レジュメは「どんな成果を出してきたか」を数値で証明するスタイルである、という点が最大の違いです。この意識の転換が、Claudeへの指示をより具体的にするうえでも欠かせません。</p>
+<p>---</p>
+<h2 id="-----------------">職務経歴を英語に変換するプロンプト</h2>
+<p>職務経歴を英語に変換する作業は、単純な翻訳ではありません。日本語の職務経歴書にある表現をそのまま英訳しても、採用担当者に刺さる文章にはなりにくいのです。Claudeを使う際は、変換のロジックまでプロンプトに含めることがポイントになります。</p>
+<h3>基本の変換プロンプト</h3>
+<p>まずは職務経歴の骨格を作るための基本プロンプトを紹介します。</p>
+<p>```</p>
+<p>以下の日本語の職務経歴を、英文レジュメのWork Experienceセクション向けに変換してください。</p>
+<p>条件：</p>
+<ul>
+<li>成果・実績を中心に記述すること</li>
+<li>各項目をAction Verb（動詞）で始める箇条書きにすること</li>
+<li>数値・パーセンテージ・金額などの具体的な成果が含まれている場合は必ず盛り込むこと</li>
+<li>アメリカ・イギリスの採用市場で通用するビジネス英語を使うこと</li>
+<li>1項目あたり1〜2文に収めること</li>
+</ul>
+<p>【会社名】〇〇株式会社</p>
+<p>【役職】営業部 主任</p>
+<p>【在籍期間】2019年4月〜2023年3月</p>
+<p>【職務内容・実績】</p>
+<p>・新規顧客開拓を担当し、月間で平均20件のテレアポと10件の訪問を実施</p>
+<p>・担当エリアの売上を2年間で150%に引き上げた</p>
+<p>・部内でのナレッジ共有のためにマニュアルを作成し、新人研修に活用された</p>
+<p>```</p>
+<p>このように、役職・期間・実績をセットで渡すことで、Claudeはコンテキストを正確に把握して変換できます。</p>
+<h3>数値がない場合の補完プロンプト</h3>
+<p>実績の数値が手元にない場合でも、Claudeに一緒に考えさせることができます。</p>
+<p>```</p>
+<p>以下の職務経歴について、英文レジュメ向けに変換してください。</p>
+<p>数値が含まれていない項目については、どのような数値・指標があれば説得力が増すかを提案したうえで、私が後で埋められるようにプレースホルダー（例：[X%]）を使って記述してください。</p>
+<p>【職務内容】</p>
+<p>・社内の業務効率化プロジェクトのリーダーを務めた</p>
+<p>・チームメンバーのスケジュール管理とタスク割り振りを担当した</p>
+<p>・月次の進捗レポートを作成して経営層に報告した</p>
+<p>```</p>
+<p>このプロンプトを使うと、Claudeは「Reduced project turnaround time by [X%]」のような形で出力してくれます。後から実際の数値を当てはめるだけでよいので、作業が格段にスムーズになります。</p>
+<h3>業種・職種別の言い回しを意識する</h3>
+<p>Claudeに渡す際、「マーケティング職向け」「エンジニア職向け」「管理職向け」など、ターゲットとする職種を明示すると、業界でよく使われる表現が反映されやすくなります。たとえば「ターゲットは外資系コンサルティングファームの採用担当者です」と一言加えるだけで、出力のトーンや語彙が変わります。</p>
+<p>---</p>
+<h2 id="------------------">アピールポイントを引き出すプロンプト</h2>
+<p>英文レジュメの中でも、Professional Summary（職務サマリー）とスキルセクションは自己PRの核心部分です。しかし多くの人が「自分の何をアピールすればよいかわからない」という状態でつまずいています。Claudeはこの「自己分析フェーズ」でも強力な味方になります。</p>
+<h3>強みを掘り起こすプロンプト</h3>
+<p>まず自分のキャリアを棚卸しするところから始めましょう。</p>
+<p>```</p>
+<p>私は外資系企業への転職を考えている30代の日本人です。</p>
+<p>以下の職歴・スキル・経験をもとに、英文レジュメのProfessional Summaryに盛り込むべきアピールポイントを3〜5個、日本語で整理してください。</p>
+<p>その後、それをもとに英語のProfessional Summary（3〜5文）を作成してください。</p>
+<p>【職歴の概要】</p>
+<p>・製造業の営業職を10年経験</p>
+<p>・うち3年間は海外顧客（東南アジア）を担当</p>
+<p>・英語でのメール・電話対応の経験あり（TOEIC 800点）</p>
+<p>・チームリーダーとして5名のメンバーをマネジメント</p>
+<p>【希望職種】</p>
+<p>グローバル企業の法人営業またはアカウントマネージャー</p>
+<p>```</p>
+<p>このプロンプトの特徴は、Claudeに「分析→提案→執筆」の3ステップを一度にこなしてもらう点です。最初に日本語で整理してもらうことで、出力内容を確認しながら進められるため、英語が得意でない方にも安心です。</p>
+<h3>応募先企業に合わせたカスタマイズプロンプト</h3>
+<p>英文レジュメで意識したいのは、応募先ごとに内容を調整するという姿勢です。同じ職歴でも、相手企業が求めるキーワードに合わせて表現を変えることで、採用システム（ATS：Applicant Tracking System）を通過しやすくなると言われています。</p>
+<p>```</p>
+<p>以下の求人票（英語）と私の職務経歴を照らし合わせて、どのスキル・経験を前面に押し出すべきかを教えてください。</p>
+<p>また、私の経歴の中でこの求人にマッチしていない部分があれば、正直に指摘してください。</p>
+<p>【求人票（抜粋）】</p>
+<p>（ここにコピー＆ペースト）</p>
+<p>【私の職務経歴（要約）】</p>
+<p>（ここに記入）</p>
+<p>```</p>
+<p>このプロンプトは、Claudeに客観的な目線でギャップ分析をさせる点がポイントです。自分の経歴を過大評価も過小評価もせず、応募戦略を立てるうえで非常に役立ちます。</p>
+<h3>スキルセクションを整理するプロンプト</h3>
+<p>スキルセクションは、採用担当者がパッと見てスキルセットを把握するためのセクションです。羅列しすぎても読みにくくなります。</p>
+<p>```</p>
+<p>以下のスキルリストを、英文レジュメのSkillsセクション向けに整理してください。</p>
+<p>カテゴリ分け（例：Languages, Tools, Soft Skills）をして、採用担当者が読みやすい形にしてください。</p>
+<p>また、外資系企業の採用で評価されやすいスキルがあれば、その表現方法を改善してください。</p>
+<p>【スキル（雑多なメモ）】</p>
+<p>エクセル得意、パワーポイント、英語、中国語少しわかる、Salesforce使ったことある、プロジェクト管理、交渉、チームワーク、TOEIC800点</p>
+<p>```</p>
+<p>---</p>
+<h2 id="--------------">英文カバーレターのプロンプト</h2>
+<p>カバーレター（Cover Letter）は、日本ではあまり馴染みのない書類ですが、外資系・グローバル企業への応募では提出を求められることが多い重要な書類です。レジュメが「事実の羅列」であるとすれば、カバーレターは「人となりと志望動機を伝える文章」です。書き方のルールを理解したうえでClaudeに指示を出しましょう。</p>
+<h3>カバーレターの基本構成</h3>
+<p>一般的な英文カバーレターは以下の構成になっています。</p>
+<ul>
+<li>書き出し（Opening Paragraph）：応募するポジションと自分を簡潔に紹介する</li>
+<li>本文（Body Paragraph 1〜2）：なぜこの企業なのか、自分の経験がどう貢献できるかを述べる</li>
+<li>締め（Closing Paragraph）：面接の機会を希望する一文と感謝の言葉</li>
+</ul>
+<p>全体で250〜400語程度（A4用紙1枚）に収めるのが理想的とされています。</p>
+<h3>カバーレター作成の基本プロンプト</h3>
+<p>```</p>
+<p>以下の情報をもとに、英文カバーレターを作成してください。</p>
+<p>条件：</p>
+<ul>
+<li>300〜400語程度</li>
+<li>丁寧かつ自信のあるトーンで書くこと</li>
+<li>求人票のキーワードを自然に組み込むこと</li>
+<li>志望動機が具体的に伝わるようにすること</li>
+<li>定型文的な表現（I am writing to apply for...など）は避け、インパクトのある書き出しにすること</li>
+</ul>
+<p>【応募先企業】〇〇 Inc.</p>
+<p>【応募ポジション】Senior Account Manager</p>
+<p>【求人票のポイント（抜粋）】</p>
+<p>・5年以上のB2B営業経験</p>
+<p>・グローバルチームとの協働経験</p>
+<p>・CRMツールの使用経験</p>
+<p>【私の情報】</p>
+<p>・10年間の法人営業経験（製造業）</p>
+<p>・東南アジアの海外顧客担当3年</p>
+<p>・Salesforce使用経験1年</p>
+<p>・英語ビジネスレベル（TOEIC 800点）</p>
+<p>・志望動機：貴社の東南アジア市場における事業拡大に自分の経験で貢献したい</p>
+<p>```</p>
+<h3>日本人らしさを活かすプロンプト</h3>
+<p>外資系企業への転職では、日本市場・アジア市場の知見や、日本のビジネス文化に精通していることが強みになる場合があります。その点を自然にアピールするよう指示を加えることもできます。</p>
+<p>```</p>
+<p>先ほど作成したカバーレターに、以下の要素を自然な形で追加してください。</p>
+<p>・日本市場での深い顧客理解と丁寧なリレーションシップ構築が強みであること</p>
+<p>・この強みが、日本国内での事業展開を強化したい外資系企業にとって価値になることを論理的に示すこと</p>
+<p>・日本人であることを言い訳や限界として書くのではなく、資産として表現すること</p>
+<p>```</p>
+<p>このように、Claudeとのやりとりを段階的に積み重ねていくことで、自分では思いつかない表現や視点を引き出すことができます。</p>
+<p>---</p>
+<h2 id="claude----------">Claudeの出力をブラッシュア</h2>
+      <div class="quiz-promo">
+        <div class="quiz-promo-orb"></div>
+        <div class="quiz-promo-inner">
+          <div class="quiz-promo-icon">🎧</div>
+          <div class="quiz-promo-body">
+            <p class="quiz-promo-title">英語リスニング、今日の5問で実力チェック</p>
+            <p class="quiz-promo-sub">455問・3レベル対応・完全無料 — 今すぐ聴き取りに挑戦できます</p>
+          </div>
+          <a href="/listening/" class="quiz-promo-btn">無料で試す →</a>
+        </div>
+      </div>
+      <div class="disclaimer">
+        ※本記事はアフィリエイト広告を含みます。料金・サービス内容は変更される場合があります。最新情報は各公式サイトでご確認ください。
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="sidebar-widget quiz-promo-widget">
+        <div class="quiz-promo-orb"></div>
+        <p class="quiz-promo-widget-label">🎧 英語力診断</p>
+        <p class="quiz-promo-widget-title">リスニングクイズで<br>実力チェック</p>
+        <p class="quiz-promo-widget-sub">455問・無料・3レベル対応</p>
+        <a href="/listening/" class="quiz-promo-btn">無料で試す →</a>
+      </div>
+      <div class="sidebar-widget">
+        <h4>人気ランキング</h4>
+        <div class="sidebar-service-list">
+          <div class="sidebar-service-item"><a href="/services/dmm-eikaiwa/">DMM英会話</a></div>
+          <div class="sidebar-service-item"><a href="/services/rarejob/">レアジョブ英会話</a></div>
+          <div class="sidebar-service-item"><a href="/services/nativecamp/">ネイティブキャンプ</a></div>
+        </div>
+        <div style="margin-top:14px;">
+          <a href="/" class="btn-primary" style="width:100%;display:block;text-align:center;">ランキングを見る</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>英語学習サービス比較ナビ</h4>
+        <p>プロが選ぶオンライン英会話・英語アプリ徹底比較</p>
+        <p style="margin-top:12px;">※当サイトはアフィリエイトリンクを含みます。</p>
+      </div>
+      <div>
+        <h4>サービス一覧</h4>
+        <ul>
+          <li><a href="/services/dmm-eikaiwa/">DMM英会話</a></li>
+          <li><a href="/services/rarejob/">レアジョブ英会話</a></li>
+          <li><a href="/services/nativecamp/">ネイティブキャンプ</a></li>
+          <li><a href="/services/cambly/">Cambly</a></li>
+          <li><a href="/services/bizmates/">Bizmates</a></li>
+          <li><a href="/services/progrit/">プログリット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>コンテンツ</h4>
+        <ul>
+          <li><a href="/articles/">学習コラム一覧</a></li>
+          <li><a href="/listening/">リスニングクイズ</a></li>
+          <li><a href="/prompts/">AIプロンプト</a></li>
+          <li><a href="/">ランキングTOP</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 英語学習サービス比較ナビ. All rights reserved.</p></div>
+  </div>
+</footer>
+</body>
+</html>
