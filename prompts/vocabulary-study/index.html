@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PS9R9844');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>英単語を文脈で覚えるプロンプト | 英語学習AIプロンプト集</title>
+  <meta name="description" content="ChatGPT・Claudeで英単語を文脈で覚えるプロンプト。単語を入力するだけで例文・コロケーション・語源まで一括整理。暗記が苦手な方に最適です。">
+  <link rel="canonical" href="https://native-real.com/prompts/vocabulary-study/">
+  <meta property="og:title" content="英単語を文脈で覚えるプロンプト | 英語学習AIプロンプト集">
+  <meta property="og:description" content="ChatGPT・Claudeで英単語を文脈で覚えるプロンプト。単語を入力するだけで例文・コロケーション・語源まで一括整理。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://native-real.com/assets/ogp.png">
+  <meta property="og:url" content="https://native-real.com/prompts/vocabulary-study/">
+  <meta property="og:site_name" content="英語学習サービス比較ナビ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://native-real.com/assets/ogp.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "英単語を文脈で覚えるプロンプト",
+    "description": "ChatGPT・Claudeで英単語を文脈で覚えるプロンプト。単語を入力するだけで例文・コロケーション・語源まで一括整理。",
+    "url": "https://native-real.com/prompts/vocabulary-study/",
+    "publisher": { "@type": "Organization", "name": "英語学習サービス比較ナビ" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --primary: #2563eb; --primary-light: #3b82f6; --primary-dark: #1d4ed8; --primary-pale: #eff6ff;
+  --accent: #10b981; --accent-dark: #059669; --accent-pale: #ecfdf5;
+  --text: #111827; --text-muted: #6b7280; --bg: #ffffff; --bg-gray: #f9fafb;
+  --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08); --radius: 10px; --radius-lg: 14px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Inter","Noto Sans JP",-apple-system,BlinkMacSystemFont,sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--bg); letter-spacing: 0.01em; }
+a { color: var(--primary); } a:hover { color: var(--primary-light); }
+.container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+.site-header { background: #fff; padding: 14px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 0 var(--border); }
+.site-header .container { max-width: 1100px; display: flex; align-items: center; justify-content: space-between; }
+.site-header .logo { font-size: 1.0rem; font-weight: 700; color: var(--text); text-decoration: none; }
+.site-header .logo span { color: var(--primary); }
+.site-header nav a { color: var(--text-muted); text-decoration: none; margin-left: 24px; font-size: 0.875rem; font-weight: 500; border-bottom: 2px solid transparent; padding-bottom: 2px; transition: color 0.15s, border-color 0.15s; }
+.site-header nav a:hover { color: var(--text); border-color: var(--primary); }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; width: 36px; height: 36px; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav-overlay { display: none; position: fixed; inset: 0; background: rgba(17,24,39,0.95); z-index: 101; flex-direction: column; align-items: center; justify-content: center; gap: 24px; }
+.mobile-nav-overlay.active { display: flex; }
+.mobile-nav-overlay a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: 600; padding: 12px 24px; border-radius: var(--radius); transition: background 0.2s; }
+.mobile-nav-overlay a:hover { background: rgba(255,255,255,0.1); }
+.breadcrumb { padding: 14px 0; font-size: 0.8rem; color: var(--text-muted); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; } .breadcrumb a:hover { color: var(--primary); }
+.breadcrumb span { margin: 0 6px; }
+.page-hero { background: linear-gradient(135deg, #064e3b 0%, #065f46 40%, #047857 100%); color: white; padding: 48px 0 40px; }
+.page-hero .container { max-width: 800px; }
+.page-hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 4px 12px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.05em; text-transform: uppercase; }
+.page-hero h1 { font-size: clamp(1.4rem, 3.5vw, 1.9rem); font-weight: 800; line-height: 1.3; margin-bottom: 12px; }
+.page-hero p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
+.content-body { padding: 40px 0 64px; }
+.section-label { display: flex; align-items: center; gap: 10px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-dark); margin-bottom: 12px; }
+.section-label::before { content: ''; display: block; width: 3px; height: 16px; background: var(--accent-dark); border-radius: 2px; }
+h2.section-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 20px; }
+.prompt-block { background: #1e1b4b; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 32px; }
+.prompt-block-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.prompt-block-header span { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-family: monospace; }
+.copy-btn { background: var(--accent-dark); color: white; border: none; border-radius: 6px; padding: 6px 16px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: background 0.15s; font-family: inherit; }
+.copy-btn:hover { background: #065f46; }
+.copy-btn.copied { background: var(--primary); }
+.prompt-text { padding: 24px 20px; font-size: 0.88rem; line-height: 1.9; color: rgba(255,255,255,0.9); white-space: pre-wrap; font-family: "Noto Sans JP", sans-serif; }
+.steps-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+.step-item { display: flex; gap: 16px; align-items: flex-start; }
+.step-num { width: 32px; height: 32px; background: var(--accent-dark); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.step-content h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+.step-content p { font-size: 0.875rem; color: var(--text-muted); }
+.chat-example { background: var(--bg-gray); border: 1.5px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 32px; }
+.chat-example h3 { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.06em; }
+.chat-msg { margin-bottom: 14px; } .chat-msg:last-child { margin-bottom: 0; }
+.chat-role { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.chat-role.user { color: var(--accent-dark); } .chat-role.ai { color: var(--primary); }
+.chat-bubble { font-size: 0.875rem; line-height: 1.75; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; }
+.chat-bubble.ai-bubble { background: var(--primary-pale); border-color: #bfdbfe; }
+.related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.related-card { background: var(--bg-gray); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 16px 20px; text-decoration: none; color: inherit; transition: border-color 0.15s, box-shadow 0.15s; display: flex; align-items: center; gap: 12px; }
+.related-card:hover { border-color: var(--primary-light); box-shadow: var(--shadow); color: inherit; }
+.related-card .icon { font-size: 1.4rem; } .related-card .title { font-size: 0.88rem; font-weight: 700; } .related-card .cat { font-size: 0.72rem; color: var(--text-muted); }
+.tip-box { background: var(--accent-pale); border: 1.5px solid #a7f3d0; border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px; font-size: 0.875rem; line-height: 1.75; }
+.tip-box strong { color: var(--accent-dark); }
+.site-footer { background: #0f172a; color: rgba(255,255,255,0.65); padding: 48px 0 24px; font-size: 0.88rem; }
+.site-footer .container { max-width: 1100px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+.site-footer h4 { color: rgba(255,255,255,0.9); font-size: 0.95rem; margin-bottom: 14px; }
+.site-footer ul { list-style: none; } .site-footer li { margin-bottom: 9px; }
+.site-footer a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+.site-footer a:hover { color: #93c5fd; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+.footer-owner { margin-top: 16px; display: flex; align-items: center; gap: 10px; }
+.footer-owner-label { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+.footer-owner a { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+.footer-owner a:hover { color: #93c5fd; }
+.footer-owner svg { width: 15px; height: 15px; fill: currentColor; }
+@media (max-width: 768px) { .hamburger { display: flex; } .site-header nav { display: none; } .related-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">英語学習<span>比較ナビ</span></a>
+    <nav>
+      <a href="/">ランキング</a>
+      <a href="/articles/">学習コラム</a>
+      <a href="/listening/">リスニングクイズ</a>
+      <a href="/prompts/">AIプロンプト</a>
+    </nav>
+    <button class="hamburger" aria-label="メニューを開く" onclick="document.querySelector('.hamburger').classList.toggle('active');document.querySelector('.mobile-nav-overlay').classList.toggle('active');document.body.style.overflow=document.querySelector('.mobile-nav-overlay').classList.contains('active')?'hidden':'';">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-nav-overlay" onclick="if(event.target===this||event.target.tagName==='A'){this.classList.remove('active');document.querySelector('.hamburger').classList.remove('active');document.body.style.overflow='';}">
+  <a href="/">ランキング</a>
+  <a href="/articles/">学習コラム</a>
+  <a href="/listening/">リスニングクイズ</a>
+  <a href="/prompts/">AIプロンプト</a>
+</div>
+
+<div class="breadcrumb">
+  <div class="container" style="max-width:800px;">
+    <a href="/">ホーム</a><span>›</span><a href="/prompts/">AIプロンプト</a><span>›</span>英単語を文脈で覚える
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-tag">📖 語彙</div>
+    <h1>英単語を文脈で覚えるプロンプト</h1>
+    <p>覚えたい単語を入力するだけで、例文・コロケーション・語源まで一括整理。<br>丸暗記より圧倒的に定着率が上がります。</p>
+  </div>
+</section>
+
+<div class="content-body">
+  <div class="container">
+
+    <div class="section-label">プロンプト</div>
+    <div class="prompt-block">
+      <div class="prompt-block-header">
+        <span>vocabulary-study.txt</span>
+        <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">コピーする</button>
+      </div>
+      <pre class="prompt-text" id="promptText">以下の英単語を、文脈の中で覚えられるよう助けてください：
+
+【覚えたい単語】
+{単語をここに入力（複数ある場合は改行で区切ってください）}
+
+各単語について以下の形式で教えてください：
+
+1. 発音（カタカナ読みと発音記号）
+2. 品詞と意味（日本語）
+3. 例文3つ（英語＋日本語訳）
+4. よく一緒に使われる表現（コロケーション）を3つ
+5. 覚えるためのコツや語源・関連語
+
+単語が複数ある場合は、関連する単語をグループ化して整理してください。
+最後に、全単語を使った短い英文（3〜5文）を作ってください。</pre>
+    </div>
+
+    <div class="tip-box">
+      <strong>効果的な使い方：</strong> 1回に10〜15語程度がベストです。単語帳アプリで出た単語や、英文を読んでいてわからなかった単語をまとめて入力すると効率的です。
+    </div>
+
+    <div class="section-label">使い方</div>
+    <h2 class="section-title">3ステップで単語マスター</h2>
+    <ul class="steps-list">
+      <li class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>プロンプトをコピー</h3>
+          <p>上の「コピーする」ボタンをクリックして全文をコピーします。</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>覚えたい単語を入力</h3>
+          <p>AIに貼り付けたら <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:0.85em;">{単語をここに入力}</code> の部分を書き換えてください。例：reluctant, persevere, meticulous など複数まとめて入力できます。</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>例文を音読して定着させる</h3>
+          <p>AIが出力した例文を声に出して読むことで記憶への定着が高まります。「この例文を使って会話練習したい」と追加リクエストもできます。</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="section-label">使用例</div>
+    <h2 class="section-title">AIの出力サンプル</h2>
+    <div class="chat-example">
+      <h3>入力例：reluctant, persevere</h3>
+      <div class="chat-msg">
+        <div class="chat-role user">あなた（入力）</div>
+        <div class="chat-bubble">【覚えたい単語】<br>reluctant<br>persevere</div>
+      </div>
+      <div class="chat-msg">
+        <div class="chat-role ai">AI（出力例）</div>
+        <div class="chat-bubble ai-bubble">
+          <strong>reluctant</strong>（リラクタント / rɪˈlʌktənt）<br>
+          形容詞：気が進まない、渋々の<br>
+          例文：She was reluctant to speak in front of the class.（彼女はクラスの前で話すのを渋っていた）<br>
+          コロケーション：be reluctant to do / reluctant agreement / reluctant hero<br>
+          語源：re-（反対）+ luctari（戦う）→ 抵抗する気持ちがある<br><br>
+          <strong>persevere</strong>（パーセヴィア / ˌpɜːrsɪˈvɪər）<br>
+          動詞：（困難にめげず）粘り強く続ける<br>
+          例文：You must persevere through the difficult times.（困難な時期もやり抜かなければならない）<br>
+          コロケーション：persevere with / persevere in / persevere despite challenges<br>
+          語源：per-（通して）+ severus（厳しい）→ 厳しさを通り抜ける
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">関連プロンプト</div>
+    <h2 class="section-title">他のプロンプトも試してみる</h2>
+    <div class="related-grid">
+      <a href="/prompts/speaking-practice/" class="related-card">
+        <span class="icon">💬</span>
+        <div><div class="title">AIと英会話練習するプロンプト</div><div class="cat">スピーキング</div></div>
+      </a>
+      <a href="/prompts/diary-correction/" class="related-card">
+        <span class="icon">✏️</span>
+        <div><div class="title">英語日記を添削してもらうプロンプト</div><div class="cat">ライティング</div></div>
+      </a>
+      <a href="/prompts/pronunciation-check/" class="related-card">
+        <span class="icon">🗣️</span>
+        <div><div class="title">英語表現・言い回しをチェックするプロンプト</div><div class="cat">表現力</div></div>
+      </a>
+      <a href="/prompts/business-email/" class="related-card">
+        <span class="icon">📧</span>
+        <div><div class="title">ビジネス英語メール作成プロンプト</div><div class="cat">ビジネス</div></div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>英語学習サービス比較ナビ</h4>
+        <p>プロが選ぶオンライン英会話・英語アプリ徹底比較</p>
+        <p style="margin-top:12px;">※当サイトはアフィリエイトリンクを含みます。</p>
+        <div class="footer-owner">
+          <span class="footer-owner-label">運営者</span>
+          <a href="https://x.com/ichi_eigo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@ichi_eigo</a>
+        </div>
+      </div>
+      <div>
+        <h4>サービス一覧</h4>
+        <ul>
+          <li><a href="/services/dmm-eikaiwa/">DMM英会話</a></li>
+          <li><a href="/services/rarejob/">レアジョブ英会話</a></li>
+          <li><a href="/services/nativecamp/">ネイティブキャンプ</a></li>
+          <li><a href="/services/cambly/">Cambly（キャンブリー）</a></li>
+          <li><a href="/services/bizmates/">Bizmates（ビズメイツ）</a></li>
+          <li><a href="/services/progrit/">プログリット</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>コンテンツ</h4>
+        <ul>
+          <li><a href="/articles/">学習コラム一覧</a></li>
+          <li><a href="/">ランキングTOP</a></li>
+          <li><a href="/listening/">英語リスニングクイズ</a></li>
+          <li><a href="/prompts/">AIプロンプト集</a></li>
+          <li><a href="/privacy/">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 英語学習サービス比較ナビ. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script>
+function copyPrompt() {
+  var text = document.getElementById('promptText').textContent;
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.getElementById('copyBtn');
+    btn.textContent = 'コピーしました！';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = 'コピーする'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>
