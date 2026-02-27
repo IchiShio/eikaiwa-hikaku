@@ -65,6 +65,48 @@
   - `max-width: 620px`、`text-wrap: balance` で行均等化
   - クラス構成: `.philosophy-hook`（感情フック）→ `.philosophy-desc`（旧学習法の描写、薄色）→ `.philosophy-question`（大きな問いかけ）→ `.philosophy-insight`（洞察）→ `.philosophy-quote`（blockquote、ゴールドボーダー）→ `.philosophy-body` → `.philosophy-conclusion`
 
+## listening/ の問題量産パイプライン（2026-02-27実装）
+
+### ファイル構成
+
+| ファイル | 役割 |
+|---|---|
+| `listening/questions.js` | DATA配列（JavaScript Object記法・キーにクォートなし） |
+| `listening/staging.json` | Claude出力の一時保存（gitignore済み） |
+| `listening/batch_state.json` | Batch API投入状態の保存（gitignore済み） |
+| `generate_questions.py` | Claude Sonnet 4.6 API → staging.json自動保存 |
+| `add_questions.py` | staging.json → MP3生成 → questions.js追記 → git push |
+| `check_batch.py` | Batch結果回収 → staging.json保存 → add_questions.py実行 |
+| `get_prompt.py` | Claude.ai用プロンプト生成 → pbcopyでクリップボードコピー |
+
+### 実行コマンド
+
+```bash
+cd /Users/yusuke/projects/claude/eikaiwa-hikaku
+
+# 通常モード（即時・~69円/100問）
+python3 generate_questions.py --count 100
+
+# Batch モード（24時間以内・~35円/100問）
+python3 generate_questions.py --count 100 --batch
+# 翌日以降:
+python3 check_batch.py
+
+# 問題追加（staging.jsonに保存済みの場合）
+python3 add_questions.py
+
+# Claude.ai用プロンプト生成（手動フロー）
+python3 get_prompt.py --count 100
+```
+
+### 設計メモ
+
+- **axisフィールド**: speed / reduction / vocab / context / distractor（5軸難易度微差、問題内で均等分散）
+- **BATCH_SIZE=30**: MAX_TOKENS=8192に収まる量。1リクエスト30問×複数リクエストで100問を達成
+- **EXCLUDE_LIMIT=3000**: 直近3000問のみ除外リストに渡す（プロンプト最大~75,500トークン）。毎日100問ペースで約30日分
+- **音声ローテーション**: AriaNeural / SoniaNeural / GuyNeural / NatashaNeural / RyanNeural の5種
+- **`.env`**: `ANTHROPIC_API_KEY` が必要（generate_questions.py用）
+
 ## listening/ のプラン設計（2026-02-25更新）
 
 ### 無料・登録・プレミアムの区分け
