@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <title>英語学習に使えるAIプロンプト集 | 英語学習サービス比較ナビ</title>
-  <meta name="description" content="ChatGPT・Claudeで英語学習に使えるプロンプト集。英会話練習・単語学習・日記添削・TOEIC対策・ビジネス英語メールなど6カテゴリをワンクリックでコピー。">
+  <meta name="description" content="ChatGPT・Claudeで英語学習に使えるプロンプト集。英会話・面接・ライティング・TOEIC・ビジネス英語など20プロンプトをワンクリックでコピー。">
   <link rel="canonical" href="https://native-real.com/prompts/">
   <meta property="og:title" content="英語学習に使えるAIプロンプト集">
   <meta property="og:description" content="ChatGPT・Claudeで英語学習に使えるプロンプト集。英会話練習・単語学習・日記添削・TOEIC対策・ビジネス英語メールなど6カテゴリをワンクリックでコピー。">
@@ -307,6 +307,10 @@ img { max-width: 100%; height: auto; }
 .tag-expression { background: #fdf4ff; color: #7e22ce; }
 .tag-toeic { background: #fef2f2; color: #b91c1c; }
 .tag-business { background: #f0fdf4; color: #166534; }
+.tag-reading { background: #fffbeb; color: #92400e; }
+.tag-listening { background: #dcfce7; color: #14532d; }
+.card-icon.reading { background: #fffbeb; }
+.card-icon.listening { background: #dcfce7; }
 .card-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -467,7 +471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>ChatGPT・Claude で今すぐ使えるプロンプトを厳選。<br>コピーして貼るだけで、AIが最高の英語コーチになります。</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <strong>6</strong>
+        <strong>20</strong>
         <span>プロンプト</span>
       </div>
       <div class="hero-stat">
@@ -492,6 +496,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="filter-tab" data-cat="expression" onclick="applyFilter(this)">表現力</button>
       <button class="filter-tab" data-cat="toeic" onclick="applyFilter(this)">TOEIC</button>
       <button class="filter-tab" data-cat="business" onclick="applyFilter(this)">ビジネス</button>
+      <button class="filter-tab" data-cat="reading" onclick="applyFilter(this)">リーディング</button>
+      <button class="filter-tab" data-cat="listening" onclick="applyFilter(this)">リスニング</button>
     </nav>
   </div>
 </section>
@@ -545,6 +551,118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="card-tag tag-business">ビジネス</div>
         <div class="card-title">ビジネス英語メール作成プロンプト</div>
         <div class="card-desc">状況・相手・トーンを指定するだけで、即使えるビジネス英語メールを作成。使われた表現の解説付きで語彙も増やせます。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/english-interview/" class="prompt-card" data-cat="speaking">
+        <div class="card-icon speaking">🎤</div>
+        <div class="card-tag tag-speaking">スピーキング</div>
+        <div class="card-title">英語面接練習プロンプト</div>
+        <div class="card-desc">AI面接官が質問を出し、回答の内容・英語表現へのフィードバックをくれます。外資系・グローバル転職の面接対策に。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/email-reply/" class="prompt-card" data-cat="business">
+        <div class="card-icon business">📩</div>
+        <div class="card-tag tag-business">ビジネス</div>
+        <div class="card-title">英語メール返信作成プロンプト</div>
+        <div class="card-desc">受け取った英語メールをコピーして貼るだけ。承諾・断り・追加質問など状況に合わせた返信文とフレーズ解説付き。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/travel-roleplay/" class="prompt-card" data-cat="speaking">
+        <div class="card-icon speaking">✈️</div>
+        <div class="card-tag tag-speaking">スピーキング</div>
+        <div class="card-title">旅行英語ロールプレイプロンプト</div>
+        <div class="card-desc">空港・ホテル・レストランなど場面を選んでAIと練習。現地スタッフ役AIが自然な言い方も教えてくれます。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/idiom-study/" class="prompt-card" data-cat="vocab">
+        <div class="card-icon vocab">💡</div>
+        <div class="card-tag tag-vocab">語彙</div>
+        <div class="card-title">英語イディオム・慣用句を学ぶプロンプト</div>
+        <div class="card-desc">気になるイディオムを入力するだけ。意味・例文・使うシーン・注意点をまとめて解説。会話例で確認できます。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/translation-check/" class="prompt-card" data-cat="writing">
+        <div class="card-icon writing">🔄</div>
+        <div class="card-tag tag-writing">ライティング</div>
+        <div class="card-title">英訳・和訳をチェックするプロンプト</div>
+        <div class="card-desc">自分で書いた翻訳を貼り付けるだけ。意味・自然さ・文体の3軸で評価し、改善案と翻訳テクニックを解説。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/eiken-writing/" class="prompt-card" data-cat="writing">
+        <div class="card-icon toeic">📝</div>
+        <div class="card-tag tag-toeic">試験対策</div>
+        <div class="card-title">英検ライティング添削プロンプト</div>
+        <div class="card-desc">英検2級・準1級・1級のライティング解答をAIが添削。採点基準に沿った評価・改善案・高得点フレーズを解説。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/self-introduction/" class="prompt-card" data-cat="speaking">
+        <div class="card-icon speaking">👋</div>
+        <div class="card-tag tag-speaking">スピーキング</div>
+        <div class="card-title">英語自己紹介を作るプロンプト</div>
+        <div class="card-desc">場面・プロフィール・分量を指定するだけ。ビジネス・留学・SNSなど用途に合った自己紹介文とフレーズ解説が完成。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/news-explain/" class="prompt-card" data-cat="reading">
+        <div class="card-icon reading">📰</div>
+        <div class="card-tag tag-reading">リーディング</div>
+        <div class="card-title">英語ニュースを日本語で解説してもらうプロンプト</div>
+        <div class="card-desc">英語記事を貼り付けるだけ。要点・背景知識・重要語彙を日本語で解説。英語で意見を言う練習例文付き。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/grammar-qa/" class="prompt-card" data-cat="vocab">
+        <div class="card-icon vocab">❓</div>
+        <div class="card-tag tag-vocab">文法</div>
+        <div class="card-title">英文法の疑問を解決するプロンプト</div>
+        <div class="card-desc">英文法の「なぜ？」を入力するだけ。核心の答え・例文・よくある間違いを整理して解説してもらえます。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/presentation-script/" class="prompt-card" data-cat="business">
+        <div class="card-icon business">🖥️</div>
+        <div class="card-tag tag-business">ビジネス</div>
+        <div class="card-title">英語プレゼンスクリプト作成プロンプト</div>
+        <div class="card-desc">テーマと要点を入力するだけ。自然な英語の発表原稿とプレゼン用フレーズ集・Q&A対応表現がセットで完成。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/shadow-script/" class="prompt-card" data-cat="listening">
+        <div class="card-icon listening">🎧</div>
+        <div class="card-tag tag-listening">リスニング</div>
+        <div class="card-title">英語シャドーイング用スクリプト作成プロンプト</div>
+        <div class="card-desc">レベル・テーマ・長さを指定してカスタムスクリプト生成。発音・リズムの解説とシャドーイングの進め方付き。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/debate-practice/" class="prompt-card" data-cat="speaking">
+        <div class="card-icon speaking">⚖️</div>
+        <div class="card-tag tag-speaking">スピーキング</div>
+        <div class="card-title">英語ディベート練習プロンプト</div>
+        <div class="card-desc">AIが反論役を担当。意見陳述・反論・まとめまで一連の流れを練習でき、論理構成と英語表現の両方を鍛えます。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/small-talk/" class="prompt-card" data-cat="speaking">
+        <div class="card-icon speaking">☕</div>
+        <div class="card-tag tag-speaking">スピーキング</div>
+        <div class="card-title">英語スモールトーク練習プロンプト</div>
+        <div class="card-desc">外国人との雑談が苦手な方へ。天気・週末・趣味など自然な流れのスモールトークをAIと練習できます。</div>
+        <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
+      </a>
+
+      <a href="/prompts/writing-outline/" class="prompt-card" data-cat="writing">
+        <div class="card-icon writing">📋</div>
+        <div class="card-tag tag-writing">ライティング</div>
+        <div class="card-title">英語エッセイのアウトライン作成プロンプト</div>
+        <div class="card-desc">テーマを入力するだけで論理的なエッセイ構成案とフレーズ集が完成。英検・TOEFL対策にも活用できます。</div>
         <div class="card-action">使い方を見る <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></div>
       </a>
 
