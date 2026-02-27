@@ -39,7 +39,7 @@ REPO_ROOT = Path(__file__).parent
 QUESTIONS_JS = REPO_ROOT / "listening" / "questions.js"
 AXIS_CACHE = REPO_ROOT / "listening" / "axis_cache.json"  # 途中経過保存
 
-DEFAULT_MODEL = "claude-haiku-4-5-20251001"  # 分類タスクは Haiku で十分
+DEFAULT_MODEL = "claude-sonnet-4-6"
 BATCH_SIZE = 30
 VALID_AXES = {"speed", "reduction", "vocab", "context", "distractor"}
 

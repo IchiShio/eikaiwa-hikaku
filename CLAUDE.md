@@ -130,7 +130,7 @@ python3 classify_axis.py
 
 - **途中保存**: `listening/axis_cache.json`（gitignore 推奨）
 - **再実行**: キャッシュ済みの問題はスキップして続きから処理
-- **モデル**: デフォルト claude-haiku-4-5（分類タスクなので Haiku で十分）
+- **モデル**: デフォルト claude-sonnet-4-6
 
 #### axis の定義
 
