@@ -863,6 +863,20 @@
     }
     .mission-btn-back:hover { background: rgba(0,0,0,0.08); color: var(--text-1); }
 
+    /* ── MISSION: AXIS WEAKNESS ── */
+    .mission-axis-wrap { margin: 4px 0 16px; padding: 12px 14px; background: var(--surface); border-radius: 10px; text-align: left; }
+    .mission-axis-label { font-size: 11px; font-weight: 700; color: var(--text-3); letter-spacing: 0.5px; margin-bottom: 10px; }
+    .mission-axis-rows { display: flex; flex-direction: column; gap: 7px; }
+    .mission-axis-row { display: flex; align-items: center; gap: 8px; }
+    .mission-axis-name { font-size: 12px; color: var(--text-2); width: 90px; flex-shrink: 0; }
+    .mission-axis-bar-wrap { flex: 1; background: var(--border); border-radius: 4px; height: 5px; overflow: hidden; }
+    .mission-axis-bar { height: 100%; border-radius: 4px; background: var(--gold); transition: width 0.7s ease; }
+    .mission-axis-bar.weak { background: #ef4444; }
+    .mission-axis-bar.strong { background: #22c55e; }
+    .mission-axis-pct { font-size: 11px; color: var(--text-3); width: 30px; text-align: right; flex-shrink: 0; }
+    .mission-axis-msg { font-size: 12px; color: var(--text-2); margin: 10px 0 0; line-height: 1.6; }
+    .mission-axis-msg strong { color: var(--text-1); font-weight: 700; }
+
     /* ── MISSION: ARTICLE LINKS ── */
     .mission-articles {
       border-top: 1px solid var(--border);
@@ -2131,6 +2145,11 @@
       </div>
     </div>
     <div class="mission-week" id="missionWeek"></div>
+    <div class="mission-axis-wrap" id="missionAxisWrap" style="display:none">
+      <div class="mission-axis-label">あなたの弱点分析</div>
+      <div class="mission-axis-rows" id="missionAxisRows"></div>
+      <p class="mission-axis-msg" id="missionAxisMsg"></p>
+    </div>
     <div class="mission-articles">
       <div class="mission-articles-label">📖 次に読む</div>
       <a class="mission-article-link" href="/articles/english-speaking-improvement/">スピーキングが伸びない3つの共通点と今日からできる改善法</a>
@@ -2174,18 +2193,17 @@ function getToday() {
 function loadProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {
-      totalAnswered: 0,
-      totalCorrect: 0,
-      dailyStreak: 0,
-      lastVisitDate: '',
-      todayAnswered: 0,
-      todayDate: '',
-      todayCorrect: 0,
-      visitDates: []
+    const def = {
+      totalAnswered: 0, totalCorrect: 0, dailyStreak: 0, lastVisitDate: '',
+      todayAnswered: 0, todayDate: '', todayCorrect: 0, visitDates: [],
+      axisStats: { speed:{a:0,c:0}, reduction:{a:0,c:0}, vocab:{a:0,c:0}, context:{a:0,c:0}, distractor:{a:0,c:0} }
     };
+    if (!raw) return def;
+    const parsed = JSON.parse(raw);
+    if (!parsed.axisStats) parsed.axisStats = def.axisStats; // 既存ユーザーの移行
+    return parsed;
   } catch (e) {
-    return { totalAnswered: 0, totalCorrect: 0, dailyStreak: 0, lastVisitDate: '', todayAnswered: 0, todayDate: '', todayCorrect: 0, visitDates: [] };
+    return { totalAnswered: 0, totalCorrect: 0, dailyStreak: 0, lastVisitDate: '', todayAnswered: 0, todayDate: '', todayCorrect: 0, visitDates: [], axisStats: { speed:{a:0,c:0}, reduction:{a:0,c:0}, vocab:{a:0,c:0}, context:{a:0,c:0}, distractor:{a:0,c:0} } };
   }
 }
 
@@ -2265,6 +2283,24 @@ function showReturningStats() {
     });
   }
 }
+
+// ─────────────────────────────────────────
+// AXIS: ユーザー向けラベル・説明
+// ─────────────────────────────────────────
+const AXIS_USER_LABELS = {
+  speed:      '早口・速い英語',
+  reduction:  '崩れた発音',
+  vocab:      '語彙・イディオム',
+  context:    '場面の読み取り',
+  distractor: '精聴力',
+};
+const AXIS_USER_MSGS = {
+  speed:      '速い発話についていく練習を続けましょう。',
+  reduction:  'gonna / wanna などの音変化に慣れましょう。',
+  vocab:      'イディオムやスラングの知識を増やしましょう。',
+  context:    '状況やトーンから意図を読む練習をしましょう。',
+  distractor: '選択肢を最後まで正確に聴き比べる精度を磨きましょう。',
+};
 
 // ─────────────────────────────────────────
 // STATE
@@ -2493,6 +2529,12 @@ function choose(selected) {
     if (p.todayDate !== today) { p.todayAnswered = 0; p.todayCorrect = 0; p.todayDate = today; }
     p.todayAnswered++;
     if (ok) p.todayCorrect++;
+    // axis 別正解率を記録
+    const ax = current.axis;
+    if (ax && p.axisStats && p.axisStats[ax]) {
+      p.axisStats[ax].a++;
+      if (ok) p.axisStats[ax].c++;
+    }
     saveProgress(p);
   }
   updateScore();
@@ -2783,6 +2825,38 @@ function showMissionComplete() {
     item.appendChild(lbl); item.appendChild(dot);
     weekEl.appendChild(item);
   });
+
+  // axis 弱点分析
+  const MIN_ANSWERS = 5;
+  const axisStats = p.axisStats || {};
+  const rows = Object.keys(AXIS_USER_LABELS)
+    .map(key => {
+      const s = axisStats[key] || {a:0, c:0};
+      return { key, label: AXIS_USER_LABELS[key], answered: s.a, rate: s.a >= MIN_ANSWERS ? Math.round(s.c / s.a * 100) : null };
+    })
+    .filter(r => r.rate !== null)
+    .sort((a, b) => a.rate - b.rate);
+
+  const axisWrap = document.getElementById('missionAxisWrap');
+  if (rows.length >= 2) {
+    axisWrap.style.display = 'block';
+    document.getElementById('missionAxisRows').innerHTML = rows.map((r, i) => {
+      const cls = i === 0 ? 'weak' : (i === rows.length - 1 ? 'strong' : '');
+      return `<div class="mission-axis-row">
+        <span class="mission-axis-name">${r.label}</span>
+        <div class="mission-axis-bar-wrap"><div class="mission-axis-bar ${cls}" style="width:${r.rate}%"></div></div>
+        <span class="mission-axis-pct">${r.rate}%</span>
+      </div>`;
+    }).join('');
+    const weak = rows[0];
+    const strong = rows[rows.length - 1];
+    const msg = weak.rate < 60
+      ? `<strong>${weak.label}</strong>が課題です。${AXIS_USER_MSGS[weak.key]}`
+      : `全体的に安定しています。<strong>${strong.label}</strong>が得意分野です。`;
+    document.getElementById('missionAxisMsg').innerHTML = msg;
+  } else {
+    axisWrap.style.display = 'none';
+  }
 
   document.getElementById('missionOverlay').classList.add('show');
 }
