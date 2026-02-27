@@ -337,50 +337,42 @@ img { max-width: 100%; height: auto; }
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: box-shadow 0.25s, transform 0.25s;
+  display: flex;
+  align-items: stretch;
 }
 .article-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
 .article-card:hover h3 { color: var(--primary); }
-.article-card-img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-}
-.article-card-eyecatch {
-  width: 100%;
-  height: 140px;
+.article-card-img { display: none; }
+.article-card-eyecatch { display: none; }
+.article-card-accent { display: none; }
+/* Left-side category icon */
+.card-icon {
+  width: 64px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  font-size: 3rem;
-  position: relative;
-  overflow: hidden;
+  gap: 5px;
+  font-size: 1.55rem;
+  line-height: 1;
 }
-.article-card-eyecatch::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 50%);
-}
-.eyecatch-emoji { position: relative; z-index: 1; line-height: 1; }
-.eyecatch-label {
-  position: relative;
-  z-index: 1;
-  font-size: 0.7rem;
+.card-icon-label {
+  font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.88);
+  text-align: center;
+  padding: 0 3px;
+  line-height: 1.3;
 }
-/* Eyecatch category themes */
-.eyecatch-learning { background: linear-gradient(135deg, #059669, #047857); }
-.eyecatch-coaching { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
-.eyecatch-otoku    { background: linear-gradient(135deg, #d97706, #b45309); }
-.eyecatch-career   { background: linear-gradient(135deg, #dc2626, #b91c1c); }
-.eyecatch-other    { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
-.article-card-accent { height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
-.article-card-body { padding: 22px; }
+/* Category icon colors */
+.eyecatch-learning { background: linear-gradient(160deg, #059669, #047857); }
+.eyecatch-coaching { background: linear-gradient(160deg, #7c3aed, #6d28d9); }
+.eyecatch-otoku    { background: linear-gradient(160deg, #d97706, #b45309); }
+.eyecatch-career   { background: linear-gradient(160deg, #dc2626, #b91c1c); }
+.eyecatch-other    { background: linear-gradient(160deg, #2563eb, #1d4ed8); }
+.article-card-body { padding: 14px 18px; flex: 1; min-width: 0; }
 
 /* Review hero image */
 .review-hero-img {
@@ -749,57 +741,7 @@ img { max-width: 100%; height: auto; }
     </div>
     <div class="hero-cta">
       <a href="#articlesGrid" class="btn-hero-cta">人気記事から読む ↓</a>
-    
-  <div class="article-card" data-cat="other">
-    <img src="/articles/rarejob-review/ogp.png" alt="" class="article-card-img">
-    <div class="article-card-accent"></div>
-    <div class="article-card-body">
-      <span class="article-category">サービスレビュー</span>
-      <h3><a href="/articles/rarejob-review/">レアジョブ英会話の評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
-      <p class="article-card-excerpt">レアジョブ英会話の評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額1,430円〜〜利用可能。...</p>
     </div>
-  </div>
-
-  <div class="article-card" data-cat="other">
-    <img src="/articles/italki-review/ogp.png" alt="" class="article-card-img">
-    <div class="article-card-accent"></div>
-    <div class="article-card-body">
-      <span class="article-category">サービスレビュー</span>
-      <h3><a href="/articles/italki-review/">italki（アイトーキー）の評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
-      <p class="article-card-excerpt">italki（アイトーキー）の評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。1レッスン1,00...</p>
-    </div>
-  </div>
-
-  <div class="article-card" data-cat="other">
-    <img src="/articles/studysapuri-english-review/ogp.png" alt="" class="article-card-img">
-    <div class="article-card-accent"></div>
-    <div class="article-card-body">
-      <span class="article-category">サービスレビュー</span>
-      <h3><a href="/articles/studysapuri-english-review/">スタディサプリENGLISHの評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
-      <p class="article-card-excerpt">スタディサプリENGLISHの評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額2,178円〜...</p>
-    </div>
-  </div>
-
-  <div class="article-card" data-cat="other">
-    <img src="/articles/nova-review/ogp.png" alt="" class="article-card-img">
-    <div class="article-card-accent"></div>
-    <div class="article-card-body">
-      <span class="article-category">サービスレビュー</span>
-      <h3><a href="/articles/nova-review/">駅前留学NOVAの評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
-      <p class="article-card-excerpt">駅前留学NOVAの評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額5,500円〜〜利用可能。...</p>
-    </div>
-  </div>
-
-  <div class="article-card" data-cat="other">
-    <img src="/articles/esports-eikaiwa-review/ogp.png" alt="" class="article-card-img">
-    <div class="article-card-accent"></div>
-    <div class="article-card-body">
-      <span class="article-category">サービスレビュー</span>
-      <h3><a href="/articles/esports-eikaiwa-review/">eスポーツ英会話の評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
-      <p class="article-card-excerpt">eスポーツ英会話の評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額4,980円〜〜利用可能。...</p>
-    </div>
-  </div>
-</div>
   </div>
 </section>
 <div class="container">
@@ -812,6 +754,51 @@ img { max-width: 100%; height: auto; }
     <button class="filter-tab" data-cat="other" onclick="applyArticleFilter(this)">その他<span class="filter-count">14</span></button>
   </nav>
   <div class="articles-grid" id="articlesGrid">
+  <div class="article-card" data-cat="other">
+    <img src="/articles/rarejob-review/ogp.png" alt="" class="article-card-img">
+    <div class="article-card-accent"></div>
+    <div class="article-card-body">
+      <span class="article-category">サービスレビュー</span>
+      <h3><a href="/articles/rarejob-review/">レアジョブ英会話の評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
+      <p class="article-card-excerpt">レアジョブ英会話の評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額1,430円〜〜利用可能。</p>
+    </div>
+  </div>
+  <div class="article-card" data-cat="other">
+    <img src="/articles/italki-review/ogp.png" alt="" class="article-card-img">
+    <div class="article-card-accent"></div>
+    <div class="article-card-body">
+      <span class="article-category">サービスレビュー</span>
+      <h3><a href="/articles/italki-review/">italki（アイトーキー）の評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
+      <p class="article-card-excerpt">italki（アイトーキー）の評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。1レッスン1,000円〜〜利用可能。</p>
+    </div>
+  </div>
+  <div class="article-card" data-cat="other">
+    <img src="/articles/studysapuri-english-review/ogp.png" alt="" class="article-card-img">
+    <div class="article-card-accent"></div>
+    <div class="article-card-body">
+      <span class="article-category">サービスレビュー</span>
+      <h3><a href="/articles/studysapuri-english-review/">スタディサプリENGLISHの評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
+      <p class="article-card-excerpt">スタディサプリENGLISHの評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額2,178円〜利用可能。</p>
+    </div>
+  </div>
+  <div class="article-card" data-cat="other">
+    <img src="/articles/nova-review/ogp.png" alt="" class="article-card-img">
+    <div class="article-card-accent"></div>
+    <div class="article-card-body">
+      <span class="article-category">サービスレビュー</span>
+      <h3><a href="/articles/nova-review/">駅前留学NOVAの評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
+      <p class="article-card-excerpt">駅前留学NOVAの評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額5,500円〜〜利用可能。</p>
+    </div>
+  </div>
+  <div class="article-card" data-cat="other">
+    <img src="/articles/esports-eikaiwa-review/ogp.png" alt="" class="article-card-img">
+    <div class="article-card-accent"></div>
+    <div class="article-card-body">
+      <span class="article-category">サービスレビュー</span>
+      <h3><a href="/articles/esports-eikaiwa-review/">eスポーツ英会話の評判・口コミは？【特徴・料金・デメリットを徹底解説】</a></h3>
+      <p class="article-card-excerpt">eスポーツ英会話の評判・料金・特徴を詳しく解説。おすすめな人・向かない人も正直にレビュー。月額4,980円〜〜利用可能。</p>
+    </div>
+  </div>
   <div class="article-card" data-cat="learning">
     <img src="/articles/online-eikaiwa-not-continue-reasons/ogp.png" alt="" class="article-card-img">
     <div class="article-card-accent"></div>
@@ -1264,15 +1251,21 @@ function applyArticleFilter(btn) {
   document.querySelectorAll('.article-card').forEach(function(card) {
     var cat = card.dataset.cat || 'other';
     var theme = THEMES[cat] || THEMES['other'];
-    var img = card.querySelector('.article-card-img');
-    if (img) {
-      var ec = document.createElement('div');
-      ec.className = 'article-card-eyecatch ' + theme.cls;
-      ec.innerHTML = '<span class="eyecatch-emoji">' + theme.emoji + '</span><span class="eyecatch-label">' + theme.label + '</span>';
-      img.parentNode.replaceChild(ec, img);
-    }
     var body = card.querySelector('.article-card-body');
+    // Remove old img / accent elements
+    var img = card.querySelector('.article-card-img');
+    var accent = card.querySelector('.article-card-accent');
+    if (img) img.remove();
+    if (accent) accent.remove();
+    // Insert left-side icon before body
+    if (body) {
+      var icon = document.createElement('div');
+      icon.className = 'card-icon ' + theme.cls;
+      icon.innerHTML = '<span>' + theme.emoji + '</span><span class="card-icon-label">' + theme.label + '</span>';
+      card.insertBefore(icon, body);
+    }
     if (!body) return;
+    // Add meta row (date + read time)
     var link = card.querySelector('a[href]');
     var slug = '';
     if (link) {
@@ -1295,6 +1288,19 @@ function applyArticleFilter(btn) {
     html += '</div>';
     body.insertAdjacentHTML('beforeend', html);
   });
+  // Dynamic filter counts
+  document.querySelectorAll('.filter-tab[data-cat]').forEach(function(tab) {
+    var cat = tab.dataset.cat;
+    var countEl = tab.querySelector('.filter-count');
+    if (!countEl) return;
+    var count = cat === 'all'
+      ? document.querySelectorAll('#articlesGrid .article-card').length
+      : document.querySelectorAll('#articlesGrid .article-card[data-cat="' + cat + '"]').length;
+    countEl.textContent = count;
+  });
+  // Update hero badge count
+  var heroBadge = document.querySelector('.hero-badge strong');
+  if (heroBadge) heroBadge.textContent = document.querySelectorAll('#articlesGrid .article-card').length;
 })();
 </script>
 </body>
