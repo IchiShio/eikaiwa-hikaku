@@ -408,7 +408,8 @@ affiliate-forge の `content_gen.py`（Claude API）が生成するコンテン�
 
 ### 記事トピック管理
 
-- トピック定義: `data/article_topics.json`（10件・4カテゴリ）
+- トピック定義: `data/article_topics.json`（20件・4カテゴリ、2026-02-28時点）
+- SEOキーワード調査メモ: `data/seo-research.md`（Ahrefs調査結果・未対応キーワード一覧）
 - Claude API ラッパー: `tools/content_gen.py`（claude-sonnet-4-6 使用）
 - APIキー: `.env` の `ANTHROPIC_API_KEY`（ソースコードに書かない）
 - 生成先: `articles/{slug}/index.html`（sitemap.xml も自動更新）
