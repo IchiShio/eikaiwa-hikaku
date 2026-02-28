@@ -165,7 +165,7 @@ def append_to_questions_js(new_questions):
     if before and not before.endswith(","):
         before += ","
 
-    new_lines = "\n".join(format_question_js(q) for q in new_questions)
+    new_lines = ",\n".join(format_question_js(q) for q in new_questions)
     new_content = before + "\n" + new_lines + "\n];\n"
 
     QUESTIONS_JS.write_text(new_content, encoding="utf-8")
