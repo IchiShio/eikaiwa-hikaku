@@ -108,8 +108,8 @@ def build_prompt(count, lv1, lv2, lv3, lv4, lv5, existing_texts, axis_only=None)
     "axis": "speed | reduction | vocab | context | distractor のいずれか",
     "text": "英語音声スクリプト（ネイティブの自然な発話）",
     "ja": "日本語仮訳（短く自然に）",
-    "answer": "何をしている/言っている場面かの日本語説明（15〜25字）",
-    "choices": ["正解", "誤答1", "誤答2", "誤答3", "誤答4"],
+    "answer": "choices[0] と完全に同じ文字列（コピペすること）",
+    "choices": ["正解（15〜25字の日本語）", "誤答1", "誤答2", "誤答3", "誤答4"],
     "expl": "なぜ正解なのかの日本語解説（1〜2文）",
     "kp": ["聴き取りのカギになるフレーズ1〜2個"]
   }}
@@ -119,7 +119,8 @@ def build_prompt(count, lv1, lv2, lv3, lv4, lv5, existing_texts, axis_only=None)
 - text はネイティブが実際に使う自然な英語（略語・短縮形OK）
 - axis の特性を text と choices の両方に反映させること
 - choices は正解が1つ、残り4つは紛らわしい誤答
-- choices の順序はランダムに（正解を先頭にしない）
+- **answer は必ず choices[0] と完全に一致させること**（システムが文字列一致で正解判定するため）
+- choices[0] に正解を入れる（表示時にJSがシャッフルするためユーザーには先頭に見えない）
 - 既存テーマとの重複を避けること（テーマ例: 交通・飲食店・職場・家庭・天気・ショッピング・健康）
 - JSON のみ出力（説明文・コードブロック記号不要）
 

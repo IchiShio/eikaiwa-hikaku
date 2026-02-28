@@ -62,6 +62,7 @@ def load_staging():
 
     # バリデーション
     errors = []
+    auto_fixed = []
     for i, q in enumerate(data):
         missing = REQUIRED_FIELDS - set(q.keys())
         if missing:
@@ -72,6 +73,19 @@ def load_staging():
             errors.append(f"  [{i}] choices は5要素のリストが必要")
         if not isinstance(q.get("kp"), list) or len(q["kp"]) == 0:
             errors.append(f"  [{i}] kp は1要素以上のリストが必要")
+        # answer が choices に存在するか確認（最重要）
+        choices = q.get("choices", [])
+        if isinstance(choices, list) and len(choices) > 0:
+            if q.get("answer") not in choices:
+                # choices[0] で自動補正（正解は常に choices[0] として生成される仕様）
+                original = q.get("answer", "")
+                q["answer"] = choices[0]
+                auto_fixed.append(f"  [{i}] answer を自動補正: \"{original}\" → \"{choices[0]}\"")
+
+    if auto_fixed:
+        print("WARNING: answer が choices に存在しないため自動補正しました:")
+        for msg in auto_fixed:
+            print(msg)
 
     if errors:
         print("ERROR: バリデーションエラー:")
