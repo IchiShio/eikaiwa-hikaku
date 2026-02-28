@@ -73,17 +73,25 @@ def load_staging():
             errors.append(f"  [{i}] choices は5要素のリストが必要")
         if not isinstance(q.get("kp"), list) or len(q["kp"]) == 0:
             errors.append(f"  [{i}] kp は1要素以上のリストが必要")
-        # answer が choices に存在するか確認（最重要）
+        # answer === choices[0] を確認（最重要）
+        # 設計: 正解は常に choices[0]。JS が表示時にシャッフルするため順番は問題なし。
         choices = q.get("choices", [])
         if isinstance(choices, list) and len(choices) > 0:
-            if q.get("answer") not in choices:
-                # choices[0] で自動補正（正解は常に choices[0] として生成される仕様）
+            if q.get("answer") != choices[0]:
                 original = q.get("answer", "")
-                q["answer"] = choices[0]
-                auto_fixed.append(f"  [{i}] answer を自動補正: \"{original}\" → \"{choices[0]}\"")
+                # answer が choices 内に存在するならその位置と choices[0] をスワップ
+                if original in choices:
+                    idx = choices.index(original)
+                    choices[0], choices[idx] = choices[idx], choices[0]
+                    q["choices"] = choices
+                    auto_fixed.append(f"  [{i}] choices をスワップ: choices[0]↔choices[{idx}]（answer=\"{original}\"）")
+                else:
+                    # choices に存在しない場合は choices[0] に上書き
+                    q["answer"] = choices[0]
+                    auto_fixed.append(f"  [{i}] answer を自動補正: \"{original}\" → \"{choices[0]}\"")
 
     if auto_fixed:
-        print("WARNING: answer が choices に存在しないため自動補正しました:")
+        print("WARNING: answer/choices 不整合を自動補正しました:")
         for msg in auto_fixed:
             print(msg)
 
