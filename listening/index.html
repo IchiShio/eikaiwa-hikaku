@@ -2668,9 +2668,9 @@ const EG_SKIP_KEY  = 'listenup_gate_skipped';
 // Google フォームへの登録データ送信（fire-and-forget）
 function submitRegistration(email, ageGroup, toeicScore) {
   const body = new URLSearchParams({
-    'entry.1785537101': email,
-    'entry.1571003064': ageGroup,
-    'entry.322586809':  toeicScore
+    'entry.4758104':    email,
+    'entry.2109990350': ageGroup,
+    'entry.778801164':  toeicScore
   });
   fetch('https://docs.google.com/forms/d/e/1FAIpQLSca5r79E7e18Z0gHb10RjkLoyPgf3ZmioxWpTQWQ8BksBPthw/formResponse', {
     method: 'POST', mode: 'no-cors',
