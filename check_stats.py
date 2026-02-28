@@ -88,7 +88,11 @@ def load_citation_keywords() -> list[tuple[str, str, str]]:
 def check_citation_links(
     html_path: Path, citation_entries: list[tuple[str, str, str]]
 ) -> list[tuple[str, str]]:
-    """citation_db に登録済みのソースが <a> リンクなしで使われている箇所を検出する"""
+    """citation_db に登録済みのソースが <a> リンクなしで使われている箇所を検出する。
+
+    ・<script>/<style> ブロック内のマッチはスキップ
+    ・いずれか1件でもリンク済みなら「付与済み」と判断（過剰警告防止）
+    """
     text = html_path.read_text(encoding="utf-8")
     flagged: set[str] = set()
     hits = []
@@ -96,17 +100,27 @@ def check_citation_links(
         if entry_id in flagged:
             continue
         try:
-            m = re.search(kw_pattern, text)
-            if not m:
-                continue
-            # マッチ位置が既に <a> タグ内かチェック（簡易判定）
-            before = text[: m.start()]
-            last_open_a = before.rfind("<a ")
-            last_close_a = before.rfind("</a>")
-            if last_open_a > last_close_a:
-                continue  # 既にリンク済み
-            flagged.add(entry_id)
-            hits.append((label, m.group(0)[:60]))
+            linked = False
+            first_unlinked: str | None = None
+            for m in re.finditer(kw_pattern, text):
+                before = text[: m.start()]
+                matched = m.group(0)
+                # <script>/<style> ブロック内はスキップ
+                lo_s = max(before.rfind("<script"), before.rfind("<style"))
+                lc_s = max(before.rfind("</script>"), before.rfind("</style>"))
+                if lo_s > lc_s:
+                    continue
+                # <a> タグ内（前の位置 or マッチ文字列内）ならリンク済みと判断
+                lo_a = before.rfind("<a ")
+                lc_a = before.rfind("</a>")
+                if lo_a > lc_a or "<a " in matched:
+                    linked = True
+                    break
+                if first_unlinked is None:
+                    first_unlinked = matched[:60]
+            if not linked and first_unlinked is not None:
+                flagged.add(entry_id)
+                hits.append((label, first_unlinked))
         except re.error:
             pass
     return hits

@@ -3011,8 +3011,7 @@ document.addEventListener('DOMContentLoaded', function() {
         registration_streak: profile.registration_streak
       });
     } catch(_) {}
-    // GA4: メールゲート登録完了イベント
-    gtag('event', 'email_gate_register', { age_group: ageGroup, toeic_score: toeicScore });
+    try { gtag('event', 'email_gate_register', { age_group: ageGroup, toeic_score: toeicScore }); } catch(_) {}
     // Firestore: 匿名UIDにメールを紐付け
     saveUserToFirestore(email);
     btn.textContent = '✓ 登録完了！続きをどうぞ';
@@ -3072,7 +3071,7 @@ document.addEventListener('DOMContentLoaded', function() {
           registration_streak: profile.registration_streak
         });
       } catch(_) {}
-      gtag('event', 'email_gate_register', { age_group: ageGroup, toeic_score: toeicScore, source: 'lp_bottom' });
+      try { gtag('event', 'email_gate_register', { age_group: ageGroup, toeic_score: toeicScore, source: 'lp_bottom' }); } catch(_) {}
       submitBtn.textContent = '✓ 登録完了！練習を開始します...';
       setTimeout(() => startFreeQuiz(), 800);
     });
