@@ -2665,8 +2665,19 @@ function toggleTranscript() {
 const EG_TRIGGER   = 5;
 const EG_REG_KEY   = 'listenup_registered';
 const EG_SKIP_KEY  = 'listenup_gate_skipped';
-// ★ BeehiivパブリケーションID（設定が必要）
-const BEEHIIV_PUB_ID = 'pub_9b2ae59d-7a25-49f8-be58-793c82e4a498';
+// Google フォームへの登録データ送信（fire-and-forget）
+function submitRegistration(email, ageGroup, toeicScore) {
+  const body = new URLSearchParams({
+    'entry.1785537101': email,
+    'entry.1571003064': ageGroup,
+    'entry.322586809':  toeicScore
+  });
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSca5r79E7e18Z0gHb10RjkLoyPgf3ZmioxWpTQWQ8BksBPthw/formResponse', {
+    method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString()
+  }).catch(() => {});
+}
 
 function isRegistered() {
   return !!localStorage.getItem(EG_REG_KEY);
@@ -2977,13 +2988,7 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.disabled = true;
     btn.textContent = '登録中...';
     errorEl.style.display = 'none';
-    // Beehiiv: fire-and-forget（応答を待たない）
-    { const _c = new AbortController(); setTimeout(() => _c.abort(), 8000);
-      fetch(`https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: _c.signal,
-        body: JSON.stringify({ email, referring_site: 'native-real.com/listening',
-          custom_fields: [{ name: 'age_group', value: ageGroup }, { name: 'toeic_score', value: toeicScore }] })
-      }).catch(() => {}); }
+    submitRegistration(email, ageGroup, toeicScore);
     localStorage.setItem(EG_REG_KEY, email);
     // プロフィールをlocalStorageに保存
     try {
@@ -3049,13 +3054,7 @@ document.addEventListener('DOMContentLoaded', function() {
       errorEl.style.display = 'none';
       submitBtn.disabled = true;
       submitBtn.textContent = '登録中...';
-      // Beehiiv: fire-and-forget（応答を待たない）
-      { const _c = new AbortController(); setTimeout(() => _c.abort(), 8000);
-        fetch(`https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`, {
-          method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: _c.signal,
-          body: JSON.stringify({ email, referring_site: 'native-real.com/listening/lp',
-            custom_fields: [{ name: 'age_group', value: ageGroup }, { name: 'toeic_score', value: toeicScore }] })
-        }).catch(() => {}); }
+      submitRegistration(email, ageGroup, toeicScore);
       localStorage.setItem(EG_REG_KEY, email);
       try {
         const _p = loadProgress();
