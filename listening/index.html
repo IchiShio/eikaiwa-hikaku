@@ -2215,6 +2215,8 @@ auth.onAuthStateChanged(function(user) {
     if (!user.isAnonymous && user.email) {
       // メール認証済み → 登録状態を復元（デバイスをまたいで機能）
       localStorage.setItem(EG_REG_KEY, user.email);
+      // Firestore から SRS・進捗を非同期ロード（beginQuiz で await）
+      _firestoreLoadPromise = loadFromFirestore();
     }
   } else {
     auth.signInAnonymously().catch(err => console.warn('[Firebase] anon auth error:', err));
@@ -2245,6 +2247,36 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
       .catch(function(err) {
         console.warn('[Firebase] signInWithEmailLink error:', err);
       });
+  }
+}
+
+async function loadFromFirestore() {
+  if (!firebaseUid) return;
+  try {
+    const doc = await db.collection('users').doc(firebaseUid).get();
+    if (!doc.exists) return;
+    const data = doc.data();
+
+    // srsItems: Firestore を正として localStorage に上書き
+    if (data.srsItems && typeof data.srsItems === 'object') {
+      srsItems = data.srsItems;
+      saveSrs();
+    }
+
+    // progress: totalAnswered が多い方（Firestore or localStorage）を採用
+    const local = loadProgress();
+    if ((data.totalAnswered || 0) > (local.totalAnswered || 0)) {
+      const merged = {
+        ...local,
+        totalAnswered: data.totalAnswered || 0,
+        totalCorrect:  data.totalCorrect  || 0,
+        axisStats:     data.axisStats     || local.axisStats || {},
+      };
+      saveProgress(merged);
+      showReturningStats(); // 統計パネルを再描画
+    }
+  } catch (err) {
+    console.warn('[Firebase] read error:', err);
   }
 }
 
@@ -2433,6 +2465,7 @@ let streak    = 0;
 let answered           = false;
 let srsItems           = {}; // { "q042": { interval, reps, dueDate } }
 let reviewQueue        = []; // 本日 due の SRS 問題（セッション開始時に確定）
+let _firestoreLoadPromise = null; // Firestore 非同期読み込みの Promise（beginQuiz で await）
 let isPlaying          = false;
 
 // ─────────────────────────────────────────
@@ -2450,7 +2483,16 @@ function scrollToDiffAndUpgrade() {
 // ─────────────────────────────────────────
 // START
 // ─────────────────────────────────────────
-function beginQuiz() {
+async function beginQuiz() {
+  // Firestore 読み込みを待機（最大2秒。未ログインや読み込み済みは即通過）
+  if (_firestoreLoadPromise) {
+    await Promise.race([
+      _firestoreLoadPromise,
+      new Promise(r => setTimeout(r, 2000))
+    ]);
+    _firestoreLoadPromise = null; // 2回目以降は即通過
+  }
+
   // 連続学習ストリーク更新
   let p = loadProgress();
   p = updateDailyStreakInProgress(p);
@@ -2459,7 +2501,7 @@ function beginQuiz() {
   score = 0; total = 0; streak = 0;
   currentLevel = 2; correctStreak = 0;
   recoveryMode = false; postRecoveryLevel = -1; playCount = 0;
-  srsItems = loadSrs(); // localStorage から復元（Step3でFirestoreに差し替え）
+  srsItems = loadSrs(); // Firestore sync 済み or localStorage フォールバック
   initPools();
   document.getElementById('startScreen').classList.remove('active');
   document.getElementById('quizScreen').classList.add('active');
