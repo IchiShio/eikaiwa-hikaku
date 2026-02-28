@@ -266,6 +266,7 @@ a:hover { color: var(--primary-light); }
         <li>メール登録済みユーザー：匿名IDにメールアドレスを紐付けて保存</li>
       </ul>
       <p>保存データはご本人の匿名IDからのみアクセス可能です。Firebaseのプライバシーポリシーは <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">こちら</a> をご確認ください。</p>
+      <p>なお、FirebaseはGoogle LLC（米国）のサービスであり、個人情報の保護に関する法律（個人情報保護法）第28条に基づく外国への第三者提供に該当します。本サービスご利用の際の同意は、上記の外国提供も含むものとします。Google LLCは米国プライバシーシールド（Privacy Shield）失効後もStandard Contractual Clauses（SCC）等の適切な保護措置を講じています。</p>
       <p>学習データの削除を希望される場合は <a href="mailto:ichieigo7@gmail.com">ichieigo7@gmail.com</a> までご連絡ください。</p>
 
       <p><strong>4-4. Google Analytics 4（アクセス解析）</strong></p>
@@ -280,31 +281,74 @@ a:hover { color: var(--primary-light); }
     </div>
 
     <div class="policy-section">
-      <h2>6. Cookieおよびアクセス解析</h2>
-      <p>本サイトでは、以下の目的でCookieおよび類似技術を使用することがあります。</p>
+      <h2>6. データ保持期間</h2>
+      <p>収集した情報の保持期間は以下のとおりです。</p>
       <ul>
-        <li>Google Analytics（アクセス解析）：サイトの利用状況を把握するために使用します。収集されるデータは匿名化されており、個人を特定するものではありません。</li>
-        <li>アフィリエイトプログラム（A8.net 等）：成果計測のためのトラッキングCookieが使用される場合があります。</li>
+        <li>メールアドレス（Beehiiv）：配信停止のご連絡から30日以内に削除対応いたします。Beehiiv側の標準保持期間についてはBeehiivのプライバシーポリシーをご確認ください。</li>
+        <li>Firebase学習データ：削除申請（<a href="mailto:ichieigo7@gmail.com">ichieigo7@gmail.com</a>）から30日以内に削除します。</li>
+        <li>Google Analytics 4データ：Google の標準設定（最大14ヶ月）に準じます。</li>
+        <li>ローカルストレージ（端末内）：ブラウザのキャッシュ・ストレージをクリアするまで保持されます。</li>
       </ul>
     </div>
 
     <div class="policy-section">
-      <h2>7. 個人情報の開示・訂正・削除</h2>
+      <h2>7. Cookie・外部送信および電気通信事業法対応</h2>
+      <p>本サイトでは、以下の目的でCookieおよび類似技術を使用し、一部の情報を外部サービスに送信しています（電気通信事業法第27条の12に基づく外部送信規律の開示）。</p>
+      <table style="width:100%;border-collapse:collapse;font-size:0.88rem;margin-top:12px">
+        <thead>
+          <tr style="background:var(--bg-gray)">
+            <th style="padding:10px;border:1px solid var(--border);text-align:left">送信先</th>
+            <th style="padding:10px;border:1px solid var(--border);text-align:left">送信される情報</th>
+            <th style="padding:10px;border:1px solid var(--border);text-align:left">利用目的</th>
+            <th style="padding:10px;border:1px solid var(--border);text-align:left">オプトアウト</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px;border:1px solid var(--border)">Google Analytics 4（Google LLC）</td>
+            <td style="padding:10px;border:1px solid var(--border)">ページURL・デバイス情報・地域情報（匿名）</td>
+            <td style="padding:10px;border:1px solid var(--border)">アクセス解析・サービス改善</td>
+            <td style="padding:10px;border:1px solid var(--border)"><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">オプトアウトアドオン</a></td>
+          </tr>
+          <tr>
+            <td style="padding:10px;border:1px solid var(--border)">Google Tag Manager（Google LLC）</td>
+            <td style="padding:10px;border:1px solid var(--border)">タグ管理のためのスクリプト読み込み</td>
+            <td style="padding:10px;border:1px solid var(--border)">各種計測タグの管理</td>
+            <td style="padding:10px;border:1px solid var(--border)">—</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;border:1px solid var(--border)">Firebase / Firestore（Google LLC）</td>
+            <td style="padding:10px;border:1px solid var(--border)">匿名ID・学習行動データ</td>
+            <td style="padding:10px;border:1px solid var(--border)">学習データの保存・分析</td>
+            <td style="padding:10px;border:1px solid var(--border)">削除申請: <a href="mailto:ichieigo7@gmail.com">メール</a></td>
+          </tr>
+          <tr>
+            <td style="padding:10px;border:1px solid var(--border)">A8.net（株式会社ファンコミュニケーションズ）</td>
+            <td style="padding:10px;border:1px solid var(--border)">クリック情報・Cookie</td>
+            <td style="padding:10px;border:1px solid var(--border)">アフィリエイト成果計測</td>
+            <td style="padding:10px;border:1px solid var(--border)">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="policy-section">
+      <h2>8. 個人情報の開示・訂正・削除</h2>
       <p>ご自身の個人情報の開示、訂正、または削除を希望される方は、<a href="mailto:ichieigo7@gmail.com">ichieigo7@gmail.com</a> までご連絡ください。本人確認のうえ、合理的な期間内に対応いたします。</p>
     </div>
 
     <div class="policy-section">
-      <h2>8. 個人情報の安全管理</h2>
+      <h2>9. 個人情報の安全管理</h2>
       <p>収集した個人情報の漏えい・滅失・毀損を防ぐため、適切な安全管理措置を講じます。</p>
     </div>
 
     <div class="policy-section">
-      <h2>9. ポリシーの変更</h2>
+      <h2>10. ポリシーの変更</h2>
       <p>本ポリシーは、法令改正やサービス変更に伴い予告なく変更する場合があります。変更後のポリシーはこのページに掲載した時点で効力を生じます。</p>
     </div>
 
     <div class="policy-section">
-      <h2>10. お問い合わせ</h2>
+      <h2>11. お問い合わせ</h2>
       <p>本ポリシーに関するお問い合わせは、下記までご連絡ください。</p>
       <ul>
         <li>運営者：いち英語</li>
