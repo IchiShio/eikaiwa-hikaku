@@ -2432,6 +2432,7 @@ let total     = 0;
 let streak    = 0;
 let answered           = false;
 let srsItems           = {}; // { "q042": { interval, reps, dueDate } }
+let reviewQueue        = []; // 本日 due の SRS 問題（セッション開始時に確定）
 let isPlaying          = false;
 
 // ─────────────────────────────────────────
@@ -2494,6 +2495,8 @@ function goToStart() {
 // ─────────────────────────────────────────
 // POOLS (Adaptive)
 // ─────────────────────────────────────────
+const MAX_REVIEWS_PER_SESSION = 5;
+
 function initPools() {
   pools = {
     0: shuffle(DATA.filter(q => q.diff === 'lv1')),
@@ -2502,12 +2505,38 @@ function initPools() {
     3: shuffle(DATA.filter(q => q.diff === 'lv4')),
     4: shuffle(DATA.filter(q => q.diff === 'lv5'))
   };
+
+  // 本日 due の SRS 復習問題を最大5件キューに積む
+  const today = getToday();
+  const dueEntries = Object.entries(srsItems)
+    .filter(([, v]) => v.dueDate <= today)
+    .sort((a, b) => a[1].dueDate.localeCompare(b[1].dueDate)) // 古い順（より期限切れのものを優先）
+    .slice(0, MAX_REVIEWS_PER_SESSION);
+
+  const dueIdSet = new Set(dueEntries.map(([id]) => id));
+
+  reviewQueue = dueEntries
+    .map(([id]) => {
+      const q = DATA.find(q => getSrsId(q) === id);
+      return q ? { ...q, isReview: true } : null;
+    })
+    .filter(Boolean);
+
+  // 通常プールから重複を除去（復習キューと被らないように）
+  if (dueIdSet.size > 0) {
+    for (let i = 0; i <= 4; i++) {
+      pools[i] = pools[i].filter(q => !dueIdSet.has(getSrsId(q)));
+    }
+  }
 }
 
 // ─────────────────────────────────────────
 // PICK QUESTION (axis-weighted selection)
 // ─────────────────────────────────────────
 function pickQuestion() {
+  // ⓪ SRS 復習問題を最優先（Anki 方式：復習を先に消化してから新問題へ）
+  if (reviewQueue.length > 0) return reviewQueue.shift();
+
   // プールが空なら再初期化
   if (!pools[currentLevel] || !pools[currentLevel].length) {
     pools[currentLevel] = shuffle(DATA.filter(q => q.diff === LEVELS[currentLevel]));
@@ -2581,10 +2610,14 @@ function render() {
   document.getElementById('waveform').classList.remove('playing');
   document.getElementById('audioCard').classList.remove('is-playing');
 
-  // アクセントバッジ
+  // アクセントバッジ / 復習バッジ
   const qNum = parseInt((current.audio || '').match(/q(\d+)\.mp3/)?.[1] || '1');
   const accent = ACCENT_INFO[(qNum - 1) % ACCENT_INFO.length];
-  document.getElementById('accentBadge').textContent = `${accent.flag} ${accent.label}`;
+  const accentBadge = document.getElementById('accentBadge');
+  accentBadge.textContent = current.isReview
+    ? `🔁 復習 · ${accent.flag} ${accent.label}`
+    : `${accent.flag} ${accent.label}`;
+  accentBadge.style.background = current.isReview ? 'rgba(245,166,35,0.18)' : '';
 
   // ヒントパネル
   const hintLevel = current.hintLevel || 0;
