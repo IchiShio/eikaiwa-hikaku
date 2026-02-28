@@ -2177,9 +2177,48 @@ const db   = firebase.firestore();
 const auth = firebase.auth();
 let firebaseUid = null;
 
-auth.signInAnonymously()
-  .then(result => { firebaseUid = result.user.uid; })
-  .catch(err => console.warn('[Firebase] auth error:', err));
+const EG_SIGNIN_EMAIL_KEY    = 'emailForSignIn';
+const EG_PENDING_PROFILE_KEY = 'pendingProfile';
+
+// 認証状態の監視（メール認証済みユーザーの復元 & 匿名ログイン）
+auth.onAuthStateChanged(function(user) {
+  if (user) {
+    firebaseUid = user.uid;
+    if (!user.isAnonymous && user.email) {
+      // メール認証済み → 登録状態を復元（デバイスをまたいで機能）
+      localStorage.setItem(EG_REG_KEY, user.email);
+    }
+  } else {
+    auth.signInAnonymously().catch(err => console.warn('[Firebase] anon auth error:', err));
+  }
+});
+
+// メールリンクからの帰着を検出して認証完了
+if (auth.isSignInWithEmailLink(window.location.href)) {
+  let _signinEmail = localStorage.getItem(EG_SIGNIN_EMAIL_KEY);
+  if (!_signinEmail) {
+    _signinEmail = window.prompt('確認のためメールアドレスを入力してください');
+  }
+  if (_signinEmail) {
+    auth.signInWithEmailLink(_signinEmail, window.location.href)
+      .then(function(result) {
+        firebaseUid = result.user.uid;
+        window.history.replaceState({}, document.title, '/listening/');
+        localStorage.setItem(EG_REG_KEY, _signinEmail);
+        localStorage.removeItem(EG_SIGNIN_EMAIL_KEY);
+        const _pending = localStorage.getItem(EG_PENDING_PROFILE_KEY);
+        if (_pending) {
+          localStorage.setItem('listenup_profile', _pending);
+          localStorage.removeItem(EG_PENDING_PROFILE_KEY);
+        }
+        saveUserToFirestore(_signinEmail);
+        startFreeQuiz();
+      })
+      .catch(function(err) {
+        console.warn('[Firebase] signInWithEmailLink error:', err);
+      });
+  }
+}
 
 async function saveUserToFirestore(email) {
   if (!firebaseUid) return;
@@ -2986,36 +3025,37 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     btn.disabled = true;
-    btn.textContent = '登録中...';
+    btn.textContent = '送信中...';
     errorEl.style.display = 'none';
-    submitRegistration(email, ageGroup, toeicScore);
-    localStorage.setItem(EG_REG_KEY, email);
-    // プロフィールをlocalStorageに保存
+    localStorage.setItem(EG_SIGNIN_EMAIL_KEY, email);
     try {
       const _p = loadProgress();
-      const profile = {
-        age_group: ageGroup,
-        toeic_score: toeicScore,
+      const _profile = {
+        age_group: ageGroup, toeic_score: toeicScore,
         registration_accuracy: _p.totalAnswered > 0 ? Math.round(_p.totalCorrect / _p.totalAnswered * 100) : 0,
         registration_questions: _p.totalAnswered,
         registration_streak: _p.dailyStreak
       };
-      localStorage.setItem('listenup_profile', JSON.stringify(profile));
-      // GA4 ユーザープロパティ設定
-      gtag('set', 'user_properties', {
-        registered_user: 'true',
-        age_group: ageGroup,
-        toeic_score: toeicScore,
-        registration_accuracy: profile.registration_accuracy,
-        registration_questions: profile.registration_questions,
-        registration_streak: profile.registration_streak
-      });
+      localStorage.setItem(EG_PENDING_PROFILE_KEY, JSON.stringify(_profile));
+      localStorage.setItem('listenup_profile', JSON.stringify(_profile));
     } catch(_) {}
-    try { gtag('event', 'email_gate_register', { age_group: ageGroup, toeic_score: toeicScore }); } catch(_) {}
-    // Firestore: 匿名UIDにメールを紐付け
-    saveUserToFirestore(email);
-    btn.textContent = '✓ 登録完了！続きをどうぞ';
-    setTimeout(() => closeEmailGate(true), 900);
+    submitRegistration(email, ageGroup, toeicScore);
+    try {
+      await auth.sendSignInLinkToEmail(email, {
+        url: 'https://native-real.com/listening/',
+        handleCodeInApp: true
+      });
+      document.getElementById('egForm').style.display = 'none';
+      document.getElementById('egConsent').style.display = 'none';
+      document.getElementById('egEmailSent').style.display = 'block';
+      document.getElementById('egSentEmail').textContent = email;
+    } catch(err) {
+      btn.disabled = false;
+      btn.textContent = '登録して続ける →';
+      errorEl.textContent = 'メールの送信に失敗しました。もう一度お試しください。';
+      errorEl.style.display = 'block';
+      localStorage.removeItem(EG_SIGNIN_EMAIL_KEY);
+    }
   });
 
   // ── LP Bottom Email Form ──
@@ -3052,28 +3092,37 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       errorEl.style.display = 'none';
       submitBtn.disabled = true;
-      submitBtn.textContent = '登録中...';
-      submitRegistration(email, ageGroup, toeicScore);
-      localStorage.setItem(EG_REG_KEY, email);
+      submitBtn.textContent = '送信中...';
+      localStorage.setItem(EG_SIGNIN_EMAIL_KEY, email);
       try {
         const _p = loadProgress();
-        const profile = {
+        const _profile = {
           age_group: ageGroup, toeic_score: toeicScore,
           registration_accuracy: _p.totalAnswered > 0 ? Math.round(_p.totalCorrect / _p.totalAnswered * 100) : 0,
           registration_questions: _p.totalAnswered,
           registration_streak: _p.dailyStreak
         };
-        localStorage.setItem('listenup_profile', JSON.stringify(profile));
-        gtag('set', 'user_properties', {
-          registered_user: 'true', age_group: ageGroup, toeic_score: toeicScore,
-          registration_accuracy: profile.registration_accuracy,
-          registration_questions: profile.registration_questions,
-          registration_streak: profile.registration_streak
-        });
+        localStorage.setItem(EG_PENDING_PROFILE_KEY, JSON.stringify(_profile));
+        localStorage.setItem('listenup_profile', JSON.stringify(_profile));
       } catch(_) {}
-      try { gtag('event', 'email_gate_register', { age_group: ageGroup, toeic_score: toeicScore, source: 'lp_bottom' }); } catch(_) {}
-      submitBtn.textContent = '✓ 登録完了！練習を開始します...';
-      setTimeout(() => startFreeQuiz(), 800);
+      submitRegistration(email, ageGroup, toeicScore);
+      try {
+        await auth.sendSignInLinkToEmail(email, {
+          url: 'https://native-real.com/listening/',
+          handleCodeInApp: true
+        });
+        submitBtn.textContent = '📧 メールを送信しました';
+        errorEl.style.color = '#4ade80';
+        errorEl.textContent = email + ' に確認リンクを送りました。メール内のリンクをクリックすると練習が始まります。';
+        errorEl.style.display = 'block';
+      } catch(err) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '登録して練習を始める →';
+        errorEl.style.color = '#ffb347';
+        errorEl.textContent = 'メールの送信に失敗しました。もう一度お試しください。';
+        errorEl.style.display = 'block';
+        localStorage.removeItem(EG_SIGNIN_EMAIL_KEY);
+      }
     });
   })();
 
@@ -3199,7 +3248,13 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <button type="submit" class="eg-submit" id="egSubmit">登録して続ける →</button>
       </form>
-      <p class="eg-consent">「登録して続ける」を押すと、以下すべてに同意したものとみなします：<br>• 英語学習ニュースレターの受信（配信停止はいつでも可能）<br>• 学習データ（正解率・弱点分野・難易度進捗など）をFirebase（Google LLC）で管理・分析・サービス改善に利用<br>• 匿名化・統計処理した学習傾向データの第三者提供（個人を特定する情報は含みません）<br><a href="/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a> · <a href="/privacy/#third-party" target="_blank" rel="noopener">第三者提供について</a></p>
+      <p class="eg-consent" id="egConsent">「登録して続ける」を押すと、以下すべてに同意したものとみなします：<br>• 英語学習ニュースレターの受信（配信停止はいつでも可能）<br>• 学習データ（正解率・弱点分野・難易度進捗など）をFirebase（Google LLC）で管理・分析・サービス改善に利用<br>• 匿名化・統計処理した学習傾向データの第三者提供（個人を特定する情報は含みません）<br><a href="/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a> · <a href="/privacy/#third-party" target="_blank" rel="noopener">第三者提供について</a></p>
+      <div id="egEmailSent" style="display:none;text-align:center;padding:16px 0">
+        <div style="font-size:2.5rem;margin-bottom:12px">📧</div>
+        <p style="font-size:1.05rem;font-weight:700;margin-bottom:8px;color:#fff">メールを送信しました</p>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.75);margin-bottom:6px"><span id="egSentEmail" style="color:var(--gold)"></span> に確認リンクを送りました。</p>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.55)">メール内のリンクをクリックすると<br>練習が自動的に始まります。<br><br>届かない場合は迷惑メールフォルダをご確認ください。</p>
+      </div>
       <p class="eg-error" id="egError"></p>
       <button class="eg-skip" id="egSkip">今日はここまで（登録なしで続けるには明日また来てください）</button>
     </div>
