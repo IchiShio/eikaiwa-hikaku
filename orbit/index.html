@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Orbit — native-real.com</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;background:#020208;color:#ada9a0;font-family:'IBM Plex Mono',monospace}
+canvas{position:fixed;inset:0;z-index:0}
+.ui{position:fixed;inset:0;z-index:1;pointer-events:none;display:flex;flex-direction:column}
+.ui>*{pointer-events:auto}
+
+.top{display:flex;align-items:center;gap:10px;padding:8px 16px}
+.logo{font-size:7px;letter-spacing:4px;text-transform:uppercase;color:#2e2d3a}.logo b{color:#efd64c;font-weight:400}
+.sbox{display:flex;align-items:center;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:4px 10px;gap:4px;max-width:240px;flex:1}
+.sbox input{background:none;border:none;color:#ada9a0;font-family:'Fraunces',serif;font-size:16px;width:100%;outline:none}
+.sbox input::placeholder{color:#2e2d3a;font-style:italic}
+.sbox button{background:#efd64c;border:none;color:#020208;font-size:8px;padding:3px 8px;border-radius:3px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-weight:500}
+.pills{display:flex;gap:4px}
+.pill{font-size:8px;color:#2e2d3a;padding:2px 8px;border:1px solid rgba(255,255,255,0.03);border-radius:10px;cursor:pointer;transition:all .15s}
+.pill:hover{color:#efd64c;border-color:rgba(239,214,76,0.15)}
+
+.crumb{display:flex;align-items:center;gap:0;padding:0 16px;font-size:9px;overflow-x:auto;scrollbar-width:none}
+.crumb::-webkit-scrollbar{display:none}
+.crumb-i{color:#2e2d3a;cursor:pointer;padding:2px 6px;border-radius:4px;transition:color .12s;white-space:nowrap;flex-shrink:0}
+.crumb-i:hover{color:#efd64c}
+.crumb-i.on{color:#efd64c}
+.crumb-s{color:#1a1928;padding:0 2px;flex-shrink:0}
+
+.mid{flex:1;pointer-events:none}
+
+.bot{display:grid;grid-template-columns:1fr 230px;gap:20px;padding:0 20px 14px;align-items:end;background:linear-gradient(0deg,rgba(2,2,8,0.92) 40%,rgba(2,2,8,0.4) 80%,transparent 100%)}
+.meq{display:flex;align-items:center;flex-wrap:wrap;gap:0}
+.meq-b{text-align:center;padding:5px 12px;border-radius:5px}
+.meq-b.root{background:rgba(228,88,82,0.06)}.meq-b.prefix{background:rgba(58,196,186,0.06)}.meq-b.suffix{background:rgba(148,118,240,0.06)}
+.meq-t{font-size:14px;font-weight:500;color:#ada9a0}
+.meq-m{font-family:'Fraunces',serif;font-size:26px;font-weight:300;font-style:italic;line-height:1.1}
+.meq-b.root .meq-m{color:#e45852}.meq-b.prefix .meq-m{color:#3ac4ba}.meq-b.suffix .meq-m{color:#9476f0}
+.meq-ty{font-size:6px;letter-spacing:2px;text-transform:uppercase;color:#2e2d3a;margin-top:2px}
+.meq-op{font-family:'Fraunces',serif;font-size:18px;color:#2e2d3a;padding:0 3px;font-weight:300}
+
+.disc{font-size:10px;color:rgba(239,214,76,0.6);line-height:1.4;max-height:0;overflow:hidden;transition:all .3s;opacity:0;margin-top:4px}
+.disc.v{max-height:50px;opacity:1}
+.disc em{color:#efd64c;font-style:normal;font-weight:500}
+
+.info{text-align:right}
+.info-w{font-family:'Fraunces',serif;font-size:30px;font-weight:300;color:#efd64c;line-height:1}
+.info-r{display:flex;align-items:center;gap:6px;justify-content:flex-end;margin-top:3px}
+.info-ipa{font-size:11px;color:#2e2d3a}
+.spk{background:none;border:1px solid rgba(255,255,255,0.04);color:#efd64c;width:22px;height:22px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all .12s}
+.spk:hover{background:rgba(239,214,76,0.05);border-color:rgba(239,214,76,0.15)}
+.info-pos{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:#3ac4ba;margin-top:4px}
+.info-def{font-size:10px;color:#ada9a0;opacity:.6;line-height:1.4;margin-top:3px;max-width:230px;margin-left:auto}
+
+.sel{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.03);max-height:0;overflow:hidden;opacity:0;transition:all .25s ease}
+.sel.v{max-height:180px;opacity:1}
+.sel-top{display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.sel-w{font-family:'Fraunces',serif;font-size:18px;font-weight:300;color:#ada9a0;line-height:1}
+.sel-ipa{font-size:9px;color:#2e2d3a}
+.sel-pos{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:#3ac4ba;margin-top:2px}
+.sel-def{font-size:9px;color:#ada9a0;opacity:.55;line-height:1.3;margin-top:2px}
+.sel-go{font-size:9px;color:#efd64c;cursor:pointer;margin-top:5px;display:inline-block;border-bottom:1px dashed rgba(239,214,76,0.2);transition:opacity .12s}
+.sel-go:hover{opacity:.7}
+
+.legend{display:flex;gap:12px;font-size:7px;color:#2e2d3a;letter-spacing:1px;margin-top:6px;justify-content:flex-end}
+.legend i{display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:3px;vertical-align:middle}
+.legend .lr{background:#e4585d}.legend .lp{background:#3ac4ba}.legend .ls{background:#9476f0}
+
+@media(max-width:700px){.pills{display:none}.bot{grid-template-columns:1fr;gap:8px}.info{text-align:left}.info-r{justify-content:flex-start}.info-def{margin-left:0}.meq-m{font-size:20px}.sel-top{justify-content:flex-start}.legend{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="ui">
+  <div class="top">
+    <div class="logo">Word <b>Orbit</b></div>
+    <div class="sbox"><input id="si" placeholder="explore..."><button onclick="go()">go</button></div>
+    <div class="pills">
+      <span class="pill" onclick="go('predict')">predict</span>
+      <span class="pill" onclick="go('transport')">transport</span>
+      <span class="pill" onclick="go('biography')">biography</span>
+      <span class="pill" onclick="go('invisible')">invisible</span>
+      <span class="pill" onclick="go('construct')">construct</span>
+    </div>
+  </div>
+  <div class="crumb" id="crumb"></div>
+  <div class="mid"></div>
+  <div class="bot">
+    <div><div class="meq" id="meq"></div><div class="disc" id="disc"></div></div>
+    <div class="info">
+      <div class="info-w" id="iw"></div>
+      <div class="info-r"><span class="info-ipa" id="iipa"></span><button class="spk" onclick="speak(S.cur)">🔊</button></div>
+      <div class="info-pos" id="ipos"></div>
+      <div class="info-def" id="idef"></div>
+      <div class="sel" id="sel">
+        <div class="sel-top"><span class="sel-w" id="sw"></span><span class="sel-ipa" id="sipa"></span><button class="spk" onclick="speak(S.selW)" style="width:18px;height:18px;font-size:9px">🔊</button></div>
+        <div class="sel-pos" id="spos"></div>
+        <div class="sel-def" id="sdef"></div>
+        <span class="sel-go" onclick="go(S.selW)">→ orbit this word</span>
+      </div>
+      <div class="legend"><span><i class="lr"></i>ROOT</span><span><i class="lp"></i>PREFIX</span><span><i class="ls"></i>SUFFIX</span></div>
+    </div>
+  </div>
+</div>
+<script>
+const D={"predict":{"p":"/pɹɪˈdɪkt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/predict-us.mp3","s":"verb","d":"To forecast or estimate a future event on the basis of knowledge and reasoning."},"dictate":{"p":"/ˈdɪkˌteɪt/","a":"","s":"verb","d":"To order, command, control."},"verdict":{"p":"/ˈvɝ.dɪkt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/verdict-us.mp3","s":"noun","d":"A decision on an issue of fact in a civil or criminal case."},"dictionary":{"p":"/ˈdɪkʃəˌnɛɹi/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/dictionary-uk.mp3","s":"noun","d":"A reference work listing words and their meanings."},"contradict":{"p":"/kɒntɹəˈdɪkt/","a":"","s":"verb","d":"To deny the truth of a statement."},"indicate":{"p":"/ˈɪndɪkeɪt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/indicate-us.mp3","s":"verb","d":"To point out; to show; to make known."},"preview":{"p":"/ˈpɹiːvjuː/","a":"","s":"verb","d":"To show something before it is complete."},"prepare":{"p":"/pɹɪˈpɛə/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/prepare-us.mp3","s":"verb","d":"To make ready for a specific future purpose."},"prevent":{"p":"/pɹəˈvɛnt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/prevent-us.mp3","s":"verb","d":"To stop an outcome; to keep from doing something."},"precede":{"p":"/pɹiːˈsiːd/","a":"","s":"verb","d":"To go before, go in front of."},"transport":{"p":"/ˈtɹænspɔːt/","a":"","s":"noun","d":"An act of transporting; conveyance."},"export":{"p":"/ˈɛkspɔːt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/export-uk.mp3","s":"verb","d":"To send goods to another country."},"import":{"p":"/ˈɪmpɔːt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/import-uk.mp3","s":"verb","d":"To bring something in from a foreign country."},"report":{"p":"/ɹɪˈpɔːt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/report-us.mp3","s":"noun","d":"An account of certain events."},"support":{"p":"/səˈpɔːt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/support-us.mp3","s":"noun","d":"Something which supports."},"portable":{"p":"/ˈpɔːtəbl/","a":"","s":"adjective","d":"Able to be carried or easily moved."},"transfer":{"p":"/ˈtɹænsfɜː/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/transfer-us-verb.mp3","s":"verb","d":"To move from one place to another."},"translate":{"p":"/tɹænsˈleɪt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/translate-us.mp3","s":"verb","d":"To change from one language to another."},"transform":{"p":"/tɹænsˈfɔːm/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/transform-us.mp3","s":"verb","d":"To change greatly the appearance or form of."},"transparent":{"p":"/tɹænsˈpæɹənt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/transparent-us.mp3","s":"adjective","d":"See-through, clear."},"biography":{"p":"/baɪˈɒɡɹəfi/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/biography-us.mp3","s":"noun","d":"A person's life story, especially one published."},"autograph":{"p":"","a":"","s":"noun","d":"A famous person's signature."},"photograph":{"p":"/ˈfəʊtəɡɹɑːf/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/photograph-us.mp3","s":"noun","d":"A picture created by projecting an image onto film."},"telegraph":{"p":"/ˈtɛləɡɹæf/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/telegraph-us.mp3","s":"noun","d":"An apparatus for communicating between distant points."},"geography":{"p":"/dʒɪˈɒɡɹəfi/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/geography-us.mp3","s":"noun","d":"The study of the earth and its features."},"graphic":{"p":"/ˈɡɹæfɪk/","a":"","s":"noun","d":"A drawing or picture."},"biology":{"p":"/baɪˈɒlədʒɪ/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/biology-us.mp3","s":"noun","d":"The study of all life or living matter."},"biopsy":{"p":"/ˈbaɪɒpsi/","a":"","s":"noun","d":"Removal and examination of tissue from a living body."},"biome":{"p":"","a":"","s":"noun","d":"Any major regional biological community."},"biodiversity":{"p":"/ˌbaɪoʊdaɪˈvɜːsəti/","a":"","s":"noun","d":"The diversity of plant and animal life."},"photography":{"p":"/fəˈtɒɡɹəfi/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/photography-us.mp3","s":"noun","d":"The art of producing images on photosensitive surfaces."},"democracy":{"p":"/dɪˈmɒkɹəsi/","a":"","s":"noun","d":"Rule by the people."},"philosophy":{"p":"/fɪˈlɒsəfi/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/philosophy-us.mp3","s":"noun","d":"The love of wisdom."},"invisible":{"p":"/ɪnˈvɪzəbəl/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/invisible-us.mp3","s":"adjective","d":"Unable to be seen; not visible."},"vision":{"p":"/ˈvɪʒən/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/vision-us.mp3","s":"noun","d":"The sense or ability of sight."},"visible":{"p":"/ˈvɪzəbəl/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/visible-us.mp3","s":"adjective","d":"Able to be seen."},"visual":{"p":"/ˈvɪʒuəl/","a":"","s":"adjective","d":"Related to or affecting the vision."},"supervise":{"p":"","a":"","s":"verb","d":"To oversee or direct a task."},"visit":{"p":"/ˈvɪzɪt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/visit-us.mp3","s":"verb","d":"To go to someone or somewhere."},"incomplete":{"p":"/ɪnkəmˈpliːt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/incomplete-us.mp3","s":"adjective","d":"Not complete; not finished."},"incredible":{"p":"/ɪnˈkɹɛdɪbəl/","a":"","s":"adjective","d":"Beyond belief; unbelievable."},"indirect":{"p":"/ˌɪndaɪˈɹɛkt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/indirect-uk.mp3","s":"adjective","d":"Not direct; roundabout."},"independent":{"p":"/ɪndɪˈpɛndənt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/independent-us.mp3","s":"adjective","d":"Not dependent; free."},"possible":{"p":"/ˈpɒsɪbəl/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/possible-us.mp3","s":"adjective","d":"Able but not certain to happen."},"flexible":{"p":"/ˈflɛksəbəl/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/flexible-us.mp3","s":"adjective","d":"Capable of being bent without breaking."},"terrible":{"p":"/ˈtɛɹəbəl/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/terrible-us.mp3","s":"adjective","d":"Dreadful; causing terror."},"edible":{"p":"/ˈɛdɪbəl/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/edible-uk.mp3","s":"adjective","d":"Suitable for consumption."},"construct":{"p":"/kənˈstɹʌkt/","a":"","s":"verb","d":"To build or form by assembling parts."},"destruct":{"p":"","a":"https://api.dictionaryapi.dev/media/pronunciations/en/destruct-us.mp3","s":"verb","d":"To intentionally destroy."},"instruct":{"p":"/ɪnˈstɹʌkt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/instruct-us.mp3","s":"verb","d":"To teach by giving instructions."},"obstruct":{"p":"/əbˈstɹʌkt/","a":"","s":"verb","d":"To block a passage."},"structure":{"p":"/ˈstɹʌktʃə/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/structure-us.mp3","s":"noun","d":"A cohesive whole built up of distinct parts."},"reconstruct":{"p":"","a":"","s":"verb","d":"To construct again; to restore."},"connect":{"p":"/kəˈnɛkt/","a":"","s":"verb","d":"To join to another object."},"conduct":{"p":"/kənˈdʌkt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/conduct-uk-verb.mp3","s":"verb","d":"To lead, guide, or escort."},"contract":{"p":"/ˈkɒntɹækt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/contract-1-us.mp3","s":"noun","d":"An agreement between parties."},"contribute":{"p":"/kənˈtɹɪbjuːt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/contribute-us.mp3","s":"verb","d":"To give as part of a larger whole."},"educate":{"p":"/ˈɛdʒukeɪt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/educate-us.mp3","s":"verb","d":"To instruct or train."},"create":{"p":"/kɹiːˈeɪt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/create-us.mp3","s":"verb","d":"To bring into existence."},"navigate":{"p":"/ˈnævɪɡeɪt/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/navigate-us.mp3","s":"verb","d":"To plan and control the course."},"exclude":{"p":"/ɪksˈkluːd/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/exclude-us.mp3","s":"verb","d":"To bar from entering."},"extend":{"p":"/ɛkˈstɛnd/","a":"","s":"verb","d":"To increase in extent."},"extract":{"p":"","a":"","s":"verb","d":"To draw out; to pull out."},"examine":{"p":"/ɪɡˈzæmɪn/","a":"https://api.dictionaryapi.dev/media/pronunciations/en/examine-us.mp3","s":"verb","d":"To observe or inspect carefully."}};
+
+const FR={"predict":1,"dictate":.6,"verdict":.7,"dictionary":1,"contradict":.6,"indicate":.9,"preview":.8,"prepare":1,"prevent":1,"precede":.5,"transport":1,"export":.8,"import":.9,"report":1,"support":1,"portable":.7,"transfer":.9,"translate":.8,"transform":.8,"transparent":.7,"biography":.7,"autograph":.6,"photograph":.9,"telegraph":.5,"geography":.7,"graphic":.8,"biology":.8,"biopsy":.4,"biome":.3,"biodiversity":.5,"photography":.8,"democracy":.8,"philosophy":.7,"invisible":.8,"vision":1,"visible":.8,"visual":.8,"supervise":.6,"visit":.9,"incomplete":.6,"incredible":.8,"indirect":.5,"independent":.9,"possible":1,"flexible":.7,"terrible":.8,"edible":.5,"construct":.8,"destruct":.4,"instruct":.7,"obstruct":.5,"structure":1,"reconstruct":.5,"connect":.9,"conduct":.7,"contract":.8,"contribute":.8,"educate":.7,"create":1,"navigate":.7,"exclude":.6,"extend":.8,"extract":.6,"examine":.7};
+
+const W0={
+  predict:{p:[{t:'pre-',y:'prefix',m:'before'},{t:'dict',y:'root',m:'to say, speak'}],o:[[{w:'dictate',h:'say aloud'},{w:'verdict',h:'truth + say'},{w:'dictionary',h:'book of words'},{w:'contradict',h:'say against'},{w:'indicate',h:'point out'}],[{w:'preview',h:'see before'},{w:'prepare',h:'ready before'},{w:'prevent',h:'come before'},{w:'precede',h:'go before'}],[]]},
+  transport:{p:[{t:'trans-',y:'prefix',m:'across'},{t:'port',y:'root',m:'to carry'}],o:[[{w:'export',h:'carry out'},{w:'import',h:'carry in'},{w:'report',h:'carry back'},{w:'support',h:'carry below'},{w:'portable',h:'able to carry'}],[{w:'transfer',h:'carry across'},{w:'translate',h:'carry across'},{w:'transform',h:'form across'},{w:'transparent',h:'appear across'}],[]]},
+  biography:{p:[{t:'bio-',y:'prefix',m:'life'},{t:'graph',y:'root',m:'to write'},{t:'-y',y:'suffix',m:'state, result'}],o:[[{w:'autograph',h:'self-write'},{w:'photograph',h:'light-write'},{w:'telegraph',h:'far-write'},{w:'geography',h:'earth-write'},{w:'graphic',h:'of writing'}],[{w:'biology',h:'study of life'},{w:'biopsy',h:'life-view'},{w:'biome',h:'life-zone'},{w:'biodiversity',h:'life variety'}],[{w:'photography',h:'light-writing'},{w:'geography',h:'earth-writing'},{w:'democracy',h:'people-power'},{w:'philosophy',h:'love of wisdom'}]]},
+  invisible:{p:[{t:'in-',y:'prefix',m:'not'},{t:'vis',y:'root',m:'to see'},{t:'-ible',y:'suffix',m:'able to be'}],o:[[{w:'vision',h:'sight'},{w:'visible',h:'can be seen'},{w:'visual',h:'of sight'},{w:'supervise',h:'oversee'},{w:'visit',h:'go to see'}],[{w:'incomplete',h:'not complete'},{w:'incredible',h:'not believable'},{w:'indirect',h:'not direct'},{w:'independent',h:'not dependent'}],[{w:'possible',h:'able to be'},{w:'flexible',h:'able to bend'},{w:'terrible',h:'causing terror'},{w:'edible',h:'able to eat'}]]},
+  construct:{p:[{t:'con-',y:'prefix',m:'together'},{t:'struct',y:'root',m:'to build'}],o:[[{w:'destruct',h:'un-build'},{w:'instruct',h:'build into mind'},{w:'obstruct',h:'build against'},{w:'structure',h:'a building'},{w:'reconstruct',h:'build again'}],[{w:'connect',h:'tie together'},{w:'conduct',h:'lead together'},{w:'contract',h:'draw together'},{w:'contribute',h:'give together'}],[]]},
+  dictate:{p:[{t:'dict',y:'root',m:'to say'},{t:'-ate',y:'suffix',m:'to make, do'}],o:[[{w:'predict',h:'say before'},{w:'verdict',h:'truth-say'},{w:'contradict',h:'say against'},{w:'dictionary',h:'book of words'},{w:'indicate',h:'point out'}],[],[{w:'educate',h:'lead out'},{w:'create',h:'to make'},{w:'navigate',h:'to steer'}]]},
+  export:{p:[{t:'ex-',y:'prefix',m:'out of'},{t:'port',y:'root',m:'to carry'}],o:[[{w:'import',h:'carry in'},{w:'transport',h:'carry across'},{w:'report',h:'carry back'},{w:'support',h:'carry below'},{w:'portable',h:'able to carry'}],[{w:'exclude',h:'shut out'},{w:'extend',h:'stretch out'},{w:'extract',h:'pull out'},{w:'examine',h:'weigh out'}],[]]}
+};
+
+// ====== AUDIO ======
+let au=null;
+function speak(w){if(!w)return;const d=D[w];if(au){au.pause();au=null}if(d&&d.a){au=new Audio(d.a);au.play().catch(()=>tts(w))}else tts(w)}
+function tts(w){if('speechSynthesis'in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(w);u.lang='en-US';u.rate=.85;speechSynthesis.speak(u)}}
+
+// ====== CANVAS ======
+const cv=document.getElementById('c'),c=cv.getContext('2d');
+let CW,CH,CX,CY,dpr;
+const OC=['#e4585d','#3ac4ba','#9476f0'];
+const TYPES=['root','prefix','suffix'];
+let CWD=null;
+
+const S={cur:'predict',selW:null,hov:null,nodes:[],fading:[],rings:[0,0,0],ringT:[0,0,0],t:0,sunSc:1,trail:[],stars:[]};
+
+function initStars(){S.stars=[];for(let i=0;i<80;i++)S.stars.push({x:Math.random()*2,y:Math.random()*2,s:Math.random()*.7+.3,b:Math.random()*.25+.06,sp:Math.random()*.4+.4})}
+
+function resize(){dpr=devicePixelRatio||1;CW=innerWidth;CH=innerHeight;cv.width=CW*dpr;cv.height=CH*dpr;cv.style.width=CW+'px';cv.style.height=CH+'px';c.setTransform(dpr,0,0,dpr,0,0);CX=CW/2;CY=CH*.38;updRT()}
+function updRT(){const b=Math.min(CW*.36,CH*.30);S.ringT=[b*.36,b*.62,b*.86]}
+
+// DRAW
+function drawStars(){const t=S.t*.0002;S.stars.forEach(s=>{c.globalAlpha=s.b*(.4+.6*Math.sin(t*s.sp*3+s.x*70+s.y*50));c.fillStyle='#fff';c.beginPath();c.arc(s.x*CW,s.y*CH,s.s,0,6.283);c.fill()});c.globalAlpha=1}
+
+function drawRings(){const wd=CWD;if(!wd)return;for(let i=0;i<3;i++){const r=S.rings[i];if(r<3)continue;const has=wd.o[i]&&wd.o[i].length>0;c.strokeStyle=OC[i];c.globalAlpha=has?.08:.02;c.lineWidth=1;c.setLineDash([3,6]);c.beginPath();c.arc(CX,CY,r,0,6.283);c.stroke();c.setLineDash([]);if(has){const pt=wd.p.find(p=>p.y===TYPES[i]);if(pt){c.globalAlpha=.22;c.font='500 7px "IBM Plex Mono"';c.fillStyle=OC[i];c.textAlign='center';c.fillText(`${pt.y}: ${pt.t}`.toUpperCase(),CX,CY-r-5)}}}c.globalAlpha=1}
+
+function drawSun(){const sc=S.sunSc;const gl=c.createRadialGradient(CX,CY,0,CX,CY,55*sc);gl.addColorStop(0,'rgba(239,214,76,0.09)');gl.addColorStop(.5,'rgba(239,214,76,0.02)');gl.addColorStop(1,'transparent');c.fillStyle=gl;c.beginPath();c.arc(CX,CY,55*sc,0,6.283);c.fill();const co=c.createRadialGradient(CX,CY,0,CX,CY,7*sc);co.addColorStop(0,'#fffef0');co.addColorStop(.3,'#efd64c');co.addColorStop(1,'rgba(239,214,76,0)');c.fillStyle=co;c.beginPath();c.arc(CX,CY,9*sc,0,6.283);c.fill();c.globalAlpha=sc;c.font='300 16px "Fraunces"';c.fillStyle='#efd64c';c.textAlign='center';c.fillText(S.cur,CX,CY+26*sc);const wd=CWD;if(wd){c.font='300 8px "IBM Plex Mono"';c.fillStyle='#2e2d3a';c.fillText(wd.p.map(p=>p.t).join(' · '),CX,CY+37*sc)}c.globalAlpha=1}
+
+function drawConn(n){
+  // Subtle connecting line sun → planet
+  c.save();
+  c.globalAlpha=.35;
+  c.strokeStyle=n.col;c.lineWidth=.5;
+  c.setLineDash([1,4]);
+  c.beginPath();c.moveTo(CX,CY);c.lineTo(n.x,n.y);c.stroke();
+  c.setLineDash([]);
+  // Shared morpheme at midpoint
+  const wd=CWD;if(wd){
+    const pt=wd.p.find(p=>p.y===TYPES[n.ring]);
+    if(pt){
+      const mx=(CX+n.x*2)/3,my=(CY+n.y*2)/3;
+      c.globalAlpha=.5;c.font='italic 300 10px "Fraunces"';c.fillStyle=n.col;c.textAlign='center';
+      c.fillText(pt.m,mx,my-3);
+      c.font='400 7px "IBM Plex Mono"';c.globalAlpha=.3;c.fillText(pt.t,mx,my+8);
+    }
+  }
+  c.restore();
+}
+
+function drawNode(n,fading){
+  const isH=S.hov===n.word,isS=S.selW===n.word;
+  const a=n.op*(fading?.35:1);if(a<.01)return;
+
+  if((isH||isS)&&!fading)drawConn(n);
+
+  const f=FR[n.word]||.5;
+  const baseR=3+f*3.5;
+  const r=baseR*(isH?1.25:1);
+
+  c.globalAlpha=a;
+  const dg=c.createRadialGradient(n.x,n.y,0,n.x,n.y,r);
+  dg.addColorStop(0,'#fffef0');dg.addColorStop(.3,n.col);dg.addColorStop(1,n.col+'00');
+  c.fillStyle=dg;c.beginPath();c.arc(n.x,n.y,r,0,6.283);c.fill();
+
+  if(isH||isS){c.globalAlpha=.08*a;c.fillStyle=n.col;c.beginPath();c.arc(n.x,n.y,20,0,6.283);c.fill()}
+
+  c.globalAlpha=a;c.font=`${isH?'500':'400'} ${isH?11:10}px "IBM Plex Mono"`;c.fillStyle=isH||isS?'#efd64c':'#ada9a0';c.textAlign='center';
+  c.fillText(n.word,n.x,n.y+r+12);
+
+  // Hint always visible
+  c.font='italic 300 9px "Fraunces"';c.globalAlpha=a*(isH?.6:.15);c.fillStyle=isH?'#efd64c':'#ada9a0';
+  c.fillText(n.hint,n.x,n.y+r+23);
+  c.globalAlpha=1;
+}
+
+// ====== UPDATE — SNAPPY SPEEDS ======
+function update(dt){
+  S.t+=dt;
+
+  // FAST ring expansion (was .06, now .18) — snappy!
+  for(let i=0;i<3;i++)S.rings[i]+=(S.ringT[i]-S.rings[i])*.18;
+
+  S.sunSc=.96+.04*Math.sin(S.t*.002);
+
+  // FAST fading (was .004, now .012)
+  S.fading.forEach(n=>{n.op=Math.max(0,n.op-dt*.012)});
+  if(S.fading.length&&S.fading.every(n=>n.op<=0))S.fading=[];
+
+  const wd=CWD;if(!wd)return;
+  const exp=wd.o.reduce((a,o)=>a+o.length,0);
+  if(S.nodes.length!==exp){
+    S.nodes=[];
+    wd.o.forEach((orb,ri)=>{
+      orb.forEach((item,i)=>{
+        S.nodes.push({word:item.w,hint:item.h,ring:ri,idx:i,cnt:orb.length,
+          angle:-Math.PI/2+ri*.5+(6.283*i)/orb.length,
+          x:CX,y:CY,col:OC[ri],op:0,born:S.t,delay:ri*60+i*40});
+      });
+    });
+  }
+
+  // FAST orbit + staggered appearance
+  const spd=[0.06,0.04,0.028];
+  S.nodes.forEach(n=>{
+    n.angle+=spd[n.ring]*dt*.001;
+    const r=S.rings[n.ring];
+    n.x=CX+r*Math.cos(n.angle);
+    n.y=CY+r*Math.sin(n.angle);
+    // Staggered fast fade-in (was .003, now .015 with delay)
+    const age=S.t-n.born;
+    if(age>n.delay)n.op=Math.min(1,n.op+dt*.015);
+  });
+}
+
+let lt=0;
+function loop(t){const dt=Math.min(t-lt,50);lt=t;update(dt);c.clearRect(0,0,CW,CH);drawStars();drawRings();drawSun();S.fading.forEach(n=>drawNode(n,true));S.nodes.forEach(n=>drawNode(n,false));requestAnimationFrame(loop)}
+
+// ====== INTERACTION ======
+function nodeAt(mx,my){let best=null,bd=999;S.nodes.forEach(n=>{const d=Math.hypot(n.x-mx,n.y-my);if(d<28&&d<bd){bd=d;best=n}});return best}
+cv.addEventListener('mousemove',e=>{const n=nodeAt(e.clientX,e.clientY);S.hov=n?n.word:null;cv.style.cursor=n?'pointer':'default'});
+cv.addEventListener('click',e=>{const n=nodeAt(e.clientX,e.clientY);if(n)selN(n)});
+cv.addEventListener('touchstart',e=>{const t=e.touches[0];const n=nodeAt(t.clientX,t.clientY);if(n){e.preventDefault();selN(n)}},{passive:false});
+
+function selN(n){
+  S.selW=n.word;
+  const d=D[n.word]||{};
+  setPanelInfo('s',n.word,d);
+  document.getElementById('sel').classList.add('v');
+  const wd=CWD;if(!wd)return;
+  const pt=wd.p.find(p=>p.y===TYPES[n.ring]);
+  if(pt){const el=document.getElementById('disc');el.innerHTML=`<em>${n.word}</em> — both share <em>${pt.t}</em> meaning "${pt.m}"`;el.classList.add('v')}
+}
+
+// ====== NAVIGATE ======
+function setPanelInfo(pfx,w,d,fb){document.getElementById(pfx+'w').textContent=w;document.getElementById(pfx+'ipa').textContent=d.p||'';document.getElementById(pfx+'pos').textContent=d.s||'';document.getElementById(pfx+'def').textContent=d.d||fb||''}
+function go(w){
+  w=w||(document.getElementById('si').value);w=w.toLowerCase().trim();
+  const d=D[w]||{};
+  if(!W0[w]){S.fading=S.nodes.map(n=>({...n}));S.nodes=[];S.rings=[0,0,0];CWD=null;setPanelInfo('i',w,d,'Not in demo — try a suggested word');document.getElementById('si').value=w;document.getElementById('sel').classList.remove('v');document.getElementById('disc').classList.remove('v');return}
+  if(S.trail[S.trail.length-1]!==w){S.trail.push(w);if(S.trail.length>12)S.trail.shift();renderCrumb()}
+  S.fading=S.nodes.map(n=>({...n}));S.nodes=[];S.selW=null;S.hov=null;S.rings=[0,0,0];updRT();S.cur=w;CWD=W0[w];
+  document.getElementById('si').value=w;
+  document.getElementById('sel').classList.remove('v');document.getElementById('disc').classList.remove('v');
+  setPanelInfo('i',w,d);
+  buildMeq(CWD);
+}
+
+function renderCrumb(){const el=document.getElementById('crumb');el.innerHTML='';S.trail.forEach((w,i)=>{if(i>0){const s=document.createElement('span');s.className='crumb-s';s.textContent='→';el.appendChild(s)}const c=document.createElement('span');c.className='crumb-i'+(i===S.trail.length-1?' on':'');c.textContent=w;c.onclick=()=>go(w);el.appendChild(c)});el.scrollLeft=el.scrollWidth}
+
+function buildMeq(wd){const el=document.getElementById('meq');el.innerHTML='';wd.p.forEach((p,i)=>{if(i>0){const op=document.createElement('span');op.className='meq-op';op.textContent='+';el.appendChild(op)}const b=document.createElement('div');b.className='meq-b '+p.y;b.innerHTML=`<div class="meq-t">${p.t}</div><div class="meq-m">${p.m}</div><div class="meq-ty">${p.y}</div>`;el.appendChild(b)})}
+
+document.getElementById('si').addEventListener('keydown',e=>{if(e.key==='Enter')go()});
+
+// INIT
+initStars();resize();addEventListener('resize',resize);go('predict');requestAnimationFrame(loop);
+</script>
+</body>
+</html>
