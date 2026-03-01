@@ -3206,9 +3206,9 @@ function pruneSrsItems() {
 
 // 案D: キャップ — SRS_MAX 件を超えたら due が遠い順に削除
 function capSrsItems() {
+  if (Object.keys(srsItems).length <= SRS_MAX) return;
   const entries = Object.entries(srsItems);
-  if (entries.length <= SRS_MAX) return;
-  entries.sort((a, b) => b[1].dueDate.localeCompare(a[1].dueDate));
+  entries.sort((a, b) => (a[1].dueDate < b[1].dueDate ? 1 : -1));
   for (const [id] of entries.slice(SRS_MAX)) delete srsItems[id];
 }
 
