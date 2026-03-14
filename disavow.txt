@@ -1,0 +1,15 @@
+# native-real.com Disavow File
+# 作成日: 2026-03-14
+# 対象: スパムバックリンク（スパム率100%・7件全件）
+#
+# 判定根拠:
+#   - anchor: "High Quality SEO Backlinks", "boost my website SEO",
+#             "Rank Higher with Premium Backlinks" 等のSEO業者特有の文言
+#   - 全件がSEOスパム自動リンク業者からの自動リンク
+#   - 現時点でGoogleペナルティは未発生だが放置でManual Action対象になるリスクあり
+
+# スパムドメイン
+domain:backlinks-seorank.com
+domain:seo-backlink.agency
+domain:seodaro.com
+domain:seonexi.com
