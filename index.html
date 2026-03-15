@@ -12,10 +12,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <title>英語学習サービスおすすめランキング2026年版 | 英語学習サービス比較ナビ</title>
-  <meta name="description" content="オンライン英会話8社・英語コーチング3社を徹底比較。料金・効果・続けやすさを基準に最適なサービスを提案します。">
+  <meta name="description" content="【2026年版】英会話12社を料金・特徴で徹底比較。月1,430円〜の格安オンライン英会話からコーチングまで、目的別おすすめがすぐわかる。">
   <link rel="canonical" href="https://native-real.com/">
-  <meta property="og:title" content="英語学習サービスおすすめランキング2026年版">
-  <meta property="og:description" content="オンライン英会話8社・英語コーチング3社を徹底比較。料金・効果・続けやすさを基準に最適なサービスを提案します。">
+  <meta property="og:title" content="【2026年版】英語学習サービスおすすめランキング｜12社比較">
+  <meta property="og:description" content="【2026年版】英会話12社を料金・特徴で徹底比較。月1,430円〜の格安オンライン英会話からコーチングまで、目的別おすすめがすぐわかる。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://native-real.com/assets/ogp.png">
   <meta property="og:image:width" content="1200">
@@ -595,6 +595,120 @@ img { max-width: 100%; height: auto; }
 }
 
 /* Responsive - Tablet */
+/* Quick compare table */
+.quick-compare {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.quick-compare-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--primary);
+  color: white;
+}
+.quick-compare-header h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 0;
+}
+.quick-compare-header span {
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
+.quick-compare-row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.quick-compare-row:last-child { border-bottom: none; }
+.quick-compare-row:hover { background: var(--primary-pale); }
+.qc-rank {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.qc-rank-1 { background: linear-gradient(135deg, #fde68a, #f0b429); color: #7c5a00; }
+.qc-rank-2 { background: linear-gradient(135deg, #e5e7eb, #9ca3af); color: #374151; }
+.qc-rank-3 { background: linear-gradient(135deg, #fde8cc, #c89060); color: #6b3a10; }
+.qc-info { min-width: 0; }
+.qc-info .qc-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.qc-info .qc-oneliner {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.qc-price {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+  text-align: right;
+}
+.qc-cta {
+  display: inline-block;
+  background: #10b981;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
+}
+.qc-cta:hover { background: #059669; color: white; transform: translateY(-1px); }
+.quick-compare-footer {
+  text-align: center;
+  padding: 12px 20px;
+  background: var(--bg-gray);
+}
+.quick-compare-footer a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+.quick-compare-footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .quick-compare-row {
+    grid-template-columns: 32px 1fr;
+    gap: 8px;
+  }
+  .qc-price {
+    grid-column: 2;
+    text-align: left;
+    font-size: 0.82rem;
+  }
+  .qc-cta {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 9px 14px;
+  }
+}
+
 @media (max-width: 1024px) {
   .articles-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -864,6 +978,44 @@ img { max-width: 100%; height: auto; }
       <span class="hero-badge"><strong>12</strong>サービスを比較</span>
       <span class="hero-badge"><strong>27</strong>本の解説記事</span>
       <span class="hero-badge"><strong>毎週</strong>情報更新</span>
+    </div>
+
+    <!-- 3ステップ比較テーブル -->
+    <div class="quick-compare">
+      <div class="quick-compare-header">
+        <h3>人気TOP3をサクッと比較</h3>
+        <span>2026年3月更新</span>
+      </div>
+      <div class="quick-compare-row">
+        <div class="qc-rank qc-rank-1">1</div>
+        <div class="qc-info">
+          <div class="qc-name">DMM英会話</div>
+          <div class="qc-oneliner">24時間対応・講師15,000人で毎日話せる</div>
+        </div>
+        <div class="qc-price">月1,980円〜</div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AXFOG+LFNBU+5Q2M+5YJRM" class="qc-cta" target="_blank" rel="nofollow noopener">無料体験</a>
+      </div>
+      <div class="quick-compare-row">
+        <div class="qc-rank qc-rank-2">2</div>
+        <div class="qc-info">
+          <div class="qc-name">レアジョブ英会話</div>
+          <div class="qc-oneliner">ビジネス英語に強い・独自テキスト充実</div>
+        </div>
+        <div class="qc-price">月1,430円〜</div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AXFOG+JNCII+1SVU+686ZM" class="qc-cta" target="_blank" rel="nofollow noopener">無料体験</a>
+      </div>
+      <div class="quick-compare-row">
+        <div class="qc-rank qc-rank-3">3</div>
+        <div class="qc-info">
+          <div class="qc-name">ネイティブキャンプ</div>
+          <div class="qc-oneliner">予約不要・レッスン回数無制限で話し放題</div>
+        </div>
+        <div class="qc-price">月6,480円</div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=44WLF2+BW2OQA+35VG+6LWTE" class="qc-cta" target="_blank" rel="nofollow noopener">無料体験</a>
+      </div>
+      <div class="quick-compare-footer">
+        <a href="#ranking">全12サービスの比較を見る &#8595;</a>
+      </div>
     </div>
 
     <!-- 診断ウィジェット -->
