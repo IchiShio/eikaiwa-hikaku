@@ -58,6 +58,22 @@
 - **マイルストーン**（2026-03-15実装）: 50/100/300/500/1000問達成で称号（Starter→Challenger→Adept→Expert→Master）
 - **seenプログレスバー**: 全問題中の消化率を視覚表示
 - **パーソナライズCTA**（2026-03-15実装）: セッション終了時にaxis別弱点に基づくA8.netサービス推薦（SERVICE_BY_AXIS）
+- **セッション内レベルシステム**（2026-03-16実装）:
+  - セッションごとにリセット（localStorage非依存、キャッシュクリアの影響なし）
+  - XP計算: 正解=問題難易度値(lv1=+1〜lv5=+5)、不正解=-1(最低0)
+  - 6段階: Lv.1 Starter(0) → Lv.2 Listener(5) → Lv.3 Sharp Ear(12) → Lv.4 Tuned In(25) → Lv.5 Sound Hunter(45) → Lv.6 Echo Master(70)
+  - レベルは上がるのみ（XPが減ってもレベルダウンしない）
+  - レベルアップ時にトースト演出（1.2秒、画面中央）
+  - `LEVEL_DEFS`, `sessionXP`, `sessionLevel`, `updateLevelBar()`, `showLevelUpToast()`
+- **学びカード＆SNSシェア**（2026-03-16実装）:
+  - セッション中の正解問題の `kp` + `ja` を `sessionPhrases[]` に蓄積
+  - ミッション完了画面に「今日覚えたフレーズ」セクション表示（最大6問、1問1行）
+  - 「📋 コピー」ボタン: クリップボードにテキストコピー
+  - 「𝕏 ポスト」ボタン: `twitter.com/intent/tweet` でX投稿画面を開く
+  - `buildShareText()`, `renderShareCard()`, `copyShareText()`, `shareToX()`, `collectSharePhrases()`
+- **「今日はここまで」ボタン**（2026-03-16実装）:
+  - ヘッダー右端に常時表示、タップで `endSession()` → `showMissionComplete()`
+  - 0問の場合は `goToStart()` でTOPに戻る
 - **GA4イベント**（2026-03-15拡張）:
   - `quiz_answer`: `quiz_mode`, `question_axis` パラメータ追加
   - `quiz_session_complete`: `quiz_mode`, `axis_speed_acc`〜`axis_distractor_acc`（%値、回答5問未満は-1）
@@ -243,12 +259,21 @@ python3 add_questions.py
 - **匿名ユーザー**（localStorageのみ）でも全機能利用可能
 - Firebase匿名認証 + Firestoreコードは残存（将来的に完全削除予定）
 
-### エンゲージメント維持の仕組み（2026-03-15実装）
+### エンゲージメント維持の仕組み（2026-03-16更新）
 1. **seenSet**: 既出問題を追跡し、未回答問題を優先出題。全問消化でリセット
 2. **4つのクイズモード**: normal/daily/weak/revenge で毎回異なる体験
 3. **マイルストーン**: 50/100/300/500/1000問で称号獲得。成長実感の可視化
 4. **SRS（間隔反復）**: 2回間違えた問題をAnki式で復習管理（revengeモード）
 5. **パーソナライズCTA**: axis別弱点に応じたサービス推薦でTier 1へ誘導
+6. **セッション内レベルシステム**（2026-03-16）: 毎回ゼロから始まるXP+レベル（localStorage非依存）。難問正解ほど高XP
+7. **学びカード＆SNSシェア**（2026-03-16）: 正解フレーズをまとめて表示。コピー/Xポスト対応
+8. **「今日はここまで」ボタン**: ヘッダーに常時表示、セッション終了→ミッション完了画面へ
+
+### localStorage依存の機能（キャッシュクリアでリセット）
+- 累計回答数・正解率・連続学習日数（`listenup_v1`）
+- 弱点集中モード（`axisStats`）、リベンジモード（`listenup_srs`, `listenup_wo`）
+- seenSet（`listenup_seen`）
+- ※ セッション内レベル・学びカードはセッション変数のみで動作（リセット影響なし）
 
 ## listening/ のCSS設計（2026-02-25更新）
 
