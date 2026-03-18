@@ -72,87 +72,80 @@ img { max-width: 100%; height: auto; }
 
 /* Header */
 .site-header {
-  background: #ffffff;
-  color: var(--text);
-  padding: 14px 0;
-  position: sticky;
-  top: 0;
+  position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
-  box-shadow: 0 1px 0 var(--border);
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 14px 0;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+.site-header.scrolled {
+  padding: 8px 0;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.92);
 }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; }
 .site-header .logo {
-  font-size: 1.0rem;
-  font-weight: 700;
-  color: var(--text);
-  text-decoration: none;
-  letter-spacing: 0.01em;
+  font-size: 15px; font-weight: 800; color: var(--text);
+  text-decoration: none; letter-spacing: -0.02em;
+  display: flex; align-items: center; gap: 7px;
 }
-.site-header .logo span { color: var(--primary); }
+.site-header .logo svg { width: 18px; height: 18px; color: var(--primary); }
+.site-header nav { display: flex; align-items: center; gap: 2px; }
 .site-header nav a {
-  color: var(--text-muted);
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-  transition: color 0.15s, border-color 0.15s;
+  color: var(--text-muted); text-decoration: none;
+  font-size: 13px; font-weight: 500;
+  padding: 7px 12px; border-radius: 10px;
+  transition: all 0.2s ease; white-space: nowrap;
+  position: relative; margin-left: 0;
 }
-.site-header nav a:hover { color: var(--text); border-color: var(--primary); }
+.site-header nav a:hover { color: var(--text); background: rgba(0,0,0,0.04); }
+.site-header nav a.active { color: var(--primary); font-weight: 700; }
+.site-header nav a.active::after {
+  content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%);
+  width: 16px; height: 2px; border-radius: 1px; background: var(--primary);
+}
+.site-header-spacer { height: 54px; }
 
 /* Hamburger menu */
 .hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  width: 36px;
-  height: 36px;
-  position: relative;
-  z-index: 102;
+  display: none; background: none; border: none; cursor: pointer;
+  padding: 8px; width: 40px; height: 40px; border-radius: 10px;
+  position: relative; z-index: 102; transition: background 0.2s;
 }
+.hamburger:hover { background: rgba(0,0,0,0.04); }
 .hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  margin: 5px auto;
-  border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
+  display: block; width: 18px; height: 2px; background: var(--text);
+  margin: 4px auto; border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
 }
-.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 .mobile-nav-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(15,23,42,0.97);
-  z-index: 101;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
+  display: none; position: fixed; inset: 0;
+  background: rgba(10,10,10,0.96); z-index: 101;
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  opacity: 0; transition: opacity 0.3s ease;
 }
-.mobile-nav-overlay.active { display: flex; }
+.mobile-nav-overlay.active { display: flex; opacity: 1; }
 .mobile-nav-overlay a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: var(--radius);
-  transition: background 0.2s;
+  color: rgba(255,255,255,0.7); text-decoration: none;
+  font-size: 18px; font-weight: 600; letter-spacing: -0.01em;
+  padding: 16px 40px; border-radius: 14px; transition: all 0.2s ease;
+  width: 260px; text-align: center;
 }
-.mobile-nav-overlay a:hover { background: rgba(255,255,255,0.1); }
+.mobile-nav-overlay a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.mobile-nav-overlay a.active { color: var(--primary); }
 
 /* Hero */
 .hero {
   background: #ffffff;
   color: var(--text);
-  padding: 88px 0 80px;
+  padding: 64px 0 80px;
   text-align: center;
   position: relative;
   border-bottom: 1px solid var(--border);
@@ -1010,9 +1003,10 @@ img { max-width: 100%; height: auto; }
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-<header class="site-header">
+<div class="site-header-spacer"></div>
+<header class="site-header" id="siteHeader">
   <div class="container">
-    <a href="/" class="logo">native-real</a>
+    <a href="/" class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav>
       <a href="/">ListenUp</a>
       <a href="/ranking/" class="active">ランキング</a>
@@ -1458,6 +1452,9 @@ function applyFilter(tab) {
     }
   });
 }
+// Scroll compact header
+var sH=document.getElementById('siteHeader');
+if(sH){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){sH.classList.toggle('scrolled',window.scrollY>20);t=false});t=true}},{passive:true})}
 </script>
 </body>
 </html>
