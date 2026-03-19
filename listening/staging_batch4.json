@@ -1,0 +1,252 @@
+[
+  {
+    "diff": "lv1",
+    "axis": "speed",
+    "text": "Didja check the rent before signing?",
+    "ja": "サインする前に家賃確認した？",
+    "answer": "署名前に家賃を確認したか聞いている",
+    "choices": ["署名前に家賃を確認したか聞いている", "家賃の値下げ交渉をしたか聞いている", "契約書の内容を読んだか聞いている", "引っ越し日を決めたか聞いている", "保証人を見つけたか聞いている"],
+    "expl": "Didja は Did you の速い発音です。アパート契約前に家賃を確認したかどうかを尋ねています。",
+    "kp": ["Didja check"]
+  },
+  {
+    "diff": "lv1",
+    "axis": "reduction",
+    "text": "I wanna try that new craft beer place.",
+    "ja": "あの新しいクラフトビールの店に行ってみたいな。",
+    "answer": "新しいクラフトビールの店に行きたい",
+    "choices": ["新しいクラフトビールの店に行きたい", "クラフトビールを自分で作りたい", "新しいワインバーを探している", "ビールの銘柄を変えたい", "クラフトビールの味が苦手だ"],
+    "expl": "wanna は want to のカジュアルな短縮形です。新しいクラフトビール店に行きたいという希望を述べています。",
+    "kp": ["wanna try"]
+  },
+  {
+    "diff": "lv1",
+    "axis": "vocab",
+    "text": "That podcast is a hidden gem.",
+    "ja": "あのポッドキャストは隠れた名作だよ。",
+    "answer": "そのポッドキャストは知られざる名作だ",
+    "choices": ["そのポッドキャストは知られざる名作だ", "そのポッドキャストは人気がありすぎる", "そのポッドキャストは最近終了した", "そのポッドキャストは宝石の話題だ", "そのポッドキャストは見つけにくい"],
+    "expl": "hidden gem は「隠れた名作・掘り出し物」という意味のイディオムです。あまり知られていないが素晴らしいポッドキャストだと言っています。",
+    "kp": ["hidden gem"]
+  },
+  {
+    "diff": "lv1",
+    "axis": "context",
+    "text": "Sure, I'd love to be on the jury.",
+    "ja": "もちろん、喜んで陪審員をやりますよ。",
+    "answer": "陪審員を引き受ける意思を示している",
+    "choices": ["陪審員を引き受ける意思を示している", "陪審員を辞退したいと言っている", "裁判の結果に不満を述べている", "弁護士になりたいと言っている", "裁判を傍聴したいと言っている"],
+    "expl": "Sure, I'd love to という表現から、陪審員の役割を喜んで引き受けるという前向きな姿勢が読み取れます。",
+    "kp": ["I'd love to"]
+  },
+  {
+    "diff": "lv1",
+    "axis": "distractor",
+    "text": "The office renovation starts next Monday.",
+    "ja": "オフィスの改装は来週の月曜日に始まります。",
+    "answer": "来週月曜にオフィス改装が始まる",
+    "choices": ["来週月曜にオフィス改装が始まる", "来週月曜にオフィスが移転する", "来週月曜にオフィスが閉鎖される", "来週月曜に新しいオフィスが開く", "来週月曜にオフィスの検査がある"],
+    "expl": "renovation は「改装・リノベーション」です。移転や閉鎖ではなく、既存オフィスの改装が来週月曜に始まるという内容です。",
+    "kp": ["renovation starts"]
+  },
+  {
+    "diff": "lv1",
+    "axis": "speed",
+    "text": "Whadya think about this apartment layout?",
+    "ja": "この部屋の間取りどう思う？",
+    "answer": "アパートの間取りの感想を求めている",
+    "choices": ["アパートの間取りの感想を求めている", "アパートの家賃について聞いている", "引っ越しの手伝いを頼んでいる", "部屋の掃除を提案している", "アパートの契約条件を確認している"],
+    "expl": "Whadya は What do you の速い発音です。アパートの間取り（layout）についてどう思うか意見を求めています。",
+    "kp": ["Whadya think"]
+  },
+  {
+    "diff": "lv2",
+    "axis": "reduction",
+    "text": "I'm gonna hafta skip the fitness class today because I think I pulled a muscle yesterday.",
+    "ja": "今日のフィットネスクラスは休まなきゃ。昨日筋肉を痛めたみたいで。",
+    "answer": "筋肉を痛めたのでフィットネスを休む",
+    "choices": ["筋肉を痛めたのでフィットネスを休む", "フィットネスクラスの時間を変更したい", "新しいフィットネスクラスに申し込む", "フィットネスで筋肉をもっと鍛えたい", "フィットネスクラスを辞めることにした"],
+    "expl": "gonna hafta は going to have to の短縮形です。昨日筋肉を痛めた（pulled a muscle）ため、今日のフィットネスクラスを休まなければならないと言っています。",
+    "kp": ["gonna hafta", "pulled a muscle"]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "text": "The surprise inspection at the restaurant really threw us for a loop, nobody saw it coming.",
+    "ja": "レストランの抜き打ち検査には本当に面食らったよ、誰も予想してなかった。",
+    "answer": "抜き打ち検査で店が大混乱に陥った",
+    "choices": ["抜き打ち検査で店が大混乱に陥った", "検査の結果が非常に良かった", "検査官がレストランを褒めてくれた", "検査が予定通りに行われた", "レストランがループ状に設計されている"],
+    "expl": "threw us for a loop は「驚かせて混乱させた」という意味のイディオムです。nobody saw it coming で誰も予想していなかったことを強調しています。",
+    "kp": ["threw us for a loop", "saw it coming"]
+  },
+  {
+    "diff": "lv2",
+    "axis": "context",
+    "text": "I mean, the wine was fine, nothing special, but for that price tag? Come on, seriously.",
+    "ja": "まあ、ワインは悪くなかったけど、特別でもない。あの値段でしょ？勘弁してよ、ほんと。",
+    "answer": "ワインの値段に対して不満を感じている",
+    "choices": ["ワインの値段に対して不満を感じている", "ワインの味が素晴らしかったと褒めている", "ワインをもう一杯注文したい", "ワインの値段は妥当だと思っている", "ワインよりビールが好きだと言っている"],
+    "expl": "fine, nothing special と言いつつ for that price tag? Come on と続けることで、値段に見合わないという不満を表現しています。文脈から皮肉を読み取る必要があります。",
+    "kp": ["for that price tag", "Come on"]
+  },
+  {
+    "diff": "lv2",
+    "axis": "distractor",
+    "text": "We're road tripping down the coast next weekend, so we'll definitely need to pack light this time.",
+    "ja": "来週末に海岸沿いをロードトリップするから、今回は絶対荷物を軽くしないとね。",
+    "answer": "海岸沿いの旅行に向けて軽装を勧めている",
+    "choices": ["海岸沿いの旅行に向けて軽装を勧めている", "海岸でキャンプするので道具が必要だ", "飛行機の旅なので荷物制限がある", "海岸の道が狭いので小さい車が必要だ", "荷物が軽いので海岸まで歩いて行く"],
+    "expl": "road tripping down the coast は海岸沿いのドライブ旅行、pack light は荷物を軽くするという意味です。来週末の車旅行なので軽装にしようという提案です。",
+    "kp": ["road tripping", "pack light"]
+  },
+  {
+    "diff": "lv2",
+    "axis": "context",
+    "text": "Oh great, another surprise inspection at the office. Just what we needed on a Friday afternoon.",
+    "ja": "ああ最高、また抜き打ち検査だ。金曜の午後にまさに必要だったもの。",
+    "answer": "金曜午後の抜き打ち検査に皮肉で不満を述べている",
+    "choices": ["金曜午後の抜き打ち検査に皮肉で不満を述べている", "金曜の検査を楽しみにしている", "検査の準備が完璧にできていて安心している", "金曜に検査があることを初めて知った", "検査が中止になって喜んでいる"],
+    "expl": "Oh great と Just what we needed は皮肉表現です。実際には金曜午後の抜き打ち検査に迷惑している気持ちを反語的に言っています。",
+    "kp": ["Oh great", "Just what we needed"]
+  },
+  {
+    "diff": "lv2",
+    "axis": "reduction",
+    "text": "Lemme know if you find a decent apartment near the subway, I'm kinda desperate.",
+    "ja": "地下鉄の駅の近くにいいアパートがあったら教えてね、もうかなり切羽詰まってるから。",
+    "answer": "駅近くの良い物件があれば教えてほしい",
+    "choices": ["駅近くの良い物件があれば教えてほしい", "地下鉄の駅までの道順を教えてほしい", "アパートの内見に一緒に来てほしい", "駅の近くに引っ越すつもりはない", "アパートの家賃を調べてほしい"],
+    "expl": "Lemme は Let me、kinda は kind of の短縮形です。地下鉄駅の近くにまともな（decent）アパートが見つかったら教えてほしい、かなり切羽詰まっていると頼んでいます。",
+    "kp": ["Lemme know", "kinda desperate"]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "text": "He's been on the fence about jury duty for weeks, and the deadline is fast approaching.",
+    "ja": "彼はもう何週間も陪審員をやるかどうか決めかねていて、締切がすぐそこなんだ。",
+    "answer": "彼は陪審員参加を締切間近なのに迷っている",
+    "choices": ["彼は陪審員参加を締切間近なのに迷っている", "彼は何週間も陪審員として働いている", "彼は陪審員を断る方法を探している", "彼はフェンスの上に座って考えている", "彼は陪審員に選ばれて喜んでいる"],
+    "expl": "on the fence は「決めかねている・迷っている」という意味のイディオムです。陪審員を務めるかどうか何週間も決断できず、締切が迫っている状況です。",
+    "kp": ["on the fence", "coming up fast"]
+  },
+  {
+    "diff": "lv3",
+    "axis": "speed",
+    "text": "Didja hear they're tearing down the old building on Fifth Street to put up a brand new fitness center?",
+    "ja": "5番街の古い建物を壊して真新しいフィットネスセンターを建てるって聞いた？",
+    "answer": "古い建物を解体して新しいジムを建設する話を聞いたか",
+    "choices": ["古い建物を解体して新しいジムを建設する話を聞いたか", "古いフィットネスセンターが改装されると聞いた", "新しいビルにフィットネスセンターが入ると聞いた", "古い建物がフィットネスセンターに改装される", "フィットネスセンターが閉鎖されると聞いた"],
+    "expl": "Didja は Did you の速い発音です。tearing down は「取り壊す」、put up は「建てる」という意味で、5番街の古い建物を壊して新しいフィットネスセンターを建設する計画について尋ねています。",
+    "kp": ["Didja hear", "tearing down", "put up"]
+  },
+  {
+    "diff": "lv3",
+    "axis": "reduction",
+    "text": "I dunno if we're gonna make it to the podcast recording session on time with all this crazy traffic.",
+    "ja": "この渋滞じゃ、ポッドキャストの収録に間に合うかわからないな。",
+    "answer": "渋滞でポッドキャスト収録に遅刻しそうだ",
+    "choices": ["渋滞でポッドキャスト収録に遅刻しそうだ", "ポッドキャストの収録場所がわからない", "渋滞中にポッドキャストを聴きたい", "ポッドキャストの収録を中止するつもりだ", "交通情報のポッドキャストを録音している"],
+    "expl": "dunno は don't know、gonna は going to の短縮形です。交通渋滞のせいでポッドキャストの収録セッションに時間通りに着けるかわからないと言っています。",
+    "kp": ["dunno", "gonna make it"]
+  },
+  {
+    "diff": "lv3",
+    "axis": "context",
+    "text": "The climate change panel at the conference got pretty heated, but at least people were finally talking about it openly.",
+    "ja": "気候変動のパネルディスカッションはかなり白熱したけど、少なくともみんながやっと話し始めたのはよかった。",
+    "answer": "議論は激しかったが人々が関心を持ち始めたのは良い",
+    "choices": ["議論は激しかったが人々が関心を持ち始めたのは良い", "気候変動のパネルが暑さで中止になった", "パネリストが怒って議論を拒否した", "気候変動の議論はまだ始まっていない", "パネルの参加者が少なくて残念だった"],
+    "expl": "heated は「白熱した」という意味で、温度のhotとは異なります。議論が激しかったものの、人々がようやく気候変動について話し始めたことを前向きに捉えています。",
+    "kp": ["got pretty heated", "finally talking about it"]
+  },
+  {
+    "diff": "lv3",
+    "axis": "distractor",
+    "text": "They passed the surprise health inspection with flying colors last week, and even the kitchen storage area was spotless.",
+    "ja": "先週の抜き打ち衛生検査を見事にクリアしたよ、キッチンの倉庫エリアまでピカピカだった。",
+    "answer": "抜き打ち衛生検査をキッチンも含め完璧に合格した",
+    "choices": ["抜き打ち衛生検査をキッチンも含め完璧に合格した", "検査は合格したがキッチン倉庫に問題があった", "キッチン以外は検査に不合格だった", "検査官がキッチンを見なかったので合格した", "カラフルな旗を掲げて検査を迎えた"],
+    "expl": "with flying colors は「見事に・大成功で」という意味のイディオムです。spotless は「シミひとつない」。抜き打ち衛生検査をキッチン倉庫まで完璧に通過したことを伝えています。",
+    "kp": ["with flying colors", "spotless"]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "text": "She really dropped the ball on managing the office renovation timeline, and now the whole project is way behind schedule.",
+    "ja": "彼女がオフィス改装のスケジュール管理をしくじったから、プロジェクト全体が大幅に遅れているんだ。",
+    "answer": "彼女の失敗で改装スケジュールが大幅に遅れた",
+    "choices": ["彼女の失敗で改装スケジュールが大幅に遅れた", "彼女がボールを落として改装資材が壊れた", "彼女が改装のデザインを変更した", "彼女が改装の予算を削減した", "彼女が改装を早めに完了させた"],
+    "expl": "dropped the ball は「失敗した・しくじった」という意味のイディオムです。オフィス改装のスケジュール管理を怠ったため、プロジェクト全体が大幅に遅れているという状況です。",
+    "kp": ["dropped the ball", "way behind schedule"]
+  },
+  {
+    "diff": "lv3",
+    "axis": "distractor",
+    "text": "I've been meaning to check out that new craft beer taproom, heard they've got over twenty on draft.",
+    "ja": "あの新しいクラフトビールのタップルームに行きたいと思ってたんだ、生ビールが20種類以上あるらしいよ。",
+    "answer": "生ビール20種以上あるタップルームに行きたい",
+    "choices": ["生ビール20種以上あるタップルームに行きたい", "タップルームで20人以上の友人と会う予定だ", "20回以上タップルームに通っている", "タップルームが20日以内にオープンする", "タップルームの生ビールは20ml単位で注文する"],
+    "expl": "I've been meaning to は「ずっと〜しようと思っていた」、on draft は「生ビールで」という意味です。20種類以上の生ビールがあるタップルームに行きたいという内容です。",
+    "kp": ["been meaning to", "on draft"]
+  },
+  {
+    "diff": "lv4",
+    "axis": "speed",
+    "text": "Whadya say we take the scenic route for our road trip this time instead of the boring highway? It'll only add a coupla hours though.",
+    "ja": "今回のロードトリップはつまらない高速じゃなくて景色のいい道を行かない？たった2時間くらい余計にかかるだけだよ。",
+    "answer": "高速の代わりに景色の良い道を提案しているが時間は余分にかかる",
+    "choices": ["高速の代わりに景色の良い道を提案しているが時間は余分にかかる", "高速道路の方が景色が良いと主張している", "ロードトリップを2時間早く出発しようと提案している", "景色の良い道は高速道路より短いと言っている", "ロードトリップの行き先を変更しようと提案している"],
+    "expl": "Whadya say は What do you say の速い発音、coupla は couple of の短縮です。高速道路の代わりに景色の良いルートを提案しつつ、数時間余計にかかるだけだと伝えています。",
+    "kp": ["Whadya say", "scenic route", "coupla hours"]
+  },
+  {
+    "diff": "lv4",
+    "axis": "context",
+    "text": "Look, I get that the climate discussion is important, but when every meeting turns into a debate, it's hard to actually get anything done.",
+    "ja": "気候の議論が大事なのはわかるけど、毎回の会議が討論になっちゃうと、実際には何も進まないんだよ。",
+    "answer": "気候議論は大事だが毎回の討論で業務が進まないと不満",
+    "choices": ["気候議論は大事だが毎回の討論で業務が進まないと不満", "気候変動の議論は重要でないと主張している", "会議で討論することを楽しんでいる", "気候変動の対策が順調に進んでいる", "会議の回数を増やすべきだと提案している"],
+    "expl": "I get that...but の構文で、気候議論の重要性は認めつつも、毎回議論になって実務が進まないという不満を表現しています。文脈から複雑な感情を読み取る必要があります。",
+    "kp": ["I get that", "hard to actually get anything done"]
+  },
+  {
+    "diff": "lv4",
+    "axis": "reduction",
+    "text": "I kinda wanna sign up for that fitness challenge, but I dunno if I'm gonna be able to keep up with everyone.",
+    "ja": "あのフィットネスチャレンジに申し込みたい気もするけど、みんなについていけるかわからないんだよね。",
+    "answer": "フィットネスチャレンジに参加したいが周りについていけるか不安",
+    "choices": ["フィットネスチャレンジに参加したいが周りについていけるか不安", "フィットネスチャレンジで優勝する自信がある", "フィットネスチャレンジの申込期限が過ぎた", "みんなと一緒にフィットネスを辞めるつもりだ", "フィットネスチャレンジの内容がつまらない"],
+    "expl": "kinda は kind of、wanna は want to、dunno は don't know、gonna は going to の短縮形です。フィットネスチャレンジに興味はあるが、他の参加者についていけるか不安だという気持ちを表しています。",
+    "kp": ["kinda wanna", "dunno", "gonna be able to keep up"]
+  },
+  {
+    "diff": "lv4",
+    "axis": "vocab",
+    "text": "The competitive cooking show last night was a real nail-biter, both chefs were neck and neck right up until the very last dish was served.",
+    "ja": "昨夜の料理対決番組はハラハラしたよ。最後の一皿が出されるまで両方のシェフが互角だったんだ。",
+    "answer": "料理対決は最後の一皿まで互角でハラハラした",
+    "choices": ["料理対決は最後の一皿まで互角でハラハラした", "料理番組のシェフが爪を噛む癖があった", "一方のシェフが最初から圧勝した", "料理番組で首を怪我するアクシデントがあった", "最後の料理を両シェフが作れなかった"],
+    "expl": "nail-biter は「ハラハラする展開」、neck and neck は「互角で」という意味のイディオムです。料理対決が最後の一皿まで接戦だったことを表現しています。",
+    "kp": ["nail-biter", "neck and neck"]
+  },
+  {
+    "diff": "lv4",
+    "axis": "distractor",
+    "text": "The apartment's location is absolutely perfect for my commute, but the landlord wants first and last month's rent plus a security deposit all upfront.",
+    "ja": "あのアパートの立地は通勤に最高だけど、大家が初月と最終月の家賃に加えて敷金も全部前払いで要求してるんだ。",
+    "answer": "通勤に最適な立地だが初月・最終月家賃と敷金の前払いが必要",
+    "choices": ["通勤に最適な立地だが初月・最終月家賃と敷金の前払いが必要", "アパートの立地が悪いので家賃が安い", "大家が家賃を最初の月だけ無料にしてくれる", "敷金なしで入居できるアパートを見つけた", "家賃は安いが通勤に不便な立地にある"],
+    "expl": "first and last month's rent は入居時に初月と最終月の家賃を前払いすること、security deposit は敷金、upfront は前払いという意味です。通勤に最適な立地だが初期費用が高額だという内容です。",
+    "kp": ["first and last month's rent", "security deposit", "all upfront"]
+  },
+  {
+    "diff": "lv5",
+    "axis": "speed",
+    "text": "Didja end up going to that podcast taping? I heard the host went off on a tangent about climate change and it turned into this whole thing about what we oughta be doing differently.",
+    "ja": "結局あのポッドキャストの収録に行った？ホストが気候変動の話で脱線して、私たちがどう変わるべきかっていう大議論になったらしいよ。",
+    "answer": "ポッドキャスト収録でホストが気候変動の話に脱線し大議論になったらしい",
+    "choices": ["ポッドキャスト収録でホストが気候変動の話に脱線し大議論になったらしい", "ポッドキャストのホストが気候変動に詳しいので勉強になった", "ポッドキャストの収録が気候変動のせいで中止になった", "ホストが気候変動について短く触れただけだった", "ポッドキャスト収録に行かなかったので内容を知りたい"],
+    "expl": "Didja は Did you、oughta は ought to の速い発音です。went off on a tangent は「脱線した」、turned into this whole thing は「大事になった」という意味で、ポッドキャスト収録中にホストが気候変動について脱線し大議論に発展したという話です。",
+    "kp": ["Didja end up", "went off on a tangent", "oughta"]
+  }
+]
