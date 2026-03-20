@@ -1,0 +1,438 @@
+{
+  "root": "form",
+  "rootMeaning": "形",
+  "rootLang": "ラテン語 forma（起源不詳）",
+  "imageSchema": "型枠（mold）に素材を流し込んで形を作るイメージ。formは「外から見える形・型」。人や組織や考えに「形を与える」あらゆる動きがこの語根から生まれる。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "form（形）が見えたら「形を作る・整える」と読み替えるだけ。in-form=形を中に入れる→知らせる、re-form=形を作り直す→改革する、per-form=形を完全にやり遂げる→実行する。6語が一気に読める。"
+  },
+  "words": [
+    {
+      "word": "inform",
+      "phonetic": "/ɪnˈfɔːrm/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "in", "meaning": "中に", "type": "prefix"},
+        {"part": "form", "meaning": "形", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "in（中に）+ forma（形）= 形を中に与える → 知識を与える → 知らせる",
+        "fact": "ラテン語 informare「形を与える、概念を形成する」から。14世紀に「心や精神に形を与える→教える」の意味で英語に入り、15世紀以降「知らせる、通知する」に転じた。元来は単なる「情報伝達」ではなく、受け手の心に「形（理解）を作り与える」行為を指していた。",
+        "source": "EtymOnline: inform",
+        "cognates": ["information", "informative", "informed", "misinform"]
+      },
+      "cognitive": {
+        "oneliner": "相手の中に「知識の形」を作り込む→知らせる",
+        "fact": "CONTAINERスキーマの応用。話し手が持つ情報（形）を、受け手という容器の中に入れ込む(in-)動き。「情報を流し込む」ではなく「相手の中に形を与える」という能動的なイメージ。informed decision（十分な情報に基づく判断）はまさに「形が中に入った状態」。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "「知らせる」だけで覚えると keep someone informed（常に最新情報を共有する）やinformed consent（十分な説明に基づく同意）で詰まる。語源の「形を中に与える」がわかれば「情報が入った状態を保つ」「形（情報）が入った上での同意」として自然に読める。",
+      "gapOneliner": "inform = 「知らせる」だけでなく「相手の中に形（理解）を作り込む」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "空っぽの容器（相手の頭）の中(in)に情報の「形(form)」を流し込むのがinform。情報が入った状態がinformed。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "informの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["形を中に与える→知らせる", "形を作り直す→改革する", "形を完全にやる→実行する", "形を越えて変える→変形する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "in + form の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["中に + 形 = 知識を与える", "強く + 形 = 強制する", "上に + 形 = 昇格させる", "外に + 形 = 発表する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Please ______ us of any changes to your schedule.",
+          "hint": "「形を中に与える」→「知らせる」",
+          "explanationFocus": "gap",
+          "choices": ["inform", "reform", "perform", "conform"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "informと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["the public（市民に知らせる）", "a product（製品を知らせる）", "the weather（天気を知らせる）", "a building（建物を知らせる）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Patients must give informed consent before surgery.\" — informedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["十分な情報を与えられた", "強制された", "拒否された", "記録された"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Please inform us of any changes to your schedule."]
+    },
+    {
+      "word": "reform",
+      "phonetic": "/rɪˈfɔːrm/",
+      "toeicRank": "TSL上位・ニュース英語頻出",
+      "parts": [
+        {"part": "re", "meaning": "再び・作り直す", "type": "prefix"},
+        {"part": "form", "meaning": "形", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "re（再び）+ forma（形）= 形を作り直す → 改革する・改善する",
+        "fact": "ラテン語 reformare「再び形を作る、形作り直す」から。14世紀に「よりよい状態に形作り直す」の意味で英語に入り、宗教改革（Reformation、16世紀）で広く使われた。政治・社会・組織の「旧い形を壊して新しい形を作る」行為全般を指す。",
+        "source": "EtymOnline: reform",
+        "cognates": ["reform", "reformation", "reformer", "reformed"]
+      },
+      "cognitive": {
+        "oneliner": "古い形を壊して新しい形に作り直す→改革する",
+        "fact": "CHANGE OF STATE（状態変化）スキーマ。現在の形(form)を一度崩し、再び(re-)よりよい形に組み直す力の動き。tax reform（税制改革）も educational reform（教育改革）も、既存の「型枠」を作り直すイメージで統一して理解できる。",
+        "source": "Johnson (1987) CHANGE OF STATEスキーマ"
+      },
+      "gap": "reformは「改良」であり「根本的破壊」ではない点に注意。語源の「再び形を作る」通り、元の目的を保ちながら形だけを作り直す。revolution（革命）との違いがここにある。reform a law = 法律の形を作り直す（廃止ではなく改正）。",
+      "gapOneliner": "reform = 壊して作り直すのではなく「形を保ちながら作り直す」改革",
+      "hook": {
+        "label": "記憶フック",
+        "text": "歪んだ型枠を「再び(re)形作り(form)」直すのがreform。政治改革も税制改革も、古い形を再び作り直すイメージ。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "reformの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["形を作り直す→改革する", "形を中に入れる→知らせる", "形を越えて変える→変形する", "形に沿って動く→従う"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "re + form の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["再び + 形 = 作り直す", "反対に + 形 = 破壊する", "上に + 形 = 発展させる", "離れて + 形 = 変質する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The government plans to ______ the healthcare system.",
+          "hint": "「形を作り直す」→「改革する」",
+          "explanationFocus": "gap",
+          "choices": ["reform", "inform", "perform", "transform"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "reformと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["the tax system（税制を改革する）", "a concert（コンサートをやり直す）", "a building（建物を改革する）", "the weather（天気を作り直す）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The Reformation transformed Christianity in 16th-century Europe.\" — Reformationの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["形を作り直した宗教運動", "形を完全に廃止した運動", "形を中に取り込んだ運動", "形に従った運動"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The government plans to reform the tax system."]
+    },
+    {
+      "word": "perform",
+      "phonetic": "/pərˈfɔːrm/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "per", "meaning": "完全に・通して", "type": "prefix"},
+        {"part": "form", "meaning": "形・決められた型", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "per（完全に）+ forma（形・型）= 型通りに完全にやり遂げる → 実行する・演じる",
+        "fact": "古フランス語 parfournir「完全に仕上げる」経由でラテン語的に再解釈され、per + forma の構造に収まった。14世紀後半に「約束・義務を完全に果たす」の意味で英語に入り、16世紀に舞台での「演じる」に拡張。「決められた形（台本・仕様・約束）を最後まで全うする」が中核。",
+        "source": "EtymOnline: perform",
+        "cognates": ["performance", "performer", "outperform", "underperform"]
+      },
+      "cognitive": {
+        "oneliner": "決められた型（形）を最初から最後まで完全に実行する→演じる・実行する",
+        "fact": "PATH（道筋）スキーマ。あらかじめ定められた形（スコア・台本・仕様・約束）という経路を、per-（通して）一切省かずに走り切る動き。perform a task（タスクを完全実行）も perform on stage（舞台で演じる）も同じ「型を完走する」イメージ。",
+        "source": "Johnson (1987) PATHスキーマ"
+      },
+      "gap": "performは「型を完全にやり遂げる」だから、performance review（業績評価）は「どれだけ型通り完全にできたかの評価」。perform well / poorly のように副詞と組み合わせて「どのくらいの水準で型をやり遂げたか」を表せる点がTOEICで頻出。",
+      "gapOneliner": "perform = 型（形）を最初から最後まで「完全に」実行すること",
+      "hook": {
+        "label": "記憶フック",
+        "text": "楽譜（form=型）を「完全に(per)」最後まで弾き切るのがperform。演奏も仕事の実行も、決められた形を全うする点で同じ。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "performの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["型を完全にやり遂げる→実行する", "形を作り直す→改革する", "形を中に入れる→知らせる", "形を越えて変える→変形する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "per + form の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["完全に + 型 = やり遂げる", "再び + 形 = 作り直す", "外に + 形 = 発表する", "一緒に + 形 = そろえる"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The surgeon will ______ a three-hour operation.",
+          "hint": "「型を完全にやり遂げる」→「実施する」",
+          "explanationFocus": "gap",
+          "choices": ["perform", "reform", "inform", "conform"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "performと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["well（うまく実行する）", "a building（建物を演じる）", "money（お金を実行する）", "the weather（天気を実行する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The new drug performed better than expected in clinical trials.\" — performedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["実績を出した", "失敗した", "製造された", "承認された"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The team performed well under pressure."]
+    },
+    {
+      "word": "transform",
+      "phonetic": "/trænsˈfɔːrm/",
+      "toeicRank": "TSL上位・ビジネス英語頻出",
+      "parts": [
+        {"part": "trans", "meaning": "越えて・向こう側へ", "type": "prefix"},
+        {"part": "form", "meaning": "形", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "trans（越えて）+ forma（形）= 元の形を越えて別の形に変わる → 変形する・一変する",
+        "fact": "ラテン語 transformare「形を変える、変容させる」から。14世紀後半に「外見や性質を根本的に変える」の意味で英語に入り、数学・電気工学・言語学など多分野に広がった。reformが「同じ目的の範囲内で形を直す」のに対し、transformは「元の形の境界線を越えて別のものになる」点が核心。",
+        "source": "EtymOnline: transform",
+        "cognates": ["transformation", "transformer", "transformative"]
+      },
+      "cognitive": {
+        "oneliner": "元の形の境界を「越えて」まったく別の形になる→根本的に変わる",
+        "fact": "BOUNDARY（境界）スキーマ。trans-は「境界を越える」を意味し、形(form)の境界線を越えることで質的に異なるものに変わる。改良(reform)や変形(transform)の違いはまさにこの「境界を越えるか否か」。digital transformation（デジタル変革）がtransformationを使うのは「旧来ビジネスの形を根本から越える」ためのプロセスだから。",
+        "source": "Johnson (1987) BOUNDARYスキーマ"
+      },
+      "gap": "transformはreformより変化の度合いが大きい。reform a company = 会社の仕組みを改善する（会社のまま）、transform a company = 会社を根本から別ものに変える。digital transformation（DX）がreformではなくtransformationを使う理由がここにある。",
+      "gapOneliner": "transform = reformより一段上、形の境界を「越えて」根本的に別ものになること",
+      "hook": {
+        "label": "記憶フック",
+        "text": "サナギが蝶になるように、元の「形(form)」を「越えて(trans)」全く別の存在になるのがtransform。DXもまさにビジネスの形を越えた変革。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "transformの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["形を越えて変わる→根本的に変容する", "形を作り直す→改革する", "形に完全従う→実行する", "形を中に入れる→知らせる"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "trans + form の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["越えて + 形 = 根本変容する", "再び + 形 = 作り直す", "一緒に + 形 = 形を揃える", "完全に + 形 = やり遂げる"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The new CEO aims to ______ the company's culture completely.",
+          "hint": "「形を越えて変える」→「根本から変革する」",
+          "explanationFocus": "gap",
+          "choices": ["transform", "reform", "perform", "inform"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "transformと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["an industry（産業を変革する）", "a form（フォームを変える）", "a concert（コンサートを変える）", "a discount（割引を変える）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Digital technology has transformed how we communicate.\" — transformedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["根本的に変えた", "少し改善した", "記録した", "阻害した"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Technology has transformed the way we work."]
+    },
+    {
+      "word": "conform",
+      "phonetic": "/kənˈfɔːrm/",
+      "toeicRank": "TSL中位・法律・品質管理頻出",
+      "parts": [
+        {"part": "con", "meaning": "一緒に・完全に", "type": "prefix"},
+        {"part": "form", "meaning": "形", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "con（一緒に）+ forma（形）= 形を一緒に揃える → 従う・準拠する",
+        "fact": "ラテン語 conformare「形を揃える、同じ形にする」から。14世紀後半に「同じ形に合わせる」の意味で英語に入り、宗教的文脈（英国国教会に従う）から社会的・法的規範への準拠まで広がった。conform to standards（基準に準拠する）は「自分の形を基準の形に揃える」動き。",
+        "source": "EtymOnline: conform",
+        "cognates": ["conformity", "nonconformist", "conformance", "conforming"]
+      },
+      "cognitive": {
+        "oneliner": "自分の形を既存の形に「揃わせる」→従う・準拠する",
+        "fact": "MATCHING（一致）スキーマ。外にある型（基準・規範・ルール）の形と、自分の形を「一緒に(con-)」ぴたりと合わせる(form)動き。社会規範に「合わせて形を揃える」conformity（同調）も、nonconformist（体制に従わない人）も、「形を揃えるか揃えないか」の軸で理解できる。",
+        "source": "Johnson (1987) MATCHINGスキーマ"
+      },
+      "gap": "TOEICや法律英語では conform to regulations / standards / requirements（規制・基準・要件に準拠する）という形が頻出。「従う」だけで覚えると「何の形に揃えるのか」が曖昧になる。語源の「形を一緒に揃える」なら「基準の形に自分の形を合わせる」と明確に理解できる。",
+      "gapOneliner": "conform = 自分の形を外側の型（規格・規範）にぴたりと揃えること",
+      "hook": {
+        "label": "記憶フック",
+        "text": "金型(form)に「一緒に(con)」ぴたりはめ込むのがconform。法律の型・社会の型に自分を合わせる。はみ出す人がnonconformist（反体制の人）。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "conformの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["形を一緒に揃える→従う", "形を完全にやり遂げる→実行する", "形を越えて変わる→変容する", "形を作り直す→改革する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "con + form の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["一緒に + 形 = 揃わせる", "越えて + 形 = 変容する", "再び + 形 = 作り直す", "完全に + 形 = 実行する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "All products must ______ to international safety standards.",
+          "hint": "「形を一緒に揃える」→「準拠する」",
+          "explanationFocus": "gap",
+          "choices": ["conform", "perform", "reform", "transform"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "conformと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["to regulations（規制に準拠する）", "a concert（コンサートを揃える）", "money（お金を合わせる）", "the weather（天気に揃える）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The new design does not conform to building codes.\" — conformの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["準拠する", "超過する", "改善する", "記録する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["All products must conform to safety regulations."]
+    },
+    {
+      "word": "formal",
+      "phonetic": "/ˈfɔːrməl/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "form", "meaning": "形・型", "type": "root"},
+        {"part": "al", "meaning": "〜の性質を持つ", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "forma（形・型）+ -al（〜の性質を持つ）= 決まった型の性質を持つ → 正式な・形式的な",
+        "fact": "ラテン語 formalis「形に関する、規則正しい」から。14世紀に「形や外見に関わる」で英語に入り、15世紀に「公式な手続き・礼儀に従った」の意味に発展。formal education（正規教育）、formal attire（正装）、formal agreement（正式合意）は全て「決まった型・形式に沿った」という意味。",
+        "source": "EtymOnline: formal",
+        "cognates": ["formally", "formality", "informal", "formalize"]
+      },
+      "cognitive": {
+        "oneliner": "社会や制度が決めた「型・形式」にぴったり沿っている状態→正式な",
+        "fact": "NORM（規範）スキーマ。社会・組織・文化が定めた「標準的な形（forma）」に合致している(-al)状態がformal。対義語informal（in-=否定）は「決まった型から外れた」状態。TOEICのビジネス場面では formal complaint（正式苦情）のように「型を踏んだ手続き」を示す。",
+        "source": "Johnson (1987) NORMスキーマ"
+      },
+      "gap": "formal は「フォーマル=おしゃれ」という印象で覚えがちだが、本質は「形式・型に沿っている」こと。formal training（正規訓練）や formal request（正式申請）のように「服装以外」でも使う。no formal education（正規教育を受けていない）の formal に気づけるかがTOEICのポイント。",
+      "gapOneliner": "formal = 服装だけでなく「決まった型・形式に沿っている」すべての状態",
+      "hook": {
+        "label": "記憶フック",
+        "text": "「形(form)の性質を持つ(al)」のがformal。型通りのスーツ、型通りの手続き、型通りの教育。型を踏まないのがinformal（くだけた）。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "formalの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["決まった型の性質を持つ→正式な", "形を越えた→根本的な", "形を作り直す→改革的な", "形を中に持つ→情報的な"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "form + al の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["形 + 〜の性質 = 型に沿った", "形 + 動作 = 実行する", "形 + 否定 = 型を壊す", "形 + 反復 = 作り直す"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "She has no ______ training in accounting, but she's very skilled.",
+          "hint": "「決まった型の性質」→「正規の・公式な」",
+          "explanationFocus": "gap",
+          "choices": ["formal", "informal", "reformed", "performed"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "formalと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["complaint（正式な苦情）", "weather（正式な天気）", "product（正式な製品）", "profit（正式な利益）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The company issued a formal apology for the data breach.\" — formalの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["型通りの手続きを踏んだ正式な", "型を越えた異例の", "型を作り直した改革的な", "型に従わない非公式な"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Please submit a formal complaint in writing."]
+    }
+  ]
+}

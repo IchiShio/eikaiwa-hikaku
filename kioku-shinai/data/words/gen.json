@@ -1,0 +1,509 @@
+{
+  "root": "gen",
+  "rootMeaning": "生む・種類",
+  "rootLang": "ラテン語 genus/generare（PIE *ǵenh₁-）",
+  "imageSchema": "種から芽が出るイメージ。土の中に埋まった種（起源・血統）が外に向かって生まれ出てくる動き。生まれた種類・性質がそのものの本質を決める。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "gene（遺伝子）は「生む」情報の塊。genが見えたら「生む・種類・起源」と読み替えるだけで、generate（生み出す）からgenetic（遺伝の）まで7語が一気に読める。"
+  },
+  "words": [
+    {
+      "word": "generate",
+      "phonetic": "/ˈdʒenəreɪt/",
+      "toeicRank": "TSL上位・NGSL収録",
+      "parts": [
+        {"part": "gen", "meaning": "生む", "type": "root"},
+        {"part": "erate", "meaning": "〜する（動詞化接尾辞）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "generare（生む・産み出す）= 無から有を生み出す動作",
+        "fact": "ラテン語 generare「生む、産み出す、引き起こす」から。PIE語根 *ǵenh₁-「生む」に由来。1560年代に「子孫を生む」の意味で英語に入り、17世紀以降「電力・熱・収益などを生み出す」へ意味拡張。",
+        "source": "EtymOnline: generate",
+        "cognates": ["generation", "generator", "regenerate", "degenerate"]
+      },
+      "cognitive": {
+        "oneliner": "存在しなかったものを存在させる力の発揮→創出する",
+        "fact": "SOURCEスキーマの典型。内部に蓄積されたエネルギー（gen-）が外向きに作用し、新しい実体を出現させる動き。発電機（generator）が電力を「生む」のはこのイメージの最も具体的な例示。",
+        "source": "Johnson (1987) SOURCEスキーマ"
+      },
+      "gap": "「生成する」という訳語だけで覚えると generate interest（関心を生む）や generate revenue（収益を生む）で詰まる。語源の「生む・産み出す」がわかれば電力も収益も話題も同じイメージで読める。",
+      "gapOneliner": "generate = 電力も収益も関心も、すべて「生み出す」動作",
+      "hook": {
+        "label": "記憶フック",
+        "text": "発電機(generator)は電力を「生む(gen)」機械。generate income = 収入を生む。生まれていないものを世に出す動きがgenerate。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "generateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["生む・産み出す", "集める・貯める", "壊す・分解する", "運ぶ・移動する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "gen + erate の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["生む + 動詞化 = 産み出す", "集める + 動詞化 = 集積する", "導く + 動詞化 = 案内する", "止める + 動詞化 = 停止する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The new campaign is expected to ______ more leads.",
+          "hint": "「生む・産み出す」→「獲得する・生み出す」",
+          "explanationFocus": "gap",
+          "choices": ["generate", "regenerate", "degenerate", "enumerate"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "generateと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["revenue（収益を生む）", "mistake（間違いを生む）", "sleep（眠りを生む）", "damage（損害を生む）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The solar panels generate enough electricity for 200 homes.\" — generateの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["生み出す", "貯蔵する", "消費する", "輸送する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The new policy is expected to generate thousands of jobs."]
+    },
+    {
+      "word": "general",
+      "phonetic": "/ˈdʒenərəl/",
+      "toeicRank": "TSL上位・最頻出語",
+      "parts": [
+        {"part": "gen", "meaning": "種類・類", "type": "root"},
+        {"part": "eral", "meaning": "〜に属する（形容詞化接尾辞）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "genus（種類・類）+ -alis = あらゆる種類に属する → 一般的な",
+        "fact": "ラテン語 generalis「ある種族・類全体に関わる」から。genus（種類・血統）の形容詞形。13世紀に「特定のものでなくすべての種類に及ぶ」の意味でフランス語経由で英語に入り、軍の「将軍」は「全軍を統括する将」の意味から15世紀に定着。",
+        "source": "EtymOnline: general",
+        "cognates": ["generally", "generalize", "generalization", "general manager"]
+      },
+      "cognitive": {
+        "oneliner": "すべての種類（genus）を覆う→特定でない・広範な",
+        "fact": "CONTAINERスキーマの拡張版。個々の種類（specific）を内包する大きな容器が general。「一般的」とは特定の種類に限定されず、あらゆる種類を含む状態を指す。",
+        "source": "Lakoff & Johnson (1980) CONTAINERスキーマ"
+      },
+      "gap": "「一般的な」と「将軍」が同じ単語に見えて混乱しがち。どちらも「すべての種類を統括する」が語源。general manager = すべての部門を統括する管理者、general election = すべての選挙区が対象の選挙。",
+      "gapOneliner": "general = 「一般的」も「将軍」も、すべての種類を統括する者・状態",
+      "hook": {
+        "label": "記憶フック",
+        "text": "将軍(general)は「すべての兵種(gen)を束ねる人」。general knowledge = あらゆる種類の知識。genが「種類」を意味するとわかれば一気に覚えられる。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "generalの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["すべての種類に及ぶ→一般的な", "特定の種類だけの→専門的な", "新しい種類を生む→革新的な", "種類を区別する→分類する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "gen（種類）+ eral の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["種類 + 属する = すべての種類に及ぶ", "生む + 属する = 産み出すもの", "導く + 属する = 案内するもの", "集める + 属する = 集積されたもの"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "In ______, the project went smoothly.",
+          "hint": "「すべての種類を含む」→「概して・全体的に」",
+          "explanationFocus": "gap",
+          "choices": ["general", "genuine", "generous", "genetic"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "generalと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["manager（総支配人）", "teacher（一般教師）", "building（一般建物）", "weather（一般天気）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"She has a general understanding of the topic.\" — generalの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["全体的な・概括的な", "詳細な・専門的な", "誤った・不正確な", "公式な・正式な"],
+          "correct": 0
+        }
+      ],
+      "examples": ["As a general rule, meetings start at 9 a.m."]
+    },
+    {
+      "word": "generous",
+      "phonetic": "/ˈdʒenərəs/",
+      "toeicRank": "NGSL収録・日常頻出",
+      "parts": [
+        {"part": "gen", "meaning": "生まれ・血統", "type": "root"},
+        {"part": "erous", "meaning": "〜に富む（形容詞化接尾辞）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "genus（高貴な血統）+ -osus = 高貴な生まれに富む → 気前がよい",
+        "fact": "ラテン語 generosus「高貴な生まれの、高潔な」から。古代ローマでは高貴な血統（genus）の人間は寛大で気前がよいのが美徳とされた。1580年代に英語に入り当初は「貴族的な」の意味、17世紀に「物惜しみしない・気前がよい」へ転義。",
+        "source": "EtymOnline: generous",
+        "cognates": ["generosity", "generously", "ungenerous"]
+      },
+      "cognitive": {
+        "oneliner": "高貴な血統の持ち主→その本質として惜しみなく与える",
+        "fact": "PROPERTYスキーマの適用。血統（gen-）が人間の本質的性質を決めるという古代的世界観。高い生まれ（genus）→高い精神→与えることを惜しまない、という意味連鎖が語源に刻まれている。",
+        "source": "Lakoff & Johnson (1980) ESSENCE IS INSIDEメタファー"
+      },
+      "gap": "「気前がよい」だけで覚えると a generous helping（たっぷりの量）や a generous offer（破格の申し出）で詰まる。「豊かに与える」が本質なので、量・条件が「太っ腹」なときにも使える。",
+      "gapOneliner": "generous = 人だけでなく量・条件が「惜しみなく豊か」なときにも使う",
+      "hook": {
+        "label": "記憶フック",
+        "text": "高貴な家柄(gen)に生まれた人はたっぷり(erous)与える。generous donation = 惜しみない寄付。genに「生まれ・血統」が見えると覚えやすい。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "generousの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["高貴な生まれ→気前がよい", "多くを生む→生産的な", "共に生まれた→友好的な", "新しく生む→革新的な"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "gen（血統）+ erous の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["血統 + 富む = 高貴さに富む→気前がよい", "生む + 富む = 産出に富む→多産な", "種類 + 富む = 種類に富む→多様な", "性質 + 富む = 性質に富む→個性的な"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "She was ______ enough to donate half of her salary.",
+          "hint": "「高貴な生まれ＝惜しみなく与える」→「気前のよい」",
+          "explanationFocus": "gap",
+          "choices": ["generous", "genuine", "general", "genetic"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "generousと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["offer（太っ腹な申し出）", "mistake（気前のよい間違い）", "idea（惜しみない考え）", "problem（気前のよい問題）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The restaurant served a generous portion of pasta.\" — generousの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["たっぷりとした", "薄味の", "高価な", "特別な"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Thank you for your generous contribution to our project."]
+    },
+    {
+      "word": "genuine",
+      "phonetic": "/ˈdʒenjuɪn/",
+      "toeicRank": "NGSL収録・ビジネス頻出",
+      "parts": [
+        {"part": "gen", "meaning": "生まれ・本来の", "type": "root"},
+        {"part": "uine", "meaning": "〜の性質をもつ（接尾辞）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "genuinus（生まれながらの・本来の）= 生まれつき本物である",
+        "fact": "ラテン語 genuinus「生まれながらの、天然の」から。語根 gen-（生む・血統）に由来し、「生まれたときからのもの＝加工されていない本物」の意味。1596年頃に英語に入り「本物の、真正な」の意味に。一説にはラテン語 genu（膝）と関連し、父親が生まれた子を膝の上に載せることで認知するローマの慣習に由来するとも。",
+        "source": "EtymOnline: genuine",
+        "cognates": ["genuinely", "genuineness"]
+      },
+      "cognitive": {
+        "oneliner": "生まれたときから持っている性質→人工的でない・本物の",
+        "fact": "ESSENCEスキーマの典型。生まれ（gen-）に内在する性質は変えられず、それが「本物性」の根拠になる。genuine leather = 生まれながらの革（人工皮革でない）、genuine smile = 作り物でない生来の笑顔。",
+        "source": "Lakoff & Johnson (1980) ESSENCE IS INSIDE"
+      },
+      "gap": "「本物の」だけで覚えると genuine interest（心からの関心）や genuine concern（真の懸念）のような感情表現で詰まる。モノだけでなく感情・意図が「作り物でなく本心から」という場面でも多用される。",
+      "gapOneliner": "genuine = モノの「本物」だけでなく感情・意図の「真の・心からの」にも使う",
+      "hook": {
+        "label": "記憶フック",
+        "text": "生まれ(gen)たときからの本来の性質(uine)がgenuine。genuine leather = 本革（生まれながらの革）。笑顔も気持ちも「生まれながらの本物」ならgenuine。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "genuineの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["生まれながらの→本物の", "新しく生んだ→最新の", "一緒に生まれた→共通の", "多く生まれた→豊富な"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "gen（生まれ）+ uine の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["生まれ + 性質 = 生来の本物", "生む + 性質 = 産出された", "種類 + 性質 = 多様な", "導く + 性質 = 案内する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "We are looking for candidates with a ______ passion for customer service.",
+          "hint": "「生まれながらの本物」→「心からの・真の」",
+          "explanationFocus": "gap",
+          "choices": ["genuine", "general", "generous", "generic"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "genuineと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["concern（真の懸念）", "weather（本物の天気）", "building（本物の建物）", "traffic（本物の交通）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Experts confirmed the painting is genuine.\" — genuineの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["本物の・真正な", "高価な・貴重な", "古い・歴史的な", "完全な・欠陥のない"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Her enthusiasm for the job appeared to be genuine."]
+    },
+    {
+      "word": "genre",
+      "phonetic": "/ˈʒɑːnrə/",
+      "toeicRank": "NGSL収録・文化・ビジネス頻出",
+      "parts": [
+        {"part": "gen", "meaning": "種類・類", "type": "root"},
+        {"part": "re", "meaning": "フランス語形（接尾辞）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "フランス語 genre = ラテン語 genus（種類・類）の直系借用語",
+        "fact": "フランス語 genre「種類、様式」から直接借用。ラテン語 genus（種類・血統）に由来し、PIE語根 *ǵenh₁-「生む」まで遡る。1770年頃に英語に入り当初は絵画の分類「風俗画（生活の場面を描く画）」を指し、19世紀以降に音楽・映画・文学の「ジャンル」として一般化。",
+        "source": "EtymOnline: genre",
+        "cognates": ["gender", "genus", "general", "generate"]
+      },
+      "cognitive": {
+        "oneliner": "生まれ（birth）・血統（lineage）が同じもの同士のまとまり→種類・ジャンル",
+        "fact": "CATEGORYスキーマの原型。共通の起源（gen-）を持つものが自然にまとまりを形成する。映画のジャンル（action/comedy等）も「共通の性質から生まれたグループ」という意味で genus と同根。",
+        "source": "Rosch (1973) カテゴリー理論"
+      },
+      "gap": "「ジャンル」としてカタカナで知っていても genre-bending（ジャンルを超えた）やgenre fiction（大衆文学）などの複合語で詰まりやすい。「同じ種類から生まれたもの」が語義の核心なので、逸脱や混合を表す場合も自然に理解できる。",
+      "gapOneliner": "genre = 同じ起源・性質から生まれた「種類のまとまり」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "カタカナの「ジャンル」はフランス語 genre がそのまま入ってきた言葉。gen（種類）＝ジャンルの核心。同じ生まれ(gen)のものが集まったカテゴリーがgenre。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "genreの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["同じ種類から生まれたまとまり→ジャンル", "新しく生まれたもの→最新作", "一般的に生まれた→大衆的な", "高貴な生まれ→高尚な"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "genre と genus（種類）が同語根であることを示す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["共通の起源を持つもののまとまり", "新しく生まれた様式", "一般的な芸術形式", "高貴な生まれの作品"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The film doesn't fit neatly into any single ______.",
+          "hint": "「同じ種類のまとまり」→「ジャンル」",
+          "explanationFocus": "gap",
+          "choices": ["genre", "general", "genius", "gender"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "genreと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["fiction（ジャンル小説）", "office（ジャンル事務所）", "science（ジャンル科学）", "economy（ジャンル経済）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Her latest novel is a genre-bending mix of mystery and romance.\" — genreの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["文学上の種類・様式", "文章の長さ", "出版社の種類", "作者のスタイル"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Science fiction is her favorite genre of literature."]
+    },
+    {
+      "word": "genius",
+      "phonetic": "/ˈdʒiːniəs/",
+      "toeicRank": "NGSL収録・日常・ビジネス頻出",
+      "parts": [
+        {"part": "gen", "meaning": "生む・生まれながらの力", "type": "root"},
+        {"part": "ius", "meaning": "〜の守護霊・本質（ラテン語接尾辞）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "genius = ローマ神話の「生まれながらの守護霊」→その人を生み出した内なる力",
+        "fact": "ラテン語 genius「人または場所に宿る守護霊、生来の気質」から。gen-（生む）に由来し、古代ローマでは各人に生まれながらに宿る霊的力（genius）が才能を決めると考えられた。14世紀に「天賦の才能」の意味で英語に入り、18世紀以降「天才」という人物を指すようになった。",
+        "source": "EtymOnline: genius",
+        "cognates": ["ingenious", "ingenuous", "genie（アラビア語経由の同根語）"]
+      },
+      "cognitive": {
+        "oneliner": "生まれ（gen-）とともに宿った霊的な力→天賦の才・天才",
+        "fact": "ESSENCEスキーマの極端な例。通常の人間の内なる本質（gen-）が際立って強く現れた存在がgenius。「天才は努力でなく生まれながらの資質」という古代的信念が語源に刻まれている。",
+        "source": "Lakoff & Johnson (1980) ESSENCE IS INSIDE"
+      },
+      "gap": "「天才」という人物だけで覚えると a stroke of genius（天才的なひらめき）や the genius of the plan（計画の妙）のような抽象的用法で詰まる。「生まれながらの卓越した力・質」が本義なので、人でなくアイデアや仕組みの「巧みさ」にも使える。",
+      "gapOneliner": "genius = 天才という人だけでなく、アイデアや計画の「天才的な点」にも使う",
+      "hook": {
+        "label": "記憶フック",
+        "text": "生まれ(gen)たときから宿っている卓越した力(ius)がgenius。アラジンのランプの精霊「ジーニー（genie）」も同語源で、生来の超自然的な力を持つ存在。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "geniusの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["生まれながらに宿る卓越した力→天才", "多くを生み出す→多産な人", "一般的に生まれた→平均的な人", "高貴に生まれた→貴族"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "gen（生む）+ ius の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["生まれ + 守護霊 = 天賦の才・天才", "生む + 性質 = 多産な", "種類 + 守護 = 種族の守り手", "導く + 守護 = 案内する霊"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The ______ of his marketing strategy was its simplicity.",
+          "hint": "「生まれながらの卓越した力」→「天才的な点・妙」",
+          "explanationFocus": "gap",
+          "choices": ["genius", "genre", "general", "genuine"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "geniusと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["stroke of（天才的なひらめき）", "lack of（天才の欠如）", "cost of（天才のコスト）", "risk of（天才のリスク）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"It was a stroke of genius to offer free delivery.\" — geniusの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["天才的なひらめき", "大きなリスク", "単純な解決策", "偶然の一致"],
+          "correct": 0
+        }
+      ],
+      "examples": ["It was pure genius to solve the problem that way."]
+    },
+    {
+      "word": "genetic",
+      "phonetic": "/dʒəˈnetɪk/",
+      "toeicRank": "NGSL収録・科学・医療頻出",
+      "parts": [
+        {"part": "gen", "meaning": "生む・起源", "type": "root"},
+        {"part": "etic", "meaning": "〜に関する（形容詞化接尾辞）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "genesis（起源・発生）+ -ic = 起源・発生に関する → 遺伝の",
+        "fact": "ギリシャ語 genetikos「起源に関する」から。genesis（発生・起源、PIE *ǵenh₁-）の形容詞形。19世紀後半に生物学用語として英語に定着し、1897年に「遺伝に関する」の現代的意味が確立。gene（遺伝子）は1911年にデンマークの生物学者 Wilhelm Johannsen が genetikos から造語。",
+        "source": "EtymOnline: genetic",
+        "cognates": ["genetics", "gene", "genome", "genotype", "genesis"]
+      },
+      "cognitive": {
+        "oneliner": "起源（gen-）に由来する情報・性質→生まれながらに受け継がれるもの",
+        "fact": "SOURCEスキーマの生物学的応用。親から子へ受け継がれる情報（遺伝子）は「起源（gen-）から発生した」もの。genetic engineering（遺伝子工学）も「起源の情報を操作する技術」という意味で語根から理解できる。",
+        "source": "Johnson (1987) SOURCEスキーマ"
+      },
+      "gap": "「遺伝の」という意味だけで覚えると genetic algorithm（遺伝的アルゴリズム）やgenetic fallacy（発生論的誤謬）などの転用表現で詰まる。「起源・発生に関する」という語根の意味がわかれば、生物学以外への拡張用法も理解できる。",
+      "gapOneliner": "genetic = 生物の「遺伝」だけでなく、起源・発生に関するあらゆる文脈で使われる",
+      "hook": {
+        "label": "記憶フック",
+        "text": "gene（遺伝子）はgen（生む・起源）から生まれた言葉。genetic = 遺伝子(gene)に関する(tic)。「生まれの設計図」に関するのがgenetic。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "geneticの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["起源・発生に関する→遺伝の", "多く生む→多産の", "種類に富む→多様な", "一般的に生まれた→普遍的な"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "gen（起源）+ etic の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["起源 + 〜に関する = 発生・遺伝に関する", "生む + 〜に関する = 生産に関する", "種類 + 〜に関する = 分類に関する", "血統 + 〜に関する = 家系に関する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The researchers discovered a ______ link between the two diseases.",
+          "hint": "「起源・発生に関する」→「遺伝的な」",
+          "explanationFocus": "gap",
+          "choices": ["genetic", "genuine", "generous", "generic"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "geneticと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["engineering（遺伝子工学）", "management（遺伝的管理）", "economy（遺伝的経済）", "tourism（遺伝的旅行）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"There is a genetic predisposition to the condition in some families.\" — geneticの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["遺伝的な・生まれながらの", "環境による・後天的な", "感染性の・伝染する", "心理的な・精神的な"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Genetic research has transformed modern medicine."]
+    }
+  ]
+}

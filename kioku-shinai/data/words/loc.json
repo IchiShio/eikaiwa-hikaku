@@ -1,0 +1,443 @@
+{
+  "root": "loc",
+  "rootMeaning": "場所",
+  "rootLang": "ラテン語 locus（PIE *stel-）",
+  "imageSchema": "地図上の「点」を指で押さえるイメージ。場所を固定し、そこへ向かって動かす・そこから動かす・そこに割り当てる動き全体を loc が表す。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "「ロケーション(location)」は聞き慣れた単語。その loc が「場所」を意味するラテン語根。loc が見えたら「場所」と読み替えるだけで、locate・local・allocate・relocate・locomotive・dislocate の6語が一気に読める。"
+  },
+  "words": [
+    {
+      "word": "locate",
+      "phonetic": "/loʊˈkeɪt/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "loc", "meaning": "場所", "type": "root"},
+        {"part": "ate", "meaning": "動詞化", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "locus（場所）+ -ate（動詞化）= 場所を定める → 見つける・位置づける",
+        "fact": "ラテン語 locare「場所に置く、賃貸する」から派生。英語には17世紀初頭に「場所を定める」の意味で入った。アメリカ英語では1839年頃から「定住する、居を構える」にも使われ、20世紀に「（場所・人を）突き止める、見つける」の意味が主流になった。",
+        "source": "EtymOnline: locate",
+        "cognates": ["location", "locator", "locale"]
+      },
+      "cognitive": {
+        "oneliner": "抽象的な「場所」の概念に動詞の動きを与える → 場所を確定させる行為",
+        "fact": "CONTAINERスキーマの応用。漠然と広がる空間の中に「点」を打ち込む動き。GPS が座標を「場所」として確定させるイメージが典型。locate a file = ファイルという点をデジタル空間の中に固定して取り出す。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "「locate = 見つける」だけで覚えると、The company is located in Tokyo.（会社は東京に位置する）で詰まる。語源の「場所を定める」がわかれば、「位置する・設置する」も「突き止める」も同じイメージ。We need to locate the source of the problem.（問題の源を突き止める）も自然に読める。",
+      "gapOneliner": "locate = 「見つける」だけでなく「場所を定める・位置する」が本質",
+      "hook": {
+        "label": "記憶フック",
+        "text": "GPS が電波を受け取って「場所(loc)を確定させる(ate)」のが locate。locate a person = その人が存在する場所を地図上に固定する。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "locateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["場所を定める→見つける", "場所を壊す→移動させる", "場所に隠れる→消える", "場所を越える→超過する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "loc + ate の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["場所 + 動詞化 = 位置を定める", "動き + 動詞化 = 走らせる", "時間 + 動詞化 = 予定を入れる", "力 + 動詞化 = 強制する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "We finally managed to ______ the missing documents.",
+          "hint": "「場所を定める」→「突き止める」",
+          "explanationFocus": "gap",
+          "choices": ["locate", "allocate", "relocate", "dislocate"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "locateと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["the source（原因を突き止める）", "the weather（天気を定める）", "a friend（友人を製造する）", "the music（音楽を位置する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The new factory will be located just outside the city.\" — locatedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["位置することになる", "建設を開始する", "移転を完了した", "閉鎖される予定だ"],
+          "correct": 0
+        }
+      ],
+      "examples": ["We finally managed to locate the missing documents."]
+    },
+    {
+      "word": "local",
+      "phonetic": "/ˈloʊkəl/",
+      "toeicRank": "TSL 上位・NGSL 上位",
+      "parts": [
+        {"part": "loc", "meaning": "場所", "type": "root"},
+        {"part": "al", "meaning": "形容詞化（〜に関する）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "locus（場所）+ -alis（〜に関する）= ある場所に関係する → 地元の・現地の",
+        "fact": "ラテン語 localis「場所の、場所に関する」から。14世紀後半に英語に入り当初は「特定の場所に限定された」の意味。17世紀以降「地元の、地域の」として定着。名詞としての「地元の人・地域電車」は19世紀から。",
+        "source": "EtymOnline: local",
+        "cognates": ["locally", "locality", "localize", "locale"]
+      },
+      "cognitive": {
+        "oneliner": "「その場所に関係する」→ 広い世界から切り取ったある一点の範囲に属する",
+        "fact": "PART-WHOLE スキーマの応用。global（地球全体）に対して local は「切り取られた一部分」。地理的な範囲を縮小する心的操作で、local knowledge = その場所でしか通用しない知識という文脈依存性がある。",
+        "source": "Lakoff (1987) PART-WHOLE スキーマ"
+      },
+      "gap": "「local = 地元の」だけで止まると、local anesthesia（局所麻酔）や local variable（ローカル変数）で詰まる。「ある特定の場所・範囲に限定された」という共通イメージがあれば全て読める。local train = 各駅停車（地元の小さな駅を全部止まる電車）もこの感覚。",
+      "gapOneliner": "local = 「地元の」だけでなく「ある場所・範囲に限定された」が本質",
+      "hook": {
+        "label": "記憶フック",
+        "text": "地図を拡大表示すると「場所(loc)に関連した(al)」細部が見えてくる。それが local。zoom in すると見えるもの全てが local。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "localの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["ある場所に関する→地元の", "動く場所→移動手段", "大きな場所→全国的な", "隠れた場所→秘密の"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "loc + al の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["場所 + 〜に関する = 地元の", "動き + 〜に関する = 移動的な", "時間 + 〜に関する = 時代的な", "力 + 〜に関する = 強力な"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The surgeon used ______ anesthesia for the minor procedure.",
+          "hint": "「特定の場所・範囲に限定された」",
+          "explanationFocus": "gap",
+          "choices": ["local", "global", "total", "final"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "localと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["government（地方行政）", "universe（地元の宇宙）", "century（地元の世紀）", "biology（地元の生物学）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"This variable is local to the function and cannot be accessed outside.\" — localの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["その範囲内にのみ限定された", "世界共通の", "外部から参照できる", "永続的に保存された"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The surgeon used local anesthesia for the minor procedure."]
+    },
+    {
+      "word": "allocate",
+      "phonetic": "/ˈæləkeɪt/",
+      "toeicRank": "TSL 外・TOEIC Part 5/7 頻出",
+      "parts": [
+        {"part": "al", "meaning": "〜へ向けて（ad- の変形）", "type": "prefix"},
+        {"part": "loc", "meaning": "場所", "type": "root"},
+        {"part": "ate", "meaning": "動詞化", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "ad-（〜へ）+ locus（場所）+ -are（動詞化）= ある場所へ向けて割り当てる → 配分する",
+        "fact": "中世ラテン語 allocare「（特定の場所・用途に）割り当てる」から。ad- が l の前で al- に変化（同化）。英語には17世紀に法律・会計用語として入り「特定の目的・人に資源を割り当てる」の意味が定着した。現代ではビジネス・IT・行政で広く使われる。",
+        "source": "EtymOnline: allocate",
+        "cognates": ["allocation", "reallocate", "reallocation"]
+      },
+      "cognitive": {
+        "oneliner": "資源を「特定の場所へ向けて送り込む」→ 割り当て・配分の動き",
+        "fact": "SOURCE-PATH-GOAL スキーマの典型。全体の資源（SOURCE）から一部を切り取り、特定の場所・目的（GOAL）へ向けて（ad-/al-）移動させる動き。予算配分のスプレッドシートで各セルに数字を「送り込む」イメージ。",
+        "source": "Johnson (1987) SOURCE-PATH-GOAL スキーマ"
+      },
+      "gap": "allocate と assign の違いで迷いがち。allocate は「場所・用途に資源を割り振る」（予算・時間・スペース）、assign は「人に仕事を割り当てる」が中心。allocate 10 minutes to each task = 各タスクの「場所」に10分を置く感覚。",
+      "gapOneliner": "allocate = 資源（お金・時間・スペース）を特定の用途・場所へ割り振る",
+      "hook": {
+        "label": "記憶フック",
+        "text": "会社の予算会議で各部署の「場所(loc)に向けて(al)」お金を割り振る(ate)のが allocate。場所に向けて送り込む動きが見えれば覚えられる。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "allocateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["ある場所へ向けて割り当てる→配分する", "場所から遠ざける→排除する", "同じ場所に集める→集約する", "場所を変える→移転する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "al + loc + ate の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["〜へ + 場所 + 動詞化 = 割り当てる", "再び + 場所 + 動詞化 = 移転する", "離れて + 場所 + 動詞化 = 取り除く", "一緒に + 場所 + 動詞化 = 集める"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The committee decided to ______ more funds to the research department.",
+          "hint": "「場所へ向けて割り当てる」→「配分する」",
+          "explanationFocus": "gap",
+          "choices": ["allocate", "locate", "dislocate", "relocate"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "allocateと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["resources（資源を割り当てる）", "friends（友人を割り当てる）", "weather（天気を割り当てる）", "colors（色を割り当てる）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Each team has been allocated two hours to complete the task.\" — allocatedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["割り当てられた", "奪われた", "延長された", "取り消された"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The committee decided to allocate more funds to the research department."]
+    },
+    {
+      "word": "relocate",
+      "phonetic": "/ˌriːloʊˈkeɪt/",
+      "toeicRank": "TSL 外・TOEIC Part 7 頻出（企業移転・求人広告）",
+      "parts": [
+        {"part": "re", "meaning": "再び・別の場所へ", "type": "prefix"},
+        {"part": "loc", "meaning": "場所", "type": "root"},
+        {"part": "ate", "meaning": "動詞化", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "re-（再び）+ locus（場所）+ -are（動詞化）= 場所を再び定める → 移転する",
+        "fact": "locate（場所を定める）に re-（再び・別の）を加えた語。英語での使用は19世紀から。ビジネス・不動産・人事の文脈で「本社・工場・従業員を別の場所へ移す」の意味で定着した。特に20世紀後半から企業のグローバル展開・リストラ報道で頻出。",
+        "source": "EtymOnline: relocate（locate + re-）",
+        "cognates": ["relocation", "relocation package", "relocation allowance"]
+      },
+      "cognitive": {
+        "oneliner": "一度定めた場所を「もう一度・別の場所に」定め直す → 引っ越し・移転",
+        "fact": "SOURCE-PATH-GOAL スキーマの反復。既に場所が確定しているものを、そこから切り離して（re-）新たなゴールに再配置する二段階の動き。会社が本社を地方に移す「移転」も、社員が転勤で引っ越す「移住」も同じ構造。",
+        "source": "Johnson (1987) SOURCE-PATH-GOAL スキーマ（反復）"
+      },
+      "gap": "TOEIC の求人・社内通知に「Willingness to relocate required.（転勤可能な方）」が頻出。「転居・移転」文脈だと分かれば得点に直結する。また relocation package（引っ越し費用補助）も Part 7 の人事・待遇セクションで頻出の複合語。",
+      "gapOneliner": "relocate = 「移転する・転勤する」TOEIC 求人・人事文書の必須語",
+      "hook": {
+        "label": "記憶フック",
+        "text": "会社が「もう一度(re)場所(loc)を定め直す(ate)」のが relocate。社員が転勤するのも会社が本社を移すのも、どちらも「場所を再設定する」動きそのもの。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "relocateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["場所を再び定める→移転する", "場所を素早く定める→急いで移動する", "場所を隠す→秘密にする", "場所を拡張する→拡大する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "re + loc + ate の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["再び + 場所 + 動詞化 = 移転する", "強く + 場所 + 動詞化 = 固定する", "離れて + 場所 + 動詞化 = 消える", "前に + 場所 + 動詞化 = 先着する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The position requires the candidate to ______ to our Singapore office.",
+          "hint": "「場所を再び定める」→「移転する」",
+          "explanationFocus": "gap",
+          "choices": ["relocate", "locate", "allocate", "dislocate"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "relocateと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["headquarters（本社を移転する）", "ideas（アイデアを移転する）", "weather（天気を移転する）", "music（音楽を移転する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Willingness to relocate is required for this position.\" — relocateの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["転勤・引っ越しすること", "残業すること", "資格を取得すること", "昇進を断ること"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The position requires the candidate to relocate to our Singapore office."]
+    },
+    {
+      "word": "locomotive",
+      "phonetic": "/ˌloʊkəˈmoʊtɪv/",
+      "toeicRank": "TSL 外・一般教養語",
+      "parts": [
+        {"part": "loc", "meaning": "場所", "type": "root"},
+        {"part": "o", "meaning": "連結母音", "type": "linking"},
+        {"part": "mot", "meaning": "動かす（movere）", "type": "root"},
+        {"part": "ive", "meaning": "形容詞化・名詞化", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "locus（場所）+ motivus（動かす力）= 場所を動かす力 → 機関車",
+        "fact": "近代ラテン語 loco motivus「場所を移動させる力のある」から。loco は locus（場所）の奪格（「場所から」）で「自分の位置を自ら移動させる」の意味。1612年頃に形容詞として登場し、1829年ジョージ・スチーブンソンの蒸気機関車開発で名詞「locomotive engine → locomotive」が定着した。",
+        "source": "EtymOnline: locomotive",
+        "cognates": ["locomotion", "locate", "motive", "motion", "motor", "emotion"]
+      },
+      "cognitive": {
+        "oneliner": "「自分の場所を自力で動かせる」→ 動力を持って移動するもの",
+        "fact": "SELF-PROPULSION の概念。外から押されるのではなく、自らの内部動力（mot）で場所（loc）を変えることができる存在。馬車が馬に引かれるのに対し、locomotive は自力で動く革命的な機械。この「自己推進」のイメージが語に込められている。",
+        "source": "Mandler (1992) 動的スキーマ"
+      },
+      "gap": "locomotive と motion / motive が同根（mot- = 動く）と知ると、emotion（感情＝内側から動かされる）や motivation（動かす力）も一緒に整理できる。loc + mot の二根語は珍しく、語源解剖の練習素材として最適。",
+      "gapOneliner": "locomotive = loc（場所）+ mot（動く）= 場所を自ら動かすもの → 機関車",
+      "hook": {
+        "label": "記憶フック",
+        "text": "「場所(loc)を動かす(mot)力があるもの(ive)」が locomotive。蒸気機関車が重い荷物を「自分の場所ごと動かしながら」走る姿そのもの。loco + motive = 場所の動機。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "locomotiveの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["場所を動かすもの→機関車", "狂った動き→暴走する機械", "地元で動くもの→路面電車", "場所を壊すもの→破壊機械"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "loc + mot + ive の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["場所 + 動く + 〜する力 = 自走するもの", "音 + 動く + 〜する力 = 音を出すもの", "水 + 動く + 〜する力 = 水力機械", "火 + 動く + 〜する力 = 燃焼機関"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The museum has a fully restored steam ______ on display.",
+          "hint": "「場所を動かすもの」→「機関車」",
+          "explanationFocus": "gap",
+          "choices": ["locomotive", "motive", "local", "location"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "locomotiveと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["steam（蒸気機関車）", "idea（アイデア機関車）", "silent（無音機関車）", "paper（紙機関車）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Humans have remarkable locomotive abilities compared to most animals.\" — locomotiveの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["場所を移動する能力に関する", "声を出す能力に関する", "物を作る能力に関する", "考える能力に関する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The museum has a fully restored steam locomotive on display."]
+    },
+    {
+      "word": "dislocate",
+      "phonetic": "/ˈdɪsloʊkeɪt/",
+      "toeicRank": "TSL 外・医療・日常語",
+      "parts": [
+        {"part": "dis", "meaning": "離れて・外れて", "type": "prefix"},
+        {"part": "loc", "meaning": "場所", "type": "root"},
+        {"part": "ate", "meaning": "動詞化", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "dis-（離れて）+ locus（場所）+ -are（動詞化）= 本来の場所から引き離す → 脱臼させる・混乱させる",
+        "fact": "中世ラテン語 dislocare「本来の場所から移す」から。英語には16世紀末に入り、解剖学用語として「関節を本来の位置から外す（脱臼）」で定着。19世紀以降は比喩的に「組織・計画・生活を乱す」にも使われる。",
+        "source": "EtymOnline: dislocate",
+        "cognates": ["dislocation", "dislocated"]
+      },
+      "cognitive": {
+        "oneliner": "「あるべき場所から引き離す」→ 物理的な脱臼から比喩的な混乱まで",
+        "fact": "CONTAINER スキーマの逸脱。骨が「収まるべき場所（関節）」から外れる物理的イメージが原型。そこから計画・組織・生活が「本来あるべき状態・場所」から引き離されるという比喩が生まれた。The war dislocated thousands of families.（戦争が何千もの家族を故郷から引き離した）がその例。",
+        "source": "Johnson (1987) CONTAINER スキーマ"
+      },
+      "gap": "医療文脈では「脱臼する（肩・膝が外れる）」の意味で使われ、I dislocated my shoulder.（肩が脱臼した）は頻出。ビジネス・社会文脈では「混乱させる、秩序を乱す」にもなる。「場所から離れる」というコアイメージが両方をつなぐ。",
+      "gapOneliner": "dislocate = 「場所から離す」→ 脱臼（医療）から社会的混乱（比喩）まで",
+      "hook": {
+        "label": "記憶フック",
+        "text": "骨が「本来の場所(loc)から離れて(dis)しまう(ate)」のが dislocate（脱臼）。肩の骨がソケットからポンと外れるあの感覚。場所からはじき飛ばされるイメージで覚える。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "dislocateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["本来の場所から離す→脱臼させる", "場所を二つに増やす→複製する", "場所を強化する→固定する", "場所を探し回る→迷子になる"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "dis + loc + ate の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["離れて + 場所 + 動詞化 = 本来の場所から外す", "再び + 場所 + 動詞化 = 元の場所に戻す", "一緒に + 場所 + 動詞化 = 同じ場所に集める", "超えて + 場所 + 動詞化 = 遠くに飛ばす"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "She fell awkwardly and ______ her shoulder.",
+          "hint": "「本来の場所から離す」→「脱臼させる」",
+          "explanationFocus": "gap",
+          "choices": ["dislocated", "located", "allocated", "relocated"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "dislocateと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["a shoulder（肩を脱臼する）", "a plan（計画を設計する）", "a budget（予算を獲得する）", "a team（チームを組む）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The sudden policy change dislocated the entire supply chain.\" — dislocatedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["本来の状態から乱した", "強化した", "効率化した", "完全に停止させた"],
+          "correct": 0
+        }
+      ],
+      "examples": ["She fell awkwardly and dislocated her shoulder."]
+    }
+  ]
+}

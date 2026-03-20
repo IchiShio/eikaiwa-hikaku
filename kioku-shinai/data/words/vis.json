@@ -1,0 +1,585 @@
+{
+  "root": "vis/vid",
+  "rootMeaning": "見る",
+  "rootLang": "ラテン語 videre（PIE *weid-）",
+  "imageSchema": "目を向けて対象を捉えるイメージ。視線が届く先に何かを「見る」動き。視野(vision)が広がるように、対象を目の前に引き出して認識する。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "テレビ(TV=tele+vision)は「遠くを見る」装置。ビデオ(video)はラテン語で「私は見る」。vis/vidが見えたら「見る」と読み替えるだけで、8語が一気に読める。"
+  },
+  "words": [
+    {
+      "word": "provide",
+      "phonetic": "/prəˈvaɪd/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "pro", "meaning": "前へ・前もって", "type": "prefix"},
+        {"part": "vid", "meaning": "見る", "type": "root"},
+        {"part": "e", "meaning": "", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "pro（前もって）+ videre（見る）= 先を見越して備える → 提供する",
+        "fact": "ラテン語 providere「前もって見る、先を見越して備える」から。中英語では「準備する、用意する」の意味で入り、1600年代に「必要なものを供給する、提供する」へ転義。providence（神の摂理）も同根で「神が先を見越して人類の必要を備える」こと。",
+        "source": "EtymOnline: provide",
+        "cognates": ["provision", "provider", "providence", "provident"]
+      },
+      "cognitive": {
+        "oneliner": "未来を先読みして今から手配する→提供する",
+        "fact": "TIME IS SPACE メタファーの応用。前方(pro-)に目を向けて(videre)まだ来ていない未来のニーズを把握し、今手を打つ動き。親が子どもに食料を「提供する」のも、企業がサービスを「提供する」のも、相手の将来の必要を先読みした行為。",
+        "source": "Lakoff & Johnson (1980) TIME IS SPACE"
+      },
+      "gap": "「提供する」だけでなく provide that...（〜という条件で）という接続詞用法がTOEICに出る。語源の「前もって見る＝条件を先読みする」がわかれば自然に読める。We will sign the contract, provided that you meet the deadline.「あなたが締め切りを守るという条件を先読みして、契約にサインする」。",
+      "gapOneliner": "provide = 「提供する」も「〜という条件で」も、前もって見越した行為",
+      "hook": {
+        "label": "記憶フック",
+        "text": "親が子の将来を「前もって(pro)見て(vid)」食料や教育を手配するのがprovide。先見の明があるから提供できる。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "provideの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["前もって見る→提供する", "前に置く→提案する", "前に走る→先導する", "前に立つ→証明する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "pro + vide の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["前もって + 見る = 提供する", "強く + 見る = 監視する", "再び + 見る = 見直す", "中に + 見る = 洞察する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The company will ______ all employees with health insurance.",
+          "hint": "「前もって見て備える」→「提供する」",
+          "explanationFocus": "gap",
+          "choices": ["provide", "revise", "supervise", "advise"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "provideと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["support（サポートを提供する）", "money（お金を見る）", "time（時間を備える）", "friend（友人を用意する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The grant will be approved, provided that all documents are submitted by Friday.\" — providedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["〜という条件で", "〜にもかかわらず", "〜の結果として", "〜の代わりに"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The company provides free training to all new employees."]
+    },
+    {
+      "word": "revise",
+      "phonetic": "/rɪˈvaɪz/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "re", "meaning": "再び", "type": "prefix"},
+        {"part": "vis", "meaning": "見る", "type": "root"},
+        {"part": "e", "meaning": "", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "re（再び）+ videre（見る）= 再び見る → 見直して修正する",
+        "fact": "ラテン語 revisere「再び見に行く、再訪する」から。フランス語 réviser を経て16世紀に英語へ。最初は「再調査する」の意味で、1680年代から「テキストを見直して修正する」の意味に定着。revision（改訂版）、revised edition（改訂版）は出版・ビジネス文書で頻出。",
+        "source": "EtymOnline: revise",
+        "cognates": ["revision", "revised", "revisit"]
+      },
+      "cognitive": {
+        "oneliner": "一度見たものを再度見直す→不足や誤りを発見して直す",
+        "fact": "RE- + 視線のPATHスキーマ。すでに目を通したドキュメントにもう一度(re-)視線を向け(videre)、前回見落とした問題を発見・修正する動き。英語学習での「見直す・改訂する」と、英国英語での「（試験に向けて）復習する」も同じ空間的イメージ。",
+        "source": "Johnson (1987) PATHスキーマ"
+      },
+      "gap": "「修正する」だけでなく、英国英語では「試験のために復習する（study again）」の意味でよく使われる。I need to revise for the exam. は「試験勉強をする」。語源の「再び見る」がわかれば両方の意味が自然につながる。",
+      "gapOneliner": "revise = 「修正する」も「（英国）試験勉強する」も、再び見直すこと",
+      "hook": {
+        "label": "記憶フック",
+        "text": "提出した報告書を「再び(re)見直す(vis)」のがrevise。一度見ただけでは見えなかったミスが、もう一度見ると見つかる。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "reviseの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["再び見る→修正する", "再び動く→改良する", "再び作る→再生産する", "再び調べる→再発見する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "re + vise の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["再び + 見る = 修正する", "戻す + 書く = 書き直す", "再び + 考える = 再考する", "強く + 見る = 検証する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Please ______ the report before submitting it to the client.",
+          "hint": "「再び見る」→「修正・見直す」",
+          "explanationFocus": "gap",
+          "choices": ["revise", "provide", "advise", "supervise"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "reviseと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["figures（数字を修正する）", "weather（天気を見直す）", "music（音楽を改訂する）", "color（色を修正する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The budget forecast was revised downward after the quarterly results.\" — revisedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["見直して修正された", "完全に削除された", "新たに作成された", "承認された"],
+          "correct": 0
+        }
+      ],
+      "examples": ["We need to revise the proposal before the board meeting."]
+    },
+    {
+      "word": "supervise",
+      "phonetic": "/ˈsuːpərvaɪz/",
+      "toeicRank": "TSL 500位内相当",
+      "parts": [
+        {"part": "super", "meaning": "上から・超えて", "type": "prefix"},
+        {"part": "vis", "meaning": "見る", "type": "root"},
+        {"part": "e", "meaning": "", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "super（上から）+ videre（見る）= 上から見渡す → 監督する",
+        "fact": "中世ラテン語 supervisere「上から見る」から。英語への登場は1640年代で、当初は「注意深く観察する」、18世紀に「管理・監督する」の意味に。supervisor（監督者・上司）はビジネスTOEICの頻出語。同根に survey（sur-=super-の変形 + vey<vid）がある。",
+        "source": "EtymOnline: supervise",
+        "cognates": ["supervisor", "supervision", "supervisory", "survey"]
+      },
+      "cognitive": {
+        "oneliner": "高い位置から全体に視線を届かせる→管理・監督する",
+        "fact": "HIGH IS CONTROLLING メタファーの典型。上(super-)から見下ろす(videre)ことで全体の動きを把握し、コントロールする。工場の監督者が高台から工程を見渡すイメージ。同じ空間感覚がoverlook（見落とす＝上から見ながらも気づかない）と対比的。",
+        "source": "Lakoff & Johnson (1980) HIGH IS CONTROLLING"
+      },
+      "gap": "「監督する」というと権威的に聞こえるが、本質は「上から全体を見通す」こと。I was supervised by a senior manager. は「上司に見守られながら仕事をした」ニュアンス。unsupervised（監督なしの）は「上からの視線がない状態」。",
+      "gapOneliner": "supervise = 上から見渡して管理する、視野の広さが権限の源",
+      "hook": {
+        "label": "記憶フック",
+        "text": "スーパー(super=上)の立場から現場を「見渡す(vis)」のがsupervise。スーパーバイザーは「上から見る人」。高いところから全体が見えるから管理できる。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "superviseの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["上から見る→監督する", "上に置く→昇進させる", "超えて動く→超過する", "上に作る→建設する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "super + vise の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["上から + 見る = 監督する", "超えて + 働く = 残業する", "上に + 立つ = 優位に立つ", "超えて + 言う = 命令する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "She was hired to ______ the construction project.",
+          "hint": "「上から見渡す」→「監督する」",
+          "explanationFocus": "gap",
+          "choices": ["supervise", "revise", "advise", "provide"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "superviseと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["staff（スタッフを監督する）", "rain（雨を見渡す）", "color（色を管理する）", "music（音楽を監督する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The intern worked unsupervised for the first time.\" — unsupervisedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["監督なしで", "上司とともに", "指示に従って", "見習いとして"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The manager supervises a team of ten engineers."]
+    },
+    {
+      "word": "evidence",
+      "phonetic": "/ˈevɪdəns/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "e", "meaning": "外へ・完全に", "type": "prefix"},
+        {"part": "vid", "meaning": "見る", "type": "root"},
+        {"part": "ence", "meaning": "名詞化", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "e（外へ）+ videre（見る）+ ence（名詞）= 外から見えるもの → 証拠",
+        "fact": "ラテン語 evidentia「目に見えること、明白さ」から。e-（ex-の短縮）+ videre で「外から明らかに見える」状態を指す。14世紀後半に英語に入り、法律用語として「証拠、証言」の意味で定着。evident（明白な）も同根で「外から誰でも見える」状態。",
+        "source": "EtymOnline: evidence",
+        "cognates": ["evident", "evidently", "self-evident"]
+      },
+      "cognitive": {
+        "oneliner": "外から誰でも見える状態→否定できない証拠",
+        "fact": "VISIBILITY = TRUTH メタファー。内部に隠れているのではなく外(e-)に向かって見える(videre)状態は、誰もが確認できる「明白な事実」となる。法廷で「証拠を提示する」のも、隠れていた事実を可視化して全員に「見せる」行為。",
+        "source": "Lakoff & Johnson (1980) SEEING IS KNOWING"
+      },
+      "gap": "evidence は不可算名詞として使われることに注意。×an evidence / ×evidences ではなく、a piece of evidence / pieces of evidence が正しい。「目に見えるもの全体」というイメージで捉えると不可算が自然に感じられる。",
+      "gapOneliner": "evidence（不可算）= 外から見える状態そのもの、a piece of evidenceで数える",
+      "hook": {
+        "label": "記憶フック",
+        "text": "犯人の足跡が「外に(e)見えている(vid)」状態がevidence（証拠）。隠れていたら証拠にならない。目に見えるから証拠になる。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "evidenceの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["外から見えるもの→証拠", "外に出すもの→産物", "外を歩くもの→経験", "外に書くもの→説明"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "e + vid + ence の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["外へ + 見る + 名詞 = 証拠", "強く + 言う + 名詞 = 宣言", "外へ + 書く + 名詞 = 文書", "完全に + 知る + 名詞 = 知識"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The police found strong ______ linking him to the crime.",
+          "hint": "「外から見える」→「証拠」（不可算名詞）",
+          "explanationFocus": "gap",
+          "choices": ["evidence", "vision", "advice", "revision"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "evidenceと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["strong（強力な証拠）", "tall（高い証拠）", "fast（速い証拠）", "happy（嬉しい証拠）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"There is little evidence to support that claim.\" — evidenceの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["裏付ける証拠", "支持する理由", "反論する根拠", "確認する手続き"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The prosecutor presented strong evidence in court."]
+    },
+    {
+      "word": "visible",
+      "phonetic": "/ˈvɪzɪbl/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "vis", "meaning": "見る", "type": "root"},
+        {"part": "ible", "meaning": "〜できる", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "vis（見る）+ ible（できる）= 見ることができる → 目に見える",
+        "fact": "ラテン語 visibilis「見ることができる」から。vis- は videre の過去分詞語幹。14世紀初頭に英語に入り、物理的に「目で確認できる」状態を指す。invisible（不可視の）は16世紀から、visibility（視界、視認性）は15世紀から使われる。ビジネス英語では「存在感がある、注目されている」の意味でも使われる。",
+        "source": "EtymOnline: visible",
+        "cognates": ["invisible", "visibility", "visibly"]
+      },
+      "cognitive": {
+        "oneliner": "視線が届く範囲に存在する→認識可能な状態",
+        "fact": "SEEING IS KNOWING メタファーの基盤。visible とは単に「光が届いている」だけでなく「認識主体が知覚できる状態にある」こと。ビジネスでの「ブランドの視認性(brand visibility)を高める」は「多くの人の視野に入る状態にする」という空間的イメージ。",
+        "source": "Lakoff & Johnson (1980) SEEING IS KNOWING"
+      },
+      "gap": "物理的な「見える」だけでなく、visible improvement（目に見える改善）、visible results（明らかな成果）のように「明白な、明確な」の意味でTOEICに出る。invisible risk（見えにくいリスク）は「まだ認識されていないリスク」。",
+      "gapOneliner": "visible = 物理的に「見える」も抽象的な「明白な」も、視野に入っている状態",
+      "hook": {
+        "label": "記憶フック",
+        "text": "「見る(vis)ことができる(ible)」のがvisible。霧の中で何も見えないのはinvisible。プロジェクトの成果が「目に見える」形で出るのもvisible results。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "visibleの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["見ることができる→目に見える", "見る必要がある→重要な", "見てきた→経験豊富な", "見せる→目立つ"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "vis + ible の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["見る + できる = 目に見える", "見る + なる = 見えてくる", "見る + させる = 見せる", "見る + もの = 見物"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The results of the training are already ______ in her performance.",
+          "hint": "「見ることができる」→「目に見える、明白な」",
+          "explanationFocus": "gap",
+          "choices": ["visible", "visual", "vital", "vivid"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "visibleと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["improvement（目に見える改善）", "smell（においが見える）", "taste（味が見える）", "sound（音が見える）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The company needs to increase its visible presence in the Asian market.\" — visibleの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["認知される、目立つ", "積極的な", "物理的な", "継続的な"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The damage to the roof was clearly visible from the street."]
+    },
+    {
+      "word": "vision",
+      "phonetic": "/ˈvɪʒən/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "vis", "meaning": "見る", "type": "root"},
+        {"part": "ion", "meaning": "名詞化・行為・状態", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "vis（見る）+ ion（名詞）= 見ること・見えるもの → 視覚・将来像",
+        "fact": "ラテン語 visio「見ること、光景、幻」から。13世紀後半に「神・超自然的な光景を見ること」という宗教的意味で英語に入り、14世紀に「視覚、視力」、1926年に映画・テレビとの関連で拡大。ビジネスでの「ビジョン（将来の構想）」は1934年頃から。television = tele（遠く）+ vision（見ること）。",
+        "source": "EtymOnline: vision",
+        "cognates": ["television", "visual", "visionary", "revision", "provision"]
+      },
+      "cognitive": {
+        "oneliner": "目で捉える行為そのもの→見えるもの・見えないものを「見る」力",
+        "fact": "SEEING IS KNOWING / UNDERSTANDING IS SEEING の二重メタファー。物理的な視覚(eyesight)だけでなく、まだ存在しない未来を「見る」力としての vision は認知的な洞察力を表す。「ビジョナリーリーダー」は「人より先に未来を見える人」。",
+        "source": "Lakoff & Johnson (1980) UNDERSTANDING IS SEEING"
+      },
+      "gap": "vision は「視力」「幻」「先見性」「経営ビジョン」と訳語が多い。全て「見ること/見えるもの」のバリエーション。have a clear vision for the future = 「未来を明確に見ている」状態。tunnel vision = トンネルの中から見るような「視野の狭さ」。",
+      "gapOneliner": "vision = 「視力」も「ビジョン」も「幻」も、見る行為・見えるものの総称",
+      "hook": {
+        "label": "記憶フック",
+        "text": "テレビ(tele-vision)は「遠くを見る」機械。「見る(vis)こと(ion)」がvision。経営者の「ビジョン」は未来を今から見通す力。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "visionの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["見ること・見えるもの→視覚・将来像", "考えること→思想・理念", "目指すもの→目標・目的", "感じること→直感・感覚"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "vis + ion の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["見る + 名詞化 = 視覚・将来像", "見える + 状態 = 外見", "見せる + こと = 展示", "見られる + もの = 見せ物"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The CEO shared her ______ for the company's future at the annual meeting.",
+          "hint": "「見ること」→「将来像・ビジョン」",
+          "explanationFocus": "gap",
+          "choices": ["vision", "version", "mission", "revision"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "visionと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["clear（明確なビジョン）", "loud（大きなビジョン）", "fast（速いビジョン）", "heavy（重いビジョン）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"She has a long-term vision for transforming the healthcare system.\" — visionの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["将来的な構想・展望", "具体的な計画", "過去の実績", "現在の課題"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The new CEO presented a bold vision for the company's future."]
+    },
+    {
+      "word": "review",
+      "phonetic": "/rɪˈvjuː/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "re", "meaning": "再び", "type": "prefix"},
+        {"part": "view", "meaning": "見る（<ラテン語 videre）", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "re（再び）+ view（見る＜videre）= 再び見る → 見直す・評価する",
+        "fact": "フランス語 revue「再び見ること、検閲」から。view 自体がラテン語 videre のフランス語経由の借用語（古フランス語 veoir→voir）。英語 review は15世紀後半に「再調査する」で入り、1690年代に「批評・書評」、1701年に「閲兵式」。performance review（業績評価）はビジネスTOEICの最頻出句のひとつ。",
+        "source": "EtymOnline: review",
+        "cognates": ["preview（pre+view＝先を見る）", "overview（over+view＝上から見る）", "interview（inter+view＝互いに見る）"]
+      },
+      "cognitive": {
+        "oneliner": "一度見たものに視線を戻す→評価・再確認する",
+        "fact": "revise と同根（どちらも「再び見る」）だが、review はより「全体を見渡して評価する」ニュアンスが強い。re- + view（高い位置から見渡す感覚）が合わさり、単なる修正(revise)より広い視野での評価を含意する。peer review＝仲間同士が互いの目で見直す。",
+        "source": "Johnson (1987) PATHスキーマ + HIGH IS CONTROLLING"
+      },
+      "gap": "review は「レビュー（口コミ）」「業績評価」「見直し」「書評」と文脈で大きく変わる。全て「再び見る→評価する」の派生。under review（検討中）= 「再び見られている状態」。",
+      "gapOneliner": "review = 口コミも業績評価も書評も、re（再び）+ view（見る）の行為",
+      "hook": {
+        "label": "記憶フック",
+        "text": "Amazon の「レビュー」は商品を「再び(re)見た(view)」人の感想。performance review は仕事ぶりを「もう一度見直す」評価面談。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "reviewの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["再び見る→見直す・評価する", "再び書く→書き直す", "再び考える→再検討する", "再び行く→再訪する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "re + view（<videre）の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["再び + 見る = 見直す・評価する", "戻って + 見る = 復帰する", "再び + 言う = 繰り返す", "後ろを + 見る = 後悔する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "All employees receive a performance ______ at the end of the year.",
+          "hint": "「再び見る」→「評価・見直し」",
+          "explanationFocus": "gap",
+          "choices": ["review", "preview", "overview", "interview"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "reviewと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["performance（業績評価）", "weather（天気の評価）", "music（音楽を再び見る）", "color（色を見直す）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The safety procedures are currently under review.\" — under reviewの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["検討・見直し中の", "実施済みの", "承認された", "廃止される予定の"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The manager reviewed the sales figures before the presentation."]
+    },
+    {
+      "word": "advice",
+      "phonetic": "/ədˈvaɪs/",
+      "toeicRank": "TSL上位・NGSL上位",
+      "parts": [
+        {"part": "ad", "meaning": "〜に向かって", "type": "prefix"},
+        {"part": "vis", "meaning": "見る", "type": "root"},
+        {"part": "e", "meaning": "", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "ad（〜に向かって）+ videre（見る）= 誰かに向かって見て示す → 助言する",
+        "fact": "古フランス語 avis「意見、見方」から。ラテン語 ad+visum（見られたもの＝判断）が語源。13世紀後半に「情報、知らせ」として英語に入り、14世紀に「助言、アドバイス」の意味に。動詞 advise との品詞区別に注意：advice（名詞・不可算）vs. advise（動詞）。発音の違いも重要（/s/ vs. /z/）。",
+        "source": "EtymOnline: advice",
+        "cognates": ["advise", "adviser/advisor", "advisable", "advisory"]
+      },
+      "cognitive": {
+        "oneliner": "相手の状況に視線を向けて→見えた答えを伝える",
+        "fact": "SEEING IS KNOWING + TOWARD の方向性スキーマ。専門家が相談者の状況に向かって(ad-)目を向け(videre)て、見えた判断・答えを相手に伝える行為が advice。「見える人（専門家）が見えない人（相談者）の代わりに見てあげる」関係性が語源に埋め込まれている。",
+        "source": "Johnson (1987) TOWARD スキーマ"
+      },
+      "gap": "advice は不可算名詞。×an advice / ×advices ではなく、a piece of advice / some advice が正しい。また名詞 advice /ədˈvaɪs/ と動詞 advise /ədˈvaɪz/ の品詞・発音違いはTOEICの頻出ポイント。",
+      "gapOneliner": "advice（名詞・不可算・/s/）vs. advise（動詞・/z/）を混同しない",
+      "hook": {
+        "label": "記憶フック",
+        "text": "医師が患者の状態に「目を向けて(ad+vis)」何が必要かを見極め、伝えるのがadvice（アドバイス）。見える人が見えない人に代わって「見て」あげる行為。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "adviceの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["〜に向かって見る→助言", "〜に向かって動く→行動", "〜に向かって言う→命令", "〜に向かって書く→通知"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "ad + vis + e の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["〜に向かって + 見る = 助言", "強く + 言う = 主張", "外に + 知る = 公表", "共に + 考える = 協議"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "She gave me some useful ______ on how to prepare for the interview.",
+          "hint": "「向かって見て示す」→「助言」（不可算名詞）",
+          "explanationFocus": "gap",
+          "choices": ["advice", "advise", "vision", "evidence"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "adviceと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["seek（助言を求める）", "make（助言を作る）", "run（助言を走らせる）", "break（助言を壊す）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"I strongly advise you to consult a lawyer before signing.\" — adviseの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["〜するよう強く勧める", "〜するよう命じる", "〜するよう禁じる", "〜することを報告する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The financial advisor gave sound advice on retirement planning."]
+    }
+  ]
+}

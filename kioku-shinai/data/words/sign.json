@@ -1,0 +1,511 @@
+{
+  "root": "sign",
+  "rootMeaning": "しるし",
+  "rootLang": "ラテン語 signum（起源不詳）",
+  "imageSchema": "旗や印を掲げて「ここに意味がある」と指し示すイメージ。目に見えないものを目に見える形（しるし）に変換する動き。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "sign（標識・しるし）は道路標識そのもの。signが見えたら「しるし・意味を示す」と読み替えるだけで、7語が一気に読める。assign（しるしを当てはめる）、design（しるしを描く）、signal（しるしの行動）。"
+  },
+  "words": [
+    {
+      "word": "assign",
+      "phonetic": "/əˈsaɪn/",
+      "toeicRank": "TSL 289位",
+      "parts": [
+        {"part": "as", "meaning": "～に向かって（ad-の変形）", "type": "prefix"},
+        {"part": "sign", "meaning": "しるし", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "ad（～に）+ signum（しるし）= 誰かに向けてしるしを付ける → 割り当てる",
+        "fact": "ラテン語 assignare「しるしを付ける、割り当てる」から。13世紀後半に「財産・権利を譲渡する」で英語に入り、14世紀に「任務・仕事を割り当てる」の意味に拡張。法律用語として「財産を移転する」の意味も現代英語に残る。",
+        "source": "EtymOnline: assign",
+        "cognates": ["assignment", "assignee", "reassign"]
+      },
+      "cognitive": {
+        "oneliner": "特定の人・場所に向けて「しるしを貼り付ける」→割り当てる",
+        "fact": "LINKスキーマの応用。ある任務や財産と、受け取る人とを「しるし（sign）」によって結びつける動き。プロジェクトにメンバーをassignするとは、そのタスクに名札を貼り付ける行為。",
+        "source": "Johnson (1987) LINKスキーマ"
+      },
+      "gap": "「割り当てる」だけで覚えると be assigned to a new role（新しい役職に任じられる）や assignment（課題・任務）との繋がりが見えにくい。「誰かに向けてしるしを付ける」とわかれば、人・場所・役割への割り当てがすべてassignで表せると気づける。",
+      "gapOneliner": "assign = 人や場所に「しるしを貼り付けて」役割・仕事を渡す",
+      "hook": {
+        "label": "記憶フック",
+        "text": "会議室の席に名前のサインを貼る（as+sign）のがassign。誰に何を担当させるか「しるしを向けて」決める行為。assignment は「貼り付けられた課題」。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "assignの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["向かってしるしを付ける→割り当てる", "しるしを外す→取り消す", "しるしを越える→昇進させる", "しるしを重ねる→強調する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "as（ad）+ sign の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["～に向けて + しるし = 割り当てる", "外に + しるし = 公表する", "再び + しるし = 再確認する", "下に + しるし = 署名する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The manager will ______ each team member to a specific project.",
+          "hint": "「～に向けてしるしを付ける」→「割り当てる」",
+          "explanationFocus": "gap",
+          "choices": ["assign", "design", "resign", "signal"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "assignと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["tasks（タスクを割り当てる）", "weather（天気を割り当てる）", "music（音楽を割り当てる）", "money（お金をしるし付ける）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"She was assigned to lead the international expansion team.\" — assignedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["任命された", "解雇された", "昇進した", "辞退した"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The manager assigned me to the new project."]
+    },
+    {
+      "word": "design",
+      "phonetic": "/dɪˈzaɪn/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "de", "meaning": "下へ・完全に", "type": "prefix"},
+        {"part": "sign", "meaning": "しるし", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "de（完全に）+ signum（しるし）= しるしを細かく描き記す → 設計する・意図する",
+        "fact": "ラテン語 designare「しるしを付けて区別する、目的を定める」から。14世紀後半に「計画する、意図する」で英語に入り、1580年代に「下絵を描く、設計する」の意味が加わった。名詞の「デザイン」は17世紀初頭。イタリア語 disegno（素描・構想）を経由した経路も並行して存在する。",
+        "source": "EtymOnline: design",
+        "cognates": ["designer", "redesign", "designate", "by design"]
+      },
+      "cognitive": {
+        "oneliner": "頭の中の構想を「しるし（線・図）として描き下ろす」→設計する",
+        "fact": "IMAGE（心像）スキーマの外在化。抽象的な意図・目的を、紙の上のしるし（線・記号）として具体化する動き。「設計図」も「意図的に」（by design）も、「しるしに落とし込んだ計画」という共通イメージで理解できる。",
+        "source": "Johnson (1987) IMAGEスキーマ"
+      },
+      "gap": "「デザイン」をビジュアル的な見た目だけと思いがちだが、design a system（システムを設計する）やdesigned to fail（失敗するように仕組まれた）のように「意図・計画」の意味が頻出。TOEICではdesigned to do の形が多出。",
+      "gapOneliner": "design = ビジュアルの「設計」だけでなく「意図・計画する」が本質",
+      "hook": {
+        "label": "記憶フック",
+        "text": "建築家が青写真に「細かくしるし(de+sign)を描く」のがdesign。見えない構想を目に見えるしるしに変える行為。designed to do = ～するように設計されている。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "designの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["しるしを描き記す→設計する", "しるしを消す→廃止する", "しるしを集める→収集する", "しるしを超える→革新する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "de + sign の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["完全に + しるし = 設計する・意図する", "離れて + しるし = 取り消す", "再び + しるし = 再確認する", "外へ + しるし = 公開する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "This app was ______ to help users track their spending.",
+          "hint": "「しるしを描き記す」→「～するように設計された」",
+          "explanationFocus": "gap",
+          "choices": ["designed", "assigned", "resigned", "signaled"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "designと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["a logo（ロゴを設計する）", "a speech（スピーチを設計する）", "a habit（習慣をデザインする）", "a distance（距離を設計する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The training program was designed to improve communication skills.\" — designedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["意図して作られた", "偶然生まれた", "廃止された", "批判された"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The new office was designed to encourage collaboration."]
+    },
+    {
+      "word": "resign",
+      "phonetic": "/rɪˈzaɪn/",
+      "toeicRank": "TSL 612位",
+      "parts": [
+        {"part": "re", "meaning": "後ろへ・返す", "type": "prefix"},
+        {"part": "sign", "meaning": "しるし", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "re（返す）+ signum（しるし）= しるし（権限・地位）を返し渡す → 辞職する",
+        "fact": "ラテン語 resignare「しるしを消す、封印を解く、権限を返納する」から。14世紀後半に「所有権・権利を放棄する」で英語に入り、15世紀に「職を辞する」の意味に特化。resign oneself to（～を受け入れる）は「自分をその状況に引き渡す」の意味で16世紀から。",
+        "source": "EtymOnline: resign",
+        "cognates": ["resignation", "resigned（形容詞：あきらめた）"]
+      },
+      "cognitive": {
+        "oneliner": "自分が持っていた「しるし（地位・権限）」を元の場所に返す→辞職する",
+        "fact": "POSSESSION（所有）スキーマの逆転。地位や役職は「しるし（sign）」として個人に与えられているもの。それをre-（返す）することで手放す。形容詞 resigned（あきらめた）は「自分をその状況にしるし付きで渡した」状態。",
+        "source": "Johnson (1987) POSSESSIONスキーマ"
+      },
+      "gap": "resignは「辞職する」だけでなく be resigned to（～を受け入れる・あきらめる）がTOEICや長文で頻出。「しるし（自分）を状況に返し渡した」→抵抗せずに受け入れた、というイメージで読める。",
+      "gapOneliner": "resign = 地位を返す（辞職）＋ be resigned to（あきらめて受け入れる）",
+      "hook": {
+        "label": "記憶フック",
+        "text": "会社から渡された名刺（しるし）を「返し(re)渡す(sign)」のがresign。地位というしるしを返却する行為。be resigned to = そのしるしに自分を渡した＝受け入れた状態。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "resignの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["しるしを返す→辞職する", "しるしを重ねる→再サインする", "しるしを強める→確認する", "しるしを広める→発表する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "re + sign の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["返す + しるし = 辞職する", "再び + しるし = 再署名する", "反対に + しるし = 反論する", "離れて + しるし = 無視する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "After the scandal, the CEO decided to ______ from his position.",
+          "hint": "「しるしを返す」→「辞職する」",
+          "explanationFocus": "gap",
+          "choices": ["resign", "assign", "design", "sign"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "resignと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["from a position（地位を辞する）", "from a color（色を辞する）", "from a song（歌を返す）", "from a meal（食事を辞する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"He was resigned to working overtime every week.\" — resignedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["あきらめて受け入れていた", "喜んで取り組んでいた", "拒否していた", "辞職していた"],
+          "correct": 0
+        }
+      ],
+      "examples": ["She resigned from her position after 10 years."]
+    },
+    {
+      "word": "signal",
+      "phonetic": "/ˈsɪɡnəl/",
+      "toeicRank": "TSL 398位",
+      "parts": [
+        {"part": "sign", "meaning": "しるし", "type": "root"},
+        {"part": "al", "meaning": "～に関する（形容詞・名詞語尾）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "signum（しるし）+ -al（名詞化）= しるしとなるもの → 信号・合図",
+        "fact": "中世ラテン語 signale「しるし」から、古フランス語 signal を経て14世紀に英語へ。もともとは「旗・鐘など目に見えるしるし」を指し、17世紀に「電気的な信号」に転用。動詞「合図する」は1800年頃から。形容詞 signal（際立った）は「しるし（標識）になるほど目立つ」から。",
+        "source": "EtymOnline: signal",
+        "cognates": ["signaling", "signalize", "signal（形容詞：際立った）"]
+      },
+      "cognitive": {
+        "oneliner": "「しるし」そのものを名詞化したもの→受け手に何かを伝えるしるし",
+        "fact": "COMMUNICATION（伝達）スキーマの具象化。送り手が意図を「しるし」として外化し、受け手がそれを解読する。交通信号も無線信号も「目に見えるしるし」という点で同じ認知構造。",
+        "source": "Johnson (1987) COMMUNICATIONスキーマ"
+      },
+      "gap": "signal は名詞「信号」だけでなく、動詞 signal a change（変化を示す）やsignal that（～であることを示す）がTOEICのビジネス文書に多出。「しるしを発する」という動詞用法を押さえると読解が楽になる。",
+      "gapOneliner": "signal = 名詞「信号」だけでなく動詞「～を示す・合図する」も頻出",
+      "hook": {
+        "label": "記憶フック",
+        "text": "赤信号は「止まれ」という「しるし(sign)に関するもの(-al)」。それがsignal。動詞では「このしるしを発する」→ The data signals a recovery.（データが回復を示す）。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "signalの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["しるしに関するもの→信号・合図", "しるしを超えるもの→革新", "しるしを隠すもの→秘密", "しるしを集めるもの→コレクション"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "sign + al の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["しるし + 名詞化 = 信号・合図", "しるし + 動詞化 = 署名する", "しるし + 否定 = 無意味", "しるし + 比較 = より明確な"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The latest economic data ______ a slowdown in growth.",
+          "hint": "「しるしを発する」→「～を示す」（動詞用法）",
+          "explanationFocus": "gap",
+          "choices": ["signals", "assigns", "designs", "signs"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "signalと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["a change（変化を示す）", "a building（建物を示す）", "a friend（友人を示す）", "a price（価格を示す）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Her resignation signals a major shift in company strategy.\" — signalsの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["示している", "防いでいる", "否定している", "強調していない"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The traffic signal turned red as we approached."]
+    },
+    {
+      "word": "significant",
+      "phonetic": "/sɪɡˈnɪfɪkənt/",
+      "toeicRank": "TSL 157位",
+      "parts": [
+        {"part": "sign", "meaning": "しるし", "type": "root"},
+        {"part": "ific", "meaning": "作る・する（facere）", "type": "root"},
+        {"part": "ant", "meaning": "～している（形容詞語尾）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "signum（しるし）+ facere（作る）+ -ant = しるしを作っている → 意味を持つ・重大な",
+        "fact": "ラテン語 significantem（significareの現在分詞）から。significare は「しるしで意味を伝える」。15世紀後半に「意味のある」で英語に入り、1690年頃に「重要な・かなりの量の」の意味に強化。TOEICではa significant increase（大幅な増加）の形が最頻出。",
+        "source": "EtymOnline: significant",
+        "cognates": ["significance", "significantly", "insignificant", "signify"]
+      },
+      "cognitive": {
+        "oneliner": "「しるし（意味）を作っている」→意味を持つほど大きい→重大な",
+        "fact": "SCALE（スケール）メタファーの応用。もともと「意味のある」→「意味を持てるほど大きい・目立つ」→「かなりの・重要な」と意味が強化された。a significant amount は「しるし（意味）を作れるほどの量」。",
+        "source": "Lakoff & Johnson (1980) MORE IS SIGNIFICANT"
+      },
+      "gap": "「重要な」とだけ覚えると a significant number of complaints（かなりの数の苦情）のように「かなりの・無視できない量の」という用法を見落とす。「しるしを作るほどの→無視できないほどの」が共通イメージ。",
+      "gapOneliner": "significant = 「重要な」＋「かなりの（量・規模）」、どちらも「しるしになるほど」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "標識(sign)を作る(ific)ほど目立っている(ant)のがsignificant。道路標識が立つほど「重要な・かなりの」もの。a significant improvement = 標識が立つほど大きな改善。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "significantの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["しるしを作っている→重大な・かなりの", "しるしを消している→取るに足らない", "しるしを集めている→多様な", "しるしを超えている→異例の"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "sign + ific + ant の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["しるし + 作る + している = 意味を持つ・重要な", "しるし + 否定 + している = 無意味な", "しるし + 越える + している = 際立った", "しるし + 集める + している = 多様な"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "There has been a ______ increase in online sales this quarter.",
+          "hint": "「しるしを作るほどの」→「かなりの・重大な」",
+          "explanationFocus": "gap",
+          "choices": ["significant", "signal", "signature", "signatory"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "significantと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["improvement（大きな改善）", "color（大きな色）", "weather（重大な天気）", "friend（重要な友人）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The new policy had a significant impact on employee retention.\" — significantの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["かなりの・無視できない", "小さな", "予想外の", "一時的な"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Sales showed a significant increase compared to last year."]
+    },
+    {
+      "word": "signature",
+      "phonetic": "/ˈsɪɡnətʃər/",
+      "toeicRank": "TSL 541位",
+      "parts": [
+        {"part": "sign", "meaning": "しるし", "type": "root"},
+        {"part": "ature", "meaning": "行為・結果（名詞語尾）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "signum（しるし）+ -atura（行為・結果）= しるしを付ける行為・その結果 → 署名",
+        "fact": "中世ラテン語 signatura「しるしを付けること」から、1530年頃に英語へ。もともと印刷業の用語で「折丁（本の折り畳み単位）に付ける識別記号」の意味も持つ。「個人を識別するしるし」→「署名」、形容詞的に「その人らしいしるし」→「独自の・定番の」に転じ、signature dish（名物料理）の用法が生まれた。",
+        "source": "EtymOnline: signature",
+        "cognates": ["signatory", "countersignature", "e-signature"]
+      },
+      "cognitive": {
+        "oneliner": "自分だけのしるしを付ける行為・そのしるし自体→署名・特徴",
+        "fact": "IDENTITY（同一性）スキーマの外在化。他の誰とも異なる「自分専用のしるし」が署名の本質。形容詞 signature は「そのブランド・人物を識別するしるし」→「代名詞的な」の意味に広がる。",
+        "source": "Johnson (1987) IDENTITYスキーマ"
+      },
+      "gap": "「署名」だけで覚えると signature style（独自のスタイル）やsignature product（看板商品）のような形容詞用法を見落とす。「自分だけのしるし」→「代名詞的な・独自の」と繋がれば読解が広がる。",
+      "gapOneliner": "signature = 名詞「署名」＋形容詞「その人らしい・代名詞的な」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "サイン(sign)した結果(-ature)がsignature（署名）。自分だけのしるし。形容詞では「そのブランドのしるしになる」→signature product = 看板商品、signature move = 代名詞となる技。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "signatureの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["しるしを付ける行為・結果→署名", "しるしを消す行為→取り消し", "しるしを集める行為→収集", "しるしを超える行為→革新"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "sign + ature の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["しるし + 行為・結果 = 署名・特徴", "しるし + 否定 = 無名", "しるし + 複数 = 多くのしるし", "しるし + 行為者 = 署名者"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Please provide your ______ at the bottom of the contract.",
+          "hint": "「しるしを付けた結果」→「署名」",
+          "explanationFocus": "gap",
+          "choices": ["signature", "signal", "significant", "signage"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "signatureと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["dish（名物料理）", "weather（名物天気）", "problem（名物問題）", "traffic（名物渋滞）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The chef's signature dish combines French and Japanese techniques.\" — signatureの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["代名詞的な・その人らしい", "初めての・実験的な", "大量生産の", "季節限定の"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Your signature is required on page 3 of the contract."]
+    },
+    {
+      "word": "designate",
+      "phonetic": "/ˈdezɪɡneɪt/",
+      "toeicRank": "TSL 489位",
+      "parts": [
+        {"part": "de", "meaning": "完全に・明確に", "type": "prefix"},
+        {"part": "sign", "meaning": "しるし", "type": "root"},
+        {"part": "ate", "meaning": "～する・させる（動詞語尾）", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "de（明確に）+ signum（しるし）+ -ate（動詞化）= はっきりしるしを付ける → 指定する・任命する",
+        "fact": "ラテン語 designare（designから同語源）の -ate 動詞化。15世紀後半に「目的を定める、しるしを付けて区別する」で英語に入り、1620年代に「正式に指名する・任命する」に特化。形容詞・名詞として designated（指定された）、designate（就任予定の）の形で現代英語に定着。",
+        "source": "EtymOnline: designate",
+        "cognates": ["designated", "designation", "designated driver"]
+      },
+      "cognitive": {
+        "oneliner": "複数の選択肢の中から「はっきりしるしを付けて」特定のものを選び出す→指定する",
+        "fact": "SELECTION（選別）スキーマ。designとは「しるしを描く」点で同根だが、designate は「既存のものにしるしを付けて特定する」動き。designated area（指定区域）は「しるしが付けられた場所」。",
+        "source": "Johnson (1987) SELECTIONスキーマ"
+      },
+      "gap": "designate は designとの区別が難しい。design=「しるしを描いて作る（創造）」に対して designate=「しるしを付けて選ぶ（指定）」。designated driver（代行運転者）やdesignated hitter（指名打者）のように「その役割に指定された」用法がTOEICや実務に頻出。",
+      "gapOneliner": "designate = design（しるしを描く）と違い、「しるしを付けて特定の役割に指定する」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "会議室に「予約済み」のしるし(de+sign)を貼り付ける(-ate)のがdesignate。その場所・人を「これ！」と明確に指定する行為。designated area = 「しるし貼り付け済みエリア」＝指定区域。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "designateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["明確にしるしを付ける→指定する", "しるしを消す→取り消す", "しるしを描く→設計する", "しるしを返す→辞退する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "de + sign + ate の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["明確に + しるし + 動詞化 = 指定する・任命する", "離れて + しるし + 動詞化 = 取り消す", "再び + しるし + 動詞化 = 再確認する", "外へ + しるし + 動詞化 = 公表する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The parking lot has a ______ area for electric vehicles.",
+          "hint": "「はっきりしるしを付けられた」→「指定された」",
+          "explanationFocus": "gap",
+          "choices": ["designated", "designed", "assigned", "signed"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "designateと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["an area（区域を指定する）", "a color（色を指定する）", "a song（曲を指定する）", "a distance（距離を指定する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"She was designated as the project leader for the new initiative.\" — designatedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["指名・任命された", "解雇された", "設計を担当した", "辞退を求められた"],
+          "correct": 0
+        }
+      ],
+      "examples": ["This area is designated for non-smoking use only."]
+    }
+  ]
+}
