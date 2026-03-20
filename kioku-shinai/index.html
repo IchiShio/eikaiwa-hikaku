@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>記憶しない英単語 — MVP Demo</title>
+<style>
+:root {
+  --bg: #0a0a0f;
+  --surface: #14141f;
+  --surface2: #1e1e2e;
+  --accent: #6c5ce7;
+  --accent2: #a29bfe;
+  --correct: #00b894;
+  --wrong: #e17055;
+  --text: #e8e8f0;
+  --text2: #8888a0;
+  --gold: #fdcb6e;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: "Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── LP Section ── */
+.lp {
+  text-align: center;
+  padding: 80px 24px 60px;
+  max-width: 600px;
+}
+.lp h1 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.lp .copy {
+  font-size: 18px;
+  color: var(--accent2);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lp .sub {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.lp .price {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 24px;
+}
+.lp .price span {
+  font-size: 36px;
+  color: var(--gold);
+  font-weight: bold;
+}
+.btn-main {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+}
+.btn-main:hover { background: var(--accent2); transform: translateY(-2px); }
+
+/* ── Level Select ── */
+.level-select {
+  text-align: center;
+  padding: 60px 24px;
+  max-width: 500px;
+  display: none;
+}
+.level-select h2 { font-size: 22px; margin-bottom: 32px; }
+.level-btn {
+  display: block;
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid #333;
+  color: var(--text);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .2s;
+}
+.level-btn:hover { border-color: var(--accent); }
+.level-btn .level-name { font-size: 18px; font-weight: bold; margin-bottom: 4px; }
+.level-btn .level-desc { font-size: 13px; color: var(--text2); }
+
+/* ── Quiz ── */
+.quiz {
+  width: 100%;
+  max-width: 560px;
+  padding: 24px;
+  display: none;
+}
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.quiz-progress { font-size: 13px; color: var(--text2); }
+.quiz-type {
+  font-size: 11px;
+  color: var(--accent2);
+  background: rgba(108,92,231,.15);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.quiz-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 32px 24px;
+  margin-bottom: 20px;
+}
+.quiz-word {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.quiz-phonetic {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 24px;
+}
+.quiz-sentence {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+.quiz-sentence .blank {
+  display: inline-block;
+  border-bottom: 2px solid var(--accent);
+  min-width: 100px;
+  margin: 0 4px;
+}
+.quiz-instruction {
+  font-size: 13px;
+  color: var(--text2);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.choice-btn {
+  background: var(--surface2);
+  border: 1px solid #333;
+  color: var(--text);
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+  text-align: left;
+}
+.choice-btn:hover { border-color: var(--accent); background: rgba(108,92,231,.08); }
+.choice-btn.correct { border-color: var(--correct); background: rgba(0,184,148,.1); }
+.choice-btn.wrong { border-color: var(--wrong); background: rgba(225,112,85,.1); }
+.choice-btn.reveal { border-color: var(--correct); opacity: .7; }
+.choice-btn:disabled { cursor: default; }
+
+/* ── Explanation ── */
+.explanation {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  display: none;
+  animation: fadeUp .3s ease;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(12px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.exp-result {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #2a2a3a;
+}
+.exp-result.correct { color: var(--correct); }
+.exp-result.wrong { color: var(--wrong); }
+
+.exp-section { margin-bottom: 20px; }
+.exp-label {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent2);
+  margin-bottom: 8px;
+}
+.exp-content {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text);
+}
+.exp-content .highlight {
+  color: var(--gold);
+  font-weight: bold;
+}
+.exp-hook {
+  background: rgba(253,203,110,.06);
+  border-left: 3px solid var(--gold);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 8px;
+}
+.exp-hook-label {
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.btn-next {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .15s;
+}
+.btn-next:hover { background: var(--accent2); }
+
+/* ── Complete ── */
+.complete {
+  text-align: center;
+  padding: 60px 24px;
+  max-width: 500px;
+  display: none;
+}
+.complete h2 { font-size: 24px; margin-bottom: 16px; }
+.complete .stats { font-size: 15px; color: var(--text2); line-height: 2; margin-bottom: 32px; }
+.complete .stats span { color: var(--accent2); font-weight: bold; }
+</style>
+</head>
+<body>
+
+<!-- LP -->
+<div class="lp" id="lp">
+  <h1>記憶しない英単語</h1>
+  <p class="copy">記憶した単語は消える。<br>理解した単語は残る。</p>
+  <p class="sub">
+    単語＝和訳の丸暗記、もうやめませんか。<br>
+    語源から「腑に落ちる」。だから二度と忘れない。
+  </p>
+  <p class="price">月額 <span>¥980</span></p>
+  <button class="btn-main" onclick="showLevelSelect()">無料で体験する</button>
+</div>
+
+<!-- Level Select -->
+<div class="level-select" id="levelSelect">
+  <h2>レベルを選んでください</h2>
+  <button class="level-btn" onclick="startQuiz('beginner')">
+    <div class="level-name">初心者</div>
+    <div class="level-desc">中学〜高校基礎レベル。知ってるつもりの単語を「本当に」理解する。</div>
+  </button>
+  <button class="level-btn" onclick="startQuiz('intermediate')">
+    <div class="level-name">中級者</div>
+    <div class="level-desc">TOEIC 600〜800レベル。丸暗記で覚えた単語を、使える知識に変える。</div>
+  </button>
+</div>
+
+<!-- Quiz -->
+<div class="quiz" id="quiz">
+  <div class="quiz-header">
+    <span class="quiz-progress" id="qProgress"></span>
+    <span class="quiz-type" id="qType"></span>
+  </div>
+  <div class="quiz-card" id="qCard"></div>
+  <div class="choices" id="qChoices"></div>
+  <div class="explanation" id="qExplanation"></div>
+</div>
+
+<!-- Complete -->
+<div class="complete" id="complete">
+  <h2>体験完了</h2>
+  <div class="stats" id="completeStats"></div>
+  <button class="btn-main" onclick="showLevelSelect()">もう一度体験する</button>
+</div>
+
+<script>
+// ── Word Data (語源はEtymOnline/Wiktionary裏取り済み) ──
+
+const WORDS = {
+  beginner: [
+    {
+      word: "company",
+      phonetic: "/ˈkʌmpəni/",
+      formats: [
+        {
+          type: "英→日選択",
+          instruction: "この単語の本質的な意味は？",
+          choices: [
+            "パンを一緒に食べる仲間",
+            "大きな組織",
+            "お金を稼ぐ場所",
+            "ビジネスの単位"
+          ],
+          correct: 0
+        },
+        {
+          type: "穴埋め",
+          instruction: "空欄に入る単語は？",
+          sentence: "I enjoy your <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.",
+          hint: "「あなたと一緒にいるのが楽しい」",
+          choices: ["company","companion","community","commerce"],
+          correct: 0
+        },
+        {
+          type: "語源クイズ",
+          instruction: "company の語源の組み合わせとして正しいものは？",
+          choices: [
+            "com（一緒に）+ panis（パン）",
+            "com（完全に）+ pany（支払い）",
+            "comp（比較）+ any（いずれか）",
+            "con（反対）+ pan（全て）"
+          ],
+          correct: 0
+        }
+      ],
+      etymology: {
+        fact: "ラテン語 <span class='highlight'>companio</span>（com＝一緒に + panis＝パン）。「パンを分け合う仲間」が原義。古フランス語 compagnie を経て英語へ。",
+        gap: "日本語で「会社」と訳すと建物や法人のイメージになるが、原義は<span class='highlight'>「一緒にパンを食べる関係」</span>。だから enjoy your company（あなたと一緒にいるのが楽しい）が自然に使える。「会社」ではなく「仲間・一座」が出発点。",
+        hook: "食卓を囲んでパンを裂く場面を想像する。その輪がcompany。会議室ではなく、食卓。"
+      }
+    },
+    {
+      word: "understand",
+      phonetic: "/ˌʌndərˈstænd/",
+      formats: [
+        {
+          type: "語源クイズ",
+          instruction: "understand の原義に最も近いのは？",
+          choices: [
+            "物事の間（under）に立つ（stand）",
+            "下から（under）支える（stand）",
+            "上から見下ろして把握する",
+            "理解力で立ち向かう"
+          ],
+          correct: 0
+        },
+        {
+          type: "英→日選択",
+          instruction: "I don't understand your position. の position は？",
+          choices: [
+            "立場・見解",
+            "場所・位置",
+            "姿勢・ポーズ",
+            "職位・役職"
+          ],
+          correct: 0
+        },
+        {
+          type: "穴埋め",
+          instruction: "空欄に入る単語は？",
+          sentence: "Do you <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> what I mean?",
+          hint: "「私の言いたいことの間に立てますか？」",
+          choices: ["understand","know","realize","recognize"],
+          correct: 0
+        }
+      ],
+      etymology: {
+        fact: "古英語 <span class='highlight'>understandan</span>（under＝間に + standan＝立つ）。「物事の間に立つ」が原義。ゲルマン祖語由来で、ラテン語とは無関係の純英語。",
+        gap: "「理解する」と訳すと頭の中の作業に聞こえるが、原義は<span class='highlight'>「物事の真ん中に身体ごと立つ」</span>。under は「下」ではなく古英語で「間に」の意味。だから understand は傍観ではなく「当事者として中に入る」感覚。",
+        hook: "2人が議論している真ん中に立って、両方の声が耳に入る。その場所に立てたら understand できている。"
+      }
+    },
+    {
+      word: "appreciate",
+      phonetic: "/əˈpriːʃieɪt/",
+      formats: [
+        {
+          type: "英→日選択",
+          instruction: "appreciate の本質的な意味は？",
+          choices: [
+            "価値を正しく見積もる",
+            "ありがとうと言う",
+            "好意に気づく",
+            "恩返しをする"
+          ],
+          correct: 0
+        },
+        {
+          type: "コロケーション",
+          instruction: "appreciate と最も自然に組み合わさるのは？",
+          choices: [
+            "I'd appreciate your help.",
+            "I'd appreciate your sorry.",
+            "I'd appreciate your hello.",
+            "I'd appreciate your goodbye."
+          ],
+          correct: 0
+        },
+        {
+          type: "語源クイズ",
+          instruction: "appreciate と同じ語源（pretium）を持つ単語は？",
+          choices: [
+            "price（価格）",
+            "practice（練習）",
+            "precious（以前の）",
+            "approve（承認する）"
+          ],
+          correct: 0
+        }
+      ],
+      etymology: {
+        fact: "ラテン語 <span class='highlight'>appretiāre</span>（ad＝〜に向けて + pretium＝価格・価値）。「正しい値段をつける」が原義。price, precious と同根。",
+        gap: "「感謝する」だけで覚えると、I appreciate it が「感謝します」という平坦な訳になる。本質は<span class='highlight'>「価値を正しく測る」</span>。I appreciate your effort ＝「あなたの努力の値打ちがわかっています」。不動産が appreciate すると「値上がりする」のも同じ根。感謝も値上がりも「価値を見抜く」という一本の幹。",
+        hook: "宝石鑑定士が宝石をルーペで覗いて値段をつける。その行為が appreciate。相手の行為を「鑑定」して「これは価値がある」と認めること。"
+      }
+    }
+  ],
+  intermediate: [
+    {
+      word: "compromise",
+      phonetic: "/ˈkɒmprəmaɪz/",
+      formats: [
+        {
+          type: "英→日選択",
+          instruction: "compromise の本質的な意味は？",
+          choices: [
+            "互いに約束して歩み寄る",
+            "自分の意見を諦める",
+            "相手に負ける",
+            "仕方なく受け入れる"
+          ],
+          correct: 0
+        },
+        {
+          type: "穴埋め",
+          instruction: "空欄に入る単語は？",
+          sentence: "Both sides reached a <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> after months of negotiation.",
+          hint: "「双方が約束し合った結果」",
+          choices: ["compromise","surrender","agreement","settlement"],
+          correct: 0
+        },
+        {
+          type: "語源クイズ",
+          instruction: "compromise の語源の組み合わせとして正しいものは？",
+          choices: [
+            "com（相互に）+ prōmittere（約束する）",
+            "comp（完全に）+ promise（約束）",
+            "contra（反対）+ mise（置く）",
+            "com（一緒に）+ prime（第一の）"
+          ],
+          correct: 0
+        }
+      ],
+      etymology: {
+        fact: "ラテン語 <span class='highlight'>comprōmissum</span>（com＝相互に + prōmittere＝約束する）。「双方が約束し合うこと」が原義。仲裁人の判断に従うと互いに誓う法律用語だった。",
+        gap: "日本語の「妥協」は<span class='highlight'>敗北感</span>を伴うが、英語の compromise は対等。com（一緒に）+ promise（約束）＝「互いが出せるラインを約束し合う」行為。日本語なら「妥協」より「手打ち」が近い。",
+        hook: "2人が握手している場面。握手＝互いが手を差し出す＝互いの promise。片方だけが手を出すのは surrender。両方出すのが compromise。"
+      }
+    },
+    {
+      word: "volatile",
+      phonetic: "/ˈvɒlətaɪl/",
+      formats: [
+        {
+          type: "英→日選択",
+          instruction: "volatile の原義に最も近いのは？",
+          choices: [
+            "飛び去りやすい",
+            "危険な",
+            "不安定な",
+            "爆発しやすい"
+          ],
+          correct: 0
+        },
+        {
+          type: "コロケーション",
+          instruction: "volatile と最も自然に組み合わさるのは？",
+          choices: [
+            "volatile market",
+            "volatile building",
+            "volatile friendship",
+            "volatile breakfast"
+          ],
+          correct: 0
+        },
+        {
+          type: "語源クイズ",
+          instruction: "volatile と同じ語源（volāre）を持つ単語は？",
+          choices: [
+            "volley（一斉射撃）",
+            "volume（量）",
+            "volcano（火山）",
+            "voluntary（自発的な）"
+          ],
+          correct: 0
+        }
+      ],
+      etymology: {
+        fact: "ラテン語 <span class='highlight'>volātilis</span>（volāre＝飛ぶ + -tilis＝〜しやすい）。「飛び去りやすい」が原義。化学で「揮発性の」＝液体がすぐ気体に飛ぶ。volley（飛ぶ弾）と同根。",
+        gap: "「不安定な」と覚えると unstable との違いが消える。volatile の核は<span class='highlight'>「いつ飛んでいくかわからない」</span>。unstable は「倒れそう」、volatile は「飛び去りそう」。volatile market ＝ いつ急変して吹っ飛ぶかわからない市場。",
+        hook: "沸騰したやかんの蓋がカタカタ震えている。中の蒸気は今にも飛び出す。その「飛びそう」な状態が volatile。"
+      }
+    },
+    {
+      word: "articulate",
+      phonetic: "/ɑːrˈtɪkjʊleɪt/",
+      formats: [
+        {
+          type: "英→日選択",
+          instruction: "articulate の原義に最も近いのは？",
+          choices: [
+            "関節のように繋いで明瞭にする",
+            "大きな声で話す",
+            "正しい文法で書く",
+            "論理的に考える"
+          ],
+          correct: 0
+        },
+        {
+          type: "穴埋め",
+          instruction: "空欄に入る単語は？",
+          sentence: "She is very <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> about her vision for the project.",
+          hint: "「考えを明瞭に繋げて話せる」",
+          choices: ["articulate","talkative","loud","fluent"],
+          correct: 0
+        },
+        {
+          type: "語源クイズ",
+          instruction: "articulate と同じ語源（articulus）を持つ単語は？",
+          choices: [
+            "article（記事・条項）",
+            "artificial（人工的な）",
+            "artistic（芸術的な）",
+            "arctic（北極の）"
+          ],
+          correct: 0
+        }
+      ],
+      etymology: {
+        fact: "ラテン語 <span class='highlight'>articulātus</span>（articulus＝小さな関節、artus＝関節の縮小形）。「関節で区切られた・繋がった」が原義。article（条項＝区切られた項目）と同根。",
+        gap: "「明確に述べる」と覚えると、ただ「はっきり話す」の意味に縮む。本質は<span class='highlight'>「関節のように繋ぐ」</span>。バラバラの考えを関節で繋いで滑らかに動かすのが articulate。だから an articulate person は「声が大きい人」ではなく「考えの繋ぎ目が滑らかな人」。",
+        hook: "ロボットの腕を想像する。関節（article）があるから滑らかに動く。関節がなければカクカク。考えも同じで、繋ぎ目が滑らかなら articulate。"
+      }
+    }
+  ]
+};
+
+// ── State ──
+let currentLevel = null;
+let currentWords = [];
+let currentWordIdx = 0;
+let currentFormatIdx = 0;
+let correctCount = 0;
+let totalCount = 0;
+
+// ── Navigation ──
+function showLevelSelect() {
+  document.getElementById('lp').style.display = 'none';
+  document.getElementById('quiz').style.display = 'none';
+  document.getElementById('complete').style.display = 'none';
+  document.getElementById('levelSelect').style.display = 'block';
+}
+
+function startQuiz(level) {
+  currentLevel = level;
+  currentWords = WORDS[level];
+  currentWordIdx = 0;
+  currentFormatIdx = 0;
+  correctCount = 0;
+  totalCount = 0;
+  document.getElementById('levelSelect').style.display = 'none';
+  document.getElementById('quiz').style.display = 'block';
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const word = currentWords[currentWordIdx];
+  const fmt = word.formats[currentFormatIdx];
+  const total = currentWords.reduce((s,w) => s + w.formats.length, 0);
+  const current = currentWords.slice(0, currentWordIdx).reduce((s,w) => s + w.formats.length, 0) + currentFormatIdx + 1;
+
+  document.getElementById('qProgress').textContent = `${current} / ${total}`;
+  document.getElementById('qType').textContent = fmt.type;
+
+  let cardHTML = `<div class="quiz-word">${word.word}</div>`;
+  cardHTML += `<div class="quiz-phonetic">${word.phonetic}</div>`;
+  if (fmt.sentence) {
+    cardHTML += `<div class="quiz-sentence">${fmt.sentence}</div>`;
+  }
+  if (fmt.hint) {
+    cardHTML += `<div class="quiz-instruction">${fmt.hint}</div>`;
+  }
+  cardHTML += `<div class="quiz-instruction">${fmt.instruction}</div>`;
+  document.getElementById('qCard').innerHTML = cardHTML;
+
+  let choicesHTML = '';
+  fmt.choices.forEach((c, i) => {
+    choicesHTML += `<button class="choice-btn" onclick="answer(${i})">${c}</button>`;
+  });
+  document.getElementById('qChoices').innerHTML = choicesHTML;
+  document.getElementById('qExplanation').style.display = 'none';
+}
+
+function answer(idx) {
+  const word = currentWords[currentWordIdx];
+  const fmt = word.formats[currentFormatIdx];
+  const isCorrect = idx === fmt.correct;
+  totalCount++;
+  if (isCorrect) correctCount++;
+
+  const btns = document.querySelectorAll('.choice-btn');
+  btns.forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === fmt.correct) btn.classList.add('correct');
+    if (i === idx && !isCorrect) btn.classList.add('wrong');
+  });
+
+  // Show explanation
+  const exp = document.getElementById('qExplanation');
+  let html = `<div class="exp-result ${isCorrect ? 'correct' : 'wrong'}">${isCorrect ? '正解！' : '不正解'}</div>`;
+
+  html += `<div class="exp-section">
+    <div class="exp-label">語源（Etymology）</div>
+    <div class="exp-content">${word.etymology.fact}</div>
+  </div>`;
+
+  html += `<div class="exp-section">
+    <div class="exp-label">和訳のズレ</div>
+    <div class="exp-content">${word.etymology.gap}</div>
+  </div>`;
+
+  html += `<div class="exp-hook">
+    <div class="exp-hook-label">記憶フック（語源に基づくイメージ）</div>
+    <div class="exp-content">${word.etymology.hook}</div>
+  </div>`;
+
+  html += `<button class="btn-next" onclick="next()" style="margin-top:20px">次へ</button>`;
+
+  exp.innerHTML = html;
+  exp.style.display = 'block';
+  exp.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function next() {
+  currentFormatIdx++;
+  if (currentFormatIdx >= currentWords[currentWordIdx].formats.length) {
+    currentFormatIdx = 0;
+    currentWordIdx++;
+  }
+  if (currentWordIdx >= currentWords.length) {
+    showComplete();
+    return;
+  }
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showComplete() {
+  document.getElementById('quiz').style.display = 'none';
+  const c = document.getElementById('complete');
+  c.style.display = 'block';
+  document.getElementById('completeStats').innerHTML = `
+    正答率: <span>${correctCount}/${totalCount}</span><br>
+    学習した単語: <span>${currentWords.length}語</span><br><br>
+    これが「記憶しない」学習です。<br>
+    語源から理解した単語は、もう忘れません。
+  `;
+}
+</script>
+</body>
+</html>
