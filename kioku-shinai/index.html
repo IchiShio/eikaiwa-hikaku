@@ -1,695 +1,602 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>記憶しない英単語 — MVP Demo</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PS9R9844');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B9WEBKYEP"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());
+    gtag('config','G-5B9WEBKYEP',{send_page_view:false});
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>記憶しない英単語 | 語根30個でTOEIC600語が芋づる式 | native-real</title>
+  <meta name="description" content="丸暗記ゼロ。語根×認知言語学でTOEIC頻出600語を「理解」するから忘れない。語根1つで8語が芋づる式に読める無料体験。">
+  <link rel="canonical" href="https://native-real.com/kioku-shinai/">
+  <meta property="og:title" content="記憶しない英単語 | 語根30個でTOEIC600語が芋づる式">
+  <meta property="og:description" content="丸暗記ゼロ。語根×認知言語学でTOEIC頻出600語を「理解」するから忘れない。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://native-real.com/kioku-shinai/">
+  <meta property="og:site_name" content="native-real">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #0a0a0f;
-  --surface: #14141f;
-  --surface2: #1e1e2e;
-  --accent: #6c5ce7;
-  --accent2: #a29bfe;
-  --correct: #00b894;
-  --wrong: #e17055;
-  --text: #e8e8f0;
-  --text2: #8888a0;
-  --gold: #fdcb6e;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#faf8f5;--white:#fff;--surface:rgba(0,0,0,.04);--surface2:rgba(0,0,0,.07);
+  --border:rgba(0,0,0,.09);--border2:rgba(0,0,0,.15);
+  --accent:#c0392b;--accent2:#e74c3c;--accent-soft:rgba(192,57,43,.08);
+  --gold:#d4a017;--gold-soft:rgba(212,160,23,.12);
+  --correct:#16a34a;--correct-soft:rgba(22,163,74,.1);
+  --wrong:#dc2626;--wrong-soft:rgba(220,38,38,.1);
+  --text1:rgba(0,0,0,.88);--text2:rgba(0,0,0,.55);--text3:rgba(0,0,0,.35);
+  --prefix:#2563eb;--prefix-soft:rgba(37,99,235,.1);
+  --root:#c0392b;--root-soft:rgba(192,57,43,.1);
+  --suffix:#059669;--suffix-soft:rgba(5,150,105,.1);
+  --radius:16px;--radius-sm:10px;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: "Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;background:var(--bg);color:var(--text1);min-height:100vh;-webkit-font-smoothing:antialiased}
 
-/* ── LP Section ── */
-.lp {
-  text-align: center;
-  padding: 80px 24px 60px;
-  max-width: 600px;
-}
-.lp h1 {
-  font-size: 32px;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-.lp .copy {
-  font-size: 18px;
-  color: var(--accent2);
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-.lp .sub {
-  font-size: 14px;
-  color: var(--text2);
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
-.lp .price {
-  font-size: 14px;
-  color: var(--text2);
-  margin-bottom: 24px;
-}
-.lp .price span {
-  font-size: 36px;
-  color: var(--gold);
-  font-weight: bold;
-}
-.btn-main {
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 16px 48px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform .15s, background .15s;
-}
-.btn-main:hover { background: var(--accent2); transform: translateY(-2px); }
+/* ── LAYOUT ── */
+.container{max-width:540px;margin:0 auto;padding:0 20px}
+.screen{display:none;min-height:100vh}
+.screen.active{display:block}
 
-/* ── Level Select ── */
-.level-select {
-  text-align: center;
-  padding: 60px 24px;
-  max-width: 500px;
-  display: none;
-}
-.level-select h2 { font-size: 22px; margin-bottom: 32px; }
-.level-btn {
-  display: block;
-  width: 100%;
-  background: var(--surface2);
-  border: 1px solid #333;
-  color: var(--text);
-  padding: 24px;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  cursor: pointer;
-  text-align: left;
-  transition: border-color .2s;
-}
-.level-btn:hover { border-color: var(--accent); }
-.level-btn .level-name { font-size: 18px; font-weight: bold; margin-bottom: 4px; }
-.level-btn .level-desc { font-size: 13px; color: var(--text2); }
+/* ── HEADER ── */
+.header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.header-logo{font-size:14px;font-weight:700;color:var(--text1);text-decoration:none}
+.header-logo span{color:var(--accent)}
+.header-back{font-size:14px;color:var(--text2);cursor:pointer;padding:8px 12px;border-radius:8px;border:none;background:none}
+.header-back:hover{background:var(--surface)}
 
-/* ── Quiz ── */
-.quiz {
-  width: 100%;
-  max-width: 560px;
-  padding: 24px;
-  display: none;
-}
-.quiz-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-.quiz-progress { font-size: 13px; color: var(--text2); }
-.quiz-type {
-  font-size: 11px;
-  color: var(--accent2);
-  background: rgba(108,92,231,.15);
-  padding: 4px 10px;
-  border-radius: 20px;
-}
-.quiz-card {
-  background: var(--surface);
-  border-radius: 16px;
-  padding: 32px 24px;
-  margin-bottom: 20px;
-}
-.quiz-word {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-}
-.quiz-phonetic {
-  text-align: center;
-  font-size: 14px;
-  color: var(--text2);
-  margin-bottom: 24px;
-}
-.quiz-sentence {
-  font-size: 16px;
-  line-height: 1.8;
-  text-align: center;
-  margin-bottom: 24px;
-  color: var(--text);
-}
-.quiz-sentence .blank {
-  display: inline-block;
-  border-bottom: 2px solid var(--accent);
-  min-width: 100px;
-  margin: 0 4px;
-}
-.quiz-instruction {
-  font-size: 13px;
-  color: var(--text2);
-  text-align: center;
-  margin-bottom: 20px;
-}
-.choices {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.choice-btn {
-  background: var(--surface2);
-  border: 1px solid #333;
-  color: var(--text);
-  padding: 14px 20px;
-  border-radius: 10px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: border-color .15s, background .15s;
-  text-align: left;
-}
-.choice-btn:hover { border-color: var(--accent); background: rgba(108,92,231,.08); }
-.choice-btn.correct { border-color: var(--correct); background: rgba(0,184,148,.1); }
-.choice-btn.wrong { border-color: var(--wrong); background: rgba(225,112,85,.1); }
-.choice-btn.reveal { border-color: var(--correct); opacity: .7; }
-.choice-btn:disabled { cursor: default; }
+/* ── LP ── */
+.lp-hero{padding:80px 0 40px;text-align:center}
+.lp-hero h1{font-size:36px;font-weight:900;line-height:1.2;letter-spacing:-.5px;margin-bottom:12px}
+.lp-hero .accent{color:var(--accent)}
+.lp-hero .sub{font-size:18px;color:var(--text2);font-weight:500;margin-bottom:40px;line-height:1.6}
 
-/* ── Explanation ── */
-.explanation {
-  background: var(--surface);
-  border-radius: 16px;
-  padding: 28px 24px;
-  margin-bottom: 20px;
-  display: none;
-  animation: fadeUp .3s ease;
-}
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(12px); }
-  to { opacity:1; transform:translateY(0); }
-}
-.exp-result {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #2a2a3a;
-}
-.exp-result.correct { color: var(--correct); }
-.exp-result.wrong { color: var(--wrong); }
+/* Root demo on LP */
+.lp-demo{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;margin-bottom:32px;text-align:left}
+.lp-demo h3{font-size:15px;font-weight:700;color:var(--text2);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
+.lp-demo .root-label{display:inline-block;background:var(--root-soft);color:var(--root);font-size:28px;font-weight:900;padding:8px 20px;border-radius:var(--radius-sm);margin-bottom:4px}
+.lp-demo .root-meaning{font-size:15px;color:var(--text2);margin-bottom:20px}
+.lp-tree{display:flex;flex-direction:column;gap:8px}
+.lp-tree-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--radius-sm);background:var(--surface);transition:background .15s}
+.lp-tree-prefix{font-weight:800;color:var(--prefix);min-width:50px;text-align:right;font-size:15px}
+.lp-tree-plus{color:var(--text3);font-size:13px}
+.lp-tree-root{font-weight:800;color:var(--root);font-size:15px}
+.lp-tree-arrow{color:var(--text3);font-size:13px}
+.lp-tree-word{font-weight:700;font-size:15px}
+.lp-tree-ja{color:var(--text2);font-size:13px;margin-left:auto}
 
-.exp-section { margin-bottom: 20px; }
-.exp-label {
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--accent2);
-  margin-bottom: 8px;
-}
-.exp-content {
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--text);
-}
-.exp-content .highlight {
-  color: var(--gold);
-  font-weight: bold;
-}
-.exp-hook {
-  background: rgba(253,203,110,.06);
-  border-left: 3px solid var(--gold);
-  padding: 12px 16px;
-  border-radius: 0 8px 8px 0;
-  margin-top: 8px;
-}
-.exp-hook-label {
-  font-size: 11px;
-  color: var(--gold);
-  font-weight: bold;
-  margin-bottom: 4px;
-}
+.btn-cta{display:block;width:100%;background:var(--accent);color:#fff;border:none;padding:18px;border-radius:var(--radius);font-size:17px;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;text-align:center}
+.btn-cta:hover{background:var(--accent2)}
+.btn-cta:active{transform:scale(.98)}
 
-.btn-next {
-  width: 100%;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 14px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background .15s;
-}
-.btn-next:hover { background: var(--accent2); }
+.lp-note{text-align:center;font-size:13px;color:var(--text3);margin-top:12px}
 
-/* ── Complete ── */
-.complete {
-  text-align: center;
-  padding: 60px 24px;
-  max-width: 500px;
-  display: none;
-}
-.complete h2 { font-size: 24px; margin-bottom: 16px; }
-.complete .stats { font-size: 15px; color: var(--text2); line-height: 2; margin-bottom: 32px; }
-.complete .stats span { color: var(--accent2); font-weight: bold; }
+/* ── ROOT SELECT ── */
+.root-select{padding:24px 0 40px}
+.root-select h2{font-size:22px;font-weight:900;margin-bottom:6px}
+.root-select .desc{font-size:14px;color:var(--text2);margin-bottom:20px}
+.root-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.root-card{background:var(--white);border:2px solid var(--border);border-radius:var(--radius);padding:18px 20px;cursor:pointer;transition:border-color .15s,transform .1s;display:flex;align-items:center;gap:16px}
+.root-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.root-card.completed{border-color:var(--correct);background:var(--correct-soft)}
+.root-card .rc-icon{width:48px;height:48px;border-radius:12px;background:var(--root-soft);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:var(--root);flex-shrink:0}
+.root-card.completed .rc-icon{background:var(--correct-soft);color:var(--correct)}
+.rc-info{flex:1}
+.rc-info .rc-name{font-size:17px;font-weight:800}
+.rc-info .rc-meaning{font-size:13px;color:var(--text2)}
+.rc-info .rc-count{font-size:12px;color:var(--text3);margin-top:2px}
+.rc-check{color:var(--correct);font-size:20px;font-weight:900;display:none}
+.root-card.completed .rc-check{display:block}
+
+/* ── QUIZ ── */
+.quiz-header{padding:12px 0 4px;display:flex;align-items:center;justify-content:space-between}
+.quiz-progress-text{font-size:14px;font-weight:700}
+.quiz-progress-text span{color:var(--text3);font-weight:400}
+.quiz-type{font-size:12px;color:var(--text2);background:var(--surface);padding:4px 10px;border-radius:20px}
+.quiz-bar{height:4px;background:var(--surface2);border-radius:4px;margin-bottom:20px}
+.quiz-bar-fill{height:4px;background:var(--accent);border-radius:4px;transition:width .4s ease}
+
+/* Root intro */
+.root-intro{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:20px;text-align:center}
+.root-intro .ri-root{font-size:36px;font-weight:900;color:var(--root);margin-bottom:4px}
+.root-intro .ri-meaning{font-size:16px;color:var(--text2);margin-bottom:12px}
+.root-intro .ri-hook{background:var(--gold-soft);border-radius:var(--radius-sm);padding:14px 16px;text-align:left}
+.root-intro .ri-hook-label{font-size:12px;font-weight:800;color:var(--gold);margin-bottom:4px}
+.root-intro .ri-hook-text{font-size:14px;line-height:1.6;color:var(--text1)}
+
+/* Question area */
+.q-word{text-align:center;padding:24px 0 8px}
+.q-word-text{font-family:'Inter',sans-serif;font-size:42px;font-weight:900;letter-spacing:-1px;display:inline}
+.q-play{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--accent-soft);border:none;cursor:pointer;margin-left:8px;vertical-align:middle;transition:background .15s}
+.q-play:hover{background:rgba(192,57,43,.15)}
+.q-play svg{width:16px;height:16px;fill:var(--accent)}
+.q-phonetic{font-size:14px;color:var(--text3);text-align:center;margin-bottom:4px}
+.q-instruction{font-size:17px;font-weight:700;text-align:center;padding:12px 0 16px}
+
+/* Choices */
+.choices{display:flex;flex-direction:column;gap:8px}
+.choice-btn{text-align:left;padding:14px 16px;border-radius:var(--radius-sm);font-size:16px;font-weight:600;border:2px solid var(--border);background:var(--white);cursor:pointer;transition:border-color .15s,background .15s;min-height:48px;display:flex;align-items:center}
+.choice-btn:hover:not(:disabled){border-color:rgba(192,57,43,.3)}
+.choice-btn:disabled{cursor:default}
+.choice-btn.correct{background:var(--correct-soft);border-color:var(--correct);color:var(--correct)}
+.choice-btn.wrong{background:var(--wrong-soft);border-color:var(--wrong);color:var(--wrong)}
+.choice-btn.dim{opacity:.3}
+
+/* Fill-in sentence */
+.q-sentence{font-size:18px;line-height:1.7;text-align:center;padding:20px 0;font-weight:500}
+.q-blank{display:inline-block;min-width:90px;border-bottom:3px solid var(--accent);padding-bottom:2px;margin:0 4px;font-weight:800}
+.q-blank.correct{border-color:var(--correct);color:var(--correct)}
+.q-blank.wrong{border-color:var(--wrong);color:var(--wrong)}
+.q-hint{font-size:16px;text-align:center;color:var(--text1);padding-bottom:12px}
+
+/* Etymology blocks */
+.etym-blocks{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:12px 0}
+.etym-part{border-radius:var(--radius-sm);padding:8px 16px;text-align:center}
+.etym-part.prefix{background:var(--prefix-soft);color:var(--prefix)}
+.etym-part.root{background:var(--root-soft);color:var(--root)}
+.etym-part.suffix{background:var(--suffix-soft);color:var(--suffix)}
+.etym-part-name{font-size:18px;font-weight:900}
+.etym-part-meaning{font-size:11px;font-weight:600;margin-top:2px}
+.etym-plus{color:var(--text3);font-size:16px;font-weight:300}
+
+/* Explanation */
+.explanation{margin-top:16px;animation:fadeUp .3s ease}
+.exp-card{background:var(--white);border:2px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:8px}
+.exp-result{font-size:18px;font-weight:900;margin-bottom:12px}
+.exp-result.ok{color:var(--correct)}
+.exp-result.ng{color:var(--wrong)}
+.exp-result small{font-size:13px;font-weight:500;color:var(--text2);margin-left:8px}
+.exp-hook{background:var(--gold-soft);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:14px}
+.exp-hook-label{font-size:12px;font-weight:800;color:var(--gold);margin-bottom:4px}
+.exp-hook-text{font-size:14px;line-height:1.6}
+.exp-section{margin-bottom:12px}
+.exp-section-label{font-size:12px;font-weight:800;color:var(--accent);margin-bottom:4px}
+.exp-section-label.gold{color:var(--gold)}
+.exp-section-text{font-size:14px;line-height:1.7;color:var(--text1)}
+.exp-oneliner{font-size:16px;font-weight:700;text-align:center;line-height:1.5;padding:8px 0 12px;border-bottom:1px solid var(--border);margin-bottom:12px}
+
+/* Next button */
+.btn-next-wrap{position:sticky;bottom:0;padding:10px 0 14px;background:linear-gradient(transparent,var(--bg) 30%)}
+.btn-next{display:block;width:100%;background:var(--accent);color:#fff;border:none;padding:16px;border-radius:var(--radius);font-size:16px;font-weight:700;cursor:pointer;transition:background .15s}
+.btn-next:hover{background:var(--accent2)}
+
+/* ── COMPLETE ── */
+.complete{text-align:center;padding:80px 0 40px}
+.complete-score{font-size:56px;font-weight:900;color:var(--accent)}
+.complete h2{font-size:24px;font-weight:900;margin:8px 0}
+.complete .detail{font-size:16px;color:var(--text2);margin-bottom:8px}
+.complete .msg{font-size:15px;color:var(--text2);line-height:1.7;margin-bottom:32px}
+.btn-secondary{display:block;width:100%;background:var(--white);color:var(--text1);border:2px solid var(--border);padding:16px;border-radius:var(--radius);font-size:16px;font-weight:700;cursor:pointer;margin-top:10px;transition:border-color .15s}
+.btn-secondary:hover{border-color:var(--accent)}
+
+/* ── ANIMATION ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .3s ease}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:40px 20px;font-size:12px;color:var(--text3);border-top:1px solid var(--border);margin-top:40px}
+.footer a{color:var(--text2);text-decoration:none}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- LP -->
-<div class="lp" id="lp">
-  <h1>記憶しない英単語</h1>
-  <p class="copy">記憶した単語は消える。<br>理解した単語は残る。</p>
-  <p class="sub">
-    単語＝和訳の丸暗記、もうやめませんか。<br>
-    語源から「腑に落ちる」。だから二度と忘れない。
-  </p>
-  <p class="price">月額 <span>¥980</span></p>
-  <button class="btn-main" onclick="showLevelSelect()">無料で体験する</button>
+<!-- ═══════ HEADER ═══════ -->
+<div class="header">
+  <a href="/" class="header-logo"><span>native</span>-real</a>
+  <button class="header-back" id="backBtn" style="display:none" onclick="goBack()">← 戻る</button>
 </div>
 
-<!-- Level Select -->
-<div class="level-select" id="levelSelect">
-  <h2>レベルを選んでください</h2>
-  <button class="level-btn" onclick="startQuiz('beginner')">
-    <div class="level-name">初心者</div>
-    <div class="level-desc">中学〜高校基礎レベル。知ってるつもりの単語を「本当に」理解する。</div>
-  </button>
-  <button class="level-btn" onclick="startQuiz('intermediate')">
-    <div class="level-name">中級者</div>
-    <div class="level-desc">TOEIC 600〜800レベル。丸暗記で覚えた単語を、使える知識に変える。</div>
-  </button>
-</div>
-
-<!-- Quiz -->
-<div class="quiz" id="quiz">
-  <div class="quiz-header">
-    <span class="quiz-progress" id="qProgress"></span>
-    <span class="quiz-type" id="qType"></span>
+<!-- ═══════ SCREEN: LP ═══════ -->
+<div class="screen active" id="screenLp">
+<div class="container">
+  <div class="lp-hero">
+    <h1>記憶しない<br><span class="accent">英単語</span></h1>
+    <p class="sub">語根30個で、TOEIC600語が<br>芋づる式に読める。</p>
   </div>
-  <div class="quiz-card" id="qCard"></div>
-  <div class="choices" id="qChoices"></div>
-  <div class="explanation" id="qExplanation"></div>
+
+  <div class="lp-demo">
+    <h3>例: 語根 duct</h3>
+    <div class="root-label">duct</div>
+    <div class="root-meaning">= 導く（ラテン語 ducere）</div>
+    <div class="lp-tree" id="lpTree"></div>
+  </div>
+
+  <button class="btn-cta" onclick="showRootSelect()">無料で体験する</button>
+  <p class="lp-note">登録不要・全機能無料</p>
+
+  <div class="footer">
+    <a href="/">ListenUp（リスニング）</a> ｜ <a href="/ranking/">サービス比較</a><br>
+    &copy; 2026 native-real.com
+  </div>
+</div>
 </div>
 
-<!-- Complete -->
-<div class="complete" id="complete">
-  <h2>体験完了</h2>
-  <div class="stats" id="completeStats"></div>
-  <button class="btn-main" onclick="showLevelSelect()">もう一度体験する</button>
+<!-- ═══════ SCREEN: ROOT SELECT ═══════ -->
+<div class="screen" id="screenSelect">
+<div class="container">
+  <div class="root-select">
+    <h2>語根を選ぶ</h2>
+    <p class="desc">語根1つで複数の単語が芋づる式に読めます</p>
+    <div class="root-grid" id="rootGrid"></div>
+  </div>
+  <div class="footer">
+    <a href="/">ListenUp</a> ｜ <a href="/ranking/">サービス比較</a><br>
+    &copy; 2026 native-real.com
+  </div>
+</div>
+</div>
+
+<!-- ═══════ SCREEN: QUIZ ═══════ -->
+<div class="screen" id="screenQuiz">
+<div class="container">
+  <div class="quiz-header">
+    <div class="quiz-progress-text" id="qProgress">1 <span>/ 8</span></div>
+    <div class="quiz-type" id="qType"></div>
+  </div>
+  <div class="quiz-bar"><div class="quiz-bar-fill" id="qBar"></div></div>
+
+  <!-- Root intro (shown before first question) -->
+  <div id="rootIntro" style="display:none"></div>
+
+  <!-- Question area -->
+  <div id="questionArea" class="fade-up"></div>
+
+  <!-- Explanation area -->
+  <div id="explanationArea"></div>
+</div>
+</div>
+
+<!-- ═══════ SCREEN: COMPLETE ═══════ -->
+<div class="screen" id="screenComplete">
+<div class="container">
+  <div class="complete">
+    <div class="complete-score" id="compScore"></div>
+    <h2 id="compTitle"></h2>
+    <p class="detail" id="compDetail"></p>
+    <p class="msg" id="compMsg"></p>
+    <button class="btn-cta" onclick="showRootSelect()">別の語根を学ぶ</button>
+    <button class="btn-secondary" onclick="showScreen('screenLp')">トップに戻る</button>
+  </div>
+</div>
 </div>
 
 <script>
-// ── Word Data (語源はEtymOnline/Wiktionary裏取り済み) ──
-
-const WORDS = {
-  beginner: [
-    {
-      word: "company",
-      phonetic: "/ˈkʌmpəni/",
-      formats: [
-        {
-          type: "英→日選択",
-          instruction: "この単語の本質的な意味は？",
-          choices: [
-            "パンを一緒に食べる仲間",
-            "大きな組織",
-            "お金を稼ぐ場所",
-            "ビジネスの単位"
-          ],
-          correct: 0
-        },
-        {
-          type: "穴埋め",
-          instruction: "空欄に入る単語は？",
-          sentence: "I enjoy your <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.",
-          hint: "「あなたと一緒にいるのが楽しい」",
-          choices: ["company","companion","community","commerce"],
-          correct: 0
-        },
-        {
-          type: "語源クイズ",
-          instruction: "company の語源の組み合わせとして正しいものは？",
-          choices: [
-            "com（一緒に）+ panis（パン）",
-            "com（完全に）+ pany（支払い）",
-            "comp（比較）+ any（いずれか）",
-            "con（反対）+ pan（全て）"
-          ],
-          correct: 0
-        }
-      ],
-      etymology: {
-        fact: "ラテン語 <span class='highlight'>companio</span>（com＝一緒に + panis＝パン）。「パンを分け合う仲間」が原義。古フランス語 compagnie を経て英語へ。",
-        gap: "日本語で「会社」と訳すと建物や法人のイメージになるが、原義は<span class='highlight'>「一緒にパンを食べる関係」</span>。だから enjoy your company（あなたと一緒にいるのが楽しい）が自然に使える。「会社」ではなく「仲間・一座」が出発点。",
-        hook: "食卓を囲んでパンを裂く場面を想像する。その輪がcompany。会議室ではなく、食卓。"
-      }
-    },
-    {
-      word: "understand",
-      phonetic: "/ˌʌndərˈstænd/",
-      formats: [
-        {
-          type: "語源クイズ",
-          instruction: "understand の原義に最も近いのは？",
-          choices: [
-            "物事の間（under）に立つ（stand）",
-            "下から（under）支える（stand）",
-            "上から見下ろして把握する",
-            "理解力で立ち向かう"
-          ],
-          correct: 0
-        },
-        {
-          type: "英→日選択",
-          instruction: "I don't understand your position. の position は？",
-          choices: [
-            "立場・見解",
-            "場所・位置",
-            "姿勢・ポーズ",
-            "職位・役職"
-          ],
-          correct: 0
-        },
-        {
-          type: "穴埋め",
-          instruction: "空欄に入る単語は？",
-          sentence: "Do you <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> what I mean?",
-          hint: "「私の言いたいことの間に立てますか？」",
-          choices: ["understand","know","realize","recognize"],
-          correct: 0
-        }
-      ],
-      etymology: {
-        fact: "古英語 <span class='highlight'>understandan</span>（under＝間に + standan＝立つ）。「物事の間に立つ」が原義。ゲルマン祖語由来で、ラテン語とは無関係の純英語。",
-        gap: "「理解する」と訳すと頭の中の作業に聞こえるが、原義は<span class='highlight'>「物事の真ん中に身体ごと立つ」</span>。under は「下」ではなく古英語で「間に」の意味。だから understand は傍観ではなく「当事者として中に入る」感覚。",
-        hook: "2人が議論している真ん中に立って、両方の声が耳に入る。その場所に立てたら understand できている。"
-      }
-    },
-    {
-      word: "appreciate",
-      phonetic: "/əˈpriːʃieɪt/",
-      formats: [
-        {
-          type: "英→日選択",
-          instruction: "appreciate の本質的な意味は？",
-          choices: [
-            "価値を正しく見積もる",
-            "ありがとうと言う",
-            "好意に気づく",
-            "恩返しをする"
-          ],
-          correct: 0
-        },
-        {
-          type: "コロケーション",
-          instruction: "appreciate と最も自然に組み合わさるのは？",
-          choices: [
-            "I'd appreciate your help.",
-            "I'd appreciate your sorry.",
-            "I'd appreciate your hello.",
-            "I'd appreciate your goodbye."
-          ],
-          correct: 0
-        },
-        {
-          type: "語源クイズ",
-          instruction: "appreciate と同じ語源（pretium）を持つ単語は？",
-          choices: [
-            "price（価格）",
-            "practice（練習）",
-            "precious（以前の）",
-            "approve（承認する）"
-          ],
-          correct: 0
-        }
-      ],
-      etymology: {
-        fact: "ラテン語 <span class='highlight'>appretiāre</span>（ad＝〜に向けて + pretium＝価格・価値）。「正しい値段をつける」が原義。price, precious と同根。",
-        gap: "「感謝する」だけで覚えると、I appreciate it が「感謝します」という平坦な訳になる。本質は<span class='highlight'>「価値を正しく測る」</span>。I appreciate your effort ＝「あなたの努力の値打ちがわかっています」。不動産が appreciate すると「値上がりする」のも同じ根。感謝も値上がりも「価値を見抜く」という一本の幹。",
-        hook: "宝石鑑定士が宝石をルーペで覗いて値段をつける。その行為が appreciate。相手の行為を「鑑定」して「これは価値がある」と認めること。"
-      }
-    }
-  ],
-  intermediate: [
-    {
-      word: "compromise",
-      phonetic: "/ˈkɒmprəmaɪz/",
-      formats: [
-        {
-          type: "英→日選択",
-          instruction: "compromise の本質的な意味は？",
-          choices: [
-            "互いに約束して歩み寄る",
-            "自分の意見を諦める",
-            "相手に負ける",
-            "仕方なく受け入れる"
-          ],
-          correct: 0
-        },
-        {
-          type: "穴埋め",
-          instruction: "空欄に入る単語は？",
-          sentence: "Both sides reached a <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> after months of negotiation.",
-          hint: "「双方が約束し合った結果」",
-          choices: ["compromise","surrender","agreement","settlement"],
-          correct: 0
-        },
-        {
-          type: "語源クイズ",
-          instruction: "compromise の語源の組み合わせとして正しいものは？",
-          choices: [
-            "com（相互に）+ prōmittere（約束する）",
-            "comp（完全に）+ promise（約束）",
-            "contra（反対）+ mise（置く）",
-            "com（一緒に）+ prime（第一の）"
-          ],
-          correct: 0
-        }
-      ],
-      etymology: {
-        fact: "ラテン語 <span class='highlight'>comprōmissum</span>（com＝相互に + prōmittere＝約束する）。「双方が約束し合うこと」が原義。仲裁人の判断に従うと互いに誓う法律用語だった。",
-        gap: "日本語の「妥協」は<span class='highlight'>敗北感</span>を伴うが、英語の compromise は対等。com（一緒に）+ promise（約束）＝「互いが出せるラインを約束し合う」行為。日本語なら「妥協」より「手打ち」が近い。",
-        hook: "2人が握手している場面。握手＝互いが手を差し出す＝互いの promise。片方だけが手を出すのは surrender。両方出すのが compromise。"
-      }
-    },
-    {
-      word: "volatile",
-      phonetic: "/ˈvɒlətaɪl/",
-      formats: [
-        {
-          type: "英→日選択",
-          instruction: "volatile の原義に最も近いのは？",
-          choices: [
-            "飛び去りやすい",
-            "危険な",
-            "不安定な",
-            "爆発しやすい"
-          ],
-          correct: 0
-        },
-        {
-          type: "コロケーション",
-          instruction: "volatile と最も自然に組み合わさるのは？",
-          choices: [
-            "volatile market",
-            "volatile building",
-            "volatile friendship",
-            "volatile breakfast"
-          ],
-          correct: 0
-        },
-        {
-          type: "語源クイズ",
-          instruction: "volatile と同じ語源（volāre）を持つ単語は？",
-          choices: [
-            "volley（一斉射撃）",
-            "volume（量）",
-            "volcano（火山）",
-            "voluntary（自発的な）"
-          ],
-          correct: 0
-        }
-      ],
-      etymology: {
-        fact: "ラテン語 <span class='highlight'>volātilis</span>（volāre＝飛ぶ + -tilis＝〜しやすい）。「飛び去りやすい」が原義。化学で「揮発性の」＝液体がすぐ気体に飛ぶ。volley（飛ぶ弾）と同根。",
-        gap: "「不安定な」と覚えると unstable との違いが消える。volatile の核は<span class='highlight'>「いつ飛んでいくかわからない」</span>。unstable は「倒れそう」、volatile は「飛び去りそう」。volatile market ＝ いつ急変して吹っ飛ぶかわからない市場。",
-        hook: "沸騰したやかんの蓋がカタカタ震えている。中の蒸気は今にも飛び出す。その「飛びそう」な状態が volatile。"
-      }
-    },
-    {
-      word: "articulate",
-      phonetic: "/ɑːrˈtɪkjʊleɪt/",
-      formats: [
-        {
-          type: "英→日選択",
-          instruction: "articulate の原義に最も近いのは？",
-          choices: [
-            "関節のように繋いで明瞭にする",
-            "大きな声で話す",
-            "正しい文法で書く",
-            "論理的に考える"
-          ],
-          correct: 0
-        },
-        {
-          type: "穴埋め",
-          instruction: "空欄に入る単語は？",
-          sentence: "She is very <span class='blank'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> about her vision for the project.",
-          hint: "「考えを明瞭に繋げて話せる」",
-          choices: ["articulate","talkative","loud","fluent"],
-          correct: 0
-        },
-        {
-          type: "語源クイズ",
-          instruction: "articulate と同じ語源（articulus）を持つ単語は？",
-          choices: [
-            "article（記事・条項）",
-            "artificial（人工的な）",
-            "artistic（芸術的な）",
-            "arctic（北極の）"
-          ],
-          correct: 0
-        }
-      ],
-      etymology: {
-        fact: "ラテン語 <span class='highlight'>articulātus</span>（articulus＝小さな関節、artus＝関節の縮小形）。「関節で区切られた・繋がった」が原義。article（条項＝区切られた項目）と同根。",
-        gap: "「明確に述べる」と覚えると、ただ「はっきり話す」の意味に縮む。本質は<span class='highlight'>「関節のように繋ぐ」</span>。バラバラの考えを関節で繋いで滑らかに動かすのが articulate。だから an articulate person は「声が大きい人」ではなく「考えの繋ぎ目が滑らかな人」。",
-        hook: "ロボットの腕を想像する。関節（article）があるから滑らかに動く。関節がなければカクカク。考えも同じで、繋ぎ目が滑らかなら articulate。"
-      }
-    }
-  ]
-};
-
-// ── State ──
-let currentLevel = null;
-let currentWords = [];
-let currentWordIdx = 0;
-let currentFormatIdx = 0;
+/* ══════════════════════════════
+   STATE
+   ══════════════════════════════ */
+let ROOT_DATA = null;   // loaded JSON
+let queue = [];          // [{wordIdx, fmtIdx}]
+let qi = 0;
+let answered = null;
 let correctCount = 0;
 let totalCount = 0;
+let audioEl = null;
+const STORAGE_KEY = 'kioku_v1';
 
-// ── Navigation ──
-function showLevelSelect() {
-  document.getElementById('lp').style.display = 'none';
-  document.getElementById('quiz').style.display = 'none';
-  document.getElementById('complete').style.display = 'none';
-  document.getElementById('levelSelect').style.display = 'block';
+/* ── LP tree demo ── */
+const LP_TREE = [
+  {pre:'pro',root:'duce',word:'produce',ja:'生み出す'},
+  {pre:'re',root:'duce',word:'reduce',ja:'減らす'},
+  {pre:'con',root:'duct',word:'conduct',ja:'指揮する'},
+  {pre:'intro',root:'duce',word:'introduce',ja:'紹介する'},
+  {pre:'de',root:'duct',word:'deduct',ja:'差し引く'},
+  {pre:'e(ex)',root:'duc',word:'educate',ja:'教育する'},
+  {pre:'in',root:'duce',word:'induce',ja:'誘導する'},
+  {pre:'de',root:'duce',word:'deduce',ja:'推論する'},
+];
+
+function renderLpTree(){
+  const el = document.getElementById('lpTree');
+  el.innerHTML = LP_TREE.map(t => `
+    <div class="lp-tree-item">
+      <span class="lp-tree-prefix">${t.pre}</span>
+      <span class="lp-tree-plus">+</span>
+      <span class="lp-tree-root">${t.root}</span>
+      <span class="lp-tree-arrow">→</span>
+      <span class="lp-tree-word">${t.word}</span>
+      <span class="lp-tree-ja">${t.ja}</span>
+    </div>`).join('');
 }
 
-function startQuiz(level) {
-  currentLevel = level;
-  currentWords = WORDS[level];
-  currentWordIdx = 0;
-  currentFormatIdx = 0;
-  correctCount = 0;
-  totalCount = 0;
-  document.getElementById('levelSelect').style.display = 'none';
-  document.getElementById('quiz').style.display = 'block';
+/* ── ROOT DEFINITIONS ── */
+const ROOTS = [
+  {id:'duct',label:'duct/duc',meaning:'導く',count:8,file:'duct.json',available:true},
+  {id:'spec',label:'spec/spect',meaning:'見る',count:10,file:null,available:false},
+  {id:'port',label:'port',meaning:'運ぶ',count:4,file:null,available:false},
+  {id:'fact',label:'fact/fect/fic',meaning:'作る',count:23,file:null,available:false},
+  {id:'sta',label:'sta/stat',meaning:'立つ',count:11,file:null,available:false},
+  {id:'ven',label:'ven/vent',meaning:'来る',count:8,file:null,available:false},
+  {id:'ten',label:'ten/tain',meaning:'保つ',count:9,file:null,available:false},
+  {id:'gen',label:'gen',meaning:'生む・種',count:7,file:null,available:false},
+  {id:'cur',label:'cur/cour',meaning:'走る',count:8,file:null,available:false},
+  {id:'sign',label:'sign',meaning:'しるし',count:7,file:null,available:false},
+];
+
+/* ── SCREEN NAV ── */
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('backBtn').style.display = id==='screenLp'?'none':'block';
+  window.scrollTo(0,0);
+}
+
+function goBack(){
+  const active = document.querySelector('.screen.active');
+  if(active.id==='screenQuiz'||active.id==='screenComplete') showScreen('screenSelect');
+  else showScreen('screenLp');
+}
+
+function showRootSelect(){
+  renderRootGrid();
+  showScreen('screenSelect');
+}
+
+/* ── ROOT GRID ── */
+function loadProgress(){
+  try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||{completedRoots:[],rootProgress:{}};}
+  catch(e){return {completedRoots:[],rootProgress:{}};}
+}
+function saveProgress(prog){localStorage.setItem(STORAGE_KEY,JSON.stringify(prog));}
+
+function renderRootGrid(){
+  const prog = loadProgress();
+  const grid = document.getElementById('rootGrid');
+  grid.innerHTML = ROOTS.map(r=>{
+    const done = prog.completedRoots.includes(r.id);
+    const avail = r.available;
+    return `<div class="root-card ${done?'completed':''} ${avail?'':'disabled'}"
+                 onclick="${avail?`startRoot('${r.id}')`:''}">
+      <div class="rc-icon">${r.label.split('/')[0]}</div>
+      <div class="rc-info">
+        <div class="rc-name">${r.label} <span style="color:var(--text2);font-weight:400;font-size:14px">= ${r.meaning}</span></div>
+        <div class="rc-count">${r.count}語${avail?'':' — 近日公開'}</div>
+      </div>
+      <div class="rc-check">✓</div>
+    </div>`;
+  }).join('');
+}
+
+/* ── START ROOT ── */
+async function startRoot(rootId){
+  const r = ROOTS.find(x=>x.id===rootId);
+  if(!r||!r.file) return;
+  try{
+    const res = await fetch(`data/words/${r.file}`);
+    ROOT_DATA = await res.json();
+  }catch(e){alert('データの読み込みに失敗しました');return;}
+
+  // Build queue: each word starts with easiest format
+  queue = ROOT_DATA.words.map((w,wi)=>{
+    const sorted = w.formats.map((f,fi)=>({fi,d:f.difficulty})).sort((a,b)=>a.d-b.d);
+    return {wordIdx:wi, fmtIdx:sorted[0].fi};
+  });
+  qi=0; answered=null; correctCount=0; totalCount=0;
+
+  try{gtag('event','kioku_root_start',{root_name:rootId});}catch(_){}
+  showScreen('screenQuiz');
+  showRootIntro();
+}
+
+/* ── ROOT INTRO ── */
+function showRootIntro(){
+  const el = document.getElementById('rootIntro');
+  el.style.display='block';
+  el.innerHTML=`<div class="root-intro fade-up">
+    <div class="ri-root">${ROOT_DATA.root}</div>
+    <div class="ri-meaning">${ROOT_DATA.rootMeaning}（${ROOT_DATA.rootLang}）</div>
+    <div class="ri-hook">
+      <div class="ri-hook-label">${ROOT_DATA.hook.label}</div>
+      <div class="ri-hook-text">${ROOT_DATA.hook.text}</div>
+    </div>
+  </div>
+  <div style="padding:12px 0 8px;text-align:center;font-size:14px;color:var(--text2)">
+    ${ROOT_DATA.words.length}語の派生語を学びます
+  </div>
+  <button class="btn-cta" onclick="hideIntroStartQuiz()">クイズを始める</button>`;
+  updateQuizHeader();
+}
+
+function hideIntroStartQuiz(){
+  document.getElementById('rootIntro').style.display='none';
   renderQuestion();
 }
 
-function renderQuestion() {
-  const word = currentWords[currentWordIdx];
-  const fmt = word.formats[currentFormatIdx];
-  const total = currentWords.reduce((s,w) => s + w.formats.length, 0);
-  const current = currentWords.slice(0, currentWordIdx).reduce((s,w) => s + w.formats.length, 0) + currentFormatIdx + 1;
-
-  document.getElementById('qProgress').textContent = `${current} / ${total}`;
-  document.getElementById('qType').textContent = fmt.type;
-
-  let cardHTML = `<div class="quiz-word">${word.word}</div>`;
-  cardHTML += `<div class="quiz-phonetic">${word.phonetic}</div>`;
-  if (fmt.sentence) {
-    cardHTML += `<div class="quiz-sentence">${fmt.sentence}</div>`;
-  }
-  if (fmt.hint) {
-    cardHTML += `<div class="quiz-instruction">${fmt.hint}</div>`;
-  }
-  cardHTML += `<div class="quiz-instruction">${fmt.instruction}</div>`;
-  document.getElementById('qCard').innerHTML = cardHTML;
-
-  let choicesHTML = '';
-  fmt.choices.forEach((c, i) => {
-    choicesHTML += `<button class="choice-btn" onclick="answer(${i})">${c}</button>`;
-  });
-  document.getElementById('qChoices').innerHTML = choicesHTML;
-  document.getElementById('qExplanation').style.display = 'none';
+/* ── QUIZ RENDERING ── */
+function updateQuizHeader(){
+  document.getElementById('qProgress').innerHTML=`${qi+1} <span>/ ${queue.length}</span>`;
+  document.getElementById('qBar').style.width=`${((qi+1)/queue.length)*100}%`;
+  const cur=queue[qi];
+  if(cur&&ROOT_DATA) document.getElementById('qType').textContent=ROOT_DATA.words[cur.wordIdx].formats[cur.fmtIdx].type;
 }
 
-function answer(idx) {
-  const word = currentWords[currentWordIdx];
-  const fmt = word.formats[currentFormatIdx];
-  const isCorrect = idx === fmt.correct;
-  totalCount++;
-  if (isCorrect) correctCount++;
+function renderQuestion(){
+  answered=null;
+  updateQuizHeader();
+  const cur=queue[qi];
+  const w=ROOT_DATA.words[cur.wordIdx];
+  const f=w.formats[cur.fmtIdx];
+  const area=document.getElementById('questionArea');
+  document.getElementById('explanationArea').innerHTML='';
 
-  const btns = document.querySelectorAll('.choice-btn');
-  btns.forEach((btn, i) => {
-    btn.disabled = true;
-    if (i === fmt.correct) btn.classList.add('correct');
-    if (i === idx && !isCorrect) btn.classList.add('wrong');
+  let html='<div class="fade-up">';
+
+  if(f.type==='穴埋め'){
+    const [a,b]=(f.sentence||'').split('______');
+    html+=`<div class="q-hint">${f.hint||''}</div>
+      <div class="q-sentence">${a}<span class="q-blank" id="qBlank">&nbsp;</span>${b}</div>`;
+  } else {
+    html+=`<div class="q-word">
+      <span class="q-word-text">${f.type==='穴埋め'?'':w.word}</span>
+      <button class="q-play" onclick="playAudio('${w.word}')">
+        <svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+      </button>
+    </div>
+    <div class="q-phonetic">${w.phonetic}</div>
+    <div class="q-instruction">${f.instruction}</div>`;
+  }
+
+  html+='<div class="choices">';
+  f.choices.forEach((c,i)=>{
+    html+=`<button class="choice-btn" onclick="choose(${i})">${c}</button>`;
   });
+  html+='</div></div>';
+  area.innerHTML=html;
+}
+
+/* ── ANSWER ── */
+function choose(i){
+  if(answered!==null) return;
+  answered=i;
+  totalCount++;
+
+  const cur=queue[qi];
+  const w=ROOT_DATA.words[cur.wordIdx];
+  const f=w.formats[cur.fmtIdx];
+  const isOk=i===f.correct;
+  if(isOk) correctCount++;
+
+  try{gtag('event','kioku_quiz_answer',{root_name:ROOT_DATA.root,word:w.word,correct:isOk});}catch(_){}
+
+  // Update choice buttons
+  const btns=document.querySelectorAll('.choice-btn');
+  btns.forEach((btn,j)=>{
+    btn.disabled=true;
+    if(j===f.correct) btn.classList.add('correct');
+    else if(j===i) btn.classList.add('wrong');
+    else btn.classList.add('dim');
+  });
+
+  // Fill-in blank
+  const blank=document.getElementById('qBlank');
+  if(blank){
+    blank.textContent=f.choices[i];
+    blank.classList.add(isOk?'correct':'wrong');
+  }
+
+  // Adaptive: add next format to queue
+  const nextFmt = getNextFormat(w, cur.fmtIdx, isOk);
+  if(nextFmt!==null){
+    const insertAt = Math.min(isOk?qi+2:qi+1, queue.length);
+    queue.splice(insertAt,0,{wordIdx:cur.wordIdx,fmtIdx:nextFmt});
+  }
 
   // Show explanation
-  const exp = document.getElementById('qExplanation');
-  let html = `<div class="exp-result ${isCorrect ? 'correct' : 'wrong'}">${isCorrect ? '正解！' : '不正解'}</div>`;
-
-  html += `<div class="exp-section">
-    <div class="exp-label">語源（Etymology）</div>
-    <div class="exp-content">${word.etymology.fact}</div>
-  </div>`;
-
-  html += `<div class="exp-section">
-    <div class="exp-label">和訳のズレ</div>
-    <div class="exp-content">${word.etymology.gap}</div>
-  </div>`;
-
-  html += `<div class="exp-hook">
-    <div class="exp-hook-label">記憶フック（語源に基づくイメージ）</div>
-    <div class="exp-content">${word.etymology.hook}</div>
-  </div>`;
-
-  html += `<button class="btn-next" onclick="next()" style="margin-top:20px">次へ</button>`;
-
-  exp.innerHTML = html;
-  exp.style.display = 'block';
-  exp.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  setTimeout(()=>showExplanation(w,f,isOk),100);
 }
 
-function next() {
-  currentFormatIdx++;
-  if (currentFormatIdx >= currentWords[currentWordIdx].formats.length) {
-    currentFormatIdx = 0;
-    currentWordIdx++;
+function getNextFormat(w,curIdx,ok){
+  const curD=w.formats[curIdx].difficulty;
+  if(ok){
+    const harder=w.formats.map((f,i)=>({i,d:f.difficulty})).filter(f=>f.d>curD).sort((a,b)=>a.d-b.d);
+    return harder.length>0?harder[Math.min(1,harder.length-1)].i:null;
   }
-  if (currentWordIdx >= currentWords.length) {
+  const easier=w.formats.map((f,i)=>({i,d:f.difficulty})).filter(f=>f.i!==curIdx&&f.d<=curD).sort((a,b)=>b.d-a.d);
+  return easier.length>0?easier[0].i:null;
+}
+
+/* ── EXPLANATION ── */
+function showExplanation(w,f,isOk){
+  const el=document.getElementById('explanationArea');
+  const partsHtml=w.parts.map((p,i)=>`${i>0?'<span class="etym-plus">+</span>':''}
+    <div class="etym-part ${p.type}">
+      <div class="etym-part-name">${p.part}</div>
+      <div class="etym-part-meaning">${p.meaning}</div>
+    </div>`).join('');
+
+  el.innerHTML=`<div class="explanation">
+    <div class="exp-card">
+      <div class="exp-result ${isOk?'ok':'ng'}">
+        ${isOk?'正解！':'不正解'}
+        <small>${isOk?'→ 次はより難しい形式で':'→ 別の角度からもう一度'}</small>
+      </div>
+
+      <div class="etym-blocks">${partsHtml}</div>
+
+      <div class="exp-hook">
+        <div class="exp-hook-label">${w.hook.label}</div>
+        <div class="exp-hook-text">${w.hook.text}</div>
+      </div>
+
+      <div class="exp-oneliner">${w.etymology.oneliner}</div>
+
+      <div class="exp-section">
+        <div class="exp-section-label">語源</div>
+        <div class="exp-section-text">${w.etymology.fact}</div>
+      </div>
+      <div class="exp-section">
+        <div class="exp-section-label">認知言語学</div>
+        <div class="exp-section-text">${w.cognitive.fact}</div>
+      </div>
+      <div class="exp-section">
+        <div class="exp-section-label gold">和訳のズレ</div>
+        <div class="exp-section-text">${w.gap}</div>
+      </div>
+
+      <div class="btn-next-wrap">
+        <button class="btn-next" onclick="nextQuestion()">次へ</button>
+      </div>
+    </div>
+  </div>`;
+  el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+/* ── NEXT ── */
+function nextQuestion(){
+  qi++;
+  if(qi>=queue.length){
     showComplete();
     return;
   }
+  updateQuizHeader();
   renderQuestion();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
-function showComplete() {
-  document.getElementById('quiz').style.display = 'none';
-  const c = document.getElementById('complete');
-  c.style.display = 'block';
-  document.getElementById('completeStats').innerHTML = `
-    正答率: <span>${correctCount}/${totalCount}</span><br>
-    学習した単語: <span>${currentWords.length}語</span><br><br>
-    これが「記憶しない」学習です。<br>
-    語源から理解した単語は、もう忘れません。
-  `;
+/* ── COMPLETE ── */
+function showComplete(){
+  const pct=totalCount>0?Math.round((correctCount/totalCount)*100):0;
+  document.getElementById('compScore').textContent=pct+'%';
+  document.getElementById('compTitle').textContent=`語根「${ROOT_DATA.root}」完了！`;
+  document.getElementById('compDetail').textContent=`${correctCount}/${totalCount}問正解 ・ ${ROOT_DATA.words.length}語を学習`;
+  document.getElementById('compMsg').textContent=`語根「${ROOT_DATA.rootMeaning}」から${ROOT_DATA.words.length}語の派生語を学びました。この語根を見かけたら「${ROOT_DATA.rootMeaning}」と読み替えてみてください。`;
+
+  // Save progress
+  const prog=loadProgress();
+  if(!prog.completedRoots.includes(ROOT_DATA.root.split('/')[0])){
+    prog.completedRoots.push(ROOT_DATA.root.split('/')[0]);
+  }
+  prog.rootProgress[ROOT_DATA.root]={correct:correctCount,total:totalCount,completedAt:new Date().toISOString().slice(0,10)};
+  saveProgress(prog);
+
+  try{gtag('event','kioku_root_complete',{root_name:ROOT_DATA.root,score:pct});}catch(_){}
+  showScreen('screenComplete');
 }
+
+/* ── AUDIO ── */
+function playAudio(word){
+  if(audioEl){audioEl.pause();}
+  audioEl=new Audio(`audio/${word}/word.mp3`);
+  audioEl.play().catch(()=>{});
+}
+
+/* ── INIT ── */
+renderLpTree();
 </script>
 </body>
 </html>

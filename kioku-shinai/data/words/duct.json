@@ -1,0 +1,581 @@
+{
+  "root": "duct/duc",
+  "rootMeaning": "導く",
+  "rootLang": "ラテン語 ducere（PIE *deuk-）",
+  "imageSchema": "手で引っ張って道を示すイメージ。水道管(duct)が水を導くように、何かを一定方向に引き出す動き。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "水道管(duct)は水を「導く」管。指揮者(conductor)はオーケストラを「導く」人。ductが見えたら「導く」と読み替えるだけで、8語が一気に読める。"
+  },
+  "words": [
+    {
+      "word": "produce",
+      "phonetic": "/prəˈdjuːs/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "pro", "meaning": "前へ", "type": "prefix"},
+        {"part": "duce", "meaning": "導く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "pro（前へ）+ ducere（導く）= 前に導き出す → 生み出す",
+        "fact": "ラテン語 producere「前に導き出す、引き出す」から。15世紀初頭に「発展させる」の意味で英語に入り、16世紀に「生み出す、産出する」へ。名詞としては1690年代から「生産物」、1745年頃から「農産物」の意味に。",
+        "source": "EtymOnline: produce",
+        "cognates": ["product", "producer", "production", "productive", "productivity"]
+      },
+      "cognitive": {
+        "oneliner": "前方に引き出す→まだ存在しないものを目の前に出現させる動き",
+        "fact": "PATHスキーマ（SOURCE→GOAL）の応用。内側に隠れていたものを前方(pro-)に引き出す(ducere)運動。工場の生産ラインで製品が「前に出てくる」イメージが典型。",
+        "source": "Johnson (1987) PATHスキーマ"
+      },
+      "gap": "「生産する」だけで覚えると I'll show you the produce の produce（農産物）で詰まる。語源の「前に導き出す」がわかれば、動詞「生み出す」も名詞「産物」も同じイメージで理解できる。不動産の produce（収益を生む）も同根。",
+      "gapOneliner": "produce = 動詞「生み出す」も名詞「農産物」も、前に導き出されたもの",
+      "hook": {
+        "label": "記憶フック",
+        "text": "ベルトコンベアから商品が「前に(pro)導き出される(duce)」のがproduce。畑から野菜が導き出されれば農産物(produce)。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "produceの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["前に導き出す→生み出す", "前に走る→急ぐ", "前に投げる→提案する", "前に立つ→目立つ"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "pro + duce の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["前へ + 導く = 生み出す", "強く + 言う = 宣言する", "先に + 置く = 提案する", "外へ + 送る = 輸出する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Our factory can ______ 500 units per day.",
+          "hint": "「前に導き出す」→「生産する」",
+          "explanationFocus": "gap",
+          "choices": ["produce", "reduce", "conduct", "induce"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "produceと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["results（結果を生む）", "money（お金を導く）", "friends（友人を作る）", "weather（天気を出す）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The region produces some of the finest wine in the country.\" — produceの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["産出する", "消費する", "輸入する", "保管する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Our factory produces 500 units per day."]
+    },
+    {
+      "word": "reduce",
+      "phonetic": "/rɪˈdjuːs/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "re", "meaning": "後ろへ・戻す", "type": "prefix"},
+        {"part": "duce", "meaning": "導く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "re（後ろへ）+ ducere（導く）= 後ろに導く → 元に戻す → 減らす",
+        "fact": "ラテン語 reducere「連れ戻す、元に戻す」から。中英語では「徳や健康を回復させる」という肯定的な意味だったが、1570年代以降「劣った状態に戻す」→1787年に「下げる、減らす」の意味に変遷。",
+        "source": "EtymOnline: reduce",
+        "cognates": ["reduction", "reducer"]
+      },
+      "cognitive": {
+        "oneliner": "後ろに引き戻す→規模を縮小させる動き",
+        "fact": "BACK IS LESS メタファーの典型。前方に広がったものを後ろ(re-)に導き戻す(ducere)ことで規模が小さくなるイメージ。「コストを元に戻す」が「コストを減らす」に転じた意味変化もこの空間感覚で理解できる。",
+        "source": "Lakoff & Johnson (1980) MORE IS UP / LESS IS DOWN の横方向バリエーション"
+      },
+      "gap": "「減らす」だけでなく reduce to tears（泣くまで追い込む）やreduce to rubble（瓦礫に変える）のように「ある状態に導き戻す」用法がTOEICに出る。語源の「後ろに導く」がわかれば全て読める。",
+      "gapOneliner": "reduce = 「減らす」だけでなく「ある状態に導き戻す」が本質",
+      "hook": {
+        "label": "記憶フック",
+        "text": "風船の空気を「後ろに(re)導き出す(duce)」と萎む。それがreduce。reduce costs = コストを元の小さい状態に導き戻す。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "reduceの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["後ろに導く→減らす", "再び導く→繰り返す", "強く導く→強制する", "上に導く→昇進させる"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "re + duce の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["戻す + 導く = 減らす", "再び + 導く = 再生する", "離れて + 導く = 逸脱する", "下に + 導く = 降格する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "We need to ______ expenses by 20%.",
+          "hint": "「後ろに導く」→「減らす」",
+          "explanationFocus": "gap",
+          "choices": ["reduce", "produce", "deduce", "induce"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "reduceと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["costs（コストを減らす）", "friends（友人を減らす）", "weather（天気を減らす）", "music（音楽を減らす）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The storm reduced the building to rubble.\" — reduceの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["（ある状態に）変えた", "修理した", "保護した", "建設した"],
+          "correct": 0
+        }
+      ],
+      "examples": ["We need to reduce costs by 20%."]
+    },
+    {
+      "word": "conduct",
+      "phonetic": "/kənˈdʌkt/",
+      "toeicRank": "TSL 305位相当（conductor）",
+      "parts": [
+        {"part": "con", "meaning": "一緒に", "type": "prefix"},
+        {"part": "duct", "meaning": "導く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "con（一緒に）+ ducere（導く）= 一緒に導く → 案内する・指揮する",
+        "fact": "ラテン語 conducere「一緒に導く、連れていく」の過去分詞 conductus から。15世紀半ばに「案内する、道を示す」で英語に入り、軍事的な「指揮する」→1791年に音楽の「指揮する」、1740年に物理学の「伝導する」へ拡張。",
+        "source": "EtymOnline: conduct",
+        "cognates": ["conductor", "semiconductor", "misconduct"]
+      },
+      "cognitive": {
+        "oneliner": "人やものを「一緒に束ねて導く」→指揮する・伝導する",
+        "fact": "FORCEスキーマの応用。バラバラなものを一緒に(con-)まとめて一方向に導く(ducere)力。オーケストラの指揮者がまさにこのイメージ。電気のconductも「一緒に流れを導く」。",
+        "source": "Johnson (1987) FORCEスキーマ"
+      },
+      "gap": "「行動」「指揮する」「実施する」「伝導する」と訳語が多すぎて混乱しがち。全て「一緒に導く」のバリエーション。conduct a survey = 調査を導く（実施する）、conduct heat = 熱を一緒に導く（伝導する）。",
+      "gapOneliner": "conduct = 「指揮/実施/伝導/行動」すべて「一緒に導く」の派生",
+      "hook": {
+        "label": "記憶フック",
+        "text": "指揮者(conductor)がオーケストラ全員を「一緒に(con)導く(duct)」姿。それがconduct。調査もチームも熱も、まとめて一方向に導く。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "conductの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["一緒に導く→指揮する", "前に導く→生産する", "後ろに導く→減らす", "中に導く→紹介する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "con + duct の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["一緒に + 導く = 指揮する", "反対に + 導く = 反論する", "外に + 導く = 輸出する", "下に + 導く = 差し引く"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The company will ______ a customer satisfaction survey.",
+          "hint": "「一緒に導く」→「実施する」",
+          "explanationFocus": "gap",
+          "choices": ["conduct", "produce", "reduce", "introduce"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "conductと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["research（研究を実施する）", "money（お金を指揮する）", "building（建物を導く）", "food（食事を実施する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Copper conducts electricity very well.\" — conductsの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["伝導する", "生産する", "消費する", "遮断する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["We will conduct a survey next month."]
+    },
+    {
+      "word": "introduce",
+      "phonetic": "/ˌɪntrəˈdjuːs/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "intro", "meaning": "中へ", "type": "prefix"},
+        {"part": "duce", "meaning": "導く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "intro（中へ）+ ducere（導く）= 中に導き入れる → 紹介する・導入する",
+        "fact": "ラテン語 introducere「中に導き入れる」から。15世紀初頭に「何かを中に運び入れる」で英語に入り、1550年代に「注目の中に導く」→1650年代に「人を引き合わせる、紹介する」の意味に。",
+        "source": "EtymOnline: introduce",
+        "cognates": ["introduction", "introductory"]
+      },
+      "cognitive": {
+        "oneliner": "外にいたものを場の中に導き入れる→紹介する・導入する",
+        "fact": "CONTAINERスキーマの応用。ある場（容器）の外にいる人やものを内側(intro-)に導き入れる(ducere)動き。「新人をチームに紹介する」も「新システムを導入する」も同じ空間的イメージ。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "「紹介する」と「導入する」を別物として覚えがちだが、どちらも「中に導き入れる」。introduce a new policy = 新方針を組織の中に導き入れる。Let me introduce myself = 自分をこの場の中に導き入れる。",
+      "gapOneliner": "introduce = 「紹介する」も「導入する」も、中に導き入れること",
+      "hook": {
+        "label": "記憶フック",
+        "text": "パーティの部屋(intro=中)に友人を「導き入れる(duce)」のがintroduce。新製品を市場という場の「中に導き入れる」のが導入。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "introduceの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["中に導き入れる→紹介する", "前に導き出す→生産する", "後ろに導く→減らす", "一緒に導く→指揮する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "intro + duce の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["中へ + 導く = 紹介する", "外へ + 導く = 追い出す", "上へ + 導く = 昇進させる", "下へ + 導く = 降格する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Let me ______ our new team member.",
+          "hint": "「中に導き入れる」→「紹介する」",
+          "explanationFocus": "gap",
+          "choices": ["introduce", "produce", "reduce", "conduct"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "introduceと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["a new policy（新方針を導入する）", "a building（建物を紹介する）", "the weather（天気を導入する）", "a discount（割引を紹介する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The company introduced a flexible work policy last year.\" — introducedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["導入した", "廃止した", "生産した", "削減した"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Let me introduce our new team member."]
+    },
+    {
+      "word": "deduct",
+      "phonetic": "/dɪˈdʌkt/",
+      "toeicRank": "TSL 517位",
+      "parts": [
+        {"part": "de", "meaning": "下へ・離れて", "type": "prefix"},
+        {"part": "duct", "meaning": "導く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "de（離れて）+ ducere（導く）= 離して導く → 差し引く",
+        "fact": "ラテン語 deducere「下に導く、連れ去る」から。15世紀初頭に「取り去る、分離する」で英語に入り、会計・税務の文脈で「差し引く」に特化。deduceとは同根だが意味が分かれた。",
+        "source": "EtymOnline: deduct",
+        "cognates": ["deduction", "deductible", "deduce"]
+      },
+      "cognitive": {
+        "oneliner": "全体から一部を「離して導き出す」→差し引く",
+        "fact": "REMOVAL（除去）スキーマ。全体の山から一部を離れた方向(de-)に導き出す(ducere)ことで、残りが減る。税金の控除(deduction)も給料という全体から税金分を「離して導く」動き。",
+        "source": "Johnson (1987) REMOVALスキーマ"
+      },
+      "gap": "deductとdeduceは同じ語源だが意味が違う。deduct=「量を差し引く」（会計）、deduce=「結論を導き出す」（論理）。deは「離れて」、量を離すか結論を離し出すかの違い。",
+      "gapOneliner": "deduct = 量を差し引く、deduce = 結論を導き出す。同根で方向が違う",
+      "hook": {
+        "label": "記憶フック",
+        "text": "給料の山から税金を「離して(de)導き出す(duct)」のがdeduct。手元に残る額が減る。税控除(deduction)は「離して導かれた分」。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "deductの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["離して導く→差し引く", "中に導く→導入する", "前に導く→生産する", "一緒に導く→指揮する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "de + duct の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["離れて + 導く = 差し引く", "下に + 導く = 降格する", "再び + 導く = 復元する", "反対に + 導く = 反論する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The company will ______ travel expenses from your reimbursement.",
+          "hint": "「離して導く」→「差し引く」",
+          "explanationFocus": "gap",
+          "choices": ["deduct", "conduct", "produce", "introduce"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "deductと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["tax（税金を差し引く）", "profit（利益を導く）", "staff（人員を引く）", "building（建物を引く）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"You can deduct up to $5,000 for business expenses.\" — deductの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["控除する", "加算する", "投資する", "請求する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["You can deduct business expenses from your taxes."]
+    },
+    {
+      "word": "educate",
+      "phonetic": "/ˈedʒukeɪt/",
+      "toeicRank": "TSL外・TOEFL/IELTS頻出",
+      "parts": [
+        {"part": "e (ex)", "meaning": "外へ", "type": "prefix"},
+        {"part": "duc", "meaning": "導く", "type": "root"},
+        {"part": "ate", "meaning": "〜する", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "ex（外へ）+ ducere（導く）= 外に導き出す → 能力を引き出す → 教育する",
+        "fact": "ラテン語 educare「育てる、養う」/ educere「外に導き出す」から。15世紀半ばに「育てる、訓練する」で英語に入り、1580年代に「学校教育を施す」に。元来は子供の内にある能力を「外に引き出す」という意味。",
+        "source": "EtymOnline: educate",
+        "cognates": ["education", "educator", "educational"]
+      },
+      "cognitive": {
+        "oneliner": "人の中に眠っている能力を「外に導き出す」のが教育",
+        "fact": "CONTAINERスキーマの逆方向。人という容器の中にある潜在能力を外(e/ex-)に導き出す(ducere)動き。「知識を詰め込む」ではなく「引き出す」が原義。ソクラテス式問答法と同じ発想。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "日本語の「教育」は「教え育てる」で上から下へのイメージだが、educateの原義は真逆で「内にあるものを外に引き出す」。この違いを知ると、educated guess（知識に基づく推測）の意味も腑に落ちる。",
+      "gapOneliner": "educate = 「教え込む」ではなく「内なる能力を外に引き出す」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "子供の中に眠っている才能を「外に(e)導き出す(ducate)」のがeducate。詰め込みではなく引き出し。だから良い教育者はeducator（引き出す人）。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "educateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["外に導き出す→教育する", "中に導く→導入する", "前に導く→生産する", "一緒に導く→指揮する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "e(ex) + duc + ate の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["外へ + 導く + する = 教育する", "中へ + 導く + する = 誘導する", "前へ + 導く + する = 生産する", "共に + 導く + する = 協力する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The program aims to ______ employees about workplace safety.",
+          "hint": "「外に導き出す」→「教育する」",
+          "explanationFocus": "gap",
+          "choices": ["educate", "deduct", "conduct", "reduce"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "educateと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["the public（公衆を教育する）", "the building（建物を教育する）", "the cost（コストを教育する）", "the weather（天気を教育する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"It's important to educate consumers about sustainable choices.\" — educateの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["啓発する", "制限する", "調査する", "記録する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["We need to educate employees about the new policy."]
+    },
+    {
+      "word": "induce",
+      "phonetic": "/ɪnˈdjuːs/",
+      "toeicRank": "TSL外・ビジネス英語頻出",
+      "parts": [
+        {"part": "in", "meaning": "中へ", "type": "prefix"},
+        {"part": "duce", "meaning": "導く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "in（中へ）+ ducere（導く）= 中に導き入れる → 誘導する・引き起こす",
+        "fact": "ラテン語 inducere「中に導く、連れ込む、説得する」から。14世紀後半に「説得して〜させる」で英語に入り、15世紀初頭に「引き起こす」、1560年代に「推論する」、1777年に電磁誘導の意味に。",
+        "source": "EtymOnline: induce",
+        "cognates": ["inducement", "induction", "inductive"]
+      },
+      "cognitive": {
+        "oneliner": "ある状態の「中に導き入れる」→誘導する・引き起こす",
+        "fact": "CONTAINERスキーマとFORCEスキーマの合成。ある状態（容器）の中に(in-)力で導き入れる(ducere)動き。「眠りに導く」induce sleep も「行動に導く」induce someone to act も同じパターン。",
+        "source": "Johnson (1987) CONTAINER + FORCE"
+      },
+      "gap": "「誘導する」だけでなく induce labor（陣痛を誘発する）、drug-induced（薬物による）のように「ある状態を引き起こす」用法がある。全て「中に導き入れる」のバリエーション。",
+      "gapOneliner": "induce = 「誘導する」も「引き起こす」も、ある状態の中に導き入れること",
+      "hook": {
+        "label": "記憶フック",
+        "text": "相手を特定の状態の「中に(in)導き入れる(duce)」のがinduce。眠りの中に導けばinduce sleep。行動の中に導けば「誘導する」。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "induceの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["中に導き入れる→誘導する", "外に導き出す→教育する", "前に導く→生産する", "離して導く→差し引く"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "in + duce の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["中へ + 導く = 誘導する", "中へ + 導く = 紹介する", "否定 + 導く = 迷わせる", "再び + 導く = 復元する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The advertisement is designed to ______ customers to buy.",
+          "hint": "「中に導き入れる」→「誘導する」",
+          "explanationFocus": "gap",
+          "choices": ["induce", "reduce", "educate", "deduct"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 4,
+          "instruction": "induceと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["demand（需要を誘発する）", "building（建物を誘導する）", "schedule（予定を誘導する）", "weather（天気を引き起こす）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Stress can induce a variety of health problems.\" — induceの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["引き起こす", "予防する", "診断する", "治療する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The new policy may induce changes in consumer behavior."]
+    },
+    {
+      "word": "deduce",
+      "phonetic": "/dɪˈdjuːs/",
+      "toeicRank": "TSL外・TOEFL/IELTS頻出",
+      "parts": [
+        {"part": "de", "meaning": "下へ・離れて", "type": "prefix"},
+        {"part": "duce", "meaning": "導く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "de（下へ）+ ducere（導く）= 下に導き出す → 結論を導き出す → 推論する",
+        "fact": "ラテン語 deducere「下に導く、導き出す」から。15世紀初頭に「示す、証明する」で英語に入り、1520年代に中世ラテン語の用法を経て「既知の事実から結論を導き出す」の意味に。deductと同根だが意味が分かれた。",
+        "source": "EtymOnline: deduce",
+        "cognates": ["deduction", "deductive", "deducible"]
+      },
+      "cognitive": {
+        "oneliner": "事実の山から結論を「下に導き出す」→推論する",
+        "fact": "PATHスキーマの下方向バリエーション。前提（上位概念）から結論（具体的帰結）を下方向(de-)に導き出す(ducere)動き。演繹法(deduction)はまさにこの空間メタファーに基づく。",
+        "source": "Lakoff & Johnson (1980) RATIONAL IS UP / GENERAL IS UP"
+      },
+      "gap": "deduceとdeductは同じ語源 de + ducere だが、deduce=「論理的に結論を導き出す」、deduct=「金額を差し引く」。抽象的なものを導くか、具体的なものを導くかの違い。",
+      "gapOneliner": "deduce = 結論を導き出す（論理）、deduct = 金額を差し引く（会計）",
+      "hook": {
+        "label": "記憶フック",
+        "text": "シャーロック・ホームズが証拠から結論を「下に(de)導き出す(duce)」のがdeduce。「推理する」= 上位の手がかりから下位の答えを導く。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "deduceの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["下に導き出す→推論する", "離して導く→差し引く", "前に導く→生産する", "中に導く→紹介する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "de + duce で「推論する」になる理由は？",
+          "explanationFocus": "cognitive",
+          "choices": ["前提から結論を下に導き出すから", "数字を下に引くから", "言葉を下に書くから", "人を下に導くから"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "From the evidence, we can ______ that the shipment was delayed.",
+          "hint": "「下に導き出す」→「推論する」",
+          "explanationFocus": "gap",
+          "choices": ["deduce", "deduct", "reduce", "produce"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 4,
+          "instruction": "deduceと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["the cause（原因を推論する）", "the price（価格を推論する）", "the weight（重さを推論する）", "the color（色を推論する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Scientists deduced that the chemical was responsible for the reaction.\" — deducedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["推論した", "差し引いた", "生産した", "指揮した"],
+          "correct": 0
+        }
+      ],
+      "examples": ["We can deduce from the data that sales are declining."]
+    }
+  ]
+}
