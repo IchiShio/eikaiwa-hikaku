@@ -1,0 +1,581 @@
+{
+  "root": "tract",
+  "rootMeaning": "引く",
+  "rootLang": "ラテン語 trahere（PIE *tragh-）",
+  "imageSchema": "綱を引っ張るイメージ。トラクターが土を引っ張って耕すように、何かを力で手前に引き寄せる動き。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "トラクター(tractor)は土を「引っ張って」耕す車。tractが見えたら「引く」と読み替えるだけで、8語が一気に読める。引き寄せる・引き締める・引き抜く・引き離す――全てtractの派生。"
+  },
+  "words": [
+    {
+      "word": "attract",
+      "phonetic": "/əˈtrækt/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "at", "meaning": "〜に向けて", "type": "prefix"},
+        {"part": "tract", "meaning": "引く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "at（〜に向けて）+ trahere（引く）= 〜に向けて引く → 引きつける",
+        "fact": "ラテン語 attrahere「〜に向けて引く」から。ad-（〜に向けて）+ trahere（引く）の合成。15世紀初頭に英語に入り、最初は物理的な「引力で引き寄せる」意味。17世紀以降に「魅力で引きつける」という比喩的意味が定着した。",
+        "source": "EtymOnline: attract",
+        "cognates": ["attraction", "attractive", "attractor", "unattractive"]
+      },
+      "cognitive": {
+        "oneliner": "目標に向かって引く力→人・視線・関心を引き寄せる動き",
+        "fact": "FORCEスキーマ（引力）の典型。磁石が鉄を引き寄せるように、主体が対象を自分の方向（at- = ad-）へ引く動き。「目が合う」「人が集まる」「視線が向く」どれも同じ引力のイメージ。",
+        "source": "Johnson (1987) FORCEスキーマ"
+      },
+      "gap": "attractは「引きつける」だけでなく、attract attention（注目を集める）・attract investment（投資を引き寄せる）のように抽象的な対象にも使う。「引っ張る力」のイメージがあれば、物理的・比喩的どちらでも自然に読める。",
+      "gapOneliner": "attract = 物理的引力も「注目・投資を集める」も同じ「向けて引く」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "磁石が鉄を「〜に向けて(at)引く(tract)」のがattract。人も視線も投資も、自分に向けて引き寄せれば全てattract。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "attractの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["〜に向けて引く→引きつける", "一緒に引く→まとめる", "外に引く→追い出す", "後ろに引く→退く"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "at + tract の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["〜に向けて + 引く = 引きつける", "再び + 引く = 繰り返す", "下に + 引く = 引き下げる", "離れて + 引く = 遠ざかる"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The new campaign helped us ______ younger customers.",
+          "hint": "「〜に向けて引く」→「引きつける」",
+          "explanationFocus": "gap",
+          "choices": ["attract", "distract", "extract", "contract"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "attractと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["attention（注目を集める）", "money（お金を引く）", "weather（天気を引く）", "sleep（眠りを引く）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The city's low taxes attract many foreign companies.\" — attractの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["引き寄せる", "排除する", "支援する", "規制する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The campaign helped attract younger customers."]
+    },
+    {
+      "word": "contract",
+      "phonetic": "/ˈkɒntrækt/ (名詞) /kənˈtrækt/ (動詞)",
+      "toeicRank": "TSL 上位・TOEIC頻出",
+      "parts": [
+        {"part": "con", "meaning": "一緒に", "type": "prefix"},
+        {"part": "tract", "meaning": "引く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "con（一緒に）+ trahere（引く）= 一緒に引く → 引き締める・契約",
+        "fact": "ラテン語 contrahere「一緒に引き寄せる、集める、締結する」から。14世紀に「契約（名詞）」として英語に入り、15世紀に「契約を結ぶ（動詞）」、16世紀以降に「縮む・縮小する」の意味が加わった。双方が引き合って締結するのが契約のイメージ。",
+        "source": "EtymOnline: contract",
+        "cognates": ["contractor", "contraction", "subcontract"]
+      },
+      "cognitive": {
+        "oneliner": "双方向に引き合って締まる動き→契約・筋肉の収縮",
+        "fact": "CONTAINERスキーマとFORCEスキーマの複合。両者が互いに引き合う(con-tract)ことで一つの結びつきが生まれる。筋肉が「引き締まる」収縮も、契約で双方が「引き合う」義務関係も、同じ物理的イメージの展開。",
+        "source": "Lakoff & Johnson (1980) FORCEスキーマ"
+      },
+      "gap": "contractは名詞（契約書）と動詞（縮む/契約する）で意味が違うように見えるが、どちらも「引き締まる」イメージ。contract a disease（病気をもらう）も「病気が身体を引き締める（侵食する）」と覚えると自然。",
+      "gapOneliner": "contract = 「契約」も「縮む」も「病気をもらう」も、引き締まる感覚が共通",
+      "hook": {
+        "label": "記憶フック",
+        "text": "握手で「一緒に(con)引き合う(tract)」のが契約(contract)。筋肉が縮むのも「一緒に引き締まる」から同じ単語。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "contractの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["一緒に引く→締結・収縮", "外に引く→発行する", "上に引く→持ち上げる", "後ろに引く→撤回する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "con + tract の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["一緒に + 引く = 締まる・契約", "強く + 引く = 強制する", "再び + 引く = 更新する", "外へ + 引く = 解除する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Both parties signed the ______ before the project began.",
+          "hint": "「一緒に引き合う」→「契約（書）」",
+          "explanationFocus": "gap",
+          "choices": ["contract", "contact", "context", "conduct"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "contractと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["muscles（筋肉が収縮する）", "weather（天気が縮む）", "colors（色が縮む）", "traffic（交通が縮む）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Metal contracts when it gets cold.\" — contractの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["収縮する", "膨張する", "溶ける", "硬化する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Both parties signed the contract before the project began."]
+    },
+    {
+      "word": "extract",
+      "phonetic": "/ɪkˈstrækt/ (動詞) /ˈekstrækt/ (名詞)",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "ex", "meaning": "外に", "type": "prefix"},
+        {"part": "tract", "meaning": "引く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "ex（外に）+ trahere（引く）= 外に引く → 抽出する",
+        "fact": "ラテン語 extrahere「外に引き出す」から。ex-（外に）+ trahere（引く）。15世紀後半に「歯を抜く」「文章から引用する」の意味で英語に登場。16世紀以降に化学的「抽出・エキス」の用法が加わり、現代では歯科・化学・情報処理まで幅広く使われる。",
+        "source": "EtymOnline: extract",
+        "cognates": ["extraction", "extractor", "extract (名詞・エキス)"]
+      },
+      "cognitive": {
+        "oneliner": "内側にあるものを外に引き出す動き→抽出・引用・抜歯",
+        "fact": "CONTAINERスキーマ（内→外）の典型。歯（容器＝口）から引き出す・本（容器）から引用する・植物（容器）からエキスを引き出す――どれも「閉じた場所から外に引く」同一の身体的イメージ。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "extract dataはITでは「データを取り出す」、extract information from a reportは「レポートから情報を引き出す」。全て「内側から外に引っ張り出す」イメージ。名詞のextract（エキス・抜粋）も同根なのでセットで覚える。",
+      "gapOneliner": "extract = 歯を抜くも・エキスを抽出するも・データを引き出すも、外に引く同じ動き",
+      "hook": {
+        "label": "記憶フック",
+        "text": "歯医者が「外に(ex)引く(tract)」のがextract（抜歯）。植物から「外に引き出した」成分がextract（エキス）。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "extractの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["外に引く→抽出する", "一緒に引く→集める", "前に引く→引っ張り出す", "強く引く→強制する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "ex + tract の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["外へ + 引く = 抽出する", "前へ + 引く = 前進する", "再び + 引く = 再抽出する", "下に + 引く = 排出する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The dentist had to ______ the damaged tooth.",
+          "hint": "「外に引く」→「抜く」",
+          "explanationFocus": "gap",
+          "choices": ["extract", "attract", "distract", "retract"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "extractと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["data（データを抽出する）", "friends（友人を抽出する）", "weather（天気を引き出す）", "money（お金を引く）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The report extracts key findings from three years of research.\" — extractの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["引き出す・抜粋する", "追加する", "隠す", "発表する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The dentist had to extract the damaged tooth."]
+    },
+    {
+      "word": "distract",
+      "phonetic": "/dɪˈstrækt/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "dis", "meaning": "離れて・バラバラに", "type": "prefix"},
+        {"part": "tract", "meaning": "引く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "dis（離れて）+ trahere（引く）= 離れた方向に引く → 気を散らす",
+        "fact": "ラテン語 distrahere「引き離す、バラバラに引く」から。14世紀後半に「精神をかき乱す」の意味で英語に入った。もともとは「正気を失わせる」ほど強い意味だったが、次第に「集中を妨げる」という軽い意味に落ち着いた。distracted（気が散った）→ distraught（取り乱した）は同語源。",
+        "source": "EtymOnline: distract",
+        "cognates": ["distraction", "distracting", "distraught"]
+      },
+      "cognitive": {
+        "oneliner": "注意を違う方向に引っ張る→集中が分散する動き",
+        "fact": "PATHスキーマ（方向の逸脱）の応用。本来一つの方向に向いていた注意・意識を、dis-（離れた方向）に引っ張る(tract)ことで焦点が外れる。スマホ通知が典型的なdistractorのイメージ。",
+        "source": "Johnson (1987) PATHスキーマ"
+      },
+      "gap": "distract from〜（〜から気を引き離す）という前置詞とのコロケーションが頻出。Don't distract me.（気を散らさないで）のように他動詞で直接使うケースもTOEICに出る。distractionとセットで覚えると使いやすい。",
+      "gapOneliner": "distract = 注意を「バラバラに引き離す」、distract from〜 がよく使われる",
+      "hook": {
+        "label": "記憶フック",
+        "text": "スマホが集中を「離れた方向に(dis)引っ張る(tract)」のがdistract。distractionは注意を「引き離すもの」全般。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "distractの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["離れて引く→気を散らす", "一緒に引く→集める", "前に引く→引き出す", "上に引く→高める"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "dis + tract の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["離れて + 引く = 気を散らす", "下に + 引く = 落ち込ませる", "再び + 引く = 繰り返す", "強く + 引く = 集中させる"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Please don't ______ me while I'm working.",
+          "hint": "「離れた方向に引く」→「気を散らす」",
+          "explanationFocus": "gap",
+          "choices": ["distract", "attract", "extract", "subtract"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "distractと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["attention（注意を散らす）", "money（お金を散らす）", "time（時間を散らす）", "words（言葉を散らす）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Social media distracts students from their studies.\" — distractの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["気を散らす", "助ける", "妨害する（物理的に）", "促進する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Please don't distract me while I'm working."]
+    },
+    {
+      "word": "subtract",
+      "phonetic": "/səbˈtrækt/",
+      "toeicRank": "TSL外・一般語彙",
+      "parts": [
+        {"part": "sub", "meaning": "下に・下から", "type": "prefix"},
+        {"part": "tract", "meaning": "引く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "sub（下に）+ trahere（引く）= 下に引く → 引く・減じる",
+        "fact": "ラテン語 subtrahere「下から引き去る」から。sub-（下から）+ trahere（引く）。16世紀初頭に数学用語として英語に入り、「より大きな数から引き去る」の意味が定着。物理的に「下に引き抜く」イメージから算数の「引き算」へと比喩が転用された。",
+        "source": "EtymOnline: subtract",
+        "cognates": ["subtraction", "subtrahend"]
+      },
+      "cognitive": {
+        "oneliner": "下から引き抜く動き→数や量を取り除く算数の操作",
+        "fact": "VERTICALスキーマ（上下）とFORCEスキーマの合成。積み上げられたものの底(sub-)から引く(tract)ことで全体量が減る。MORE IS UP / LESS IS DOWN メタファーで、「下に引く」＝「減る」は普遍的な身体感覚。",
+        "source": "Lakoff & Johnson (1980) MORE IS UP メタファー"
+      },
+      "gap": "subtractは算数・数学専用に見えるが、比喩的に「〜を取り除く」のにも使える。subtract the noise（ノイズを取り除く）など。addの反対語として対で覚えると便利。subtract A from B（BからAを引く）の語順に注意。",
+      "gapOneliner": "subtract = 「下から引き去る」、subtract A from B の語順をセットで覚える",
+      "hook": {
+        "label": "記憶フック",
+        "text": "積み木の「下(sub)から引き抜く(tract)」とタワーが低くなる。それがsubtract（引き算）。addの逆で、下から引っこ抜くイメージ。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "subtractの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["下に引く→引く・減じる", "上に引く→増やす", "外に引く→取り除く", "一緒に引く→合計する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "sub + tract の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["下から + 引く = 引き算する", "再び + 引く = やり直す", "前に + 引く = 足し算する", "外に + 引く = 取り出す"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "If you ______ 15 from 40, you get 25.",
+          "hint": "「下から引き去る」→「引き算する」",
+          "explanationFocus": "gap",
+          "choices": ["subtract", "extract", "abstract", "attract"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "subtractと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["a number（数を引く）", "a friend（友人を引く）", "a color（色を引く）", "a word（言葉を引く）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Subtract your total expenses from your income to find your savings.\" — subtractの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["引き算する・差し引く", "足し算する", "掛け算する", "比較する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["If you subtract 15 from 40, you get 25."]
+    },
+    {
+      "word": "abstract",
+      "phonetic": "/ˈæbstrækt/ (形容詞・名詞) /æbˈstrækt/ (動詞)",
+      "toeicRank": "TSL外・学術語彙",
+      "parts": [
+        {"part": "abs", "meaning": "離れて・分離して", "type": "prefix"},
+        {"part": "tract", "meaning": "引く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "abs（離れて）+ trahere（引く）= 離して引く → 抽象的な",
+        "fact": "ラテン語 abstrahere「引き離す、分離する」の過去分詞 abstractus から。abs-（離れて）+ trahere（引く）。14世紀に「具体的な実体から切り離された概念」の意味で英語に入る。名詞の「要旨・抄録」は1530年代、「抽象絵画」の意味は1914年以降に登場。",
+        "source": "EtymOnline: abstract",
+        "cognates": ["abstraction", "abstractly", "abstract art", "abstract (論文要旨)"]
+      },
+      "cognitive": {
+        "oneliner": "具体的な事物から引き離して概念だけ取り出す→抽象化の認知操作",
+        "fact": "SEPARATIONスキーマの哲学的応用。「赤いリンゴ・赤い車・赤い薔薇」から「赤さ」だけを引き離して取り出す操作が abstraction。具体的な形・重さ・匂いを「引きはがして(abs-tract)」概念だけ残すイメージ。",
+        "source": "Johnson (1987) SEPARATIONスキーマ"
+      },
+      "gap": "abstractは形容詞（抽象的な）・名詞（論文要旨）・動詞（抽象化する）と品詞が3つある。TOEICでは abstract noun（抽象名詞）より、論文・報告書の「要旨（abstract）」の意味が頻出。「具体から引き離した要点」がabstractの本質。",
+      "gapOneliner": "abstract = 形容詞「抽象的な」も名詞「要旨」も、具体から引き離した概念・要点",
+      "hook": {
+        "label": "記憶フック",
+        "text": "論文の「abstract（要旨）」は本文から「離れて(abs)引き出した(tract)」エッセンス。抽象画も具体的な形を「引き離した」もの。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "abstractの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["離して引く→抽象的な・要旨", "強く引く→要点を強調する", "一緒に引く→まとめる", "前に引く→序文を書く"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "abs + tract の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["離れて + 引く = 具体から引き離す", "上に + 引く = 高める", "再び + 引く = 要約し直す", "外に + 引く = 発表する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Please write a 200-word ______ at the beginning of your report.",
+          "hint": "「離して引き出した」→「要旨・抄録」",
+          "explanationFocus": "gap",
+          "choices": ["abstract", "contract", "extract", "subtract"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "abstractと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["concept（抽象的な概念）", "price（抽象的な価格）", "machine（抽象的な機械）", "schedule（抽象的な予定）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Her argument was too abstract for most of the audience to follow.\" — abstractの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["抽象的すぎる", "具体的すぎる", "長すぎる", "短すぎる"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Please write a 200-word abstract at the beginning of your report."]
+    },
+    {
+      "word": "traction",
+      "phonetic": "/ˈtrækʃən/",
+      "toeicRank": "TSL外・ビジネス語彙",
+      "parts": [
+        {"part": "tract", "meaning": "引く", "type": "root"},
+        {"part": "ion", "meaning": "〜すること・状態", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "trahere（引く）+ -ion（〜すること）= 引くこと → 牽引力",
+        "fact": "ラテン語 tractio「引くこと」から。trahere（引く）の名詞形。17世紀初頭に「引く行為・牽引」の意味で英語に入り、19世紀に医学用語（牽引療法）、20世紀に物理学（摩擦による推進力）で使われるように。ビジネスでは2000年代以降に「勢い・支持の広がり」の比喩的用法が急増。",
+        "source": "EtymOnline: traction",
+        "cognates": ["tractor", "retraction", "contraction"]
+      },
+      "cognitive": {
+        "oneliner": "引く力そのもの→タイヤの摩擦力・ビジネスの勢い",
+        "fact": "FORCEスキーマの名詞形。「引く動き」を「引く力・引く状態」として固定化したのが-ionの役割。タイヤが路面を「引っ掛ける力」も、スタートアップが市場で「支持を引き寄せる力」も、同じtraction。",
+        "source": "Johnson (1987) FORCEスキーマ"
+      },
+      "gap": "tractionはタイヤの摩擦力（物理）と「ビジネスでの勢い・支持の広がり」（比喩）の2つが現代では重要。Our product is gaining traction.（製品が勢いに乗っている）はビジネス英語で頻出。「引っ張る力が増している」イメージで覚える。",
+      "gapOneliner": "traction = タイヤの「摩擦力」も「ビジネスの勢い」も、引く力が増すイメージ",
+      "hook": {
+        "label": "記憶フック",
+        "text": "タイヤが地面を「引っ掴む(tract)力(-ion)」がtraction。スタートアップが「市場を引きつける力」も同じtraction。gain tractionは「引力が増す＝勢いに乗る」。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "tractionの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["引くこと・引く力→牽引力", "引き戻すこと→後退", "引き離すこと→分離", "引き締めること→収縮"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "tract + ion の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["引く + 状態 = 引く力・牽引", "縮む + 状態 = 収縮", "走る + 状態 = 運動", "回る + 状態 = 回転"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The startup is finally gaining ______ in the market.",
+          "hint": "「引く力が増す」→「勢いに乗る」",
+          "explanationFocus": "gap",
+          "choices": ["traction", "transaction", "attraction", "distraction"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "tractionと最も自然に結びつく動詞は？",
+          "explanationFocus": "hook",
+          "choices": ["gain（勢いを得る）", "make（トラクションを作る）", "find（トラクションを見つける）", "take（トラクションを取る）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Without traction, the wheels just spin in place.\" — tractionの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["摩擦力・グリップ力", "速度", "エンジンの出力", "燃料"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The startup is finally gaining traction in the market."]
+    },
+    {
+      "word": "attractive",
+      "phonetic": "/əˈtræktɪv/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "at", "meaning": "〜に向けて", "type": "prefix"},
+        {"part": "tract", "meaning": "引く", "type": "root"},
+        {"part": "ive", "meaning": "〜の性質を持つ", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "at（〜に向けて）+ trahere（引く）+ -ive（〜の性質の）= 引きつける性質の → 魅力的な",
+        "fact": "ラテン語 attractivus「引き寄せる性質の」から。attrahere（引き寄せる）の形容詞形。15世紀半ばに「引き寄せる力を持つ」の意味で英語に入り、16世紀以降に「人を魅了する」という美的・社会的な意味が広がった。名詞attractionは同時期に定着。",
+        "source": "EtymOnline: attractive",
+        "cognates": ["attractively", "attractiveness", "unattractive"]
+      },
+      "cognitive": {
+        "oneliner": "引きつける性質を恒常的に持つ→魅力の属性化",
+        "fact": "-iveは動詞の一時的な動きを「性質・傾向」として固定するサフィックス。attract（引きつける行為）→ attractive（引きつける性質を持つもの）。魅力的な人や提案は「常に人を引きつける力を内包している」という属性として捉える。",
+        "source": "Langacker (1987) 属性化の認知文法"
+      },
+      "gap": "attractiveは見た目の「魅力的な」だけでなく、an attractive offer（魅力的なオファー）・an attractive salary（魅力的な給与）のようにビジネス文書でも頻出。「引きつける力がある」なら何にでも使える形容詞。",
+      "gapOneliner": "attractive = 人の見た目だけでなく「提案・給与・条件」にも使えるビジネス頻出語",
+      "hook": {
+        "label": "記憶フック",
+        "text": "「〜に向けて(at)引く(tract)性質(-ive)を持つ」のがattractive。人でも提案でも、引きつける力があればattractive。an attractive offerはTOEICの定番表現。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "attractiveの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["引きつける性質の→魅力的な", "引き離す性質の→遠ざける", "引き締める性質の→厳格な", "引き戻す性質の→保守的な"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "at + tract + ive の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["〜に向けて + 引く + 性質 = 引きつける性質の", "外に + 引く + 性質 = 外向きな", "強く + 引く + 性質 = 強引な", "離れて + 引く + 性質 = 散漫な"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The company made an ______ offer to the candidate.",
+          "hint": "「引きつける性質を持つ」→「魅力的な」",
+          "explanationFocus": "gap",
+          "choices": ["attractive", "distractive", "abstractive", "subtractive"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "attractiveと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["salary（魅力的な給与）", "noise（魅力的なノイズ）", "problem（魅力的な問題）", "delay（魅力的な遅延）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The resort's attractive packages draw thousands of visitors each year.\" — attractiveの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["魅力的な・人を引きつける", "高価な", "複雑な", "限定的な"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The company made an attractive offer to the candidate."]
+    }
+  ]
+}

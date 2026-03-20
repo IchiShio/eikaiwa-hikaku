@@ -1,0 +1,582 @@
+{
+  "root": "scrib/script",
+  "rootMeaning": "書く",
+  "rootLang": "ラテン語 scribere（PIE *skribh-）",
+  "imageSchema": "鋭いもので表面を引っかいて跡を残すイメージ。石板や紙に文字を刻みつける動き。scribが見えたら「書く・刻む」という行為が根底にある。",
+  "hook": {
+    "label": "記憶フック",
+    "text": "script（台本）は「書かれたもの」。処方箋(prescription)は医師が「前もって書いたもの」、購読(subscription)は名前を「下に書き込んだもの」。scrib/scriptが見えたら「書く」と読み替えるだけで、8語が一気に読める。"
+  },
+  "words": [
+    {
+      "word": "describe",
+      "phonetic": "/dɪˈskraɪb/",
+      "toeicRank": "TSL外・NGSL上位",
+      "parts": [
+        {"part": "de", "meaning": "下に・詳しく", "type": "prefix"},
+        {"part": "scribe", "meaning": "書く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "de（下に・詳しく）+ scribere（書く）= 詳しく書き記す → 描写する",
+        "fact": "ラテン語 describere「写し取る、書き写す、描く」から。de- は「下へ」あるいは「完全に」の強意を表す。14世紀後半に英語に入り、当初は「図形を描く、輪郭を描く」の意味だったが、やがて「言葉で描写する」へと意味が拡張した。",
+        "source": "EtymOnline: describe",
+        "cognates": ["description", "descriptive", "descriptor", "indescribable"]
+      },
+      "cognitive": {
+        "oneliner": "対象の輪郭を下から丁寧になぞって書き取る→描写する",
+        "fact": "TRACINGスキーマの応用。ペンを対象の輪郭に沿って走らせるように、言葉でその形や性質を「なぞり書き」する動き。画家がキャンバスに描くのと同じ動作を、言語で行うのがdescribe。",
+        "source": "Johnson (1987) PATHスキーマ"
+      },
+      "gap": "「説明する」と「描写する」を別物として覚えがちだが、describeは特に感覚・外見・状況を言葉で「絵にする」ニュアンスが強い。describe the symptoms（症状を述べる）/ describe the scene（場面を描写する）— いずれも「書き取るように丁寧に」が核心。",
+      "gapOneliner": "describe = explain（論理的に説明）ではなく「言葉で絵を描く」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "刑事が現場を「下に(de)書き記す(scribe)」のがdescribe。目に見えたものをそのまま言葉に落とし込む。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "describeの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["詳しく書き記す→描写する", "下に押しつぶす→圧迫する", "詳しく話す→議論する", "下に置く→提出する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "de + scribe の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["詳しく + 書く = 描写する", "離れて + 書く = 却下する", "反対に + 書く = 反論する", "外へ + 書く = 発表する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Can you ______ what the suspect looked like?",
+          "hint": "「詳しく書き記す」→「描写する」",
+          "explanationFocus": "gap",
+          "choices": ["describe", "prescribe", "subscribe", "inscribe"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "describeと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["symptoms（症状を描写する）", "money（お金を書く）", "weather（天気を指示する）", "building（建物を命令する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Words cannot describe how beautiful the view was.\" — describeの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["言い表す", "測定する", "記録する", "比較する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Can you describe what happened?"]
+    },
+    {
+      "word": "prescribe",
+      "phonetic": "/prɪˈskraɪb/",
+      "toeicRank": "TSL外・TOEFL/IELTS頻出",
+      "parts": [
+        {"part": "pre", "meaning": "前もって", "type": "prefix"},
+        {"part": "scribe", "meaning": "書く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "pre（前もって）+ scribere（書く）= 前もって書き定める → 処方する・規定する",
+        "fact": "ラテン語 praescribere「前もって書く、前置きとして記す、規定する」から。pre- は「前に、あらかじめ」を意味する。15世紀後半に英語に入り、当初は「規則として書き定める」という法律用語として使われ、その後17世紀に医療用語「処方する」の意味が定着した。",
+        "source": "EtymOnline: prescribe",
+        "cognates": ["prescription", "prescriptive", "prescriber"]
+      },
+      "cognitive": {
+        "oneliner": "権威ある者が事前に書いて定める→処方する・規定する",
+        "fact": "AUTHORITYスキーマの応用。医師や法律が「あらかじめ(pre-)書いておく(scribere)」ことで、患者や市民が従うべき行動を定める動き。処方箋も法的規定も、どちらも「前もって書かれた命令書」。",
+        "source": "Johnson (1987) FORCEスキーマ"
+      },
+      "gap": "prescribeは「処方する」だけでなく「規定する」「命じる」の意味でも使われる。The law prescribes a maximum penalty.（法律は最高刑を規定している）— 医師が薬を処方するのも、法律が罰則を定めるのも、同じ「前もって書き定める」動作。",
+      "gapOneliner": "prescribe = 医師の「処方する」も法律の「規定する」も、前もって書き定めること",
+      "hook": {
+        "label": "記憶フック",
+        "text": "医師が診察の前に治療方針を「前もって(pre)書く(scribe)」のがprescribe。処方箋(prescription)はその「前もって書かれたもの」。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "prescribeの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["前もって書き定める→処方する", "前に走り出す→先取りする", "前に置く→提案する", "前に立つ→発表する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "pre + scribe の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["前もって + 書く = 処方する", "再び + 書く = 書き直す", "一緒に + 書く = 共著する", "外へ + 書く = 発表する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The doctor will ______ antibiotics for your infection.",
+          "hint": "「前もって書き定める」→「処方する」",
+          "explanationFocus": "gap",
+          "choices": ["prescribe", "describe", "subscribe", "transcribe"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "prescribeと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["medication（薬を処方する）", "food（食べ物を書く）", "travel（旅行を規定する）", "music（音楽を指示する）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The constitution prescribes the duties of each branch.\" — prescribesの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["規定している", "廃止している", "説明している", "推奨している"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The doctor prescribed a two-week course of antibiotics."]
+    },
+    {
+      "word": "subscribe",
+      "phonetic": "/səbˈskraɪb/",
+      "toeicRank": "TSL外・ビジネス英語頻出",
+      "parts": [
+        {"part": "sub", "meaning": "下に", "type": "prefix"},
+        {"part": "scribe", "meaning": "書く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "sub（下に）+ scribere（書く）= 下に署名する → 同意する・購読する",
+        "fact": "ラテン語 subscribere「下に書く、下に署名する」から。15世紀末に英語に入り、当初は契約書や請願書の下に「署名する」という行為を指した。署名=同意・支持を意味し、やがて「定期的に支払いに合意する」→「購読する・会員登録する」へと意味が拡張した。",
+        "source": "EtymOnline: subscribe",
+        "cognates": ["subscription", "subscriber", "unsubscribe"]
+      },
+      "cognitive": {
+        "oneliner": "文書の下に自分の名を書く→同意・支持を示す→購読する",
+        "fact": "COMMITMENTスキーマの応用。契約書の下部(sub-)に署名を書く(scribere)ことで、その内容に拘束されることを表明する動き。デジタル時代の「チャンネル登録」「メルマガ購読」も、名前を下に書くという原始的な契約行為の延長。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "subscribe to a magazine（雑誌を購読する）と subscribe to a view（意見に賛同する）は同じ単語。「下に署名する=同意する」がわかれば、purchase（一度きりの購入）との違いも明確になる。subscribe = 継続的な同意・支持の表明。",
+      "gapOneliner": "subscribe = 購読も賛同も、「下に署名して同意する」こと",
+      "hook": {
+        "label": "記憶フック",
+        "text": "雑誌の申込書の一番下(sub)に名前を書く(scribe)のがsubscribe。YouTubeのチャンネル登録も、同じく「あなたを支持します」と下に署名する行為。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "subscribeの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["下に署名する→購読する", "下に沈む→落下する", "下から支える→支援する", "下に置く→提出する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "sub + scribe の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["下に + 書く = 購読する", "離れて + 書く = 解約する", "一緒に + 書く = 共同執筆する", "前に + 書く = 事前申請する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "You can ______ to our newsletter for free.",
+          "hint": "「下に署名する」→「購読する」",
+          "explanationFocus": "gap",
+          "choices": ["subscribe", "prescribe", "describe", "inscribe"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "subscribeと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["to a service（サービスを購読する）", "a book（本を書く）", "a law（法律を制定する）", "a plan（計画を立てる）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"I don't subscribe to the view that money buys happiness.\" — subscribeの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["賛同する", "理解する", "証明する", "否定する"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Subscribe to our channel for weekly updates."]
+    },
+    {
+      "word": "inscribe",
+      "phonetic": "/ɪnˈskraɪb/",
+      "toeicRank": "TSL外・TOEFL/IELTS頻出",
+      "parts": [
+        {"part": "in", "meaning": "中に・上に", "type": "prefix"},
+        {"part": "scribe", "meaning": "書く", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "in（中に・上に）+ scribere（書く）= 表面に書き刻む → 刻む・記す",
+        "fact": "ラテン語 inscribere「上に書く、刻み込む、題名をつける」から。in- は「中に、上に」を意味する。15世紀後半に英語に入り、石・金属・紙などの物体の表面に文字や記号を「刻み込む」行為を指す。また書籍の扉に献辞を「書き記す」意味でも用いられる。",
+        "source": "EtymOnline: inscribe",
+        "cognates": ["inscription", "inscribed"]
+      },
+      "cognitive": {
+        "oneliner": "素材の表面の中に食い込むように書く→刻む・永続的に記す",
+        "fact": "CONTAINERスキーマとFORCEスキーマの複合。表面の中(in-)に力を込めて書き付ける(scribere)動き。石碑や指輪への彫刻、本の扉への献辞書き込みなど、単なる「書く」より永続的・物理的な痕跡を残す行為。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "write（一般的に書く）との違いは「物体に刻み込む」という永続性。inscribe a name on a trophy（トロフィーに名前を刻む）/ a stone inscribed with ancient symbols（古代の記号が刻まれた石）— 容易に消せない、記念・永続的な文字入れがinscribe。",
+      "gapOneliner": "inscribe = writeより永続的・物理的「刻み込む」行為",
+      "hook": {
+        "label": "記憶フック",
+        "text": "トロフィーや墓碑の中(in)に名前を書き刻む(scribe)のがinscribe。消えない、永遠に残る文字を「中に書き込む」。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "inscribeの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["中に書き刻む→刻む", "中に入れる→包む", "上に置く→積み重ねる", "内側を向く→内省する"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "in + scribe の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["中に + 書く = 刻む", "内側に + 話す = 独り言を言う", "中に + 置く = 埋め込む", "上に + 描く = 塗装する"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "They had his name ______ on the championship trophy.",
+          "hint": "「中に書き刻む」→「刻む」",
+          "explanationFocus": "gap",
+          "choices": ["inscribed", "described", "prescribed", "subscribed"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "inscribeと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["on a stone（石に刻む）", "a letter（手紙を書く）", "a plan（計画を立てる）", "a speech（スピーチをする）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The author inscribed a personal message in the front of the book.\" — inscribedの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["書き記した", "印刷した", "検閲した", "削除した"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The ring was inscribed with their wedding date."]
+    },
+    {
+      "word": "manuscript",
+      "phonetic": "/ˈmænjuskrɪpt/",
+      "toeicRank": "TSL外・TOEFL/IELTS頻出",
+      "parts": [
+        {"part": "manu", "meaning": "手で", "type": "prefix"},
+        {"part": "script", "meaning": "書かれたもの", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "manu（手で）+ scriptus（書かれた）= 手で書かれたもの → 原稿・写本",
+        "fact": "中世ラテン語 manuscriptus「手で書かれた」から。manus（手）+ scriptus（scribere の過去分詞「書かれた」）の合成。印刷術発明前（15世紀以前）は全ての文書が手書きだったため、活版印刷の登場後に「印刷前の手書き原稿」という意味が生まれた。英語には17世紀前半に定着。",
+        "source": "EtymOnline: manuscript",
+        "cognates": ["script", "manuscript", "manu- (manual, manufacture, manipulate)"]
+      },
+      "cognitive": {
+        "oneliner": "手という道具で書かれた物体→手書きの原稿・写本",
+        "fact": "INSTRUMENTスキーマの典型。manus（手）というツールで scribere（書く）という行為を行った産物。デジタル時代でも「出版前の原稿」という意味で生き続けており、「手で書いた」という身体的イメージが「完成前の生の文書」というニュアンスを与えている。",
+        "source": "Johnson (1987) CONTAINERスキーマ"
+      },
+      "gap": "manuscriptはtextやdocumentと違い「出版・公開前の段階」のニュアンスが強い。submit a manuscript to a publisher（出版社に原稿を提出する）/ an ancient manuscript（古代の写本）— どちらも「まだ世に出ていない、あるいは直接書かれた生の文書」。",
+      "gapOneliner": "manuscript = 「手書き」ではなく「出版・完成前の生の原稿・写本」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "印刷機がなかった時代、修道僧が手(manu)で書き写した(script)聖書がmanuscript（写本）。今でも作家が出版社に送る前の「手書きの原稿」はmanuscript。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "manuscriptの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["手で書かれたもの→原稿", "手で作られたもの→製品", "手で運ばれたもの→小包", "手で測られたもの→寸法"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "manu + script の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["手で + 書かれた = 原稿", "多く + 書かれた = 大著", "速く + 書かれた = メモ", "正式に + 書かれた = 契約書"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "She spent three years writing the ______ for her debut novel.",
+          "hint": "「手で書かれたもの」→「原稿」",
+          "explanationFocus": "gap",
+          "choices": ["manuscript", "transcript", "script", "description"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "manuscriptと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["submit（原稿を提出する）", "print（原稿を印刷する）", "sell（原稿を売る）", "read（原稿を読む）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"Researchers discovered a medieval manuscript in the monastery.\" — manuscriptの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["写本", "石板", "印刷物", "地図"],
+          "correct": 0
+        }
+      ],
+      "examples": ["She submitted her manuscript to three publishers."]
+    },
+    {
+      "word": "transcript",
+      "phonetic": "/ˈtrænskrɪpt/",
+      "toeicRank": "TSL外・ビジネス・学術英語頻出",
+      "parts": [
+        {"part": "trans", "meaning": "越えて・別の形に", "type": "prefix"},
+        {"part": "script", "meaning": "書かれたもの", "type": "root"}
+      ],
+      "etymology": {
+        "oneliner": "trans（越えて・別の形に）+ scriptus（書かれた）= 書き写されたもの → 記録・成績証明書",
+        "fact": "ラテン語 transcriptus（transcribere「書き写す」の過去分詞）から。trans-「越えて」+ scribere「書く」で、音声・会話・記録などを「別の形式に書き移した」もの。15世紀に「写し、謄本」として英語に入り、20世紀以降は音声→文字化した「書き起こし」や大学の「成績証明書」の意味でも広く使われる。",
+        "source": "EtymOnline: transcript",
+        "cognates": ["transcribe", "transcription", "transcriber"]
+      },
+      "cognitive": {
+        "oneliner": "あるメディアを越えて別の形式に書き移す→書き起こし・記録",
+        "fact": "TRANSFORMATIONスキーマの応用。音声という形式を「越えて(trans-)」文字という別形式に書き直す(scriptus)動き。裁判の録音→文字起こし、授業の録画→テキスト化、在学中の成績→書面化、いずれも「ある形式を越えて文書化する」行為。",
+        "source": "Johnson (1987) PATHスキーマ"
+      },
+      "gap": "transcriptはrecordと似ているが、必ず「別の形式への書き移し」という変換が含意される。a transcript of the interview（インタビューの書き起こし）/ an official transcript（大学の成績証明書）— いずれも「元の形（音声・在学記録）を文字に変換した文書」。",
+      "gapOneliner": "transcript = 何かを「越えて」別の形式に書き移した記録・証明書",
+      "hook": {
+        "label": "記憶フック",
+        "text": "音声や会議の内容を「越えて(trans)書き移した(script)もの」がtranscript（書き起こし）。大学の成績も在学中の全記録を「越えて書き移した」証明書だからtranscript。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "transcriptの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["越えて書き移したもの→記録", "越えて運ばれたもの→輸入品", "越えて伝えられたもの→伝言", "越えて変えられたもの→変換"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "trans + script の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["越えて + 書かれた = 書き起こし", "再び + 書かれた = 改訂版", "下に + 書かれた = 注釈", "速く + 書かれた = 速記"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "You must submit an official ______ when applying to graduate school.",
+          "hint": "「越えて書き移したもの」→「成績証明書」",
+          "explanationFocus": "gap",
+          "choices": ["transcript", "manuscript", "script", "prescription"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "transcriptと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["official（公式の成績証明書）", "secret（秘密の原稿）", "daily（日々の台本）", "annual（年次報告書）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"A full transcript of the hearing is available on the court's website.\" — transcriptの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["書き起こし記録", "映像記録", "写真資料", "音声ファイル"],
+          "correct": 0
+        }
+      ],
+      "examples": ["Please provide an official transcript from your university."]
+    },
+    {
+      "word": "description",
+      "phonetic": "/dɪˈskrɪpʃən/",
+      "toeicRank": "TSL 606位相当",
+      "parts": [
+        {"part": "de", "meaning": "下に・詳しく", "type": "prefix"},
+        {"part": "script", "meaning": "書く", "type": "root"},
+        {"part": "ion", "meaning": "行為・結果・状態", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "de（詳しく）+ scriptus（書かれた）+ -ion（名詞化）= 書き記した内容 → 描写・説明",
+        "fact": "ラテン語 descriptio「写し、描写、輪郭」から。describere（詳しく書く）の名詞形。14世紀後半に英語に入り、「言葉で描写した内容」を指す。TOEICでは job description（職務記述書）が頻出。-ion は動詞を「行為の結果・産物」に変える最重要接尾辞のひとつ。",
+        "source": "EtymOnline: description",
+        "cognates": ["describe", "descriptive", "descriptor", "indescribable"]
+      },
+      "cognitive": {
+        "oneliner": "詳しく書いた行為の産物→言葉で描き出した内容・描写",
+        "fact": "OBJECT化スキーマ。動詞 describe（詳しく書く行為）を -ion で名詞化することで、その「行為の産物」に変換。描写する動作そのものが、手に取れる「モノ」（言葉の塊）になるイメージ。",
+        "source": "Langacker (1987) 名詞化の認知文法理論"
+      },
+      "gap": "description は単なる「説明」(explanation) ではなく「見えるように書き表したもの」。a job description（何をするかを書き記した職務内容）/ match the description（書き記された特徴と一致する）— いずれも「詳しく書かれた情報のまとまり」。",
+      "gapOneliner": "description = 「説明」より「言葉で描き出した姿・特徴のまとまり」",
+      "hook": {
+        "label": "記憶フック",
+        "text": "describeが「詳しく書き記す動作」なら、descriptionはその「書き記した結果物」。job descriptionは仕事の内容を「詳しく書き記した書類」。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "descriptionの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["詳しく書き記した内容→描写", "下へ降りた状態→下降", "詳しく話し合った結果→決議", "下に置かれたもの→基盤"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "de + script + ion の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["詳しく + 書く + 名詞化 = 描写", "下へ + 走る + 名詞化 = 下落", "離れて + 書く + 名詞化 = 除外", "前に + 書く + 名詞化 = 予告"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Please read the job ______ carefully before applying.",
+          "hint": "「詳しく書き記した内容」→「記述・説明」",
+          "explanationFocus": "gap",
+          "choices": ["description", "prescription", "subscription", "inscription"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "descriptionと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["job（職務内容）", "money（金額の説明）", "weather（天気の記録）", "sound（音の書き起こし）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"The suspect matched the description given by witnesses.\" — descriptionの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["人物描写・特徴の記述", "犯罪歴の記録", "目撃者の証言映像", "逮捕状"],
+          "correct": 0
+        }
+      ],
+      "examples": ["The job description requires five years of experience."]
+    },
+    {
+      "word": "prescription",
+      "phonetic": "/prɪˈskrɪpʃən/",
+      "toeicRank": "TSL外・医療・日常英語頻出",
+      "parts": [
+        {"part": "pre", "meaning": "前もって", "type": "prefix"},
+        {"part": "script", "meaning": "書く", "type": "root"},
+        {"part": "ion", "meaning": "行為・結果・状態", "type": "suffix"}
+      ],
+      "etymology": {
+        "oneliner": "pre（前もって）+ scriptus（書かれた）+ -ion（名詞化）= 前もって書かれたもの → 処方箋・規定",
+        "fact": "ラテン語 praescriptio「前書き、規定、処方」から。praescribere（前もって書く）の名詞形。15世紀後半に法律用語「規定、先例」として英語に入り、16〜17世紀に医療用語「処方箋」の意味が定着。prescription drugs（処方薬）はdrugsのうち医師の書面なしに入手できない薬を指す。",
+        "source": "EtymOnline: prescription",
+        "cognates": ["prescribe", "prescriptive", "over-the-counter（処方箋不要）"]
+      },
+      "cognitive": {
+        "oneliner": "権威ある者が前もって書き定めた産物→処方箋・規則",
+        "fact": "AUTHORITY + OBJECT化スキーマ。prescribe（前もって書き定める行為）を -ion で名詞化すると、その「書き定めた産物＝紙の文書」になる。医師が前もって書いた処方箋という「モノ」が prescription。薬局はその「モノ」を受け取って薬を渡す。",
+        "source": "Langacker (1987) 名詞化の認知文法理論"
+      },
+      "gap": "prescription drugs（処方薬）と over-the-counter drugs（市販薬）の違いは「前もって医師が書いた文書（処方箋）が必要か否か」。a prescription for success（成功の処方箋）は比喩的用法で「前もって書き定められた成功のための規定」。",
+      "gapOneliner": "prescription = 医師が「前もって書いた文書」、比喩的に「成功の処方箋」も同じ構造",
+      "hook": {
+        "label": "記憶フック",
+        "text": "医師が診察後に「前もって(pre)書いた(script)文書(-ion)」が処方箋(prescription)。薬局はその紙を受け取って薬を出す。prescribeの名詞形はprescription。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "prescriptionの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": ["前もって書かれたもの→処方箋", "前に運ばれたもの→配達物", "前に決められたもの→予定", "前に置かれたもの→前置き"],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 2,
+          "instruction": "pre + script + ion の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": ["前もって + 書く + 名詞化 = 処方箋", "再び + 書く + 名詞化 = 改訂版", "下に + 書く + 名詞化 = 購読", "一緒に + 書く + 名詞化 = 共著"],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "You need a ______ from your doctor to get this medication.",
+          "hint": "「前もって書かれたもの」→「処方箋」",
+          "explanationFocus": "gap",
+          "choices": ["prescription", "description", "subscription", "inscription"],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 3,
+          "instruction": "prescriptionと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": ["fill（処方箋を調剤する）", "write（処方箋を書く）", "read（処方箋を読む）", "send（処方箋を送る）"],
+          "correct": 0
+        },
+        {
+          "type": "例文意味推測",
+          "difficulty": 4,
+          "instruction": "\"This book offers a prescription for a more productive work culture.\" — prescriptionの意味は？",
+          "explanationFocus": "etymology",
+          "choices": ["処方箋・改善策の提示", "批判的な分析", "歴史的な記録", "科学的な証明"],
+          "correct": 0
+        }
+      ],
+      "examples": ["I need to pick up my prescription from the pharmacy."]
+    }
+  ]
+}
