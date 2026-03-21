@@ -60,72 +60,56 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 .header-back:hover{background:var(--surface)}
 
 /* ── LP ── */
-.lp-hero{padding:72px 0 40px;text-align:center}
-.lp-hero h1{font-size:36px;font-weight:900;line-height:1.2;letter-spacing:-.5px;margin-bottom:12px}
-.lp-hero .accent{color:var(--accent)}
-.lp-hero .sub{font-size:18px;color:var(--text2);font-weight:500;margin-bottom:36px;line-height:1.6}
+.lp{padding:0 0 40px}
 
+/* Hero: emotion first */
+.lp-hero{padding:80px 0 48px;text-align:center}
+.lp-hero h1{font-size:15px;font-weight:700;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.lp-headline{font-size:32px;font-weight:900;line-height:1.25;letter-spacing:-.5px;margin-bottom:16px}
+.lp-headline em{font-style:normal;color:var(--accent)}
+.lp-sub{font-size:16px;color:var(--text2);line-height:1.7;margin-bottom:40px;text-wrap:balance}
+
+/* Live demo card — the hero IS the product */
+.lp-demo-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;margin-bottom:12px;text-align:center}
+.lp-demo-word{font-family:'Inter',sans-serif;font-size:38px;font-weight:900;letter-spacing:-1px;margin-bottom:2px}
+.lp-demo-phonetic{font-size:13px;color:var(--text3);margin-bottom:16px}
+.lp-demo-oneliner{font-size:17px;font-weight:700;line-height:1.5;padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:16px 0 0}
+
+/* Cascade reveal */
+.lp-cascade{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:40px}
+.lp-cascade-head{padding:20px 24px 12px;text-align:center}
+.lp-cascade-head .root-big{font-size:28px;font-weight:900;color:var(--root)}
+.lp-cascade-head .root-meaning{font-size:14px;color:var(--text2);margin-top:2px}
+.lp-cascade-list{padding:0 16px 16px}
+.lp-cascade-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-sm);transition:background .15s}
+.lp-cascade-item:nth-child(odd){background:var(--surface)}
+.lp-ci-prefix{font-weight:800;color:var(--prefix);min-width:48px;text-align:right;font-size:14px}
+.lp-ci-plus{color:var(--text3);font-size:12px}
+.lp-ci-root{font-weight:800;color:var(--root);font-size:14px}
+.lp-ci-arrow{color:var(--text3);font-size:13px}
+.lp-ci-word{font-weight:700;font-size:15px}
+.lp-ci-ja{color:var(--text2);font-size:12px;margin-left:auto}
+.lp-cascade-footer{padding:12px 24px 16px;text-align:center;border-top:1px solid var(--border);font-size:13px;color:var(--text3)}
+
+/* Insight — one powerful idea */
+.lp-insight{text-align:center;padding:40px 8px;max-width:400px;margin:0 auto}
+.lp-insight-big{font-size:22px;font-weight:900;line-height:1.35;margin-bottom:12px;letter-spacing:-.3px}
+.lp-insight-big em{font-style:normal;color:var(--accent)}
+.lp-insight-body{font-size:15px;color:var(--text2);line-height:1.7}
+
+/* Stats — minimal */
+.lp-stats{display:flex;justify-content:center;gap:32px;padding:20px 0;margin:8px 0 40px}
+.lp-stat{text-align:center}
+.lp-stat-num{font-family:'Inter',sans-serif;font-size:32px;font-weight:900;color:var(--text1);letter-spacing:-1px}
+.lp-stat-label{font-size:12px;color:var(--text3);margin-top:2px}
+.lp-stat-note{text-align:center;font-size:12px;color:var(--text3);margin-top:-28px;margin-bottom:32px}
+
+/* CTA */
 .btn-cta{display:block;width:100%;background:var(--accent);color:#fff;border:none;padding:18px;border-radius:var(--radius);font-size:17px;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;text-align:center}
 .btn-cta:hover{background:var(--accent2)}
 .btn-cta:active{transform:scale(.98)}
 .lp-note{text-align:center;font-size:13px;color:var(--text3);margin-top:12px}
-
-/* LP Mockup card */
-.lp-mockup{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;margin-bottom:32px;pointer-events:none;position:relative;overflow:hidden}
-.lp-mockup::after{content:'';position:absolute;bottom:0;left:0;right:0;height:48px;background:linear-gradient(transparent,var(--bg))}
-.lp-mockup .mock-word{font-family:'Inter',sans-serif;font-size:32px;font-weight:900;letter-spacing:-.5px;text-align:center;margin-bottom:2px}
-.lp-mockup .mock-phonetic{font-size:13px;color:var(--text3);text-align:center;margin-bottom:14px}
-.lp-mockup .mock-parts{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:12px}
-.lp-mockup .mock-oneliner{font-size:15px;font-weight:700;text-align:center;line-height:1.5;padding:10px 0;border-top:1px solid var(--border)}
-
-/* LP Feature strip */
-.lp-features{display:flex;gap:8px;margin:32px 0;flex-wrap:wrap;justify-content:center}
-.lp-feat{flex:1;min-width:110px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 10px;text-align:center}
-.lp-feat-icon{font-size:24px;margin-bottom:6px}
-.lp-feat-label{font-size:12px;font-weight:700;color:var(--text1);line-height:1.4}
-.lp-feat-sub{font-size:11px;color:var(--text3);margin-top:2px}
-
-/* LP Stats */
-.lp-stats{display:flex;justify-content:center;gap:0;margin:32px 0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 0;overflow:hidden}
-.lp-stat{flex:1;text-align:center;border-right:1px solid var(--border)}
-.lp-stat:last-child{border-right:none}
-.lp-stat-num{font-family:'Inter',sans-serif;font-size:28px;font-weight:900;color:var(--accent);letter-spacing:-1px}
-.lp-stat-label{font-size:12px;color:var(--text2);margin-top:2px}
-
-/* LP Philosophy */
-.lp-philosophy{margin:40px 0;padding:32px 24px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius)}
-.lp-ph-eyebrow{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase}
-.lp-ph-hook{font-size:20px;font-weight:900;line-height:1.4;margin-bottom:16px}
-.lp-ph-body{font-size:15px;line-height:1.8;color:var(--text2);margin-bottom:16px}
-.lp-ph-body strong{color:var(--text1)}
-.lp-ph-quote{border-left:3px solid var(--gold);padding:12px 16px;margin:16px 0;font-size:15px;font-weight:600;line-height:1.6;color:var(--text1);background:var(--gold-soft);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
-
-/* LP Steps */
-.lp-steps{margin:40px 0}
-.lp-steps-title{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:20px}
-.lp-step{display:flex;gap:16px;margin-bottom:16px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
-.lp-step-no{font-family:'Inter',sans-serif;font-size:28px;font-weight:900;color:var(--accent);opacity:.3;flex-shrink:0;line-height:1}
-.lp-step-body h3{font-size:16px;font-weight:800;margin-bottom:4px}
-.lp-step-body p{font-size:14px;color:var(--text2);line-height:1.6}
-
-/* LP Live demo */
-.lp-live{margin:40px 0;text-align:center}
-.lp-live-label{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-.lp-live-sub{font-size:14px;color:var(--text2);margin-bottom:20px}
-
-/* LP Tree (kept for mockup) */
-.lp-tree{display:flex;flex-direction:column;gap:6px;margin-top:12px}
-.lp-tree-item{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--surface)}
-.lp-tree-prefix{font-weight:800;color:var(--prefix);min-width:44px;text-align:right;font-size:14px}
-.lp-tree-plus{color:var(--text3);font-size:12px}
-.lp-tree-root{font-weight:800;color:var(--root);font-size:14px}
-.lp-tree-arrow{color:var(--text3);font-size:12px}
-.lp-tree-word{font-weight:700;font-size:14px}
-.lp-tree-ja{color:var(--text2);font-size:12px;margin-left:auto}
-
-/* LP Bottom CTA */
-.lp-bottom-cta{margin:40px 0;text-align:center}
-.lp-bottom-cta p{font-size:14px;color:var(--text2);margin-bottom:16px;line-height:1.6}
+.lp-closing{text-align:center;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:20px;margin-top:48px}
 
 /* ── ROOT SELECT ── */
 .root-select{padding:24px 0 40px}
@@ -291,54 +275,52 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 
 <!-- ═══════ SCREEN: LP ═══════ -->
 <div class="screen active" id="screenLp">
-<div class="container">
+<div class="container lp">
 
-  <!-- Hero -->
+  <!-- ── 1. HERO: 感情で掴む ── -->
   <div class="lp-hero">
-    <h1>記憶しない<br><span class="accent">英単語</span></h1>
-    <p class="sub">語根を1つ知るだけで、<br>8〜10語が<strong>芋づる式</strong>に読める。</p>
-
-    <!-- Mockup card -->
-    <div class="lp-mockup">
-      <div class="mock-word">produce</div>
-      <div class="mock-phonetic">/prəˈdjuːs/</div>
-      <div class="mock-parts">
-        <div class="etym-part prefix"><div class="etym-part-name">pro</div><div class="etym-part-meaning">前へ</div></div>
-        <span class="etym-plus">+</span>
-        <div class="etym-part root"><div class="etym-part-name">duce</div><div class="etym-part-meaning">導く</div></div>
-      </div>
-      <div class="mock-oneliner">前へ導き出す → 生み出す</div>
+    <h1>記憶しない英単語</h1>
+    <div class="lp-headline">
+      覚えても、<em>忘れる</em>。<br>
+      それ、やり方が違う。
     </div>
-
-    <button class="btn-cta" onclick="startCardMode()">今日の単語を見る</button>
-    <p class="lp-note">登録不要・完全無料・毎回違う単語</p>
+    <p class="lp-sub">
+      単語帳を閉じた瞬間に消える記憶に、<br>
+      もう時間を使わなくていい。
+    </p>
   </div>
 
-  <!-- Feature strip -->
-  <div class="lp-features">
-    <div class="lp-feat">
-      <div class="lp-feat-icon">🧩</div>
-      <div class="lp-feat-label">語根で芋づる式</div>
-      <div class="lp-feat-sub">丸暗記ゼロ</div>
+  <!-- ── 2. PRODUCT = HERO: 実物を見せる ── -->
+  <div class="lp-demo-card">
+    <div class="lp-demo-word">produce</div>
+    <div class="lp-demo-phonetic">/prəˈdjuːs/</div>
+    <div class="etym-blocks">
+      <div class="etym-part prefix"><div class="etym-part-name">pro</div><div class="etym-part-meaning">前へ</div></div>
+      <span class="etym-plus">+</span>
+      <div class="etym-part root"><div class="etym-part-name">duce</div><div class="etym-part-meaning">導く</div></div>
     </div>
-    <div class="lp-feat">
-      <div class="lp-feat-icon">🔊</div>
-      <div class="lp-feat-label">発音つき</div>
-      <div class="lp-feat-sub">全220語</div>
-    </div>
-    <div class="lp-feat">
-      <div class="lp-feat-icon">🧠</div>
-      <div class="lp-feat-label">認知言語学</div>
-      <div class="lp-feat-sub">イメージで理解</div>
-    </div>
-    <div class="lp-feat">
-      <div class="lp-feat-icon">🎯</div>
-      <div class="lp-feat-label">TOEIC頻出</div>
-      <div class="lp-feat-sub">実用語のみ</div>
-    </div>
+    <div class="lp-demo-oneliner">前へ導き出す → 生み出す</div>
   </div>
 
-  <!-- Stats -->
+  <button class="btn-cta" onclick="startCardMode()">今日の単語を見る</button>
+  <p class="lp-note">登録不要 · 無料 · 開くたびに違う単語</p>
+
+  <!-- ── 3. CASCADE: 1つ知れば、8つ読める ── -->
+  <div class="lp-insight">
+    <div class="lp-insight-big">語根を<em>1つ</em>知るだけで、<br>8語が読める。</div>
+    <p class="lp-insight-body">暗記じゃない。分解して、理解する。<br>理解したものは、忘れない。</p>
+  </div>
+
+  <div class="lp-cascade">
+    <div class="lp-cascade-head">
+      <div class="root-big">duct</div>
+      <div class="root-meaning">= 導く（ラテン語）</div>
+    </div>
+    <div class="lp-cascade-list" id="lpTree"></div>
+    <div class="lp-cascade-footer">語根1つで、全部つながる。</div>
+  </div>
+
+  <!-- ── 4. STATS: 数字で信頼 ── -->
   <div class="lp-stats">
     <div class="lp-stat">
       <div class="lp-stat-num">30</div>
@@ -353,77 +335,12 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
       <div class="lp-stat-label">出題形式</div>
     </div>
   </div>
-  <p style="text-align:center;font-size:12px;color:var(--text3);margin-top:-20px;margin-bottom:20px">語根・単語は継続的に追加しています</p>
+  <p class="lp-stat-note">語根・単語は毎週追加中</p>
 
-  <!-- Philosophy -->
-  <div class="lp-philosophy">
-    <div class="lp-ph-eyebrow">Why it works</div>
-    <div class="lp-ph-hook">「覚えても忘れる」の<br>正体を知っていますか？</div>
-    <p class="lp-ph-body">
-      単語帳で覚えた単語を、1週間後にいくつ覚えていますか？<br>
-      <strong>エビングハウスの忘却曲線</strong>によれば、丸暗記した情報の約75%は1週間で消えます。
-    </p>
-    <p class="lp-ph-body">
-      でも、<strong>「なぜそう言うのか」を理解した知識</strong>は違います。
-      語源や接頭辞の意味を掴めば、それは暗記ではなく<strong>理解</strong>。
-      理解は忘却曲線の外にあります。
-    </p>
-    <div class="lp-ph-quote">
-      「duct = 導く」を知っていれば、<br>
-      produce, reduce, conduct, introduce...<br>
-      すべて「なるほど」で繋がる。
-    </div>
-    <p class="lp-ph-body">
-      <strong>30個の語根</strong>さえ理解すれば、<strong>220語が芋づる式</strong>に読めるようになります。
-      これが「記憶しない」英単語学習の正体です。
-    </p>
-  </div>
-
-  <!-- How It Works -->
-  <div class="lp-steps">
-    <div class="lp-steps-title">How it works</div>
-    <div class="lp-step">
-      <div class="lp-step-no">01</div>
-      <div class="lp-step-body">
-        <h3>カードを見る</h3>
-        <p>開くたびにランダムな単語が1枚。語根の分解と記憶フックで、直感的に理解できる。</p>
-      </div>
-    </div>
-    <div class="lp-step">
-      <div class="lp-step-no">02</div>
-      <div class="lp-step-body">
-        <h3>次の単語へ</h3>
-        <p>タップひとつで次の単語。30語根×8語が毎回ランダムで飽きない。通勤中でも、寝る前でも。</p>
-      </div>
-    </div>
-    <div class="lp-step">
-      <div class="lp-step-no">03</div>
-      <div class="lp-step-body">
-        <h3>深く学ぶ（オプション）</h3>
-        <p>気になった語根があればクイズモードへ。英→日、穴埋め、コロケーションなど5形式で定着させる。</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Live demo: show one actual tree -->
-  <div class="lp-live">
-    <div class="lp-live-label">Try it</div>
-    <p class="lp-live-sub">語根1つで、こんなに広がる</p>
-  </div>
-  <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px">
-    <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
-      <span style="font-size:28px;font-weight:900;color:var(--root)">duct</span>
-      <span style="font-size:14px;color:var(--text2)">= 導く</span>
-    </div>
-    <div class="lp-tree" id="lpTree"></div>
-  </div>
-
-  <!-- Bottom CTA -->
-  <div class="lp-bottom-cta">
-    <p>開くたびに、新しい単語と出会う。<br>今日は何が出るか、見てみよう。</p>
-    <button class="btn-cta" onclick="startCardMode()">無料で始める</button>
-    <p class="lp-note">登録不要・広告なし</p>
-  </div>
+  <!-- ── 5. CLOSING: 一言で閉じる ── -->
+  <p class="lp-closing">開くたびに、違う単語。<br>覚えようとしなくていい。</p>
+  <button class="btn-cta" onclick="startCardMode()">無料ではじめる</button>
+  <p class="lp-note">広告なし · ずっと無料</p>
 
   <div class="footer">
     <a href="/">ListenUp（リスニング）</a> ｜ <a href="/ranking/">サービス比較</a><br>
@@ -509,13 +426,13 @@ const LP_TREE = [
 function renderLpTree(){
   const el = document.getElementById('lpTree');
   el.innerHTML = LP_TREE.map(t => `
-    <div class="lp-tree-item">
-      <span class="lp-tree-prefix">${t.pre}</span>
-      <span class="lp-tree-plus">+</span>
-      <span class="lp-tree-root">${t.root}</span>
-      <span class="lp-tree-arrow">→</span>
-      <span class="lp-tree-word">${t.word}</span>
-      <span class="lp-tree-ja">${t.ja}</span>
+    <div class="lp-cascade-item">
+      <span class="lp-ci-prefix">${t.pre}</span>
+      <span class="lp-ci-plus">+</span>
+      <span class="lp-ci-root">${t.root}</span>
+      <span class="lp-ci-arrow">=</span>
+      <span class="lp-ci-word">${t.word}</span>
+      <span class="lp-ci-ja">${t.ja}</span>
     </div>`).join('');
 }
 
