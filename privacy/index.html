@@ -230,8 +230,9 @@ a:hover { color: var(--primary-light); }
       <h2>2. 収集する個人情報</h2>
       <p>本サービスでは、以下の個人情報・データを収集することがあります。</p>
       <ul>
-        <li>メールアドレス（ニュースレター登録時）</li>
+        <li>メールアドレス（ニュースレター登録時、またはカスタムアプリ制作相談フォーム送信時）</li>
         <li>年代・TOEICスコア（ニュースレター登録時に任意入力）</li>
+        <li>お名前・英語レベル・学習課題・ご予算の目安（カスタムアプリ制作相談フォーム送信時）：Google フォーム（Google LLC）のサーバーに保存されます</li>
         <li>クイズの学習履歴（正解率・弱点分野・連続学習日数など）：ブラウザのローカルストレージに保存。ニュースレター登録後はFirebase（Google LLC）のサーバーにも保存されます</li>
         <li>学習行動データ（正解率・難易度進捗・連続学習日数など）：Google Analytics 4（GA4）を通じて匿名で収集</li>
       </ul>
@@ -243,6 +244,7 @@ a:hover { color: var(--primary-light); }
       <ul>
         <li>英語学習に関するニュースレター・学習コンテンツの配信</li>
         <li>サービスに関する重要なお知らせの送信</li>
+        <li>カスタム英語学習アプリの制作相談への対応・ご提案の送信</li>
         <li>学習行動データ（正解率・難易度推移など）の統計的な分析・サービス改善</li>
         <li>匿名化・統計処理した学習傾向データの第三者提供事業（個人を特定できない形での提供。詳細は「4-2. 学習データの統計提供」をご確認ください）</li>
       </ul>
@@ -326,6 +328,12 @@ a:hover { color: var(--primary-light); }
             <td style="padding:10px;border:1px solid var(--border)">Firebase / Firestore（Google LLC）</td>
             <td style="padding:10px;border:1px solid var(--border)">匿名ID・学習行動データ</td>
             <td style="padding:10px;border:1px solid var(--border)">学習データの保存・分析</td>
+            <td style="padding:10px;border:1px solid var(--border)">削除申請: <a href="mailto:ichieigo7@gmail.com">メール</a></td>
+          </tr>
+          <tr>
+            <td style="padding:10px;border:1px solid var(--border)">Google フォーム（Google LLC）</td>
+            <td style="padding:10px;border:1px solid var(--border)">メールアドレス・お名前・相談内容</td>
+            <td style="padding:10px;border:1px solid var(--border)">カスタムアプリ制作相談の受付</td>
             <td style="padding:10px;border:1px solid var(--border)">削除申請: <a href="mailto:ichieigo7@gmail.com">メール</a></td>
           </tr>
           <tr>
