@@ -1,767 +1,1802 @@
 [
   {
     "id": "R001",
-    "rule": "be動詞の人称一致",
-    "rule_en": "Subject-Verb Agreement with Be",
-    "diff": "lv1",
-    "axes": ["form"],
-    "tags": ["eiken4"],
-    "cefr": "A1",
-    "pattern": "I + am / You/We/They + are / He/She/It + is",
-    "correct_example": "She is a teacher.",
-    "common_errors": [
-      {"wrong": "She are a teacher.", "why": "三人称単数にareは不可"},
-      {"wrong": "She am a teacher.", "why": "amはIのみ"}
+    "rule": "accept と except の区別",
+    "rule_en": "Accept vs. Except",
+    "diff": "lv3",
+    "axes": [
+      "trap",
+      "vocab"
     ],
-    "key_signal": "主語の人称と数でbe動詞を選ぶ",
-    "sources": ["Purdue OWL: Making Subjects and Verbs Agree", "Cambridge Grammar: Verbs"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "accept = 動詞（受け取る・同意する）/ except = 前置詞（〜を除いて）",
+    "correct_example": "He accepted their praise graciously. / Everyone went to the game except Alyson.",
+    "common_errors": [
+      {
+        "wrong": "Everyone went to the game accept Alyson.",
+        "why": "acceptは動詞であり前置詞として使えない"
+      },
+      {
+        "wrong": "She excepted the invitation.",
+        "why": "exceptは前置詞であり動詞として使う場合は意味が異なる"
+      }
+    ],
+    "key_signal": "後に名詞が続いて「〜を除いて」の意味ならexcept、「受け取る・同意する」の動詞ならaccept",
+    "sources": [
+      "Purdue OWL: Spelling: Common Words that Sound Alike"
+    ]
   },
   {
     "id": "R002",
-    "rule": "一般動詞の三単現",
-    "rule_en": "Third Person Singular -s",
-    "diff": "lv1",
-    "axes": ["form"],
-    "tags": ["eiken4"],
-    "cefr": "A1",
-    "pattern": "He/She/It + V-s / I/You/We/They + V(原形)",
-    "correct_example": "He plays tennis every day.",
-    "common_errors": [
-      {"wrong": "He play tennis every day.", "why": "三人称単数にはsが必要"},
-      {"wrong": "They plays tennis.", "why": "複数主語にsは不要"}
+    "rule": "affect と effect の区別（RAVEN）",
+    "rule_en": "Affect vs. Effect",
+    "diff": "lv3",
+    "axes": [
+      "trap",
+      "vocab"
     ],
-    "key_signal": "主語が三人称単数かどうか",
-    "sources": ["Purdue OWL: Active Verb Tenses", "British Council: A1 Grammar"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "affect = 動詞（影響する）/ effect = 名詞（結果・影響）/ effect = 動詞（もたらす）は例外",
+    "correct_example": "Will lack of sleep affect your game? / Will lack of sleep have an effect on your game?",
+    "common_errors": [
+      {
+        "wrong": "Will lack of sleep effect your game?",
+        "why": "effectを動詞として使う場合は「もたらす」の意味で、「影響する」ではない"
+      },
+      {
+        "wrong": "The affect of stress is significant.",
+        "why": "affectは動詞なので名詞位置には使えない"
+      }
+    ],
+    "key_signal": "RAVEN: Remember Affect is a Verb and Effect is a Noun",
+    "sources": [
+      "Purdue OWL: Spelling: Common Words that Sound Alike"
+    ]
   },
   {
     "id": "R003",
-    "rule": "There is / There are",
-    "rule_en": "There is/are (Existential)",
-    "diff": "lv1",
-    "axes": ["form", "trap"],
-    "tags": ["eiken4"],
-    "cefr": "A1",
-    "pattern": "There is + 単数名詞 / There are + 複数名詞",
-    "correct_example": "There are many books on the shelf.",
-    "common_errors": [
-      {"wrong": "There is many books.", "why": "複数名詞にはareが必要"},
-      {"wrong": "There have many books.", "why": "存在を表すのはThere is/are"}
+    "rule": "advise と advice の区別",
+    "rule_en": "Advise vs. Advice",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "vocab"
     ],
-    "key_signal": "後続の名詞が単数か複数か",
-    "sources": ["Cambridge Grammar: Nouns, pronouns and determiners"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic"
+    ],
+    "cefr": "A2",
+    "pattern": "advise = 動詞（勧める・助言する）/ advice = 名詞（助言・意見）",
+    "correct_example": "I advise you to be cautious. / I'd like to ask for your advice on this matter.",
+    "common_errors": [
+      {
+        "wrong": "Can you advice me?",
+        "why": "adviceは名詞なので動詞位置には使えない"
+      },
+      {
+        "wrong": "She gave me an advise.",
+        "why": "advise は動詞であり名詞ではない。名詞形は advice"
+      }
+    ],
+    "key_signal": "動詞ならadvise（末尾-ise）、名詞ならadvice（末尾-ice）",
+    "sources": [
+      "Purdue OWL: Spelling: Common Words that Sound Alike"
+    ]
   },
   {
     "id": "R004",
-    "rule": "一般動詞の疑問文",
-    "rule_en": "Yes/No Questions with Do/Does",
-    "diff": "lv1",
-    "axes": ["logic"],
-    "tags": ["eiken4"],
-    "cefr": "A1",
-    "pattern": "Do/Does + S + V(原形) ...?",
-    "correct_example": "Does she like coffee?",
-    "common_errors": [
-      {"wrong": "Does she likes coffee?", "why": "Doesの後は原形。sは不要"},
-      {"wrong": "Is she like coffee?", "why": "一般動詞の疑問文にbe動詞は使わない"}
+    "rule": "conscious と conscience の区別",
+    "rule_en": "Conscious vs. Conscience",
+    "diff": "lv3",
+    "axes": [
+      "trap",
+      "vocab"
     ],
-    "key_signal": "一般動詞 → Do/Does、be動詞 → Is/Are",
-    "sources": ["British Council: A1 Grammar", "Purdue OWL: Avoiding Common Errors"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "conscious = 形容詞（意識がある・気づいている）/ conscience = 名詞（良心）",
+    "correct_example": "Despite a head injury, the patient remained conscious. / Chris wouldn't cheat because his conscience wouldn't let him.",
+    "common_errors": [
+      {
+        "wrong": "His conscience was still conscious after surgery.",
+        "why": "conscious（形容詞）とconscience（名詞）の品詞と意味の混同"
+      },
+      {
+        "wrong": "She acted against her conscious.",
+        "why": "consciousは形容詞であり名詞として使えない。名詞はconscience"
+      }
+    ],
+    "key_signal": "「良心」の意味ならconscience（名詞）、「意識がある」ならconscious（形容詞）",
+    "sources": [
+      "Purdue OWL: Spelling: Common Words that Sound Alike"
+    ]
   },
   {
     "id": "R005",
-    "rule": "過去形（規則・不規則）",
-    "rule_en": "Simple Past Tense",
-    "diff": "lv1",
-    "axes": ["tense"],
-    "tags": ["eiken4"],
-    "cefr": "A2",
-    "pattern": "S + V-ed(規則) / S + V(不規則変化) + 過去の時間表現",
-    "correct_example": "I had breakfast this morning.",
-    "common_errors": [
-      {"wrong": "I have breakfast this morning.", "why": "this morningは過去→過去形"},
-      {"wrong": "I haved breakfast.", "why": "haveの過去形はhad（不規則）"}
+    "rule": "数字を単語で書く基準（1〜2語）",
+    "rule_en": "Writing Numbers: Spell out one or two word numbers",
+    "diff": "lv3",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "yesterday, last ~, ago, this morning → 過去形",
-    "sources": ["Purdue OWL: Active Verb Tenses", "Cambridge Grammar: Verbs"]
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "cefr": "B1",
+    "pattern": "1〜2語で表せる数字はスペルアウト、3語以上の数字は数字（アラビア数字）で書く",
+    "correct_example": "over two pounds / six million dollars / after 126 days / only $31.50",
+    "common_errors": [
+      {
+        "wrong": "after 31 years",
+        "why": "thirty-oneは2語なのでスペルアウトが原則"
+      },
+      {
+        "wrong": "one hundred twenty six days",
+        "why": "126のように3語以上になる場合は数字で表す"
+      }
+    ],
+    "key_signal": "その数字を英語で書いたとき何語になるか確認し、1〜2語ならスペルアウト",
+    "sources": [
+      "Purdue OWL: Writing Numbers"
+    ]
   },
   {
     "id": "R006",
-    "rule": "未来形 will",
-    "rule_en": "Future with Will",
-    "diff": "lv1",
-    "axes": ["tense"],
-    "tags": ["eiken4"],
-    "cefr": "A2",
-    "pattern": "S + will + V(原形)",
-    "correct_example": "I will call you tomorrow.",
-    "common_errors": [
-      {"wrong": "I will calls you tomorrow.", "why": "willの後は必ず原形"},
-      {"wrong": "I will to call you.", "why": "will + 原形。toは不要"}
+    "rule": "文頭の数字は必ずスペルアウト",
+    "rule_en": "Write out numbers beginning sentences",
+    "diff": "lv3",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "tomorrow, next ~, soon → will",
-    "sources": ["Purdue OWL: Active Verb Tenses"]
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "cefr": "B1",
+    "pattern": "文の先頭に数字を置く場合は必ずスペルアウト（アラビア数字は不可）",
+    "correct_example": "Six percent of the group failed.",
+    "common_errors": [
+      {
+        "wrong": "6% of the group failed.",
+        "why": "文頭にアラビア数字・記号を置くことはできない"
+      }
+    ],
+    "key_signal": "文の最初の単語が数字になる場合は必ずスペルアウトする",
+    "sources": [
+      "Purdue OWL: Writing Numbers"
+    ]
   },
   {
     "id": "R007",
-    "rule": "現在進行形",
-    "rule_en": "Present Continuous",
-    "diff": "lv1",
-    "axes": ["tense"],
-    "tags": ["eiken4"],
-    "cefr": "A1",
-    "pattern": "S + am/is/are + V-ing",
-    "correct_example": "The children are playing in the garden now.",
-    "common_errors": [
-      {"wrong": "The children playing now.", "why": "be動詞が必要"},
-      {"wrong": "The children is playing.", "why": "複数主語→are"}
+    "rule": "同一文中の数字の一貫性",
+    "rule_en": "Numbers in series should be consistent",
+    "diff": "lv4",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "now, right now, at the moment → 進行形",
-    "sources": ["Purdue OWL: Active Verb Tenses", "British Council: A1 Grammar"]
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "cefr": "B2",
+    "pattern": "同一文または同一文脈内の数字は、アラビア数字かスペルアウトかを統一する",
+    "correct_example": "two apples, six oranges, and three bananas",
+    "common_errors": [
+      {
+        "wrong": "two apples, 6 oranges, and 3 bananas",
+        "why": "同じ文脈で数字の表記形式が混在している"
+      }
+    ],
+    "key_signal": "シリーズや統計の数字は表記スタイルを揃える",
+    "sources": [
+      "Purdue OWL: Writing Numbers"
+    ]
   },
   {
     "id": "R008",
-    "rule": "不定詞の形容詞的用法",
-    "rule_en": "Infinitive as Adjective",
+    "rule": "形容詞の基本：名詞を修飾する",
+    "rule_en": "Adjectives modify nouns",
     "diff": "lv1",
-    "axes": ["logic"],
-    "tags": ["eiken4"],
-    "cefr": "A2",
-    "pattern": "something/nothing/anything + to + V(原形)",
-    "correct_example": "I want something to drink.",
-    "common_errors": [
-      {"wrong": "I want something for drink.", "why": "forではなくto+動詞原形"},
-      {"wrong": "I want something drinking.", "why": "-ingではなくto+原形"}
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "-thing/-one/-where + to + 動詞原形",
-    "sources": ["Cambridge Grammar: Verbs"]
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "cefr": "A1",
+    "pattern": "形容詞は名詞を修飾し、What kind? / Which? / How many? という問いに答える",
+    "correct_example": "I ate an enormous meal. / The tall girl is riding her bike. / Fifteen students passed the exam.",
+    "common_errors": [
+      {
+        "wrong": "She ate her lunch quick.",
+        "why": "quickは形容詞なので動詞(ate)を修飾できない。副詞quicklyを使う必要がある"
+      },
+      {
+        "wrong": "He is a quietly man.",
+        "why": "quietlyは副詞なので名詞(man)を修飾できない。形容詞quietを使う"
+      }
+    ],
+    "key_signal": "修飾対象が名詞なら形容詞、動詞・形容詞・副詞なら副詞を使う",
+    "sources": [
+      "Purdue OWL: Adjective or Adverb",
+      "Purdue OWL: Adjective or Adverb?"
+    ]
   },
   {
     "id": "R009",
-    "rule": "句動詞 look up / look for / look at",
-    "rule_en": "Phrasal Verbs with Look",
+    "rule": "副詞の基本：動詞・形容詞・副詞を修飾する",
+    "rule_en": "Adverbs modify verbs, adjectives, and other adverbs",
     "diff": "lv1",
-    "axes": ["vocab"],
-    "tags": ["eiken4"],
-    "cefr": "A2",
-    "pattern": "look up = 調べる / look for = 探す / look at = 見る",
-    "correct_example": "Please look up this word in the dictionary.",
-    "common_errors": [
-      {"wrong": "Please look for this word in the dictionary.", "why": "look for=探す、look up=調べる"},
-      {"wrong": "Please look this word.", "why": "前置詞/副詞が必要"}
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "動詞+前置詞/副詞の組み合わせで意味が変わる",
-    "sources": ["Cambridge Grammar: Prepositions and particles"]
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "副詞は動詞・形容詞・他の副詞を修飾する。多くの副詞は形容詞に-lyを付けて形成される",
+    "correct_example": "Richard talks carelessly. / Priya was extremely happy.",
+    "common_errors": [
+      {
+        "wrong": "I have a happily dog.",
+        "why": "happilyは副詞なので名詞(dog)を修飾できない。形容詞happyを使う"
+      },
+      {
+        "wrong": "She ate her lunch quick.",
+        "why": "quickは形容詞。動詞を修飾するには副詞quicklyが必要"
+      }
+    ],
+    "key_signal": "動詞を修飾しているかどうかを確認し、副詞が必要かチェックする",
+    "sources": [
+      "Purdue OWL: Adjective or Adverb?"
+    ]
   },
   {
     "id": "R010",
-    "rule": "be good at",
-    "rule_en": "Be Good At + Noun/Gerund",
-    "diff": "lv1",
-    "axes": ["vocab"],
-    "tags": ["eiken4"],
-    "cefr": "A2",
-    "pattern": "be good/bad/interested/surprised + at/in/by + N/-ing",
-    "correct_example": "He is good at math.",
-    "common_errors": [
-      {"wrong": "He is good in math.", "why": "good at（得意）。inではなくat"},
-      {"wrong": "He is good for math.", "why": "good for=～に良い。good at=得意"}
+    "rule": "be動詞・感覚動詞の後は形容詞",
+    "rule_en": "Adjective follows be-verbs and sense verbs",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "trap"
     ],
-    "key_signal": "形容詞+前置詞の組み合わせは固定",
-    "sources": ["Cambridge Grammar: Adjectives and adverbs"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "be動詞および feel/taste/smell/sound/look/appear/seem の後に来て名詞を修飾するのは形容詞",
+    "correct_example": "I was nervous. / Sharon's cough sounds bad. / Castor oil tastes awful. / The ocean air smells fresh.",
+    "common_errors": [
+      {
+        "wrong": "The dog smells badly.",
+        "why": "badlyは副詞で「においをかぐのが下手」という意味になる。外見・感覚を表すsmellの後は形容詞badが正しい"
+      },
+      {
+        "wrong": "She seems unhappily today.",
+        "why": "seemの後は形容詞が来るのでunhappyが正しい"
+      }
+    ],
+    "key_signal": "feel/taste/smell/sound/look/appear/seem/be の後に主語の状態を述べるなら形容詞",
+    "sources": [
+      "Purdue OWL: Adjective or Adverb",
+      "Purdue OWL: Avoiding Common Errors",
+      "Purdue OWL: Adjective or Adverb?"
+    ]
   },
   {
     "id": "R011",
-    "rule": "現在完了（継続）",
-    "rule_en": "Present Perfect (Duration)",
-    "diff": "lv2",
-    "axes": ["tense"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "A2/B1",
-    "pattern": "S + have/has + pp + since/for ...",
-    "correct_example": "She has lived in Tokyo since 2020.",
-    "common_errors": [
-      {"wrong": "She lived in Tokyo since 2020.", "why": "sinceは現在完了のシグナル。過去形は不可"},
-      {"wrong": "She is living in Tokyo since 2020.", "why": "sinceと進行形の組み合わせは不自然"}
+    "rule": "bad と badly の使い分け",
+    "rule_en": "Bad or Badly?",
+    "diff": "lv3",
+    "axes": [
+      "trap",
+      "vocab"
     ],
-    "key_signal": "since + 時点 / for + 期間 → 現在完了",
-    "sources": ["Purdue OWL: Verb Tenses", "Cambridge Grammar: Verbs"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "感覚動詞(feel/smell等)の後は形容詞bad。動作動詞の後は副詞badly",
+    "correct_example": "I feel bad. (体調が悪い) / The dog smells bad. (犬が臭い) / She plays football badly. (下手にプレーする)",
+    "common_errors": [
+      {
+        "wrong": "I feel badly.",
+        "why": "「触覚機能が低下している」という意味になり、「気分が悪い」の意味にならない"
+      },
+      {
+        "wrong": "The dog smells badly.",
+        "why": "「犬のにおいをかぐ能力が低い」という意味になる"
+      }
+    ],
+    "key_signal": "feelの後に体調・感情を述べるなら形容詞bad。動作の質を述べるなら副詞badly",
+    "sources": [
+      "Purdue OWL: Avoiding Common Errors"
+    ]
   },
   {
     "id": "R012",
-    "rule": "現在完了（経験）",
-    "rule_en": "Present Perfect (Experience)",
-    "diff": "lv2",
-    "axes": ["tense"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "A2/B1",
-    "pattern": "S + have/has + (ever/never) + pp",
-    "correct_example": "I have never been to Kyoto.",
-    "common_errors": [
-      {"wrong": "I never went to Kyoto.", "why": "経験の否定はhave never + pp"},
-      {"wrong": "I have never went to Kyoto.", "why": "have + 過去分詞。wentは不可"}
+    "rule": "good と well の使い分け",
+    "rule_en": "Good or Well?",
+    "diff": "lv3",
+    "axes": [
+      "trap",
+      "vocab"
     ],
-    "key_signal": "ever/never/before/once/twice → 現在完了（経験）",
-    "sources": ["Purdue OWL: Verb Tenses"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "goodは形容詞（名詞・感覚動詞後）、wellは副詞（動作動詞後）",
+    "correct_example": "My mother looks good. / I feel really good today. / I did well on my exam. / She plays tennis well.",
+    "common_errors": [
+      {
+        "wrong": "She did good on her exam.",
+        "why": "doは動作動詞なので副詞wellが必要"
+      },
+      {
+        "wrong": "I feel well today. (健康の意味で)",
+        "why": "感覚動詞feelの後に健康・幸福を表す場合は形容詞goodが自然"
+      }
+    ],
+    "key_signal": "動作動詞（do/play等）の後はwell、感覚動詞・be動詞の後はgood",
+    "sources": [
+      "Purdue OWL: Avoiding Common Errors"
+    ]
   },
   {
     "id": "R013",
-    "rule": "過去完了",
-    "rule_en": "Past Perfect",
-    "diff": "lv2",
-    "axes": ["tense"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "B1",
-    "pattern": "S + had + pp (過去のある時点より前の出来事)",
-    "correct_example": "When I arrived, the movie had already started.",
-    "common_errors": [
-      {"wrong": "When I arrived, the movie already started.", "why": "arrivedより前→過去完了had started"},
-      {"wrong": "When I arrived, the movie has started.", "why": "過去の文脈でhas（現在完了）は不可"}
+    "rule": "sure と surely の使い分け",
+    "rule_en": "Sure or Surely?",
+    "diff": "lv3",
+    "axes": [
+      "form",
+      "vocab"
     ],
-    "key_signal": "過去の文中で「さらに前の出来事」→ had + pp",
-    "sources": ["Purdue OWL: Active Verb Tenses", "Cambridge Grammar: Verbs"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "sureは形容詞（名詞・主語を修飾）、surelyは副詞（動詞や文全体を修飾）",
+    "correct_example": "He is sure about his answer. / The Senator spoke out surely. / Surely, you're joking.",
+    "common_errors": [
+      {
+        "wrong": "He answered sure.",
+        "why": "動詞answeredを修飾するには副詞surelyが必要"
+      },
+      {
+        "wrong": "Surely he is surely correct.",
+        "why": "be動詞の後の述語は形容詞sureが正しい"
+      }
+    ],
+    "key_signal": "主語の状態を説明するならsure（形容詞）、動詞や文全体を修飾するならsurely（副詞）",
+    "sources": [
+      "Purdue OWL: Avoiding Common Errors"
+    ]
   },
   {
     "id": "R014",
-    "rule": "受動態",
-    "rule_en": "Passive Voice",
+    "rule": "可算名詞と不可算名詞：much vs. many",
+    "rule_en": "Much modifies uncountable nouns; Many modifies countable nouns",
     "diff": "lv2",
-    "axes": ["form"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "A2/B1",
-    "pattern": "S + be動詞 + pp (+ by 動作主)",
-    "correct_example": "This cake was made by my mother.",
-    "common_errors": [
-      {"wrong": "This cake was make by my mother.", "why": "be + 過去分詞。makeではなくmade"},
-      {"wrong": "This cake made by my mother.", "why": "be動詞が必要"}
+    "axes": [
+      "form",
+      "vocab"
     ],
-    "key_signal": "「～される」→ be + 過去分詞",
-    "sources": ["Purdue OWL: Passive Verbs"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "much + 不可算名詞 / many + 可算名詞",
+    "correct_example": "They have so much money in the bank. / Many Americans travel to Europe.",
+    "common_errors": [
+      {
+        "wrong": "She wears so much rings.",
+        "why": "ringsは可算名詞（複数形）なのでmanyが正しい"
+      },
+      {
+        "wrong": "You deserve many rest.",
+        "why": "restは不可算名詞なのでmuchが正しい"
+      }
+    ],
+    "key_signal": "名詞に数字をつけられるか試す。つけられれば可算名詞でmany、つけられなければ不可算名詞でmuch",
+    "sources": [
+      "Purdue OWL: How to Use Adjectives and Adverbs"
+    ]
   },
   {
     "id": "R015",
-    "rule": "不規則比較級",
-    "rule_en": "Irregular Comparatives",
-    "diff": "lv2",
-    "axes": ["form"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "A2",
-    "pattern": "good/well → better → best / bad/badly → worse → worst",
-    "correct_example": "He speaks English better than his brother.",
-    "common_errors": [
-      {"wrong": "He speaks English more good than his brother.", "why": "goodの比較級はbetter。more goodは不可"},
-      {"wrong": "He speaks English gooder.", "why": "不規則変化。-erは付かない"}
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "rule_en": "A versus An: based on phonetic quality",
+    "diff": "lv1",
+    "axes": [
+      "form",
+      "trap"
     ],
-    "key_signal": "good/well/bad/far/many/much は不規則変化",
-    "sources": ["Purdue OWL: How to Use Adjectives and Adverbs"]
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "cefr": "A1",
+    "pattern": "次の語が母音の音で始まるならan、子音の音で始まるならa（綴りではなく音で判断）",
+    "correct_example": "an apricot / an egg / an Indian / a cat / a dog / an honorable peace / a union / a unicorn",
+    "common_errors": [
+      {
+        "wrong": "a honest error",
+        "why": "honestの頭のhは発音されないため母音音で始まり、anが正しい"
+      },
+      {
+        "wrong": "an union",
+        "why": "unionの頭はyの音（子音）なのでaが正しい"
+      },
+      {
+        "wrong": "an one-legged man",
+        "why": "oneの頭はwの音（子音）なのでaが正しい"
+      }
+    ],
+    "key_signal": "綴りではなく発音で判断する。サイレントhの語はan、u/oが子音音で始まる語はa",
+    "sources": [
+      "Purdue OWL: Articles: A versus An"
+    ]
   },
   {
     "id": "R016",
-    "rule": "関係代名詞 who（主格）",
-    "rule_en": "Relative Pronoun: Who (Subject)",
+    "rule": "定冠詞 the と不定冠詞 a/an の使い分け",
+    "rule_en": "Definite article the vs. indefinite article a/an",
     "diff": "lv2",
-    "axes": ["logic"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "A2/B1",
-    "pattern": "先行詞(人) + who + V ...",
-    "correct_example": "The man who is standing over there is my uncle.",
-    "common_errors": [
-      {"wrong": "The man which is standing...", "why": "人にはwho。whichは物"},
-      {"wrong": "The man what is standing...", "why": "whatは関係代名詞として先行詞を取れない"}
+    "axes": [
+      "logic",
+      "vocab"
     ],
-    "key_signal": "人→who/whom/whose、物→which/that",
-    "sources": ["Purdue OWL: Relative Pronouns", "Purdue OWL: Defining vs. Non-Defining"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "the = 特定・既知のもの（定冠詞）/ a/an = 不特定・任意のもの（不定冠詞）",
+    "correct_example": "Let's read the book. (特定の本) / Let's read a book. (どれかの本) / I just saw the most popular movie of the year.",
+    "common_errors": [
+      {
+        "wrong": "Somebody call the policeman!",
+        "why": "特定の警官を指しているのでなければaが正しい"
+      },
+      {
+        "wrong": "I want to see a most popular movie.",
+        "why": "最上級で特定された1つのものにはtheが必要"
+      }
+    ],
+    "key_signal": "読者・話し手が同じものを指していると分かる（特定）ならthe、分からない（不特定）ならa/an",
+    "sources": [
+      "Purdue OWL: Using Articles"
+    ]
   },
   {
     "id": "R017",
-    "rule": "時・条件の副詞節では現在形",
-    "rule_en": "Present Tense in Time/Condition Clauses",
-    "diff": "lv2",
-    "axes": ["tense", "trap"],
-    "tags": ["eiken3", "juken", "toeic"],
-    "cefr": "B1",
-    "pattern": "If/When/Before/After/Until + S + V(現在形), S + will + V",
-    "correct_example": "If it rains tomorrow, we will stay home.",
-    "common_errors": [
-      {"wrong": "If it will rain tomorrow, we will stay home.", "why": "if節でwillは使わない"},
-      {"wrong": "If it rained tomorrow, we will stay home.", "why": "単なる条件なら現在形。仮定法は別"}
+    "rule": "同格語（アポジティブ）の基本",
+    "rule_en": "Appositives: noun set beside another noun to explain or identify it",
+    "diff": "lv4",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "if/when/before/after/until の中は現在形（未来でも）",
-    "sources": ["Cambridge Grammar: Verbs", "BBC Learning English"]
+    "tags": [
+      "eiken2",
+      "eikenpre1",
+      "toeic"
+    ],
+    "cefr": "B2",
+    "pattern": "名詞または代名詞の直後（または直前）に置かれ、その名詞を説明・同定する名詞句",
+    "correct_example": "Your friend Bill is in trouble. / My brother's car, a sporty red convertible with bucket seats, is the envy of my friends.",
+    "common_errors": [
+      {
+        "wrong": "My brother's car a sporty red convertible is the envy of my friends.",
+        "why": "非制限的同格語（なくても意味が通る）にはコンマが必要"
+      },
+      {
+        "wrong": "The, president, John Kennedy, was known for his speeches.",
+        "why": "制限的同格語（ないと誰か分からない）にはコンマ不要"
+      }
+    ],
+    "key_signal": "同格語なしで文の意味が完結するならコンマあり（非制限）、なしでは不明確ならコンマなし（制限）",
+    "sources": [
+      "Purdue OWL: Appositives"
+    ]
   },
   {
     "id": "R018",
-    "rule": "使役動詞 make + O + 原形",
-    "rule_en": "Causative: Make + Object + Base Form",
-    "diff": "lv2",
-    "axes": ["trap"],
-    "tags": ["eiken3", "toeic", "juken"],
-    "cefr": "B1",
-    "pattern": "make + O + V(原形不定詞) ※toは不要",
-    "correct_example": "He made me write the report again.",
-    "common_errors": [
-      {"wrong": "He made me to write the report.", "why": "makeの後はto不要。原形"},
-      {"wrong": "He made me writing the report.", "why": "-ingではなく原形"}
+    "rule": "同格語のコンマ：制限的vs非制限的",
+    "rule_en": "Punctuation of appositives: restrictive vs. non-restrictive",
+    "diff": "lv4",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "make/let/have + O + 原形（toなし）",
-    "sources": ["Cambridge Grammar: Verbs"]
+    "tags": [
+      "eiken2",
+      "eikenpre1",
+      "toeic"
+    ],
+    "cefr": "B2",
+    "pattern": "同格語が文の意味に必須（制限的）→コンマなし / 同格語がなくても意味が通る（非制限的）→コンマあり",
+    "correct_example": "The popular US president John Kennedy was known for his speeches. (制限的) / John Kennedy, the popular US president, was known for his speeches. (非制限的)",
+    "common_errors": [
+      {
+        "wrong": "The popular US president, John Kennedy, was known for his speeches.",
+        "why": "「どの大統領か」を特定する情報なのでコンマは不要（制限的）"
+      },
+      {
+        "wrong": "John Kennedy the popular US president was known for his speeches.",
+        "why": "John Kennedyだけで特定できるためコンマが必要（非制限的）"
+      }
+    ],
+    "key_signal": "同格語を取り除いて文の意味が通るか・誰のことか分かるかを確認する",
+    "sources": [
+      "Purdue OWL: Appositives"
+    ]
   },
   {
     "id": "R019",
-    "rule": "look forward to + -ing",
-    "rule_en": "Look Forward To + Gerund",
+    "rule": "前置詞 on/at/in：時間の使い分け",
+    "rule_en": "Prepositions for Time: on, at, in",
     "diff": "lv2",
-    "axes": ["trap", "vocab"],
-    "tags": ["eiken3", "toeic"],
-    "cefr": "B1",
-    "pattern": "look forward to + V-ing (toは前置詞)",
-    "correct_example": "I'm looking forward to seeing you again.",
-    "common_errors": [
-      {"wrong": "I'm looking forward to see you.", "why": "toは前置詞→後ろは動名詞(-ing)"},
-      {"wrong": "I'm looking forward seeing you.", "why": "toが必要"}
+    "axes": [
+      "form",
+      "vocab"
     ],
-    "key_signal": "to + -ing になる表現: look forward to, be used to, object to",
-    "sources": ["Cambridge Grammar: Easily confused words"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "on + 曜日 / at + 時刻・noon・night・midnight / in + 午前午後・月・年・季節",
+    "correct_example": "I will see you on Monday. / My plane leaves at noon. / He likes to read in the afternoon. / The book was published in 1999. / The flowers will bloom in spring.",
+    "common_errors": [
+      {
+        "wrong": "I will see you in Monday.",
+        "why": "曜日にはonを使う"
+      },
+      {
+        "wrong": "The movie starts on 6 p.m.",
+        "why": "時刻にはatを使う"
+      },
+      {
+        "wrong": "The days are long on August.",
+        "why": "月にはinを使う"
+      }
+    ],
+    "key_signal": "曜日→on、時刻・noon/night→at、月・年・季節・時間帯→in",
+    "sources": [
+      "Purdue OWL: Prepositions"
+    ]
   },
   {
     "id": "R020",
-    "rule": "neither A nor B",
-    "rule_en": "Neither...Nor (Correlative Conjunctions)",
+    "rule": "前置詞 at/on/in：場所の使い分け",
+    "rule_en": "Prepositions of Location: at (point), on (surface), in (area/volume)",
     "diff": "lv2",
-    "axes": ["logic"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "B1",
-    "pattern": "Neither A nor B + V(Bに一致)",
-    "correct_example": "Neither Tom nor Jerry was at the party.",
-    "common_errors": [
-      {"wrong": "Neither Tom or Jerry was at the party.", "why": "neitherとペアになるのはnor"},
-      {"wrong": "Neither Tom nor Jerry were at the party.", "why": "動詞はBに一致。Jerryは単数→was"}
+    "axes": [
+      "logic",
+      "vocab"
     ],
-    "key_signal": "neither...nor / either...or / not only...but also",
-    "sources": ["Purdue OWL: Making Subjects and Verbs Agree"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "at = 点（一般的な場所・地点）/ on = 面（表面）/ in = 面積・体積（内部に含まれる）",
+    "correct_example": "My car is at the house. / There is a new roof on the house. / The house is in Tippecanoe county. / There is a wasp in the house.",
+    "common_errors": [
+      {
+        "wrong": "She is in the bus stop.",
+        "why": "バス停は点なのでatが正しい"
+      },
+      {
+        "wrong": "There is a book at the table.",
+        "why": "表面に置かれているのでonが正しい"
+      },
+      {
+        "wrong": "He lives on Japan.",
+        "why": "国・地域の内部を示すにはinが正しい"
+      }
+    ],
+    "key_signal": "点的な場所→at、表面→on、内部・区域→in",
+    "sources": [
+      "Purdue OWL: Prepositions of Location: At, In, On"
+    ]
   },
   {
     "id": "R021",
-    "rule": "不可算名詞は単数扱い",
-    "rule_en": "Uncountable Nouns: Singular Agreement",
-    "diff": "lv2",
-    "axes": ["form", "trap"],
-    "tags": ["eiken3", "toeic"],
-    "cefr": "B1",
-    "pattern": "news/information/advice/furniture + is (不可算→単数)",
-    "correct_example": "The news was very surprising.",
-    "common_errors": [
-      {"wrong": "The news were very surprising.", "why": "newsは不可算名詞→単数扱いwas"},
-      {"wrong": "The informations are useful.", "why": "informationに複数形はない"}
+    "rule": "前置詞 since/for/by/during：継続時間の表現",
+    "rule_en": "Prepositions for Extended Time: since, for, by, during, within",
+    "diff": "lv3",
+    "axes": [
+      "tense",
+      "vocab"
     ],
-    "key_signal": "news, information, advice, furniture, luggage → 不可算",
-    "sources": ["Purdue OWL: Count and Noncount Nouns"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "since + 起点 / for + 期間 / during + 期間名詞 / within + 期限",
+    "correct_example": "She has been gone since yesterday. / I'm going to Paris for two weeks. / I watch TV during the evening. / We must finish the project within a year.",
+    "common_errors": [
+      {
+        "wrong": "I have lived here for 2010.",
+        "why": "起点（年・日付）にはsinceを使う"
+      },
+      {
+        "wrong": "She has been gone during three hours.",
+        "why": "数値で表す期間にはforを使う。duringは名詞期間に使う"
+      }
+    ],
+    "key_signal": "起点（since）・数値期間（for）・名詞期間（during）・上限（within）で区別する",
+    "sources": [
+      "Purdue OWL: Prepositions"
+    ]
   },
   {
     "id": "R022",
-    "rule": "whether ... or not",
-    "rule_en": "Whether...Or Not",
-    "diff": "lv2",
-    "axes": ["logic"],
-    "tags": ["eiken3", "juken"],
-    "cefr": "B1",
-    "pattern": "whether + S + V + or not = ～かどうか",
-    "correct_example": "I don't know whether he will come or not.",
-    "common_errors": [
-      {"wrong": "I don't know what he will come or not.", "why": "「～かどうか」はwhether/if。whatは不可"},
-      {"wrong": "I don't know that he will come or not.", "why": "or notと共に使うのはwhether"}
+    "rule": "方向の前置詞 to/onto/into の使い分け",
+    "rule_en": "Prepositions of Direction: to, onto, into",
+    "diff": "lv3",
+    "axes": [
+      "logic",
+      "vocab"
     ],
-    "key_signal": "～かどうか → whether (or not) / if",
-    "sources": ["Cambridge Grammar: Words, sentences and clauses"]
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B1",
+    "pattern": "to = 目標への方向 / onto = 表面への移動 / into = 内部への移動",
+    "correct_example": "We flew from New York to Paris. / The frog jumped onto the lilypad. / The milk went into the glass.",
+    "common_errors": [
+      {
+        "wrong": "The cat jumped in the table.",
+        "why": "表面への移動なのでonto（またはon to）が正しい"
+      },
+      {
+        "wrong": "She walked to the room and into.",
+        "why": "intoは移動動詞と共に使い内部への方向を示す必要がある"
+      }
+    ],
+    "key_signal": "移動先が表面ならonto、内部ならinto、目標・目的地ならto",
+    "sources": [
+      "Purdue OWL: Prepositions of Direction: To, On (to), In (to)"
+    ]
   },
   {
     "id": "R023",
-    "rule": "do someone a favor",
-    "rule_en": "Do Someone a Favor (Fixed Expression)",
+    "rule": "空間的前置詞の一覧（above/below/between等）",
+    "rule_en": "Prepositions of Spatial Relationship",
     "diff": "lv2",
-    "axes": ["vocab"],
-    "tags": ["eiken3", "toeic"],
-    "cefr": "B1",
-    "pattern": "do + 人 + a favor = 頼みを聞く",
-    "correct_example": "Could you do me a favor?",
-    "common_errors": [
-      {"wrong": "Could you make me a favor?", "why": "makeではなくdo。定型表現"},
-      {"wrong": "Could you give me a favor?", "why": "giveではなくdo"}
+    "axes": [
+      "vocab"
     ],
-    "key_signal": "定型: do a favor, make a decision, take a break",
-    "sources": ["Cambridge Grammar: Easily confused words"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "above（上方）/below（下方）/between（2つの間）/among（3つ以上の間）/beside（隣）/behind（後ろ）/in front of（前）/near（近く）/through（通り抜けて）/toward（方向）",
+    "correct_example": "Write your name above the line. / She is between two trees. / He is among the trees. / She went through the door.",
+    "common_errors": [
+      {
+        "wrong": "He is between the trees. (3本以上)",
+        "why": "3つ以上の間にはamongを使う"
+      },
+      {
+        "wrong": "She is among two chairs.",
+        "why": "2つの間にはbetweenを使う"
+      }
+    ],
+    "key_signal": "2者の間→between、3者以上の間→among",
+    "sources": [
+      "Purdue OWL: Prepositions of Spatial Relationship"
+    ]
   },
   {
     "id": "R024",
-    "rule": "未来完了",
-    "rule_en": "Future Perfect",
-    "diff": "lv3",
-    "axes": ["tense"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B1/B2",
-    "pattern": "S + will have + pp + by + 未来の時点",
-    "correct_example": "By the time you arrive, I will have finished the work.",
-    "common_errors": [
-      {"wrong": "By the time you arrive, I will finish the work.", "why": "by+未来の時点→未来完了"},
-      {"wrong": "By the time you will arrive, I will have finished.", "why": "by the time節は現在形"}
+    "rule": "代名詞の数の一致",
+    "rule_en": "Pronouns must agree in number with their antecedents",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "by + 未来の期限 → will have + pp",
-    "sources": ["Purdue OWL: Active Verb Tenses"]
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "A2",
+    "pattern": "代名詞は先行詞（antecedent）と数（単数・複数）が一致しなければならない",
+    "correct_example": "The girls brought their umbrella.",
+    "common_errors": [
+      {
+        "wrong": "The girls brought her umbrella.",
+        "why": "先行詞the girls（複数）に対し単数代名詞herを使っている"
+      }
+    ],
+    "key_signal": "先行詞が複数ならtheir/them、単数ならhis/her/its/himを使う",
+    "sources": [
+      "Purdue OWL: Pronouns"
+    ]
   },
   {
     "id": "R025",
-    "rule": "過去完了進行形",
-    "rule_en": "Past Perfect Continuous",
-    "diff": "lv3",
-    "axes": ["tense"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B2",
-    "pattern": "S + had been + V-ing + for/since ... (過去のある時点まで継続)",
-    "correct_example": "She had been studying for three hours when I got home.",
-    "common_errors": [
-      {"wrong": "She has been studying for three hours when I got home.", "why": "過去の文脈→hadが必要"},
-      {"wrong": "She was studying for three hours when I got home.", "why": "forで期間を示す→完了進行形"}
+    "rule": "andで結ばれた複数の主語には複数形の動詞を使う",
+    "rule_en": "When a subject is composed of two or more nouns/pronouns connected by 'and', use a plural verb.",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "過去の時点まで動作が継続 → had been + -ing",
-    "sources": ["Purdue OWL: Active Verb Tenses"]
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "and"
+    ],
+    "cefr": "A2",
+    "pattern": "[Noun1] and [Noun2] + plural verb",
+    "correct_example": "She and her friends are at the fair.",
+    "common_errors": [
+      "She and her friends is at the fair."
+    ],
+    "key_signal": "and",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+    ]
   },
   {
     "id": "R026",
-    "rule": "品詞変換（動詞→名詞）",
-    "rule_en": "Word Formation: Verb to Noun",
-    "diff": "lv3",
-    "axes": ["form"],
-    "tags": ["eikenpre2", "toeic", "juken"],
-    "cefr": "B1/B2",
-    "pattern": "The ___ of ... → 名詞が必要（introduce→introduction, decide→decision）",
-    "correct_example": "The introduction of the new policy was announced yesterday.",
-    "common_errors": [
-      {"wrong": "The introduce of the new policy...", "why": "冠詞Theの後は名詞。動詞は不可"},
-      {"wrong": "The introducing of the new policy...", "why": "動名詞よりも派生名詞が自然"}
+    "rule": "orまたはnorで結ばれた複数の単数名詞・代名詞には単数形の動詞を使う",
+    "rule_en": "When two or more singular nouns/pronouns are connected by 'or' or 'nor', use a singular verb.",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "冠詞(The/A) + ___ + of → 名詞形が必要",
-    "sources": ["Purdue OWL: Adjective or Adverb", "Cambridge Grammar: Adjectives and adverbs"]
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor"
+    ],
+    "cefr": "B1",
+    "pattern": "[Singular Noun1] or/nor [Singular Noun2] + singular verb",
+    "correct_example": "The book or the pen is in the drawer.",
+    "common_errors": [
+      "The book or the pen are in the drawer."
+    ],
+    "key_signal": "or / nor",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+    ]
   },
   {
     "id": "R027",
-    "rule": "受動態の不定詞",
-    "rule_en": "Passive Infinitive: to be + pp",
+    "rule": "or/norで単数・複数の名詞が結ばれる場合、動詞は動詞に近い方の主語に一致させる",
+    "rule_en": "When a compound subject contains both a singular and a plural noun joined by 'or'/'nor', the verb agrees with the part of the subject nearer to the verb.",
     "diff": "lv3",
-    "axes": ["form"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B2",
-    "pattern": "need/want/expect + to be + pp",
-    "correct_example": "The report needs to be submitted by Friday.",
-    "common_errors": [
-      {"wrong": "The report needs to submit by Friday.", "why": "reportは提出される側→to be submitted"},
-      {"wrong": "The report needs submitted.", "why": "to beが必要"}
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "主語が動作を受ける側 → to be + pp",
-    "sources": ["Purdue OWL: Passive Verbs"]
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor",
+      "proximity"
+    ],
+    "cefr": "B1",
+    "pattern": "[Singular] or [Plural] + plural verb / [Plural] or [Singular] + singular verb",
+    "correct_example": "The boy or his friends run every day. / His friends or the boy runs every day.",
+    "common_errors": [
+      "The boy or his friends runs every day."
+    ],
+    "key_signal": "or / nor (mixed number subjects)",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+    ]
   },
   {
     "id": "R028",
-    "rule": "due to + 名詞",
-    "rule_en": "Due To vs Because",
-    "diff": "lv3",
-    "axes": ["vocab"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B1/B2",
-    "pattern": "due to + 名詞句 / because + S + V(節)",
-    "correct_example": "The meeting was postponed due to the heavy rain.",
-    "common_errors": [
-      {"wrong": "The meeting was postponed because the heavy rain.", "why": "becauseの後は節(S+V)が必要"},
-      {"wrong": "The meeting was postponed due to it rained.", "why": "due toの後は名詞句"}
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "rule_en": "'Doesn't' is used only with a singular subject; 'don't' is used only with a plural subject. Exception: 'I' and 'you' use 'don't'.",
+    "diff": "lv1",
+    "axes": [
+      "form",
+      "vocab"
     ],
-    "key_signal": "due to / owing to + 名詞 vs because / since + 節",
-    "sources": ["Cambridge Grammar: Easily confused words"]
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "cefr": "A2",
+    "pattern": "He/She/It + doesn't | They/We/I/You + don't",
+    "correct_example": "He doesn't like it. / They don't like it.",
+    "common_errors": [
+      "He don't like it.",
+      "They doesn't like it."
+    ],
+    "key_signal": "doesn't / don't",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+    ]
   },
   {
     "id": "R029",
-    "rule": "refrain from -ing",
-    "rule_en": "Refrain From + Gerund",
+    "rule": "主語と動詞の間に挿入句があっても、動詞は主語に一致させる",
+    "rule_en": "Do not be misled by a phrase between the subject and the verb; the verb agrees with the subject, not with a noun in the intervening phrase.",
     "diff": "lv3",
-    "axes": ["vocab"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B2",
-    "pattern": "refrain from + V-ing = ～を控える",
-    "correct_example": "Please refrain from using your phone during the meeting.",
-    "common_errors": [
-      {"wrong": "Please refrain to use your phone.", "why": "refrain from + -ing。toは不可"},
-      {"wrong": "Please refrain using your phone.", "why": "fromが必要"}
+    "axes": [
+      "form",
+      "logic"
     ],
-    "key_signal": "refrain from / prevent from / prohibit from + -ing",
-    "sources": ["Cambridge Grammar: Prepositions and particles"]
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "intervening phrase"
+    ],
+    "cefr": "B1",
+    "pattern": "[Subject] + [intervening phrase] + verb agreeing with subject",
+    "correct_example": "One of the boxes is open. / The team captain, as well as his players, is anxious.",
+    "common_errors": [
+      "One of the boxes are open.",
+      "The team captain, as well as his players, are anxious."
+    ],
+    "key_signal": "one of, as well as, including",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+    ]
   },
   {
     "id": "R030",
-    "rule": "関係副詞 where",
-    "rule_en": "Relative Adverb: Where",
+    "rule": "each, everyone, everybodyなどの不定代名詞は単数扱いで単数動詞を使う",
+    "rule_en": "Words such as each, each one, either, neither, everyone, everybody, anybody, anyone, nobody, somebody, someone, and no one are singular and require a singular verb.",
     "diff": "lv3",
-    "axes": ["logic"],
-    "tags": ["eikenpre2", "juken"],
-    "cefr": "B1/B2",
-    "pattern": "先行詞(場所) + where + S + V (= in/at which)",
-    "correct_example": "The city where I was born is very small.",
-    "common_errors": [
-      {"wrong": "The city which I was born is very small.", "why": "whichならin whichが必要。whereで代替"},
-      {"wrong": "The city what I was born.", "why": "whatは先行詞を取れない"}
+    "axes": [
+      "form"
     ],
-    "key_signal": "場所→where、時→when、理由→why",
-    "sources": ["Purdue OWL: Relative Pronouns"]
+    "tags": [
+      "grammar",
+      "verb",
+      "indefinite pronoun",
+      "singular"
+    ],
+    "cefr": "B1",
+    "pattern": "each/everyone/nobody/somebody + singular verb",
+    "correct_example": "Everyone is here. / Nobody knows the answer.",
+    "common_errors": [
+      "Everyone are here.",
+      "Nobody know the answer."
+    ],
+    "key_signal": "each, everyone, everybody, anyone, nobody, somebody, someone",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+    ]
   },
   {
     "id": "R031",
-    "rule": "複合関係副詞 however",
-    "rule_en": "However + Adj/Adv (Concessive)",
+    "rule": "単数のtheyは性別を特定しない個人または非二元的な性自認を持つ人を指す代名詞として使える",
+    "rule_en": "Singular 'they' can be used to refer to an individual person whose gender is unknown, non-binary, or unspecified, and is officially recognized as correct by major style guides.",
     "diff": "lv3",
-    "axes": ["logic"],
-    "tags": ["eikenpre2", "juken"],
-    "cefr": "B2",
-    "pattern": "However + 形容詞/副詞 + S + V = どんなに～しても",
-    "correct_example": "However hard he tried, he couldn't solve the problem.",
-    "common_errors": [
-      {"wrong": "Whatever hard he tried...", "why": "形容詞/副詞を修飾→however。whateverは名詞"},
-      {"wrong": "However he tried hard...", "why": "howeverの直後に形容詞/副詞を置く"}
+    "axes": [
+      "form",
+      "vocab"
     ],
-    "key_signal": "however + adj/adv / whatever + noun / whenever + time",
-    "sources": ["Cambridge Grammar: Words, sentences and clauses"]
+    "tags": [
+      "grammar",
+      "pronoun",
+      "singular they",
+      "gender-neutral"
+    ],
+    "cefr": "B2",
+    "pattern": "[Person of unspecified/non-binary gender] → they/them/their",
+    "correct_example": "A student should bring their own pen. / Alex said they would arrive at noon.",
+    "common_errors": [
+      "A student should bring his pen. (when gender is unknown)",
+      "Use of he as generic default"
+    ],
+    "key_signal": "unknown gender / non-binary person / gender-neutral context",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/pronouns/gendered_pronouns_and_singular_they.html"
+    ]
   },
   {
     "id": "R032",
-    "rule": "仮定法現在 suggest/recommend + 原形",
-    "rule_en": "Subjunctive after Suggest/Recommend",
-    "diff": "lv3",
-    "axes": ["trap"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B2",
-    "pattern": "suggest/recommend/insist/demand + that + S + V(原形)",
-    "correct_example": "I suggest that he attend the meeting.",
-    "common_errors": [
-      {"wrong": "I suggest that he attends the meeting.", "why": "仮定法現在→三単現のsは付かない"},
-      {"wrong": "I suggest that he should attends.", "why": "shouldの後も原形"}
+    "rule": "関係代名詞は先行詞を修飾する従属節（関係節）を導く",
+    "rule_en": "Relative pronouns (who, whom, whose, that, which) introduce relative clauses that modify a word, phrase, or idea in the main clause.",
+    "diff": "lv2",
+    "axes": [
+      "logic"
     ],
-    "key_signal": "suggest/recommend/insist/demand + that S + 原形",
-    "sources": ["Cambridge Grammar: Verbs", "Purdue OWL: Verb Tenses"]
+    "tags": [
+      "grammar",
+      "relative pronoun",
+      "relative clause",
+      "antecedent"
+    ],
+    "cefr": "A2",
+    "pattern": "[Antecedent] + [relative pronoun] + [relative clause]",
+    "correct_example": "The house that Jack built is large. / The professor, whom I respect, recently received tenure.",
+    "common_errors": [
+      "The house which Jack built is large. (in restrictive clause, 'that' preferred)",
+      "Omitting the relative pronoun in subject position"
+    ],
+    "key_signal": "who, whom, whose, that, which",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/index.html"
+    ]
   },
   {
     "id": "R033",
-    "rule": "The number of（単数）vs A number of（複数）",
-    "rule_en": "The Number Of vs A Number Of",
+    "rule": "制限用法の関係節（定義節）はコンマで区切らず、情報を省略できない",
+    "rule_en": "Restrictive (defining) relative clauses add essential information and are NOT separated from the main clause by a comma.",
     "diff": "lv3",
-    "axes": ["trap"],
-    "tags": ["eikenpre2", "toeic", "juken"],
-    "cefr": "B2",
-    "pattern": "The number of + 複数名詞 + 単数動詞 / A number of + 複数名詞 + 複数動詞",
-    "correct_example": "The number of students is increasing every year.",
-    "common_errors": [
-      {"wrong": "The number of students are increasing.", "why": "The number of = ～の数（単数扱い）"},
-      {"wrong": "A number of students is studying.", "why": "A number of = 多くの（複数扱い）"}
+    "axes": [
+      "logic"
     ],
-    "key_signal": "The number of → is / A number of → are",
-    "sources": ["Purdue OWL: Making Subjects and Verbs Agree"]
+    "tags": [
+      "grammar",
+      "relative clause",
+      "restrictive",
+      "defining",
+      "comma"
+    ],
+    "cefr": "B1",
+    "pattern": "[Antecedent] + that/who/which [no comma] + [essential information]",
+    "correct_example": "The book that she recommended is excellent.",
+    "common_errors": [
+      "The book, that she recommended, is excellent."
+    ],
+    "key_signal": "essential information / no comma",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/index.html"
+    ]
   },
   {
     "id": "R034",
-    "rule": "-ing形容詞 vs -ed形容詞",
-    "rule_en": "Participle Adjectives: -ing vs -ed",
+    "rule": "非制限用法の関係節（非定義節）はコンマで区切り、thatは使えない",
+    "rule_en": "Non-defining (non-restrictive) relative clauses provide additional, non-essential information, ARE separated by commas, and cannot use 'that'.",
     "diff": "lv3",
-    "axes": ["form"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B1",
-    "pattern": "物・事 → -ing(boring/exciting) / 人の感情 → -ed(bored/excited)",
-    "correct_example": "The lecture was boring. / I was bored.",
-    "common_errors": [
-      {"wrong": "The lecture was bored.", "why": "物が主語→boring（退屈させる）"},
-      {"wrong": "I was boring.", "why": "人が退屈を感じる→bored"}
+    "axes": [
+      "logic"
     ],
-    "key_signal": "原因（物）→ -ing / 感じる側（人）→ -ed",
-    "sources": ["Purdue OWL: Adjective or Adverb", "Cambridge Grammar: Adjectives and adverbs"]
+    "tags": [
+      "grammar",
+      "relative clause",
+      "non-restrictive",
+      "non-defining",
+      "comma",
+      "that"
+    ],
+    "cefr": "B1",
+    "pattern": "[Antecedent], who/which/whose, [additional information]",
+    "correct_example": "The writer, who lives in this mansion, has published his second novel.",
+    "common_errors": [
+      "The writer, that lives in this mansion, has published his second novel.",
+      "Omitting the commas in non-defining clauses"
+    ],
+    "key_signal": "additional / non-essential information, commas",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/relative_pronouns_in_non_defining_clauses.html"
+    ]
   },
   {
     "id": "R035",
-    "rule": "succeed in -ing",
-    "rule_en": "Succeed In + Gerund",
-    "diff": "lv3",
-    "axes": ["vocab"],
-    "tags": ["eikenpre2", "toeic"],
-    "cefr": "B2",
-    "pattern": "succeed in + V-ing = ～に成功する",
-    "correct_example": "He succeeded in passing the exam.",
-    "common_errors": [
-      {"wrong": "He succeeded to pass the exam.", "why": "succeed in -ing。toは不可"},
-      {"wrong": "He succeeded passing the exam.", "why": "inが必要"}
+    "rule": "人を指す関係代名詞にはwhoまたはwhom、物・概念にはwhichを使う",
+    "rule_en": "Use 'who' or 'whom' to refer to people; use 'which' to refer to things or concepts.",
+    "diff": "lv2",
+    "axes": [
+      "logic"
     ],
-    "key_signal": "succeed in / consist of / insist on / depend on + -ing",
-    "sources": ["Cambridge Grammar: Prepositions and particles"]
+    "tags": [
+      "grammar",
+      "relative pronoun",
+      "who",
+      "which",
+      "people",
+      "things"
+    ],
+    "cefr": "B1",
+    "pattern": "[Person] + who/whom | [Thing/Concept] + which",
+    "correct_example": "The teacher who inspired me retired last year. / The car, which was red, sped past.",
+    "common_errors": [
+      "The teacher which inspired me retired.",
+      "The car, who was red, sped past."
+    ],
+    "key_signal": "person → who/whom; thing → which",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/defining_vs_non_defining.html"
+    ]
   },
   {
     "id": "R036",
-    "rule": "仮定法過去完了",
-    "rule_en": "Third Conditional (Past Unreal)",
+    "rule": "節全体を先行詞とする非制限用法の関係節にはwhichを使う",
+    "rule_en": "Use 'which' when referring to the previous clause as a whole in a non-defining clause.",
     "diff": "lv4",
-    "axes": ["tense"],
-    "tags": ["eiken2", "toeic"],
-    "cefr": "B2",
-    "pattern": "If + S + had + pp, S + would have + pp",
-    "correct_example": "If I had known about the meeting, I would have attended.",
-    "common_errors": [
-      {"wrong": "If I knew about the meeting, I would have attended.", "why": "過去の事実に反する→had known"},
-      {"wrong": "If I had known, I would attend.", "why": "帰結節もwould have + pp"}
+    "axes": [
+      "logic"
     ],
-    "key_signal": "過去の事実に反する仮定 → If had pp, would have pp",
-    "sources": ["Cambridge Grammar: Verbs", "Purdue OWL: Verb Tenses"]
+    "tags": [
+      "grammar",
+      "which",
+      "non-defining",
+      "clause reference"
+    ],
+    "cefr": "B2",
+    "pattern": "[Main clause], which [refers to whole clause]",
+    "correct_example": "My friend decided to get divorced, which upset me a lot.",
+    "common_errors": [
+      "My friend decided to get divorced, that upset me a lot."
+    ],
+    "key_signal": "referring to previous whole clause",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/relative_pronouns_in_non_defining_clauses.html"
+    ]
   },
   {
     "id": "R037",
-    "rule": "分詞構文（受動）",
-    "rule_en": "Participial Phrase (Passive)",
+    "rule": "most, many, some, both, noneなどの後で人にはof whom、物にはof whichを使う",
+    "rule_en": "After numbers and words like most, many, some, both, none: use 'of whom' for persons and 'of which' for things/concepts.",
     "diff": "lv4",
-    "axes": ["form"],
-    "tags": ["eiken2", "toeic", "juken"],
-    "cefr": "B2/C1",
-    "pattern": "pp + 前置詞句, S + V (主語が動作を受ける側)",
-    "correct_example": "Seen from the top of the mountain, the city looked beautiful.",
-    "common_errors": [
-      {"wrong": "Seeing from the top, the city looked beautiful.", "why": "cityが見られる側→Seen（受動）"},
-      {"wrong": "See from the top, the city looked beautiful.", "why": "分詞構文は分詞で始まる"}
+    "axes": [
+      "logic",
+      "vocab"
     ],
-    "key_signal": "主語が受動→過去分詞で開始、能動→現在分詞で開始",
-    "sources": ["Cambridge Grammar: Verbs"]
+    "tags": [
+      "grammar",
+      "of whom",
+      "of which",
+      "relative pronoun",
+      "quantifier"
+    ],
+    "cefr": "B2",
+    "pattern": "[Number/Quantifier] of whom/which",
+    "correct_example": "I saw many people at the party, some of whom seemed familiar.",
+    "common_errors": [
+      "some of which seemed familiar (when referring to people)"
+    ],
+    "key_signal": "most, many, some, both, none + of whom/of which",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/relative_pronouns_in_non_defining_clauses.html"
+    ]
   },
   {
     "id": "R038",
-    "rule": "Not only の倒置",
-    "rule_en": "Inversion after Not Only",
-    "diff": "lv4",
-    "axes": ["logic"],
-    "tags": ["eiken2", "toeic"],
-    "cefr": "B2/C1",
-    "pattern": "Not only + 倒置(助動詞+S) + but (also) + S + V",
-    "correct_example": "Not only does he speak English, but he also speaks French.",
-    "common_errors": [
-      {"wrong": "Not only he speaks English...", "why": "Not onlyが文頭→倒置が必要"},
-      {"wrong": "Not only does he speaks...", "why": "doesの後は原形speak"}
+    "rule": "コンマの有無によって定義節と非定義節の意味が変わる",
+    "rule_en": "The presence or absence of a comma distinguishes defining from non-defining clauses and changes the meaning of the sentence.",
+    "diff": "lv3",
+    "axes": [
+      "logic",
+      "vocab"
     ],
-    "key_signal": "否定語句が文頭→倒置: Not only / Never / Hardly / Seldom",
-    "sources": ["Cambridge Grammar: Words, sentences and clauses"]
+    "tags": [
+      "grammar",
+      "relative clause",
+      "comma",
+      "meaning",
+      "defining"
+    ],
+    "cefr": "B1",
+    "pattern": "Noun + that ... (no comma = defining) vs. Noun, who/which ... (comma = non-defining)",
+    "correct_example": "They have two sons who are doctors. (more sons exist) / They have two sons, who are doctors. (only two sons)",
+    "common_errors": [
+      "Ignoring the comma distinction, causing unintended meaning"
+    ],
+    "key_signal": "comma = non-defining / no comma = defining",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/defining_vs_non_defining.html"
+    ]
   },
   {
     "id": "R039",
-    "rule": "insist on -ing",
-    "rule_en": "Insist On + Gerund",
-    "diff": "lv4",
-    "axes": ["vocab"],
-    "tags": ["eiken2", "toeic"],
-    "cefr": "B2",
-    "pattern": "insist on + V-ing = ～することを主張する",
-    "correct_example": "The manager insisted on seeing the documents himself.",
-    "common_errors": [
-      {"wrong": "The manager insisted to see the documents.", "why": "insist on -ing。toは不可"},
-      {"wrong": "The manager insisted seeing the documents.", "why": "onが必要"}
+    "rule": "書き言葉では、人はwho、物はwhichを優先し、thatの前にコンマを置かない",
+    "rule_en": "In writing, prefer 'who' for people and 'which' for things over 'that'; never put a comma before 'that'.",
+    "diff": "lv3",
+    "axes": [
+      "logic",
+      "vocab"
     ],
-    "key_signal": "insist on / persist in / count on + -ing",
-    "sources": ["Cambridge Grammar: Prepositions and particles"]
+    "tags": [
+      "grammar",
+      "that",
+      "which",
+      "who",
+      "writing style",
+      "comma"
+    ],
+    "cefr": "B1",
+    "pattern": "In writing: people → who | things → which | no comma before that",
+    "correct_example": "The student who passed the exam was rewarded. / The report, which was thorough, impressed the committee.",
+    "common_errors": [
+      "The student that passed... (in formal writing)",
+      "The report, that was thorough..."
+    ],
+    "key_signal": "formal writing context",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/relative_pronouns/defining_vs_non_defining.html"
+    ]
   },
   {
     "id": "R040",
-    "rule": "would rather + S + 過去形",
-    "rule_en": "Would Rather + Subject + Past Tense",
-    "diff": "lv4",
-    "axes": ["trap"],
-    "tags": ["eiken2", "toeic"],
-    "cefr": "B2/C1",
-    "pattern": "would rather + S + V(過去形) = Sに～してほしい（仮定法）",
-    "correct_example": "I would rather you didn't smoke in this room.",
-    "common_errors": [
-      {"wrong": "I would rather you don't smoke.", "why": "仮定法→過去形didn't"},
-      {"wrong": "I would rather you not smoke.", "why": "S + Vの構文ではdidn'tが必要"}
+    "rule": "可算名詞は複数形になれるが、不可算名詞は原則として複数形にならない",
+    "rule_en": "Count nouns can be expressed in plural form; noncount nouns usually cannot be expressed in plural form.",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "trap"
     ],
-    "key_signal": "would rather + S + 過去形（仮定法的表現）",
-    "sources": ["Cambridge Grammar: Verbs"]
+    "tags": [
+      "grammar",
+      "noun",
+      "count",
+      "noncount",
+      "plural"
+    ],
+    "cefr": "A2",
+    "pattern": "Count noun + -s/-es (plural) | Noncount noun (no plural)",
+    "correct_example": "cats, students (count) / milk, water, air (noncount)",
+    "common_errors": [
+      "moneys",
+      "waters (in general sense)",
+      "furnitures"
+    ],
+    "key_signal": "can be counted vs. cannot be counted",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/count_and_noncount_nouns/index.html"
+    ]
   },
   {
     "id": "R041",
-    "rule": "It is (high) time + S + 過去形",
-    "rule_en": "It Is Time + Past Tense (Subjunctive)",
-    "diff": "lv4",
-    "axes": ["trap"],
-    "tags": ["eiken2", "toeic", "juken"],
-    "cefr": "B2/C1",
-    "pattern": "It is (high/about) time + S + V(過去形)",
-    "correct_example": "It is high time we made a decision.",
-    "common_errors": [
-      {"wrong": "It is high time we make a decision.", "why": "仮定法的→過去形made"},
-      {"wrong": "It is high time we will make a decision.", "why": "willは使わない。過去形"}
+    "rule": "muchは不可算名詞、manyは可算名詞を修飾する",
+    "rule_en": "'Much' modifies only uncountable nouns; 'many' modifies only countable nouns.",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "trap",
+      "vocab"
     ],
-    "key_signal": "It's time + 過去形 = そろそろ～すべき",
-    "sources": ["Cambridge Grammar: Verbs"]
+    "tags": [
+      "grammar",
+      "much",
+      "many",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "cefr": "A2",
+    "pattern": "much + noncount noun | many + count noun",
+    "correct_example": "We don't have much time. / Many Americans travel to Europe.",
+    "common_errors": [
+      "many time",
+      "much students"
+    ],
+    "key_signal": "much / many",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/count_and_noncount_nouns/index.html"
+    ]
   },
   {
     "id": "R042",
-    "rule": "仮定法過去完了の倒置",
-    "rule_en": "Inversion in Third Conditional (Had + S + pp)",
+    "rule": "littleは不可算名詞、fewは可算名詞を修飾する",
+    "rule_en": "'Little' modifies only uncountable nouns; 'few' modifies only countable nouns.",
+    "diff": "lv2",
+    "axes": [
+      "form",
+      "trap",
+      "vocab"
+    ],
+    "tags": [
+      "grammar",
+      "little",
+      "few",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "cefr": "B1",
+    "pattern": "little + noncount noun | few + count noun",
+    "correct_example": "He had little food in the house. / Few students like exams.",
+    "common_errors": [
+      "few food",
+      "little students"
+    ],
+    "key_signal": "little / few",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/count_and_noncount_nouns/index.html"
+    ]
+  },
+  {
+    "id": "R043",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "rule_en": "'Some' and 'any' can be used with both countable and uncountable nouns.",
+    "diff": "lv1",
+    "axes": [
+      "form",
+      "trap",
+      "vocab"
+    ],
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "cefr": "A1",
+    "pattern": "some/any + count or noncount noun",
+    "correct_example": "There is some water on the floor. / There are some students here. / Do you have any food?",
+    "common_errors": [
+      "Using 'much' where 'any' is appropriate"
+    ],
+    "key_signal": "some / any",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/count_and_noncount_nouns/index.html"
+    ]
+  },
+  {
+    "id": "R044",
+    "rule": "英語の動詞には現在形と過去形の2つの基本時制があり、それ以外は助動詞で表す",
+    "rule_en": "Only two tenses are conveyed through the verb alone: present and past. Most other English tenses are marked by auxiliary verbs.",
+    "diff": "lv2",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "tense",
+      "auxiliary",
+      "present",
+      "past"
+    ],
+    "cefr": "A2",
+    "pattern": "present: walk | past: walked | others: auxiliary + verb",
+    "correct_example": "They walk. (present) / They walked. (past) / They will walk. (future, with auxiliary)",
+    "common_errors": [
+      "Confusing simple tenses with perfect or progressive forms"
+    ],
+    "key_signal": "verb alone = only 2 tenses",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/index.html"
+    ]
+  },
+  {
+    "id": "R045",
+    "rule": "現在完了形は過去に始まり現在まで続く動作・状態、または効果が今も残る完了した行為を表す",
+    "rule_en": "The present perfect (have/has + past participle) designates action that began in the past but continues into the present, or whose effect still continues.",
+    "diff": "lv2",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "present perfect",
+      "have",
+      "has",
+      "past participle"
+    ],
+    "cefr": "B1",
+    "pattern": "have/has + past participle",
+    "correct_example": "Betty has taught for ten years. (still teaching) / He has lived here for many years.",
+    "common_errors": [
+      "Betty taught for ten years. (implies she stopped)",
+      "Using simple past for ongoing situations"
+    ],
+    "key_signal": "has/have + past participle; for, since, ever, never",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/index.html"
+    ]
+  },
+  {
+    "id": "R046",
+    "rule": "過去完了形は過去の別の出来事よりも前に完了した行為・状態を表す",
+    "rule_en": "The past perfect (had + past participle) describes an action that began and ended in the past, before another past event.",
+    "diff": "lv3",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "past perfect",
+      "had",
+      "past participle"
+    ],
+    "cefr": "B1",
+    "pattern": "had + past participle",
+    "correct_example": "I had eaten dinner before he came. / Mike had promised to repair Joe's bike.",
+    "common_errors": [
+      "I ate dinner before he came. (loses the sequence of past events)"
+    ],
+    "key_signal": "had + past participle; before, after, when (sequence of past events)",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verbs_with_helpers.html"
+    ]
+  },
+  {
+    "id": "R047",
+    "rule": "現在進行形は今進行中の動作または近い将来の予定を表す",
+    "rule_en": "The present progressive (is/am/are + verb-ing) shows action currently in progress or planned for the near future.",
+    "diff": "lv1",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "present progressive",
+      "ing",
+      "ongoing action"
+    ],
+    "cefr": "A1",
+    "pattern": "is/am/are + verb-ing",
+    "correct_example": "I am playing soccer now. / Next week they are going to Florida.",
+    "common_errors": [
+      "I play soccer now. (misses the in-progress aspect)"
+    ],
+    "key_signal": "now, at the moment, this week",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verbs_with_helpers.html"
+    ]
+  },
+  {
+    "id": "R048",
+    "rule": "過去進行形は過去のある時点で進行中だった動作、または別の動作に割り込まれた動作を表す",
+    "rule_en": "The past progressive (was/were + verb-ing) shows action that was in progress at a certain time in the past, or was interrupted by another action.",
+    "diff": "lv2",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "past progressive",
+      "was",
+      "were",
+      "ing"
+    ],
+    "cefr": "A2",
+    "pattern": "was/were + verb-ing",
+    "correct_example": "They were climbing for twenty-seven days. / We were eating dinner when she told me.",
+    "common_errors": [
+      "We ate dinner when she told me. (loses the in-progress aspect)"
+    ],
+    "key_signal": "when, while, at that time",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verbs_with_helpers.html"
+    ]
+  },
+  {
+    "id": "R049",
+    "rule": "助動詞（can, will, shall, may, could, would, should, might, must）は主語に関わらず形が変わらない",
+    "rule_en": "Modal auxiliaries (can, will, shall, may, could, would, should, might, must) do not change form to agree with the subject.",
+    "diff": "lv2",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "modal",
+      "auxiliary",
+      "invariant form"
+    ],
+    "cefr": "A2",
+    "pattern": "[Subject] + modal + base verb (modal does not inflect)",
+    "correct_example": "I can do it. / He can do it. / They can do it.",
+    "common_errors": [
+      "He cans do it.",
+      "She musts go."
+    ],
+    "key_signal": "can, will, shall, may, could, would, should, might, must",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verbs_with_helpers.html"
+    ]
+  },
+  {
+    "id": "R050",
+    "rule": "could have / would have / must haveの後には過去分詞を置く（'of'は誤り）",
+    "rule_en": "Modal perfect constructions use 'could have', 'would have', 'must have' + past participle. 'Could of', 'would of' are incorrect.",
+    "diff": "lv3",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "modal perfect",
+      "could have",
+      "would have",
+      "must have"
+    ],
+    "cefr": "B1",
+    "pattern": "could/would/must + have + past participle",
+    "correct_example": "I could have won the prize. / He must have bought the ticket already.",
+    "common_errors": [
+      "I could of won the prize.",
+      "He must of bought the ticket."
+    ],
+    "key_signal": "could have / would have / must have",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verbs_with_helpers.html"
+    ]
+  },
+  {
+    "id": "R051",
+    "rule": "動詞の時制を不必要に変えてはならない。同一時間軸の動作は同じ時制で統一する",
+    "rule_en": "Do not shift from one tense to another unnecessarily if the time frame for each action or state is the same.",
+    "diff": "lv3",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "grammar",
+      "tense",
+      "consistency",
+      "tense shift"
+    ],
+    "cefr": "B1",
+    "pattern": "Maintain consistent tense throughout same time-frame narration",
+    "correct_example": "The instructor explains the diagram to students who ask questions during the lecture.",
+    "common_errors": [
+      "The instructor explains the diagram to students who asked questions during the lecture."
+    ],
+    "key_signal": "same time frame = same tense",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verb_tense_consistency.html"
+    ]
+  },
+  {
+    "id": "R052",
+    "rule": "受動態は行為者が不明・不要なとき、またはトピックを前景化したいときに使う",
+    "rule_en": "Use passive verbs when the actor is unknown or irrelevant, or when you wish to foreground a topic that is not the action or actor.",
+    "diff": "lv3",
+    "axes": [
+      "form"
+    ],
+    "tags": [
+      "grammar",
+      "passive voice",
+      "active voice",
+      "style"
+    ],
+    "cefr": "B1",
+    "pattern": "be + past participle (by [agent] — optional)",
+    "correct_example": "Crimes were committed. / Penicillin was developed in 1928.",
+    "common_errors": [
+      "Overusing passive voice when active is clearer",
+      "Using passive when the actor is important and known"
+    ],
+    "key_signal": "actor unknown / irrelevant; topic foregrounding",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/passive_verbs.html"
+    ]
+  },
+  {
+    "id": "R053",
+    "rule": "不規則動詞は過去形・過去分詞形が規則的な-ed形にならず、固有の変化をする",
+    "rule_en": "Irregular verbs do not follow the standard -ed pattern for past and past participle forms; they take on alternative patterns.",
+    "diff": "lv2",
+    "axes": [
+      "form"
+    ],
+    "tags": [
+      "grammar",
+      "irregular verb",
+      "past tense",
+      "past participle"
+    ],
+    "cefr": "A2",
+    "pattern": "Present / Past / Past Participle (no -ed rule)",
+    "correct_example": "go/went/gone, eat/ate/eaten, begin/began/begun, drink/drank/drunk",
+    "common_errors": [
+      "goed",
+      "eated",
+      "beginned",
+      "drinked"
+    ],
+    "key_signal": "memorization required; no -ed pattern",
+    "sources": [
+      "https://owl.purdue.edu/owl/general_writing/grammar/irregular_verbs/index.html"
+    ]
+  },
+  {
+    "rule": "仮定法過去完了",
+    "rule_en": "Past Unreal Conditional (Third Conditional)",
     "diff": "lv4",
-    "axes": ["logic"],
-    "tags": ["eiken2", "juken"],
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B2",
+    "pattern": "If + S + had + pp, S + would have + pp",
+    "correct_example": "If I had studied harder, I would have passed the exam.",
+    "common_errors": [
+      {
+        "wrong": "If I studied harder, I would have passed.",
+        "why": "過去の事実に反する仮定にはhad+ppが必要"
+      },
+      {
+        "wrong": "If I had studied, I would pass.",
+        "why": "帰結節もwould have+ppが必要"
+      }
+    ],
+    "key_signal": "過去の事実に反する仮定 → If had pp, would have pp",
+    "sources": [
+      "Purdue OWL: Verb Tenses"
+    ],
+    "id": "R054"
+  },
+  {
+    "rule": "仮定法過去",
+    "rule_en": "Present Unreal Conditional (Second Conditional)",
+    "diff": "lv4",
+    "axes": [
+      "tense"
+    ],
+    "tags": [
+      "eiken2",
+      "toeic",
+      "juken"
+    ],
+    "cefr": "B2",
+    "pattern": "If + S + V(過去形), S + would + V(原形)",
+    "correct_example": "If I were you, I would accept the offer.",
+    "common_errors": [
+      {
+        "wrong": "If I was you, I would accept.",
+        "why": "仮定法ではwereを使う（格式）"
+      },
+      {
+        "wrong": "If I am you, I would accept.",
+        "why": "現在の事実に反する仮定には過去形"
+      }
+    ],
+    "key_signal": "現在の事実に反する仮定 → If V(過去形), would V",
+    "sources": [
+      "Purdue OWL: Verb Tenses"
+    ],
+    "id": "R055"
+  },
+  {
+    "rule": "仮定法の倒置 (Had S pp)",
+    "rule_en": "Inverted Conditional (Had + Subject + Past Participle)",
+    "diff": "lv5",
+    "axes": [
+      "logic",
+      "tense"
+    ],
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
     "cefr": "C1",
     "pattern": "Had + S + pp, S + would have + pp (= If S had pp)",
     "correct_example": "Had I known the truth, I would have acted differently.",
     "common_errors": [
-      {"wrong": "Had I known the truth, I would act differently.", "why": "帰結節もwould have + pp"},
-      {"wrong": "Had I know the truth...", "why": "had + 過去分詞。原形は不可"}
+      {
+        "wrong": "Had I know the truth...",
+        "why": "had + 過去分詞。原形は不可"
+      },
+      {
+        "wrong": "Had I known, I would act.",
+        "why": "帰結節もwould have + ppが必要"
+      }
     ],
     "key_signal": "If省略→倒置: Had S pp / Were S to / Should S",
-    "sources": ["Cambridge Grammar: Verbs"]
-  },
-  {
-    "id": "R043",
-    "rule": "come into effect",
-    "rule_en": "Come Into Effect (Fixed Expression)",
-    "diff": "lv5",
-    "axes": ["vocab"],
-    "tags": ["eikenpre1", "toeic"],
-    "cefr": "C1",
-    "pattern": "come into effect/force = 施行される、発効する",
-    "correct_example": "The new regulation will come into effect next month.",
-    "common_errors": [
-      {"wrong": "The new regulation will come in effect.", "why": "come into effect。inではなくinto"},
-      {"wrong": "The new regulation will come to effect.", "why": "toではなくinto"}
+    "sources": [
+      "Purdue OWL: Verb Tenses"
     ],
-    "key_signal": "come into: effect/force/being/existence/contact",
-    "sources": ["Cambridge Grammar: Easily confused words"]
+    "id": "R056"
   },
   {
-    "id": "R044",
-    "rule": "Hardly had S pp when ...",
-    "rule_en": "Hardly...When (Inversion)",
+    "rule": "否定語句の倒置",
+    "rule_en": "Inversion with Negative Adverbials",
     "diff": "lv5",
-    "axes": ["trap", "logic"],
-    "tags": ["eikenpre1", "toeic"],
+    "axes": [
+      "logic"
+    ],
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "cefr": "C1",
+    "pattern": "否定語句(Never/Hardly/Not only) + 倒置(助動詞+S+V)",
+    "correct_example": "Not only does he speak English, but he also speaks French.",
+    "common_errors": [
+      {
+        "wrong": "Not only he speaks English...",
+        "why": "否定語句が文頭→倒置が必要"
+      },
+      {
+        "wrong": "Hardly he had begun...",
+        "why": "Hardlyが文頭→had he begun"
+      }
+    ],
+    "key_signal": "Never/Hardly/Seldom/Not only が文頭 → 倒置",
+    "sources": [
+      "Purdue OWL: Active Verb Tenses"
+    ],
+    "id": "R057"
+  },
+  {
+    "rule": "Hardly had S pp when ...",
+    "rule_en": "Hardly...When / No sooner...Than",
+    "diff": "lv5",
+    "axes": [
+      "logic",
+      "trap"
+    ],
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
     "cefr": "C1",
     "pattern": "Hardly + had + S + pp + when + S + V(過去形)",
     "correct_example": "Hardly had he begun the presentation when the fire alarm went off.",
     "common_errors": [
-      {"wrong": "Hardly he had begun...", "why": "Hardlyが文頭→倒置(had he begun)"},
-      {"wrong": "Hardly had he begun... than the alarm.", "why": "hardlyとペアはwhen。thanではない"}
+      {
+        "wrong": "Hardly he had begun...",
+        "why": "倒置が必要 (had he begun)"
+      },
+      {
+        "wrong": "Hardly had he begun... than the alarm.",
+        "why": "hardly→when / no sooner→than"
+      }
     ],
-    "key_signal": "Hardly/Scarcely + had S pp + when / No sooner + had S pp + than",
-    "sources": ["Cambridge Grammar: Words, sentences and clauses"]
+    "key_signal": "Hardly/Scarcely + when, No sooner + than",
+    "sources": [
+      "Purdue OWL: Active Verb Tenses"
+    ],
+    "id": "R058"
   },
   {
-    "id": "R045",
     "rule": "Were it not for（仮定法倒置）",
     "rule_en": "Were It Not For (Inverted Conditional)",
     "diff": "lv5",
-    "axes": ["logic"],
-    "tags": ["eikenpre1", "toeic"],
+    "axes": [
+      "logic",
+      "tense"
+    ],
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
     "cefr": "C1",
-    "pattern": "Were it not for + N, S + would/could + V = もし～がなければ",
+    "pattern": "Were it not for + N, S + would/could + V",
     "correct_example": "Were it not for his help, we could not have succeeded.",
     "common_errors": [
-      {"wrong": "Were it not his help...", "why": "forが必要。Were it not for + 名詞"},
-      {"wrong": "Was it not for his help...", "why": "仮定法ではwere（wasは不可）"}
+      {
+        "wrong": "Were it not his help...",
+        "why": "forが必要"
+      },
+      {
+        "wrong": "Was it not for his help...",
+        "why": "仮定法ではwere (wasは不可)"
+      }
     ],
     "key_signal": "Were it not for = If it were not for = But for",
-    "sources": ["Cambridge Grammar: Verbs"]
+    "sources": [
+      "Purdue OWL: Verb Tenses"
+    ],
+    "id": "R059"
+  },
+  {
+    "rule": "suggest/recommend + that S + 原形",
+    "rule_en": "Subjunctive Mood after Suggest/Recommend",
+    "diff": "lv4",
+    "axes": [
+      "trap"
+    ],
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "cefr": "B2",
+    "pattern": "suggest/recommend/insist + that + S + V(原形)",
+    "correct_example": "I suggest that he attend the meeting.",
+    "common_errors": [
+      {
+        "wrong": "I suggest that he attends the meeting.",
+        "why": "仮定法現在→三単現のsは不要"
+      },
+      {
+        "wrong": "I suggest him to attend.",
+        "why": "suggest + that節。to不定詞は不可"
+      }
+    ],
+    "key_signal": "suggest/recommend/insist/demand + that S + 原形",
+    "sources": [
+      "Purdue OWL: Verb Tenses"
+    ],
+    "id": "R060"
+  },
+  {
+    "rule": "come into effect",
+    "rule_en": "Come Into Effect (Collocation)",
+    "diff": "lv5",
+    "axes": [
+      "vocab"
+    ],
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "cefr": "C1",
+    "pattern": "come into effect/force = 施行される、発効する",
+    "correct_example": "The new regulation will come into effect next month.",
+    "common_errors": [
+      {
+        "wrong": "come in effect",
+        "why": "inではなくinto"
+      },
+      {
+        "wrong": "come to effect",
+        "why": "toではなくinto"
+      }
+    ],
+    "key_signal": "come into: effect/force/being/existence/contact",
+    "sources": [
+      "Purdue OWL: Commonly Confused Verbs"
+    ],
+    "id": "R061"
   }
 ]
