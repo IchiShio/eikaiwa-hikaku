@@ -72,6 +72,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(0,0,0,0.06); padding: 10px 0;
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
+    }
+    .site-header.scrolled { padding: 6px 0; box-shadow: 0 1px 12px rgba(0,0,0,0.08); }
+    .site-header-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+    .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
+    .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
+    .site-header-nav { display: flex; align-items: center; gap: 2px; }
+    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
+    .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .site-hamburger.active span:nth-child(2) { opacity: 0; }
+    .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    .site-mobile-nav.active { display: flex; opacity: 1; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+    .site-mobile-nav a.active { color: #F5A623; }
+    @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+
 :root {
   --primary: #2563eb;
   --primary-light: #3b82f6;
@@ -109,81 +137,22 @@ img { max-width: 100%; height: auto; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
 /* Header */
-.site-header {
-  background: #ffffff;
-  color: var(--text);
-  padding: 14px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 1px 0 var(--border);
-}
-.site-header .container { display: flex; align-items: center; justify-content: space-between; }
-.site-header .logo {
-  font-size: 1.0rem;
-  font-weight: 700;
-  color: var(--text);
-  text-decoration: none;
-  letter-spacing: 0.03em;
-}
+
+
+
 .site-header .logo span { color: var(--primary); }
-.site-header nav a {
-  color: var(--text-muted);
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
-}
-.site-header nav a:hover { color: var(--text); border-color: var(--primary); }
+
+
 /* Hamburger menu */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  width: 36px;
-  height: 36px;
-  position: relative;
-  z-index: 102;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  margin: 5px auto;
-  border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
-}
-.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.mobile-nav-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(17,24,39,0.95);
-  z-index: 101;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-}
-.mobile-nav-overlay.active { display: flex; }
-.mobile-nav-overlay a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: var(--radius);
-  transition: background 0.2s;
-}
-.mobile-nav-overlay a:hover { background: rgba(255,255,255,0.1); }
+
+
+
+
+
+
+
+
+
 
 /* Breadcrumb */
 .breadcrumb {
@@ -431,8 +400,8 @@ img { max-width: 100%; height: auto; }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .site-header nav { display: none; }
-  .hamburger { display: block; }
+  
+  
   .article-layout { grid-template-columns: 1fr; gap: 0; padding: 20px 0 48px; }
   .sidebar { display: none; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -446,31 +415,33 @@ img { max-width: 100%; height: auto; }
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-<header class="site-header">
-  <div class="container">
-    <a href="/" class="logo">native-real</a>
-    <nav>
-      <a href="/">ListenUp</a>
-      <a href="/kioku-shinai/">記憶しない英単語</a>
-      <a href="/ranking/">ランキング</a>
-      <a href="/articles/" class="active">学習コラム</a>
-      <a href="/real-phrases/">フレーズ集</a>
-      <a href="/prompts/">AIプロンプト</a>
-      <a href="/about/">About</a>
+<header class="site-header" id="siteHeader">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
+    <nav class="site-header-nav">
+        <a href="/">ListenUp</a>
+        <a href="/grammar/">文法クイズ</a>
+        <a href="/kioku-shinai/">記憶しない英単語</a>
+        <a href="/ranking/">ランキング</a>
+        <a href="/articles/" class="active">学習コラム</a>
+        <a href="/real-phrases/">フレーズ集</a>
+        <a href="/prompts/">AIプロンプト</a>
+        <a href="/about/">About</a>
     </nav>
-    <button class="hamburger" aria-label="メニューを開く" onclick="document.querySelector('.hamburger').classList.toggle('active');document.querySelector('.mobile-nav-overlay').classList.toggle('active');document.body.style.overflow=document.querySelector('.mobile-nav-overlay').classList.contains('active')?'hidden':'';">
+    <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-<div class="mobile-nav-overlay" onclick="if(event.target===this||event.target.tagName==='A'){this.classList.remove('active');document.querySelector('.hamburger').classList.remove('active');document.body.style.overflow='';}">
+<div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
-      <a href="/kioku-shinai/">記憶しない英単語</a>
+  <a href="/grammar/">文法クイズ</a>
+  <a href="/kioku-shinai/">記憶しない英単語</a>
   <a href="/ranking/">ランキング</a>
-  <a href="/articles/">学習コラム</a>
+  <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-      <a href="/about/">About</a>
+  <a href="/about/">About</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
