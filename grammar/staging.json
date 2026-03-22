@@ -1,48 +1,25 @@
 [
   {
     "diff": "lv1",
-    "axis": "tense",
+    "axis": "form",
     "tags": [
       "eiken4"
     ],
-    "stem": "She ___ to school by bike yesterday.",
-    "ja": "彼女は昨日、自転車で学校へ行きました。",
-    "answer": "went",
+    "stem": "My little brother ___ soccer practice every Tuesday and Thursday.",
+    "ja": "私の弟は毎週火曜日と木曜日にサッカーの練習をします。",
+    "answer": "has",
     "choices": [
-      "went",
-      "goes",
-      "go",
-      "is going",
-      "has gone"
+      "has",
+      "have",
+      "is having",
+      "had",
+      "haves"
     ],
-    "expl": "「yesterday（昨日）」は過去を示すシグナルなので過去形が必要。goの過去形は不規則変化でwent。",
-    "rule": "Simple Past Tense",
+    "expl": "主語 My little brother は三人称単数なので、一般動詞 have には三単現の -s が必要です。have の三単現は has になります。",
+    "rule": "一般動詞の三単現",
     "kp": [
-      "yesterdayは過去形のシグナル",
-      "goの過去形はwent（不規則変化）"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "My father ___ home late last night.",
-    "ja": "私の父は昨夜、遅く帰宅しました。",
-    "answer": "came",
-    "choices": [
-      "came",
-      "comes",
-      "come",
-      "is coming",
-      "has come"
-    ],
-    "expl": "「last night（昨夜）」が過去を示すため過去形が必要。comeの過去形は不規則変化でcame。",
-    "rule": "Simple Past Tense",
-    "kp": [
-      "last ~は過去形のシグナル",
-      "comeの過去形はcame（不規則変化）"
+      "三人称単数の主語には動詞に -s/-es を付ける",
+      "have → has（不規則変化）"
     ]
   },
   {
@@ -51,90 +28,67 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "There ___ a cat under the table.",
-    "ja": "テーブルの下に猫が1匹います。",
+    "stem": "Your new classmates ___ very friendly and kind.",
+    "ja": "あなたの新しいクラスメートたちはとても気さくで親切です。",
+    "answer": "are",
+    "choices": [
+      "are",
+      "is",
+      "am",
+      "be",
+      "was"
+    ],
+    "expl": "主語 Your new classmates は複数なので、be動詞は are を使います。is は三人称単数、am は I にのみ使います。",
+    "rule": "be動詞の人称一致",
+    "kp": [
+      "複数主語には are を使う",
+      "be動詞は主語の人称・数に合わせる"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "There ___ a big supermarket near my house.",
+    "ja": "私の家の近くに大きなスーパーマーケットがあります。",
     "answer": "is",
     "choices": [
       "is",
       "are",
       "have",
+      "be",
+      "has"
+    ],
+    "expl": "There is/are 構文では後続の名詞が単数なら is を使います。a big supermarket は単数名詞なので There is が正解です。",
+    "rule": "There is / There are",
+    "kp": [
+      "There is + 単数名詞 / There are + 複数名詞",
+      "存在を表すには There is/are を使う"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "There ___ five birds sitting on the fence outside my window.",
+    "ja": "私の窓の外のフェンスに5羽の鳥が止まっています。",
+    "answer": "are",
+    "choices": [
+      "are",
+      "is",
+      "have",
       "has",
       "be"
     ],
-    "expl": "「a cat（単数名詞）」が後に続くため、There is を使う。There haveという形は存在しない。",
-    "rule": "There is/are (Existential)",
+    "expl": "後続の名詞 five birds は複数なので、There are を使います。There is は単数名詞のときに使います。",
+    "rule": "There is / There are",
     "kp": [
-      "There is + 単数名詞",
-      "後続の名詞が単数か複数かで is/are を選ぶ"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "Look! The baby ___ in her crib right now.",
-    "ja": "見て！赤ちゃんが今、ベビーベッドで眠っています。",
-    "answer": "is sleeping",
-    "choices": [
-      "is sleeping",
-      "sleeps",
-      "sleeping",
-      "are sleeping",
-      "sleep"
-    ],
-    "expl": "「right now（今まさに）」は現在進行形のシグナル。主語がThe baby（単数）なのでis + -ingを使う。",
-    "rule": "Present Continuous",
-    "kp": [
-      "right nowは現在進行形のシグナル",
-      "単数主語 → is + V-ing"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "We ___ dinner at the moment. Please call back later.",
-    "ja": "私たちは今夕食中です。後でかけ直してください。",
-    "answer": "are having",
-    "choices": [
-      "are having",
-      "have",
-      "is having",
-      "having",
-      "had"
-    ],
-    "expl": "「at the moment（今この瞬間）」は現在進行形のシグナル。主語がWe（複数）なのでare + -ingを使う。",
-    "rule": "Present Continuous",
-    "kp": [
-      "at the momentは現在進行形のシグナル",
-      "複数主語 → are + V-ing"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "vocab",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "She is not very good ___ cooking.",
-    "ja": "彼女は料理があまり得意ではありません。",
-    "answer": "at",
-    "choices": [
-      "at",
-      "in",
-      "for",
-      "with",
-      "on"
-    ],
-    "expl": "「be good at ～」で「～が得意」という意味。inやforとは組み合わせない固定表現。",
-    "rule": "Be Good At + Noun/Gerund",
-    "kp": [
-      "be good at = ～が得意",
-      "good at / bad at / surprised at など前置詞は固定"
+      "後続名詞が複数なら There are",
+      "数字が付く名詞は複数扱い"
     ]
   },
   {
@@ -143,69 +97,163 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "___ your sister play the piano?",
-    "ja": "あなたのお姉さんはピアノを弾きますか？",
+    "stem": "___ your father work on weekends?",
+    "ja": "あなたのお父さんは週末に働きますか？",
     "answer": "Does",
     "choices": [
       "Does",
       "Do",
       "Is",
       "Has",
-      "Are"
+      "Did"
     ],
-    "expl": "主語がyour sister（三人称単数）で一般動詞playを使うため、疑問文はDoesを使う。その後の動詞は原形のまま。",
-    "rule": "Yes/No Questions with Do/Does",
+    "expl": "主語 your father は三人称単数なので、一般動詞の疑問文には Does を使います。Does の後の動詞は原形になります。",
+    "rule": "一般動詞の疑問文",
     "kp": [
-      "三人称単数の一般動詞疑問文 → Does + S + V(原形)",
-      "be動詞とdo/doesは混在させない"
+      "三人称単数の疑問文は Does + S + V(原形)",
+      "be動詞と一般動詞の疑問文を混同しない"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "vocab",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "My older brother is very good ___ playing the guitar.",
+    "ja": "私の兄はギターを弾くのがとても得意です。",
+    "answer": "at",
+    "choices": [
+      "at",
+      "in",
+      "for",
+      "on",
+      "with"
+    ],
+    "expl": "be good at は「～が得意である」という意味の固定表現です。in や for ではなく at を使います。",
+    "rule": "be good at",
+    "kp": [
+      "be good at + 名詞/-ing = ～が得意",
+      "形容詞と前置詞の組み合わせは固定"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "vocab",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "I can't remember the name of this flower. Let me ___ it up on the internet.",
+    "ja": "この花の名前が思い出せません。インターネットで調べてみます。",
+    "answer": "look",
+    "choices": [
+      "look",
+      "search",
+      "find",
+      "check",
+      "see"
+    ],
+    "expl": "look up は「（情報を）調べる」という意味の句動詞です。look for は「探す」、look at は「見る」と区別しましょう。",
+    "rule": "句動詞 look up / look for / look at",
+    "kp": [
+      "look up = 調べる",
+      "look for = 探す、look at = 見る と区別する"
     ]
   },
   {
     "diff": "lv2",
-    "axis": "form",
+    "axis": "tense",
     "tags": [
       "eiken3",
       "juken"
     ],
-    "stem": "The window ___ broken by the strong wind.",
-    "ja": "窓は強風によって割られました。",
-    "answer": "was",
+    "stem": "The situation today is ___ than it was last week.",
+    "ja": "今日の状況は先週よりも悪いです。",
+    "answer": "worse",
     "choices": [
-      "was",
-      "is",
-      "were",
-      "be",
-      "been"
+      "worse",
+      "more bad",
+      "badder",
+      "worst",
+      "more badly"
     ],
-    "expl": "受動態はbe動詞 + 過去分詞の形。文脈が過去（強風で割られた）なので過去形のwasを使う。",
-    "rule": "Passive Voice",
+    "expl": "bad の比較級は不規則変化で worse です。more bad や badder という形は存在しません。",
+    "rule": "不規則比較級",
     "kp": [
-      "受動態 = be動詞 + 過去分詞",
-      "時制に合わせたbe動詞の形を選ぶ"
+      "bad → worse → worst（不規則変化）",
+      "more bad や badder は誤り"
     ]
   },
   {
     "diff": "lv2",
-    "axis": "form",
+    "axis": "tense",
     "tags": [
       "eiken3",
       "juken"
     ],
-    "stem": "English ___ spoken in many countries around the world.",
-    "ja": "英語は世界中の多くの国々で話されています。",
-    "answer": "is spoken",
+    "stem": "Before she ___ home tonight, she needs to finish the report.",
+    "ja": "今夜帰宅する前に、彼女はレポートを仕上げる必要があります。",
+    "answer": "gets",
     "choices": [
-      "is spoken",
-      "speaks",
-      "spoken",
-      "is speak",
-      "was spoken"
+      "gets",
+      "will get",
+      "would get",
+      "got",
+      "is getting"
     ],
-    "expl": "「話される」という受動の意味で現在の事実を述べているため is + 過去分詞(spoken)を使う。",
-    "rule": "Passive Voice",
+    "expl": "before が導く時の副詞節では、未来の出来事でも動詞は現在形を使います。will get は誤りです。",
+    "rule": "時・条件の副詞節では現在形",
     "kp": [
-      "受動態 = be動詞 + 過去分詞",
-      "be動詞なしでは受動態にならない"
+      "before/after/when/until 節の中は現在形（未来でも）",
+      "主節に will があっても従属節は現在形"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "I ___ ever visited a foreign country before this trip.",
+    "ja": "この旅行の前に、私は外国を訪れたことが一度もありませんでした。",
+    "answer": "had never",
+    "choices": [
+      "had never",
+      "have never",
+      "never",
+      "never had",
+      "was never"
+    ],
+    "expl": "「この旅行の前に」という過去の基準点よりもさらに前の経験を表すため、過去完了 had never + 過去分詞を使います。",
+    "rule": "過去完了",
+    "kp": [
+      "過去の基準点より前の出来事は had + 過去分詞",
+      "have never は現在完了なので過去の文脈では使えない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She ___ twice to the Eiffel Tower.",
+    "ja": "彼女はエッフェル塔を2回訪れたことがあります。",
+    "answer": "has been",
+    "choices": [
+      "has been",
+      "went",
+      "has gone",
+      "had been",
+      "was"
+    ],
+    "expl": "twice（2回）は経験を表すキーワードなので現在完了を使います。has been to = ～に行ったことがある（経験）です。",
+    "rule": "現在完了（経験）",
+    "kp": [
+      "twice/once/before/ever/never → 現在完了（経験）",
+      "has been to = ～へ行ったことがある"
     ]
   },
   {
@@ -216,21 +264,21 @@
       "toeic",
       "juken"
     ],
-    "stem": "The coach let the players ___ a break after the game.",
-    "ja": "コーチは試合後に選手たちを休憩させました。",
-    "answer": "take",
+    "stem": "The loud noise outside made the baby ___ in the middle of the night.",
+    "ja": "外の大きな音が夜中に赤ちゃんを泣かせました。",
+    "answer": "cry",
     "choices": [
-      "take",
-      "to take",
-      "taking",
-      "took",
-      "taken"
+      "cry",
+      "to cry",
+      "crying",
+      "cried",
+      "cries"
     ],
-    "expl": "使役動詞letの後は目的語 + 原形不定詞（toなし）。「let + O + 動詞の原形」が正しい形。",
-    "rule": "Causative: Make + Object + Base Form",
+    "expl": "使役動詞 make の後は〈O + 動詞の原形〉の形を取ります。to cry や crying は誤りです。",
+    "rule": "使役動詞 make + O + 原形",
     "kp": [
-      "let/make/have + O + 動詞の原形（toは不要）",
-      "toを入れるのが典型的な誤り"
+      "make + O + 動詞の原形（to は不要）",
+      "let/have も同じく原形不定詞を取る"
     ]
   },
   {
@@ -240,191 +288,93 @@
       "eiken3",
       "juken"
     ],
-    "stem": "Neither the manager ___ the staff was informed about the change.",
-    "ja": "マネージャーもスタッフも、その変更について知らされていませんでした。",
+    "stem": "The woman ___ is talking to the principal is my homeroom teacher.",
+    "ja": "校長先生と話している女性は私の担任の先生です。",
+    "answer": "who",
+    "choices": [
+      "who",
+      "which",
+      "what",
+      "whose",
+      "whom"
+    ],
+    "expl": "先行詞 The woman は人なので、関係代名詞には who を使います。which は物、what は先行詞を取れません。",
+    "rule": "関係代名詞 who（主格）",
+    "kp": [
+      "人を先行詞とする主格の関係代名詞は who",
+      "which は物、who は人"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "I'm not sure ___ the store will be open on the holiday or not.",
+    "ja": "その店が祝日に開いているかどうかわかりません。",
+    "answer": "whether",
+    "choices": [
+      "whether",
+      "what",
+      "that",
+      "if",
+      "which"
+    ],
+    "expl": "or not とともに使って「～かどうか」を表すのは whether です。that は or not と組み合わせられず、what は意味が異なります。",
+    "rule": "whether ... or not",
+    "kp": [
+      "whether ... or not = ～かどうか",
+      "or not を伴う場合は whether を使う（if は不可）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "tags": [
+      "eiken3",
+      "toeic"
+    ],
+    "stem": "Would you ___ me a favor and watch my bag for a moment?",
+    "ja": "お願いがあるのですが、少しの間私のバッグを見ていてもらえますか？",
+    "answer": "do",
+    "choices": [
+      "do",
+      "make",
+      "give",
+      "take",
+      "get"
+    ],
+    "expl": "「頼みを聞く」という意味の固定表現は do a favor です。make a favor や give a favor は誤りです。",
+    "rule": "do someone a favor",
+    "kp": [
+      "do a favor = 頼みを聞く（make や give は不可）",
+      "定型表現: do a favor / make a decision / take a break"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "Neither the host ___ the guests knew about the surprise.",
+    "ja": "ホストも客も誰もそのサプライズについて知りませんでした。",
     "answer": "nor",
     "choices": [
       "nor",
       "or",
       "and",
       "but",
-      "either"
+      "yet"
     ],
-    "expl": "neitherと対になる接続詞はnor。「neither A nor B」で「AもBも～ない」を表す。orとは組み合わせない。",
-    "rule": "Neither...Nor (Correlative Conjunctions)",
+    "expl": "neither と対になる接続詞は nor です。neither ... or という形は誤りで、neither ... nor が正しい組み合わせです。",
+    "rule": "neither A nor B",
     "kp": [
-      "neither...nor がペア",
-      "動詞はBの名詞（norの後）に一致させる"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "Her cooking is ___ than mine.",
-    "ja": "彼女の料理は私のよりも上手です。",
-    "answer": "better",
-    "choices": [
-      "better",
-      "more good",
-      "gooder",
-      "best",
-      "well"
-    ],
-    "expl": "goodの比較級はbetter（不規則変化）。「more good」や「gooder」という形は存在しない。",
-    "rule": "Irregular Comparatives",
-    "kp": [
-      "good → better → best（不規則変化）",
-      "more goodやgooder は誤り"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "His condition after the accident was ___ than expected.",
-    "ja": "事故後の彼の状態は、予想よりも悪かった。",
-    "answer": "worse",
-    "choices": [
-      "worse",
-      "more bad",
-      "badder",
-      "worst",
-      "badly"
-    ],
-    "expl": "badの比較級はworse（不規則変化）。「more bad」や「badder」という形は存在しない。",
-    "rule": "Irregular Comparatives",
-    "kp": [
-      "bad → worse → worst（不規則変化）",
-      "more badやbadder は誤り"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "The letter ___ written by a famous author two centuries ago.",
-    "ja": "その手紙は2世紀前に有名な作家によって書かれました。",
-    "answer": "was",
-    "choices": [
-      "was",
-      "is",
-      "had",
-      "were",
-      "be"
-    ],
-    "expl": "受動態はbe動詞 + 過去分詞の構造。「two centuries ago」が過去を示すのでwas + writtenが正解。",
-    "rule": "Passive Voice",
-    "kp": [
-      "受動態 = be動詞 + 過去分詞",
-      "ago が付けば過去時制のbe動詞を使う"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "The suspects ___ questioned by the police for several hours.",
-    "ja": "容疑者たちは数時間にわたって警察に尋問されました。",
-    "answer": "were",
-    "choices": [
-      "were",
-      "was",
-      "are",
-      "be",
-      "been"
-    ],
-    "expl": "受動態でThe suspects（複数主語）なのでwere + 過去分詞。単数のwasは主語と一致しない。",
-    "rule": "Passive Voice",
-    "kp": [
-      "複数主語の受動態 → were + 過去分詞",
-      "be動詞は主語の数に一致させる"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "form",
-    "tags": [
-      "eikenpre2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "The ___ of a new bridge over the river will take two years.",
-    "ja": "川に新しい橋を建設するには2年かかる予定です。",
-    "answer": "construction",
-    "choices": [
-      "construction",
-      "construct",
-      "constructing",
-      "constructed",
-      "constructive"
-    ],
-    "expl": "冠詞Theの直後には名詞が必要。constructは動詞なのでここには置けない。派生名詞のconstructionが正解。",
-    "rule": "Word Formation: Verb to Noun",
-    "kp": [
-      "冠詞(The/A) + ___ + of → 名詞形が必要",
-      "construct → construction（派生名詞）"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "form",
-    "tags": [
-      "eikenpre2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "The ___ of new safety guidelines was welcomed by all employees.",
-    "ja": "新しい安全ガイドラインの導入は、全従業員に歓迎されました。",
-    "answer": "introduction",
-    "choices": [
-      "introduction",
-      "introduce",
-      "introducing",
-      "introduced",
-      "introductory"
-    ],
-    "expl": "冠詞Theの後に名詞が必要。introduceは動詞形なので不可。正しい派生名詞はintroduction。",
-    "rule": "Word Formation: Verb to Noun",
-    "kp": [
-      "冠詞の後は名詞形",
-      "introduce → introduction（派生名詞）"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "By the time the ambulance arrived, he ___ for over an hour.",
-    "ja": "救急車が到着した時には、彼は1時間以上待ち続けていました。",
-    "answer": "had been waiting",
-    "choices": [
-      "had been waiting",
-      "has been waiting",
-      "was waiting",
-      "had waited",
-      "were waiting"
-    ],
-    "expl": "「過去の時点（arrived）までずっと継続していた動作」はhad been + -ing（過去完了進行形）で表す。",
-    "rule": "Past Perfect Continuous",
-    "kp": [
-      "過去の時点まで継続 → had been + -ing",
-      "for + 期間 + when/by the time → 過去完了進行形"
+      "neither ... nor = AもBも～ない",
+      "either ... or / neither ... nor がペア"
     ]
   },
   {
@@ -434,8 +384,105 @@
       "eikenpre2",
       "toeic"
     ],
-    "stem": "After years of practice, she finally succeeded ___ mastering the violin.",
-    "ja": "何年もの練習の末、彼女はついにバイオリンをマスターすることに成功しました。",
+    "stem": "The outdoor event was canceled ___ the sudden heavy snowfall.",
+    "ja": "突然の大雪のため、野外イベントは中止になりました。",
+    "answer": "due to",
+    "choices": [
+      "due to",
+      "because",
+      "due that",
+      "because of to",
+      "since"
+    ],
+    "expl": "due to の後には名詞句が続きます。the sudden heavy snowfall は名詞句なので due to が正解です。because の後には節（S＋V）が必要です。",
+    "rule": "due to + 名詞",
+    "kp": [
+      "due to + 名詞句 / because + S + V（節）",
+      "owing to も同様に名詞句を取る"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "eikenpre2",
+      "juken"
+    ],
+    "stem": "The restaurant ___ we had our first date has unfortunately closed down.",
+    "ja": "私たちが初めてデートをしたレストランは残念ながら閉店してしまいました。",
+    "answer": "where",
+    "choices": [
+      "where",
+      "which",
+      "that",
+      "what",
+      "when"
+    ],
+    "expl": "先行詞 The restaurant は場所を表すので、関係副詞 where を使います。which を使うなら at which とする必要があります。",
+    "rule": "関係副詞 where",
+    "kp": [
+      "場所を表す先行詞には関係副詞 where を使う",
+      "where = at/in which と置き換えられる"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The number of complaints about the new product ___ surprisingly low.",
+    "ja": "新製品についての苦情の数は驚くほど少なかった。",
+    "answer": "was",
+    "choices": [
+      "was",
+      "were",
+      "have been",
+      "are",
+      "is being"
+    ],
+    "expl": "The number of + 複数名詞は「～の数」という意味で単数扱いです。過去の文脈なので was が正解です。",
+    "rule": "The number of（単数）vs A number of（複数）",
+    "kp": [
+      "The number of + 複数名詞 → 単数動詞（is/was）",
+      "A number of + 複数名詞 → 複数動詞（are/were）"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "All passengers are kindly requested to refrain ___ eating in the priority seating area.",
+    "ja": "優先座席エリアでの飲食はご遠慮くださいますようお願い申し上げます。",
+    "answer": "from",
+    "choices": [
+      "from",
+      "to",
+      "of",
+      "about",
+      "for"
+    ],
+    "expl": "refrain from + 動名詞（-ing）で「～を控える」という意味になります。refrain to や refrain of は誤りです。",
+    "rule": "refrain from -ing",
+    "kp": [
+      "refrain from + -ing = ～を控える",
+      "prevent from / prohibit from も同じパターン"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "After years of dedicated practice, she finally succeeded ___ becoming a professional dancer.",
+    "ja": "長年の献身的な練習の末、彼女はついてプロのダンサーになることに成功しました。",
     "answer": "in",
     "choices": [
       "in",
@@ -444,109 +491,84 @@
       "on",
       "with"
     ],
-    "expl": "「succeed in -ing」で「～することに成功する」という意味。toは使わない固定表現。",
-    "rule": "Succeed In + Gerund",
+    "expl": "succeed in + 動名詞（-ing）で「～に成功する」という意味になります。succeed to は「～を継ぐ」という別の意味になります。",
+    "rule": "succeed in -ing",
     "kp": [
-      "succeed in + -ing（toは不可）",
-      "in以外の前置詞も誤り"
+      "succeed in + -ing = ～に成功する（to は不可）",
+      "consist of / insist on / depend on も同パターン"
     ]
   },
   {
     "diff": "lv3",
-    "axis": "form",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "The documentary was ___, so I fell asleep halfway through.",
-    "ja": "そのドキュメンタリーは退屈だったので、途中で眠ってしまいました。",
-    "answer": "boring",
-    "choices": [
-      "boring",
-      "bored",
-      "bore",
-      "bores",
-      "been boring"
-    ],
-    "expl": "主語がThe documentary（物・事）なので、感情を引き起こす側を表す-ing形（boring）を使う。bored は人の感情を表す。",
-    "rule": "Participle Adjectives: -ing vs -ed",
-    "kp": [
-      "物・事が主語 → -ing形（boring, exciting）",
-      "人が感じる側 → -ed形（bored, excited）"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "form",
-    "tags": [
-      "eiken2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "___ by a professional chef, the dish tasted far better than we expected.",
-    "ja": "プロのシェフによって作られたので、その料理は私たちの期待よりもずっと美味しかった。",
-    "answer": "Prepared",
-    "choices": [
-      "Prepared",
-      "Preparing",
-      "Prepare",
-      "Having prepared",
-      "To prepare"
-    ],
-    "expl": "主語（the dish）は「作られる側」なので、受動の分詞構文として過去分詞Preparedで文を始める。",
-    "rule": "Participial Phrase (Passive)",
-    "kp": [
-      "主語が動作を受ける側 → 過去分詞で分詞構文を開始",
-      "Preparingでは能動の意味になり誤り"
-    ]
-  },
-  {
-    "diff": "lv4",
     "axis": "logic",
     "tags": [
-      "eiken2",
-      "toeic"
+      "eikenpre2",
+      "juken"
     ],
-    "stem": "Not only ___ the project on time, but she also exceeded all quality standards.",
-    "ja": "彼女はプロジェクトを期日通りに完成させただけでなく、すべての品質基準も超えました。",
-    "answer": "did she complete",
+    "stem": "The school ___ I studied for six years is located in the north part of the city.",
+    "ja": "私が6年間通った学校は市の北部にあります。",
+    "answer": "where",
     "choices": [
-      "did she complete",
-      "she completed",
-      "she did complete",
-      "does she complete",
-      "had she completed"
+      "where",
+      "which",
+      "what",
+      "who",
+      "that"
     ],
-    "expl": "否定語句「Not only」が文頭に来た場合、主節は倒置（助動詞 + S + 原形動詞）が必要。過去の文脈なのでdid she completeが正解。",
-    "rule": "Inversion after Not Only",
+    "expl": "先行詞 The school は場所を表すため、関係副詞 where を使います。which を使うなら at which または in which とする必要があります。",
+    "rule": "関係副詞 where",
     "kp": [
-      "Not onlyが文頭 → 倒置（助動詞 + S + 動詞の原形）が必要",
-      "倒置なしの語順は誤り"
+      "場所の先行詞には where（関係副詞）",
+      "which を使う場合は前置詞（at/in）が必要"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "A number of new employees ___ hired at the company this spring.",
+    "ja": "今春、その会社には多くの新入社員が採用されました。",
+    "answer": "were",
+    "choices": [
+      "were",
+      "was",
+      "is",
+      "has been",
+      "have"
+    ],
+    "expl": "A number of は「多くの」という意味で複数扱いです。受動態の過去形は were + pp になります。",
+    "rule": "The number of（単数）vs A number of（複数）",
+    "kp": [
+      "A number of + 複数名詞 → 複数動詞（are/were）",
+      "The number of は単数扱いと区別する"
     ]
   },
   {
     "diff": "lv4",
-    "axis": "form",
+    "axis": "trap",
     "tags": [
       "eiken2",
-      "toeic",
-      "juken"
+      "toeic"
     ],
-    "stem": "___ in warm water, the fabric became soft and smooth.",
-    "ja": "温水に浸されたので、その布地は柔らかくなめらかになりました。",
-    "answer": "Soaked",
+    "stem": "I would rather you ___ the documents without my permission.",
+    "ja": "私の許可なしにその書類を共有してほしくありません。",
+    "answer": "didn't share",
     "choices": [
-      "Soaked",
-      "Soaking",
-      "Soak",
-      "Having soaked",
-      "To soak"
+      "didn't share",
+      "don't share",
+      "not share",
+      "hadn't shared",
+      "won't share"
     ],
-    "expl": "主語the fabricは「浸される側」なので受動の分詞構文として過去分詞Soakedで始める。Soakingでは能動の意味になり不適切。",
-    "rule": "Participial Phrase (Passive)",
+    "expl": "would rather + S + 過去形は仮定法的表現で、「Sに～してほしくない」という意味を表します。didn't share が正解です。",
+    "rule": "would rather + S + 過去形",
     "kp": [
-      "受動の分詞構文 → 過去分詞で開始",
-      "主語が動作を受ける側かどうかを確認する"
+      "would rather + S + 過去形（仮定法的用法）",
+      "現在形 don't や原形 not share は誤り"
     ]
   },
   {
@@ -557,21 +579,69 @@
       "toeic",
       "juken"
     ],
-    "stem": "It is high time the company ___ its outdated policies.",
-    "ja": "会社はそろそろ時代遅れの方針を見直すべき時です。",
-    "answer": "revised",
+    "stem": "It is high time the students ___ their study habits before the final exams.",
+    "ja": "期末試験の前に、学生たちはそろそろ学習習慣を改めるべきです。",
+    "answer": "changed",
     "choices": [
-      "revised",
-      "revise",
-      "will revise",
-      "has revised",
-      "is revising"
+      "changed",
+      "change",
+      "will change",
+      "to change",
+      "have changed"
     ],
-    "expl": "「It is high time + S + 過去形」（仮定法的用法）で「そろそろ～すべき時だ」を表す。原形やwillは使わない。",
-    "rule": "It Is Time + Past Tense (Subjunctive)",
+    "expl": "It is high time + S + 過去形は仮定法的表現で「そろそろ～すべきだ」という意味です。現在形や will は使いません。",
+    "rule": "It is (high) time + S + 過去形",
     "kp": [
-      "It is high time + S + 過去形（仮定法）",
-      "原形やwillは使わない"
+      "It is high time + S + 過去形 = そろそろ～すべき",
+      "現在形・will は不可。仮定法的に過去形を使う"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "eiken2",
+      "juken"
+    ],
+    "stem": "___ the manager consulted the legal team earlier, this costly dispute could have been avoided.",
+    "ja": "部長がもっと早く法務チームに相談していれば、この高くついた争いは避けられたでしょう。",
+    "answer": "Had",
+    "choices": [
+      "Had",
+      "If",
+      "Should",
+      "Were",
+      "Have"
+    ],
+    "expl": "If を省略して仮定法過去完了の倒置を作る場合、Had + S + 過去分詞の語順になります。",
+    "rule": "仮定法過去完了の倒置",
+    "kp": [
+      "If S had pp → Had S pp（Ifを省略した倒置）",
+      "帰結節は would have + pp になる"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "Not only ___ the new software save time, but it also significantly reduces costs.",
+    "ja": "その新しいソフトウェアは時間を節約するだけでなく、コストも大幅に削減します。",
+    "answer": "does",
+    "choices": [
+      "does",
+      "do",
+      "is",
+      "has",
+      "will"
+    ],
+    "expl": "否定語句 Not only が文頭に来ると主語と助動詞が倒置します。主語 the new software は三人称単数・現在形なので does が正解です。",
+    "rule": "Not only の倒置",
+    "kp": [
+      "Not only が文頭 → 助動詞 + S の倒置",
+      "三人称単数・現在形なので does を使う"
     ]
   },
   {
@@ -581,21 +651,67 @@
       "eikenpre1",
       "toeic"
     ],
-    "stem": "The revised labor law will come ___ force at the beginning of next year.",
-    "ja": "改正された労働法は来年の初めに施行されます。",
+    "stem": "The updated privacy policy will come ___ effect on the first of next month.",
+    "ja": "改訂されたプライバシーポリシーは来月1日に施行されます。",
     "answer": "into",
     "choices": [
       "into",
       "in",
       "to",
       "under",
-      "with"
+      "on"
     ],
-    "expl": "「come into force」で「施行される、発効する」という意味の固定表現。inやtoでは成立しない。",
-    "rule": "Come Into Effect (Fixed Expression)",
+    "expl": "「施行される・発効する」という意味の固定表現は come into effect です。in や to では意味をなしません。",
+    "rule": "come into effect",
     "kp": [
-      "come into force/effect = 施行される・発効する",
-      "into が必須（in や to は不可）"
+      "come into effect/force = 施行される、発効する",
+      "into が正しい前置詞（in や to は誤り）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "tense",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "My little sister ___ her homework two hours ago.",
+    "ja": "私の妹は2時間前に宿題をした。",
+    "answer": "finished",
+    "choices": [
+      "finished",
+      "finishes",
+      "has finished",
+      "finish",
+      "is finishing"
+    ],
+    "expl": "「two hours ago（2時間前）」は過去を示すキーシグナルなので、過去形 finished を使います。現在完了（has finished）は ago とは使えません。",
+    "rule": "過去形（規則・不規則）",
+    "kp": [
+      "ago / yesterday / last ~ → 過去形",
+      "現在完了と ago は共存不可"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "tense",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "We ___ a great time at the festival last weekend.",
+    "ja": "私たちは先週末、フェスティバルでとても楽しい時間を過ごした。",
+    "answer": "had",
+    "choices": [
+      "had",
+      "have",
+      "haved",
+      "have had",
+      "were having"
+    ],
+    "expl": "「last weekend（先週末）」が過去のシグナルです。have の過去形は不規則変化で had になります。haved という形は存在しません。",
+    "rule": "過去形（規則・不規則）",
+    "kp": [
+      "have の過去形は had（不規則変化）",
+      "last ~ → 過去形"
     ]
   },
   {
@@ -604,21 +720,21 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "My sister ___ a doctor at the city hospital.",
-    "ja": "私の姉は市立病院の医師です。",
+    "stem": "There ___ a big dog in front of the gate.",
+    "ja": "門の前に大きな犬が1匹いる。",
     "answer": "is",
     "choices": [
       "is",
       "are",
-      "am",
-      "be",
-      "was"
+      "have",
+      "has",
+      "be"
     ],
-    "expl": "主語 My sister は三人称単数なので、be動詞は is を使います。",
-    "rule": "be動詞の人称一致",
+    "expl": "「a big dog」は単数名詞なので、There is を使います。複数なら There are、存在を表すのに have/has は使いません。",
+    "rule": "There is / There are",
     "kp": [
-      "He/She/It → is",
-      "主語の人称・数でbe動詞を決める"
+      "There is + 単数名詞",
+      "存在を表す構文は There is/are（have は不可）"
     ]
   },
   {
@@ -627,146 +743,77 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "Tom and Ken ___ best friends.",
-    "ja": "トムとケンは親友同士です。",
+    "stem": "There ___ three apples on the kitchen table.",
+    "ja": "キッチンのテーブルの上にリンゴが3個ある。",
     "answer": "are",
     "choices": [
       "are",
       "is",
-      "am",
+      "have",
       "be",
       "were"
     ],
-    "expl": "Tom and Ken は複数主語なので be動詞は are を使います。am は I にのみ使えます。",
-    "rule": "be動詞の人称一致",
+    "expl": "「three apples」は複数名詞なので There are を使います。単数なら There is ですが、ここでは3個（複数）なので are が正解です。",
+    "rule": "There is / There are",
     "kp": [
-      "複数主語 → are",
-      "and で結ばれた主語は複数扱い"
+      "There are + 複数名詞",
+      "後続の名詞が単数か複数かで is/are を使い分ける"
     ]
   },
   {
     "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "Our English teacher ___ a lot of jokes in class.",
-    "ja": "私たちの英語の先生は授業中によくジョークを言います。",
-    "answer": "tells",
-    "choices": [
-      "tells",
-      "tell",
-      "told",
-      "telling",
-      "is tell"
-    ],
-    "expl": "主語 Our English teacher は三人称単数なので、一般動詞に -s を付けて tells とします。",
-    "rule": "一般動詞の三単現",
-    "kp": [
-      "三人称単数現在 → 動詞に -s",
-      "主語がhe/she/it相当かどうか確認する"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "All the students ___ English after school on Fridays.",
-    "ja": "すべての生徒は毎週金曜日の放課後に英語を勉強します。",
-    "answer": "study",
-    "choices": [
-      "study",
-      "studies",
-      "studied",
-      "studying",
-      "to study"
-    ],
-    "expl": "主語 All the students は複数なので動詞に -s は付けず、原形 study を使います。",
-    "rule": "一般動詞の三単現",
-    "kp": [
-      "複数主語 → 動詞は原形のまま",
-      "三単現の -s は三人称単数のみ"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "Listen! Someone ___ the guitar in the next room right now.",
-    "ja": "聞いて！今、隣の部屋で誰かがギターを弾いています。",
-    "answer": "is playing",
-    "choices": [
-      "is playing",
-      "plays",
-      "play",
-      "played",
-      "will play"
-    ],
-    "expl": "right now という語が現在進行中の動作を示しているため、現在進行形 is playing を使います。",
-    "rule": "現在進行形",
-    "kp": [
-      "right now → 現在進行形 (am/is/are + V-ing)",
-      "be動詞を忘れずに使う"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "I ___ you a call as soon as I get home tomorrow.",
-    "ja": "明日、家に着いたらすぐに電話します。",
-    "answer": "will give",
-    "choices": [
-      "will give",
-      "will gives",
-      "will to give",
-      "give",
-      "gave"
-    ],
-    "expl": "tomorrow があり未来の意志を表すため will を使います。will の後は必ず動詞の原形が続きます。",
-    "rule": "未来形 will",
-    "kp": [
-      "tomorrow → will + 動詞原形",
-      "will の後に -s や to は付けない"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "vocab",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "My younger brother is not very good ___ swimming.",
-    "ja": "私の弟は水泳があまり得意ではありません。",
-    "answer": "at",
-    "choices": [
-      "at",
-      "in",
-      "for",
-      "on",
-      "with"
-    ],
-    "expl": "「～が得意・不得意」は be good/bad at で表します。in や for は不可です。",
-    "rule": "be good at",
-    "kp": [
-      "be good at + 名詞/-ing = ～が得意",
-      "good at は前置詞 at とセット"
-    ]
-  },
-  {
-    "diff": "lv2",
     "axis": "logic",
     "tags": [
-      "eiken3"
+      "eiken4"
     ],
-    "stem": "Could you give me something ___ eat? I'm starving.",
-    "ja": "何か食べるものをもらえますか？お腹がペコペコです。",
+    "stem": "___ your mother cook dinner every evening?",
+    "ja": "あなたのお母さんは毎晩夕食を作りますか？",
+    "answer": "Does",
+    "choices": [
+      "Does",
+      "Do",
+      "Is",
+      "Has",
+      "Did"
+    ],
+    "expl": "主語が三人称単数（your mother）の一般動詞の疑問文には Does を使い、動詞は原形にします。Is は be 動詞の疑問文に使うもので誤りです。",
+    "rule": "一般動詞の疑問文",
+    "kp": [
+      "三人称単数 + 一般動詞 → Does + 原形",
+      "be動詞の疑問文と混同しない"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "logic",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "___ your classmates walk to school every day?",
+    "ja": "あなたのクラスメートたちは毎日歩いて学校に来ますか？",
+    "answer": "Do",
+    "choices": [
+      "Do",
+      "Does",
+      "Are",
+      "Is",
+      "Have"
+    ],
+    "expl": "主語が複数（your classmates）の一般動詞の疑問文には Do を使います。三人称単数なら Does ですが、ここでは複数なので Do が正解です。",
+    "rule": "一般動詞の疑問文",
+    "kp": [
+      "複数主語 + 一般動詞 → Do + 原形",
+      "Are は be動詞の疑問文に使う"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "logic",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "Could you give me something ___ write with? I lost my pen.",
+    "ja": "何か書くものをもらえますか？ペンをなくしてしまいました。",
     "answer": "to",
     "choices": [
       "to",
@@ -775,58 +822,82 @@
       "with",
       "and"
     ],
-    "expl": "something の後に動詞で修飾するときは something to + 動詞原形 の形を使います。for は不可です。",
+    "expl": "「something + to + 動詞原形」の形で「～するための何か」を表します。for や -ing ではなく、to + 原形（不定詞の形容詞的用法）が正しい形です。",
     "rule": "不定詞の形容詞的用法",
     "kp": [
-      "something to + 動詞原形 = ～するための何か",
-      "-thing / -one / -where の後は to + 原形"
+      "-thing/-one/-where + to + 動詞原形",
+      "forではなくtoを使う"
     ]
   },
   {
-    "diff": "lv2",
-    "axis": "logic",
+    "diff": "lv1",
+    "axis": "vocab",
     "tags": [
-      "eiken3"
+      "eiken4"
     ],
-    "stem": "I'm not sure ___ the train will arrive on time or not.",
-    "ja": "電車が時間通りに着くかどうか分かりません。",
-    "answer": "whether",
+    "stem": "I can't find my glasses. Could you help me ___ for them?",
+    "ja": "メガネが見つかりません。探すのを手伝ってもらえますか？",
+    "answer": "look",
     "choices": [
-      "whether",
-      "what",
-      "that",
-      "if not",
-      "which"
+      "look",
+      "see",
+      "watch",
+      "find",
+      "search"
     ],
-    "expl": "「～かどうか」は whether を使い、or not と組み合わせます。that や what は or not と共には使えません。",
-    "rule": "whether ... or not",
+    "expl": "「look for ～」で「～を探す」という意味の句動詞です。see や watch は「見る」、find は「見つける」なので文意に合いません。",
+    "rule": "句動詞 look up / look for / look at",
     "kp": [
-      "whether ... or not = ～かどうか",
-      "or not と一緒に使えるのは whether のみ"
+      "look for = 探す",
+      "look up = 調べる、look at = 見る と区別する"
     ]
   },
   {
     "diff": "lv2",
-    "axis": "trap",
+    "axis": "tense",
     "tags": [
       "eiken3",
-      "toeic"
+      "juken"
     ],
-    "stem": "We are all looking forward ___ working with the new team members.",
-    "ja": "私たちは皆、新しいチームメンバーと一緒に働くことを楽しみにしています。",
-    "answer": "to",
+    "stem": "My uncle ___ in this neighborhood for over twenty years.",
+    "ja": "私の叔父はこの近所に20年以上住んでいる。",
+    "answer": "has lived",
     "choices": [
-      "to",
-      "for",
-      "at",
-      "of",
-      "toward"
+      "has lived",
+      "lived",
+      "is living",
+      "lives",
+      "had lived"
     ],
-    "expl": "look forward to の to は前置詞なので、後ろには動名詞（-ing形）が続きます。",
-    "rule": "look forward to + -ing",
+    "expl": "「for over twenty years（20年以上）」は期間を示す現在完了のシグナルです。過去形 lived では「今も続いている」ことが表せません。",
+    "rule": "現在完了（継続）",
     "kp": [
-      "look forward to + -ing（to は前置詞）",
-      "to の後に動詞の原形を置かないよう注意"
+      "for + 期間 → 現在完了（継続）",
+      "sinceは時点、forは期間と組み合わせる"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She ___ this company since she graduated from university.",
+    "ja": "彼女は大学を卒業してからずっとこの会社で働いている。",
+    "answer": "has worked for",
+    "choices": [
+      "has worked for",
+      "worked for",
+      "is working for",
+      "works for",
+      "had worked for"
+    ],
+    "expl": "「since she graduated（卒業してから）」は現在完了のシグナルです。since と進行形の組み合わせは不自然で、過去形も使えません。",
+    "rule": "現在完了（継続）",
+    "kp": [
+      "since + 時点 → 現在完了（継続）",
+      "sinceと過去形・進行形は不自然"
     ]
   },
   {
@@ -836,21 +907,45 @@
       "eiken3",
       "juken"
     ],
-    "stem": "This year's harvest was much ___ than last year's due to the drought.",
-    "ja": "干ばつのせいで、今年の収穫量は昨年よりずっと悪かった。",
-    "answer": "worse",
+    "stem": "He speaks Japanese ___ than any other student in his class.",
+    "ja": "彼はクラスの他のどの生徒よりも上手に日本語を話す。",
+    "answer": "better",
     "choices": [
-      "worse",
-      "more bad",
-      "badder",
-      "worst",
-      "more worse"
+      "better",
+      "more good",
+      "gooder",
+      "more well",
+      "best"
     ],
-    "expl": "bad の比較級は不規則変化で worse になります。more bad や badder は誤りです。",
+    "expl": "well の比較級は better です。「more good」「gooder」「more well」はすべて誤りで、不規則変化の比較級 better を使います。",
     "rule": "不規則比較級",
     "kp": [
-      "bad → worse → worst（不規則変化）",
-      "more bad / badder は誤り"
+      "good/well → better → best（不規則変化）",
+      "more good / gooder は不可"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "The girl ___ is wearing a red dress is my cousin.",
+    "ja": "赤いドレスを着ている女の子は私のいとこです。",
+    "answer": "who",
+    "choices": [
+      "who",
+      "which",
+      "what",
+      "whom",
+      "whose"
+    ],
+    "expl": "先行詞が「人（the girl）」で、関係詞節の中で主語の役割を担うため、主格の関係代名詞 who を使います。which は物に使います。",
+    "rule": "関係代名詞 who（主格）",
+    "kp": [
+      "先行詞が人・主格 → who",
+      "物には which または that を使う"
     ]
   },
   {
@@ -861,712 +956,46 @@
       "juken",
       "toeic"
     ],
-    "stem": "Before you ___ the building, please show your ID at the reception desk.",
-    "ja": "建物に入る前に、受付でIDを提示してください。",
-    "answer": "enter",
-    "choices": [
-      "enter",
-      "will enter",
-      "entered",
-      "are entering",
-      "would enter"
-    ],
-    "expl": "Before が導く時の副詞節の中では、未来の内容でも現在形を使います。will enter は誤りです。",
-    "rule": "時・条件の副詞節では現在形",
-    "kp": [
-      "before/when/if 節の中は現在形（未来でも）",
-      "副詞節の中では will を使わない"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "trap",
-    "tags": [
-      "eiken3",
-      "toeic",
-      "juken"
-    ],
-    "stem": "The strict teacher made all the students ___ their essays three times.",
-    "ja": "その厳しい先生は生徒全員に作文を3回書き直させました。",
-    "answer": "rewrite",
-    "choices": [
-      "rewrite",
-      "to rewrite",
-      "rewriting",
-      "rewrote",
-      "rewritten"
-    ],
-    "expl": "使役動詞 make は make + O + 動詞原形 の形を取ります。to や -ing は不要です。",
-    "rule": "使役動詞 make + O + 原形",
-    "kp": [
-      "make + O + 動詞原形（to なし）",
-      "make/let/have の後の目的語には原形不定詞"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "logic",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "Neither the president ___ the vice president was available for the interview.",
-    "ja": "社長も副社長も、そのインタビューには対応できませんでした。",
-    "answer": "nor",
-    "choices": [
-      "nor",
-      "or",
-      "and",
-      "but",
-      "not"
-    ],
-    "expl": "neither と対をなすのは nor です。neither A nor B で「AもBも～ない」を表します。",
-    "rule": "neither A nor B",
-    "kp": [
-      "neither ... nor = AもBも～ない",
-      "neither の相関語は nor（or ではない）"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "trap",
-    "tags": [
-      "eiken3",
-      "toeic"
-    ],
-    "stem": "I am really looking forward to ___ my old friends at the reunion next week.",
-    "ja": "来週の同窓会で旧友たちに会うのをとても楽しみにしています。",
-    "answer": "meeting",
-    "choices": [
-      "meeting",
-      "meet",
-      "met",
-      "be meeting",
-      "have met"
-    ],
-    "expl": "look forward to の to は前置詞なので、後ろには動名詞 -ing 形が必要です。原形の meet は誤りです。",
-    "rule": "look forward to + -ing",
-    "kp": [
-      "look forward to + V-ing（to は前置詞）",
-      "to の直後に動詞原形を置くと誤り"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "My performance in the competition was ___ than I had expected.",
-    "ja": "大会での私のパフォーマンスは、思っていたよりも良かった。",
-    "answer": "better",
-    "choices": [
-      "better",
-      "more good",
-      "gooder",
-      "more better",
-      "best"
-    ],
-    "expl": "good の比較級は不規則変化で better になります。more good や gooder は誤りです。",
-    "rule": "不規則比較級",
-    "kp": [
-      "good → better → best（不規則変化）",
-      "more good は誤り"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "form",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "These old files need to be ___ before the end of the fiscal year.",
-    "ja": "これらの古いファイルは、会計年度末までに整理される必要があります。",
-    "answer": "organized",
-    "choices": [
-      "organized",
-      "organize",
-      "organizing",
-      "be organized",
-      "have organized"
-    ],
-    "expl": "主語 These old files は動作を受ける側なので、need to be + 過去分詞 の受動態不定詞を使います。",
-    "rule": "受動態の不定詞",
-    "kp": [
-      "need to be + pp = ～される必要がある",
-      "主語が動作を受ける側 → to be + 過去分詞"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "Visitors are requested to refrain ___ taking photographs inside the museum.",
-    "ja": "来館者は博物館内での写真撮影を控えるよう求められています。",
-    "answer": "from",
-    "choices": [
-      "from",
-      "to",
-      "of",
-      "in",
-      "about"
-    ],
-    "expl": "refrain from + -ing で「～を控える」を表します。to は使えません。",
-    "rule": "refrain from -ing",
-    "kp": [
-      "refrain from + V-ing = ～を控える",
-      "from を忘れずに入れる"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "trap",
-    "tags": [
-      "eikenpre2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "A number of volunteers ___ gathered to help clean up the park.",
-    "ja": "多くのボランティアが公園の清掃を手伝うために集まりました。",
-    "answer": "have",
-    "choices": [
-      "have",
-      "has",
-      "is",
-      "was",
-      "having"
-    ],
-    "expl": "A number of は「多くの」という意味で複数扱いのため、動詞は複数形 have を使います。The number of なら単数扱いです。",
-    "rule": "The number of（単数）vs A number of（複数）",
-    "kp": [
-      "A number of + 複数名詞 → 複数動詞",
-      "The number of + 複数名詞 → 単数動詞"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "After months of hard work, the team finally succeeded ___ developing the new software.",
-    "ja": "数ヶ月の努力の末、チームはついに新しいソフトウェアの開発に成功しました。",
-    "answer": "in",
-    "choices": [
-      "in",
-      "to",
-      "at",
-      "on",
-      "for"
-    ],
-    "expl": "succeed in + -ing で「～に成功する」を表します。to は使えません。",
-    "rule": "succeed in -ing",
-    "kp": [
-      "succeed in + V-ing = ～に成功する",
-      "succeed to は「～を継ぐ」という別の意味"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "form",
-    "tags": [
-      "eikenpre2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "The ___ of the new airport is expected to boost the regional economy.",
-    "ja": "新空港の建設は地域経済を活性化させることが期待されています。",
-    "answer": "construction",
-    "choices": [
-      "construction",
-      "construct",
-      "constructing",
-      "constructed",
-      "constructive"
-    ],
-    "expl": "冠詞 The の直後には名詞が必要です。construct（動詞）ではなく派生名詞 construction が正解です。",
-    "rule": "品詞変換（動詞→名詞）",
-    "kp": [
-      "冠詞(The/A) + ___ + of → 名詞形が必要",
-      "construct → construction（派生名詞）"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "The engineers ___ on the problem for two days when the solution was finally found.",
-    "ja": "解決策がついに見つかったとき、技術者たちはその問題に2日間取り組み続けていた。",
-    "answer": "had been working",
-    "choices": [
-      "had been working",
-      "have been working",
-      "were working",
-      "worked",
-      "had worked"
-    ],
-    "expl": "過去のある時点（解決策が見つかった時）まで継続していた動作を表すため、過去完了進行形 had been + -ing を使います。",
-    "rule": "過去完了進行形",
-    "kp": [
-      "過去の時点まで継続 → had been + V-ing",
-      "for + 期間が続く場合は完了進行形が自然"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "Passengers are kindly asked to refrain ___ eating or drinking in the priority seats.",
-    "ja": "乗客の皆様には、優先席での飲食をお控えいただくようお願い申し上げます。",
-    "answer": "from",
-    "choices": [
-      "from",
-      "to",
-      "in",
-      "of",
-      "against"
-    ],
-    "expl": "refrain from + -ing で「～を控える」を表します。from が必ず必要です。",
-    "rule": "refrain from -ing",
-    "kp": [
-      "refrain from + V-ing（from は省略不可）",
-      "prevent / prohibit も同じく from + -ing"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "logic",
-    "tags": [
-      "eikenpre2",
-      "juken"
-    ],
-    "stem": "___ tired she felt, she never gave up on her dream.",
-    "ja": "どんなに疲れを感じていても、彼女は夢を諦めることはなかった。",
-    "answer": "However",
-    "choices": [
-      "However",
-      "Whatever",
-      "Whenever",
-      "Wherever",
-      "Whoever"
-    ],
-    "expl": "「どんなに～しても」と形容詞 tired を修飾するには however を使います。whatever は名詞を修飾します。",
-    "rule": "複合関係副詞 however",
-    "kp": [
-      "however + 形容詞/副詞 = どんなに～でも",
-      "whatever は名詞を修飾するので形容詞単独には使えない"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "tense",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "If she ___ the instructions more carefully, she wouldn't have made so many mistakes.",
-    "ja": "もし彼女がもっと注意深く説明書を読んでいたら、あれほど多くのミスをしなかっただろう。",
-    "answer": "had read",
-    "choices": [
-      "had read",
-      "read",
-      "has read",
-      "would have read",
-      "would read"
-    ],
-    "expl": "過去の事実に反する仮定を表す仮定法過去完了では、if節に had + 過去分詞を使います。",
-    "rule": "仮定法過去完了",
-    "kp": [
-      "If + had + pp, would have + pp（仮定法過去完了）",
-      "過去の事実と異なる仮定には had + pp"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "vocab",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "The union representative insisted ___ reviewing the contract before signing it.",
-    "ja": "組合代表は署名する前に契約書を見直すことを主張しました。",
-    "answer": "on",
-    "choices": [
-      "on",
-      "to",
-      "in",
-      "for",
-      "about"
-    ],
-    "expl": "insist on + -ing で「～することを主張する」を表します。insist to は誤りです。",
-    "rule": "insist on -ing",
-    "kp": [
-      "insist on + V-ing = ～することを主張する",
-      "on の後は動詞原形ではなく -ing 形"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "tense",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "If the management ___ the warning signs earlier, the financial crisis could have been avoided.",
-    "ja": "もし経営陣がもっと早く警告のサインに気づいていたら、財政危機は避けられていただろう。",
-    "answer": "had noticed",
-    "choices": [
-      "had noticed",
-      "noticed",
-      "would notice",
-      "have noticed",
-      "would have noticed"
-    ],
-    "expl": "過去の事実に反する仮定法過去完了では if 節に had + 過去分詞を用います。",
-    "rule": "仮定法過去完了",
-    "kp": [
-      "If + had + pp = 過去の事実に反する仮定",
-      "帰結節は could/would have + pp"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "tense",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "If only we ___ a backup copy of the data, we wouldn't be in this situation now.",
-    "ja": "もしデータのバックアップコピーを作成していたなら、今こんな状況にはなっていないのに。",
-    "answer": "had made",
-    "choices": [
-      "had made",
-      "made",
-      "have made",
-      "would make",
-      "would have made"
-    ],
-    "expl": "過去の事実に反する後悔・願望を表す If only の構文でも、仮定法過去完了を使って had + 過去分詞とします。",
-    "rule": "仮定法過去完了",
-    "kp": [
-      "If only + had + pp = ～していたなら（後悔・願望）",
-      "主節の would have + pp と対応させる"
-    ]
-  },
-  {
-    "diff": "lv5",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre1",
-      "toeic"
-    ],
-    "stem": "The amended tax code will come ___ effect from the first day of next quarter.",
-    "ja": "改正された税法は、来四半期の初日から施行されます。",
-    "answer": "into",
-    "choices": [
-      "into",
-      "in",
-      "to",
-      "under",
-      "on"
-    ],
-    "expl": "「施行される・発効する」は come into effect という固定表現です。in や to は使えません。",
-    "rule": "come into effect",
-    "kp": [
-      "come into effect/force = 施行される・発効する",
-      "into を in や to と混同しない"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "My cat ___ on the sofa every afternoon.",
-    "ja": "私の猫は毎日午後ソファの上で寝ます。",
-    "answer": "sleeps",
-    "choices": [
-      "sleeps",
-      "sleep",
-      "slept",
-      "sleeping",
-      "is sleep"
-    ],
-    "expl": "主語 My cat は三人称単数なので、一般動詞に -s を付けて sleeps とする。",
-    "rule": "一般動詞の三単現",
-    "kp": [
-      "He/She/It + 動詞-s",
-      "三人称単数主語には必ず-sを付ける"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "My parents ___ very proud of me.",
-    "ja": "私の両親は私をとても誇りに思っています。",
-    "answer": "are",
-    "choices": [
-      "are",
-      "is",
-      "am",
-      "be",
-      "were"
-    ],
-    "expl": "主語 My parents は複数なので、be動詞は are を使う。is は三人称単数用、am は I 専用。",
-    "rule": "be動詞の人称一致",
-    "kp": [
-      "複数主語 → are",
-      "I → am / He/She/It → is"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "She ___ to the library last Saturday.",
-    "ja": "彼女は先週の土曜日に図書館へ行きました。",
-    "answer": "went",
-    "choices": [
-      "went",
-      "goes",
-      "go",
-      "going",
-      "has gone"
-    ],
-    "expl": "last Saturday という過去の時間表現があるので、go の不規則過去形 went を使う。",
-    "rule": "過去形（規則・不規則）",
-    "kp": [
-      "last ~ → 過去形",
-      "go の過去形は went（不規則変化）"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "Dad ___ a nap on the couch right now.",
-    "ja": "お父さんは今まさにソファで昼寝をしています。",
-    "answer": "is taking",
-    "choices": [
-      "is taking",
-      "takes",
-      "take",
-      "was taking",
-      "has taken"
-    ],
-    "expl": "right now は現在進行中の動作を示すシグナルなので、am/is/are + V-ing の形を使う。",
-    "rule": "現在進行形",
-    "kp": [
-      "right now → 現在進行形",
-      "S + is/are + V-ing"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "There ___ a beautiful park near our school.",
-    "ja": "私たちの学校の近くに美しい公園があります。",
-    "answer": "is",
-    "choices": [
-      "is",
-      "are",
-      "have",
-      "has",
-      "be"
-    ],
-    "expl": "後続する名詞 a beautiful park は単数なので、There is を使う。There have / There has は存在表現として不可。",
-    "rule": "There is / There are",
-    "kp": [
-      "There is + 単数名詞",
-      "後ろの名詞の数でis/areを決める"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "I ___ you tomorrow morning without fail.",
-    "ja": "明日の朝、必ずあなたに電話します。",
-    "answer": "will call",
-    "choices": [
-      "will call",
-      "will calls",
-      "called",
-      "am calling",
-      "call"
-    ],
-    "expl": "tomorrow という未来の時間表現があるので S + will + 動詞原形 を使う。will の後は必ず原形。",
-    "rule": "未来形 will",
-    "kp": [
-      "tomorrow → will + 動詞原形",
-      "will の後は必ず原形（-s / -ed 不可）"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "logic",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "I'm hungry. Is there anything ___ eat in the fridge?",
-    "ja": "お腹が空いています。冷蔵庫に何か食べるものはありますか？",
-    "answer": "to",
-    "choices": [
-      "to",
-      "for",
-      "of",
-      "with",
-      "about"
-    ],
-    "expl": "anything のような -thing + to + 動詞原形 の形（不定詞の形容詞的用法）が正しい。for + -ing や of + -ing は不可。",
-    "rule": "不定詞の形容詞的用法",
-    "kp": [
-      "-thing / -one / -where + to + 動詞原形",
-      "forやofではなくtoを使う"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "vocab",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "I can't find my keys. I've been ___ for them everywhere.",
-    "ja": "鍵が見つかりません。どこでも探し続けています。",
-    "answer": "looking",
-    "choices": [
-      "looking",
-      "watching",
-      "seeing",
-      "finding",
-      "searching"
-    ],
-    "expl": "look for は「探す」という意味の句動詞。この文では look for them（鍵を探す）が適切。",
-    "rule": "句動詞 look up / look for / look at",
-    "kp": [
-      "look for = 探す",
-      "look up = 調べる / look at = 見る"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "tense",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "She ___ in this city for ten years.",
-    "ja": "彼女はこの街に10年間住んでいます。",
-    "answer": "has lived",
-    "choices": [
-      "has lived",
-      "lived",
-      "is living",
-      "had lived",
-      "was living"
-    ],
-    "expl": "for + 期間（ten years）は現在完了（継続）のシグナル。has lived が正解。単純過去の lived は for との組み合わせで継続を表せない。",
-    "rule": "現在完了（継続）",
-    "kp": [
-      "for + 期間 → 現在完了 have/has + pp",
-      "sinceは時点、forは期間"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "tense",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "When the train arrived, the passengers ___ already ___ for thirty minutes.",
-    "ja": "電車が到着したとき、乗客たちはすでに30分間待っていた。",
-    "answer": "had been waiting",
-    "choices": [
-      "had been waiting",
-      "have been waiting",
-      "were waiting",
-      "had waited",
-      "waited"
-    ],
-    "expl": "過去のある時点（電車到着）より前から継続していた動作を表すので、過去完了進行形 had been + V-ing を使う。",
-    "rule": "過去完了進行形",
-    "kp": [
-      "過去の時点まで動作が継続 → had been + -ing",
-      "for / since + 過去完了進行形の組み合わせ"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "tense",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "After he ___ his homework, he can watch TV.",
-    "ja": "宿題が終わったら、テレビを見てもいいですよ。",
+    "stem": "After she ___ the email, she will send it to her manager.",
+    "ja": "彼女はそのメールを書き終えたら、上司に送るつもりだ。",
     "answer": "finishes",
     "choices": [
       "finishes",
       "will finish",
       "finished",
-      "has finished",
-      "finish"
+      "is finishing",
+      "has finishing"
     ],
-    "expl": "After に導かれる時の副詞節では、未来のことでも現在形を使う。will finish は不可。",
+    "expl": "After が導く時の副詞節では、未来のことでも現在形を使います。「will finish」は after 節内では使えません。",
     "rule": "時・条件の副詞節では現在形",
     "kp": [
-      "after / when / before / until 節の中は現在形（未来でも）",
-      "will は時・条件節に使えない"
+      "after/when/before/until 節内は現在形（未来でも）",
+      "if/when節内でwillは使わない"
     ]
   },
   {
     "diff": "lv2",
-    "axis": "form",
+    "axis": "tense",
     "tags": [
       "eiken3",
+      "juken",
       "toeic"
     ],
-    "stem": "The ___ you got from the doctor is very helpful.",
-    "ja": "医者からもらったアドバイスはとても役に立ちます。",
-    "answer": "advice",
+    "stem": "If you ___ hard enough, you will pass the entrance exam.",
+    "ja": "十分に一生懸命勉強すれば、入学試験に合格できるだろう。",
+    "answer": "study",
     "choices": [
-      "advice",
-      "advices",
-      "advise",
-      "informations",
-      "datas"
+      "study",
+      "will study",
+      "studied",
+      "are studying",
+      "would study"
     ],
-    "expl": "advice は不可算名詞なので複数形 advices は存在しない。動詞 advise と混同しないよう注意。",
-    "rule": "不可算名詞は単数扱い",
+    "expl": "条件を表す if 節の中では、未来のことでも現在形を使います。「will study」は if 節内では使えません。",
+    "rule": "時・条件の副詞節では現在形",
     "kp": [
-      "advice / information / news → 不可算名詞（複数形なし）",
-      "不可算名詞には a / -s を付けない"
+      "if節内はwillを使わず現在形",
+      "条件節と帰結節（will + 原形）の区別"
     ]
   },
   {
@@ -1576,8 +1005,8 @@
       "eiken3",
       "toeic"
     ],
-    "stem": "I'm really looking forward ___ visiting the new art museum next weekend.",
-    "ja": "来週末、新しい美術館を訪れることをとても楽しみにしています。",
+    "stem": "My colleagues and I are really looking forward ___ starting the new project next month.",
+    "ja": "同僚たちと私は来月新しいプロジェクトを始めることをとても楽しみにしている。",
     "answer": "to",
     "choices": [
       "to",
@@ -1586,11 +1015,11 @@
       "about",
       "at"
     ],
-    "expl": "look forward to の to は前置詞なので、後ろには動名詞（-ing）が続く。to visit のように原形を続けるのは誤り。",
+    "expl": "「look forward to + -ing」の形で「～を楽しみにする」という意味です。ここの to は前置詞なので後ろには動名詞（-ing）が続きます。",
     "rule": "look forward to + -ing",
     "kp": [
-      "look forward to + V-ing（to は前置詞）",
-      "to の後は動名詞（原形ではない）"
+      "look forward to の to は前置詞 → 後ろは -ing",
+      "to + 原形（不定詞）と混同しない"
     ]
   },
   {
@@ -1600,45 +1029,21 @@
       "eiken3",
       "juken"
     ],
-    "stem": "She told me ___ the party would start at seven or not.",
-    "ja": "彼女はパーティーが7時に始まるかどうか教えてくれました。",
-    "answer": "whether",
-    "choices": [
-      "whether",
-      "what",
-      "that",
-      "which",
-      "if"
-    ],
-    "expl": "or not と一緒に使えるのは whether のみ。that や what は or not と組み合わせられない。if は単独で使えるが or not を直後に置く場合は whether が自然。",
-    "rule": "whether ... or not",
-    "kp": [
-      "whether + S + V + or not = ～かどうか",
-      "or notと共に使うのはwhether"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "logic",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "Neither my brother ___ my sister likes spicy food.",
-    "ja": "私の兄も妹も辛い食べ物が好きではありません。",
+    "stem": "Neither the coach ___ the players was happy with the final score.",
+    "ja": "コーチも選手たちも最終スコアに満足していなかった。",
     "answer": "nor",
     "choices": [
       "nor",
       "or",
       "and",
       "but",
-      "not"
+      "either"
     ],
-    "expl": "neither とペアになる接続詞は nor。or は either とペアで使う。動詞は B（my sister）に一致して likes（単数）となる。",
+    "expl": "neither と対になる接続詞は nor です。「neither A or B」は誤りで、正しくは「neither A nor B」の形を使います。",
     "rule": "neither A nor B",
     "kp": [
-      "neither A nor B（neitherのペアはnor）",
-      "動詞はBに一致させる"
+      "neither とペアになるのは nor（or ではない）",
+      "neither A nor B + 動詞はBに一致"
     ]
   },
   {
@@ -1648,69 +1053,21 @@
       "eiken3",
       "toeic"
     ],
-    "stem": "Would you ___ me a favor and pass me that file?",
-    "ja": "そのファイルを取っていただけませんか？",
-    "answer": "do",
+    "stem": "We are all looking forward ___ hearing the results of the competition.",
+    "ja": "私たちは全員、コンクールの結果を聞くことをとても楽しみにしている。",
+    "answer": "to",
     "choices": [
-      "do",
-      "make",
-      "give",
-      "take",
-      "get"
+      "to",
+      "for",
+      "at",
+      "of",
+      "on"
     ],
-    "expl": "「頼みを聞く」は do + 人 + a favor という定型表現。make a favor / give a favor は誤り。",
-    "rule": "do someone a favor",
+    "expl": "「look forward to + -ing」の構文で、to は前置詞です。for や at などではなく、必ず to を使います。",
+    "rule": "look forward to + -ing",
     "kp": [
-      "do a favor（doが正しい動詞）",
-      "make a decision / take a break などと動詞を混同しない"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "tense",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "He ___ already ___ the lab before I got there.",
-    "ja": "私が着く前に、彼はすでに実験室を出ていた。",
-    "answer": "had left",
-    "choices": [
-      "had left",
-      "has left",
-      "left",
-      "was leaving",
-      "leaves"
-    ],
-    "expl": "「私が着く（過去）」より前の出来事を表すので過去完了 had + pp を使う。現在完了 has left は過去の文脈では不可。",
-    "rule": "過去完了",
-    "kp": [
-      "過去の文中でさらに前の出来事 → had + pp",
-      "already / by the time などが過去完了のヒント"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "By the time the concert begins, we ___ for over an hour.",
-    "ja": "コンサートが始まるころには、私たちは1時間以上待っていることになります。",
-    "answer": "will have been waiting",
-    "choices": [
-      "will have been waiting",
-      "will wait",
-      "will have waited",
-      "have been waiting",
-      "are waiting"
-    ],
-    "expl": "by the time + 現在形（未来の時点）という文脈で、それまで動作が継続していることを示すので未来完了進行形 will have been + V-ing が正解。",
-    "rule": "未来完了",
-    "kp": [
-      "by the time + 現在形 → 未来完了系（will have pp）",
-      "継続を強調するなら will have been + V-ing"
+      "look forward to + 動名詞(-ing)",
+      "be used to / object to も同じ「to + -ing」のパターン"
     ]
   },
   {
@@ -1720,8 +1077,8 @@
       "eikenpre2",
       "toeic"
     ],
-    "stem": "All the windows in this building need ___ before winter comes.",
-    "ja": "この建物のすべての窓は冬が来る前に修理される必要があります。",
+    "stem": "This old bridge needs ___ before the rainy season begins.",
+    "ja": "この古い橋は雨季が始まる前に修理される必要がある。",
     "answer": "to be repaired",
     "choices": [
       "to be repaired",
@@ -1730,11 +1087,109 @@
       "repaired",
       "being repaired"
     ],
-    "expl": "主語 windows は修理される側なので、受動態の不定詞 to be + pp を使う。to repair では「窓が修理する」という意味になり誤り。",
+    "expl": "「bridge（橋）」は修理される側（受動）なので、「need + to be + 過去分詞」の形を使います。「to repair」では橋が自ら修理することになり意味が変わります。",
     "rule": "受動態の不定詞",
     "kp": [
       "主語が動作を受ける側 → need to be + pp",
-      "to repair（能動）と to be repaired（受動）を区別する"
+      "to repair（能動）と to be repaired（受動）の区別"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The number of tourists visiting this island ___ doubled over the past decade.",
+    "ja": "この島を訪れる観光客の数は過去10年間で2倍になった。",
+    "answer": "has",
+    "choices": [
+      "has",
+      "have",
+      "are",
+      "were",
+      "had"
+    ],
+    "expl": "「The number of ～」は「～の数」という意味で単数扱いなので、動詞は has（三人称単数）を使います。「A number of ～（多くの～）」なら複数扱いです。",
+    "rule": "The number of（単数）vs A number of（複数）",
+    "kp": [
+      "The number of + 複数名詞 → 単数動詞(is/has)",
+      "A number of + 複数名詞 → 複数動詞(are/have)"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "A number of residents ___ signed the petition against the new construction plan.",
+    "ja": "多くの住民が新しい建設計画に反対する請願書に署名した。",
+    "answer": "have",
+    "choices": [
+      "have",
+      "has",
+      "is",
+      "was",
+      "having"
+    ],
+    "expl": "「A number of ～」は「多くの～」という意味で複数扱いなので、動詞は have（複数形）を使います。The number of なら単数扱いで has になります。",
+    "rule": "The number of（単数）vs A number of（複数）",
+    "kp": [
+      "A number of = 多くの → 複数動詞",
+      "The number of = ～の数 → 単数動詞"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "The doctor recommended that the patient ___ plenty of rest for at least a week.",
+    "ja": "医師は患者が少なくとも1週間は十分な休息を取るよう勧めた。",
+    "answer": "take",
+    "choices": [
+      "take",
+      "takes",
+      "should takes",
+      "took",
+      "to take"
+    ],
+    "expl": "recommend that ～ の後の that 節では仮定法現在を使い、主語が三人称単数でも動詞は原形（take）になります。takes のように三単現の s を付けるのは誤りです。",
+    "rule": "仮定法現在 suggest/recommend + 原形",
+    "kp": [
+      "recommend/suggest/insist/demand that + S + 動詞原形",
+      "仮定法現在では三単現のsは付けない"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "The supervisor insisted that all employees ___ the updated safety manual before returning to work.",
+    "ja": "上司は全従業員が職場復帰前に改訂された安全マニュアルを読むよう主張した。",
+    "answer": "read",
+    "choices": [
+      "read",
+      "reads",
+      "should reads",
+      "to read",
+      "reading"
+    ],
+    "expl": "insist that ～ の後は仮定法現在を使い、動詞は原形（read）になります。三人称複数であっても reads のような語尾変化は不要です。",
+    "rule": "仮定法現在 suggest/recommend + 原形",
+    "kp": [
+      "insist that + S + 動詞原形（原形のreadは過去形と同形）",
+      "should の後も原形"
     ]
   },
   {
@@ -1744,141 +1199,21 @@
       "eikenpre2",
       "toeic"
     ],
-    "stem": "The flight was canceled ___ the thick fog at the airport.",
-    "ja": "濃霧のためにフライトがキャンセルされました。",
-    "answer": "due to",
+    "stem": "After ten years of hard training, she finally succeeded ___ winning the championship.",
+    "ja": "10年間の厳しいトレーニングの末、彼女はついに優勝することに成功した。",
+    "answer": "in",
     "choices": [
-      "due to",
-      "because",
-      "since",
-      "although",
-      "despite"
+      "in",
+      "to",
+      "on",
+      "at",
+      "for"
     ],
-    "expl": "due to の後には名詞句（the thick fog）が続く。because の後は S + V の節が必要なので the thick fog のみでは使えない。",
-    "rule": "due to + 名詞",
+    "expl": "「succeed in + -ing」で「～することに成功する」を表します。「succeeded to win」のように to + 原形（不定詞）を使う形は英語では誤りです。",
+    "rule": "succeed in -ing",
     "kp": [
-      "due to + 名詞句",
-      "because + S + V（節）"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "The researchers ___ the data for six hours when the computer suddenly crashed.",
-    "ja": "コンピューターが突然クラッシュしたとき、研究者たちは6時間データを分析し続けていた。",
-    "answer": "had been analyzing",
-    "choices": [
-      "had been analyzing",
-      "have been analyzing",
-      "were analyzing",
-      "analyzed",
-      "had analyzed"
-    ],
-    "expl": "過去のある時点（コンピュータがクラッシュした時）まで動作が継続していたことを表すので、過去完了進行形 had been + V-ing を使う。",
-    "rule": "過去完了進行形",
-    "kp": [
-      "過去の時点まで動作継続 → had been + V-ing",
-      "for / since と組み合わせて継続期間を示す"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "By the time she retires next year, she ___ for this company for thirty years.",
-    "ja": "来年退職するころには、彼女はこの会社で30年間働いていることになります。",
-    "answer": "will have worked",
-    "choices": [
-      "will have worked",
-      "will work",
-      "has worked",
-      "would have worked",
-      "is working"
-    ],
-    "expl": "by the time + 現在形（未来の文脈）で、その時点までに完了している事柄を表すので未来完了 will have + pp を使う。",
-    "rule": "未来完了",
-    "kp": [
-      "by + 未来の時点 → will have + pp",
-      "by the time 節の中は現在形（will は不可）"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "form",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "___ from outside, the old castle appeared completely deserted.",
-    "ja": "外から見ると、その古い城は完全に廃墟のように見えた。",
-    "answer": "Seen",
-    "choices": [
-      "Seen",
-      "Seeing",
-      "See",
-      "To see",
-      "Having seen"
-    ],
-    "expl": "主語 the old castle は「見られる」側なので、受動の分詞構文 Seen（過去分詞）で始める。Seeing は能動の分詞構文で誤り。",
-    "rule": "分詞構文（受動）",
-    "kp": [
-      "主語が受動 → 過去分詞で分詞構文を開始",
-      "Seeing（能動）と Seen（受動）を区別する"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "He ___ on the project for two weeks when the client suddenly changed all the requirements.",
-    "ja": "クライアントが突然すべての要件を変更したとき、彼はそのプロジェクトに2週間取り組み続けていた。",
-    "answer": "had been working",
-    "choices": [
-      "had been working",
-      "has been working",
-      "was working",
-      "worked",
-      "had worked"
-    ],
-    "expl": "過去の出来事（クライアントが要件を変更した）より前からその時点まで継続していた動作なので、過去完了進行形 had been + V-ing を使う。",
-    "rule": "過去完了進行形",
-    "kp": [
-      "過去の時点まで継続 → had been + V-ing",
-      "has been は現在完了進行形（過去の文脈には不可）"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "tense",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "If she ___ the email, she would have replied immediately.",
-    "ja": "もし彼女がそのメールを見ていたなら、すぐに返信していたでしょう。",
-    "answer": "had seen",
-    "choices": [
-      "had seen",
-      "saw",
-      "has seen",
-      "would have seen",
-      "was seeing"
-    ],
-    "expl": "過去の事実に反する仮定（仮定法過去完了）では If + S + had + pp を使う。saw（仮定法過去）は現在・未来の非現実を表す。",
-    "rule": "仮定法過去完了",
-    "kp": [
-      "過去の事実に反する仮定 → If + had + pp, would have + pp",
-      "sawは仮定法過去（現在・未来の非現実）"
+      "succeed in + -ing（toは不可）",
+      "consist of / insist on / depend on も「前置詞 + -ing」のパターン"
     ]
   },
   {
@@ -1889,21 +1224,69 @@
       "toeic",
       "juken"
     ],
-    "stem": "___ from space, the Earth looks like a beautiful blue marble.",
-    "ja": "宇宙から見ると、地球は美しい青いビー玉のように見えます。",
+    "stem": "___ from above, the ancient maze was perfectly symmetrical.",
+    "ja": "上から見ると、その古代の迷路は完全に左右対称だった。",
     "answer": "Seen",
     "choices": [
       "Seen",
       "Seeing",
-      "To see",
       "See",
-      "Having seen"
+      "Having seen",
+      "To see"
     ],
-    "expl": "主語 the Earth は「見られる」側なので、受動の分詞構文として過去分詞 Seen で始める。Seeing（能動）では「地球が見ている」という誤った意味になる。",
+    "expl": "「maze（迷路）」は「上から見られる」側なので、受動の分詞構文として過去分詞 Seen で始めます。Seeing では迷路が自ら「見ている」という意味になり不自然です。",
     "rule": "分詞構文（受動）",
     "kp": [
-      "主語が受動の関係 → 過去分詞で分詞構文を開始",
-      "分詞構文の主語と分詞の関係（能動/受動）を確認する"
+      "主語が受動の立場 → 過去分詞で分詞構文を始める",
+      "Seen from ～ = ～から見ると"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "trap",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "I would rather you ___ the confidential data without authorization.",
+    "ja": "あなたには無許可で機密データにアクセスしてほしくない。",
+    "answer": "didn't access",
+    "choices": [
+      "didn't access",
+      "don't access",
+      "not access",
+      "wouldn't access",
+      "haven't accessed"
+    ],
+    "expl": "「would rather + 主語 + 動詞の過去形」の形で「（主語に）～してほしい/ほしくない」を表します。仮定法的表現なので、否定は didn't + 原形になります。",
+    "rule": "would rather + S + 過去形",
+    "kp": [
+      "would rather + S + 過去形（仮定法）",
+      "否定は didn't + 原形（don't ではない）"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "Not only ___ the competition, but she also set a new world record.",
+    "ja": "彼女はその競技で優勝しただけでなく、新しい世界記録も打ち立てた。",
+    "answer": "did she win",
+    "choices": [
+      "did she win",
+      "she won",
+      "she did win",
+      "has she won",
+      "she has won"
+    ],
+    "expl": "「Not only」が文頭に来ると倒置が必要です。過去の文なので「did + 主語 + 動詞の原形」という語順になります。",
+    "rule": "Not only の倒置",
+    "kp": [
+      "Not only が文頭 → 助動詞+S+原形の倒置",
+      "did の後は動詞の原形（wins ではなく win）"
     ]
   },
   {
@@ -1914,45 +1297,21 @@
       "toeic",
       "juken"
     ],
-    "stem": "It is high time the children ___ to bed. It's past midnight.",
-    "ja": "もう真夜中を過ぎています。子どもたちはもうとっくに寝る時間です。",
-    "answer": "went",
+    "stem": "It is high time the management ___ the working conditions for all employees.",
+    "ja": "経営陣はそろそろ全従業員の労働条件を改善すべき時だ。",
+    "answer": "improved",
     "choices": [
-      "went",
-      "go",
-      "will go",
-      "have gone",
-      "are going"
+      "improved",
+      "improve",
+      "will improve",
+      "has improved",
+      "would improve"
     ],
-    "expl": "It is high time + S + 過去形 という仮定法的表現。現在形の go や will go は使えない。",
+    "expl": "「It is high time + 主語 + 過去形」の仮定法的表現で「そろそろ～すべき時だ」を表します。原形や will を使うのは誤りです。",
     "rule": "It is (high) time + S + 過去形",
     "kp": [
-      "It is high time + S + 過去形（仮定法的用法）",
-      "high timeの後はwillや現在形ではなく過去形"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "tense",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "If the engineer ___ the safety manual more carefully, the accident could have been avoided.",
-    "ja": "もしそのエンジニアが安全マニュアルをもっと注意深く読んでいたなら、その事故は防げたでしょう。",
-    "answer": "had read",
-    "choices": [
-      "had read",
-      "read",
-      "would have read",
-      "has read",
-      "was reading"
-    ],
-    "expl": "過去の事実に反する仮定（仮定法過去完了）なので If 節は had + pp の形を使う。過去形 read では仮定法過去（現在の非現実）になる。",
-    "rule": "仮定法過去完了",
-    "kp": [
-      "過去の非現実 → If + had + pp, could/would have + pp",
-      "If 節と帰結節の時制を対応させる"
+      "It is high time + S + 過去形（仮定法）",
+      "原形・willは不可"
     ]
   },
   {
@@ -1962,21 +1321,21 @@
       "eikenpre1",
       "toeic"
     ],
-    "stem": "Hardly ___ her speech when the audience burst into applause.",
-    "ja": "彼女がスピーチを終えるやいなや、聴衆は拍手喝采した。",
-    "answer": "had she finished",
+    "stem": "Hardly ___ her seat when the announcement about the delay was made.",
+    "ja": "彼女が席に着くやいなや、遅延に関するアナウンスがあった。",
+    "answer": "had she taken",
     "choices": [
-      "had she finished",
-      "she had finished",
-      "did she finish",
-      "had finished she",
-      "was she finishing"
+      "had she taken",
+      "she had taken",
+      "did she take",
+      "had she been taking",
+      "she took"
     ],
-    "expl": "Hardly が文頭に来ると倒置が起き、had + S + pp の語順になる。Hardly の後に通常語順 she had は不可。また hardly とペアになるのは when（than ではない）。",
+    "expl": "「Hardly」が文頭に来ると倒置が必要で、「Hardly + had + S + 過去分詞 + when ～」の形になります。「she had taken」のように倒置なしにするのは誤りです。",
     "rule": "Hardly had S pp when ...",
     "kp": [
-      "Hardly + had + S + pp + when（倒置が必要）",
-      "hardlyのペアはwhen（thanはno sooner...thanと使う）"
+      "Hardly が文頭 → had + S + pp（倒置）",
+      "Hardly...when（～するやいなや）。thanではなくwhen"
     ]
   },
   {
@@ -1986,21 +1345,44 @@
       "eikenpre1",
       "toeic"
     ],
-    "stem": "No sooner ___ the door than the lights went out.",
-    "ja": "ドアを閉めるやいなや、電気が消えた。",
-    "answer": "had he closed",
+    "stem": "___ not for the strict safety regulations, far more industrial accidents would occur every year.",
+    "ja": "厳しい安全規制がなければ、毎年はるかに多くの産業事故が起きるだろう。",
+    "answer": "Were it",
     "choices": [
-      "had he closed",
-      "he had closed",
-      "did he close",
-      "he closed",
-      "has he closed"
+      "Were it",
+      "Was it",
+      "If it were",
+      "Would it be",
+      "Is it"
     ],
-    "expl": "No sooner が文頭に来ると倒置が起き、had + S + pp の語順になる。No sooner ... than は「～するやいなや」という意味で Hardly ... when と同じ構造を持つ。",
-    "rule": "Hardly had S pp when ...",
+    "expl": "「Were it not for ～」は「If it were not for ～（もし～がなければ）」の倒置形です。仮定法では was ではなく were を使います。",
+    "rule": "Were it not for（仮定法倒置）",
     "kp": [
-      "No sooner + had + S + pp + than（倒置）",
-      "No sooner...than / Hardly...when のペアを覚える"
+      "Were it not for = If it were not for（仮定法倒置）",
+      "仮定法ではwasではなくwereを使う"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "vocab",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "My younger brother is terrible ___ singing, but he loves it anyway.",
+    "ja": "私の弟は歌が苦手だが、それでも大好きだ。",
+    "answer": "at",
+    "choices": [
+      "at",
+      "in",
+      "for",
+      "on",
+      "of"
+    ],
+    "expl": "「be good/bad at ～」で「～が得意/苦手だ」を表します。「good/bad + in」や「good/bad + for」は誤りで、前置詞は必ず at です。",
+    "rule": "be good at",
+    "kp": [
+      "be bad at = ～が苦手（good at と同じ前置詞 at）",
+      "good for = ～に良い とは区別する"
     ]
   },
   {
@@ -2009,17 +1391,17 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "My uncle ___ a police officer in this city.",
-    "ja": "私のおじはこの街の警察官です。",
+    "stem": "My cat ___ very lazy and sleeps all day long.",
+    "ja": "私の猫はとても怠け者で、一日中寝てばかりいます。",
     "answer": "is",
     "choices": [
       "is",
       "are",
       "am",
       "be",
-      "was"
+      "were"
     ],
-    "expl": "主語 'My uncle' は三人称単数なので、be動詞は 'is' を使います。'are' は You/We/They に使い、'am' は I のみです。",
+    "expl": "主語 My cat は三人称単数なので、be動詞は is を使います。are は You/We/They に、am は I にのみ使います。",
     "rule": "be動詞の人称一致 (Subject-Verb Agreement with Be)",
     "kp": [
       "三人称単数 → is",
@@ -2032,8 +1414,8 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "The students in this class ___ very hardworking.",
-    "ja": "このクラスの生徒たちはとても勤勉です。",
+    "stem": "My best friend and I ___ in the same class at school.",
+    "ja": "親友と私は学校で同じクラスにいます。",
     "answer": "are",
     "choices": [
       "are",
@@ -2042,11 +1424,11 @@
       "be",
       "was"
     ],
-    "expl": "主語 'The students' は複数名詞なので、be動詞は 'are' を使います。",
+    "expl": "主語が「My best friend and I」で複数なので、be動詞は are を使います。and でつないだ複数主語は are が正解です。",
     "rule": "be動詞の人称一致 (Subject-Verb Agreement with Be)",
     "kp": [
-      "複数主語 → are",
-      "単数主語 → is"
+      "A and B → are（複数扱い）",
+      "主語の数でbe動詞を選ぶ"
     ]
   },
   {
@@ -2055,123 +1437,8 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "My grandfather ___ the newspaper every morning without fail.",
-    "ja": "私の祖父は毎朝欠かさず新聞を読みます。",
-    "answer": "reads",
-    "choices": [
-      "reads",
-      "read",
-      "is reading",
-      "to read",
-      "readed"
-    ],
-    "expl": "主語 'My grandfather' は三人称単数で、習慣を表す現在形なので動詞に -s を付けた 'reads' が正解です。",
-    "rule": "一般動詞の三単現 (Third Person Singular -s)",
-    "kp": [
-      "三人称単数 + 習慣・事実 → 動詞に -s",
-      "複数主語や I/You では原形"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "logic",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "___ your brother walk to school every day?",
-    "ja": "あなたのお兄さんは毎日歩いて学校に行きますか？",
-    "answer": "Does",
-    "choices": [
-      "Does",
-      "Do",
-      "Is",
-      "Are",
-      "Did"
-    ],
-    "expl": "'your brother' は三人称単数の一般動詞の疑問文なので 'Does' を使い、動詞は原形 'walk' のままにします。",
-    "rule": "一般動詞の疑問文 (Yes/No Questions with Do/Does)",
-    "kp": [
-      "三人称単数の疑問文 → Does + 原形",
-      "be動詞の疑問文と混同しない"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "We ___ a long walk in the forest last Sunday.",
-    "ja": "私たちは先週の日曜日に森の中を長い間散歩しました。",
-    "answer": "took",
-    "choices": [
-      "took",
-      "take",
-      "takes",
-      "have taken",
-      "taking"
-    ],
-    "expl": "'last Sunday' は過去を示す表現なので過去形が必要です。'take' の過去形は不規則変化で 'took' です。",
-    "rule": "過去形（規則・不規則） (Simple Past Tense)",
-    "kp": [
-      "last ~ / yesterday / ago → 過去形",
-      "take の過去形は took（不規則）"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "I ___ finish all this work by tonight.",
-    "ja": "私は今夜までにこの仕事を全部終わらせるつもりです。",
-    "answer": "will",
-    "choices": [
-      "will",
-      "am",
-      "was",
-      "would",
-      "shall to"
-    ],
-    "expl": "未来の意志や予定を表す場合は 'will + 動詞原形' を使います。'will' の後の動詞は原形 'finish' のままです。",
-    "rule": "未来形 will (Future with Will)",
-    "kp": [
-      "未来 → will + 動詞原形",
-      "will の後に to は不要"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "tense",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "Please be quiet. My little sister ___ sleeping right now.",
-    "ja": "静かにしてください。妹が今ちょうど眠っています。",
-    "answer": "is",
-    "choices": [
-      "is",
-      "are",
-      "was",
-      "be",
-      "does"
-    ],
-    "expl": "'right now' は現在進行形のシグナルです。主語 'My little sister' は三人称単数なので 'is sleeping' が正しい形です。",
-    "rule": "現在進行形 (Present Continuous)",
-    "kp": [
-      "now / right now → be + V-ing（進行形）",
-      "三人称単数 → is + V-ing"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "There ___ a large swimming pool behind the school.",
-    "ja": "学校の裏に大きなプールが一つあります。",
+    "stem": "There ___ a big tree in front of our house.",
+    "ja": "私たちの家の前に大きな木が1本あります。",
     "answer": "is",
     "choices": [
       "is",
@@ -2180,563 +1447,34 @@
       "has",
       "be"
     ],
-    "expl": "後続の名詞 'a large swimming pool' は単数なので 'There is' を使います。複数名詞には 'There are' が必要です。",
+    "expl": "There is/are 構文では後続の名詞が単数（a big tree）なので is を使います。There have は存在を表す表現として不適切です。",
     "rule": "There is / There are (There is/are (Existential))",
     "kp": [
       "There is + 単数名詞",
-      "There are + 複数名詞"
+      "There have は存在の表現に使えない"
     ]
   },
   {
-    "diff": "lv2",
-    "axis": "tense",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "Before she ___ to bed, she always brushes her teeth.",
-    "ja": "彼女は寝る前に必ず歯を磨きます。",
-    "answer": "goes",
-    "choices": [
-      "goes",
-      "will go",
-      "went",
-      "would go",
-      "is going"
-    ],
-    "expl": "before が導く副詞節の中では、未来のことでも現在形を使います。'Before she goes' が正しい形です。",
-    "rule": "時・条件の副詞節では現在形 (Present Tense in Time/Condition Clauses)",
-    "kp": [
-      "before/after/when/until 節の中は現在形（未来でも）",
-      "if/before 節の中に will は使わない"
-    ]
-  },
-  {
-    "diff": "lv2",
+    "diff": "lv1",
     "axis": "form",
     "tags": [
-      "eiken3",
-      "toeic"
+      "eiken4"
     ],
-    "stem": "All the luggage ___ checked before the passengers boarded the plane.",
-    "ja": "乗客が搭乗する前に、すべての荷物が検査されました。",
-    "answer": "was",
-    "choices": [
-      "was",
-      "were",
-      "is",
-      "have been",
-      "being"
-    ],
-    "expl": "'luggage' は不可算名詞なので単数扱いとなり、受動態の be動詞は 'was' が正しいです。",
-    "rule": "不可算名詞は単数扱い (Uncountable Nouns: Singular Agreement)",
-    "kp": [
-      "luggage / baggage は不可算名詞 → 単数扱い",
-      "不可算名詞 + is/was（複数形・were は不可）"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "trap",
-    "tags": [
-      "eiken3",
-      "toeic",
-      "juken"
-    ],
-    "stem": "The new law will ___ citizens report crimes more easily.",
-    "ja": "その新しい法律は市民が犯罪をより簡単に報告できるようにするでしょう。",
-    "answer": "make",
-    "choices": [
-      "make",
-      "makes",
-      "let to",
-      "allow",
-      "have to"
-    ],
-    "expl": "使役動詞 'make' は 'make + O + 動詞原形' の形を取ります。'make citizens report' が正しい形です。",
-    "rule": "使役動詞 make + O + 原形 (Causative: Make + Object + Base Form)",
-    "kp": [
-      "make + O + 動詞原形（to なし）",
-      "make/let/have + O + 原形"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "The ancient temple ___ built more than five hundred years ago.",
-    "ja": "その古い寺は500年以上前に建てられました。",
-    "answer": "was",
-    "choices": [
-      "was",
-      "is",
-      "were",
-      "has been",
-      "been"
-    ],
-    "expl": "受動態は 'be動詞 + 過去分詞' の形で、過去の文脈なので 'was built' が正しいです。",
-    "rule": "受動態 (Passive Voice)",
-    "kp": [
-      "受動態 → be + 過去分詞",
-      "過去の受動態 → was/were + pp"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "tense",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "She realized that she ___ her wallet at home when she got to the store.",
-    "ja": "彼女は店に着いたとき、財布を家に置いてきたことに気づきました。",
-    "answer": "had left",
-    "choices": [
-      "had left",
-      "left",
-      "has left",
-      "was leaving",
-      "leaves"
-    ],
-    "expl": "「店に着いた」より前に「財布を置いてきた」という出来事があったため、過去完了 'had left' を使います。",
-    "rule": "過去完了 (Past Perfect)",
-    "kp": [
-      "過去の文脈でさらに前の出来事 → had + pp（過去完了）",
-      "過去完了は二つの過去の出来事の前後関係を示す"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "logic",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "Neither the captain ___ the crew members had any idea about the bad weather approaching.",
-    "ja": "船長も乗組員も、近づいている悪天候についてまったく知りませんでした。",
-    "answer": "nor",
-    "choices": [
-      "nor",
-      "or",
-      "and",
-      "but",
-      "either"
-    ],
-    "expl": "'neither' と対になる接続詞は 'nor' です。'neither A nor B' で「AもBも〜ない」という意味になります。",
-    "rule": "neither A nor B (Neither...Nor (Correlative Conjunctions))",
-    "kp": [
-      "neither と対になるのは nor",
-      "neither A nor B + 動詞（B に一致）"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "tense",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "If you ___ the application form today, your request will be processed faster.",
-    "ja": "もし今日申請書を提出すれば、あなたのリクエストはより早く処理されるでしょう。",
-    "answer": "submit",
-    "choices": [
-      "submit",
-      "will submit",
-      "submitted",
-      "submitting",
-      "have submitted"
-    ],
-    "expl": "if が導く条件節の中では、未来のことでも現在形を使います。主語は二人称なので 'submit'（原形）が正しいです。",
-    "rule": "時・条件の副詞節では現在形 (Present Tense in Time/Condition Clauses)",
-    "kp": [
-      "if 節の中は will を使わず現在形",
-      "条件節 → 現在形、主節 → will + 原形"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "toeic"
-    ],
-    "stem": "The advice he gave me ___ really helpful in solving the problem.",
-    "ja": "彼が私にくれたアドバイスは、その問題を解決するのに本当に役立ちました。",
-    "answer": "was",
-    "choices": [
-      "was",
-      "were",
-      "have been",
-      "are",
-      "being"
-    ],
-    "expl": "'advice' は不可算名詞で単数扱いなので、be動詞は 'was' が正しいです。複数形や 'were' は使えません。",
-    "rule": "不可算名詞は単数扱い (Uncountable Nouns: Singular Agreement)",
-    "kp": [
-      "advice / information / news → 不可算名詞（単数扱い）",
-      "不可算名詞には複数形の -s を付けない"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "By the time the rescue team reaches the village, the flood ___ most of the crops.",
-    "ja": "救助隊が村に到着するころには、洪水が農作物のほとんどを駄目にしてしまっているでしょう。",
-    "answer": "will have destroyed",
-    "choices": [
-      "will have destroyed",
-      "will destroy",
-      "has destroyed",
-      "had destroyed",
-      "would destroy"
-    ],
-    "expl": "'By the time ~' と未来の時点が示されているので、その時点までに完了している動作を表す未来完了 'will have destroyed' を使います。",
-    "rule": "未来完了 (Future Perfect)",
-    "kp": [
-      "by + 未来の時点 → will have + pp（未来完了）",
-      "by the time 節の中は現在形"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "logic",
-    "tags": [
-      "eikenpre2",
-      "juken"
-    ],
-    "stem": "The small village ___ I spent my childhood has changed a lot over the years.",
-    "ja": "私が子ども時代を過ごした小さな村は、長年でずいぶん変わりました。",
-    "answer": "where",
-    "choices": [
-      "where",
-      "which",
-      "what",
-      "that",
-      "when"
-    ],
-    "expl": "先行詞 'village' が場所を表すため、関係副詞 'where' を使います。'which' を使う場合は 'in which' が必要です。",
-    "rule": "関係副詞 where (Relative Adverb: Where)",
-    "kp": [
-      "場所の先行詞 → 関係副詞 where",
-      "which の場合は in/at which が必要"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "tense",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "He ___ in the rain for over an hour when a taxi finally stopped for him.",
-    "ja": "タクシーがやっと止まってくれたとき、彼は1時間以上雨の中を歩き続けていました。",
-    "answer": "had been walking",
-    "choices": [
-      "had been walking",
-      "has been walking",
-      "was walking",
-      "walked",
-      "had walked"
-    ],
-    "expl": "過去のある時点（タクシーが止まった時）まで動作が継続していたことを表すため、過去完了進行形 'had been walking' を使います。",
-    "rule": "過去完了進行形 (Past Perfect Continuous)",
-    "kp": [
-      "過去の時点まで継続 → had been + V-ing",
-      "for + 期間 が継続を示すシグナル"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "logic",
-    "tags": [
-      "eikenpre2",
-      "juken"
-    ],
-    "stem": "___ long the journey is, we must reach our destination before dark.",
-    "ja": "旅がどれほど長くても、暗くなる前に目的地に着かなければなりません。",
-    "answer": "However",
-    "choices": [
-      "However",
-      "Whatever",
-      "Whenever",
-      "Wherever",
-      "Whichever"
-    ],
-    "expl": "'long' は形容詞で、「どんなに長くても」という意味を表すには 'However + 形容詞 + S + V' の形を使います。",
-    "rule": "複合関係副詞 however (However + Adj/Adv (Concessive))",
-    "kp": [
-      "however + 形容詞/副詞 = どんなに〜でも",
-      "whatever は名詞を、however は形容詞・副詞を修飾"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "trap",
-    "tags": [
-      "eikenpre2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "A number of employees ___ working overtime to meet the project deadline.",
-    "ja": "多くの従業員がプロジェクトの期限に間に合わせるために残業しています。",
+    "stem": "There ___ twelve students in our English class.",
+    "ja": "私たちの英語の授業には12人の生徒がいます。",
     "answer": "are",
     "choices": [
       "are",
       "is",
-      "was",
-      "has been",
-      "have"
+      "have",
+      "has",
+      "be"
     ],
-    "expl": "'A number of' は「多くの」という意味で複数扱いです。'The number of'（〜の数）と混同しないように注意が必要です。",
-    "rule": "The number of（単数）vs A number of（複数） (The Number Of vs A Number Of)",
+    "expl": "後続の名詞 twelve students は複数なので There are を使います。複数名詞には is ではなく are が必要です。",
+    "rule": "There is / There are (There is/are (Existential))",
     "kp": [
-      "A number of + 複数名詞 → 複数動詞（are）",
-      "The number of + 複数名詞 → 単数動詞（is）"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "logic",
-    "tags": [
-      "eikenpre2",
-      "juken"
-    ],
-    "stem": "___ tired you feel after work, try to do some light exercise before bed.",
-    "ja": "仕事の後どんなに疲れていても、寝る前に軽い運動をするようにしてください。",
-    "answer": "However",
-    "choices": [
-      "However",
-      "Whatever",
-      "Whenever",
-      "No matter what",
-      "Whichever"
-    ],
-    "expl": "'tired' は形容詞なので、「どんなに疲れていても」を表すには 'However + 形容詞 + S + V' を使います。",
-    "rule": "複合関係副詞 however (However + Adj/Adv (Concessive))",
-    "kp": [
-      "however + 形容詞/副詞 + S + V の語順を守る",
-      "直後に形容詞・副詞が来るのが however"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "tense",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "If the researchers ___ the data more carefully, they would not have drawn the wrong conclusion.",
-    "ja": "もし研究者たちがデータをより慎重に分析していたなら、誤った結論を導き出さなかったでしょう。",
-    "answer": "had analyzed",
-    "choices": [
-      "had analyzed",
-      "analyzed",
-      "would have analyzed",
-      "have analyzed",
-      "were analyzing"
-    ],
-    "expl": "過去の事実に反する仮定を表す仮定法過去完了の形は 'If + S + had + pp' です。帰結節は 'would have + pp' となります。",
-    "rule": "仮定法過去完了 (Third Conditional (Past Unreal))",
-    "kp": [
-      "仮定法過去完了：If + had pp, S + would have pp",
-      "過去の事実に反する仮定 → had + pp"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "form",
-    "tags": [
-      "eiken2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "___ from a bird's-eye view, the winding river looked like a silver ribbon across the landscape.",
-    "ja": "鳥瞰的に見ると、その蛇行する川は風景を横切る銀色のリボンのように見えました。",
-    "answer": "Seen",
-    "choices": [
-      "Seen",
-      "Seeing",
-      "To see",
-      "Having seen",
-      "Being seen"
-    ],
-    "expl": "主語 'the winding river' は「見られる」側なので、受動の分詞構文 'Seen'（過去分詞）で始めます。",
-    "rule": "分詞構文（受動） (Participial Phrase (Passive))",
-    "kp": [
-      "主語が動作を受ける側 → 過去分詞で分詞構文を開始",
-      "能動の分詞構文 → -ing / 受動の分詞構文 → pp"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "logic",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "Not only ___ the new policy unpopular, but it also caused significant financial losses.",
-    "ja": "その新しい方針は不評だっただけでなく、大きな財政的損失も引き起こしました。",
-    "answer": "was",
-    "choices": [
-      "was",
-      "is",
-      "did",
-      "the policy was",
-      "it was"
-    ],
-    "expl": "否定語 'Not only' が文頭に来ると倒置が起き、'Not only + 助動詞/be動詞 + S' の語順になります。",
-    "rule": "Not only の倒置 (Inversion after Not Only)",
-    "kp": [
-      "Not only が文頭 → 倒置（助動詞/be動詞 + 主語）",
-      "Not only was S + pp / Not only does S + V"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "vocab",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "The director insisted ___ presenting the results in person at the board meeting.",
-    "ja": "その取締役は、取締役会で自ら直接結果を発表することを主張しました。",
-    "answer": "on",
-    "choices": [
-      "on",
-      "to",
-      "in",
-      "for",
-      "of"
-    ],
-    "expl": "'insist on + V-ing' で「〜することを主張する」という意味になります。'insist to' や 'insist for' は誤りです。",
-    "rule": "insist on -ing (Insist On + Gerund)",
-    "kp": [
-      "insist on + V-ing（on が必要）",
-      "insist to V は不可"
-    ]
-  },
-  {
-    "diff": "lv5",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre1",
-      "toeic"
-    ],
-    "stem": "The new environmental regulations are expected to come ___ force by the end of this fiscal year.",
-    "ja": "新しい環境規制は今会計年度末までに施行される見込みです。",
-    "answer": "into",
-    "choices": [
-      "into",
-      "in",
-      "to",
-      "under",
-      "onto"
-    ],
-    "expl": "「施行される・発効する」は 'come into force' または 'come into effect' という固定表現です。'in' や 'to' は不正解です。",
-    "rule": "come into effect (Come Into Effect (Fixed Expression))",
-    "kp": [
-      "come into force/effect = 施行される・発効する",
-      "into であり in や to ではない"
-    ]
-  },
-  {
-    "diff": "lv5",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre1",
-      "toeic"
-    ],
-    "stem": "The revised data protection act will come ___ effect on the first day of April.",
-    "ja": "改正されたデータ保護法は4月1日に施行されます。",
-    "answer": "into",
-    "choices": [
-      "into",
-      "in",
-      "to",
-      "about",
-      "upon"
-    ],
-    "expl": "「〜が施行される」は 'come into effect' という固定表現で、前置詞は必ず 'into' を使います。'in' や 'to' などは誤りです。",
-    "rule": "come into effect (Come Into Effect (Fixed Expression))",
-    "kp": [
-      "come into effect の into は固定",
-      "come into: effect / force / being / existence"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "My dog ___ a lot every night.",
-    "ja": "私の犬は毎晩たくさん吠えます。",
-    "answer": "barks",
-    "choices": [
-      "barks",
-      "bark",
-      "barking",
-      "is bark",
-      "to bark"
-    ],
-    "expl": "主語 My dog は三人称単数なので、一般動詞に -s を付けて barks とします。",
-    "rule": "一般動詞の三単現 (Third Person Singular -s)",
-    "kp": [
-      "三人称単数の主語には動詞に -s を付ける",
-      "He/She/It/固有名詞の単数 → V-s"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "My friends ___ video games after school every day.",
-    "ja": "私の友達は毎日放課後にテレビゲームをします。",
-    "answer": "play",
-    "choices": [
-      "play",
-      "plays",
-      "playing",
-      "to play",
-      "is playing"
-    ],
-    "expl": "主語 My friends は複数なので、動詞に -s は付けず原形 play を使います。",
-    "rule": "一般動詞の三単現 (Third Person Singular -s)",
-    "kp": [
-      "複数主語には動詞の原形を使う",
-      "They/We/You/I → V（原形）"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "form",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "My grandmother ___ very kind and always smiles at everyone.",
-    "ja": "私の祖母はとても優しくて、いつも全員に微笑みかけます。",
-    "answer": "is",
-    "choices": [
-      "is",
-      "are",
-      "am",
-      "be",
-      "were"
-    ],
-    "expl": "主語 My grandmother は三人称単数なので、be動詞は is を使います。",
-    "rule": "be動詞の人称一致 (Subject-Verb Agreement with Be)",
-    "kp": [
-      "He/She/It/単数名詞 → is",
-      "be動詞は主語の人称と数に合わせる"
+      "There are + 複数名詞",
+      "後続名詞の数でis/areを決める"
     ]
   },
   {
@@ -2745,8 +1483,31 @@
     "tags": [
       "eiken4"
     ],
-    "stem": "My older sister is very good ___ drawing pictures.",
-    "ja": "私の姉は絵を描くのがとても得意です。",
+    "stem": "I can't find my wallet. I've been ___ for it all morning.",
+    "ja": "財布が見つかりません。今朝からずっと探しています。",
+    "answer": "looking",
+    "choices": [
+      "looking",
+      "watching",
+      "seeing",
+      "finding",
+      "checking"
+    ],
+    "expl": "「探す」は look for で表します。watch / see / find はこの文脈では「探す」の意味になりません。look for の進行形 looking が正解です。",
+    "rule": "句動詞 look up / look for / look at (Phrasal Verbs with Look)",
+    "kp": [
+      "look for = 探す",
+      "look up = 調べる、look at = 見る"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "vocab",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "My younger sister is very good ___ playing the piano.",
+    "ja": "私の妹はピアノを弾くのがとても得意です。",
     "answer": "at",
     "choices": [
       "at",
@@ -2755,80 +1516,34 @@
       "on",
       "with"
     ],
-    "expl": "「～が得意」は be good at で表します。good の後は at を使うのが決まりです。",
+    "expl": "「～が得意」は be good at で表します。in や for は good との組み合わせでこの意味を作ることができません。",
     "rule": "be good at (Be Good At + Noun/Gerund)",
     "kp": [
       "be good at + 名詞/-ing = ～が得意",
-      "good at（得意）/ good for（～に良い）を区別する"
+      "in / for / on は不可"
     ]
   },
   {
     "diff": "lv1",
-    "axis": "logic",
+    "axis": "tense",
     "tags": [
       "eiken4"
     ],
-    "stem": "I'm thirsty. Do you have anything ___ drink?",
-    "ja": "のどが渇いています。何か飲み物はありますか？",
-    "answer": "to",
+    "stem": "We ___ a wonderful time at the beach last summer.",
+    "ja": "去年の夏、私たちは海辺でとても楽しい時間を過ごしました。",
+    "answer": "had",
     "choices": [
-      "to",
-      "for",
-      "of",
-      "-ing",
-      "with"
+      "had",
+      "have",
+      "have had",
+      "haved",
+      "were having"
     ],
-    "expl": "anything のような -thing の後は「to + 動詞原形」で「～するための」という意味を作ります。",
-    "rule": "不定詞の形容詞的用法 (Infinitive as Adjective)",
+    "expl": "last summer という過去の時間表現があるので過去形が必要です。have の過去形は had（不規則変化）で、haved という形は存在しません。",
+    "rule": "過去形（規則・不規則） (Simple Past Tense)",
     "kp": [
-      "-thing/-one/-where + to + 動詞原形",
-      "forや-ingではなくtoを使う"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "vocab",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "I can't find my umbrella. I've been ___ for it since this morning.",
-    "ja": "傘が見つかりません。今朝からずっと探しています。",
-    "answer": "looking",
-    "choices": [
-      "looking",
-      "watching",
-      "seeing",
-      "finding",
-      "searching"
-    ],
-    "expl": "「探す」は look for で表します。look at（見る）や look up（調べる）と混同しないようにしましょう。",
-    "rule": "句動詞 look up / look for / look at (Phrasal Verbs with Look)",
-    "kp": [
-      "look for = 探す",
-      "look up = 調べる / look at = 見る"
-    ]
-  },
-  {
-    "diff": "lv1",
-    "axis": "vocab",
-    "tags": [
-      "eiken4"
-    ],
-    "stem": "If you don't know the meaning of this word, please ___ it up in your dictionary.",
-    "ja": "この単語の意味がわからない場合は、辞書で調べてください。",
-    "answer": "look",
-    "choices": [
-      "look",
-      "find",
-      "search",
-      "check",
-      "see"
-    ],
-    "expl": "「辞書で調べる」は look up（＋目的語＋in the dictionary）で表します。find や search では句動詞として成立しません。",
-    "rule": "句動詞 look up / look for / look at (Phrasal Verbs with Look)",
-    "kp": [
-      "look up = 調べる（辞書などで）",
-      "句動詞は動詞と前置詞/副詞のセットで意味が決まる"
+      "last ~ / yesterday / ago → 過去形",
+      "have の過去形は had（不規則）"
     ]
   },
   {
@@ -2838,18 +1553,714 @@
       "eiken3",
       "juken"
     ],
-    "stem": "Her piano performance was ___ than anyone else in the concert.",
-    "ja": "彼女のピアノ演奏はコンサートの中で誰よりも上手でした。",
+    "stem": "This famous painting ___ created by a young Spanish artist in the 19th century.",
+    "ja": "この有名な絵画は19世紀のスペインの若い芸術家によって描かれました。",
+    "answer": "was",
+    "choices": [
+      "was",
+      "is",
+      "were",
+      "be",
+      "created"
+    ],
+    "expl": "「～された」という受動態は be動詞 + 過去分詞で表します。過去の出来事なので was created が正解です。be動詞なしでは受動態になりません。",
+    "rule": "受動態 (Passive Voice)",
+    "kp": [
+      "受動態 = be動詞 + 過去分詞",
+      "過去の受動態 → was/were + pp"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "toeic"
+    ],
+    "stem": "The advice she gave me ___ extremely useful for my project.",
+    "ja": "彼女がくれたアドバイスは、私のプロジェクトに非常に役立ちました。",
+    "answer": "was",
+    "choices": [
+      "was",
+      "were",
+      "have been",
+      "are",
+      "is being"
+    ],
+    "expl": "advice は不可算名詞で単数扱いです。よって be動詞は was（過去）が正解で、were は不可算名詞には使えません。",
+    "rule": "不可算名詞は単数扱い (Uncountable Nouns: Singular Agreement)",
+    "kp": [
+      "advice は不可算名詞 → 単数扱い",
+      "news / information / furniture も同様"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "toeic"
+    ],
+    "stem": "The furniture in their new apartment ___ chosen by an interior designer.",
+    "ja": "彼らの新しいアパートの家具はインテリアデザイナーによって選ばれました。",
+    "answer": "was",
+    "choices": [
+      "was",
+      "were",
+      "are",
+      "have been",
+      "is being"
+    ],
+    "expl": "furniture は不可算名詞で常に単数扱いです。複数形もなく、were ではなく was が正解です。",
+    "rule": "不可算名詞は単数扱い (Uncountable Nouns: Singular Agreement)",
+    "kp": [
+      "furniture は不可算名詞 → was",
+      "複数形 furnitures は存在しない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "trap",
+    "tags": [
+      "eiken3",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The strict coach made all the athletes ___ the entire route twice.",
+    "ja": "厳しいコーチは全選手にコース全体を2回走らせました。",
+    "answer": "run",
+    "choices": [
+      "run",
+      "to run",
+      "running",
+      "ran",
+      "runs"
+    ],
+    "expl": "使役動詞 make の後は「目的語 + 動詞の原形」の形をとります。to run や running は不可で、原形の run が正解です。",
+    "rule": "使役動詞 make + O + 原形 (Causative: Make + Object + Base Form)",
+    "kp": [
+      "make + O + 動詞の原形（to なし）",
+      "let / have も同様に原形をとる"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "tags": [
+      "eiken3",
+      "toeic"
+    ],
+    "stem": "Could you ___ me a favor and print out this document for me?",
+    "ja": "お願いがあるのですが、この書類を印刷していただけますか？",
+    "answer": "do",
+    "choices": [
+      "do",
+      "make",
+      "give",
+      "take",
+      "get"
+    ],
+    "expl": "「頼みを聞く」の定型表現は do someone a favor です。make a favor や give a favor は誤りで、do が唯一の正解です。",
+    "rule": "do someone a favor (Do Someone a Favor (Fixed Expression))",
+    "kp": [
+      "do a favor（定型表現）",
+      "make a decision / take a break なども定型"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "This smartphone model is ___ than the previous one.",
+    "ja": "このスマートフォンのモデルは前のものより優れています。",
     "answer": "better",
     "choices": [
       "better",
       "more good",
       "gooder",
       "best",
-      "well"
+      "more well"
     ],
-    "expl": "good の比較級は不規則変化で better です。more good や gooder は誤りです。",
+    "expl": "good の比較級は不規則変化で better です。more good や gooder は誤りで、英語では認められません。",
     "rule": "不規則比較級 (Irregular Comparatives)",
+    "kp": [
+      "good → better → best（不規則変化）",
+      "more good / gooder は不可"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "My grandfather ___ in this same house for over fifty years.",
+    "ja": "私の祖父は50年以上この同じ家に住んでいます。",
+    "answer": "has lived",
+    "choices": [
+      "has lived",
+      "lived",
+      "is living",
+      "lives",
+      "was living"
+    ],
+    "expl": "for + 期間（fifty years）は現在完了のシグナルです。過去形 lived では「今も継続中」のニュアンスが出せません。",
+    "rule": "現在完了（継続） (Present Perfect (Duration))",
+    "kp": [
+      "for + 期間 → 現在完了（has/have + pp）",
+      "since + 時点も同様"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "Please let me know ___ the package has arrived or not.",
+    "ja": "荷物が届いたかどうか教えてください。",
+    "answer": "whether",
+    "choices": [
+      "whether",
+      "what",
+      "that",
+      "if not",
+      "which"
+    ],
+    "expl": "「～かどうか」を表すのは whether です。or not と共に使う場合は whether が適切で、that や what は使えません。",
+    "rule": "whether ... or not (Whether...Or Not)",
+    "kp": [
+      "whether ... or not = ～かどうか",
+      "or not と共に使うのは whether"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "After years of training, the young chef finally succeeded ___ opening his own restaurant.",
+    "ja": "何年もの修業の末、その若いシェフはついに自分のレストランを開くことに成功しました。",
+    "answer": "in",
+    "choices": [
+      "in",
+      "to",
+      "at",
+      "on",
+      "with"
+    ],
+    "expl": "succeed の後は in + 動名詞（-ing）の形をとります。to 不定詞を続けることはできません。",
+    "rule": "succeed in -ing (Succeed In + Gerund)",
+    "kp": [
+      "succeed in + -ing = ～に成功する",
+      "succeed to は不可"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "All visitors to the gallery are kindly asked to refrain ___ touching the artwork.",
+    "ja": "ギャラリーのすべての来場者は、作品に触れることを控えるようお願いします。",
+    "answer": "from",
+    "choices": [
+      "from",
+      "to",
+      "of",
+      "in",
+      "against"
+    ],
+    "expl": "refrain の後は from + 動名詞（-ing）の形が必要です。refrain to は誤りで、from が唯一の正解です。",
+    "rule": "refrain from -ing (Refrain From + Gerund)",
+    "kp": [
+      "refrain from + -ing = ～を控える",
+      "to / of は refrain に続けられない"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The ___ of the old railway station into a modern art museum took three years.",
+    "ja": "その古い鉄道駅を現代美術館に転換する作業は3年かかりました。",
+    "answer": "conversion",
+    "choices": [
+      "conversion",
+      "convert",
+      "converting",
+      "converted",
+      "converts"
+    ],
+    "expl": "冠詞 The の後には名詞が必要です。動詞 convert の派生名詞は conversion で、動詞形や動名詞よりも派生名詞が適切です。",
+    "rule": "品詞変換（動詞→名詞） (Word Formation: Verb to Noun)",
+    "kp": [
+      "冠詞（The/A）の後 → 名詞形",
+      "convert → conversion（派生名詞）"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "By the time he graduates next spring, he ___ this university for four years.",
+    "ja": "来年の春に卒業するころには、彼はこの大学に4年間在籍したことになります。",
+    "answer": "will have attended",
+    "choices": [
+      "will have attended",
+      "will attend",
+      "has attended",
+      "attends",
+      "would attend"
+    ],
+    "expl": "by the time + 未来の節に対し、主節は未来完了（will have + pp）を使います。will attend では「完了・継続」のニュアンスが出ません。",
+    "rule": "未来完了 (Future Perfect)",
+    "kp": [
+      "by + 未来の時点 → will have + pp",
+      "by the time節は現在形"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "The engineers ___ on the broken pipeline for six hours when they finally located the leak.",
+    "ja": "エンジニアたちは、ついに漏れ箇所を発見したとき、壊れたパイプラインの修理を6時間続けていました。",
+    "answer": "had been working",
+    "choices": [
+      "had been working",
+      "have been working",
+      "were working",
+      "worked",
+      "had worked"
+    ],
+    "expl": "過去のある時点（located the leak）まで継続していた動作は過去完了進行形（had been + -ing）で表します。for で期間を示していることもシグナルです。",
+    "rule": "過去完了進行形 (Past Perfect Continuous)",
+    "kp": [
+      "過去の時点まで継続 → had been + -ing",
+      "for + 期間がシグナル"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The number of international students at this university ___ risen sharply over the past decade.",
+    "ja": "この大学の留学生の数は過去10年間で急激に増加しました。",
+    "answer": "has",
+    "choices": [
+      "has",
+      "have",
+      "are",
+      "were",
+      "had"
+    ],
+    "expl": "The number of は「～の数」という意味で単数扱いです。したがって動詞は has が正解で、have は不可です。",
+    "rule": "The number of（単数）vs A number of（複数） (The Number Of vs A Number Of)",
+    "kp": [
+      "The number of → 単数（has/is）",
+      "A number of → 複数（have/are）"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "The concert was postponed ___ the sudden illness of the lead singer.",
+    "ja": "コンサートはリードシンガーの突然の病気のために延期されました。",
+    "answer": "due to",
+    "choices": [
+      "due to",
+      "because",
+      "since",
+      "although",
+      "despite"
+    ],
+    "expl": "due to の後には名詞句（the sudden illness）が来ます。because の後は節（S+V）が必要なので、名詞句のみの場合は due to が正解です。",
+    "rule": "due to + 名詞 (Due To vs Because)",
+    "kp": [
+      "due to + 名詞句",
+      "because + 節（S+V）"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "A number of delegates ___ attending the international summit next week.",
+    "ja": "多くの代表者が来週の国際サミットに出席します。",
+    "answer": "are",
+    "choices": [
+      "are",
+      "is",
+      "was",
+      "has",
+      "have"
+    ],
+    "expl": "A number of は「多くの」という意味で複数扱いです。したがって動詞は are が正解で、is は不可です。",
+    "rule": "The number of（単数）vs A number of（複数） (The Number Of vs A Number Of)",
+    "kp": [
+      "A number of → 複数（are/have）",
+      "The number of → 単数（is/has）"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "form",
+    "tags": [
+      "eiken2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "___ from the hilltop at sunset, the vast ocean looked like a painting.",
+    "ja": "夕暮れ時に丘の上から見ると、広大な海は絵画のように見えました。",
+    "answer": "Seen",
+    "choices": [
+      "Seen",
+      "Seeing",
+      "See",
+      "Having seen",
+      "To see"
+    ],
+    "expl": "主語 the vast ocean は「見られる」側なので、受動の分詞構文となり過去分詞 Seen で始めます。Seeing（能動）では意味が逆になります。",
+    "rule": "分詞構文（受動） (Participial Phrase (Passive))",
+    "kp": [
+      "主語が受動 → 過去分詞で開始",
+      "能動なら現在分詞（-ing）"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "trap",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "I would rather you ___ the meeting without letting me know in advance.",
+    "ja": "事前に知らせずに会議をキャンセルしてほしくありません。",
+    "answer": "didn't cancel",
+    "choices": [
+      "didn't cancel",
+      "don't cancel",
+      "won't cancel",
+      "not cancel",
+      "hadn't canceled"
+    ],
+    "expl": "would rather + S + 動詞の過去形 という仮定法的表現を使います。don't や won't など現在・未来形は不可で、過去形 didn't cancel が正解です。",
+    "rule": "would rather + S + 過去形 (Would Rather + Subject + Past Tense)",
+    "kp": [
+      "would rather + S + 過去形（仮定法）",
+      "don't / won't は不可"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "trap",
+    "tags": [
+      "eiken2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "It is high time the hospital ___ its outdated medical equipment.",
+    "ja": "その病院はもう時代遅れの医療機器を更新すべきです。",
+    "answer": "replaced",
+    "choices": [
+      "replaced",
+      "replace",
+      "will replace",
+      "has replaced",
+      "replaces"
+    ],
+    "expl": "It is high time + S + 動詞の過去形 という仮定法的表現です。replace や will replace など現在・未来形は使えません。",
+    "rule": "It is (high) time + S + 過去形 (It Is Time + Past Tense (Subjunctive))",
+    "kp": [
+      "It's (high) time + 過去形 = そろそろ～すべき",
+      "will / 現在形は不可"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "Not only ___ the budget cut, but the project timeline was also shortened significantly.",
+    "ja": "予算が削減されただけでなく、プロジェクトのスケジュールも大幅に短縮されました。",
+    "answer": "was the budget cut",
+    "choices": [
+      "was the budget cut",
+      "the budget was cut",
+      "the budget cut was",
+      "did the budget cut",
+      "has the budget cut"
+    ],
+    "expl": "Not only が文頭に来ると倒置が必要です。過去の受動態なので was + 主語の語順になり、was the budget cut が正解です。",
+    "rule": "Not only の倒置 (Inversion after Not Only)",
+    "kp": [
+      "Not only が文頭 → 倒置（助動詞/be動詞 + 主語）",
+      "Never / Hardly / Seldom も同様"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "If the pilot ___ the weather report before departure, the flight would not have been delayed.",
+    "ja": "もし出発前にパイロットが気象情報を確認していたら、フライトは遅延しなかったでしょう。",
+    "answer": "had checked",
+    "choices": [
+      "had checked",
+      "checked",
+      "would have checked",
+      "has checked",
+      "would check"
+    ],
+    "expl": "過去の事実に反する仮定は仮定法過去完了を使います。If節は had + 過去分詞、主節は would have + 過去分詞の形です。",
+    "rule": "仮定法過去完了 (Third Conditional (Past Unreal))",
+    "kp": [
+      "If + had pp, would have pp（仮定法過去完了）",
+      "would have checked は条件節に使えない"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "logic",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "___ it not for the team's perseverance, the groundbreaking discovery would never have been made.",
+    "ja": "チームの粘り強さがなければ、その画期的な発見は決してなされなかったでしょう。",
+    "answer": "Were",
+    "choices": [
+      "Were",
+      "Was",
+      "Had",
+      "If",
+      "Should"
+    ],
+    "expl": "Were it not for は「もし～がなければ」という意味の仮定法倒置表現です。仮定法では was ではなく were を使い、if は不要です。",
+    "rule": "Were it not for（仮定法倒置） (Were It Not For (Inverted Conditional))",
+    "kp": [
+      "Were it not for + 名詞 = If it were not for + 名詞",
+      "仮定法では Was ではなく Were"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "My dog ___ very energetic and loves to run in the park.",
+    "ja": "私の犬はとても活発で、公園を走るのが大好きです。",
+    "answer": "is",
+    "choices": [
+      "is",
+      "are",
+      "am",
+      "be",
+      "were"
+    ],
+    "expl": "主語 My dog は三人称単数なので、be動詞は is を使います。are は You/We/They、am は I にのみ使います。",
+    "rule": "Subject-Verb Agreement with Be",
+    "kp": [
+      "He/She/It → is",
+      "主語の人称と数でbe動詞を決める"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "My older brother ___ to school by bicycle every morning.",
+    "ja": "私の兄は毎朝自転車で学校へ通っています。",
+    "answer": "rides",
+    "choices": [
+      "rides",
+      "ride",
+      "riding",
+      "rided",
+      "is ride"
+    ],
+    "expl": "主語 My older brother は三人称単数なので、一般動詞には -s を付けて rides とします。",
+    "rule": "Third Person Singular -s",
+    "kp": [
+      "三人称単数現在形は動詞に -s/-es を付ける",
+      "He/She/It + V-s"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "There ___ two cats sleeping on the sofa.",
+    "ja": "ソファの上で2匹の猫が眠っています。",
+    "answer": "are",
+    "choices": [
+      "are",
+      "is",
+      "have",
+      "has",
+      "were"
+    ],
+    "expl": "後続の名詞 two cats が複数形なので、There are を使います。There is は単数名詞に使います。",
+    "rule": "There is/are (Existential)",
+    "kp": [
+      "There are + 複数名詞",
+      "後続の名詞が複数かどうかを確認する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "vocab",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "I can't remember what this word means. Let me ___ it up online.",
+    "ja": "この単語の意味が思い出せません。ネットで調べてみます。",
+    "answer": "look",
+    "choices": [
+      "look",
+      "search",
+      "find",
+      "see",
+      "check"
+    ],
+    "expl": "「調べる」は look up を使います。look for は「探す」、look at は「見る」なので文脈に合いません。",
+    "rule": "Phrasal Verbs with Look",
+    "kp": [
+      "look up = 調べる",
+      "look for = 探す、look at = 見る と区別する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4"
+    ],
+    "stem": "There ___ a big library next to the post office in our town.",
+    "ja": "私たちの町では、郵便局の隣に大きな図書館があります。",
+    "answer": "is",
+    "choices": [
+      "is",
+      "are",
+      "have",
+      "be",
+      "has"
+    ],
+    "expl": "後続の名詞 a big library が単数形なので、There is を使います。複数名詞には There are を使います。",
+    "rule": "There is/are (Existential)",
+    "kp": [
+      "There is + 単数名詞",
+      "名詞が単数か複数かで is/are を使い分ける"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "He ___ in this small town since he was born.",
+    "ja": "彼は生まれてからずっとこの小さな町に住んでいます。",
+    "answer": "has lived",
+    "choices": [
+      "has lived",
+      "lived",
+      "is living",
+      "was living",
+      "had lived"
+    ],
+    "expl": "since he was born という「時点」を示す語句があるため、現在完了（継続）has lived を使います。過去形 lived や進行形 is living は since と組み合わせると不自然です。",
+    "rule": "Present Perfect (Duration)",
+    "kp": [
+      "since + 時点 → have/has + pp",
+      "過去形はsince と組み合わせて継続を表せない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "I ___ this author's novels before, so I'm excited to read her new one.",
+    "ja": "私は以前にもこの著者の小説を読んだことがあるので、新作を読むのが楽しみです。",
+    "answer": "have read",
+    "choices": [
+      "have read",
+      "read",
+      "have readed",
+      "had read",
+      "was reading"
+    ],
+    "expl": "「以前に～したことがある」という経験を表すには現在完了（経験）have read を使います。have readed は誤りで、read の過去分詞は read です。",
+    "rule": "Present Perfect (Experience)",
+    "kp": [
+      "経験は have/has + pp で表す",
+      "read の過去分詞は read（不規則変化）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "juken"
+    ],
+    "stem": "Her English pronunciation is ___ than it was a year ago.",
+    "ja": "彼女の英語の発音は1年前よりも良くなっています。",
+    "answer": "better",
+    "choices": [
+      "better",
+      "more good",
+      "gooder",
+      "best",
+      "more better"
+    ],
+    "expl": "good の比較級は不規則変化で better です。more good や gooder は誤りで、比較級に more を付けることも -er を付けることもできません。",
+    "rule": "Irregular Comparatives",
     "kp": [
       "good → better → best（不規則変化）",
       "more good / gooder は誤り"
@@ -2863,21 +2274,21 @@
       "toeic",
       "juken"
     ],
-    "stem": "The coach made all the players ___ the drill ten times without stopping.",
-    "ja": "コーチは全選手に、止まらずにそのドリルを10回やらせました。",
-    "answer": "repeat",
+    "stem": "The loud thunder made the young children ___ and hide under the table.",
+    "ja": "大きな雷の音で幼い子どもたちは叫んで、テーブルの下に隠れました。",
+    "answer": "scream",
     "choices": [
-      "repeat",
-      "to repeat",
-      "repeating",
-      "repeated",
-      "repeats"
+      "scream",
+      "to scream",
+      "screaming",
+      "screamed",
+      "to be screaming"
     ],
-    "expl": "使役動詞 make は「make + 目的語 + 動詞の原形」の形をとります。to は不要です。",
-    "rule": "使役動詞 make + O + 原形 (Causative: Make + Object + Base Form)",
+    "expl": "make + O + 動詞原形の形を取ります。to scream のように to をつけるのは誤りで、-ing 形も使いません。",
+    "rule": "Causative: Make + Object + Base Form",
     "kp": [
-      "make + O + 動詞原形（toは付けない）",
-      "make/let/have + O + 原形"
+      "make + O + 原形（to なし）",
+      "let/have も同様に原形不定詞を取る"
     ]
   },
   {
@@ -2887,191 +2298,69 @@
       "eiken3",
       "juken"
     ],
-    "stem": "My grandfather ___ in this small town for over forty years.",
-    "ja": "私の祖父は40年以上この小さな町に住んでいます。",
-    "answer": "has lived",
+    "stem": "My aunt ___ for this company for over fifteen years.",
+    "ja": "私の叔母は15年以上この会社に勤めています。",
+    "answer": "has worked",
     "choices": [
-      "has lived",
-      "lived",
-      "is living",
-      "lives",
-      "had lived"
+      "has worked",
+      "worked",
+      "is working",
+      "works",
+      "had worked"
     ],
-    "expl": "「for + 期間」は現在完了（継続）のシグナルです。has lived が正しい形です。",
-    "rule": "現在完了（継続） (Present Perfect (Duration))",
+    "expl": "for + 期間（for over fifteen years）があるので、現在完了（継続）has worked を使います。過去形 worked では現在まで続いているニュアンスが出ません。",
+    "rule": "Present Perfect (Duration)",
     "kp": [
-      "for + 期間 / since + 時点 → have/has + 過去分詞",
-      "過去形や現在進行形は for（継続）と組み合わせられない"
+      "for + 期間 → have/has + pp",
+      "現在も続いている状態は現在完了で表す"
     ]
   },
   {
-    "diff": "lv2",
-    "axis": "tense",
+    "diff": "lv3",
+    "axis": "trap",
     "tags": [
-      "eiken3",
-      "juken"
+      "eikenpre2",
+      "toeic"
     ],
-    "stem": "When we reached the theater, the play ___ already ___.",
-    "ja": "私たちが劇場に着いたとき、劇はすでに始まっていました。",
-    "answer": "had already begun",
+    "stem": "The doctor recommended that the patient ___ plenty of water every day.",
+    "ja": "医師は患者が毎日十分な水を飲むよう勧めました。",
+    "answer": "drink",
     "choices": [
-      "had already begun",
-      "already began",
-      "has already begun",
-      "was already begun",
-      "already begins"
+      "drink",
+      "drinks",
+      "should drinks",
+      "drinking",
+      "to drink"
     ],
-    "expl": "reached（過去）よりも前の出来事を表すには過去完了 had + 過去分詞を使います。",
-    "rule": "過去完了 (Past Perfect)",
+    "expl": "recommend + that + S + 動詞原形（仮定法現在）の形を取ります。主語が三人称単数でも -s は付けず、原形 drink を使います。",
+    "rule": "Subjunctive after Suggest/Recommend",
     "kp": [
-      "過去の文中でさらに前の出来事 → had + 過去分詞",
-      "has（現在完了）は過去の文脈には使えない"
+      "recommend/suggest + that S + 原形（三単現の s なし）",
+      "仮定法現在では主語の人称に関わらず原形"
     ]
   },
   {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "The weather today is ___ than it was yesterday.",
-    "ja": "今日の天気は昨日より悪いです。",
-    "answer": "worse",
-    "choices": [
-      "worse",
-      "more bad",
-      "badder",
-      "worst",
-      "badly"
-    ],
-    "expl": "bad の比較級は不規則変化で worse です。more bad や badder は誤りです。",
-    "rule": "不規則比較級 (Irregular Comparatives)",
-    "kp": [
-      "bad → worse → worst（不規則変化）",
-      "more bad / badder は誤り"
-    ]
-  },
-  {
-    "diff": "lv2",
+    "diff": "lv3",
     "axis": "logic",
     "tags": [
-      "eiken3",
+      "eikenpre2",
       "juken"
     ],
-    "stem": "Please tell me ___ this restaurant is open on Sundays or not.",
-    "ja": "このレストランが日曜日に開いているかどうか教えてください。",
-    "answer": "whether",
+    "stem": "The small town ___ my grandfather grew up has barely changed over the decades.",
+    "ja": "私の祖父が育った小さな町は、数十年経ってもほとんど変わっていません。",
+    "answer": "where",
     "choices": [
-      "whether",
+      "where",
+      "which",
       "what",
       "that",
-      "which",
-      "how"
+      "in that"
     ],
-    "expl": "「～かどうか」は whether ... or not で表します。or not と共に使えるのは whether だけで、that や what は不可です。",
-    "rule": "whether ... or not (Whether...Or Not)",
+    "expl": "先行詞 The small town が場所を示しているので、関係副詞 where を使います。which を使う場合は in which が必要です。",
+    "rule": "Relative Adverb: Where",
     "kp": [
-      "「～かどうか」→ whether ... or not",
-      "or not と組み合わせられるのは whether のみ"
-    ]
-  },
-  {
-    "diff": "lv2",
-    "axis": "form",
-    "tags": [
-      "eiken3",
-      "juken"
-    ],
-    "stem": "My score on the math test was much ___ than last time.",
-    "ja": "数学のテストの点数は前回よりずっと良かったです。",
-    "answer": "better",
-    "choices": [
-      "better",
-      "more good",
-      "gooder",
-      "well",
-      "good"
-    ],
-    "expl": "good の比較級は不規則変化の better です。much は比較級を強調する副詞です。",
-    "rule": "不規則比較級 (Irregular Comparatives)",
-    "kp": [
-      "good → better（不規則変化）",
-      "much / far / a lot は比較級を強調できる"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "Guests are kindly asked to refrain ___ making loud noises after 10 p.m.",
-    "ja": "宿泊客の皆様は午後10時以降、大きな音を立てることをお控えください。",
-    "answer": "from",
-    "choices": [
-      "from",
-      "to",
-      "of",
-      "in",
-      "against"
-    ],
-    "expl": "「～を控える」は refrain from + 動名詞で表します。refrain to は誤りです。",
-    "rule": "refrain from -ing (Refrain From + Gerund)",
-    "kp": [
-      "refrain from + -ing = ～を控える",
-      "toではなくfromを使う"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "trap",
-    "tags": [
-      "eikenpre2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "The committee recommended that every member ___ the final report by Friday.",
-    "ja": "委員会は全メンバーが金曜日までに最終報告書を提出するよう勧告しました。",
-    "answer": "submit",
-    "choices": [
-      "submit",
-      "submits",
-      "submitted",
-      "should submits",
-      "to submit"
-    ],
-    "expl": "recommend that ... の後は仮定法現在で動詞の原形を使います。三人称単数でも -s は付けません。",
-    "rule": "仮定法現在 suggest/recommend + 原形 (Subjunctive after Suggest/Recommend)",
-    "kp": [
-      "recommend/suggest/insist/demand + that S + 動詞原形",
-      "仮定法現在では三単現の -s を付けない"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "trap",
-    "tags": [
-      "eikenpre2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "___ of applicants for this position has increased significantly this year.",
-    "ja": "今年はこのポジションへの応募者数が大幅に増加しました。",
-    "answer": "The number",
-    "choices": [
-      "The number",
-      "A number",
-      "Numbers",
-      "The amount",
-      "Some number"
-    ],
-    "expl": "「応募者の数」は The number of + 複数名詞で、動詞は単数扱い（has increased）です。",
-    "rule": "The number of（単数）vs A number of（複数） (The Number Of vs A Number Of)",
-    "kp": [
-      "The number of + 複数名詞 → 単数動詞（is/has）",
-      "A number of + 複数名詞 → 複数動詞（are/have）"
+      "場所を表す先行詞 → 関係副詞 where",
+      "which を使うなら in which とする"
     ]
   },
   {
@@ -3081,93 +2370,21 @@
       "eikenpre2",
       "toeic"
     ],
-    "stem": "By the time the guests arrive, we ___ all the preparations.",
-    "ja": "ゲストが到着するころには、私たちは全ての準備を終えているでしょう。",
-    "answer": "will have completed",
+    "stem": "By the time the director arrives at the office tomorrow, the team ___ the presentation slides.",
+    "ja": "明日、部長が会社に到着するころには、チームはプレゼンのスライドを完成させているでしょう。",
+    "answer": "will have finished",
     "choices": [
-      "will have completed",
-      "will complete",
-      "have completed",
-      "had completed",
-      "complete"
+      "will have finished",
+      "will finish",
+      "have finished",
+      "had finished",
+      "finish"
     ],
-    "expl": "「by the time + 現在形」の文で、未来のある時点までに完了していることを表すには will have + 過去分詞（未来完了）を使います。",
-    "rule": "未来完了 (Future Perfect)",
+    "expl": "by the time + 現在形（未来の時点）は未来完了のシグナルです。「到着するころには終わっているだろう」という未来の完了を表すには will have finished を使います。",
+    "rule": "Future Perfect",
     "kp": [
-      "by the time + 現在形 → 帰結節は will have + 過去分詞",
-      "by + 未来の時点 → 未来完了"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "form",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "All the equipment in the laboratory needs ___ regularly to ensure safety.",
-    "ja": "安全確保のため、実験室のすべての機器は定期的に点検される必要があります。",
-    "answer": "to be inspected",
-    "choices": [
-      "to be inspected",
-      "to inspect",
-      "inspecting",
-      "being inspected",
-      "inspect"
-    ],
-    "expl": "主語 equipment は「点検される側」なので、受動態の不定詞 to be + 過去分詞の形を使います。",
-    "rule": "受動態の不定詞 (Passive Infinitive: to be + pp)",
-    "kp": [
-      "主語が動作を受ける側 → need to be + 過去分詞",
-      "to inspect（能動）と to be inspected（受動）を区別する"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "The ceremony was canceled ___ unexpected circumstances.",
-    "ja": "式典は予期せぬ事情により中止になりました。",
-    "answer": "due to",
-    "choices": [
-      "due to",
-      "because",
-      "because of to",
-      "since",
-      "for"
-    ],
-    "expl": "due to の後は名詞句（unexpected circumstances）が続きます。because の後は S + V の節が必要です。",
-    "rule": "due to + 名詞 (Due To vs Because)",
-    "kp": [
-      "due to / owing to + 名詞句",
-      "because + S + V（節）"
-    ]
-  },
-  {
-    "diff": "lv3",
-    "axis": "vocab",
-    "tags": [
-      "eikenpre2",
-      "toeic"
-    ],
-    "stem": "Employees are strongly advised to refrain ___ discussing confidential information in public places.",
-    "ja": "従業員は公共の場で機密情報を話し合うことを強く控えるよう求められています。",
-    "answer": "from",
-    "choices": [
-      "from",
-      "to",
-      "of",
-      "against",
-      "for"
-    ],
-    "expl": "refrain from + 動名詞で「～を控える」という意味になります。from は必須で省略できません。",
-    "rule": "refrain from -ing (Refrain From + Gerund)",
-    "kp": [
-      "refrain from + -ing（fromは省略不可）",
-      "prevent/prohibit も同様に from + -ing"
+      "by + 未来の時点 → will have + pp",
+      "by the time 節の中は現在形（will は不要）"
     ]
   },
   {
@@ -3178,45 +2395,46 @@
       "toeic",
       "juken"
     ],
-    "stem": "A number of scientists ___ working on solutions to reduce plastic waste in the ocean.",
-    "ja": "多くの科学者が海洋プラスチックごみを減らす解決策に取り組んでいます。",
-    "answer": "are",
+    "stem": "A number of delegates ___ already arrived at the conference venue.",
+    "ja": "多くの代表者がすでに会議会場に到着しています。",
+    "answer": "have",
     "choices": [
-      "are",
+      "have",
+      "has",
       "is",
       "was",
-      "has been",
-      "have"
+      "having"
     ],
-    "expl": "A number of は「多くの」という意味で複数扱いになるので、動詞は are を使います。",
-    "rule": "The number of（単数）vs A number of（複数） (The Number Of vs A Number Of)",
+    "expl": "A number of は「多くの」という意味で複数扱いになるため、動詞は複数形の have を使います。The number of（～の数）であれば単数扱いで has になります。",
+    "rule": "The Number Of vs A Number Of",
     "kp": [
-      "A number of = 多くの → 複数動詞（are）",
-      "The number of = ～の数 → 単数動詞（is）"
+      "A number of + 複数名詞 → 複数動詞（have/are）",
+      "The number of + 複数名詞 → 単数動詞（has/is）"
     ]
   },
   {
     "diff": "lv4",
-    "axis": "logic",
+    "axis": "trap",
     "tags": [
       "eiken2",
-      "toeic"
+      "toeic",
+      "juken"
     ],
-    "stem": "Not only ___ a gold medal at the Olympics, but she also broke the world record.",
-    "ja": "彼女はオリンピックで金メダルを獲得しただけでなく、世界記録も破りました。",
-    "answer": "did she win",
+    "stem": "It is high time the company ___ its approach to environmental sustainability.",
+    "ja": "その会社はそろそろ環境の持続可能性に対するアプローチを見直すべき時期です。",
+    "answer": "reconsidered",
     "choices": [
-      "did she win",
-      "she won",
-      "she did win",
-      "won she",
-      "does she win"
+      "reconsidered",
+      "reconsider",
+      "will reconsider",
+      "has reconsidered",
+      "should reconsider"
     ],
-    "expl": "Not only が文頭に来ると倒置が必要です。過去の文なので did を主語の前に置いて did she win とします。",
-    "rule": "Not only の倒置 (Inversion after Not Only)",
+    "expl": "It is high time + S + 過去形 の構文では、仮定法的に動詞を過去形にします。reconsider（原形）や will reconsider（未来形）は誤りです。",
+    "rule": "It Is Time + Past Tense (Subjunctive)",
     "kp": [
-      "Not only が文頭 → 助動詞+主語の倒置",
-      "倒置後の動詞は原形（did she win）"
+      "It is high time + S + 過去形（仮定法）",
+      "原形や will は使わない"
     ]
   },
   {
@@ -3226,21 +2444,21 @@
       "eiken2",
       "juken"
     ],
-    "stem": "___ I taken more time to review my answers, I would have passed the exam.",
-    "ja": "もっと時間をかけて解答を見直していたら、試験に合格していたでしょうに。",
+    "stem": "___ the government acted sooner, thousands of jobs could have been saved.",
+    "ja": "政府がもっと早く行動していれば、何千もの雇用が守られたかもしれません。",
     "answer": "Had",
     "choices": [
       "Had",
-      "If had",
-      "Have",
-      "Was",
-      "Did"
+      "If",
+      "Were",
+      "Should",
+      "Has"
     ],
-    "expl": "If I had taken ... の If を省略した倒置構文です。文頭に Had を置いて Had I taken の形にします。",
-    "rule": "仮定法過去完了の倒置 (Inversion in Third Conditional (Had + S + pp))",
+    "expl": "仮定法過去完了の倒置構文で、If the government had acted を Had the government acted と表します。帰結節が could have been saved となっていることも確認のポイントです。",
+    "rule": "Inversion in Third Conditional (Had + S + pp)",
     "kp": [
-      "If I had pp → Had I pp（Ifを省略した倒置）",
-      "Were / Had / Should で if を省略した倒置が作れる"
+      "Had + S + pp = If S had pp（仮定法過去完了の倒置）",
+      "帰結節は would/could have + pp"
     ]
   },
   {
@@ -3251,70 +2469,21 @@
       "toeic",
       "juken"
     ],
-    "stem": "It is high time the government ___ stricter measures to protect the environment.",
-    "ja": "政府がより厳しい環境保護策を取る時がとっくに来ています。",
-    "answer": "took",
+    "stem": "It is about time the students ___ their exam schedules and study plans seriously.",
+    "ja": "学生たちはそろそろ試験のスケジュールと学習計画を真剣に考えるべき時です。",
+    "answer": "reviewed",
     "choices": [
-      "took",
-      "takes",
-      "will take",
-      "has taken",
-      "take"
+      "reviewed",
+      "review",
+      "will review",
+      "are reviewing",
+      "have reviewed"
     ],
-    "expl": "It is high time + 節の構文では、仮定法的に動詞を過去形にします。took が正解で、takes や will take は誤りです。",
-    "rule": "It is (high) time + S + 過去形 (It Is Time + Past Tense (Subjunctive))",
+    "expl": "It is about time + S + 過去形（仮定法）の構文です。「そろそろ～すべき時」という意味で、動詞は過去形 reviewed を使います。原形や will は使いません。",
+    "rule": "It Is Time + Past Tense (Subjunctive)",
     "kp": [
-      "It is high time + S + 過去形（仮定法）",
-      "willや原形は使わない"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "form",
-    "tags": [
-      "eiken2",
-      "toeic",
-      "juken"
-    ],
-    "stem": "___ from the air, the ancient ruins formed a perfect circle.",
-    "ja": "空から見ると、その古代遺跡は完全な円を形成していました。",
-    "answer": "Seen",
-    "choices": [
-      "Seen",
-      "Seeing",
-      "See",
-      "To see",
-      "Having seen"
-    ],
-    "expl": "主語 the ancient ruins は「見られる側」なので、受動の分詞構文として Seen（過去分詞）で始めます。",
-    "rule": "分詞構文（受動） (Participial Phrase (Passive))",
-    "kp": [
-      "主語が動作を受ける側 → 過去分詞で分詞構文を開始",
-      "Seeing（能動）とSeen（受動）を区別する"
-    ]
-  },
-  {
-    "diff": "lv4",
-    "axis": "trap",
-    "tags": [
-      "eiken2",
-      "toeic"
-    ],
-    "stem": "I would rather you ___ your personal calls during working hours.",
-    "ja": "あなたに勤務時間中に個人的な電話をかけないでいてほしいのですが。",
-    "answer": "didn't make",
-    "choices": [
-      "didn't make",
-      "don't make",
-      "not make",
-      "won't make",
-      "hadn't made"
-    ],
-    "expl": "would rather + 主語 + 動詞の構文では仮定法的に動詞を過去形にします。didn't make が正解です。",
-    "rule": "would rather + S + 過去形 (Would Rather + Subject + Past Tense)",
-    "kp": [
-      "would rather + S + 過去形（仮定法）",
-      "don't や not makeは誤り"
+      "It is about time + S + 過去形",
+      "It is time / It is high time も同じパターン"
     ]
   },
   {
@@ -3324,21 +2493,21 @@
       "eikenpre1",
       "toeic"
     ],
-    "stem": "___ not for the generous funding from the sponsors, this research project would have been impossible.",
-    "ja": "スポンサーからの惜しみない資金援助がなければ、この研究プロジェクトは不可能だったでしょう。",
-    "answer": "Were it",
+    "stem": "___ it not for the advanced early warning system, the coastal towns could not have been evacuated in time.",
+    "ja": "高度な早期警報システムがなければ、沿岸の町々を時間内に避難させることはできなかったでしょう。",
+    "answer": "Were",
     "choices": [
-      "Were it",
-      "Was it",
-      "If it were",
-      "Had it been",
-      "Would it be"
+      "Were",
+      "Was",
+      "Had",
+      "If",
+      "Should"
     ],
-    "expl": "「もし～がなければ」を倒置で表す Were it not for + 名詞の構文です。仮定法では were を使い was は不可、for も必須です。",
-    "rule": "Were it not for（仮定法倒置） (Were It Not For (Inverted Conditional))",
+    "expl": "Were it not for + 名詞 は「もし～がなければ」という意味の仮定法倒置表現です。仮定法では Were を使い、Was は使いません。",
+    "rule": "Were It Not For (Inverted Conditional)",
     "kp": [
-      "Were it not for + 名詞 = If it were not for + 名詞",
-      "仮定法倒置では were を使う（was は不可）"
+      "Were it not for + N = If it were not for + N（仮定法倒置）",
+      "仮定法では必ず were を使い was は不可"
     ]
   }
 ]
