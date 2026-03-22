@@ -64,13 +64,35 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 .screen.active{display:block}
 
 /* ── HEADER ── */
-.hd{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-.hd-title{font-size:14px;font-weight:800;color:var(--text);letter-spacing:-.02em;text-decoration:none}
-.hd-title em{font-style:normal;color:var(--root-c)}
-.hd-link{font-size:13px;color:var(--text3);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all .15s}
-.hd-link:hover{background:var(--surface);color:var(--text2)}
-.hd-back{font-size:13px;color:var(--text2);background:none;border:none;cursor:pointer;padding:6px 12px;border-radius:8px;transition:all .15s}
-.hd-back:hover{background:var(--surface)}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,.92);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid rgba(0,0,0,.06);padding:10px 0;transition:padding .3s ease,box-shadow .3s ease}
+.site-header.scrolled{padding:6px 0;box-shadow:0 1px 12px rgba(0,0,0,.08)}
+.site-header-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.site-header-logo{font-size:15px;font-weight:800;color:#111;text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:7px}
+.site-header-logo svg{width:18px;height:18px;color:#F5A623}
+.site-header-nav{display:flex;align-items:center;gap:2px}
+.site-header-nav a{font-size:13px;font-weight:500;color:rgba(0,0,0,.6);text-decoration:none;padding:7px 12px;border-radius:10px;transition:all .2s ease;white-space:nowrap;position:relative}
+.site-header-nav a:hover{color:#111;background:rgba(0,0,0,.04)}
+.site-header-nav a.active{color:#F5A623;font-weight:700}
+.site-header-nav a.active::after{content:'';position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:16px;height:2px;border-radius:1px;background:#F5A623}
+.site-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;width:40px;height:40px;border-radius:10px;position:relative;z-index:302}
+.site-hamburger span{display:block;width:18px;height:2px;background:#111;margin:4px auto;border-radius:2px;transition:transform .3s,opacity .3s}
+.site-hamburger.active span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.site-hamburger.active span:nth-child(2){opacity:0}
+.site-hamburger.active span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.site-mobile-nav{display:none;position:fixed;inset:0;background:rgba(10,10,10,.96);z-index:301;backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;transition:opacity .3s}
+.site-mobile-nav.active{display:flex;opacity:1}
+.site-mobile-nav a{color:rgba(255,255,255,.7);text-decoration:none;font-size:18px;font-weight:600;padding:16px 40px;border-radius:14px;width:260px;text-align:center}
+.site-mobile-nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.site-mobile-nav a.active{color:#F5A623}
+.site-header-spacer{height:54px}
+@media(max-width:768px){.site-header-nav{display:none}.site-hamburger{display:block}}
+.app-nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+.app-nav-title{font-size:14px;font-weight:800;color:var(--text);letter-spacing:-.02em;text-decoration:none}
+.app-nav-title em{font-style:normal;color:var(--root-c)}
+.app-nav-link{font-size:13px;color:var(--text3);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all .15s}
+.app-nav-link:hover{background:var(--surface);color:var(--text2)}
+.app-nav-back{font-size:13px;color:var(--text2);background:none;border:none;cursor:pointer;padding:6px 12px;border-radius:8px;transition:all .15s}
+.app-nav-back:hover{background:var(--surface)}
 
 /* ── SHARED ── */
 .btn-p{display:block;width:100%;background:var(--accent);color:#fff;border:none;padding:17px;border-radius:var(--r);font-size:16px;font-weight:700;cursor:pointer;transition:all .12s;text-align:center;letter-spacing:-.01em}
@@ -234,13 +256,40 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ═══════ HEADER ═══════ -->
-<div class="hd">
-  <a href="/kioku-shinai/" class="hd-title">記憶しない<em>英単語</em></a>
+<div class="site-header-spacer"></div>
+<header class="site-header" id="siteHeader">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
+    <nav class="site-header-nav">
+      <a href="/">ListenUp</a>
+      <a href="/grammar/">文法クイズ</a>
+      <a href="/kioku-shinai/" class="active">記憶しない英単語</a>
+      <a href="/ranking/">ランキング</a>
+      <a href="/articles/">学習コラム</a>
+      <a href="/real-phrases/">フレーズ集</a>
+      <a href="/prompts/">AIプロンプト</a>
+      <a href="/about/">About</a>
+    </nav>
+    <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="site-mobile-nav" id="siteMobileNav">
+  <a href="/">ListenUp</a>
+  <a href="/grammar/">文法クイズ</a>
+  <a href="/kioku-shinai/" class="active">記憶しない英単語</a>
+  <a href="/ranking/">ランキング</a>
+  <a href="/articles/">学習コラム</a>
+  <a href="/real-phrases/">フレーズ集</a>
+  <a href="/prompts/">AIプロンプト</a>
+  <a href="/about/">About</a>
+</div>
+<div class="app-nav">
+  <a href="/kioku-shinai/" class="app-nav-title">記憶しない<em>英単語</em></a>
   <div style="display:flex;align-items:center;gap:4px">
-    <a class="hd-link" id="hdLink" href="#" style="display:none" onclick="showRootSelect();return false">語根一覧</a>
-    <button class="hd-back" id="hdBack" style="display:none" onclick="goBack()">&#8592; 戻る</button>
-    <a class="hd-link" href="/">ListenUp</a>
-    <a class="hd-link" href="/about/">About</a>
+    <a class="app-nav-link" id="hdLink" href="#" style="display:none" onclick="showRootSelect();return false">語根一覧</a>
+    <button class="app-nav-back" id="hdBack" style="display:none" onclick="goBack()">&#8592; 戻る</button>
   </div>
 </div>
 
@@ -725,6 +774,10 @@ function startRootFromCard(){
 /* ── INIT ── */
 renderLpTree();
 renderRootGrid();
+
+// Site header hamburger
+(function(){var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');if(!b||!n)return;b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});})();
+(function(){var h=document.getElementById('siteHeader');if(!h)return;var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});})();
 </script>
 </body>
 </html>
