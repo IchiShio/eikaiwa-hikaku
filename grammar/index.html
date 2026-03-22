@@ -65,12 +65,35 @@
     html { scroll-behavior: smooth; }
     html, body { height: 100%; }
     body { font-family: 'Inter', 'Noto Sans JP', -apple-system, sans-serif; background: var(--bg); color: var(--text-1); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 20px; height: 52px; display: flex; align-items: center; justify-content: space-between; }
-    .site-header .logo { font-weight: 800; font-size: 16px; color: var(--text-1); text-decoration: none; }
-    .site-header .logo span { color: var(--gold); }
-    .site-header nav { display: flex; gap: 18px; align-items: center; }
-    .site-header nav a { font-size: 13px; font-weight: 600; color: var(--text-2); text-decoration: none; transition: color var(--t); }
-    .site-header nav a:hover, .site-header nav a.active { color: var(--gold); }
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+      background: rgba(255,255,255,0.82); backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(0,0,0,0.06); padding: 14px 0;
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
+    }
+    .site-header.scrolled { padding: 8px 0; box-shadow: 0 1px 12px rgba(0,0,0,0.08); background: rgba(255,255,255,0.92); }
+    .site-header-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+    .site-header-logo { font-size: 15px; font-weight: 800; color: var(--text-1); text-decoration: none; white-space: nowrap; letter-spacing: -0.02em; display: flex; align-items: center; gap: 7px; }
+    .site-header-logo svg { width: 18px; height: 18px; color: var(--gold); }
+    .site-header-nav { display: flex; align-items: center; gap: 2px; }
+    .site-header-nav a { font-size: 13px; font-weight: 500; color: var(--text-2); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav a:hover { color: var(--text-1); background: rgba(0,0,0,0.04); }
+    .site-header-nav a.active { color: var(--gold); font-weight: 700; }
+    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: var(--gold); }
+    .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; transition: background 0.2s; }
+    .site-hamburger:hover { background: rgba(0,0,0,0.04); }
+    .site-hamburger span { display: block; width: 18px; height: 2px; background: var(--text-1); margin: 4px auto; border-radius: 2px; transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.3s; }
+    .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .site-hamburger.active span:nth-child(2) { opacity: 0; }
+    .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s ease; }
+    .site-mobile-nav.active { display: flex; opacity: 1; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; padding: 16px 40px; border-radius: 14px; transition: all 0.2s ease; width: 260px; text-align: center; }
+    .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+    .site-mobile-nav a.active { color: var(--gold); }
+    .site-header-spacer { height: 54px; }
+    @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
     .end-session-btn { font-size: 12px; font-weight: 600; color: var(--text-3); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 5px 12px; cursor: pointer; display: none; }
 
     /* ── SCREENS ── */
@@ -266,15 +289,35 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <header class="site-header">
-    <a href="/" class="logo">native<span>-real</span></a>
-    <nav>
-      <a href="/">リスニング</a>
-      <a href="/grammar/" class="active">文法</a>
-      <a href="/ranking/">ランキング</a>
-      <button class="end-session-btn" id="endSessionBtn" onclick="endSession()">今日はここまで</button>
-    </nav>
+  <div class="site-header-spacer"></div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header-inner">
+      <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
+      <nav class="site-header-nav">
+        <a href="/">ListenUp</a>
+        <a href="/grammar/" class="active">文法クイズ</a>
+        <a href="/kioku-shinai/">記憶しない英単語</a>
+        <a href="/ranking/">ランキング</a>
+        <a href="/articles/">学習コラム</a>
+        <a href="/real-phrases/">フレーズ集</a>
+        <a href="/prompts/">AIプロンプト</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
+  <div class="site-mobile-nav" id="siteMobileNav">
+    <a href="/">ListenUp</a>
+    <a href="/grammar/" class="active">文法クイズ</a>
+    <a href="/kioku-shinai/">記憶しない英単語</a>
+    <a href="/ranking/">ランキング</a>
+    <a href="/articles/">学習コラム</a>
+    <a href="/real-phrases/">フレーズ集</a>
+    <a href="/prompts/">AIプロンプト</a>
+    <a href="/about/">About</a>
+  </div>
 
   <!-- ═══════ START SCREEN ═══════ -->
   <div class="screen active" id="startScreen">
@@ -1164,6 +1207,41 @@ function shareToX() {
   wrongOnce = loadWrongOnce();
   showReturningStats();
   try { gtag('event', 'page_view', { page_title: 'GrammarUp', page_location: location.href }); } catch (_) {}
+})();
+
+// ── SITE HEADER HAMBURGER ──
+(function() {
+  const btn = document.getElementById('siteHamburger');
+  const nav = document.getElementById('siteMobileNav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function() {
+    btn.classList.toggle('active');
+    nav.classList.toggle('active');
+    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+  });
+  nav.addEventListener('click', function(e) {
+    if (e.target === nav || e.target.tagName === 'A') {
+      nav.classList.remove('active');
+      btn.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+
+// ── SCROLL COMPACT HEADER ──
+(function() {
+  const header = document.getElementById('siteHeader');
+  if (!header) return;
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
 })();
   </script>
 </body>
