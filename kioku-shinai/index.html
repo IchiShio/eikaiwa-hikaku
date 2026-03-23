@@ -341,8 +341,29 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
   <button class="btn-p" onclick="startCardMode()">無料ではじめる</button>
   <p class="note">登録不要 · ずっと無料</p>
 
+  <div style="max-width:640px;margin:40px auto;padding:0 20px;text-align:center;">
+    <h3 style="font-size:18px;font-weight:800;margin-bottom:16px;">3つのトレーニングで、英語力を総合強化</h3>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+      <a href="/kioku-shinai/" style="text-decoration:none;padding:16px 8px;border-radius:12px;background:rgba(0,122,255,0.06);border:1.5px solid rgba(0,122,255,0.15);">
+        <div style="font-size:24px;margin-bottom:4px;">&#x1F9E0;</div>
+        <div style="font-size:13px;font-weight:700;color:#007AFF;">語彙</div>
+        <div style="font-size:11px;color:rgba(0,0,0,0.5);margin-top:2px;">600語</div>
+      </a>
+      <a href="/grammar/" style="text-decoration:none;padding:16px 8px;border-radius:12px;background:rgba(16,185,129,0.06);border:1.5px solid rgba(16,185,129,0.15);">
+        <div style="font-size:24px;margin-bottom:4px;">&#128221;</div>
+        <div style="font-size:13px;font-weight:700;color:#10B981;">文法</div>
+        <div style="font-size:11px;color:rgba(0,0,0,0.5);margin-top:2px;">896問</div>
+      </a>
+      <a href="/" style="text-decoration:none;padding:16px 8px;border-radius:12px;background:rgba(245,166,35,0.06);border:1.5px solid rgba(245,166,35,0.15);">
+        <div style="font-size:24px;margin-bottom:4px;">&#128065;</div>
+        <div style="font-size:13px;font-weight:700;color:#F5A623;">リスニング</div>
+        <div style="font-size:11px;color:rgba(0,0,0,0.5);margin-top:2px;">1,300問+</div>
+      </a>
+    </div>
+  </div>
+
   <div class="footer">
-    <a href="/">ListenUp</a> · <a href="/ranking/">サービス比較</a><br>
+    <a href="/">ListenUp</a> · <a href="/grammar/">文法クイズ</a> · <a href="/ranking/">サービス比較</a><br>
     &copy; 2026 native-real.com
   </div>
 </div>
@@ -358,7 +379,7 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
     <button class="btn-s" id="cardQuizBtn" onclick="startRootFromCard()">この語根をクイズで学ぶ</button>
   </div>
   <div class="footer">
-    <a href="/">ListenUp</a> · <a href="/ranking/">サービス比較</a><br>
+    <a href="/">ListenUp</a> · <a href="/grammar/">文法クイズ</a> · <a href="/ranking/">サービス比較</a><br>
     &copy; 2026 native-real.com
   </div>
 </div>
@@ -371,7 +392,7 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
   <p class="roots-sub">1つ選ぶだけで、6〜20語をクイズで学べます</p>
   <div class="roots-grid" id="rootGrid"></div>
   <div class="footer">
-    <a href="/">ListenUp</a> · <a href="/ranking/">サービス比較</a><br>
+    <a href="/">ListenUp</a> · <a href="/grammar/">文法クイズ</a> · <a href="/ranking/">サービス比較</a><br>
     &copy; 2026 native-real.com
   </div>
 </div>
@@ -398,6 +419,18 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
     <p class="done-detail" id="compDetail"></p>
     <button class="btn-p" onclick="showRootSelect()">次の語根へ</button>
     <button class="btn-s" onclick="startCardMode()">カードに戻る</button>
+    <div class="cross-promo-cards" style="margin-top:20px;display:flex;flex-direction:column;gap:12px;">
+      <div style="background:#fff;border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);border-left:3px solid #F5A623;">
+        <div style="font-size:14px;font-weight:700;margin-bottom:4px;">&#128065; 語彙を聞き取れるか試そう</div>
+        <div style="font-size:12px;color:rgba(0,0,0,0.6);margin-bottom:10px;line-height:1.5;">覚えた単語がリスニングで聞き取れるか、ListenUpで1,300問+に挑戦。</div>
+        <a href="/" style="display:inline-block;padding:8px 20px;font-size:13px;font-weight:700;color:#fff;background:#F5A623;border-radius:8px;text-decoration:none;">ListenUpを試す</a>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);border-left:3px solid #10B981;">
+        <div style="font-size:14px;font-weight:700;margin-bottom:4px;">&#128221; 文法力もチェック</div>
+        <div style="font-size:12px;color:rgba(0,0,0,0.6);margin-bottom:10px;line-height:1.5;">語彙がわかっても文法が弱いと使えない。GrammarUpで896問に挑戦。</div>
+        <a href="/grammar/" style="display:inline-block;padding:8px 20px;font-size:13px;font-weight:700;color:#fff;background:#10B981;border-radius:8px;text-decoration:none;">GrammarUpを試す</a>
+      </div>
+    </div>
   </div>
 </div>
 </div>
