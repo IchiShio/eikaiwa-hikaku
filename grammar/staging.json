@@ -1,1 +1,4653 @@
-[]
+[
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "The dog ran ___ across the field.",
+    "ja": "その犬は野原をすばやく走った。",
+    "answer": "quickly",
+    "choices": [
+      "quickly",
+      "quick",
+      "quickness",
+      "more quick",
+      "quicken"
+    ],
+    "expl": "動詞 ran を修飾するには副詞が必要です。quick は形容詞なので動詞を修飾できません。副詞 quickly を使います。",
+    "rule": "R009",
+    "kp": [
+      "動詞を修飾するのは副詞",
+      "形容詞＋ly → 副詞"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She passed the test ___ because she studied every day.",
+    "ja": "毎日勉強していたので、彼女は簡単にテストに合格した。",
+    "answer": "easily",
+    "choices": [
+      "easily",
+      "easy",
+      "easiness",
+      "more easy",
+      "easier"
+    ],
+    "expl": "動詞 passed を修飾するには副詞が必要です。easy は形容詞なので、副詞形の easily を使います。",
+    "rule": "R009",
+    "kp": [
+      "動詞を修飾するのは副詞",
+      "easy → easily（形容詞→副詞）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "trap",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "My grandfather is ___ honest man who never tells a lie.",
+    "ja": "私の祖父は決して嘘をつかない正直な男性だ。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "any"
+    ],
+    "expl": "honest は頭の h が発音されず、母音の音（オ）で始まるため、不定冠詞は an を使います。",
+    "rule": "R015",
+    "kp": [
+      "サイレントh の語の前は an",
+      "綴りではなく発音で a/an を判断する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "trap",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She wants to become ___ engineer when she grows up.",
+    "ja": "彼女は大人になったらエンジニアになりたいと思っている。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "engineer は母音の音（エ）で始まるため、不定冠詞は an を使います。",
+    "rule": "R015",
+    "kp": [
+      "母音の音で始まる語の前は an",
+      "綴りではなく発音で a/an を判断する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "trap",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "He bought ___ uniform for the school festival.",
+    "ja": "彼は学校祭のためにユニフォームを買った。",
+    "answer": "a",
+    "choices": [
+      "a",
+      "an",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "uniform は綴りが u で始まりますが、発音は「ユ」（子音 y の音）で始まるため、不定冠詞は a を使います。",
+    "rule": "R015",
+    "kp": [
+      "u が子音音（ユ）で始まる語の前は a",
+      "綴りではなく発音で a/an を判断する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "He is ___ player on the team because he never gives up.",
+    "ja": "彼は決してあきらめないので、チームの中で優秀な選手だ。",
+    "answer": "a brilliant",
+    "choices": [
+      "a brilliant",
+      "a brilliantly",
+      "an brilliantly",
+      "brilliantly",
+      "an brilliant"
+    ],
+    "expl": "名詞 player を修飾するのは形容詞 brilliant です。副詞 brilliantly は名詞を修飾できません。また brilliant は子音音（b）で始まるため a を使います。",
+    "rule": "R008",
+    "kp": [
+      "名詞を修飾するのは形容詞",
+      "形容詞は名詞の直前に置く"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "present progressive",
+      "ing",
+      "ongoing action"
+    ],
+    "stem": "Please be quiet! The baby ___ right now.",
+    "ja": "静かにしてください！赤ちゃんが今まさに眠っています。",
+    "answer": "is sleeping",
+    "choices": [
+      "is sleeping",
+      "sleeps",
+      "slept",
+      "has slept",
+      "sleep"
+    ],
+    "expl": "right now は今まさに進行中の動作を示すシグナルです。現在進行形 is sleeping を使います。",
+    "rule": "R047",
+    "kp": [
+      "right now → 現在進行形",
+      "is/am/are + 動詞-ing"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "My sister ___ enjoy watching horror movies.",
+    "ja": "私の姉はホラー映画を見るのが好きではない。",
+    "answer": "doesn't",
+    "choices": [
+      "doesn't",
+      "don't",
+      "isn't",
+      "aren't",
+      "wasn't"
+    ],
+    "expl": "主語が My sister（三人称単数）なので、否定の助動詞は doesn't を使います。don't は複数主語や I/you に使います。",
+    "rule": "R028",
+    "kp": [
+      "三人称単数には doesn't",
+      "I/you/複数には don't"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The flowers in the garden smell ___.",
+    "ja": "庭の花はとてもよい香りがする。",
+    "answer": "wonderful",
+    "choices": [
+      "wonderful",
+      "wonderfully",
+      "wonder",
+      "more wonderfully",
+      "to be wonderful"
+    ],
+    "expl": "smell は感覚動詞なので、後ろに来て主語の状態を述べるのは形容詞 wonderful です。副詞 wonderfully を使うと「においをかぐのが上手」という意味になってしまいます。",
+    "rule": "R010",
+    "kp": [
+      "感覚動詞（smell/look/feel 等）の後は形容詞",
+      "副詞は感覚動詞の後に使えない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "noun",
+      "count",
+      "noncount",
+      "plural"
+    ],
+    "stem": "We need to buy some new ___ for the office.",
+    "ja": "オフィス用に新しい家具をいくつか買う必要がある。",
+    "answer": "furniture",
+    "choices": [
+      "furniture",
+      "furnitures",
+      "a furniture",
+      "furnitures pieces",
+      "piece of furnitures"
+    ],
+    "expl": "furniture は不可算名詞なので複数形にできません。furnitures という形は存在しません。",
+    "rule": "R040",
+    "kp": [
+      "furniture は不可算名詞（複数形なし）",
+      "不可算名詞には -s を付けない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "trap",
+    "tags": [
+      "grammar",
+      "much",
+      "many",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "stem": "There isn't ___ milk left in the fridge.",
+    "ja": "冷蔵庫にはミルクがほとんど残っていない。",
+    "answer": "much",
+    "choices": [
+      "much",
+      "many",
+      "a lot of number of",
+      "a great number of",
+      "few"
+    ],
+    "expl": "milk は不可算名詞なので、many ではなく much を使います。few や a great number of は可算名詞に使います。",
+    "rule": "R041",
+    "kp": [
+      "much + 不可算名詞",
+      "many + 可算名詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "trap",
+    "tags": [
+      "grammar",
+      "much",
+      "many",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "stem": "How ___ languages can you speak?",
+    "ja": "あなたはいくつの言語を話せますか？",
+    "answer": "many",
+    "choices": [
+      "many",
+      "much",
+      "a great amount of",
+      "a large quantity of",
+      "a number amount of"
+    ],
+    "expl": "languages は可算名詞（複数形）なので、much ではなく many を使います。",
+    "rule": "R041",
+    "kp": [
+      "many + 可算名詞",
+      "much + 不可算名詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The cat is hiding ___ the sofa and the bookshelf.",
+    "ja": "ネコはソファと本棚の間に隠れている。",
+    "answer": "between",
+    "choices": [
+      "between",
+      "among",
+      "beside",
+      "behind",
+      "through"
+    ],
+    "expl": "2つのもの（ソファと本棚）の間を表すには between を使います。among は3つ以上の間に使います。",
+    "rule": "R023",
+    "kp": [
+      "2者の間 → between",
+      "3者以上の間 → among"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "Please put your signature ___ the dotted line.",
+    "ja": "点線の上にサインをしてください。",
+    "answer": "on",
+    "choices": [
+      "on",
+      "in",
+      "at",
+      "above",
+      "into"
+    ],
+    "expl": "点線という表面（面）の上に書くことを表すには on を使います。in は内部、at は地点を表します。",
+    "rule": "R020",
+    "kp": [
+      "on = 表面",
+      "at = 点・地点、in = 内部"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "modal",
+      "auxiliary",
+      "invariant form"
+    ],
+    "stem": "She ___ speak three languages fluently.",
+    "ja": "彼女は3つの言語を流暢に話すことができる。",
+    "answer": "can",
+    "choices": [
+      "can",
+      "cans",
+      "is can",
+      "be able",
+      "canning"
+    ],
+    "expl": "助動詞 can は主語が何であっても形が変わりません。cans のように三人称単数で s を付けることはできません。",
+    "rule": "R049",
+    "kp": [
+      "助動詞は主語によって形が変わらない",
+      "She can（× She cans）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal",
+      "auxiliary",
+      "invariant form"
+    ],
+    "stem": "Every student ___ submit the assignment by Friday.",
+    "ja": "すべての生徒は金曜日までに課題を提出しなければならない。",
+    "answer": "must",
+    "choices": [
+      "must",
+      "musts",
+      "is must",
+      "muster",
+      "be must"
+    ],
+    "expl": "助動詞 must は主語が何であっても形が変わりません。musts のように三人称単数で s を付けることはできません。",
+    "rule": "R049",
+    "kp": [
+      "助動詞は主語によって形が変わらない",
+      "Every student must（× musts）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The boys on the soccer team forgot to bring ___ water bottles.",
+    "ja": "サッカーチームの少年たちは水筒を持ってくるのを忘れた。",
+    "answer": "their",
+    "choices": [
+      "their",
+      "his",
+      "her",
+      "its",
+      "our"
+    ],
+    "expl": "先行詞 The boys（複数）に合わせて、代名詞も複数形の their を使います。単数の his や her は不正解です。",
+    "rule": "R024",
+    "kp": [
+      "代名詞は先行詞と数を一致させる",
+      "複数の先行詞 → their"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "I have lived in this city ___ I was five years old.",
+    "ja": "私は5歳のときからこの街に住んでいる。",
+    "answer": "since",
+    "choices": [
+      "since",
+      "for",
+      "during",
+      "within",
+      "by"
+    ],
+    "expl": "起点（5歳のとき）を示すには since を使います。for は「〜の間（期間の長さ）」、during は名詞期間に使います。",
+    "rule": "R021",
+    "kp": [
+      "since + 起点（時点）",
+      "for + 期間の長さ"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "past perfect",
+      "had",
+      "past participle"
+    ],
+    "stem": "By the time the ambulance arrived, the patient ___ already ___ consciousness.",
+    "ja": "救急車が到着したとき、患者はすでに意識を失っていた。",
+    "answer": "had lost",
+    "choices": [
+      "had lost",
+      "lost",
+      "has lost",
+      "was losing",
+      "would lose"
+    ],
+    "expl": "救急車の到着（過去）よりも前に意識を失ったことを表すため、過去完了形 had lost を使います。",
+    "rule": "R046",
+    "kp": [
+      "過去の出来事より前の出来事 → 過去完了形",
+      "had + 過去分詞"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "The patient was still ___ after the long surgery.",
+    "ja": "長時間の手術の後も、患者はまだ意識があった。",
+    "answer": "conscious",
+    "choices": [
+      "conscious",
+      "conscience",
+      "consciously",
+      "conscientious",
+      "consciousness"
+    ],
+    "expl": "「意識がある」という意味の形容詞は conscious です。conscience は「良心」という意味の名詞なので文法的に使えません。",
+    "rule": "R004",
+    "kp": [
+      "conscious = 形容詞（意識がある）",
+      "conscience = 名詞（良心）"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "He refused to lie because his ___ would not allow it.",
+    "ja": "彼は良心が許さないので嘘をつくことを拒否した。",
+    "answer": "conscience",
+    "choices": [
+      "conscience",
+      "conscious",
+      "consciously",
+      "conscientious",
+      "consciousness"
+    ],
+    "expl": "「良心」という意味の名詞は conscience です。conscious は「意識がある」という意味の形容詞なので、名詞の位置には使えません。",
+    "rule": "R004",
+    "kp": [
+      "conscience = 名詞（良心）",
+      "conscious = 形容詞（意識がある）"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "tense",
+      "consistency",
+      "tense shift"
+    ],
+    "stem": "Every morning, she wakes up early and ___ a long walk in the park.",
+    "ja": "毎朝、彼女は早起きして公園を長い時間散歩する。",
+    "answer": "takes",
+    "choices": [
+      "takes",
+      "took",
+      "was taking",
+      "had taken",
+      "is taking"
+    ],
+    "expl": "wakes up（現在形）と同じ時間軸の習慣的動作を表すため、動詞の時制を一致させて takes（現在形）を使います。",
+    "rule": "R051",
+    "kp": [
+      "同一時間軸では時制を統一する",
+      "習慣的動作 → 現在形"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "that",
+      "which",
+      "who",
+      "writing style",
+      "comma"
+    ],
+    "stem": "The professor ___ won the Nobel Prize is giving a lecture tomorrow.",
+    "ja": "ノーベル賞を受賞した教授が明日講義をする。",
+    "answer": "who",
+    "choices": [
+      "who",
+      "which",
+      "that",
+      "whom",
+      "whose"
+    ],
+    "expl": "書き言葉では人を指す関係代名詞には who を優先して使います。that も文法的には可能ですが、形式的な書き言葉では who が適切です。",
+    "rule": "R039",
+    "kp": [
+      "書き言葉で人を指す → who",
+      "物を指す → which"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "which",
+      "non-defining",
+      "clause reference"
+    ],
+    "stem": "The flight was delayed by two hours, ___ made everyone very frustrated.",
+    "ja": "フライトが2時間遅延し、それが全員をとても苛立たせた。",
+    "answer": "which",
+    "choices": [
+      "which",
+      "that",
+      "what",
+      "this",
+      "it"
+    ],
+    "expl": "前の節全体（フライトが2時間遅延したこと）を先行詞とする非制限用法の関係節には which を使います。that の前にはコンマを置けません。",
+    "rule": "R036",
+    "kp": [
+      "前節全体を先行詞とする非制限用法 → which",
+      "コンマ + that は不可"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "which",
+      "non-defining",
+      "clause reference"
+    ],
+    "stem": "She forgot to save her work before shutting down the computer, ___ meant she lost everything.",
+    "ja": "彼女はコンピューターをシャットダウンする前に保存するのを忘れ、そのためすべてのデータを失った。",
+    "answer": "which",
+    "choices": [
+      "which",
+      "that",
+      "what",
+      "it",
+      "this"
+    ],
+    "expl": "「保存し忘れたこと」という前節全体を先行詞とする非制限用法には which を使います。コンマの後に that は使えません。",
+    "rule": "R036",
+    "kp": [
+      "前節全体を先行詞とする非制限用法 → which",
+      "コンマ + that は不可"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "of whom",
+      "of which",
+      "relative pronoun",
+      "quantifier"
+    ],
+    "stem": "The team had ten members, ___ had worked together before.",
+    "ja": "そのチームには10人のメンバーがおり、そのうち何人かは以前一緒に働いたことがあった。",
+    "answer": "some of whom",
+    "choices": [
+      "some of whom",
+      "some of which",
+      "some of who",
+      "some of them",
+      "which some"
+    ],
+    "expl": "先行詞が people（ten members）なので、of の後には whom を使います。of which は物・概念に使います。",
+    "rule": "R037",
+    "kp": [
+      "人 → some of whom",
+      "物 → some of which"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "form",
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "stem": "The survey showed that the company had two, five, and ___ employees in each department.",
+    "ja": "調査によると、その会社は各部門にそれぞれ2人、5人、そして8人の従業員がいた。",
+    "answer": "eight",
+    "choices": [
+      "eight",
+      "8",
+      "the number 8",
+      "eighth",
+      "eighty"
+    ],
+    "expl": "同一文中でシリーズの数字を表記する際、two や five とスペルアウトしているので eight と統一します。",
+    "rule": "R007",
+    "kp": [
+      "同一文中の数字表記は統一する",
+      "スペルアウトか数字かを一貫させる"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "logic",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "Not only ___ the deadline, but the team also delivered outstanding results.",
+    "ja": "チームは期限を守っただけでなく、素晴らしい成果も出した。",
+    "answer": "did they meet",
+    "choices": [
+      "did they meet",
+      "they met",
+      "they did meet",
+      "met they",
+      "have they met"
+    ],
+    "expl": "Not only が文頭に来ると倒置が必要です。助動詞 did を主語の前に出して did they meet とします。",
+    "rule": "R057",
+    "kp": [
+      "Not only が文頭 → 助動詞＋主語の倒置",
+      "否定副詞句が文頭 → 倒置"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "The new safety standards will come ___ effect at the start of next fiscal year.",
+    "ja": "新しい安全基準は来年度の開始時に施行される。",
+    "answer": "into",
+    "choices": [
+      "into",
+      "in",
+      "to",
+      "under",
+      "with"
+    ],
+    "expl": "「施行される・発効する」という意味のコロケーションは come into effect です。in や to は使いません。",
+    "rule": "R061",
+    "kp": [
+      "come into effect = 施行される",
+      "into が正しい前置詞（in や to は不可）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "Is there ___ juice left in the bottle?",
+    "ja": "ボトルにジュースは残っていますか？",
+    "answer": "any",
+    "choices": [
+      "any",
+      "much",
+      "many",
+      "few",
+      "little"
+    ],
+    "expl": "疑問文では可算・不可算名詞のどちらにも 'any' を使います。'much' は不可算名詞に使えますが、この文脈では 'any' が自然な選択です。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "疑問文・否定文では any を使う",
+      "any は可算・不可算名詞どちらにも使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "My older sister ___ like doing homework.",
+    "ja": "私の姉は宿題をするのが好きではありません。",
+    "answer": "doesn't",
+    "choices": [
+      "doesn't",
+      "don't",
+      "isn't",
+      "aren't",
+      "wasn't"
+    ],
+    "expl": "主語が三人称単数（my older sister）なので 'doesn't' を使います。'don't' は複数主語や I・you に使います。",
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "kp": [
+      "三人称単数には doesn't を使う",
+      "I・you には don't を使う"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "Our neighbors ___ make any noise late at night.",
+    "ja": "私たちの隣人たちは夜遅くに騒音を立てません。",
+    "answer": "don't",
+    "choices": [
+      "don't",
+      "doesn't",
+      "isn't",
+      "aren't",
+      "hasn't"
+    ],
+    "expl": "主語が複数（our neighbors）なので 'don't' を使います。'doesn't' は三人称単数にのみ使います。",
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "kp": [
+      "複数主語には don't を使う",
+      "doesn't は三人称単数専用"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "trap",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She wants to become ___ architect in the future.",
+    "ja": "彼女は将来建築家になりたいと思っています。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "any"
+    ],
+    "expl": "'architect' は母音の音 /æ/ で始まるため、不定冠詞は 'an' を使います。綴りではなく発音で判断します。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "母音の音で始まる語には an",
+      "綴りではなく発音で判断する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "trap",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "He made ___ honest mistake during the presentation.",
+    "ja": "彼はプレゼン中に正直な（悪意のない）ミスをしました。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "'honest' の語頭の 'h' は発音されないため、母音の音 /ɒ/ で始まります。よって 'an' が正しい選択です。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "サイレントhの語には an を使う",
+      "honest / hour / honor などに注意"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "trap",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "My cousin is studying to be ___ university professor.",
+    "ja": "私のいとこは大学教授になるために勉強しています。",
+    "answer": "a",
+    "choices": [
+      "a",
+      "an",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "'university' の語頭は綴りが 'u' でも、発音は子音の /j/ 音（ユニバーシティ）で始まるため 'a' が正しい。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "university / union / unicorn などは子音音 /j/ で始まるので a を使う",
+      "綴りのuが母音でも発音が/j/なら a"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "little",
+      "few",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "stem": "There are very ___ seats left for the concert tonight.",
+    "ja": "今夜のコンサートには席がほとんど残っていません。",
+    "answer": "few",
+    "choices": [
+      "few",
+      "little",
+      "much",
+      "less",
+      "small"
+    ],
+    "expl": "'seats' は可算名詞の複数形なので 'few' を使います。'little' は不可算名詞にのみ使えます。",
+    "rule": "littleは不可算名詞、fewは可算名詞を修飾する",
+    "kp": [
+      "few + 可算名詞（複数形）",
+      "little + 不可算名詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "little",
+      "few",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "stem": "She had very ___ patience left after dealing with the complaints all day.",
+    "ja": "一日中クレームに対応した後、彼女にはほとんど忍耐が残っていませんでした。",
+    "answer": "little",
+    "choices": [
+      "little",
+      "few",
+      "many",
+      "several",
+      "less"
+    ],
+    "expl": "'patience' は不可算名詞なので 'little' を使います。'few' は可算名詞の複数形にのみ使えます。",
+    "rule": "littleは不可算名詞、fewは可算名詞を修飾する",
+    "kp": [
+      "little + 不可算名詞",
+      "patience / time / water などは不可算名詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "much",
+      "many",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "stem": "We don't have ___ chairs in the meeting room for all the guests.",
+    "ja": "会議室にはすべてのゲストのための椅子が十分にありません。",
+    "answer": "many",
+    "choices": [
+      "many",
+      "much",
+      "little",
+      "a little",
+      "few"
+    ],
+    "expl": "'chairs' は可算名詞の複数形なので 'many' を使います。'much' は不可算名詞にのみ使えます。",
+    "rule": "muchは不可算名詞、manyは可算名詞を修飾する",
+    "kp": [
+      "many + 可算名詞（複数形）",
+      "much + 不可算名詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "much",
+      "many",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "stem": "There isn't ___ information available about the new policy yet.",
+    "ja": "新しい方針についてはまだあまり情報がありません。",
+    "answer": "much",
+    "choices": [
+      "much",
+      "many",
+      "few",
+      "several",
+      "a few"
+    ],
+    "expl": "'information' は不可算名詞なので 'much' を使います。'many' は可算名詞の複数形にのみ使えます。",
+    "rule": "muchは不可算名詞、manyは可算名詞を修飾する",
+    "kp": [
+      "much + 不可算名詞",
+      "information / advice / news などは不可算名詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "and"
+    ],
+    "stem": "The director and her assistant ___ at the conference right now.",
+    "ja": "ディレクターとそのアシスタントは今会議に出席しています。",
+    "answer": "are",
+    "choices": [
+      "are",
+      "is",
+      "was",
+      "has been",
+      "have"
+    ],
+    "expl": "'and' で結ばれた二つの主語（the director + her assistant）は複数扱いなので、動詞は複数形の 'are' を使います。",
+    "rule": "andで結ばれた複数の主語には複数形の動詞を使う",
+    "kp": [
+      "A and B → 複数扱いで複数動詞",
+      "is ではなく are を使う"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor"
+    ],
+    "stem": "Either the manager or the team leader ___ responsible for the final decision.",
+    "ja": "マネージャーかチームリーダーのどちらかが最終決定に責任があります。",
+    "answer": "is",
+    "choices": [
+      "is",
+      "are",
+      "were",
+      "have been",
+      "be"
+    ],
+    "expl": "'or' で結ばれた二つの単数名詞には単数形の動詞を使います。どちらも単数なので 'is' が正しい。",
+    "rule": "orまたはnorで結ばれた複数の単数名詞・代名詞には単数形の動詞を使う",
+    "kp": [
+      "単数 or 単数 → 単数動詞",
+      "either A or B も同様"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "past progressive",
+      "was",
+      "were",
+      "ing"
+    ],
+    "stem": "The students ___ their notes carefully when the fire alarm suddenly rang.",
+    "ja": "火災報知器が突然鳴ったとき、生徒たちはノートを注意深く取っていました。",
+    "answer": "were reviewing",
+    "choices": [
+      "were reviewing",
+      "reviewed",
+      "had reviewed",
+      "are reviewing",
+      "review"
+    ],
+    "expl": "'when the fire alarm suddenly rang' は割り込んだ動作を示しており、その時点で進行中だった動作には過去進行形 'were reviewing' を使います。",
+    "rule": "過去進行形は過去のある時点で進行中だった動作、または別の動作に割り込まれた動作を表す",
+    "kp": [
+      "when に続く割り込み動作には過去進行形",
+      "was/were + verb-ing で過去の進行中動作を表す"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "Could you give me some ___ on how to improve my writing skills?",
+    "ja": "ライティングスキルを上達させる方法についてアドバイスをいただけますか？",
+    "answer": "advice",
+    "choices": [
+      "advice",
+      "advise",
+      "advices",
+      "advising",
+      "advised"
+    ],
+    "expl": "空欄には名詞が必要です。'advice'（名詞）が正しく、'advise' は動詞です。また 'advice' は不可算名詞なので複数形にはなりません。",
+    "rule": "advise と advice の区別",
+    "kp": [
+      "advice = 名詞（-ice）",
+      "advise = 動詞（-ise）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "irregular verb",
+      "past tense",
+      "past participle"
+    ],
+    "stem": "She ___ all the way to the office because she missed the bus.",
+    "ja": "バスに乗り遅れたので、彼女はオフィスまでずっと走りました。",
+    "answer": "ran",
+    "choices": [
+      "ran",
+      "runned",
+      "run",
+      "runed",
+      "running"
+    ],
+    "expl": "'run' は不規則動詞で、過去形は 'ran' です。'runned' のような規則変化形は存在しません。",
+    "rule": "不規則動詞は過去形・過去分詞形が規則的な-ed形にならず、固有の変化をする",
+    "kp": [
+      "run → ran → run（不規則変化）",
+      "-ed を付けた runned は誤り"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "irregular verb",
+      "past tense",
+      "past participle"
+    ],
+    "stem": "The children ___ all the cookies before their parents came home.",
+    "ja": "子供たちは両親が帰宅する前にクッキーをすべて食べてしまいました。",
+    "answer": "ate",
+    "choices": [
+      "ate",
+      "eated",
+      "eaten",
+      "aten",
+      "eat"
+    ],
+    "expl": "'eat' は不規則動詞で、過去形は 'ate' です。'eated' のような規則変化形は誤りです。",
+    "rule": "不規則動詞は過去形・過去分詞形が規則的な-ed形にならず、固有の変化をする",
+    "kp": [
+      "eat → ate → eaten（不規則変化）",
+      "過去形は eated ではなく ate"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "intervening phrase"
+    ],
+    "stem": "The quality of the products ___ been improving over the past year.",
+    "ja": "製品の品質はここ一年で向上しています。",
+    "answer": "has",
+    "choices": [
+      "has",
+      "have",
+      "had",
+      "were",
+      "are"
+    ],
+    "expl": "主語は 'the quality'（単数）であり、'of the products' は挿入句です。動詞は主語 'the quality' に一致させて 'has' を使います。",
+    "rule": "主語と動詞の間に挿入句があっても、動詞は主語に一致させる",
+    "kp": [
+      "of + 複数名詞に惑わされず、主語を正しく特定する",
+      "the quality of … → 動詞は単数形"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "tense",
+      "consistency",
+      "tense shift"
+    ],
+    "stem": "Every morning, he wakes up at six, eats a light breakfast, and ___ to work by bicycle.",
+    "ja": "毎朝、彼は6時に起き、軽い朝食を食べ、自転車で仕事に行きます。",
+    "answer": "rides",
+    "choices": [
+      "rides",
+      "rode",
+      "was riding",
+      "had ridden",
+      "will ride"
+    ],
+    "expl": "同一時間軸（毎朝の習慣）の動作は同じ時制で統一します。'wakes' と 'eats' が現在形なので、'rides' も現在形にする必要があります。",
+    "rule": "動詞の時制を不必要に変えてはならない。同一時間軸の動作は同じ時制で統一する",
+    "kp": [
+      "同一時間軸の動作は同じ時制を維持する",
+      "習慣を表す文では現在形で統一"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor",
+      "proximity"
+    ],
+    "stem": "Neither the technicians nor the supervisor ___ aware of the system failure.",
+    "ja": "技術者もスーパーバイザーもシステム障害に気づいていませんでした。",
+    "answer": "was",
+    "choices": [
+      "was",
+      "were",
+      "is",
+      "are",
+      "have been"
+    ],
+    "expl": "'nor' で結ばれた主語では、動詞に近い方の主語（the supervisor＝単数）に動詞を一致させます。よって 'was' が正しい。",
+    "rule": "or/norで単数・複数の名詞が結ばれる場合、動詞は動詞に近い方の主語に一致させる",
+    "kp": [
+      "neither A nor B → 動詞は B に一致",
+      "B が単数なら単数動詞を使う"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "Regular exercise will positively ___ your physical and mental health.",
+    "ja": "定期的な運動はあなたの身体的・精神的健康にプラスの影響を与えます。",
+    "answer": "affect",
+    "choices": [
+      "affect",
+      "effect",
+      "affection",
+      "effective",
+      "effecting"
+    ],
+    "expl": "空欄は動詞位置にあり「影響する」の意味が必要なので 'affect'（動詞）が正しい。'effect' は名詞（または「もたらす」の意味の動詞）です。",
+    "rule": "affect と effect の区別（RAVEN）",
+    "kp": [
+      "affect = 動詞（影響する）",
+      "RAVEN: Remember Affect is a Verb, Effect is a Noun"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "that",
+      "which",
+      "who",
+      "writing style",
+      "comma"
+    ],
+    "stem": "The committee reviewed the proposal, ___ had been submitted two weeks earlier.",
+    "ja": "委員会はその提案書を審査しました。それは2週間前に提出されていたものです。",
+    "answer": "which",
+    "choices": [
+      "which",
+      "that",
+      "who",
+      ", that",
+      "what"
+    ],
+    "expl": "先行詞が物（the proposal）で、追加情報を加える非制限用法（コンマあり）なので 'which' が正しい。コンマの前に 'that' は使えません。",
+    "rule": "書き言葉では、人はwho、物はwhichを優先し、thatの前にコンマを置かない",
+    "kp": [
+      "コンマ + 関係詞には which（物）または who（人）を使う",
+      "コンマの前に that は置かない"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "that",
+      "which",
+      "who",
+      "writing style",
+      "comma"
+    ],
+    "stem": "The scientist ___ discovered this element was awarded the Nobel Prize.",
+    "ja": "この元素を発見した科学者はノーベル賞を受賞しました。",
+    "answer": "who",
+    "choices": [
+      "who",
+      "which",
+      ", who",
+      "what",
+      "whose"
+    ],
+    "expl": "先行詞が人（the scientist）で、どの科学者かを限定する制限用法なので、書き言葉ではコンマなしの 'who' が正しい。",
+    "rule": "書き言葉では、人はwho、物はwhichを優先し、thatの前にコンマを置かない",
+    "kp": [
+      "人には who（制限用法・コンマなし）",
+      "書き言葉では that より who / which を優先"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "If the team ___ the deadline, the client would have terminated the contract.",
+    "ja": "もしチームが締め切りを守れなかったら、クライアントは契約を終了していたでしょう。",
+    "answer": "had missed",
+    "choices": [
+      "had missed",
+      "missed",
+      "would miss",
+      "has missed",
+      "were missing"
+    ],
+    "expl": "過去の事実に反する仮定（仮定法過去完了）では 'If + S + had + 過去分詞' の形を使います。",
+    "rule": "仮定法過去完了",
+    "kp": [
+      "If + had + pp, would have + pp（仮定法過去完了）",
+      "過去の事実に反する仮定にはこの形を使う"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "of whom",
+      "of which",
+      "relative pronoun",
+      "quantifier"
+    ],
+    "stem": "The department hired ten new staff members, ___ had extensive international experience.",
+    "ja": "その部署は10名の新しいスタッフを採用しましたが、そのうち何人かは豊富な国際経験を持っていました。",
+    "answer": "some of whom",
+    "choices": [
+      "some of whom",
+      "some of which",
+      "some of who",
+      "some of them",
+      "some who"
+    ],
+    "expl": "先行詞が人（ten new staff members）なので 'of whom' を使います。'of which' は物に使います。",
+    "rule": "most, many, some, both, noneなどの後で人にはof whom、物にはof whichを使う",
+    "kp": [
+      "人 → some of whom",
+      "物 → some of which"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "of whom",
+      "of which",
+      "relative pronoun",
+      "quantifier"
+    ],
+    "stem": "She submitted five project proposals, ___ was eventually approved by the board.",
+    "ja": "彼女は5つのプロジェクト提案書を提出しましたが、そのうち1つが最終的に取締役会に承認されました。",
+    "answer": "one of which",
+    "choices": [
+      "one of which",
+      "one of whom",
+      "one of that",
+      "one of them",
+      "one of those"
+    ],
+    "expl": "先行詞が物（five project proposals）なので 'of which' を使います。'of whom' は人に使います。",
+    "rule": "most, many, some, both, noneなどの後で人にはof whom、物にはof whichを使う",
+    "kp": [
+      "物 → one of which",
+      "人 → one of whom"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "The revised safety protocols will come ___ effect at the beginning of next month.",
+    "ja": "改訂された安全手順は来月初めから施行されます。",
+    "answer": "into",
+    "choices": [
+      "into",
+      "in",
+      "to",
+      "under",
+      "on"
+    ],
+    "expl": "「施行される・発効する」は 'come into effect' という固定表現です。'in' や 'to' ではなく 'into' を使います。",
+    "rule": "come into effect",
+    "kp": [
+      "come into effect = 施行される・発効する",
+      "into を使う（in / to は誤り）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She wants to be ___ astronaut when she grows up.",
+    "ja": "彼女は大人になったら宇宙飛行士になりたいと思っています。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "astronaut は母音 /æ/ の音で始まるため、不定冠詞は an を使います。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "母音の音で始まる語の前は an",
+      "綴りではなく発音で判断する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "My father is ___ honest man and always keeps his promises.",
+    "ja": "私の父は正直な人で、いつも約束を守ります。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "—"
+    ],
+    "expl": "honest の h は発音されないため、母音 /ɒ/ の音で始まります。したがって an が正しい形です。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "サイレント h の語（honest, hour など）の前は an",
+      "綴りのhに惑わされない"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "He bought ___ uniform for his new job at the hotel.",
+    "ja": "彼はホテルの新しい仕事のためにユニフォームを買いました。",
+    "answer": "a",
+    "choices": [
+      "a",
+      "an",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "uniform は綴りが u で始まりますが、発音は /juː/ という子音 /j/ の音で始まるため、a が正しい形です。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "u で始まっても /j/ の音なら a を使う",
+      "uniform / university / unicorn は a + 名詞"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "Is there ___ sugar in the kitchen? I need some for my coffee.",
+    "ja": "キッチンに砂糖はありますか？コーヒーに少し必要なのですが。",
+    "answer": "any",
+    "choices": [
+      "any",
+      "some",
+      "much",
+      "many",
+      "a few"
+    ],
+    "expl": "疑問文では不可算名詞・可算名詞のどちらにも any を使います。sugar は不可算名詞です。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "疑問文・否定文では any を使う",
+      "some / any は可算・不可算の両方に使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "There are ___ new students in our class this semester.",
+    "ja": "今学期、私たちのクラスには何人かの新入生がいます。",
+    "answer": "some",
+    "choices": [
+      "some",
+      "any",
+      "much",
+      "a little",
+      "a lot"
+    ],
+    "expl": "肯定文で可算名詞（students）の前には some を使います。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "肯定文では some を使う",
+      "some は可算名詞にも不可算名詞にも使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "present progressive",
+      "ing",
+      "ongoing action"
+    ],
+    "stem": "Please don't disturb him. He ___ an important report right now.",
+    "ja": "彼の邪魔をしないでください。彼は今、重要な報告書を書いています。",
+    "answer": "is writing",
+    "choices": [
+      "is writing",
+      "writes",
+      "wrote",
+      "has written",
+      "will write"
+    ],
+    "expl": "right now という信号語があり、今まさに進行中の動作を表すため、現在進行形 is writing が正しい形です。",
+    "rule": "現在進行形は今進行中の動作または近い将来の予定を表す",
+    "kp": [
+      "right now / at the moment → 現在進行形",
+      "is/am/are + 動詞-ing"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "My best friend ___ like spicy food at all.",
+    "ja": "私の親友は辛い食べ物が全く好きではありません。",
+    "answer": "doesn't",
+    "choices": [
+      "doesn't",
+      "don't",
+      "isn't",
+      "aren't",
+      "didn't"
+    ],
+    "expl": "主語が My best friend という三人称単数なので、否定の助動詞は doesn't を使います。",
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "kp": [
+      "三人称単数（he/she/it）には doesn't",
+      "複数・I・you には don't"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "These machines ___ work properly when the temperature is too low.",
+    "ja": "これらの機械は温度が低すぎると正常に動作しません。",
+    "answer": "don't",
+    "choices": [
+      "don't",
+      "doesn't",
+      "isn't",
+      "aren't",
+      "didn't"
+    ],
+    "expl": "主語が These machines という複数形なので、否定の助動詞は don't を使います。",
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "kp": [
+      "複数主語には don't",
+      "単数主語（三人称）には doesn't"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "present perfect",
+      "have",
+      "has",
+      "past participle"
+    ],
+    "stem": "He ___ this company for more than twenty years and still enjoys his work.",
+    "ja": "彼は20年以上この会社に勤めており、今でも仕事を楽しんでいます。",
+    "answer": "has worked for",
+    "choices": [
+      "has worked for",
+      "worked for",
+      "is working for",
+      "had worked for",
+      "works for"
+    ],
+    "expl": "「今も続いている状態」を表すため、現在完了形 has worked for を使います。still enjoys という現在の継続を示す表現が根拠です。",
+    "rule": "現在完了形は過去に始まり現在まで続く動作・状態、または効果が今も残る完了した行為を表す",
+    "kp": [
+      "for + 期間で現在まで継続 → has/have + 過去分詞",
+      "現在完了は今も続いていることを含意する"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal",
+      "auxiliary",
+      "invariant form"
+    ],
+    "stem": "According to the schedule, every participant ___ bring their own laptop to the workshop.",
+    "ja": "スケジュールによると、すべての参加者はワークショップに自分のノートパソコンを持参しなければなりません。",
+    "answer": "must",
+    "choices": [
+      "must",
+      "musts",
+      "is must",
+      "has must",
+      "must to"
+    ],
+    "expl": "助動詞 must は主語に関わらず形が変わりません。musts や must to などの形は誤りです。",
+    "rule": "助動詞（can, will, shall, may, could, would, should, might, must）は主語に関わらず形が変わらない",
+    "kp": [
+      "助動詞は三人称単数でも -s を付けない",
+      "助動詞の後は動詞の原形"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "I just finished reading ___ most fascinating book I have ever come across.",
+    "ja": "私はこれまでに出会った中で最も魅力的な本を読み終えたところです。",
+    "answer": "the",
+    "choices": [
+      "the",
+      "a",
+      "an",
+      "one",
+      "—"
+    ],
+    "expl": "最上級（most fascinating）で特定された唯一のものを指すため、定冠詞 the が必要です。",
+    "rule": "定冠詞 the と不定冠詞 a/an の使い分け",
+    "kp": [
+      "最上級の前は the",
+      "特定・唯一のものには the を使う"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "Can you recommend ___ good restaurant near the station?",
+    "ja": "駅の近くに良いレストランを教えてもらえますか？",
+    "answer": "a",
+    "choices": [
+      "a",
+      "an",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "特定のレストランではなく、任意の「どれかの」良いレストランを指しているため、不定冠詞 a を使います。",
+    "rule": "定冠詞 the と不定冠詞 a/an の使い分け",
+    "kp": [
+      "不特定・任意のものには a/an",
+      "特定・既知のものには the"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "irregular verb",
+      "past tense",
+      "past participle"
+    ],
+    "stem": "By the time the guests arrived, the chef had already ___ a delicious three-course meal.",
+    "ja": "ゲストが到着するまでに、シェフはすでに美味しい三品料理を作り終えていました。",
+    "answer": "made",
+    "choices": [
+      "made",
+      "maked",
+      "make",
+      "making",
+      "been made"
+    ],
+    "expl": "make の過去分詞は made です。規則動詞のように maked とはなりません。",
+    "rule": "不規則動詞は過去形・過去分詞形が規則的な-ed形にならず、固有の変化をする",
+    "kp": [
+      "make → made → made（不規則変化）",
+      "had + 過去分詞 = 過去完了形"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "She had ___ patience with the repeated complaints from the same customer.",
+    "ja": "彼女は同じ顧客からの繰り返しのクレームに対してあまり忍耐がありませんでした。",
+    "answer": "little",
+    "choices": [
+      "little",
+      "few",
+      "many",
+      "a lot of",
+      "much"
+    ],
+    "expl": "patience は不可算名詞なので、「ほとんどない」を表すには little を使います。few は可算名詞に使います。",
+    "rule": "可算名詞と不可算名詞：much vs. many",
+    "kp": [
+      "不可算名詞には little（ほぼない）/ much（多い）",
+      "可算名詞には few / many"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The treasure was buried ___ an old oak tree and a large rock.",
+    "ja": "宝物は古いオーク の木と大きな岩の間に埋められていました。",
+    "answer": "between",
+    "choices": [
+      "between",
+      "among",
+      "beside",
+      "behind",
+      "above"
+    ],
+    "expl": "2つのもの（an old oak tree と a large rock）の間を指しているため between を使います。",
+    "rule": "空間的前置詞の一覧（above/below/between等）",
+    "kp": [
+      "2者の間 → between",
+      "3者以上の間 → among"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "indefinite pronoun",
+      "singular"
+    ],
+    "stem": "___ of the applicants has submitted the required documents on time.",
+    "ja": "応募者全員が必要書類を期限内に提出しました。",
+    "answer": "Each",
+    "choices": [
+      "Each",
+      "All",
+      "Both",
+      "Many",
+      "Several"
+    ],
+    "expl": "Each は不定代名詞で単数扱いのため、単数動詞 has が続いています。この文では Each が主語として適切です。",
+    "rule": "each, everyone, everybodyなどの不定代名詞は単数扱いで単数動詞を使う",
+    "kp": [
+      "each は単数扱いで単数動詞",
+      "each of + 複数名詞 + 単数動詞"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor",
+      "proximity"
+    ],
+    "stem": "Either the CEO or the board members ___ responsible for announcing the policy change.",
+    "ja": "CEOか取締役会のメンバーのどちらかが、方針変更を発表する責任があります。",
+    "answer": "are",
+    "choices": [
+      "are",
+      "is",
+      "was",
+      "has been",
+      "were"
+    ],
+    "expl": "or で結ばれた複合主語では、動詞に近い方の主語（board members：複数）に動詞を一致させるため are が正しい形です。",
+    "rule": "or/norで単数・複数の名詞が結ばれる場合、動詞は動詞に近い方の主語に一致させる",
+    "kp": [
+      "or / nor の近接一致の原則",
+      "動詞に近い主語が複数なら複数動詞"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "stem": "___ percent of the surveyed employees expressed satisfaction with the new work schedule.",
+    "ja": "調査した従業員の67パーセントが、新しい勤務スケジュールへの満足を示しました。",
+    "answer": "Sixty-seven",
+    "choices": [
+      "Sixty-seven",
+      "67",
+      "67%",
+      "67 percent",
+      "Sixtyseven"
+    ],
+    "expl": "文の先頭に数字を置く場合はアラビア数字や記号を使えず、必ずスペルアウトしなければなりません。",
+    "rule": "文頭の数字は必ずスペルアウト",
+    "kp": [
+      "文頭の数字は英語で書き出す",
+      "アラビア数字・%記号は文頭に使えない"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "The patient slowly regained ___ after the surgery and was able to speak.",
+    "ja": "患者は手術後にゆっくりと意識を取り戻し、話せるようになりました。",
+    "answer": "consciousness",
+    "choices": [
+      "consciousness",
+      "conscience",
+      "conscious",
+      "consciously",
+      "conscientious"
+    ],
+    "expl": "「意識」を意味する名詞は consciousness です。conscience は「良心」を意味する名詞で意味が異なります。",
+    "rule": "conscious と conscience の区別",
+    "kp": [
+      "consciousness（名詞）= 意識",
+      "conscience（名詞）= 良心"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "Despite being nervous, she performed ___ at the final audition.",
+    "ja": "緊張していたにもかかわらず、彼女は最終オーディションでうまく演じました。",
+    "answer": "well",
+    "choices": [
+      "well",
+      "good",
+      "nicely",
+      "fine",
+      "greatly"
+    ],
+    "expl": "動作動詞 perform を修飾するには副詞が必要です。well は副詞で「上手に」を意味します。good は形容詞なので動詞を修飾できません。",
+    "rule": "good と well の使い分け",
+    "kp": [
+      "動作動詞の後は副詞 well",
+      "good は形容詞なので動詞を修飾できない"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "eiken2",
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "My colleague Sarah, ___, was promoted to department head last month.",
+    "ja": "私の同僚のSarahは、優秀な販売記録を持つ人物で、先月部長に昇進しました。",
+    "answer": "an outstanding sales record holder",
+    "choices": [
+      "an outstanding sales record holder",
+      "the outstanding sales record holder",
+      "outstanding sales record holder",
+      "who outstanding sales record",
+      "she has outstanding sales records"
+    ],
+    "expl": "Sarah という固有名詞で既に特定されているため、後続の同格語句はなくても意味が通ります。これは非制限的同格語であり、コンマで囲まれた名詞句が適切です。",
+    "rule": "同格語（アポジティブ）の基本",
+    "kp": [
+      "固有名詞の後の同格語は非制限的 → コンマあり",
+      "同格語は名詞または名詞句"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "If the project manager ___ the risks earlier, the team would have avoided the costly delay.",
+    "ja": "もしプロジェクトマネージャーがもっと早くリスクを特定していたら、チームは高くつく遅延を避けられたでしょう。",
+    "answer": "had identified",
+    "choices": [
+      "had identified",
+      "identified",
+      "would identify",
+      "has identified",
+      "would have identified"
+    ],
+    "expl": "過去の事実に反する仮定（仮定法過去完了）では、if 節に had + 過去分詞を使います。",
+    "rule": "仮定法過去完了",
+    "kp": [
+      "If + had + pp → 過去の事実に反する仮定",
+      "帰結節は would have + pp"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "If the scientists ___ the formula correctly, the experiment would have been a great success.",
+    "ja": "もし科学者たちが式を正しく計算していたなら、その実験は大成功だったでしょう。",
+    "answer": "had calculated",
+    "choices": [
+      "had calculated",
+      "calculated",
+      "would calculate",
+      "have calculated",
+      "were calculating"
+    ],
+    "expl": "仮定法過去完了では、if 節は had + 過去分詞、帰結節は would have + 過去分詞の形をとります。",
+    "rule": "仮定法過去完了",
+    "kp": [
+      "仮定法過去完了：If + S + had pp, S + would have pp",
+      "過去の非現実を表す"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "The new immigration policy is scheduled to come ___ effect at the beginning of next April.",
+    "ja": "新しい移民政策は来年4月の初めに発効する予定です。",
+    "answer": "into",
+    "choices": [
+      "into",
+      "in",
+      "to",
+      "onto",
+      "under"
+    ],
+    "expl": "「施行される・発効する」を意味するコロケーションは come into effect です。in や to では意味をなしません。",
+    "rule": "come into effect",
+    "kp": [
+      "come into effect / force = 施行される・発効する",
+      "into であり in / to ではない"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "tense",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "___ it not for the advanced medical technology available today, many lives could not be saved.",
+    "ja": "今日利用可能な高度な医療技術がなければ、多くの命を救うことはできないでしょう。",
+    "answer": "Were",
+    "choices": [
+      "Were",
+      "Was",
+      "If",
+      "Had",
+      "Would"
+    ],
+    "expl": "仮定法の倒置構文「Were it not for ～」は「If it were not for ～（～がなければ）」の意味です。仮定法では were を使い was は不可です。",
+    "rule": "Were it not for（仮定法倒置）",
+    "kp": [
+      "Were it not for = If it were not for",
+      "仮定法倒置では Was ではなく Were を使う"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "My teacher gave us ___ interesting homework assignment about local history.",
+    "ja": "先生は地域の歴史についての面白い宿題を出しました。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "—"
+    ],
+    "expl": "interesting は母音 /ɪ/ の音で始まるため、不定冠詞は an を使います。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "母音の音で始まる語の前は an",
+      "interesting / important / intelligent → an"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She runs ___ every morning before school.",
+    "ja": "彼女は毎朝学校の前に速く走る。",
+    "answer": "fast",
+    "choices": [
+      "fast",
+      "fastly",
+      "quick",
+      "quicker",
+      "more fast"
+    ],
+    "expl": "動詞 runs を修飾するには副詞が必要。fast は形容詞・副詞の両方に使えるが、fastly という語は存在しない。quick は形容詞なので動詞を修飾できない。",
+    "rule": "R009",
+    "kp": [
+      "動詞を修飾するには副詞を使う",
+      "fast は形容詞・副詞どちらにも使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "He is ___ careful driver and never speeds.",
+    "ja": "彼はとても慎重なドライバーで、スピードを出すことは決してない。",
+    "answer": "a",
+    "choices": [
+      "a",
+      "an",
+      "the",
+      "some",
+      "any"
+    ],
+    "expl": "careful は /k/ という子音の音で始まるので、不定冠詞は a を使う。an は母音の音で始まる語の前に置く。",
+    "rule": "R015",
+    "kp": [
+      "aとanは綴りではなく発音で判断する",
+      "子音の音で始まる語の前はa"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "My teacher gave us ___ interesting homework assignment about local history.",
+    "ja": "先生は私たちに地元の歴史に関する興味深い宿題を出した。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "some",
+      "one"
+    ],
+    "expl": "interesting は /ɪ/ という母音の音で始まるため、不定冠詞は an を使う。",
+    "rule": "R015",
+    "kp": [
+      "母音の音で始まる語の前はan",
+      "発音で判断する"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction"
+    ],
+    "stem": "My older brother ___ enjoy cooking at all.",
+    "ja": "私の兄は料理をすることが全く好きではない。",
+    "answer": "doesn't",
+    "choices": [
+      "doesn't",
+      "don't",
+      "isn't",
+      "aren't",
+      "wasn't"
+    ],
+    "expl": "主語が My older brother（三人称単数）なので、否定の助動詞は doesn't を使う。don't は複数主語や I・you に使う。",
+    "rule": "R028",
+    "kp": [
+      "三人称単数主語にはdoesn't",
+      "I・you・複数主語にはdon't"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "present progressive",
+      "ing",
+      "ongoing action"
+    ],
+    "stem": "Hurry up! The bus ___ right now.",
+    "ja": "急いで！バスが今まさに出発しようとしている。",
+    "answer": "is leaving",
+    "choices": [
+      "is leaving",
+      "leaves",
+      "left",
+      "will leave",
+      "has left"
+    ],
+    "expl": "right now という語が今まさに進行中の動作を示しているため、現在進行形 is leaving を使う。",
+    "rule": "R047",
+    "kp": [
+      "right nowはpresent progressiveのシグナル",
+      "is/am/are + V-ing で進行中の動作を表す"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "I'm sorry, but there isn't ___ bread left in the basket.",
+    "ja": "申し訳ありませんが、かごの中にパンは残っていません。",
+    "answer": "any",
+    "choices": [
+      "any",
+      "some",
+      "much",
+      "many",
+      "few"
+    ],
+    "expl": "否定文では any を使って不可算名詞（bread）の有無を表す。some は肯定文で使うのが基本で、否定文には any が適切。",
+    "rule": "R043",
+    "kp": [
+      "否定文・疑問文ではanyを使う",
+      "some/anyは不可算名詞にも使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "Would you like ___ more tea before you go?",
+    "ja": "帰る前にもう少しお茶はいかがですか？",
+    "answer": "some",
+    "choices": [
+      "some",
+      "any",
+      "many",
+      "much",
+      "few"
+    ],
+    "expl": "提供・勧誘の疑問文では some を使うのが自然。any は否定文や一般的な疑問文に用いる。",
+    "rule": "R043",
+    "kp": [
+      "勧誘・提供の疑問文ではsomeを使う",
+      "some/anyは不可算名詞にも使える"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "She was born ___ a cold December morning in the city.",
+    "ja": "彼女はその都市の寒い12月のある朝に生まれた。",
+    "answer": "on",
+    "choices": [
+      "on",
+      "in",
+      "at",
+      "during",
+      "by"
+    ],
+    "expl": "a cold December morning のような特定の朝（日）を表すには on を使う。in は月・年・季節に、at は時刻・noon などに使う。",
+    "rule": "R019",
+    "kp": [
+      "特定の日・曜日の前にはon",
+      "朝・午後などの時間帯にはin（ただし特定の日の朝はon）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The concert will begin ___ seven o'clock sharp.",
+    "ja": "コンサートはちょうど7時に始まる。",
+    "answer": "at",
+    "choices": [
+      "at",
+      "on",
+      "in",
+      "by",
+      "for"
+    ],
+    "expl": "時刻を表すには前置詞 at を使う。on は曜日・特定の日、in は月・年・時間帯に用いる。",
+    "rule": "R019",
+    "kp": [
+      "時刻の前にはat",
+      "on=曜日・日、in=月・年・季節・時間帯"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The boys left ___ jackets on the bench after the game.",
+    "ja": "少年たちは試合後にベンチにジャケットを置いていった。",
+    "answer": "their",
+    "choices": [
+      "their",
+      "his",
+      "her",
+      "its",
+      "our"
+    ],
+    "expl": "先行詞 The boys は複数形なので、代名詞も複数形の their を使う。his・her は単数の代名詞なので不一致。",
+    "rule": "R024",
+    "kp": [
+      "複数の先行詞にはtheirを使う",
+      "代名詞は先行詞と数を一致させる"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The trophy is displayed ___ the two championship banners on the wall.",
+    "ja": "トロフィーは壁の2枚の優勝旗の間に飾られている。",
+    "answer": "between",
+    "choices": [
+      "between",
+      "among",
+      "beside",
+      "behind",
+      "above"
+    ],
+    "expl": "2つのもの（two championship banners）の間には between を使う。among は3つ以上のものの間に用いる。",
+    "rule": "R023",
+    "kp": [
+      "2者の間はbetween",
+      "3者以上の間はamong"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor"
+    ],
+    "stem": "Either the manager or the assistant ___ in charge of locking the office.",
+    "ja": "マネージャーかアシスタントのどちらかが事務所の施錠を担当している。",
+    "answer": "is",
+    "choices": [
+      "is",
+      "are",
+      "were",
+      "have been",
+      "be"
+    ],
+    "expl": "either A or B で結ばれた2つの単数名詞には単数動詞を使う。or/nor で結ばれた単数名詞には単数動詞が必要。",
+    "rule": "R026",
+    "kp": [
+      "or/norで結ばれた単数名詞には単数動詞",
+      "Either A or B + 単数動詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "relative pronoun",
+      "relative clause",
+      "antecedent"
+    ],
+    "stem": "The student ___ won the science competition will represent our school next month.",
+    "ja": "科学コンクールで優勝した生徒は来月、私たちの学校を代表する。",
+    "answer": "who",
+    "choices": [
+      "who",
+      "which",
+      "whom",
+      "whose",
+      "where"
+    ],
+    "expl": "先行詞 The student は人なので、主格の関係代名詞 who を使う。which は物・概念に用いる。",
+    "rule": "R035",
+    "kp": [
+      "人を指す関係代名詞はwho/whom",
+      "物・概念にはwhichを使う"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal",
+      "auxiliary",
+      "invariant form"
+    ],
+    "stem": "She ___ speak four languages fluently after years of practice.",
+    "ja": "何年もの練習の末、彼女は4つの言語を流暢に話せる。",
+    "answer": "can",
+    "choices": [
+      "can",
+      "cans",
+      "is able",
+      "could to",
+      "musts"
+    ],
+    "expl": "助動詞 can は主語に関わらず形が変わらない。三人称単数でも cans とはしない。",
+    "rule": "R049",
+    "kp": [
+      "助動詞は主語にかかわらず形が変わらない",
+      "cansやmustsは誤り"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "My doctor always gives me useful ___ about staying healthy.",
+    "ja": "私の医師はいつも健康を維持することについて役立つアドバイスをくれる。",
+    "answer": "advice",
+    "choices": [
+      "advice",
+      "advise",
+      "advices",
+      "advisement",
+      "advising"
+    ],
+    "expl": "動詞 gives の目的語になる名詞が必要。advice が「助言」という意味の名詞。advise は動詞なので名詞の位置には使えない。",
+    "rule": "R003",
+    "kp": [
+      "adviceは名詞、adviseは動詞",
+      "名詞の位置にはadviceを使う"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "tense",
+      "auxiliary",
+      "present",
+      "past"
+    ],
+    "stem": "Every evening, she sits by the window and ___ in her diary.",
+    "ja": "毎晩、彼女は窓のそばに座って日記を書く。",
+    "answer": "writes",
+    "choices": [
+      "writes",
+      "is writing",
+      "has written",
+      "will write",
+      "wrote"
+    ],
+    "expl": "Every evening という繰り返しの習慣を表す文脈では、動詞単独で表せる現在形を使う。sits と時制を一致させて writes とするのが正しい。",
+    "rule": "R044",
+    "kp": [
+      "習慣・繰り返しの動作には単純現在形",
+      "同一時間軸の動詞は時制を統一する"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "relative pronoun",
+      "relative clause",
+      "antecedent"
+    ],
+    "stem": "The bicycle ___ was stolen from the parking lot has been found by the police.",
+    "ja": "駐車場から盗まれた自転車が警察によって発見された。",
+    "answer": "that",
+    "choices": [
+      "that",
+      "who",
+      "whom",
+      "whose",
+      "what"
+    ],
+    "expl": "先行詞 The bicycle は物なので関係代名詞 that（または which）を使う。who・whom は人を指す関係代名詞。",
+    "rule": "R035",
+    "kp": [
+      "物・概念を指す制限用法の関係代名詞はthatまたはwhich",
+      "whoは人に使う"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "tense",
+      "consistency",
+      "tense shift"
+    ],
+    "stem": "The journalist interviews the local residents and ___ detailed notes about their daily lives.",
+    "ja": "そのジャーナリストは地元住民にインタビューし、彼らの日常生活について詳細なメモをとる。",
+    "answer": "takes",
+    "choices": [
+      "takes",
+      "took",
+      "has taken",
+      "was taking",
+      "had taken"
+    ],
+    "expl": "interviews と同じ時間軸（現在の習慣）なので、同じ現在形 takes で統一しなければならない。時制を不必要に変えてはいけない。",
+    "rule": "R051",
+    "kp": [
+      "同一時間軸の動作は同じ時制で統一する",
+      "不要な時制のシフトは避ける"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "She poured the orange juice ___ a tall glass and handed it to her guest.",
+    "ja": "彼女はオレンジジュースを背の高いグラスに注ぎ、ゲストに手渡した。",
+    "answer": "into",
+    "choices": [
+      "into",
+      "onto",
+      "to",
+      "in",
+      "through"
+    ],
+    "expl": "グラスの内部への移動を表すため、into を使う。onto は表面への移動、to は目的地への方向を示す。",
+    "rule": "R022",
+    "kp": [
+      "内部への移動にはinto",
+      "表面への移動にはonto、目的地にはto"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "After the accident, the driver was still ___ and could answer the paramedics' questions.",
+    "ja": "事故の後も、ドライバーは意識があり、救急隊員の質問に答えることができた。",
+    "answer": "conscious",
+    "choices": [
+      "conscious",
+      "conscience",
+      "consciously",
+      "consciousness",
+      "conscientious"
+    ],
+    "expl": "「意識がある」という意味の形容詞は conscious。conscience は「良心」という意味の名詞で文脈に合わない。",
+    "rule": "R004",
+    "kp": [
+      "consciousは形容詞で「意識がある」",
+      "conscienceは名詞で「良心」"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal perfect",
+      "could have",
+      "would have",
+      "must have"
+    ],
+    "stem": "If he had left earlier, he ___ caught the last train.",
+    "ja": "もし彼がもっと早く出発していたら、最終電車に乗れていただろう。",
+    "answer": "could have",
+    "choices": [
+      "could have",
+      "could of",
+      "could has",
+      "could had",
+      "could to have"
+    ],
+    "expl": "過去の仮定に対する帰結は could have + 過去分詞で表す。could of は spoken English の聞き間違いから来た誤った表記で文法的に誤り。",
+    "rule": "R050",
+    "kp": [
+      "could have + 過去分詞が正しい形",
+      "could ofは誤り"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "She performed ___ at the audition and was immediately offered the lead role.",
+    "ja": "彼女はオーディションで素晴らしく演じ、すぐに主役を提供された。",
+    "answer": "brilliantly",
+    "choices": [
+      "brilliantly",
+      "brilliant",
+      "more brilliant",
+      "good",
+      "well-doing"
+    ],
+    "expl": "動詞 performed を修飾するには副詞が必要。brilliant は形容詞なので動詞を修飾できない。brilliantly（副詞）が正しい。",
+    "rule": "R009",
+    "kp": [
+      "動詞を修飾するには副詞(-ly形)を使う",
+      "形容詞は名詞を修飾する"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "past perfect",
+      "had",
+      "past participle"
+    ],
+    "stem": "By the time the firefighters arrived, the roof ___ completely.",
+    "ja": "消防士たちが到着したころには、屋根は完全に崩壊していた。",
+    "answer": "had collapsed",
+    "choices": [
+      "had collapsed",
+      "collapsed",
+      "has collapsed",
+      "was collapsing",
+      "would collapse"
+    ],
+    "expl": "消防士が到着する（過去）よりも前に屋根が崩壊した（さらに過去）という時間的前後関係を表すため、過去完了 had collapsed を使う。",
+    "rule": "R046",
+    "kp": [
+      "過去の別の出来事より前のことにはhad + 過去分詞",
+      "by the timeは過去完了のシグナル"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "relative clause",
+      "non-restrictive",
+      "non-defining",
+      "comma",
+      "that"
+    ],
+    "stem": "My neighbor Mr. Tanaka, ___ has lived here for forty years, knows everyone on the street.",
+    "ja": "私の隣人の田中さんは、ここに40年間住んでいて、通りの皆を知っている。",
+    "answer": "who",
+    "choices": [
+      "who",
+      "that",
+      "which",
+      "whose",
+      "whom"
+    ],
+    "expl": "コンマで区切られた非制限用法の関係節では that は使えない。人を指すので who が正しい。that は非制限用法には使えない。",
+    "rule": "R034",
+    "kp": [
+      "非制限用法の関係節ではthatは使えない",
+      "コンマ+人はwho、コンマ+物はwhich"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "grammar",
+      "pronoun",
+      "singular they",
+      "gender-neutral"
+    ],
+    "stem": "Every employee should submit ___ timesheet by the end of Friday.",
+    "ja": "すべての従業員は金曜日の終わりまでに勤務表を提出しなければならない。",
+    "answer": "their",
+    "choices": [
+      "their",
+      "his",
+      "her",
+      "its",
+      "our"
+    ],
+    "expl": "Every employee は性別が特定されていない個人を指す場合、性別中立の単数 they/their を使うのが現在の標準的な用法。",
+    "rule": "R031",
+    "kp": [
+      "性別不明の個人にはsingular theyを使う",
+      "hisをデフォルトとする用法は現代では避ける"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "relative pronoun",
+      "relative clause",
+      "antecedent"
+    ],
+    "stem": "The company hired twenty new engineers, most ___ had experience in AI development.",
+    "ja": "その会社は20人の新しいエンジニアを採用し、その大部分はAI開発の経験があった。",
+    "answer": "of whom",
+    "choices": [
+      "of whom",
+      "of which",
+      "of that",
+      "of who",
+      "of those"
+    ],
+    "expl": "先行詞 twenty new engineers は人なので、most of whom を使う。of which は物・概念に使う。",
+    "rule": "R037",
+    "kp": [
+      "人にはof whom、物にはof whichを使う",
+      "most/some/none of whom/which"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "trap",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "The committee insisted that the chairperson ___ a full written report within two weeks.",
+    "ja": "委員会は議長が2週間以内に完全な書面による報告書を提出するよう強く求めた。",
+    "answer": "submit",
+    "choices": [
+      "submit",
+      "submits",
+      "submitted",
+      "to submit",
+      "submitting"
+    ],
+    "expl": "insist that 節の中では仮定法現在（動詞の原形）を使う。三人称単数でも -s はつけない。",
+    "rule": "R060",
+    "kp": [
+      "insist/suggest/recommend + that S + 動詞原形（仮定法現在）",
+      "三人称単数でもsをつけない"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "If I ___ you, I would think twice before making that decision.",
+    "ja": "もし私があなたなら、その決断をする前にもう一度よく考えるだろう。",
+    "answer": "were",
+    "choices": [
+      "were",
+      "was",
+      "am",
+      "have been",
+      "would be"
+    ],
+    "expl": "現在の事実に反する仮定（仮定法過去）では、be 動詞は主語に関わらず were を使うのが格式的に正しい。",
+    "rule": "R055",
+    "kp": [
+      "仮定法過去のbe動詞はwere（格式）",
+      "If S were ..., S would V の構造"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "tense",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "___ it not for modern medicine, millions of lives would be lost to preventable diseases every year.",
+    "ja": "現代医学がなければ、毎年何百万もの命が予防可能な病気で失われていただろう。",
+    "answer": "Were",
+    "choices": [
+      "Were",
+      "Was",
+      "Had",
+      "Should",
+      "Would"
+    ],
+    "expl": "Were it not for は If it were not for の倒置形。仮定法では were を使い、was は不可。この構文では Were が文頭に来る。",
+    "rule": "R059",
+    "kp": [
+      "Were it not for = If it were not forの倒置",
+      "仮定法倒置ではWere（Wasは不可）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "present progressive",
+      "ing",
+      "ongoing action"
+    ],
+    "stem": "Hurry up! The kettle ___ on the stove right now.",
+    "ja": "急いで！ケトルが今コンロで沸いているよ。",
+    "answer": "is boiling",
+    "choices": [
+      "is boiling",
+      "boils",
+      "boiled",
+      "has boiled",
+      "will boil"
+    ],
+    "expl": "「right now（今まさに）」があるため、現在進行中の動作を表す現在進行形 is boiling が正解。",
+    "rule": "現在進行形",
+    "kp": [
+      "right now → is/am/are + verb-ing",
+      "現在進行形は今起きていることを表す"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "present progressive",
+      "ing",
+      "ongoing action"
+    ],
+    "stem": "Look at those clouds! It ___ heavily outside at the moment.",
+    "ja": "あの雲を見て！今外は激しく雨が降っている。",
+    "answer": "is raining",
+    "choices": [
+      "is raining",
+      "rains",
+      "rained",
+      "has rained",
+      "will rain"
+    ],
+    "expl": "「at the moment（今この瞬間）」というシグナルから、現在進行中の動作を示す is raining が正解。",
+    "rule": "現在進行形",
+    "kp": [
+      "at the moment → 現在進行形",
+      "is/am/are + verb-ing で今起きていることを表す"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "Is there ___ orange juice in the refrigerator?",
+    "ja": "冷蔵庫にオレンジジュースは少し残っていますか？",
+    "answer": "any",
+    "choices": [
+      "any",
+      "some",
+      "much",
+      "many",
+      "a few"
+    ],
+    "expl": "疑問文では不可算名詞・可算名詞ともに any を使うのが基本。much も不可算名詞に使えるが、「is there much juice?」は不自然で、anyが正しい疑問文のパターン。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "疑問文・否定文 → any",
+      "some/any は可算・不可算の両方に使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "We need to buy ___ apples and ___ milk before the store closes.",
+    "ja": "店が閉まる前にリンゴと牛乳をいくらか買わなければならない。",
+    "answer": "some",
+    "choices": [
+      "some",
+      "any",
+      "many",
+      "much",
+      "few"
+    ],
+    "expl": "肯定文では some を使い、可算名詞（apples）にも不可算名詞（milk）にも同様に使える。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "肯定文 → some",
+      "some は可算・不可算名詞のどちらにも使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "My cat ___ like the new brand of cat food at all.",
+    "ja": "私の猫は新しいブランドのキャットフードが全く好きではない。",
+    "answer": "doesn't",
+    "choices": [
+      "doesn't",
+      "don't",
+      "isn't",
+      "aren't",
+      "hasn't"
+    ],
+    "expl": "主語が My cat（三人称単数）なので、否定形は doesn't を使う。don't は複数や I・you に使う。",
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "kp": [
+      "He/She/It → doesn't",
+      "三人称単数には doesn't"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "The new supermarket near our house ___ open on Sundays.",
+    "ja": "私たちの家の近くの新しいスーパーマーケットは日曜日に開いていない。",
+    "answer": "doesn't",
+    "choices": [
+      "doesn't",
+      "don't",
+      "isn't",
+      "aren't",
+      "not"
+    ],
+    "expl": "主語 The new supermarket は三人称単数なので doesn't が正しい。don't は複数主語や I・you に用いる。",
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "kp": [
+      "単数主語 → doesn't",
+      "複数主語・I・you → don't"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "contraction",
+      "doesn't",
+      "don't"
+    ],
+    "stem": "My cousins ___ live in this country anymore; they moved abroad.",
+    "ja": "私のいとこたちはもうこの国には住んでいない。海外に引っ越した。",
+    "answer": "don't",
+    "choices": [
+      "don't",
+      "doesn't",
+      "isn't",
+      "aren't",
+      "hasn't"
+    ],
+    "expl": "主語が My cousins（複数）なので don't を使う。doesn't は三人称単数にしか使えない。",
+    "rule": "doesn'tは単数主語、don'tは複数主語に使う（I・youはdon't）",
+    "kp": [
+      "複数主語 → don't",
+      "I・you → don't（単数でも）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She is a very ___ singer and always wins the school competitions.",
+    "ja": "彼女はとても才能のある歌手で、学校のコンテストでいつも優勝する。",
+    "answer": "talented",
+    "choices": [
+      "talented",
+      "talently",
+      "talent",
+      "talentful",
+      "talentedly"
+    ],
+    "expl": "名詞 singer を修飾するのは形容詞。副詞 talently や名詞 talent は名詞を修飾できない。talented（形容詞）が正解。",
+    "rule": "形容詞の基本：名詞を修飾する",
+    "kp": [
+      "名詞を修飾するのは形容詞",
+      "副詞・名詞は名詞の直前に置けない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The boys brought ___ sports equipment to the gym by themselves.",
+    "ja": "少年たちは自分たちでジムにスポーツ用具を持ってきた。",
+    "answer": "their",
+    "choices": [
+      "their",
+      "his",
+      "her",
+      "its",
+      "our"
+    ],
+    "expl": "先行詞が The boys（複数）なので、代名詞も複数形の their を使う。his や her は単数で性別が特定される場合に使う。",
+    "rule": "代名詞の数の一致",
+    "kp": [
+      "先行詞が複数 → their/them",
+      "代名詞は先行詞の数に一致させる"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor"
+    ],
+    "stem": "Either the principal or the vice principal ___ responsible for making the announcement.",
+    "ja": "校長か副校長のどちらかがアナウンスをする責任がある。",
+    "answer": "is",
+    "choices": [
+      "is",
+      "are",
+      "were",
+      "have been",
+      "being"
+    ],
+    "expl": "either A or B の構造で A と B がともに単数名詞の場合、動詞は単数形 is を使う。",
+    "rule": "orまたはnorで結ばれた複数の単数名詞・代名詞には単数形の動詞を使う",
+    "kp": [
+      "Either A or B + 単数動詞",
+      "or/nor で結ばれた単数名詞 → 単数動詞"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "After running the marathon, she felt completely ___.",
+    "ja": "マラソンを走り終えた後、彼女は完全に疲れ果てていた。",
+    "answer": "exhausted",
+    "choices": [
+      "exhausted",
+      "exhaustedly",
+      "exhausting",
+      "exhaustion",
+      "exhaust"
+    ],
+    "expl": "feel の後は主語の状態を説明する形容詞が来る。副詞 exhaustedly や名詞 exhaustion は不適切。exhausted（形容詞）が正解。",
+    "rule": "be動詞・感覚動詞の後は形容詞",
+    "kp": [
+      "feel/look/seem の後は形容詞",
+      "副詞・名詞は感覚動詞の後に置けない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "past progressive",
+      "was",
+      "were",
+      "ing"
+    ],
+    "stem": "The students ___ their final exam when the fire drill suddenly started.",
+    "ja": "生徒たちが期末試験を受けているときに、突然避難訓練が始まった。",
+    "answer": "were taking",
+    "choices": [
+      "were taking",
+      "took",
+      "had taken",
+      "have taken",
+      "take"
+    ],
+    "expl": "「when the fire drill suddenly started（別の動作に割り込まれた）」とあるため、そのとき進行中だった動作には過去進行形 were taking を使う。",
+    "rule": "過去進行形は過去のある時点で進行中だった動作、または別の動作に割り込まれた動作を表す",
+    "kp": [
+      "when + 過去形 → 割り込まれた動作は過去進行形",
+      "was/were + verb-ing"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The treasure chest was discovered ___ a heavy stone and an ancient wooden door.",
+    "ja": "宝箱は重い石と古い木の扉の間で発見された。",
+    "answer": "between",
+    "choices": [
+      "between",
+      "among",
+      "beside",
+      "through",
+      "above"
+    ],
+    "expl": "2つのもの（a heavy stone と an ancient wooden door）の間には between を使う。among は3つ以上の間に用いる。",
+    "rule": "空間的前置詞の一覧（above/below/between等）",
+    "kp": [
+      "2者の間 → between",
+      "3者以上の間 → among"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "past progressive",
+      "was",
+      "were",
+      "ing"
+    ],
+    "stem": "She ___ a phone call while her brother was washing the dishes.",
+    "ja": "兄が皿を洗っている間、彼女は電話をしていた。",
+    "answer": "was making",
+    "choices": [
+      "was making",
+      "made",
+      "has made",
+      "make",
+      "had made"
+    ],
+    "expl": "while は同時進行を示すシグナルで、過去のある時点で進行中の動作には was making（過去進行形）を使う。",
+    "rule": "過去進行形は過去のある時点で進行中だった動作、または別の動作に割り込まれた動作を表す",
+    "kp": [
+      "while + 同時進行 → 過去進行形",
+      "was/were + verb-ing"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "noun",
+      "count",
+      "noncount",
+      "plural"
+    ],
+    "stem": "We need to buy new ___ for the break room because the old ones are broken.",
+    "ja": "古いものが壊れているので、休憩室に新しい家具を買う必要がある。",
+    "answer": "furniture",
+    "choices": [
+      "furniture",
+      "furnitures",
+      "a furniture",
+      "the furnitures",
+      "some furnitures"
+    ],
+    "expl": "furniture は不可算名詞なので複数形にすることができない。furnitures は誤りで、furniture がそのまま正しい形。",
+    "rule": "可算名詞は複数形になれるが、不可算名詞は原則として複数形にならない",
+    "kp": [
+      "furniture は不可算名詞 → 複数形にしない",
+      "不可算名詞には -s をつけない"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "She went to her teacher for ___ on how to improve her essay.",
+    "ja": "彼女はエッセイの改善方法についてアドバイスを求めに先生のところへ行った。",
+    "answer": "advice",
+    "choices": [
+      "advice",
+      "advise",
+      "advices",
+      "an advise",
+      "advisement"
+    ],
+    "expl": "名詞が必要な位置であり、正しい名詞形は advice（不可算名詞）。advise は動詞であり、ここでは使えない。",
+    "rule": "advise と advice の区別",
+    "kp": [
+      "名詞は advice（末尾 -ice）",
+      "動詞は advise（末尾 -ise）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "irregular verb",
+      "past tense",
+      "past participle"
+    ],
+    "stem": "By the time the guests arrived, we had already ___ all the food.",
+    "ja": "客が到着する頃には、私たちはすでに食べ物を全部食べていた。",
+    "answer": "eaten",
+    "choices": [
+      "eaten",
+      "ate",
+      "eated",
+      "eat",
+      "eating"
+    ],
+    "expl": "had + 過去分詞の形（過去完了）が必要。eat の過去分詞は eaten（不規則変化）。eated という形は存在しない。",
+    "rule": "不規則動詞は過去形・過去分詞形が規則的な-ed形にならず、固有の変化をする",
+    "kp": [
+      "eat → ate → eaten（不規則変化）",
+      "had + 過去分詞 → 過去完了"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "All the team members were present ___ the project leader, who was ill.",
+    "ja": "病気だったプロジェクトリーダーを除いて、チームメンバー全員が出席していた。",
+    "answer": "except",
+    "choices": [
+      "except",
+      "accept",
+      "without",
+      "beside",
+      "unless"
+    ],
+    "expl": "「〜を除いて」という前置詞の意味が必要。except が正しい。accept は「受け取る・同意する」という動詞で前置詞として使えない。",
+    "rule": "accept と except の区別",
+    "kp": [
+      "「〜を除いて」→ except（前置詞）",
+      "accept は動詞、except は前置詞"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal perfect",
+      "could have",
+      "would have",
+      "must have"
+    ],
+    "stem": "She looked so pale and tired. She ___ stayed up all night studying.",
+    "ja": "彼女はとても青白く疲れて見えた。一晩中勉強していたに違いない。",
+    "answer": "must have",
+    "choices": [
+      "must have",
+      "must of",
+      "should of",
+      "could of",
+      "would of"
+    ],
+    "expl": "「〜に違いない」という過去への推量は must have + 過去分詞で表す。must of などは口語の誤用であり正式な英語では使えない。",
+    "rule": "could have / would have / must haveの後には過去分詞を置く（'of'は誤り）",
+    "kp": [
+      "must have + 過去分詞 → 過去への確信的推量",
+      "of ではなく have を使う"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "pronoun",
+      "singular they",
+      "gender-neutral"
+    ],
+    "stem": "When a customer calls with a complaint, ___ should be connected to the support team immediately.",
+    "ja": "顧客が苦情の電話をかけてきたとき、その人はすぐにサポートチームにつないでもらうべきだ。",
+    "answer": "they",
+    "choices": [
+      "they",
+      "he",
+      "she",
+      "it",
+      "one"
+    ],
+    "expl": "性別不明の個人を指す場合、単数の they が現代英語では公式に認められた表現。he を総称的に使うのは避けるべき。",
+    "rule": "単数のtheyは性別を特定しない個人または非二元的な性自認を持つ人を指す代名詞として使える",
+    "kp": [
+      "性別不明の個人 → 単数 they",
+      "he を総称的に使うことは現代では避けられる"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "intervening phrase"
+    ],
+    "stem": "The manager, together with all the department heads, ___ planning to attend the conference.",
+    "ja": "マネージャーは全部長とともに、その会議に参加する予定だ。",
+    "answer": "is",
+    "choices": [
+      "is",
+      "are",
+      "were",
+      "have been",
+      "being"
+    ],
+    "expl": "主語は The manager（単数）であり、together with 以下は挿入句。動詞は主語 The manager に一致させて is が正解。",
+    "rule": "主語と動詞の間に挿入句があっても、動詞は主語に一致させる",
+    "kp": [
+      "together with / as well as は挿入句 → 主語の数で動詞を決める",
+      "挿入句は動詞の数に影響しない"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal perfect",
+      "could have",
+      "would have",
+      "must have"
+    ],
+    "stem": "If he had taken better care of himself, he ___ avoided getting sick.",
+    "ja": "もっと体に気をつけていれば、彼は病気を避けられたのに。",
+    "answer": "could have",
+    "choices": [
+      "could have",
+      "could of",
+      "would of",
+      "might of",
+      "should of"
+    ],
+    "expl": "「〜できたのに」という過去の可能性は could have + 過去分詞で表す。could of は誤りで、have を使う必要がある。",
+    "rule": "could have / would have / must haveの後には過去分詞を置く（'of'は誤り）",
+    "kp": [
+      "could have + 過去分詞 → 過去の可能性・後悔",
+      "of ではなく have"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "If the manager ___ the report in advance, the meeting would have gone more smoothly.",
+    "ja": "もしマネージャーが事前に報告書を読んでいれば、会議はもっとスムーズに進んだだろう。",
+    "answer": "had read",
+    "choices": [
+      "had read",
+      "read",
+      "would have read",
+      "has read",
+      "was reading"
+    ],
+    "expl": "過去の事実に反する仮定（仮定法過去完了）の if 節は had + 過去分詞の形。read の過去分詞は read（同形）。",
+    "rule": "仮定法過去完了",
+    "kp": [
+      "If + had + pp → 過去の事実に反する仮定",
+      "帰結節は would have + pp"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "of whom",
+      "of which",
+      "relative pronoun",
+      "quantifier"
+    ],
+    "stem": "The committee interviewed twelve candidates, three ___ had previously worked overseas.",
+    "ja": "委員会は12人の候補者を面接したが、そのうちの3人は以前海外で働いた経験があった。",
+    "answer": "of whom",
+    "choices": [
+      "of whom",
+      "of which",
+      "of that",
+      "of who",
+      "of whose"
+    ],
+    "expl": "候補者（人）を先行詞とする量化表現には of whom を使う。of which は物・概念を指す場合に使う。",
+    "rule": "most, many, some, both, noneなどの後で人にはof whom、物にはof whichを使う",
+    "kp": [
+      "人 → of whom",
+      "物・概念 → of which"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "If the engineers ___ the warning signals earlier, they would have prevented the system crash.",
+    "ja": "もしエンジニアたちがもっと早く警告信号に気づいていれば、システムのクラッシュを防げたのに。",
+    "answer": "had noticed",
+    "choices": [
+      "had noticed",
+      "noticed",
+      "would have noticed",
+      "have noticed",
+      "were noticing"
+    ],
+    "expl": "過去の事実に反する仮定（仮定法過去完了）では if 節に had + 過去分詞を使う。noticed は単純過去で仮定法にならない。",
+    "rule": "仮定法過去完了",
+    "kp": [
+      "If had + pp → 仮定法過去完了の if 節",
+      "would have + pp が帰結節"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "which",
+      "non-defining",
+      "clause reference"
+    ],
+    "stem": "The board approved the new budget proposal, ___ came as a surprise to many employees.",
+    "ja": "取締役会が新しい予算案を承認したことは、多くの社員にとって驚きだった。",
+    "answer": "which",
+    "choices": [
+      "which",
+      "that",
+      "what",
+      "who",
+      "it"
+    ],
+    "expl": "前の節全体（取締役会が予算案を承認したこと）を先行詞とする非制限用法の関係節には which を使う。that は非制限用法には使えない。",
+    "rule": "節全体を先行詞とする非制限用法の関係節にはwhichを使う",
+    "kp": [
+      "節全体を先行詞にする非制限用法 → which",
+      "that は非制限用法に使えない"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "The stricter data privacy rules are scheduled to come ___ effect from the first of next month.",
+    "ja": "より厳しいデータプライバシー規則は来月1日から施行される予定だ。",
+    "answer": "into",
+    "choices": [
+      "into",
+      "in",
+      "to",
+      "onto",
+      "under"
+    ],
+    "expl": "「施行される」は come into effect という固定表現。into が正しい前置詞で、in や to では意味をなさない。",
+    "rule": "come into effect",
+    "kp": [
+      "come into effect = 施行される・発効する",
+      "into を使う（in / to は誤り）"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "logic",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "Hardly ___ her acceptance speech when the lights in the hall suddenly went out.",
+    "ja": "彼女が受諾スピーチを始めてほどなく、ホールの電気が突然消えた。",
+    "answer": "had she begun",
+    "choices": [
+      "had she begun",
+      "she had begun",
+      "had she begin",
+      "she began",
+      "did she begin"
+    ],
+    "expl": "Hardly + had + S + 過去分詞 + when ... の倒置構文が必要。Hardly の後は助動詞 had を先に置く倒置形をとる。",
+    "rule": "Hardly had S pp when ...",
+    "kp": [
+      "Hardly + had + S + pp + when → 倒置が必要",
+      "hardly → when（no sooner → than）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "Is there ___ salt in the cupboard? We need some for the soup.",
+    "ja": "棚に塩はありますか？スープに必要なんです。",
+    "answer": "any",
+    "choices": [
+      "any",
+      "much",
+      "many",
+      "some",
+      "few"
+    ],
+    "expl": "疑問文では不可算名詞・可算名詞を問わず any を使います。much は否定・疑問文で使えますが、ここでは any が最も自然です。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "疑問文・否定文では any",
+      "any は可算・不可算両方に使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "There are ___ interesting museums in this city. You should visit them.",
+    "ja": "この街には興味深い博物館がいくつかあります。ぜひ行ってみてください。",
+    "answer": "some",
+    "choices": [
+      "some",
+      "any",
+      "much",
+      "many a",
+      "few"
+    ],
+    "expl": "肯定文で可算名詞の複数形に「いくつかの」を表す場合は some を使います。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "肯定文では some",
+      "some は可算名詞複数形にも使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "some",
+      "any",
+      "quantifier"
+    ],
+    "stem": "We didn't find ___ useful information in the report.",
+    "ja": "私たちはレポートの中に有益な情報を何も見つけられませんでした。",
+    "answer": "any",
+    "choices": [
+      "any",
+      "some",
+      "much",
+      "many",
+      "no"
+    ],
+    "expl": "否定文では any を使います。not ... any で「まったく～ない」を表します。",
+    "rule": "some/anyは可算名詞・不可算名詞の両方に使える",
+    "kp": [
+      "否定文では any",
+      "any は不可算名詞にも使える"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She made ___ unusual decision that surprised everyone in the office.",
+    "ja": "彼女は職場の全員を驚かせた、珍しい決断をしました。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "some",
+      "any"
+    ],
+    "expl": "unusual の頭文字は u ですが、発音は /ʌn-/ と母音音で始まるため an を使います。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "発音が母音で始まる語の前は an",
+      "unusual は /ʌn/ と母音音で始まる"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "trap",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "My grandfather was ___ honorable judge who served for thirty years.",
+    "ja": "私の祖父は30年間勤めた立派な裁判官でした。",
+    "answer": "an",
+    "choices": [
+      "an",
+      "a",
+      "the",
+      "one",
+      "some"
+    ],
+    "expl": "honorable の h は発音されないため、/ɒn-/ と母音音で始まります。そのため a ではなく an を使います。",
+    "rule": "不定冠詞 a vs. an：音に基づく選択",
+    "kp": [
+      "サイレント h の語の前は an",
+      "honorable は /ɒn/ と発音される"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "present progressive",
+      "ing",
+      "ongoing action"
+    ],
+    "stem": "Please don't interrupt him. He ___ an important phone call at the moment.",
+    "ja": "彼の邪魔をしないでください。彼は今、大事な電話をしています。",
+    "answer": "is making",
+    "choices": [
+      "is making",
+      "makes",
+      "make",
+      "was making",
+      "has made"
+    ],
+    "expl": "at the moment（今この瞬間）という信号語があるため、現在進行形 is making を使います。",
+    "rule": "現在進行形は今進行中の動作または近い将来の予定を表す",
+    "kp": [
+      "at the moment → 現在進行形",
+      "is/am/are + V-ing で今進行中の動作を表す"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "adverb",
+      "form"
+    ],
+    "stem": "The athlete ran ___ and broke the school record.",
+    "ja": "その選手は速く走り、学校の記録を破りました。",
+    "answer": "fast",
+    "choices": [
+      "fast",
+      "fastly",
+      "good",
+      "well-done",
+      "quick"
+    ],
+    "expl": "ran（動詞）を修飾するには副詞が必要です。fast は形容詞・副詞ともに同形で正しく使えます。fastly という語は存在しません。",
+    "rule": "副詞の基本：動詞・形容詞・副詞を修飾する",
+    "kp": [
+      "動詞を修飾するのは副詞",
+      "fast は副詞としても使える（fastly は誤り）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The annual flower festival is held ___ April in this region.",
+    "ja": "この地域では毎年4月に花まつりが開催されます。",
+    "answer": "in",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "by",
+      "during"
+    ],
+    "expl": "月（April）の前には前置詞 in を使います。on は曜日・特定の日付、at は時刻や noon などに使います。",
+    "rule": "前置詞 on/at/in：時間の使い分け",
+    "kp": [
+      "月・年・季節・時間帯には in",
+      "曜日には on、時刻には at"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "Our weekly team meeting always starts ___ nine o'clock sharp.",
+    "ja": "私たちの週1回のチームミーティングは常に9時ちょうどに始まります。",
+    "answer": "at",
+    "choices": [
+      "at",
+      "in",
+      "on",
+      "by",
+      "from"
+    ],
+    "expl": "時刻（nine o'clock）の前には前置詞 at を使います。",
+    "rule": "前置詞 on/at/in：時間の使い分け",
+    "kp": [
+      "時刻・noon・night の前は at",
+      "in は月・年・季節に使う"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "She always goes jogging ___ Sunday mornings before breakfast.",
+    "ja": "彼女はいつも日曜日の朝、朝食前にジョギングに行きます。",
+    "answer": "on",
+    "choices": [
+      "on",
+      "in",
+      "at",
+      "during",
+      "for"
+    ],
+    "expl": "曜日（Sunday）の前には前置詞 on を使います。Sunday mornings のように時間帯が続く場合も on を使います。",
+    "rule": "前置詞 on/at/in：時間の使い分け",
+    "kp": [
+      "曜日の前は on",
+      "on Sunday / on Monday のように使う"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic"
+    ],
+    "stem": "Could you ___ me on which career path I should choose?",
+    "ja": "どのキャリアパスを選ぶべきか、アドバイスしてもらえますか？",
+    "answer": "advise",
+    "choices": [
+      "advise",
+      "advice",
+      "adviced",
+      "advising",
+      "advisement"
+    ],
+    "expl": "動詞の位置（Could you ___）には動詞 advise を使います。advice は名詞なので動詞位置には使えません。",
+    "rule": "advise と advice の区別",
+    "kp": [
+      "advise = 動詞（助言する）",
+      "advice = 名詞（助言）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "She wasted ___ time worrying about things she couldn't control.",
+    "ja": "彼女はコントロールできないことを心配して多くの時間を無駄にしました。",
+    "answer": "much",
+    "choices": [
+      "much",
+      "many",
+      "few",
+      "any",
+      "several"
+    ],
+    "expl": "time は不可算名詞なので much を使います。many は可算名詞の複数形に使います。",
+    "rule": "可算名詞と不可算名詞：much vs. many",
+    "kp": [
+      "much + 不可算名詞",
+      "many + 可算名詞（複数形）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal",
+      "auxiliary",
+      "invariant form"
+    ],
+    "stem": "No matter how difficult the task is, she ___ handle it on her own.",
+    "ja": "どんなに難しい仕事でも、彼女は一人でこなすことができます。",
+    "answer": "can",
+    "choices": [
+      "can",
+      "cans",
+      "is canning",
+      "canned",
+      "to can"
+    ],
+    "expl": "助動詞（modal）は主語の人称・数に関わらず形が変わりません。she に合わせて cans とするのは誤りです。",
+    "rule": "助動詞（can, will, shall, may, could, would, should, might, must）は主語に関わらず形が変わらない",
+    "kp": [
+      "助動詞は主語に関わらず原形のまま",
+      "she cans は誤り → she can が正しい"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "relative pronoun",
+      "relative clause",
+      "antecedent"
+    ],
+    "stem": "The bridge ___ connects the two islands was completed just last year.",
+    "ja": "二つの島をつないでいる橋は、ちょうど昨年完成しました。",
+    "answer": "that",
+    "choices": [
+      "that",
+      "who",
+      "whom",
+      "what",
+      "where"
+    ],
+    "expl": "先行詞が「物」（bridge）で、関係節が主語の役割を果たす制限用法では that を使います。",
+    "rule": "関係代名詞は先行詞を修飾する従属節（関係節）を導く",
+    "kp": [
+      "制限用法で先行詞が物 → that が自然",
+      "who は人に使う"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor",
+      "proximity"
+    ],
+    "stem": "Neither the director nor the producers ___ satisfied with the final cut of the film.",
+    "ja": "監督も制作者たちも映画の最終カットには満足していませんでした。",
+    "answer": "were",
+    "choices": [
+      "were",
+      "was",
+      "are",
+      "is",
+      "have been"
+    ],
+    "expl": "nor で結ばれた場合、動詞は直前の名詞（producers = 複数）に一致するため were を使います。",
+    "rule": "or/norで単数・複数の名詞が結ばれる場合、動詞は動詞に近い方の主語に一致させる",
+    "kp": [
+      "nor の後の動詞は直前の名詞に一致",
+      "producers（複数）→ were"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "verb",
+      "subject",
+      "or",
+      "nor",
+      "proximity"
+    ],
+    "stem": "Either the students or the teacher ___ responsible for setting up the classroom.",
+    "ja": "生徒か先生のどちらかが教室のセッティングをする担当です。",
+    "answer": "is",
+    "choices": [
+      "is",
+      "are",
+      "were",
+      "have been",
+      "be"
+    ],
+    "expl": "or で結ばれた場合、動詞は直前の名詞（teacher = 単数）に一致するため is を使います。",
+    "rule": "or/norで単数・複数の名詞が結ばれる場合、動詞は動詞に近い方の主語に一致させる",
+    "kp": [
+      "or の後の動詞は直前の名詞に一致",
+      "teacher（単数）→ is"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "pronoun",
+      "singular they",
+      "gender-neutral"
+    ],
+    "stem": "If a customer has a complaint, ___ should contact our support team directly.",
+    "ja": "お客様にご不満がある場合は、直接サポートチームにご連絡ください。",
+    "answer": "they",
+    "choices": [
+      "they",
+      "he",
+      "she",
+      "it",
+      "he or she"
+    ],
+    "expl": "性別が不明な個人を指す場合、現代英語では単数の they が広く認められています。",
+    "rule": "単数のtheyは性別を特定しない個人または非二元的な性自認を持つ人を指す代名詞として使える",
+    "kp": [
+      "性別不明の個人 → 単数 they",
+      "he を汎用デフォルトにするのは現代では避けられる"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "relative clause",
+      "non-restrictive",
+      "non-defining",
+      "comma",
+      "that"
+    ],
+    "stem": "My hometown, ___ I visited last summer, has changed dramatically since I left.",
+    "ja": "昨夏に訪れた私の故郷は、去ってから劇的に変わっていました。",
+    "answer": "which",
+    "choices": [
+      "which",
+      "that",
+      "who",
+      "where",
+      "what"
+    ],
+    "expl": "コンマで区切られた非制限用法の関係節では that は使えません。先行詞が場所でも物として捉える場合は which を使います。",
+    "rule": "非制限用法の関係節（非定義節）はコンマで区切り、thatは使えない",
+    "kp": [
+      "非制限用法（コンマあり）では that 不可",
+      "コンマ + which で追加情報を付加"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "vocab",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "The heavy rainfall last month ___ the quality of the wheat harvest significantly.",
+    "ja": "先月の大雨は小麦の収穫の品質に大きな影響を与えました。",
+    "answer": "affected",
+    "choices": [
+      "affected",
+      "effected",
+      "effect",
+      "affecting",
+      "affect on"
+    ],
+    "expl": "「影響を与えた」という動詞には affect（過去形 affected）を使います。effect は名詞、または「もたらす」という意味の動詞です。",
+    "rule": "affect と effect の区別（RAVEN）",
+    "kp": [
+      "affect = 動詞（影響する）",
+      "effect = 名詞（影響・結果）"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "trap",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "The new diet had a noticeable ___ on her energy levels within just two weeks.",
+    "ja": "新しい食事法はわずか2週間で彼女のエネルギーレベルに顕著な効果をもたらしました。",
+    "answer": "effect",
+    "choices": [
+      "effect",
+      "affect",
+      "effecting",
+      "affecting",
+      "affection"
+    ],
+    "expl": "冠詞 a の後は名詞が来ます。「影響・効果」を表す名詞は effect です。affect は動詞です。",
+    "rule": "affect と effect の区別（RAVEN）",
+    "kp": [
+      "effect = 名詞（効果・影響）",
+      "a の直後は名詞 → affect（動詞）は不可"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "logic",
+    "tags": [
+      "eikenpre2",
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "She carefully poured the hot coffee ___ the mug without spilling a drop.",
+    "ja": "彼女は一滴もこぼさずに熱いコーヒーをマグカップの中に丁寧に注ぎました。",
+    "answer": "into",
+    "choices": [
+      "into",
+      "onto",
+      "to",
+      "in",
+      "on"
+    ],
+    "expl": "液体をカップの「内部」に移動させる場合は into を使います。onto は表面への移動、to は目的地への方向を示します。",
+    "rule": "方向の前置詞 to/onto/into の使い分け",
+    "kp": [
+      "内部への移動 → into",
+      "表面への移動 → onto、目的地への方向 → to"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "form",
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "stem": "The survey results showed that the three departments had four, ___, and nine employees respectively.",
+    "ja": "調査結果によると、3つの部署にはそれぞれ4人、___人、9人の従業員がいることがわかりました。",
+    "answer": "seven",
+    "choices": [
+      "seven",
+      "7",
+      "7th",
+      "the seventh",
+      "seventh"
+    ],
+    "expl": "同一文中で数字の表記形式を統一する必要があります。four と nine がスペルアウトされているので、seven とスペルアウトするのが正しいです。",
+    "rule": "同一文中の数字の一貫性",
+    "kp": [
+      "同じ文では数字の表記形式を統一する",
+      "four, nine とスペルアウト → seven も同様に"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "eiken2",
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "The prime minister, ___ the most influential figure of his era, is remembered for his economic reforms.",
+    "ja": "その時代で最も影響力のある人物であった首相は、経済改革によって記憶されています。",
+    "answer": "the most influential figure of his era",
+    "choices": [
+      "the most influential figure of his era",
+      "the most influential figure of his era,",
+      ", the most influential figure of his era",
+      "who the most influential figure of his era",
+      "which the most influential figure of his era"
+    ],
+    "expl": "「首相」はそれだけで特定できるため、同格語は非制限的（追加情報）です。コンマで区切る必要がありますが、この問題では同格語そのものの選択として、コンマなしの語句を空欄に入れる形式です（文全体でコンマが既に付与されています）。",
+    "rule": "同格語のコンマ：制限的vs非制限的",
+    "kp": [
+      "固有名詞など単独で特定できる名詞の同格語は非制限的 → コンマあり",
+      "同格語を取り除いても文の意味が通るかを確認する"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "tense",
+    "tags": [
+      "eiken2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "If he ___ more time to prepare, his presentation would be far more convincing.",
+    "ja": "もし準備する時間がもっとあれば、彼のプレゼンテーションははるかに説得力があるでしょう。",
+    "answer": "had",
+    "choices": [
+      "had",
+      "has",
+      "would have",
+      "will have",
+      "have"
+    ],
+    "expl": "現在の事実に反する仮定（仮定法過去）では、If 節の動詞は過去形を使います。主語が he でも were や had など過去形を用います。",
+    "rule": "仮定法過去",
+    "kp": [
+      "仮定法過去：If + 過去形, would + 原形",
+      "現在の事実に反する仮定 → If 節に過去形"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "form",
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "stem": "The report listed the following error rates: two percent, ___, and eight percent across the three divisions.",
+    "ja": "報告書には、3つの部門にわたるエラー率として、2パーセント、___パーセント、8パーセントが記載されていました。",
+    "answer": "five",
+    "choices": [
+      "five",
+      "5",
+      "5th",
+      "the fifth",
+      "fifth"
+    ],
+    "expl": "同じ文中で two と eight がスペルアウトされているため、表記の一貫性を保つために five もスペルアウトします。",
+    "rule": "同一文中の数字の一貫性",
+    "kp": [
+      "同一文内では数字の書き方を統一する",
+      "スペルアウトか数字かを揃えること"
+    ]
+  },
+  {
+    "diff": "lv5",
+    "axis": "tense",
+    "tags": [
+      "eikenpre1",
+      "toeic"
+    ],
+    "stem": "___ the committee reviewed the proposal more carefully, the critical errors would have been caught before publication.",
+    "ja": "委員会がより慎重に提案書を審査していたなら、出版前に重大なエラーが発見されていたでしょう。",
+    "answer": "Had",
+    "choices": [
+      "Had",
+      "If",
+      "Were",
+      "Should",
+      "Would"
+    ],
+    "expl": "仮定法の倒置形では If を省略して Had + S + 過去分詞 の語順にします。ここでは Had the committee reviewed ... が正しい倒置形です。",
+    "rule": "仮定法の倒置 (Had S pp)",
+    "kp": [
+      "If 省略 → Had + S + 過去分詞（倒置）",
+      "帰結節は would have + 過去分詞"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "The dog barked ___ at the stranger near the gate.",
+    "ja": "その犬は門の近くにいた見知らぬ人に向かって激しく吠えた。",
+    "answer": "loudly",
+    "choices": [
+      "loudly",
+      "loud",
+      "louder",
+      "loudness",
+      "loudest"
+    ],
+    "expl": "動詞 barked（吠えた）を修飾するには副詞が必要です。loud は形容詞なので動詞を修飾できず、副詞形 loudly を使います。",
+    "rule": "副詞の基本：動詞・形容詞・副詞を修飾する",
+    "kp": [
+      "動詞を修飾するときは副詞（-ly形）を使う",
+      "loud（形容詞）→ loudly（副詞）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "She finished the race ___ and won first place.",
+    "ja": "彼女はレースを素早く終え、1位になった。",
+    "answer": "quickly",
+    "choices": [
+      "quickly",
+      "quick",
+      "quicker",
+      "quicken",
+      "quickest"
+    ],
+    "expl": "動詞 finished を修飾するには副詞が必要です。quick は形容詞なので副詞形の quickly を使う必要があります。",
+    "rule": "副詞の基本：動詞・形容詞・副詞を修飾する",
+    "kp": [
+      "動詞を修飾するには副詞（-ly形）を使う",
+      "quick（形容詞）→ quickly（副詞）"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "He is a very ___ person and always helps others.",
+    "ja": "彼はとても親切な人で、いつも他の人を助けます。",
+    "answer": "kind",
+    "choices": [
+      "kind",
+      "kindly",
+      "kindness",
+      "kinder",
+      "kindest"
+    ],
+    "expl": "名詞 person を修飾するには形容詞が必要です。kindly は副詞なので名詞を修飾できません。形容詞 kind を使います。",
+    "rule": "形容詞の基本：名詞を修飾する",
+    "kp": [
+      "名詞を修飾するときは形容詞を使う",
+      "kindly は副詞なので名詞の前には置けない"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "That was a ___ decision by the manager.",
+    "ja": "それはマネージャーによる賢明な決断だった。",
+    "answer": "wise",
+    "choices": [
+      "wise",
+      "wisely",
+      "wisdom",
+      "wiser",
+      "wisest"
+    ],
+    "expl": "名詞 decision を修飾するには形容詞が必要です。wisely は副詞なので名詞を修飾できず、形容詞 wise を使います。",
+    "rule": "形容詞の基本：名詞を修飾する",
+    "kp": [
+      "名詞の前に置くのは形容詞",
+      "wisely（副詞）は名詞を修飾できない"
+    ]
+  },
+  {
+    "diff": "lv1",
+    "axis": "form",
+    "tags": [
+      "eiken4",
+      "eiken3",
+      "juken"
+    ],
+    "stem": "The teacher explained the lesson ___ so all the students understood.",
+    "ja": "先生はレッスンをわかりやすく説明したので、生徒全員が理解した。",
+    "answer": "clearly",
+    "choices": [
+      "clearly",
+      "clear",
+      "clearer",
+      "clearness",
+      "clearest"
+    ],
+    "expl": "動詞 explained を修飾するには副詞が必要です。clear は形容詞なので、副詞形の clearly を使います。",
+    "rule": "副詞の基本：動詞・形容詞・副詞を修飾する",
+    "kp": [
+      "動詞を修飾するには副詞（-ly形）を使う",
+      "clear（形容詞）→ clearly（副詞）"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "vocab",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The small café is located ___ the bookstore and the pharmacy.",
+    "ja": "その小さなカフェは書店と薬局の間にある。",
+    "answer": "between",
+    "choices": [
+      "between",
+      "among",
+      "beside",
+      "behind",
+      "through"
+    ],
+    "expl": "書店と薬局という2つのものの間を表すには between を使います。among は3つ以上のものの間に使います。",
+    "rule": "空間的前置詞の一覧（above/below/between等）",
+    "kp": [
+      "2者の間 → between",
+      "3者以上の間 → among"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "present perfect",
+      "have",
+      "has",
+      "past participle"
+    ],
+    "stem": "She ___ this company for over fifteen years and still enjoys her job.",
+    "ja": "彼女はこの会社に15年以上勤めており、今でも仕事を楽しんでいる。",
+    "answer": "has worked for",
+    "choices": [
+      "has worked for",
+      "worked for",
+      "is working for",
+      "had worked for",
+      "works for"
+    ],
+    "expl": "過去から現在まで続いている状況を表すには現在完了形（have/has + 過去分詞）を使います。still enjoys という現在の継続を示す表現がヒントです。",
+    "rule": "現在完了形は過去に始まり現在まで続く動作・状態、または効果が今も残る完了した行為を表す",
+    "kp": [
+      "現在まで続く動作・状態 → 現在完了形（has/have + 過去分詞）",
+      "for と共に使われることが多い"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "logic",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "Could you pass me ___ salt, please? It's right next to you.",
+    "ja": "その塩を取ってもらえますか？あなたのすぐ隣にありますよ。",
+    "answer": "the",
+    "choices": [
+      "the",
+      "a",
+      "an",
+      "some",
+      "any"
+    ],
+    "expl": "話し手と聞き手が「どの塩か」を共有しており（目の前にある特定の塩）、特定のものを指すときは定冠詞 the を使います。",
+    "rule": "定冠詞 the と不定冠詞 a/an の使い分け",
+    "kp": [
+      "話し手と聞き手が同じものを指していると分かる場合 → the",
+      "不特定のものを指す場合 → a/an"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "little",
+      "few",
+      "quantifier",
+      "count",
+      "noncount"
+    ],
+    "stem": "There are very ___ tickets left for the championship game, so buy them soon.",
+    "ja": "チャンピオンシップゲームのチケットはほとんど残っていないので、早めに買ってください。",
+    "answer": "few",
+    "choices": [
+      "few",
+      "little",
+      "less",
+      "much",
+      "any"
+    ],
+    "expl": "tickets は可算名詞の複数形なので、few を使います。little は不可算名詞を修飾するときに使います。",
+    "rule": "littleは不可算名詞、fewは可算名詞を修飾する",
+    "kp": [
+      "可算名詞（複数形）→ few",
+      "不可算名詞 → little"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "eiken3",
+      "eikenpre2",
+      "toeic",
+      "juken"
+    ],
+    "stem": "The annual book fair is held ___ October every year in this city.",
+    "ja": "年次ブックフェアはこの都市で毎年10月に開催される。",
+    "answer": "in",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "during",
+      "by"
+    ],
+    "expl": "月（October）の前には前置詞 in を使います。on は曜日、at は時刻に使います。",
+    "rule": "前置詞 on/at/in：時間の使い分け",
+    "kp": [
+      "月の前 → in",
+      "曜日の前 → on、時刻の前 → at"
+    ]
+  },
+  {
+    "diff": "lv2",
+    "axis": "form",
+    "tags": [
+      "grammar",
+      "noun",
+      "count",
+      "noncount",
+      "plural"
+    ],
+    "stem": "We need to buy new ___ for the conference room before the big meeting.",
+    "ja": "大きな会議の前に会議室に新しい家具を購入する必要がある。",
+    "answer": "furniture",
+    "choices": [
+      "furniture",
+      "furnitures",
+      "furniturings",
+      "a furniture",
+      "some furnitures"
+    ],
+    "expl": "furniture（家具）は不可算名詞なので複数形にすることはできません。furnitures という形は存在しません。",
+    "rule": "可算名詞は複数形になれるが、不可算名詞は原則として複数形にならない",
+    "kp": [
+      "furniture は不可算名詞 → 複数形不可",
+      "不可算名詞には -s をつけない"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "past perfect",
+      "had",
+      "past participle"
+    ],
+    "stem": "By the time the police arrived at the scene, the suspect ___ already ___.",
+    "ja": "警察が現場に到着したとき、容疑者はすでに逃げていた。",
+    "answer": "had escaped",
+    "choices": [
+      "had escaped",
+      "escaped",
+      "has escaped",
+      "was escaping",
+      "would escape"
+    ],
+    "expl": "警察の到着（過去）より前に完了した出来事を表すには過去完了形（had + 過去分詞）を使います。by the time と already がヒントです。",
+    "rule": "過去完了形は過去の別の出来事よりも前に完了した行為・状態を表す",
+    "kp": [
+      "過去の出来事より前の完了 → 過去完了形（had + 過去分詞）",
+      "by the time / before / after などと共に使われる"
+    ]
+  },
+  {
+    "diff": "lv3",
+    "axis": "tense",
+    "tags": [
+      "grammar",
+      "modal perfect",
+      "could have",
+      "would have",
+      "must have"
+    ],
+    "stem": "She ___ the flight; her boarding pass was found at the gate.",
+    "ja": "彼女はフライトに乗ったに違いない。搭乗券がゲートで見つかった。",
+    "answer": "must have taken",
+    "choices": [
+      "must have taken",
+      "must of taken",
+      "must took",
+      "must has taken",
+      "must take"
+    ],
+    "expl": "過去の出来事についての強い推測を表すには must have + 過去分詞を使います。must of という形は誤りです。",
+    "rule": "could have / would have / must haveの後には過去分詞を置く（'of'は誤り）",
+    "kp": [
+      "過去の推測・後悔 → must/could/would + have + 過去分詞",
+      "'of' は 'have' の代わりに使えない（誤り）"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "logic",
+    "tags": [
+      "grammar",
+      "which",
+      "non-defining",
+      "clause reference"
+    ],
+    "stem": "He missed the deadline for the report, ___ disappointed his supervisor greatly.",
+    "ja": "彼は報告書の締め切りに間に合わなかった。それは上司をとても失望させた。",
+    "answer": "which",
+    "choices": [
+      "which",
+      "that",
+      "what",
+      "this",
+      "it"
+    ],
+    "expl": "前の節全体（締め切りに間に合わなかったこと）を先行詞とする非制限用法の関係節では which を使います。that はこの用法では使えません。",
+    "rule": "節全体を先行詞とする非制限用法の関係節にはwhichを使う",
+    "kp": [
+      "前の節全体を指す非制限用法 → which",
+      "that は節全体を先行詞にする非制限用法には使えない"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "trap",
+    "tags": [
+      "eiken2",
+      "toeic"
+    ],
+    "stem": "The doctor recommended that the patient ___ more physical activity each week.",
+    "ja": "医師は患者が毎週もっと身体活動をするよう勧めた。",
+    "answer": "do",
+    "choices": [
+      "do",
+      "does",
+      "did",
+      "to do",
+      "doing"
+    ],
+    "expl": "recommend that の後の節では仮定法現在（動詞の原形）を使います。主語が the patient（三人称単数）でも does ではなく原形の do が正しいです。",
+    "rule": "suggest/recommend + that S + 原形",
+    "kp": [
+      "recommend / suggest / insist + that + S + 動詞の原形（仮定法現在）",
+      "三人称単数でも -s はつけない"
+    ]
+  },
+  {
+    "diff": "lv4",
+    "axis": "form",
+    "tags": [
+      "toeic",
+      "eiken2"
+    ],
+    "stem": "The survey results showed sales of ten, ___, and twenty units across the three regions.",
+    "ja": "調査結果は3地域での販売数がそれぞれ10、15、20個であることを示した。",
+    "answer": "fifteen",
+    "choices": [
+      "fifteen",
+      "15",
+      "the 15",
+      "a fifteen",
+      "15th"
+    ],
+    "expl": "同一文内で数字を列挙するときは、表記形式（スペルアウトか数字か）を統一する必要があります。ten と twenty がスペルアウトなので、fifteen と書くのが正しいです。",
+    "rule": "同一文中の数字の一貫性",
+    "kp": [
+      "同一文・同一文脈の数字は表記形式を統一する",
+      "ten, twenty と並ぶなら fifteen（スペルアウト）"
+    ]
+  }
+]
