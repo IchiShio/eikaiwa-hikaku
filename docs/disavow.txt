@@ -1,0 +1,13 @@
+# native-real.com Disavow File
+# Generated: 2026-03-23
+# Reason: All backlinks are from spam/PBN SEO service sites
+# Source: Ahrefs backlink audit (8 domains, 100% spam)
+
+domain:fiverr-cost-effective-seo.site
+domain:zoldexlinks.shop
+domain:backlinks-seorank.com
+domain:grow-your.website
+domain:primeseo.xyz
+domain:seo-backlink.agency
+domain:seodaro.com
+domain:seonexi.com
