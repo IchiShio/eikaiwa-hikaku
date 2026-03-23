@@ -1566,7 +1566,8 @@
       margin-top: 8px;
       min-height: 52px;
     }
-    .next-btn.show { display: block; }
+    .next-btn.show { display: block; animation: nextBtnPulse 0.4s ease-out; }
+    @keyframes nextBtnPulse { 0% { transform: scale(0.95); opacity: 0.7; } 100% { transform: scale(1); opacity: 1; } }
     .next-btn:hover { filter: brightness(1.05); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,166,35,0.38); }
     .next-btn:active { transform: translateY(0); }
 
@@ -2024,7 +2025,7 @@
       ListenUp
     </a>
     <div class="lp-nav-right">
-      <button class="lp-nav-cta" onclick="beginQuiz()">今日の練習を始める</button>
+      <button class="lp-nav-cta" onclick="beginQuiz()">無料で始める</button>
     </div>
   </div>
 </nav>
@@ -2063,8 +2064,8 @@
   <!-- ── SECTION 1: Hero ── -->
   <section class="lp-hero">
     <div class="lp-hero-inner">
-      <h1 class="hero-h1">2回目で、<br><span class="text-gold">わかった</span>。</h1>
-      <p class="hero-sub">その瞬間が、英語耳をつくる。<br>5段階アダプティブ × <span class="js-total-q"></span> × 毎日5分。</p>
+      <h1 class="hero-h1">聴いて、<br><span class="text-gold">選ぶだけ</span>。</h1>
+      <p class="hero-sub">英語を聴いて5択から選ぶ。それだけで英語耳が育つ。<br>登録不要・完全無料・<span class="js-total-q"></span>。</p>
       <div class="returning-stats" id="returningStats">
         <div class="rs-item"><span id="rsTotalAnswered">—</span><small>累計回答</small></div>
         <div class="rs-divider"></div>
@@ -2072,7 +2073,7 @@
         <div class="rs-divider"></div>
         <div class="rs-item"><span id="rsAccuracy">—</span><small>正解率</small></div>
       </div>
-      <p style="font-size:11px;color:var(--text-3);margin-top:6px;">※ データはこの端末のブラウザに保存されています。キャッシュクリアでリセットされます。</p>
+      <p id="dataNotice" style="display:none;font-size:11px;color:var(--text-3);margin-top:6px;">※ データはこの端末のブラウザに保存されています。キャッシュクリアでリセットされます。</p>
       <div class="milestone-wrap" id="milestoneWrap">
         <span id="milestoneText" class="milestone-text"></span>
       </div>
@@ -2132,9 +2133,9 @@
         <p style="font-size:11px;color:var(--text-3);margin-top:6px;">※ 弱点集中・リベンジは学習データ蓄積後に有効になります（キャッシュクリアでリセット）</p>
       </div>
       <div class="hero-ctas">
-        <button class="btn-primary-lg" id="freeTrialBtn" onclick="beginQuiz()">今日の練習を始める</button>
+        <button class="btn-primary-lg" id="freeTrialBtn" onclick="beginQuiz()">無料でリスニング力を試す</button>
       </div>
-      <p class="hero-fine"><span class="js-total-q"></span>すべて完全無料 · 登録不要</p>
+      <p class="hero-fine">アカウント登録なし · 1問30秒 · すぐ始められます</p>
     </div>
   </section>
 
@@ -2321,9 +2322,9 @@
   <div class="lp-bottom-cta reveal">
     <div class="lp-bcta-wrap">
       <div class="lp-bcta-eyebrow">FREE · <span class="js-total-q"></span></div>
-      <h2 class="lp-bcta-h">耳が変わる実感を、<br><span style="color:var(--gold)">今日の練習</span>で。</h2>
-      <p class="lp-bcta-sub"><span class="js-total-q"></span>すべて完全無料。登録不要、毎日5分の耳トレ。</p>
-      <button class="btn-primary-lg" onclick="beginQuiz()" style="margin-top:16px">今日の練習を始める</button>
+      <h2 class="lp-bcta-h">英語が聴き取れる実感を、<br><span style="color:var(--gold)">今すぐ体験</span>。</h2>
+      <p class="lp-bcta-sub"><span class="js-total-q"></span>すべて完全無料。登録不要、1問30秒から。</p>
+      <button class="btn-primary-lg" onclick="beginQuiz()" style="margin-top:16px">無料でリスニング力を試す</button>
     </div>
   </div>
 
@@ -2754,6 +2755,13 @@ function updateDailyStreakInProgress(p) {
 function showReturningStats() {
   const p = loadProgress();
   if (p.totalAnswered === 0) return;
+
+  // リピーター向けCTA文言に差し替え
+  document.getElementById('freeTrialBtn').textContent = '今日の練習を始める';
+  var navCta = document.querySelector('.lp-nav-cta');
+  if (navCta) navCta.textContent = '今日の練習を始める';
+  var dataNotice = document.getElementById('dataNotice');
+  if (dataNotice) dataNotice.style.display = '';
 
   const today          = getToday();
   const todayAnswered  = (p.todayDate === today) ? p.todayAnswered : 0;
@@ -4128,6 +4136,15 @@ document.addEventListener('DOMContentLoaded', function() {
   if (compareEl) compareEl.textContent = totalQ + '問（毎週追加中）';
 
   showReturningStats();
+
+  // 初回ユーザー: mockupを非表示にしてCTAをファーストビューに収める
+  {
+    const _initP = loadProgress();
+    if (_initP.totalAnswered === 0) {
+      const mockup = document.querySelector('.hero-mockup');
+      if (mockup) mockup.style.display = 'none';
+    }
+  }
 
   // GA4: 訪問タイプイベント
   try {
