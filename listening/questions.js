@@ -1,4 +1,4 @@
-// questions.js — 732 questions
+// questions.js — 1496 questions
 const DATA = [
   { diff: "lv2", axis: "context", text: "Ugh, the line is so long. I've been standing here for twenty minutes already.", ja: "うーん、並んでる人が多すぎる。もう20分も立ってるよ。", answer: "列に並んで待ちくたびれている", choices: ["列に並んで待ちくたびれている","バスが来なくて困っている","遊園地のアトラクションを待っている","レジが混んでいるのを見ている","受付で手続きを待っている"], audio: "audio/q01.mp3", expl: "「twenty minutes already」と既に20分待っていることと、「Ugh」という不満の声から、長時間待ちくたびれている状態が判明する。", kp: ["the line is so long","been standing here"] },
   { diff: "lv1", axis: "context", text: "Can you turn that down a little? I'm trying to get some sleep.", ja: "ちょっと音量下げてくれない？寝ようとしてるんだけど。", answer: "音がうるさくて眠れないと訴えている", choices: ["音がうるさくて眠れないと訴えている","テレビのボリュームを上げようとしている","隣人に静かにするよう頼んでいる","子どもに早く寝るよう言っている","音楽を変えてほしいとお願いしている"], audio: "audio/q02.mp3", expl: "「turn that down」は音量を下げるという意味で、「trying to get some sleep」と組み合わせることで、音がうるさくて眠れない状況が伝わる。", kp: ["turn that down","trying to get some sleep"] },
