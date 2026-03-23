@@ -43,7 +43,7 @@ BATCH_STATE = REPO_ROOT / "grammar" / "batch_state.json"
 RULES_JSON = REPO_ROOT / "grammar" / "grammar_rules.json"
 
 DEFAULT_MODEL = "claude-sonnet-4-6"
-VERIFY_MODEL = "claude-sonnet-4-6"
+VERIFY_MODEL = "claude-opus-4-6"
 MAX_TOKENS = 8192
 BATCH_SIZE = 30
 EXCLUDE_LIMIT = 3000
@@ -163,24 +163,46 @@ def build_prompt(count, lv1, lv2, lv3, lv4, lv5, existing_stems, axis_only=None,
 
 
 def verify_questions(client, model, questions):
-    """二重チェック: 正解が本当に唯一の正解かを検証"""
+    """二重チェック: 正解が本当に唯一の正解かを検証（Opusモデル推奨）"""
     if not questions:
         return questions
 
     batch_text = json.dumps(questions, ensure_ascii=False, indent=2)
-    prompt = f"""以下の英文法クイズの問題リストを検証してください。
+    prompt = f"""あなたは英文法問題の品質検査官です。以下の問題リストを1問ずつ厳密に検証してください。
 
-各問題について以下を確認：
-1. answer（正解）は文法的に本当に正しいか？
-2. choices の中に answer 以外に正解になりうる選択肢はないか？
-3. stem の英文は文法的に自然か？
-4. expl の解説は正確か？
+## 最重要チェック: 複数正解の検出
+
+各問題について「answer 以外の choices に文法的に正解になりうるものがないか」を最優先で確認してください。
+以下は特に注意すべき複数正解パターンです：
+
+### よくある複数正解パターン（必ずチェック）
+- need + -ing と need + to be pp（例: need repairing = need to be repaired）
+- suggest/recommend/insist + that S + 原形 と should + 原形（両方正しい）
+- used to と would（過去の習慣を表す場合、両方正しいことがある）
+- Not only + does/can/will（助動詞の選択で複数正解になりうる）
+- while / whereas / although（対比・譲歩で互換性がある場合）
+- who / that（関係代名詞で人に対して両方使える）
+- which / that（制限用法で物に対して両方使える）
+- so ... that / such ... that（構文の入れ替えで両方正解になる場合）
+- 前置詞の微妙な違い（in/at/on で文脈次第で複数正解）
+- 能動態と受動態が両方成立する文（make/have/get + O + pp/原形）
+
+### その他のチェック項目
+1. answer は文法的に本当に正しいか？
+2. stem の英文は自然で文法的に正確か？
+3. expl の解説は正確か？
+4. 難易度(diff)と実際の問題の難しさが合っているか？
+
+## 判定ルール
+- 「唯一の正解」と確信できる場合のみ PASS
+- 「別の選択肢も正解になりうる」と少しでも疑われる場合は FAIL
+- 疑わしきは FAIL（false negative より false positive を優先）
 
 問題がある場合は、その問題の index（0始まり）と理由を報告してください。
 問題ない場合は "ALL_OK" とだけ返してください。
 
 形式:
-FAIL: [index] 理由
+FAIL: [index] 理由（どの選択肢がなぜ正解になりうるか具体的に）
 FAIL: [index] 理由
 ...
 または
