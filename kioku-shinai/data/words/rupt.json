@@ -1488,6 +1488,546 @@
         "disruptive behavior(問題行動)",
         "disruptive student(授業を妨害する学生)"
       ]
+    },
+    {
+      "word": "abruptly",
+      "phonetic": "/əˈbrʌptli/",
+      "toeicRank": "TSL上位・NGSL収録",
+      "parts": [
+        {
+          "part": "ab",
+          "meaning": "離れて",
+          "type": "prefix"
+        },
+        {
+          "part": "rupt",
+          "meaning": "壊れる",
+          "type": "root"
+        },
+        {
+          "part": "ly",
+          "meaning": "〜のように（副詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "ab（離れて）+ ruptus（壊れた）+ -ly = 壊れたように突然に → 突然に",
+        "fact": "ラテン語 abruptus「断ち切られた」の副詞形。ab-（離れて）+ rumpere（壊す）の過去分詞。「連続が突然断ち切られる」イメージから「唐突に、突然に」の意味。",
+        "source": "EtymOnline: abrupt",
+        "cognates": [
+          "abrupt",
+          "disrupt",
+          "interrupt",
+          "erupt"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "壊れて（rupt）離れる（ab）ように → 突然に・唐突に",
+        "fact": "INTERRUPTION（中断）スキーマ。流れが突然「壊れて切れる（ab + rupt）」動き。abruptly ended = 突然壊れるように終わった。",
+        "source": "Johnson (1987) INTERRUPTIONスキーマ"
+      },
+      "gap": "abruptly はTOEIC Part 7 で頻出。The meeting ended abruptly.（会議は突然終わった）。ab（離れて）+ rupt（壊れる）= 壊れて切れるように突然。",
+      "gapOneliner": "abruptly = 壊れて(rupt)切れる(ab)ように → 突然に",
+      "hook": {
+        "label": "記憶フック",
+        "text": "ab(離れて) + rupt(壊れる) + ly = 壊れて切れるように = 突然に。He abruptly left the room = 突然部屋を出た。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "abruptlyの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "壊れて切れるように→突然に",
+            "ゆっくり壊れる→徐々に",
+            "完全に壊れる→完全に",
+            "壊れずに→穏やかに"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The CEO ______ resigned without any prior notice.",
+          "hint": "「壊れて切れるように」→「突然に」",
+          "explanationFocus": "gap",
+          "choices": [
+            "abruptly",
+            "gradually",
+            "eventually",
+            "certainly"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "She abruptly changed the subject when he walked in."
+      ]
+    },
+    {
+      "word": "irrupt",
+      "phonetic": "/ɪˈrʌpt/",
+      "toeicRank": "TSL中位・学術/専門用語",
+      "parts": [
+        {
+          "part": "ir",
+          "meaning": "中へ（in- の変形）",
+          "type": "prefix"
+        },
+        {
+          "part": "rupt",
+          "meaning": "壊す・破る",
+          "type": "root"
+        }
+      ],
+      "etymology": {
+        "oneliner": "ir（中へ）+ rumpere（壊す）= 壊して中に入る → 突入する",
+        "fact": "ラテン語 irrumpere「壊して中に入る」から。in-（中へ）+ rumpere（壊す）。erupt（壊して外へ出る）の反対方向。19世紀に「突然大量に入り込む」の意味で英語に入った。",
+        "source": "EtymOnline: irrupt",
+        "cognates": [
+          "erupt",
+          "disrupt",
+          "interrupt",
+          "irruption"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "壊して（rupt）中へ（ir）入る → 突入する・乱入する",
+        "fact": "FORCE-IN（押し入る）スキーマ。障壁を「壊して（rupt）」内部に「入る（ir）」動き。erupt（壊して外へ出る）の鏡像。",
+        "source": "Johnson (1987) FORCE-INスキーマ"
+      },
+      "gap": "irrupt は erupt の反対。erupt = 壊して外へ出る（噴火）、irrupt = 壊して中へ入る（突入）。in/out の方向が逆なだけ。",
+      "gapOneliner": "irrupt = 壊して(rupt)中へ(ir)入る → 突入する。erupt の逆方向",
+      "hook": {
+        "label": "記憶フック",
+        "text": "ir(中へ) + rupt(壊す) = 壊して中に入る = 突入。erupt(外へ噴出)の反対方向。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 3,
+          "instruction": "irruptの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "壊して中へ入る→突入する",
+            "壊して外へ出る→噴出する",
+            "壊れて離れる→崩壊する",
+            "壊れて止まる→中断する"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "ir（中へ）+ rupt（壊す）の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": [
+            "中へ + 壊す = 突入する",
+            "外へ + 壊す = 噴出する",
+            "間に + 壊す = 中断する",
+            "離れて + 壊す = 崩壊する"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "Protesters irrupted into the meeting hall."
+      ]
+    },
+    {
+      "word": "incorruptible",
+      "phonetic": "/ˌɪnkəˈrʌptəbl/",
+      "toeicRank": "TSL中位・ニュース/法律用語",
+      "parts": [
+        {
+          "part": "in",
+          "meaning": "〜でない（否定）",
+          "type": "prefix"
+        },
+        {
+          "part": "cor",
+          "meaning": "完全に（con- の変形）",
+          "type": "prefix"
+        },
+        {
+          "part": "rupt",
+          "meaning": "壊す",
+          "type": "root"
+        },
+        {
+          "part": "ible",
+          "meaning": "〜できる（形容詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "in（否定）+ corruptible（腐敗しうる）= 腐敗できない → 清廉な",
+        "fact": "ラテン語 incorruptibilis から。in-（否定）+ corruptibilis（腐敗しうる）。14世紀に宗教用語として「肉体が腐敗しない」の意味で英語に入り、比喩的に「賄賂で買収できない」道徳的な清廉さを指すようになった。",
+        "source": "EtymOnline: incorruptible",
+        "cognates": [
+          "corrupt",
+          "corruption",
+          "corruptible",
+          "disrupt"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "壊される（corrupt）ことができない（in + ible）→ 清廉な・買収できない",
+        "fact": "RESISTANCE（抵抗）スキーマ。腐敗（corruption）という破壊力に対して壊れない（incorruptible）状態。道徳的な堅固さの比喩。",
+        "source": "Lakoff & Johnson (1980) MORALITY IS PURITYメタファー"
+      },
+      "gap": "incorruptible は「買収できない・清廉な」。in（否定）+ corrupt（腐敗させる）+ ible（できる）= 腐敗させられない。公務員や裁判官の称賛で使われる。",
+      "gapOneliner": "incorruptible = 壊せない(in + corrupt + ible) → 清廉な・買収できない",
+      "hook": {
+        "label": "記憶フック",
+        "text": "in(否定) + corrupt(腐敗させる) + ible(できる) = 腐敗させられない = 清廉。an incorruptible judge = 清廉な裁判官。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "incorruptibleの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "腐敗できない→清廉な",
+            "壊れやすい→脆弱な",
+            "完全に壊れた→破綻した",
+            "壊し尽くす→壊滅的な"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "She was known as an ______ public servant.",
+          "hint": "「腐敗できない」→「清廉な」",
+          "explanationFocus": "gap",
+          "choices": [
+            "incorruptible",
+            "corruptible",
+            "disruptive",
+            "eruptive"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The new commissioner gained a reputation for being incorruptible."
+      ]
+    },
+    {
+      "word": "uninterrupted",
+      "phonetic": "/ˌʌnɪntəˈrʌptɪd/",
+      "toeicRank": "TSL上位・ビジネス頻出",
+      "parts": [
+        {
+          "part": "un",
+          "meaning": "〜でない（否定）",
+          "type": "prefix"
+        },
+        {
+          "part": "inter",
+          "meaning": "間に",
+          "type": "prefix"
+        },
+        {
+          "part": "rupt",
+          "meaning": "壊す",
+          "type": "root"
+        },
+        {
+          "part": "ed",
+          "meaning": "〜された（過去分詞形容詞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "un（否定）+ interrupted（中断された）= 中断されない → 途切れない",
+        "fact": "un-（否定）+ interrupted（中断された）から。interrupt の語源はラテン語 interrumpere「間を壊す」。「間を壊されない」＝途切れない・連続した状態を指す。",
+        "source": "EtymOnline: uninterrupted",
+        "cognates": [
+          "interrupt",
+          "interruption",
+          "disrupt",
+          "erupt"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "間（inter）を壊される（rupt）ことがない（un）→ 途切れない",
+        "fact": "CONTINUITY（連続性）スキーマ。流れの「間（inter）」が「壊される（rupt）」ことなく「否定（un）」された状態。uninterrupted sleep = 途切れのない睡眠。",
+        "source": "Johnson (1987) CONTINUITYスキーマ"
+      },
+      "gap": "uninterrupted は TOEIC で頻出。uninterrupted service（途切れないサービス）、uninterrupted view（遮るもののない眺望）。un + interrupt（中断する）の過去分詞。",
+      "gapOneliner": "uninterrupted = 中断(interrupt)されない(un) → 途切れない・連続した",
+      "hook": {
+        "label": "記憶フック",
+        "text": "un(否定) + interrupted(中断された) = 中断されない = 途切れない。8 hours of uninterrupted sleep = 8時間の途切れない睡眠。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "uninterruptedの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "中断されない→途切れない",
+            "中断された→止まった",
+            "壊された→破壊された",
+            "壊れにくい→頑丈な"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The hotel offers an ______ view of the ocean.",
+          "hint": "「中断されない」→「遮るもののない」",
+          "explanationFocus": "gap",
+          "choices": [
+            "uninterrupted",
+            "interrupted",
+            "disrupted",
+            "corrupted"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "She needs several hours of uninterrupted focus time."
+      ]
+    },
+    {
+      "word": "eruptive",
+      "phonetic": "/ɪˈrʌptɪv/",
+      "toeicRank": "TSL中位・科学/ニュース用語",
+      "parts": [
+        {
+          "part": "e",
+          "meaning": "外へ",
+          "type": "prefix"
+        },
+        {
+          "part": "rupt",
+          "meaning": "壊す",
+          "type": "root"
+        },
+        {
+          "part": "ive",
+          "meaning": "〜の性質を持つ（形容詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "e（外へ）+ rupt（壊す）+ -ive = 外へ壊れ出る性質の → 噴出性の",
+        "fact": "ラテン語 eruptivus から。e-（外へ）+ rumpere（壊す）+ -ivus。17世紀に火山学・医学の文脈で「噴出する性質を持つ」の意味で英語に入った。",
+        "source": "EtymOnline: eruptive",
+        "cognates": [
+          "erupt",
+          "eruption",
+          "disruptive",
+          "abrupt"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "外へ（e）壊れ出る（rupt）性質 → 噴出性の・爆発的な",
+        "fact": "FORCE-OUT（押し出す）スキーマの形容詞的表現。内部のエネルギーが外へ「壊れ出る」傾向を持つ状態。eruptive behavior = 爆発的な行動。",
+        "source": "Johnson (1987) FORCE-OUTスキーマ"
+      },
+      "gap": "eruptive は disruptive と並んで -rupt + -ive パターン。eruptive = 噴出性の（外へ壊れ出る）、disruptive = 破壊的な（離れて壊す）。方向が異なる。",
+      "gapOneliner": "eruptive = 外へ(e)壊れ出る(rupt)性質 → 噴出性の。disruptive との対比",
+      "hook": {
+        "label": "記憶フック",
+        "text": "erupt(噴出する) + ive(性質) = 噴出する性質の。eruptive volcano = 噴火活動中の火山。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "eruptiveの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "外へ壊れ出る性質→噴出性の",
+            "中断する性質→断続的な",
+            "完全に壊す性質→壊滅的な",
+            "壊して中に入る性質→侵入的な"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "e（外へ）+ rupt（壊す）+ ive（性質）の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": [
+            "外へ + 壊す + 性質 = 噴出性の",
+            "間に + 壊す + 性質 = 中断的な",
+            "離れて + 壊す + 性質 = 破壊的な",
+            "完全に + 壊す + 性質 = 腐敗的な"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The region has a history of eruptive volcanic activity."
+      ]
+    },
+    {
+      "word": "disruptor",
+      "phonetic": "/dɪsˈrʌptər/",
+      "toeicRank": "TSL上位・ビジネス/IT頻出",
+      "parts": [
+        {
+          "part": "dis",
+          "meaning": "離れて・バラバラに",
+          "type": "prefix"
+        },
+        {
+          "part": "rupt",
+          "meaning": "壊す",
+          "type": "root"
+        },
+        {
+          "part": "or",
+          "meaning": "〜する者/もの（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "dis（バラバラに）+ rupt（壊す）+ -or = バラバラに壊す者 → 破壊者・革新者",
+        "fact": "disrupt（破壊する）+ -or（行為者名詞）から。Clayton Christensen が1997年の著書 'The Innovator's Dilemma' で disruptive innovation の概念を提唱して以来、ビジネス英語で「既存秩序を壊す革新者」として広く使われる。",
+        "source": "EtymOnline: disrupt; Christensen (1997)",
+        "cognates": [
+          "disrupt",
+          "disruption",
+          "disruptive",
+          "corrupt"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "バラバラに（dis）壊す（rupt）者 → 破壊的革新者",
+        "fact": "AGENT（行為者）スキーマ。既存の秩序を「バラバラに壊す」主体。IT業界では肯定的な意味で「市場を変革する者」として使われる。",
+        "source": "Langacker (2008) AGENTスキーマ"
+      },
+      "gap": "disruptor はスタートアップ用語として頻出。Uber is a disruptor in the transportation industry.（Uberは交通業界の破壊者）。dis（バラバラに）+ rupt（壊す）+ or（者）。",
+      "gapOneliner": "disruptor = バラバラに(dis)壊す(rupt)者(or) → 破壊的革新者。IT/ビジネス必須語",
+      "hook": {
+        "label": "記憶フック",
+        "text": "dis(バラバラに) + rupt(壊す) + or(者) = 壊す人 = 破壊的革新者。industry disruptor = 業界を壊す革新者。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "disruptorの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "壊す者→破壊的革新者",
+            "作る者→建設者",
+            "導く者→指導者",
+            "集める者→統合者"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The startup positioned itself as a market ______.",
+          "hint": "「既存秩序を壊す者」→「破壊的革新者」",
+          "explanationFocus": "gap",
+          "choices": [
+            "disruptor",
+            "instructor",
+            "constructor",
+            "destructor"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "Netflix became a major disruptor in the entertainment industry."
+      ]
+    },
+    {
+      "word": "interrupter",
+      "phonetic": "/ˌɪntəˈrʌptər/",
+      "toeicRank": "TSL中位・技術/日常用語",
+      "parts": [
+        {
+          "part": "inter",
+          "meaning": "間に",
+          "type": "prefix"
+        },
+        {
+          "part": "rupt",
+          "meaning": "壊す",
+          "type": "root"
+        },
+        {
+          "part": "er",
+          "meaning": "〜するもの（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "inter（間に）+ rupt（壊す）+ -er = 間を壊すもの → 遮断器・中断する人",
+        "fact": "interrupt（中断する）+ -er（行為者/道具名詞）から。ラテン語 interrumpere「間を壊す」に由来。電気工学では「回路を遮断する装置（circuit interrupter）」、日常では「話を遮る人」を指す。",
+        "source": "EtymOnline: interrupt",
+        "cognates": [
+          "interrupt",
+          "interruption",
+          "disrupt",
+          "erupt"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "間（inter）を壊す（rupt）もの（er）→ 遮断器・中断する人",
+        "fact": "AGENT/INSTRUMENT（行為者/道具）スキーマ。流れの「間（inter）」を「壊す（rupt）」主体または道具。circuit interrupter = 電流の流れを中断する装置。",
+        "source": "Langacker (2008) AGENT/INSTRUMENTスキーマ"
+      },
+      "gap": "interrupter は「中断する人/もの」。circuit interrupter（遮断器）は電気工学の重要用語。chronic interrupter = いつも話を遮る人。inter（間）+ rupt（壊す）+ er（もの）。",
+      "gapOneliner": "interrupter = 間(inter)を壊す(rupt)もの(er) → 遮断器・中断する人",
+      "hook": {
+        "label": "記憶フック",
+        "text": "inter(間) + rupt(壊す) + er(もの) = 間を壊すもの = 遮断器。Don't be an interrupter = 話を遮る人にならないで。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "interrupterの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "間を壊すもの→遮断器",
+            "外へ壊すもの→噴出器",
+            "完全に壊すもの→破壊器",
+            "離れて壊すもの→分解器"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Install a ground fault circuit ______ for safety.",
+          "hint": "「間を壊すもの」→「遮断器」",
+          "explanationFocus": "gap",
+          "choices": [
+            "interrupter",
+            "disruptor",
+            "corruptor",
+            "eruptor"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The circuit interrupter automatically cuts power in case of a fault."
+      ]
     }
   ]
 }

@@ -1453,6 +1453,526 @@
           "japanese": "これらのシンボルはストーリーの文脈で何を象徴していますか？"
         }
       ]
+    },
+    {
+      "word": "ensign",
+      "phonetic": "/ˈensaɪn/",
+      "toeicRank": "TSL中位・軍事/歴史用語",
+      "parts": [
+        {
+          "part": "en",
+          "meaning": "中に・上に",
+          "type": "prefix"
+        },
+        {
+          "part": "sign",
+          "meaning": "しるし",
+          "type": "root"
+        }
+      ],
+      "etymology": {
+        "oneliner": "in（上に）+ signum（しるし）= 掲げるしるし → 旗・少尉",
+        "fact": "ラテン語 insignia「しるし、旗」から。in-（上に）+ signum（しるし）。14世紀にフランス語 enseigne 経由で英語に入り、「軍旗」→「旗を持つ最下級将校（少尉）」へ意味が転じた。",
+        "source": "EtymOnline: ensign",
+        "cognates": [
+          "sign",
+          "signal",
+          "insignia",
+          "assign"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "掲げられた（en）しるし（sign）→ 旗・少尉",
+        "fact": "DISPLAY（表示）スキーマ。「しるし（sign）」を高く「掲げる（en）」ことで所属や身分を示す。旗（ensign）は軍隊の視覚的アイデンティティ。",
+        "source": "Langacker (2008) DISPLAYスキーマ"
+      },
+      "gap": "ensign は「旗」と「少尉」の2つの意味がある。どちらも sign（しるし）がコア。旗は部隊のしるし、少尉はその旗を掲げる役職。",
+      "gapOneliner": "ensign = 掲げる(en)しるし(sign) → 軍旗・少尉",
+      "hook": {
+        "label": "記憶フック",
+        "text": "en(上に) + sign(しるし) = 上に掲げるしるし = 旗。旗を持つ人 = 少尉(ensign)。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "ensignの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "掲げるしるし→旗・少尉",
+            "消すしるし→抹消",
+            "刻むしるし→署名",
+            "指すしるし→合図"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "en（上に）+ sign（しるし）の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": [
+            "上に + しるし = 旗",
+            "中に + しるし = 秘密",
+            "外に + しるし = 看板",
+            "下に + しるし = 署名"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The ship flew the national ensign as it entered the harbor."
+      ]
+    },
+    {
+      "word": "insignia",
+      "phonetic": "/ɪnˈsɪɡniə/",
+      "toeicRank": "TSL中位・ビジネス/軍事用語",
+      "parts": [
+        {
+          "part": "in",
+          "meaning": "上に",
+          "type": "prefix"
+        },
+        {
+          "part": "sign",
+          "meaning": "しるし",
+          "type": "root"
+        },
+        {
+          "part": "ia",
+          "meaning": "（ラテン語複数形語尾）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "insignia = 目立つしるし → 記章・バッジ",
+        "fact": "ラテン語 insignia「目立つしるし、標章」（insigne の複数形）から。in-（上に）+ signum（しるし）。17世紀に「公式な地位や所属を示す記章」として英語に入った。軍の階級章、企業のロゴなどを指す。",
+        "source": "EtymOnline: insignia",
+        "cognates": [
+          "sign",
+          "signal",
+          "ensign",
+          "significant"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "目立つ（in）しるし（sign）→ 記章・バッジ",
+        "fact": "IDENTITY（アイデンティティ）スキーマ。しるし（sign）を掲げること（in-）で所属や地位を外部に示す。corporate insignia = 企業の紋章。",
+        "source": "Langacker (2008) IDENTITYスキーマ"
+      },
+      "gap": "insignia は「記章・紋章」。insignificant（取るに足りない）の insign- とは逆で、insignia は「目立つしるし」。軍隊、企業、スポーツチームのエンブレムを指す。",
+      "gapOneliner": "insignia = 目立つしるし(in + sign) → 記章・バッジ・紋章",
+      "hook": {
+        "label": "記憶フック",
+        "text": "in(上に) + sign(しるし) + ia(複数) = 掲げるしるしたち = 記章。military insignia = 軍の記章。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "insigniaの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "目立つしるし→記章",
+            "隠されたしるし→暗号",
+            "消えたしるし→痕跡",
+            "偽のしるし→偽造品"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The officer's ______ indicated his rank.",
+          "hint": "「目立つしるし」→「記章・階級章」",
+          "explanationFocus": "gap",
+          "choices": [
+            "insignia",
+            "signature",
+            "signal",
+            "design"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The company changed its insignia to reflect its new brand identity."
+      ]
+    },
+    {
+      "word": "signatory",
+      "phonetic": "/ˈsɪɡnətɔːri/",
+      "toeicRank": "TSL中位・法律/ビジネス頻出",
+      "parts": [
+        {
+          "part": "sign",
+          "meaning": "しるし・署名",
+          "type": "root"
+        },
+        {
+          "part": "atory",
+          "meaning": "〜する者/に関する（名詞/形容詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "signare（署名する）+ -atorius = 署名する者 → 署名者・調印国",
+        "fact": "ラテン語 signatorius「署名に関する」から。signare（署名する、しるしを付ける）の行為者名詞。17世紀に「条約・契約に署名した者/国」の意味で英語に入った。",
+        "source": "EtymOnline: signatory",
+        "cognates": [
+          "signature",
+          "sign",
+          "signal",
+          "designate"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "署名（sign）する者（atory）→ 署名者・調印国",
+        "fact": "COMMITMENT（約束）スキーマ。「しるし（sign）を付ける」行為は約束・合意の物理的表現。signatory to a treaty = 条約に署名を付けた国。",
+        "source": "Langacker (2008) COMMITMENTスキーマ"
+      },
+      "gap": "signatory はビジネス・国際法で頻出。signatory to the agreement = 契約の署名者。signature（署名）と同根だが、signatory は「署名した人/国」を指す。",
+      "gapOneliner": "signatory = 署名(sign)する者(atory) → 署名者・調印国",
+      "hook": {
+        "label": "記憶フック",
+        "text": "sign(署名) + atory(する者) = 署名する者。signatory countries = 調印国。signature と同根。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "signatoryの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "署名する者→署名者",
+            "合図する者→信号係",
+            "設計する者→設計者",
+            "指定する者→指名者"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Japan is a ______ to the Paris Agreement.",
+          "hint": "「署名する者/国」→「調印国」",
+          "explanationFocus": "gap",
+          "choices": [
+            "signatory",
+            "signature",
+            "significant",
+            "signal"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "All signatories must comply with the terms of the treaty."
+      ]
+    },
+    {
+      "word": "consignment",
+      "phonetic": "/kənˈsaɪnmənt/",
+      "toeicRank": "TSL上位・ビジネス/物流頻出",
+      "parts": [
+        {
+          "part": "con",
+          "meaning": "共に・完全に",
+          "type": "prefix"
+        },
+        {
+          "part": "sign",
+          "meaning": "しるし・印を付ける",
+          "type": "root"
+        },
+        {
+          "part": "ment",
+          "meaning": "〜すること（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "con（完全に）+ signare（しるしを付ける）= 完全にしるしを付けて送り出す → 委託・積荷",
+        "fact": "ラテン語 consignare「封印する、記録する」から。con-（完全に）+ signare（しるしを付ける）。16世紀に「正式に引き渡す」の意味で英語に入り、貿易では「委託販売品・積荷」として広く使われる。",
+        "source": "EtymOnline: consignment",
+        "cognates": [
+          "consign",
+          "sign",
+          "signal",
+          "assign"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "完全に（con）しるしを付けて（sign）送り出す → 委託・積荷",
+        "fact": "TRANSFER（移転）スキーマ。所有者から受託者へ、物品に「しるし（sign）」を付けて正式に移転する行為。consignment shop = 委託販売店。",
+        "source": "Johnson (1987) TRANSFERスキーマ"
+      },
+      "gap": "consignment はビジネス必須語。on consignment = 委託販売で。consignment note = 託送状。con（完全に）+ sign（しるしを付ける）= 正式に送り出す。",
+      "gapOneliner": "consignment = 完全に(con)しるしを付けて(sign)送り出す → 委託品・積荷",
+      "hook": {
+        "label": "記憶フック",
+        "text": "con(完全に) + sign(しるしを付ける) + ment = 完全にしるしを付けて送ること = 委託。on consignment = 委託販売で。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "consignmentの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "しるしを付けて送り出す→委託・積荷",
+            "しるしを消す→抹消",
+            "しるしを集める→収集",
+            "しるしを隠す→偽装"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The goods were sold on ______.",
+          "hint": "「正式にしるしを付けて送り出す」→「委託」",
+          "explanationFocus": "gap",
+          "choices": [
+            "consignment",
+            "assignment",
+            "alignment",
+            "confinement"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "A large consignment of electronics arrived at the warehouse."
+      ]
+    },
+    {
+      "word": "unsigned",
+      "phonetic": "/ʌnˈsaɪnd/",
+      "toeicRank": "TSL上位・ビジネス/IT頻出",
+      "parts": [
+        {
+          "part": "un",
+          "meaning": "〜でない（否定）",
+          "type": "prefix"
+        },
+        {
+          "part": "sign",
+          "meaning": "署名する",
+          "type": "root"
+        },
+        {
+          "part": "ed",
+          "meaning": "〜された（過去分詞形容詞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "un（否定）+ signed（署名された）= 署名されていない → 未署名の",
+        "fact": "un-（否定）+ signed（署名された）から。sign は PIE *sekw-「追う、示す」に由来するとされる。ビジネスでは「未署名の契約書」、音楽業界では「レーベル未契約のアーティスト」の意味で使われる。",
+        "source": "EtymOnline: sign",
+        "cognates": [
+          "sign",
+          "signature",
+          "signal",
+          "assign"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "署名（sign）されていない（un + ed）→ 未署名の・未契約の",
+        "fact": "ABSENCE（不在）スキーマ。「しるし（sign）」が付けられていない状態。署名がない = 正式な合意がない。unsigned artist = まだレーベルの「しるし」がないアーティスト。",
+        "source": "Langacker (2008) ABSENCEスキーマ"
+      },
+      "gap": "unsigned はビジネスと音楽業界で意味が異なる。unsigned contract = 未署名の契約書、unsigned artist = レーベル未契約のアーティスト。どちらも「しるしがない」がコア。",
+      "gapOneliner": "unsigned = 署名(sign)されていない(un) → 未署名の・未契約の",
+      "hook": {
+        "label": "記憶フック",
+        "text": "un(否定) + signed(署名された) = 署名されていない。unsigned contract = まだハンコがない契約書。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "unsignedの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "署名されていない→未署名の",
+            "署名された→締結済みの",
+            "設計されていない→未設計の",
+            "指定されていない→未指定の"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The contract remains ______ because of ongoing negotiations.",
+          "hint": "「署名されていない」→「未署名の」",
+          "explanationFocus": "gap",
+          "choices": [
+            "unsigned",
+            "designed",
+            "resigned",
+            "assigned"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The unsigned document cannot be processed until we receive approval."
+      ]
+    },
+    {
+      "word": "designer",
+      "phonetic": "/dɪˈzaɪnər/",
+      "toeicRank": "TSL上位・ビジネス/日常頻出",
+      "parts": [
+        {
+          "part": "de",
+          "meaning": "〜から・出す",
+          "type": "prefix"
+        },
+        {
+          "part": "sign",
+          "meaning": "しるし・印",
+          "type": "root"
+        },
+        {
+          "part": "er",
+          "meaning": "〜する人（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "de（出す）+ signare（しるしを描く）+ -er = しるしを描き出す人 → 設計者",
+        "fact": "design（設計する）+ -er（行為者名詞）。design はラテン語 designare「しるしを描く、指定する」から。de-（出す）+ signare（しるしを付ける）。「構想を図面として描き出す人」が原義。",
+        "source": "EtymOnline: designer",
+        "cognates": [
+          "design",
+          "designate",
+          "sign",
+          "signal"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "しるし（sign）を描き出す（de）人（er）→ 設計者・デザイナー",
+        "fact": "CREATION（創造）スキーマ。頭の中の構想を外へ「しるし（sign）として描き出す（de-）」行為者。designer brand = ブランドの「しるし」を創り出した人の名を冠するブランド。",
+        "source": "Langacker (2008) CREATIONスキーマ"
+      },
+      "gap": "designer はカタカナの「デザイナー」で馴染みがあるが、design が de（出す）+ sign（しるし）であることを知ると、designate（指定する）との関連も見える。",
+      "gapOneliner": "designer = しるし(sign)を描き出す(de)人(er) → 設計者。design, designate と同根",
+      "hook": {
+        "label": "記憶フック",
+        "text": "de(描き出す) + sign(しるし) + er(人) = しるしを描き出す人 = デザイナー。designer bag = デザイナーのしるしが付いたバッグ。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "designerの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "しるしを描き出す人→設計者",
+            "しるしを消す人→抹消者",
+            "しるしを集める人→収集家",
+            "しるしを守る人→保管者"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 2,
+          "instruction": "designerと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": [
+            "graphic designer（グラフィックデザイナー）",
+            "designer sleep（デザイナー睡眠）",
+            "designer food（デザイナー食品）",
+            "designer weather（デザイナー天気）"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "She hired a professional web designer to build the company site."
+      ]
+    },
+    {
+      "word": "signpost",
+      "phonetic": "/ˈsaɪnpoʊst/",
+      "toeicRank": "TSL中位・日常/学術用語",
+      "parts": [
+        {
+          "part": "sign",
+          "meaning": "しるし",
+          "type": "root"
+        },
+        {
+          "part": "post",
+          "meaning": "柱・支柱",
+          "type": "root"
+        }
+      ],
+      "etymology": {
+        "oneliner": "sign（しるし）+ post（柱）= しるしの付いた柱 → 道標",
+        "fact": "英語 sign（しるし）+ post（柱）の複合語。17世紀に「道路脇のしるし付き柱」として使われ始め、比喩的に「方向を示す手がかり」の意味でも使われる。signpost the way forward = 進む方向を示す。",
+        "source": "EtymOnline: signpost",
+        "cognates": [
+          "sign",
+          "signal",
+          "post",
+          "guidepost"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "しるし（sign）の付いた柱（post）→ 道標・指標",
+        "fact": "GUIDE（案内）スキーマ。移動する人に方向を「示す（sign）」ための物理的な構造物。比喩的には議論や文書の「方向を示す表現」を指す。",
+        "source": "Johnson (1987) SOURCE-PATH-GOALスキーマ"
+      },
+      "gap": "signpost は物理的な「道標」と比喩的な「手がかり・指標」の両方で使われる。The report provides important signposts for the industry.（レポートは業界の重要な指標を提供する）。",
+      "gapOneliner": "signpost = しるし(sign)の柱(post) → 道標・指標。比喩的にも頻出",
+      "hook": {
+        "label": "記憶フック",
+        "text": "sign(しるし) + post(柱) = しるしの付いた柱 = 道標。key signposts for success = 成功への指標。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "signpostの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "しるしの柱→道標",
+            "しるしの壁→掲示板",
+            "しるしの紙→署名欄",
+            "しるしの石→記念碑"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "These results serve as important ______s for future research.",
+          "hint": "「しるしの柱」→「指標・道標」",
+          "explanationFocus": "gap",
+          "choices": [
+            "signpost",
+            "signature",
+            "signal",
+            "design"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The signpost indicated that the town was five miles ahead."
+      ]
     }
   ]
 }

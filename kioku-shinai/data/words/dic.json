@@ -1602,6 +1602,442 @@
           "japanese": "ヒトラーは20世紀の最も悪名高い独裁者の一人だった。"
         }
       ]
+    },
+    {
+      "word": "vindicate",
+      "phonetic": "/ˈvɪndɪkeɪt/",
+      "toeicRank": "TSL中位・ニュース/法律頻出",
+      "parts": [
+        {
+          "part": "vin",
+          "meaning": "力（vim の変形）",
+          "type": "root"
+        },
+        {
+          "part": "dic",
+          "meaning": "言う・宣言する",
+          "type": "root"
+        },
+        {
+          "part": "ate",
+          "meaning": "〜する（動詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "vim（力）+ dicare（宣言する）= 力を持って宣言する → 正しさを証明する",
+        "fact": "ラテン語 vindicare「要求する、主張する、解放する」から。vim（力）+ dicare（宣言する）。17世紀に「潔白を証明する、正当性を立証する」の意味で英語に入った。",
+        "source": "EtymOnline: vindicate",
+        "cognates": [
+          "vindication",
+          "vindictive",
+          "indicate",
+          "dedicate"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "力（vin）を持って宣言（dic）する → 正しさを証明する",
+        "fact": "ASSERTION（主張）スキーマ。力強く（vin）「言い切る（dic）」ことで真実を確立する動き。vindicated = 正しさが証明された。",
+        "source": "Langacker (2008) ASSERTIONスキーマ"
+      },
+      "gap": "vindicate は「正しさを証明する」。The investigation vindicated her.（調査が彼女の正しさを証明した）。indicate（示す）と同じ dic 語根。",
+      "gapOneliner": "vindicate = 力(vin)を持って宣言(dic)する → 正しさを証明する",
+      "hook": {
+        "label": "記憶フック",
+        "text": "vin(力) + dic(宣言する) + ate = 力を持って宣言する = 正しさを証明する。He was vindicated by the evidence = 証拠が彼の正しさを証明した。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "vindicateの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "力を持って宣言→正しさを証明する",
+            "力で壊す→破壊する",
+            "言葉で縛る→拘束する",
+            "言葉で分ける→区別する"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The court ruling ______d her decision to take action.",
+          "hint": "「正しさを証明する」",
+          "explanationFocus": "gap",
+          "choices": [
+            "vindicate",
+            "indicate",
+            "dedicate",
+            "predicate"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "New evidence vindicated the suspect after years of wrongful imprisonment."
+      ]
+    },
+    {
+      "word": "edict",
+      "phonetic": "/ˈiːdɪkt/",
+      "toeicRank": "TSL中位・歴史/法律用語",
+      "parts": [
+        {
+          "part": "e",
+          "meaning": "外へ",
+          "type": "prefix"
+        },
+        {
+          "part": "dict",
+          "meaning": "言う",
+          "type": "root"
+        }
+      ],
+      "etymology": {
+        "oneliner": "e（外へ）+ dictum（言われたこと）= 外へ言い渡されたもの → 勅令・布告",
+        "fact": "ラテン語 edictum「公布、布告」から。e-（外へ）+ dicere（言う）の過去分詞。「公に向かって言い渡された命令」が原義。15世紀に英語に入った。",
+        "source": "EtymOnline: edict",
+        "cognates": [
+          "dictate",
+          "predict",
+          "verdict",
+          "dictionary"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "外へ（e）言い渡す（dict）→ 勅令・布告",
+        "fact": "PROCLAMATION（布告）スキーマ。権威者が外に向かって（e-）「言い渡す（dict）」行為の結果物。royal edict = 国王の勅令。",
+        "source": "Langacker (2008) PROCLAMATIONスキーマ"
+      },
+      "gap": "edict は「勅令・布告」。e（外へ）+ dict（言う）= 外に向かって言い渡す。predict（前もって言う）、verdict（真実を言う）と同じ dict 語根。",
+      "gapOneliner": "edict = 外へ(e)言い渡された(dict)もの → 勅令・布告",
+      "hook": {
+        "label": "記憶フック",
+        "text": "e(外へ) + dict(言う) = 外に向かって言い渡す = 勅令。a government edict = 政府の布告。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "edictの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "外へ言い渡す→勅令",
+            "中で言う→独白",
+            "前もって言う→予言",
+            "真実を言う→評決"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "e（外へ）+ dict（言う）の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": [
+            "外へ + 言う = 布告",
+            "前に + 言う = 予言",
+            "反対に + 言う = 矛盾",
+            "真実 + 言う = 評決"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The emperor issued an edict banning all foreign trade."
+      ]
+    },
+    {
+      "word": "addict",
+      "phonetic": "/ˈædɪkt/",
+      "toeicRank": "TSL上位・日常/医療頻出",
+      "parts": [
+        {
+          "part": "ad",
+          "meaning": "〜に向かって",
+          "type": "prefix"
+        },
+        {
+          "part": "dict",
+          "meaning": "言い渡す・捧げる",
+          "type": "root"
+        }
+      ],
+      "etymology": {
+        "oneliner": "ad（〜に向かって）+ dictus（言い渡された）= 何かに言い渡された → 中毒者",
+        "fact": "ラテン語 addictus「引き渡された、奴隷にされた」から。ad-（〜に向かって）+ dicere（言い渡す）。ローマ法で債務者が債権者に「言い渡されて」引き渡される意味だった。16世紀に「何かに心身を捧げた人→中毒者」へ転じた。",
+        "source": "EtymOnline: addict",
+        "cognates": [
+          "addiction",
+          "addictive",
+          "dictate",
+          "predict"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "何かに向かって（ad）引き渡された（dict）→ 中毒・依存",
+        "fact": "BONDAGE（束縛）スキーマ。ある対象に「向かって（ad-）」完全に「引き渡された（dict）」状態。自由意志を失い対象に縛られる。addicted to social media = SNSに引き渡された。",
+        "source": "Johnson (1987) BONDAGEスキーマ"
+      },
+      "gap": "addict の語源は「奴隷として引き渡された人」。ad（向かって）+ dict（言い渡す）= 何かに言い渡されて引き渡された。addiction = 引き渡された状態 = 中毒。",
+      "gapOneliner": "addict = 何かに向かって(ad)引き渡された(dict) → 中毒者",
+      "hook": {
+        "label": "記憶フック",
+        "text": "ad(向かって) + dict(言い渡す) = 何かに引き渡された = 中毒者。addicted to caffeine = カフェインに引き渡された。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "addictの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "引き渡された→中毒の",
+            "言い返す→反論する",
+            "前もって言う→予測する",
+            "反対に言う→矛盾する"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "He became ______ed to playing video games.",
+          "hint": "「何かに引き渡された」→「中毒になった」",
+          "explanationFocus": "gap",
+          "choices": [
+            "addict",
+            "predict",
+            "contradict",
+            "indicate"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The program helps addicts recover from substance abuse."
+      ]
+    },
+    {
+      "word": "interdict",
+      "phonetic": "/ˌɪntərˈdɪkt/",
+      "toeicRank": "TSL中位・法律/軍事用語",
+      "parts": [
+        {
+          "part": "inter",
+          "meaning": "間に",
+          "type": "prefix"
+        },
+        {
+          "part": "dict",
+          "meaning": "言う",
+          "type": "root"
+        }
+      ],
+      "etymology": {
+        "oneliner": "inter（間に）+ dicere（言う）= 間に入って言い渡す → 禁止する",
+        "fact": "ラテン語 interdicere「間に入って禁じる」から。inter-（間に）+ dicere（言う）。13世紀に教会法の「禁止令」として英語に入り、軍事では「敵の補給路を遮断する」の意味でも使われる。",
+        "source": "EtymOnline: interdict",
+        "cognates": [
+          "dictate",
+          "predict",
+          "verdict",
+          "contradict"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "間に（inter）入って言い渡す（dict）→ 禁止する・遮断する",
+        "fact": "BLOCKAGE（遮断）スキーマ。二者の「間に（inter）」入って「言い渡す（dict）」ことで行為を阻止する。military interdiction = 軍事的遮断。",
+        "source": "Johnson (1987) BLOCKAGEスキーマ"
+      },
+      "gap": "interdict は「禁止する・遮断する」。inter（間に）+ dict（言う）= 間に入って禁じる。drug interdiction = 薬物の流通遮断。",
+      "gapOneliner": "interdict = 間に(inter)入って言い渡す(dict) → 禁止する・遮断する",
+      "hook": {
+        "label": "記憶フック",
+        "text": "inter(間に) + dict(言う) = 間に入って禁じる = 禁止する。drug interdiction = 薬物流通の遮断。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 3,
+          "instruction": "interdictの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "間に入って言い渡す→禁止する",
+            "前もって言う→予言する",
+            "反対に言う→矛盾する",
+            "外へ言い渡す→公布する"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The navy was ordered to ______ enemy supply lines.",
+          "hint": "「間に入って禁じる」→「遮断する」",
+          "explanationFocus": "gap",
+          "choices": [
+            "interdict",
+            "predict",
+            "indicate",
+            "contradict"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The court issued an interdict against the company's operations."
+      ]
+    },
+    {
+      "word": "diction",
+      "phonetic": "/ˈdɪkʃn/",
+      "toeicRank": "TSL中位・言語/芸術用語",
+      "parts": [
+        {
+          "part": "dic",
+          "meaning": "言う",
+          "type": "root"
+        },
+        {
+          "part": "tion",
+          "meaning": "〜すること（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "dicere（言う）+ -tion = 言い方 → 言葉遣い・発声法",
+        "fact": "ラテン語 dictio「言うこと、言い方」から。dicere（言う）の名詞形。15世紀に「言葉の選び方」として英語に入り、演劇・スピーチでは「発声法・滑舌」の意味でも使われる。",
+        "source": "EtymOnline: diction",
+        "cognates": [
+          "dictionary",
+          "dictate",
+          "predict",
+          "contradict"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "言う（dic）こと（tion）→ 言葉遣い・発声法",
+        "fact": "EXPRESSION（表現）スキーマ。「言う（dic）」行為の様式・品質を名詞化。clear diction = 明瞭な発声。diction は dictionary（辞書）の語根でもある。",
+        "source": "Langacker (2008) EXPRESSIONスキーマ"
+      },
+      "gap": "diction は「言葉遣い・発声法」。dic（言う）の名詞形。dictionary = 「言う」ための本 = 辞書。clear diction = 明瞭な発声。",
+      "gapOneliner": "diction = 言う(dic)こと(tion) → 言葉遣い・発声法。dictionary と同根",
+      "hook": {
+        "label": "記憶フック",
+        "text": "dic(言う) + tion(こと) = 言い方 = 言葉遣い。dictionary = 言い方の本 = 辞書。diction も dictionary も dic(言う)から。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "dictionの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "言い方→言葉遣い",
+            "書き方→文体",
+            "読み方→発音",
+            "聞き方→聴解"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "コロケーション",
+          "difficulty": 2,
+          "instruction": "dictionと最も自然に結びつく語は？",
+          "explanationFocus": "hook",
+          "choices": [
+            "clear diction（明瞭な発声）",
+            "diction food（発声食品）",
+            "diction sleep（発声睡眠）",
+            "diction color（発声色）"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The actor was praised for her clear diction and powerful delivery."
+      ]
+    },
+    {
+      "word": "benediction",
+      "phonetic": "/ˌbenɪˈdɪkʃn/",
+      "toeicRank": "TSL中位・宗教/文学用語",
+      "parts": [
+        {
+          "part": "bene",
+          "meaning": "良い",
+          "type": "prefix"
+        },
+        {
+          "part": "dic",
+          "meaning": "言う",
+          "type": "root"
+        },
+        {
+          "part": "tion",
+          "meaning": "〜すること（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "bene（良い）+ dicere（言う）= 良いことを言う → 祝福",
+        "fact": "ラテン語 benedictio「祝福、賛美」から。bene-（良い）+ dicere（言う）。15世紀に宗教儀式の「祝福の祈り」として英語に入った。malediction（呪い）はその対義語（male = 悪い + dic）。",
+        "source": "EtymOnline: benediction",
+        "cognates": [
+          "benefit",
+          "benevolent",
+          "malediction",
+          "dictate"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "良い（bene）ことを言う（dic）→ 祝福・賛美",
+        "fact": "BLESSING（祝福）スキーマ。「良い言葉（bene + dic）」を発することで相手に恩恵を与える行為。宗教的な closing prayer（閉会の祈り）としても使われる。",
+        "source": "Lakoff & Johnson (1980) WORDS ARE WEAPONSメタファー"
+      },
+      "gap": "benediction は「祝福」。bene（良い）+ dic（言う）= 良いことを言う。benefit（利益）も bene（良い）から。malediction（呪い）= male（悪い）+ dic（言う）。",
+      "gapOneliner": "benediction = 良い(bene)ことを言う(dic) → 祝福。malediction（呪い）の対義語",
+      "hook": {
+        "label": "記憶フック",
+        "text": "bene(良い) + dic(言う) + tion = 良い言葉 = 祝福。malediction = 悪い言葉 = 呪い。benefit も bene(良い)から。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "benedictionの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "良い言葉→祝福",
+            "悪い言葉→呪い",
+            "真実の言葉→評決",
+            "前の言葉→予言"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "bene（良い）+ dic（言う）+ tion の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": [
+            "良い + 言う = 祝福",
+            "悪い + 言う = 呪い",
+            "前に + 言う = 予言",
+            "反対に + 言う = 矛盾"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The ceremony ended with a benediction from the bishop."
+      ]
     }
   ]
 }

@@ -1621,6 +1621,466 @@
         "become a recluse（隠遁者になる）",
         "reclusive person（隠遁的な人、社交を避ける人）"
       ]
+    },
+    {
+      "word": "enclosure",
+      "phonetic": "/ɪnˈkloʊʒər/",
+      "toeicRank": "TSL中位・ビジネス頻出",
+      "parts": [
+        {
+          "part": "en",
+          "meaning": "中に",
+          "type": "prefix"
+        },
+        {
+          "part": "clos",
+          "meaning": "閉じる",
+          "type": "root"
+        },
+        {
+          "part": "ure",
+          "meaning": "〜すること（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "en（中に）+ clos（閉じる）= 中に閉じ込めること → 囲い・同封物",
+        "fact": "ラテン語 inclaudere「中に閉じ込める」の名詞形。14世紀に「囲い地」の意味で英語に入り、ビジネスでは「同封物」（enclosure: please find enclosed...）として頻用される。",
+        "source": "EtymOnline: enclosure",
+        "cognates": [
+          "enclose",
+          "close",
+          "closure",
+          "disclose"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "中に（en）閉じ込める（clos）こと → 囲い・同封物",
+        "fact": "CONTAINERスキーマ。空間を「閉じて（clos）」中に（en）何かを収める動き。ビジネスの enclosure は手紙の「中に閉じ込めた」添付物。",
+        "source": "Lakoff & Johnson (1980) CONTAINERスキーマ"
+      },
+      "gap": "enclosure はビジネスメールの頻出語。Enclosure: Resume（同封物: 履歴書）。en（中に）+ clos（閉じる）= 中に閉じ込めたもの。",
+      "gapOneliner": "enclosure = 中に(en)閉じ込める(clos)こと → 囲い・同封物",
+      "hook": {
+        "label": "記憶フック",
+        "text": "en(中に) + clos(閉じる) = 中に閉じ込めること。Please find the enclosure = 同封物をご確認ください。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "enclosureの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "中に閉じ込めること→囲い・同封物",
+            "外に開くこと→公開物",
+            "閉じて壊すこと→破壊物",
+            "閉じて送ること→郵送物"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "Please see the ______ for more details.",
+          "hint": "「中に閉じ込めたもの」→「同封物」",
+          "explanationFocus": "gap",
+          "choices": [
+            "enclosure",
+            "disclosure",
+            "closure",
+            "exposure"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The letter came with an enclosure containing the contract."
+      ]
+    },
+    {
+      "word": "foreclose",
+      "phonetic": "/fɔːrˈkloʊz/",
+      "toeicRank": "TSL中位・金融/法律頻出",
+      "parts": [
+        {
+          "part": "fore",
+          "meaning": "前もって・外に",
+          "type": "prefix"
+        },
+        {
+          "part": "clos",
+          "meaning": "閉じる",
+          "type": "root"
+        },
+        {
+          "part": "e",
+          "meaning": "動詞語尾",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "fore（外に）+ close（閉じる）= 外に閉め出す → 差し押さえる",
+        "fact": "古フランス語 forclos「外に閉め出された」から。fors（外に）+ clos（閉じた）。13世紀に法律用語として「権利を排除する」の意味で英語に入り、不動産の「抵当権実行（foreclosure）」として定着。",
+        "source": "EtymOnline: foreclose",
+        "cognates": [
+          "foreclosure",
+          "close",
+          "closure",
+          "enclose"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "外に（fore）閉め出す（clos）→ 差し押さえる",
+        "fact": "EXCLUSION（排除）スキーマ。債務不履行の借り手を物件から「外に閉め出す」動き。foreclosure = 所有権からの排除。",
+        "source": "Johnson (1987) EXCLUSIONスキーマ"
+      },
+      "gap": "foreclose は金融ニュース頻出。The bank foreclosed on the property.（銀行が物件を差し押さえた）。fore（外に）+ close（閉じる）= 外に閉め出す。",
+      "gapOneliner": "foreclose = 外に(fore)閉め出す(clos) → 差し押さえる",
+      "hook": {
+        "label": "記憶フック",
+        "text": "fore(外に) + close(閉じる) = 外に閉め出す = 差し押さえ。The bank foreclosed on the house = 銀行が家を差し押さえた。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "forecloseの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "外に閉め出す→差し押さえる",
+            "中に閉じ込める→同封する",
+            "再び閉じる→再封する",
+            "完全に閉じる→閉鎖する"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The bank threatened to ______ on the mortgage.",
+          "hint": "「外に閉め出す」→「差し押さえる」",
+          "explanationFocus": "gap",
+          "choices": [
+            "foreclose",
+            "disclose",
+            "enclose",
+            "conclude"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "Many families lost their homes when banks foreclosed during the crisis."
+      ]
+    },
+    {
+      "word": "exclusivity",
+      "phonetic": "/ˌekskluːˈsɪvɪti/",
+      "toeicRank": "TSL上位・ビジネス頻出",
+      "parts": [
+        {
+          "part": "ex",
+          "meaning": "外へ",
+          "type": "prefix"
+        },
+        {
+          "part": "clus",
+          "meaning": "閉じる（clos の異形）",
+          "type": "root"
+        },
+        {
+          "part": "ivity",
+          "meaning": "〜性（名詞化接尾辞）",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "ex（外へ）+ cludere（閉じる）= 外に閉め出すこと → 排他性・独占権",
+        "fact": "exclusive（排他的な）+ -ity（名詞化接尾辞）。ラテン語 excludere「外に閉め出す」に由来。ビジネスでは「独占契約権」、マーケティングでは「特別感・希少性」の意味で使われる。",
+        "source": "EtymOnline: exclusive",
+        "cognates": [
+          "exclusive",
+          "exclude",
+          "include",
+          "conclude"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "外へ（ex）閉め出す（clus）性質 → 排他性・独占性",
+        "fact": "BOUNDARY（境界）スキーマ。「外に閉め出す」ことで内部の価値を高める。exclusivity deal = 他者を排除する独占契約。",
+        "source": "Lakoff & Johnson (1980) CONTAINERスキーマ"
+      },
+      "gap": "exclusivity はビジネス・マーケティングの重要語。brand exclusivity = ブランドの独占性、exclusivity agreement = 独占契約。ex（外へ）+ clus（閉じる）+ ity（性質）。",
+      "gapOneliner": "exclusivity = 外へ(ex)閉め出す(clus)性質(ity) → 排他性・独占権",
+      "hook": {
+        "label": "記憶フック",
+        "text": "ex(外へ) + clus(閉じる) + ivity(性質) = 外に閉め出す性質 = 排他性。exclusivity agreement = 独占契約。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "exclusivityの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "外に閉め出す性質→排他性",
+            "中に閉じ込める性質→包容性",
+            "再び閉じる性質→回復性",
+            "共に閉じる性質→協調性"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The brand maintains its appeal through ______.",
+          "hint": "「外に閉め出す性質」→「排他性・独占性」",
+          "explanationFocus": "gap",
+          "choices": [
+            "exclusivity",
+            "inclusivity",
+            "productivity",
+            "connectivity"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The luxury brand relies on exclusivity to maintain high prices."
+      ]
+    },
+    {
+      "word": "inconclusive",
+      "phonetic": "/ˌɪnkənˈkluːsɪv/",
+      "toeicRank": "TSL上位・ビジネス/学術頻出",
+      "parts": [
+        {
+          "part": "in",
+          "meaning": "〜でない（否定）",
+          "type": "prefix"
+        },
+        {
+          "part": "con",
+          "meaning": "完全に",
+          "type": "prefix"
+        },
+        {
+          "part": "clus",
+          "meaning": "閉じる（clos の異形）",
+          "type": "root"
+        },
+        {
+          "part": "ive",
+          "meaning": "〜の性質を持つ",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "in（否定）+ conclusive（決定的な）= 決定的でない → 結論が出ない",
+        "fact": "in-（否定）+ conclusive（決定的な）から。conclusive はラテン語 concludere「完全に閉じる→結論づける」に由来。「まだ完全に閉じ切れていない」=結論が出ない状態。",
+        "source": "EtymOnline: inconclusive",
+        "cognates": [
+          "conclusive",
+          "conclude",
+          "conclusion",
+          "include"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "完全に（con）閉じる（clus）ことができない（in）→ 結論が出ない",
+        "fact": "INCOMPLETION（未完了）スキーマ。議論や証拠が「完全に閉じ切れていない」状態。inconclusive evidence = 決定的でない証拠。",
+        "source": "Johnson (1987) COMPLETIONスキーマ"
+      },
+      "gap": "inconclusive はTOEIC Part 7やニュースで頻出。The results were inconclusive.（結果は決定的ではなかった）。in（否定）+ conclusive（決定的な）。",
+      "gapOneliner": "inconclusive = 完全に閉じ(conclusive)られない(in) → 結論が出ない・決定的でない",
+      "hook": {
+        "label": "記憶フック",
+        "text": "in(否定) + conclusive(決定的な) = 決定的でない。The test results were inconclusive = 検査結果は決定的ではなかった。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 1,
+          "instruction": "inconclusiveの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "決定的でない→結論が出ない",
+            "決定的な→結論が出る",
+            "中に閉じた→含まれた",
+            "外に閉じた→排除された"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 2,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The investigation produced ______ results.",
+          "hint": "「決定的でない」→「結論が出ない」",
+          "explanationFocus": "gap",
+          "choices": [
+            "inconclusive",
+            "conclusive",
+            "inclusive",
+            "exclusive"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The evidence remains inconclusive, so further research is needed."
+      ]
+    },
+    {
+      "word": "reclusive",
+      "phonetic": "/rɪˈkluːsɪv/",
+      "toeicRank": "TSL中位・文学/ニュース用語",
+      "parts": [
+        {
+          "part": "re",
+          "meaning": "後ろへ・離れて",
+          "type": "prefix"
+        },
+        {
+          "part": "clus",
+          "meaning": "閉じる（clos の異形）",
+          "type": "root"
+        },
+        {
+          "part": "ive",
+          "meaning": "〜の性質を持つ",
+          "type": "suffix"
+        }
+      ],
+      "etymology": {
+        "oneliner": "re（後ろへ）+ cludere（閉じる）= 後ろに引きこもる → 隠遁的な",
+        "fact": "recluse（隠遁者）+ -ive（形容詞化接尾辞）。ラテン語 recludere の意味が反転し「閉じ込める」となった。re-（後ろへ）+ cludere（閉じる）で「世間から退いて閉じこもる」の意味。",
+        "source": "EtymOnline: reclusive",
+        "cognates": [
+          "recluse",
+          "seclude",
+          "include",
+          "exclude"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "後ろへ（re）閉じこもる（clus）性質 → 隠遁的な・引きこもりの",
+        "fact": "WITHDRAWAL（撤退）スキーマ。社会から「後ろへ退いて（re）閉じこもる（clus）」状態。reclusive billionaire = 人前に出ない隠遁的な億万長者。",
+        "source": "Johnson (1987) WITHDRAWALスキーマ"
+      },
+      "gap": "reclusive は著名人の描写で頻出。a reclusive author = 隠遁的な作家。re（後ろへ）+ clus（閉じる）= 引きこもる性質。recluse（隠遁者）の形容詞形。",
+      "gapOneliner": "reclusive = 後ろへ(re)閉じこもる(clus)性質 → 隠遁的な",
+      "hook": {
+        "label": "記憶フック",
+        "text": "re(後ろへ) + clus(閉じる) + ive(性質) = 後ろに閉じこもる性質 = 隠遁的。a reclusive genius = 隠遁的な天才。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 2,
+          "instruction": "reclusiveの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "後ろに閉じこもる→隠遁的な",
+            "外に開く→社交的な",
+            "中に含む→包容的な",
+            "完全に閉じる→決定的な"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "穴埋め",
+          "difficulty": 3,
+          "instruction": "空欄に入る単語は？",
+          "sentence": "The ______ author rarely appeared in public.",
+          "hint": "「後ろに閉じこもる」→「隠遁的な」",
+          "explanationFocus": "gap",
+          "choices": [
+            "reclusive",
+            "inclusive",
+            "exclusive",
+            "conclusive"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The reclusive billionaire avoided media attention for decades."
+      ]
+    },
+    {
+      "word": "occlude",
+      "phonetic": "/əˈkluːd/",
+      "toeicRank": "TSL中位・医療/科学用語",
+      "parts": [
+        {
+          "part": "oc",
+          "meaning": "〜に対して（ob- の変形）",
+          "type": "prefix"
+        },
+        {
+          "part": "clude",
+          "meaning": "閉じる（clos の異形）",
+          "type": "root"
+        }
+      ],
+      "etymology": {
+        "oneliner": "ob（〜に対して）+ cludere（閉じる）= 対して閉じる → 塞ぐ・遮る",
+        "fact": "ラテン語 occludere「閉じ塞ぐ」から。ob-（〜に対して）+ claudere（閉じる）。医学では「血管を塞ぐ」、気象学では「閉塞前線（occluded front）」として使われる。",
+        "source": "EtymOnline: occlude",
+        "cognates": [
+          "occlusion",
+          "include",
+          "exclude",
+          "preclude"
+        ]
+      },
+      "cognitive": {
+        "oneliner": "対して（oc）閉じる（clude）→ 塞ぐ・遮る",
+        "fact": "BLOCKAGE（遮断）スキーマ。通路や流れを「閉じて塞ぐ」動き。occluded artery = 塞がれた動脈。occluded front = 閉塞前線。",
+        "source": "Johnson (1987) BLOCKAGEスキーマ"
+      },
+      "gap": "occlude は医学で「血管を塞ぐ」、気象で「前線が閉塞する」意味。ob（対して）+ clude（閉じる）= 対して閉じ塞ぐ。include（中に閉じる）、exclude（外に閉じる）の仲間。",
+      "gapOneliner": "occlude = 対して(oc)閉じ塞ぐ(clude) → 塞ぐ・遮る",
+      "hook": {
+        "label": "記憶フック",
+        "text": "oc(対して) + clude(閉じる) = 対して閉じ塞ぐ = 遮る。occluded artery = 塞がれた動脈。include/exclude と同じ clude 語根。"
+      },
+      "formats": [
+        {
+          "type": "英→日選択",
+          "difficulty": 3,
+          "instruction": "occludeの語源的な本質は？",
+          "explanationFocus": "etymology",
+          "choices": [
+            "対して閉じ塞ぐ→遮る",
+            "中に閉じ込める→含む",
+            "外に閉め出す→排除する",
+            "完全に閉じる→結論する"
+          ],
+          "correct": 0
+        },
+        {
+          "type": "語源クイズ",
+          "difficulty": 3,
+          "instruction": "oc（対して）+ clude（閉じる）の組み合わせが表す意味は？",
+          "explanationFocus": "cognitive",
+          "choices": [
+            "対して + 閉じる = 塞ぐ",
+            "中に + 閉じる = 含む",
+            "外に + 閉じる = 排除する",
+            "前に + 閉じる = 妨げる"
+          ],
+          "correct": 0
+        }
+      ],
+      "examples": [
+        "The blocked artery was completely occluded."
+      ]
     }
   ]
 }
