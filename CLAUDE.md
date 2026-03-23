@@ -301,7 +301,7 @@ python3 add_questions.py
 | Bizmates Plus（コーチング） | ✅ 提携済み・リンク設置済み | `articles/english-coaching-ranking/`、`articles/english-coaching-vs-online-eikaiwa/` |
 | DMM英会話 | ✅ 提携済み・リンク設置済み | `services/dmm-eikaiwa/` |
 | PROGRIT | ⏳ 審査中 | `services/progrit/`（リンク未設置） |
-| トライズ | ⏳ 審査中 | `services/toraiz/`（リンク未設置） |
+| トライズ | ✅ 提携済み・リンク設置済み | `services/toraiz/`、`ranking/` |
 | THE ENGLISH COMPANY | ⏳ 審査中（別ASP） | `services/english-company/`（リンク未設置） |
 
 ### リンク設置ルール
