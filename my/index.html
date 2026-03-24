@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PS9R9844');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>My Progress | native-real</title>
+  <meta name="description" content="native-real.com でのあなたの学習進捗。XP・レベル・連続学習日数・ツール別の成績を確認できます。">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #FFFFFF;
+      --surface:    rgba(0,0,0,0.04);
+      --surface-2:  rgba(0,0,0,0.06);
+      --border:     rgba(0,0,0,0.09);
+      --gold:       #F5A623;
+      --teal:       #0EA5E9;
+      --teal-bg:    rgba(14,165,233,0.08);
+      --success:    #16A34A;
+      --success-bg: rgba(22,163,74,0.1);
+      --text-1:     rgba(0,0,0,0.88);
+      --text-2:     rgba(0,0,0,0.62);
+      --text-3:     rgba(0,0,0,0.46);
+      --radius:     16px;
+      --radius-lg:  20px;
+    }
+
+    html { scroll-behavior: smooth; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SITE HEADER ── */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 14px 0;
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
+    }
+    .site-header.scrolled {
+      padding: 8px 0;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.92);
+    }
+    .site-header-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .site-header-logo {
+      font-size: 15px; font-weight: 800; color: var(--text-1);
+      text-decoration: none; white-space: nowrap; letter-spacing: -0.02em;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .site-header-logo svg { width: 18px; height: 18px; color: var(--gold); }
+    .site-header-nav { display: flex; align-items: center; gap: 2px; }
+    .site-header-nav a {
+      font-size: 13px; font-weight: 500; color: var(--text-2);
+      text-decoration: none; padding: 7px 12px; border-radius: 10px;
+      transition: all 0.2s ease; white-space: nowrap; position: relative;
+    }
+    .site-header-nav a:hover { color: var(--text-1); background: rgba(0,0,0,0.04); }
+    .site-header-nav a.active { color: var(--gold); font-weight: 700; }
+    .site-header-nav a.active::after {
+      content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%);
+      width: 16px; height: 2px; border-radius: 1px; background: var(--gold);
+    }
+    .site-hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 8px; width: 40px; height: 40px; border-radius: 10px;
+      position: relative; z-index: 302; transition: background 0.2s;
+    }
+    .site-hamburger:hover { background: rgba(0,0,0,0.04); }
+    .site-hamburger span {
+      display: block; width: 18px; height: 2px; background: var(--text-1);
+      margin: 4px auto; border-radius: 2px;
+      transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+    }
+    .site-header-spacer { height: 56px; }
+    .site-mobile-nav {
+      position: fixed; top: 56px; left: 0; right: 0; z-index: 299;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      display: none; flex-direction: column; padding: 8px 16px 16px;
+    }
+    .site-mobile-nav.open { display: flex; }
+    .site-mobile-nav a {
+      font-size: 14px; font-weight: 500; color: var(--text-2);
+      text-decoration: none; padding: 12px 16px; border-radius: 10px;
+    }
+    .site-mobile-nav a:hover { background: rgba(0,0,0,0.04); }
+    .site-mobile-nav a.active { color: var(--gold); font-weight: 700; }
+    @media (max-width: 768px) {
+      .site-header-nav { display: none; }
+      .site-hamburger { display: block; }
+    }
+
+    /* ── PAGE LAYOUT ── */
+    .page {
+      max-width: 640px; margin: 0 auto; padding: 32px 20px 60px;
+    }
+    .page-title {
+      font-size: 24px; font-weight: 800; letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    /* ── LEVEL HERO ── */
+    .level-hero {
+      background: linear-gradient(135deg, #fef3c7, #d1fae5);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .level-icon { font-size: 48px; line-height: 1; }
+    .level-name {
+      font-size: 20px; font-weight: 800; margin: 8px 0 2px;
+      letter-spacing: -0.01em;
+    }
+    .level-label { font-size: 12px; font-weight: 600; color: var(--text-3); letter-spacing: 1px; text-transform: uppercase; }
+    .level-xp {
+      font-size: 32px; font-weight: 800; margin: 12px 0 4px;
+      background: linear-gradient(90deg, #34d399, #3b82f6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .level-xp-label { font-size: 12px; color: var(--text-3); font-weight: 600; }
+    .level-progress {
+      margin-top: 16px;
+    }
+    .level-progress-info {
+      display: flex; justify-content: space-between; font-size: 11px; color: var(--text-3); font-weight: 600; margin-bottom: 6px;
+    }
+    .level-track {
+      height: 8px; background: rgba(255,255,255,0.6); border-radius: 4px; overflow: hidden;
+    }
+    .level-fill {
+      height: 100%; background: linear-gradient(90deg, #34d399, #3b82f6);
+      border-radius: 4px; transition: width 0.6s ease;
+    }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;
+    }
+    .stat-card {
+      background: var(--surface); border-radius: var(--radius); padding: 16px;
+      text-align: center;
+    }
+    .stat-value { font-size: 28px; font-weight: 800; }
+    .stat-label { font-size: 12px; color: var(--text-3); font-weight: 600; margin-top: 2px; }
+
+    /* ── TOOL BREAKDOWN ── */
+    .section-title {
+      font-size: 15px; font-weight: 700; margin-bottom: 12px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tool-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .tool-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface); border-radius: var(--radius); padding: 14px 16px;
+      text-decoration: none; color: inherit; transition: background 0.2s;
+    }
+    .tool-item:hover { background: var(--surface-2); }
+    .tool-icon { font-size: 24px; flex-shrink: 0; }
+    .tool-info { flex: 1; min-width: 0; }
+    .tool-name { font-size: 14px; font-weight: 700; }
+    .tool-xp { font-size: 12px; color: var(--text-3); font-weight: 600; }
+    .tool-bar-track {
+      height: 4px; background: var(--surface-2); border-radius: 2px; margin-top: 6px; overflow: hidden;
+    }
+    .tool-bar-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+    .tool-arrow { color: var(--text-3); font-size: 14px; flex-shrink: 0; }
+    .tool-badge {
+      font-size: 10px; font-weight: 700; color: var(--gold);
+      background: rgba(245,166,35,0.12); border-radius: 6px; padding: 2px 8px;
+      white-space: nowrap;
+    }
+
+    /* ── CALENDAR ── */
+    .calendar { margin-bottom: 24px; }
+    .cal-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px;
+    }
+    .cal-header {
+      font-size: 10px; font-weight: 600; color: var(--text-3);
+      text-align: center; padding: 4px 0;
+    }
+    .cal-day {
+      aspect-ratio: 1; border-radius: 4px; background: var(--surface);
+    }
+    .cal-day.active {
+      background: #34d399;
+    }
+    .cal-day.today {
+      outline: 2px solid var(--gold); outline-offset: -1px;
+    }
+    .cal-day.empty { background: transparent; }
+
+    /* ── CTA ── */
+    .cta-section { text-align: center; padding: 20px 0 0; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--gold), #e8950a);
+      color: #fff; font-size: 15px; font-weight: 700;
+      padding: 14px 32px; border-radius: 14px; border: none;
+      text-decoration: none; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(245,166,35,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,166,35,0.4); }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      text-align: center; padding: 48px 20px;
+    }
+    .empty-icon { font-size: 48px; margin-bottom: 12px; }
+    .empty-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .empty-desc { font-size: 14px; color: var(--text-3); line-height: 1.6; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS9R9844" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="site-header-spacer"></div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header-inner">
+      <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
+      <nav class="site-header-nav">
+        <a href="/">ListenUp</a>
+        <a href="/grammar/">文法クイズ</a>
+        <a href="/kioku-shinai/">記憶しない英単語</a>
+        <a href="/ranking/">ランキング</a>
+        <a href="/articles/">学習コラム</a>
+      </nav>
+      <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="site-mobile-nav" id="siteMobileNav">
+    <a href="/">ListenUp</a>
+    <a href="/grammar/">文法クイズ</a>
+    <a href="/kioku-shinai/">記憶しない英単語</a>
+    <a href="/ranking/">ランキング</a>
+    <a href="/articles/">学習コラム</a>
+  </div>
+
+  <main class="page" id="app"></main>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var KEY = 'nativereal_xp';
+    var LEVELS = [
+      { name: 'Starter',    threshold: 0,    icon: '\uD83C\uDF31' },
+      { name: 'Learner',    threshold: 30,   icon: '\uD83D\uDCD6' },
+      { name: 'Explorer',   threshold: 100,  icon: '\uD83E\uDDED' },
+      { name: 'Challenger', threshold: 250,  icon: '\u26A1' },
+      { name: 'Achiever',   threshold: 500,  icon: '\uD83C\uDFC5' },
+      { name: 'Expert',     threshold: 1000, icon: '\uD83C\uDFAF' },
+      { name: 'Master',     threshold: 2000, icon: '\uD83D\uDC51' },
+    ];
+
+    var TOOLS = [
+      { key: 'listenup', label: 'ListenUp',       path: '/',             icon: '\uD83C\uDFA7', color: '#3b82f6' },
+      { key: 'grammar',  label: 'GrammarUp',       path: '/grammar/',     icon: '\uD83D\uDCDD', color: '#8b5cf6' },
+      { key: 'kioku',    label: '\u8A18\u61B6\u3057\u306A\u3044\u82F1\u5358\u8A9E', path: '/kioku-shinai/', icon: '\uD83E\uDDE0', color: '#f59e0b' },
+    ];
+
+    function load() {
+      try {
+        var d = JSON.parse(localStorage.getItem(KEY));
+        if (d && typeof d.total === 'number') return d;
+      } catch (_) {}
+      return null;
+    }
+
+    function getLevel(xp) {
+      for (var i = LEVELS.length - 1; i >= 0; i--) {
+        if (xp >= LEVELS[i].threshold) return { index: i, def: LEVELS[i] };
+      }
+      return { index: 0, def: LEVELS[0] };
+    }
+
+    function render() {
+      var app = document.getElementById('app');
+      var d = load();
+
+      if (!d || d.total === 0) {
+        app.innerHTML =
+          '<div class="empty-state">' +
+            '<div class="empty-icon">\uD83C\uDF31</div>' +
+            '<div class="empty-title">\u307E\u3060\u5B66\u7FD2\u3092\u59CB\u3081\u3066\u3044\u307E\u305B\u3093</div>' +
+            '<div class="empty-desc">\u30AF\u30A4\u30BA\u306B\u7B54\u3048\u308B\u3068XP\u304C\u8CAF\u307E\u308A\u3001<br>\u30EC\u30D9\u30EB\u304C\u4E0A\u304C\u3063\u3066\u3044\u304D\u307E\u3059\u3002</div>' +
+            '<a href="/" class="cta-btn">\uD83C\uDFA7 ListenUp \u3092\u59CB\u3081\u308B</a>' +
+          '</div>';
+        return;
+      }
+
+      var lv = getLevel(d.total);
+      var nextLv = LEVELS[lv.index + 1];
+      var pct = nextLv
+        ? Math.min(100, Math.round((d.total - lv.def.threshold) / (nextLv.threshold - lv.def.threshold) * 100))
+        : 100;
+      var nextLabel = nextLv ? 'Next: ' + nextLv.icon + ' ' + nextLv.name + ' (' + nextLv.threshold + ' XP)' : 'MAX LEVEL';
+
+      var maxToolXP = 0;
+      TOOLS.forEach(function (t) { if (d.tools[t.key] > maxToolXP) maxToolXP = d.tools[t.key]; });
+
+      var html = '';
+
+      // Level hero
+      html += '<div class="level-hero">';
+      html += '<div class="level-icon">' + lv.def.icon + '</div>';
+      html += '<div class="level-label">LEVEL ' + (lv.index + 1) + '</div>';
+      html += '<div class="level-name">' + lv.def.name + '</div>';
+      html += '<div class="level-xp">' + d.total.toLocaleString() + '</div>';
+      html += '<div class="level-xp-label">Total XP</div>';
+      html += '<div class="level-progress">';
+      html += '<div class="level-progress-info"><span>' + pct + '%</span><span>' + nextLabel + '</span></div>';
+      html += '<div class="level-track"><div class="level-fill" style="width:' + pct + '%"></div></div>';
+      html += '</div></div>';
+
+      // Stats row
+      html += '<div class="stats-row">';
+      html += '<div class="stat-card"><div class="stat-value">' + (d.streak || 0) + '</div><div class="stat-label">\uD83D\uDD25 \u9023\u7D9A\u65E5\u6570</div></div>';
+      var activeDays = d.history ? d.history.length : (d.lastDate ? 1 : 0);
+      html += '<div class="stat-card"><div class="stat-value">' + activeDays + '</div><div class="stat-label">\uD83D\uDCC5 \u5B66\u7FD2\u65E5\u6570</div></div>';
+      html += '</div>';
+
+      // Tool breakdown
+      html += '<div class="section-title">\uD83D\uDCCA \u30C4\u30FC\u30EB\u5225XP</div>';
+      html += '<div class="tool-list">';
+      TOOLS.forEach(function (t) {
+        var txp = (d.tools && d.tools[t.key]) || 0;
+        var barPct = maxToolXP > 0 ? Math.round(txp / maxToolXP * 100) : 0;
+        html += '<a href="' + t.path + '" class="tool-item">';
+        html += '<span class="tool-icon">' + t.icon + '</span>';
+        html += '<div class="tool-info">';
+        html += '<div class="tool-name">' + t.label + '</div>';
+        html += '<div class="tool-xp">' + txp.toLocaleString() + ' XP</div>';
+        html += '<div class="tool-bar-track"><div class="tool-bar-fill" style="width:' + barPct + '%;background:' + t.color + '"></div></div>';
+        html += '</div>';
+        if (txp === 0) html += '<span class="tool-badge">NEW</span>';
+        html += '<span class="tool-arrow">\u203A</span>';
+        html += '</a>';
+      });
+      html += '</div>';
+
+      // 30-day calendar
+      html += '<div class="calendar">';
+      html += '<div class="section-title">\uD83D\uDCC5 \u904E\u53BB30\u65E5\u306E\u5B66\u7FD2</div>';
+      html += '<div class="cal-grid">';
+      var dayLabels = ['\u6708', '\u706B', '\u6C34', '\u6728', '\u91D1', '\u571F', '\u65E5'];
+      dayLabels.forEach(function (dl) {
+        html += '<div class="cal-header">' + dl + '</div>';
+      });
+
+      var today = new Date();
+      var todayStr = today.toISOString().slice(0, 10);
+      var historySet = {};
+      if (d.history) d.history.forEach(function (h) { historySet[h] = true; });
+
+      // Build 35 days (5 weeks) ending today
+      var startDate = new Date(today);
+      startDate.setDate(startDate.getDate() - 34);
+      // Adjust to start on Monday
+      var startDay = startDate.getDay(); // 0=Sun
+      var mondayOffset = startDay === 0 ? -6 : 1 - startDay;
+      startDate.setDate(startDate.getDate() + mondayOffset);
+
+      var cursor = new Date(startDate);
+      for (var i = 0; i < 35; i++) {
+        var dateStr = cursor.toISOString().slice(0, 10);
+        var cls = 'cal-day';
+        if (dateStr > todayStr) {
+          cls += ' empty';
+        } else {
+          if (historySet[dateStr]) cls += ' active';
+          if (dateStr === todayStr) cls += ' today';
+        }
+        html += '<div class="' + cls + '" title="' + dateStr + '"></div>';
+        cursor.setDate(cursor.getDate() + 1);
+      }
+      html += '</div></div>';
+
+      // CTA
+      var suggestion = null;
+      TOOLS.forEach(function (t) {
+        if (!suggestion && (!d.tools[t.key] || d.tools[t.key] === 0)) suggestion = t;
+      });
+      if (suggestion) {
+        html += '<div class="cta-section">';
+        html += '<a href="' + suggestion.path + '" class="cta-btn">' + suggestion.icon + ' ' + suggestion.label + ' \u3082\u8A66\u3057\u3066\u307F\u3088\u3046</a>';
+        html += '</div>';
+      }
+
+      app.innerHTML = html;
+    }
+
+    // Header scroll
+    var hdr = document.getElementById('siteHeader');
+    if (hdr) {
+      window.addEventListener('scroll', function () {
+        hdr.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+    }
+
+    // Mobile nav
+    var hamburger = document.getElementById('siteHamburger');
+    var mobileNav = document.getElementById('siteMobileNav');
+    if (hamburger && mobileNav) {
+      hamburger.addEventListener('click', function () {
+        mobileNav.classList.toggle('open');
+      });
+    }
+
+    render();
+  })();
+  </script>
+</body>
+</html>

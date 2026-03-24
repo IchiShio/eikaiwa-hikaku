@@ -111,8 +111,12 @@
       pct = 100;
     }
 
-    var bar = document.createElement('div');
+    var bar = document.createElement('a');
     bar.id = 'nrXpBar';
+    bar.href = '/my/';
+    bar.style.display = 'block';
+    bar.style.textDecoration = 'none';
+    bar.style.color = 'inherit';
     bar.innerHTML =
       '<div class="nr-xp-inner">' +
         '<span class="nr-xp-level">' + lv.def.icon + ' Lv.' + (lv.index + 1) + ' ' + lv.def.name + '</span>' +
