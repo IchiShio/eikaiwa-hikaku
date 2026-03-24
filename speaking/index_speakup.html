@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PS9R9844');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B9WEBKYEP"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());gtag('config','G-5B9WEBKYEP',{send_page_view:false});
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>SpeakUp — SVO思考トレーナー | native-real</title>
+  <meta name="description" content="英語が口から出ない原因は語順。日本語のお題から主語→動詞→目的語の順に英文を組み立てるトレーニング。コーパスデータに基づく6パターンをマスター。">
+  <link rel="canonical" href="https://native-real.com/speaking/">
+  <meta property="og:title" content="SpeakUp — SVO思考トレーナー">
+  <meta property="og:description" content="英語が口から出ない原因は語順。主語→動詞→目的語の順に英文を組み立てるトレーニング。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://native-real.com/speaking/">
+  <meta property="og:site_name" content="native-real">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#2563eb;--primary-pale:#eff6ff;--text:#111827;--text-muted:#6b7280;--bg:#fff;--bg-gray:#f9fafb;--border:#e5e7eb;--radius:10px;--radius-lg:14px;--green:#10b981;--green-pale:#ecfdf5;--amber:#d97706;--amber-pale:#fffbeb;--rose:#e11d48;--rose-pale:#fff1f2;--teal:#0d9488}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Inter","Noto Sans JP",-apple-system,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--bg)}
+    a{color:var(--primary);text-decoration:none}
+    .container{max-width:640px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06);padding:10px 0}
+    .site-header-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+    .site-header-logo{font-size:15px;font-weight:800;color:#111;text-decoration:none;display:flex;align-items:center;gap:7px}
+    .site-header-nav{display:flex;gap:2px}
+    .site-header-nav a{font-size:13px;font-weight:500;color:rgba(0,0,0,0.6);text-decoration:none;padding:7px 12px;border-radius:10px}
+    .site-header-nav a:hover{color:#111;background:rgba(0,0,0,0.04)}
+    .site-header-nav a.active{color:var(--primary);font-weight:700}
+
+    /* Views */
+    .view{display:none;padding:80px 0 40px}
+    .view.show{display:block}
+
+    /* Start */
+    .hero-title{font-size:clamp(24px,5vw,34px);font-weight:800;text-align:center;line-height:1.4;margin:30px 0 12px}
+    .hero-title em{font-style:normal;color:var(--primary)}
+    .hero-sub{text-align:center;color:var(--text-muted);font-size:15px;margin-bottom:32px}
+    .mode-grid{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+    .mode-card{display:flex;align-items:center;gap:16px;background:var(--bg-gray);border:2px solid var(--border);border-radius:var(--radius-lg);padding:20px;cursor:pointer;transition:all 0.2s}
+    .mode-card:hover{border-color:var(--primary);box-shadow:0 4px 12px rgba(37,99,235,0.08)}
+    .mode-card.locked{opacity:0.6;cursor:default}
+    .mode-card.locked:hover{border-color:var(--border);box-shadow:none}
+    .mode-icon{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#fff;flex-shrink:0}
+    .mode-body h3{font-size:17px;font-weight:700}
+    .mode-body p{font-size:13px;color:var(--text-muted);margin:2px 0 0}
+    .mode-tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:4px}
+    .mode-tag.free{background:var(--green-pale);color:#065f46}
+    .mode-tag.paid{background:var(--rose-pale);color:#9f1239}
+
+    /* Quiz */
+    .quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-size:14px;color:var(--text-muted)}
+    .quiz-progress{height:4px;background:var(--border);border-radius:2px;margin-bottom:24px}
+    .quiz-progress-bar{height:100%;background:var(--primary);border-radius:2px;transition:width 0.3s}
+    .prompt-card{background:var(--bg-gray);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;text-align:center;margin-bottom:24px}
+    .prompt-label{font-size:12px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px}
+    .prompt-ja{font-size:24px;font-weight:800;line-height:1.4}
+    .prompt-context{font-size:14px;color:var(--text-muted);margin-top:8px}
+
+    /* SVO Slots */
+    .svo-area{margin:20px 0}
+    .svo-step{margin-bottom:16px}
+    .svo-step-label{font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+    .svo-step-label .num{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+    .svo-step-label .num.s1{background:var(--primary)}
+    .svo-step-label .num.s2{background:var(--amber)}
+    .svo-step-label .num.s3{background:var(--teal)}
+    .svo-options{display:flex;flex-wrap:wrap;gap:8px}
+    .svo-btn{background:#fff;border:2px solid var(--border);border-radius:var(--radius);padding:10px 18px;font-size:16px;font-weight:600;font-family:inherit;cursor:pointer;transition:all 0.15s}
+    .svo-btn:hover{border-color:var(--primary);color:var(--primary)}
+    .svo-btn.selected{border-color:var(--primary);background:var(--primary-pale);color:var(--primary)}
+    .svo-btn.correct{border-color:var(--green);background:var(--green-pale);color:#065f46}
+    .svo-btn.disabled{opacity:0.4;pointer-events:none}
+
+    /* Result */
+    .result-box{background:var(--bg-gray);border:2px solid var(--border);border-radius:var(--radius-lg);padding:24px;text-align:center;margin:20px 0;min-height:70px;transition:all 0.3s}
+    .result-box.filled{border-color:var(--primary)}
+    .result-box.correct{border-color:var(--green);background:var(--green-pale)}
+    .result-text{font-size:22px;font-weight:800;font-family:"Inter",monospace;color:var(--primary)}
+    .result-box.correct .result-text{color:#065f46}
+    .result-time{font-size:13px;color:var(--text-muted);margin-top:4px}
+    .result-feedback{font-size:14px;color:var(--green);font-weight:600;margin-top:8px}
+
+    .next-btn{display:none;width:100%;background:var(--primary);color:#fff;border:none;border-radius:var(--radius);padding:14px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:16px}
+    .next-btn:hover{background:#1d4ed8}
+    .next-btn.show{display:block}
+
+    /* Session complete */
+    .complete-card{text-align:center;padding:40px 20px}
+    .complete-card h2{font-size:28px;font-weight:800;margin-bottom:12px}
+    .complete-card .stat{font-size:48px;font-weight:800;color:var(--primary)}
+    .complete-card .stat-label{font-size:14px;color:var(--text-muted)}
+    .complete-card .back-btn{display:inline-block;margin-top:24px;background:var(--primary);color:#fff;padding:14px 36px;border-radius:var(--radius);font-weight:700;text-decoration:none}
+
+    /* Password gate */
+    .gate{background:var(--bg-gray);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;text-align:center;margin:24px 0}
+    .gate h3{font-size:18px;font-weight:700;margin-bottom:8px}
+    .gate p{font-size:14px;color:var(--text-muted);margin-bottom:16px}
+    .gate-input{width:100%;max-width:300px;padding:12px;border:2px solid var(--border);border-radius:var(--radius);font-size:16px;text-align:center;font-family:inherit}
+    .gate-input:focus{outline:none;border-color:var(--primary)}
+    .gate-submit{background:var(--primary);color:#fff;border:none;border-radius:var(--radius);padding:12px 28px;font-size:15px;font-weight:700;cursor:pointer;margin-top:12px;font-family:inherit}
+    .gate-error{color:var(--rose);font-size:13px;margin-top:8px}
+    .gate-note-link{display:inline-block;margin-top:16px;color:var(--primary);font-weight:600;font-size:14px}
+
+    .site-footer{padding:40px 0;text-align:center;font-size:13px;color:var(--text-muted);border-top:1px solid var(--border)}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-header-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;color:#F5A623"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        native-real
+      </a>
+      <nav class="site-header-nav">
+        <a href="/">ListenUp</a>
+        <a href="/grammar/">GrammarUp</a>
+        <a href="/speaking/" class="active">SpeakUp</a>
+        <a href="/ranking/">Ranking</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- START VIEW -->
+  <div class="view show" id="startView">
+    <div class="container">
+      <h1 class="hero-title">英語は<br><em>主語+動詞から</em>出す</h1>
+      <p class="hero-sub">日本語のお題から、SVO順に英文を組み立てるトレーニング</p>
+
+      <div class="mode-grid">
+        <div class="mode-card" onclick="startMode('basic')">
+          <div class="mode-icon" style="background:var(--green)">B</div>
+          <div class="mode-body">
+            <h3>Basic — SVO1文</h3>
+            <p>日本語を見て、主語→動詞→目的語を選ぶ</p>
+            <span class="mode-tag free">無料</span>
+          </div>
+        </div>
+        <div class="mode-card" id="modeOpinion" onclick="startMode('opinion')">
+          <div class="mode-icon" style="background:var(--amber)">O</div>
+          <div class="mode-body">
+            <h3>Opinion — 意見を言う</h3>
+            <p>シチュエーションを読んで、自分の意見をSVOで</p>
+            <span class="mode-tag paid" id="tagOpinion">有料</span>
+          </div>
+        </div>
+        <div class="mode-card" id="modeConnect" onclick="startMode('connect')">
+          <div class="mode-icon" style="background:var(--teal)">C</div>
+          <div class="mode-body">
+            <h3>Connect — つないで伸ばす</h3>
+            <p>SVO文をand/but/soで2文つなげる</p>
+            <span class="mode-tag paid" id="tagConnect">有料</span>
+          </div>
+        </div>
+        <div class="mode-card" id="modeDialogue" onclick="startMode('dialogue')">
+          <div class="mode-icon" style="background:var(--rose)">D</div>
+          <div class="mode-body">
+            <h3>Dialogue — 会話で返す</h3>
+            <p>相手の発言に、相づち+SVOで返す</p>
+            <span class="mode-tag paid" id="tagDialogue">有料</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GATE VIEW -->
+  <div class="view" id="gateView">
+    <div class="container">
+      <div class="gate">
+        <h3>有料モードを解放する</h3>
+        <p>note記事を購入すると、Opinion / Connect / Dialogue モードが使えます。<br>記事に記載されたパスワードを入力してください。</p>
+        <input type="text" class="gate-input" id="gateInput" placeholder="パスワード">
+        <br>
+        <button class="gate-submit" onclick="checkPassword()">解放する</button>
+        <div class="gate-error" id="gateError"></div>
+        <br>
+        <a href="https://note.com/ichi_eigo" class="gate-note-link" target="_blank" rel="noopener">note記事を購入する →</a>
+      </div>
+      <p style="text-align:center;margin-top:16px"><a href="#" onclick="showView('startView');return false">← 戻る</a></p>
+    </div>
+  </div>
+
+  <!-- QUIZ VIEW -->
+  <div class="view" id="quizView">
+    <div class="container">
+      <div class="quiz-header">
+        <span id="quizMode">Basic</span>
+        <span id="quizCount">1 / 10</span>
+      </div>
+      <div class="quiz-progress"><div class="quiz-progress-bar" id="progressBar" style="width:0%"></div></div>
+
+      <div class="prompt-card">
+        <div class="prompt-label" id="promptLabel">日本語で考えてください</div>
+        <div class="prompt-ja" id="promptJa"></div>
+        <div class="prompt-context" id="promptContext"></div>
+      </div>
+
+      <div class="svo-area">
+        <div class="svo-step">
+          <div class="svo-step-label"><span class="num s1">1</span> 誰が（Subject）</div>
+          <div class="svo-options" id="slotS"></div>
+        </div>
+        <div class="svo-step">
+          <div class="svo-step-label"><span class="num s2">2</span> どうする（Verb）</div>
+          <div class="svo-options" id="slotV"></div>
+        </div>
+        <div class="svo-step" id="stepO">
+          <div class="svo-step-label"><span class="num s3">3</span> 何を（Object）</div>
+          <div class="svo-options" id="slotO"></div>
+        </div>
+      </div>
+
+      <div class="result-box" id="resultBox">
+        <div class="result-text" id="resultText">選んでください</div>
+        <div class="result-time" id="resultTime"></div>
+        <div class="result-feedback" id="resultFeedback"></div>
+      </div>
+
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()">次へ</button>
+    </div>
+  </div>
+
+  <!-- COMPLETE VIEW -->
+  <div class="view" id="completeView">
+    <div class="container">
+      <div class="complete-card">
+        <h2>セッション完了！</h2>
+        <div class="stat" id="avgTime">—</div>
+        <div class="stat-label">平均組み立て時間</div>
+        <p style="color:var(--text-muted);margin-top:16px" id="completeMsg"></p>
+        <a href="#" class="back-btn" onclick="showView('startView');return false">メニューに戻る</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer"><div class="container"><p>&copy; 2026 native-real.com</p></div></footer>
+
+<script>
+/* ===== DATA ===== */
+const PASS_HASH = '5f4dcc3b5aa765d61d8327deb882cf99'; // placeholder - change to real hash
+const SUBJECTS = ['I','You','It'];
+const VERBS_POS = ['know','think','want','have to','get','go'];
+const VERBS_NEG = ["don't know","don't think","don't want","don't have to"];
+const VERBS_Q = ['Do you know','Do you think','Do you want'];
+
+const BASIC_Q = [
+  {ja:'知ってる',answers:[['I','know','']]},
+  {ja:'分からない',answers:[['I',"don't know",'']]},
+  {ja:'そう思う',answers:[['I','think','so.']]},
+  {ja:'そう思わない',answers:[['I',"don't think",'so.']]},
+  {ja:'行きたい',answers:[['I','want','to go.']]},
+  {ja:'行きたくない',answers:[['I',"don't want",'to go.']]},
+  {ja:'行かなきゃ',answers:[['I','have to','go.']]},
+  {ja:'分かった',answers:[['I','get','it.']]},
+  {ja:'いいと思う',answers:[['I','think',"it's good."]]},
+  {ja:'大丈夫だと思う',answers:[['I','think',"it's okay."]]},
+  {ja:'まだ分からない',answers:[['I',"don't know",'yet.']]},
+  {ja:'なぜか分からない',answers:[['I',"don't know",'why.']]},
+  {ja:'やってみたい',answers:[['I','want','to try it.']]},
+  {ja:'確認しなきゃ',answers:[['I','have to','check.']]},
+  {ja:'知ってる？',answers:[['Do you know','','that?']]},
+];
+
+const OPINION_Q = [
+  {ja:'レストランを勧められた。いいと思う。',context:'友達: "This restaurant is pretty good."',answers:[['I','think',"it's good."],['I','think','so.']]},
+  {ja:'明日の天気を聞かれた。分からない。',context:'同僚: "Do you think it\'ll rain?"',answers:[['I',"don't know",'']]},
+  {ja:'旅行に誘われた。行きたい。',context:'友達: "Do you want to come?"',answers:[['I','want','to go.']]},
+  {ja:'新しい企画について。いいと思う。やりたい。',context:'上司: "What do you think?"',answers:[['I','think',"it's good."]]},
+  {ja:'遅くなってきた。帰らなきゃ。',context:'友達: "It\'s getting late."',answers:[['I','have to','go.']]},
+  {ja:'難しそうなタスク。でもやってみたい。',context:'同僚: "That sounds difficult."',answers:[['I','want','to try it.']]},
+  {ja:'提案に反対。そうは思わない。',context:'会議: "I think we should wait."',answers:[['I',"don't think",'so.']]},
+  {ja:'予定を聞かれた。まだ分からない。',context:'友達: "Are you free tomorrow?"',answers:[['I',"don't know",'yet.']]},
+];
+
+const CONNECT_Q = [
+  {ja:'分からないけど、大丈夫だと思う',answers:["I don't know, but I think it's okay."]},
+  {ja:'うん、だからやってみたい',answers:["Yeah, so I want to try it."]},
+  {ja:'いいと思う、また行きたい',answers:["I think it's good, and I want to go again."]},
+  {ja:'そう思わないけど、やってみる',answers:["I don't think so, but I want to try."]},
+  {ja:'行きたくない、でも行かなきゃ',answers:["I don't want to go, but I have to."]},
+  {ja:'分からない、だから確認しなきゃ',answers:["I don't know, so I have to check."]},
+];
+
+const DIALOGUE_Q = [
+  {ja:'同意して返す',context:'"This restaurant is pretty good."',answers:["Yeah, I think so."]},
+  {ja:'分からないけど近くにあると思うと返す',context:'"Do you know where the station is?"',answers:["I don't know, but I think it's near here."]},
+  {ja:'行きたいと返す',context:'"Do you want to come with us?"',answers:["Yeah, I want to go."]},
+  {ja:'帰らなきゃと返す',context:'"It\'s getting late."',answers:["Right, I have to go."]},
+  {ja:'まだ分からないと返す',context:'"Did you check the schedule?"',answers:["Oh, I don't know yet."]},
+  {ja:'いいと思う、やりたいと返す',context:'"What do you think about this?"',answers:["I think it's good, and I want to try it."]},
+];
+
+/* ===== STATE ===== */
+let currentMode = 'basic';
+let questions = [];
+let qIdx = 0;
+let selected = {s:null,v:null,o:null};
+let startTime = 0;
+let times = [];
+let unlocked = localStorage.getItem('speakup_unlocked') === '1';
+
+/* ===== VIEWS ===== */
+function showView(id) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+}
+
+function updateModeCards() {
+  const cards = ['modeOpinion','modeConnect','modeDialogue'];
+  const tags = ['tagOpinion','tagConnect','tagDialogue'];
+  cards.forEach((id,i) => {
+    const el = document.getElementById(id);
+    const tag = document.getElementById(tags[i]);
+    if (unlocked) {
+      el.classList.remove('locked');
+      tag.textContent = '解放済み';
+      tag.className = 'mode-tag free';
+    } else {
+      el.classList.add('locked');
+    }
+  });
+}
+
+/* ===== PASSWORD ===== */
+function checkPassword() {
+  const input = document.getElementById('gateInput').value.trim();
+  // Simple check - in production use a proper hash
+  if (input === 'SVO2026') {
+    unlocked = true;
+    localStorage.setItem('speakup_unlocked', '1');
+    updateModeCards();
+    showView('startView');
+  } else {
+    document.getElementById('gateError').textContent = 'パスワードが違います';
+  }
+}
+
+/* ===== START MODE ===== */
+function startMode(mode) {
+  if ((mode !== 'basic') && !unlocked) {
+    showView('gateView');
+    return;
+  }
+  currentMode = mode;
+  times = [];
+  qIdx = 0;
+
+  if (mode === 'basic') questions = shuffle([...BASIC_Q]).slice(0,10);
+  else if (mode === 'opinion') questions = shuffle([...OPINION_Q]);
+  else if (mode === 'connect') questions = shuffle([...CONNECT_Q]);
+  else if (mode === 'dialogue') questions = shuffle([...DIALOGUE_Q]);
+
+  document.getElementById('quizMode').textContent = {basic:'Basic',opinion:'Opinion',connect:'Connect',dialogue:'Dialogue'}[mode];
+  showView('quizView');
+  showQuestion();
+}
+
+/* ===== QUIZ ===== */
+function showQuestion() {
+  const q = questions[qIdx];
+  selected = {s:null,v:null,o:null};
+  startTime = Date.now();
+
+  document.getElementById('quizCount').textContent = `${qIdx+1} / ${questions.length}`;
+  document.getElementById('progressBar').style.width = `${(qIdx/questions.length)*100}%`;
+  document.getElementById('promptJa').textContent = q.ja;
+  document.getElementById('promptContext').textContent = q.context || '';
+  const labels = {basic:'日本語で考えてください',opinion:'シチュエーション',connect:'2文をつないでください',dialogue:'相手が言いました'};
+  document.getElementById('promptLabel').textContent = labels[currentMode] || '日本語で考えてください';
+
+  const rBox = document.getElementById('resultBox');
+  rBox.className = 'result-box';
+  document.getElementById('resultText').textContent = '選んでください';
+  document.getElementById('resultTime').textContent = '';
+  document.getElementById('resultFeedback').textContent = '';
+  document.getElementById('nextBtn').classList.remove('show');
+
+  if (currentMode === 'connect' || currentMode === 'dialogue') {
+    // Free input mode - hide SVO slots, show text input
+    document.querySelector('.svo-area').style.display = 'none';
+    rBox.innerHTML = '<input type="text" id="freeInput" style="width:100%;padding:12px;border:2px solid var(--border);border-radius:var(--radius);font-size:18px;font-family:inherit;text-align:center" placeholder="英語で入力...">' +
+      '<br><button onclick="checkFreeInput()" style="margin-top:12px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius);padding:10px 24px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit">チェック</button>' +
+      '<div class="result-time" id="resultTime"></div><div class="result-feedback" id="resultFeedback"></div>';
+    setTimeout(() => document.getElementById('freeInput')?.focus(), 100);
+  } else {
+    document.querySelector('.svo-area').style.display = 'block';
+    buildSlots(q);
+  }
+}
+
+function buildSlots(q) {
+  const sSlot = document.getElementById('slotS');
+  const vSlot = document.getElementById('slotV');
+  const oSlot = document.getElementById('slotO');
+
+  // Determine options from answers
+  const allS = [...new Set(q.answers.map(a => a[0]))];
+  const sOptions = ['I','You','It',"Don't know","Don't think","Don't want","Do you know","Do you think","Do you want"];
+  const relevantS = [...new Set([...allS, ...shuffle(SUBJECTS).slice(0,2)])].slice(0,4);
+
+  const allV = [...new Set(q.answers.map(a => a[1]).filter(v => v))];
+  const vPool = shuffle([...VERBS_POS,...VERBS_NEG]);
+  const relevantV = [...new Set([...allV, ...vPool.slice(0,3)])].slice(0,5);
+
+  const allO = [...new Set(q.answers.map(a => a[2]).filter(o => o))];
+  const oPool = ['that.','it.','so.','to go.','why.','yet.',"it's good.","it's okay.",'to try it.','check.'];
+  const relevantO = [...new Set([...allO, ...shuffle(oPool).slice(0,3)])].slice(0,5);
+
+  sSlot.innerHTML = '';
+  shuffle(relevantS).forEach(s => {
+    const btn = document.createElement('button');
+    btn.className = 'svo-btn';
+    btn.textContent = s;
+    btn.onclick = () => selectSlot('s', s, btn, sSlot);
+    sSlot.appendChild(btn);
+  });
+
+  vSlot.innerHTML = '';
+  shuffle(relevantV).forEach(v => {
+    const btn = document.createElement('button');
+    btn.className = 'svo-btn';
+    btn.textContent = v;
+    btn.onclick = () => selectSlot('v', v, btn, vSlot);
+    vSlot.appendChild(btn);
+  });
+
+  oSlot.innerHTML = '';
+  if (allO.length === 0 || (allO.length === 1 && allO[0] === '')) {
+    document.getElementById('stepO').style.display = 'none';
+  } else {
+    document.getElementById('stepO').style.display = 'block';
+    shuffle(relevantO).forEach(o => {
+      const btn = document.createElement('button');
+      btn.className = 'svo-btn';
+      btn.textContent = o;
+      btn.onclick = () => selectSlot('o', o, btn, oSlot);
+      oSlot.appendChild(btn);
+    });
+  }
+}
+
+function selectSlot(slot, val, btn, container) {
+  container.querySelectorAll('.svo-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  selected[slot] = val;
+  updateResult();
+}
+
+function updateResult() {
+  const s = selected.s, v = selected.v, o = selected.o;
+  const rBox = document.getElementById('resultBox');
+  const rText = document.getElementById('resultText');
+
+  const oVisible = document.getElementById('stepO').style.display !== 'none';
+
+  if (s && v && (!oVisible || o)) {
+    const sentence = [s, v, o].filter(Boolean).join(' ');
+    rText.textContent = sentence;
+    rBox.classList.add('filled');
+    checkAnswer(sentence);
+  } else {
+    const parts = [s, v, o].filter(Boolean);
+    rText.textContent = parts.length ? parts.join(' ') + ' ...' : '選んでください';
+    rBox.classList.remove('filled');
+  }
+}
+
+function checkAnswer(sentence) {
+  const q = questions[qIdx];
+  const validAnswers = q.answers.map(a => a.filter(Boolean).join(' '));
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+
+  const isCorrect = validAnswers.some(ans =>
+    sentence.toLowerCase().replace(/[.,!?]/g,'').trim() === ans.toLowerCase().replace(/[.,!?]/g,'').trim()
+  );
+
+  const rBox = document.getElementById('resultBox');
+  const feedback = document.getElementById('resultFeedback');
+  const timeEl = document.getElementById('resultTime');
+
+  if (isCorrect) {
+    rBox.classList.add('correct');
+    feedback.textContent = '正解！';
+    timeEl.textContent = `${elapsed}秒`;
+    times.push(parseFloat(elapsed));
+    document.getElementById('nextBtn').classList.add('show');
+    // Disable all buttons
+    document.querySelectorAll('.svo-btn').forEach(b => { b.onclick = null; b.classList.add('disabled'); });
+  }
+}
+
+function checkFreeInput() {
+  const input = document.getElementById('freeInput').value.trim();
+  const q = questions[qIdx];
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+
+  const isCorrect = q.answers.some(ans =>
+    input.toLowerCase().replace(/[.,!?]/g,'').trim() === ans.toLowerCase().replace(/[.,!?]/g,'').trim()
+  );
+
+  const feedback = document.getElementById('resultFeedback');
+  const timeEl = document.getElementById('resultTime');
+
+  if (isCorrect) {
+    feedback.textContent = '正解！';
+    feedback.style.color = 'var(--green)';
+    timeEl.textContent = `${elapsed}秒`;
+    times.push(parseFloat(elapsed));
+    document.getElementById('nextBtn').classList.add('show');
+  } else {
+    feedback.textContent = '模範解答: ' + q.answers[0];
+    feedback.style.color = 'var(--amber)';
+    timeEl.textContent = `${elapsed}秒`;
+    times.push(parseFloat(elapsed));
+    document.getElementById('nextBtn').classList.add('show');
+  }
+}
+
+function nextQuestion() {
+  qIdx++;
+  if (qIdx >= questions.length) {
+    showComplete();
+    return;
+  }
+  showQuestion();
+}
+
+function showComplete() {
+  const avg = times.length ? (times.reduce((a,b) => a+b, 0) / times.length).toFixed(1) : '—';
+  document.getElementById('avgTime').textContent = avg + '秒';
+
+  let msg = '';
+  if (avg < 2) msg = '素晴らしい！ほぼ反射で出ています。';
+  else if (avg < 4) msg = 'いい調子です。繰り返せばもっと速くなります。';
+  else msg = 'まずは正確に。繰り返すほど速くなります。';
+  document.getElementById('completeMsg').textContent = msg;
+
+  document.getElementById('progressBar').style.width = '100%';
+  showView('completeView');
+  try { gtag('event','speakup_complete',{mode:currentMode,avg_time:avg}); } catch(_) {}
+}
+
+function shuffle(arr) { for (let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];} return arr; }
+
+/* ===== INIT ===== */
+updateModeCards();
+</script>
+</body>
+</html>
