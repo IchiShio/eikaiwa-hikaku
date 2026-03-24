@@ -284,6 +284,7 @@
       .stem-card { padding: 16px; }
     }
   </style>
+<script src="/shared/xp.js" defer></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -921,6 +922,8 @@ function choose(selected) {
   }
   if (sessionLevel > oldLevel) showLevelUpToast();
   updateLevelBar();
+  // NativeReal shared XP
+  if (ok && window.NR) NR.addXP('grammar', lvIndex >= 0 ? lvIndex + 2 : 3);
 
   // Save progress
   const p = loadProgress();

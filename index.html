@@ -2053,6 +2053,7 @@
     }
 
   </style>
+<script src="/shared/xp.js" defer></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -3362,6 +3363,8 @@ function choose(selected) {
   }
   if (sessionLevel > oldLevel) showLevelUpToast();
   updateLevelBar();
+  // NativeReal shared XP
+  if (ok && window.NR) NR.addXP('listenup', lvIndex >= 0 ? lvIndex + 2 : 3);
 
   // 進捗をlocalStorageに保存
   const p     = loadProgress();

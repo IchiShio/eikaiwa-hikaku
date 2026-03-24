@@ -266,6 +266,7 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 .done-root{font-size:20px;font-weight:800;margin:20px 0 4px}
 .done-detail{font-size:14px;color:var(--text2);margin-bottom:40px}
 </style>
+<script src="/shared/xp.js" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -650,6 +651,8 @@ function choose(i){
   const f=w.formats[cur.fmtIdx];
   const isOk=i===f.correct;
   if(isOk) correctCount++;
+  // NativeReal shared XP
+  if(isOk && window.NR) NR.addXP('kioku', 3);
 
   try{gtag('event','kioku_quiz_answer',{root_name:ROOT_DATA.root,word:w.word,correct:isOk});}catch(_){}
 
@@ -728,6 +731,8 @@ function showComplete(){
   prog.rootProgress[ROOT_DATA.root]={correct:correctCount,total:totalCount,completedAt:new Date().toISOString().slice(0,10)};
   saveProgress(prog);
 
+  // NativeReal shared XP: root completion bonus
+  if(window.NR) NR.addXP('kioku', 15);
   try{gtag('event','kioku_root_complete',{root_name:ROOT_DATA.root,score:Math.round(correctCount/totalCount*100)});}catch(_){}
   showScreen('screenComplete');
 }
