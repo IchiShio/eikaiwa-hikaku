@@ -1409,6 +1409,57 @@
     .play-btn:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.38); }
     .play-btn.playing { background: rgba(255,255,255,0.2); }
 
+    /* ── MINI REPLAY BAR (fixed, mobile only, after answer) ── */
+    .mini-replay-bar {
+      display: none;
+      position: fixed;
+      top: 56px;
+      left: 0; right: 0;
+      z-index: 95;
+      background: linear-gradient(145deg, #0f3460 0%, #16213e 45%, #1a4a6e 100%);
+      padding: 8px 16px;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .mini-replay-bar.show { display: flex; }
+    .mini-replay-bar .mini-replay-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .mini-replay-bar .mini-replay-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.14);
+      border: 1.5px solid rgba(255,255,255,0.22);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 14px;
+      cursor: pointer;
+      min-height: 36px;
+      transition: background 0.15s;
+    }
+    .mini-replay-bar .mini-replay-btn:hover { background: rgba(255,255,255,0.22); }
+    @media (min-width: 1024px) {
+      .mini-replay-bar { display: none !important; }
+    }
+    /* モバイル: 回答後は元のaudio-cardを隠す */
+    @media (max-width: 1023px) {
+      .audio-card.hidden-mobile { display: none; }
+    }
+    @media (max-height: 700px) {
+      .mini-replay-bar { top: 48px; padding: 6px 14px; }
+    }
+
     /* ── QUESTION LABEL ── */
     .question-label {
       font-size: 14px;
@@ -1571,17 +1622,39 @@
     .next-btn:hover { filter: brightness(1.05); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,166,35,0.38); }
     .next-btn:active { transform: translateY(0); }
 
+    /* ── RESPONSIVE: MOBILE TIGHTENING (max-width: 639px) ── */
+    @media (max-width: 639px) {
+      .content      { padding: 14px 14px 40px; }
+      .quiz-meta    { margin-bottom: 10px; }
+      .audio-card   { padding: 16px 16px 14px; margin-bottom: 10px; border-radius: 14px; }
+      .waveform     { height: 30px; margin-bottom: 8px; }
+      .play-btn     { padding: 10px 16px; font-size: 13px; }
+      .question-label { font-size: 13px; margin-bottom: 8px; }
+      .options-list { gap: 5px; margin-bottom: 8px; }
+      .opt-btn      { padding: 11px 12px; font-size: 13px; min-height: 46px; border-radius: 10px; gap: 10px; }
+      .opt-num      { width: 26px; height: 26px; font-size: 12px; }
+      .explanation  { padding: 10px 12px; margin-bottom: 8px; border-radius: 10px; }
+      .expl-verdict { font-size: 13px; margin-bottom: 4px; }
+      .expl-text    { font-size: 12px; margin-bottom: 6px; }
+      .transcript   { padding: 10px 12px; margin-bottom: 8px; border-radius: 10px; }
+      .transcript-text { font-size: 14px; line-height: 1.7; margin-bottom: 6px; }
+      .transcript-ja   { font-size: 12px; }
+      .axis-feedback   { padding: 10px 12px; margin-bottom: 8px; border-radius: 10px; }
+      .next-btn     { margin-top: 6px; padding: 13px; font-size: 14px; border-radius: 12px; min-height: 48px; }
+    }
+
     /* ── RESPONSIVE: SHORT SCREEN (iPhone SE etc.) max-height: 700px ── */
     @media (max-height: 700px) {
       .app-header   { height: 48px; }
-      .audio-label  { margin-bottom: 6px; }
-      .waveform     { height: 28px; margin-bottom: 6px; }
-      .options-list { gap: 4px; }
-      .opt-btn      { padding: 10px 14px; }
-      .opt-num      { width: 28px; height: 28px; font-size: 13px; }
-      .quiz-meta    { margin-bottom: 8px; }
-      .audio-card   { margin-bottom: 8px; }
-      .next-btn     { margin-top: 6px; padding: 12px; }
+      .audio-label  { margin-bottom: 4px; }
+      .waveform     { height: 24px; margin-bottom: 4px; }
+      .options-list { gap: 3px; }
+      .opt-btn      { padding: 9px 12px; min-height: 42px; }
+      .opt-num      { width: 24px; height: 24px; font-size: 11px; }
+      .quiz-meta    { margin-bottom: 6px; }
+      .audio-card   { margin-bottom: 6px; padding: 12px 14px 10px; }
+      .next-btn     { margin-top: 4px; padding: 11px; }
+      .mini-replay-bar { top: 48px; padding: 6px 12px; }
     }
 
     /* ── RESPONSIVE: TABLET 640px+ ── */
@@ -2462,6 +2535,12 @@
 
 </div>
 
+<!-- ═══════════════ MINI REPLAY BAR (mobile, after answer) ═══════════════ -->
+<div class="mini-replay-bar" id="miniReplayBar">
+  <span class="mini-replay-label">英語音声</span>
+  <button class="mini-replay-btn" onclick="replay()">▶ もう一度聴く</button>
+</div>
+
 <!-- ═══════════════ QUIZ SCREEN ═══════════════ -->
 <div class="screen" id="quizScreen">
   <div class="content">
@@ -3149,6 +3228,8 @@ function loadQ() {
   audioEl.pause();
   audioEl.currentTime = 0;
 
+  document.getElementById('miniReplayBar').classList.remove('show');
+  document.getElementById('audioCard').classList.remove('hidden-mobile');
   document.getElementById('loadingView').classList.add('show');
   document.getElementById('questionView').classList.remove('show');
   document.getElementById('explEl').classList.remove('show');
@@ -3398,6 +3479,18 @@ function choose(selected) {
 
   // スティッキーバー更新
   updateStickyBar();
+
+  // ミニリプレイバー表示 & 元のaudio-card非表示（モバイル）
+  document.getElementById('miniReplayBar').classList.add('show');
+  document.getElementById('audioCard').classList.add('hidden-mobile');
+
+  // モバイル: Scriptを解説の直後に移動（再生ボタンとの距離を短縮）
+  var quizRight = document.querySelector('.quiz-right');
+  var transcriptElMoved = document.getElementById('transcriptEl');
+  var explElRef = document.getElementById('explEl');
+  if (quizRight && transcriptElMoved && explElRef) {
+    explElRef.after(transcriptElMoved);
+  }
 
   // 次へボタンが見えるように自動スクロール
   setTimeout(() => {
