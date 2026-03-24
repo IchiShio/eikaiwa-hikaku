@@ -378,7 +378,8 @@ function showQuestion() {
   document.getElementById('progressBar').style.width = `${(qIdx/questions.length)*100}%`;
   document.getElementById('promptJa').textContent = q.ja;
   document.getElementById('promptContext').textContent = q.context || '';
-  document.getElementById('promptLabel').textContent = q.context ? '相手が言いました' : '日本語で考えてください';
+  const labels = {basic:'日本語で考えてください',opinion:'シチュエーション',connect:'2文をつないでください',dialogue:'相手が言いました'};
+  document.getElementById('promptLabel').textContent = labels[currentMode] || '日本語で考えてください';
 
   const rBox = document.getElementById('resultBox');
   rBox.className = 'result-box';
