@@ -478,6 +478,46 @@
       padding-top: 16px; border-top: 1px solid var(--border);
     }
 
+    /* ── AUDIO PLAYER ── */
+    .audio-card {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--primary-bg); border: 1px solid rgba(99,102,241,0.15);
+      border-radius: 14px; padding: 14px 18px; margin-bottom: 16px;
+    }
+    .play-btn {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--primary); color: #fff; border: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; flex-shrink: 0; transition: all var(--t);
+      min-height: 48px;
+    }
+    .play-btn:hover { filter: brightness(1.15); transform: scale(1.05); }
+    .play-btn svg { width: 20px; height: 20px; fill: #fff; }
+    .waveform {
+      flex: 1; display: flex; align-items: center; gap: 3px; height: 32px;
+    }
+    .waveform .wbar {
+      width: 4px; border-radius: 2px; background: rgba(99,102,241,0.3);
+      transition: height 0.15s ease;
+    }
+    .waveform.playing .wbar { animation: waveAnim 0.6s ease-in-out infinite alternate; background: var(--primary); }
+    .waveform.playing .wbar:nth-child(1) { animation-delay: 0s; }
+    .waveform.playing .wbar:nth-child(2) { animation-delay: 0.08s; }
+    .waveform.playing .wbar:nth-child(3) { animation-delay: 0.16s; }
+    .waveform.playing .wbar:nth-child(4) { animation-delay: 0.24s; }
+    .waveform.playing .wbar:nth-child(5) { animation-delay: 0.32s; }
+    .waveform.playing .wbar:nth-child(6) { animation-delay: 0.4s; }
+    .waveform.playing .wbar:nth-child(7) { animation-delay: 0.48s; }
+    .waveform.playing .wbar:nth-child(8) { animation-delay: 0.56s; }
+    .waveform.playing .wbar:nth-child(9) { animation-delay: 0.64s; }
+    @keyframes waveAnim {
+      0% { height: 8px; }
+      100% { height: 28px; }
+    }
+    .accent-badge {
+      font-size: 11px; color: var(--text-3); white-space: nowrap;
+    }
+
     /* ── HINT ── */
     .hint-panel {
       display: none; background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.2);
@@ -822,6 +862,19 @@
       <div style="font-size:13px;color:var(--text-3)">問題を準備中...</div>
     </div>
     <div id="questionView" style="display:none">
+      <div class="audio-card" id="audioCard">
+        <button class="play-btn" id="playBtn" onclick="togglePlay()">
+          <svg id="playIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </button>
+        <div class="waveform" id="waveform">
+          <div class="wbar" style="height:12px"></div><div class="wbar" style="height:20px"></div>
+          <div class="wbar" style="height:16px"></div><div class="wbar" style="height:26px"></div>
+          <div class="wbar" style="height:10px"></div><div class="wbar" style="height:22px"></div>
+          <div class="wbar" style="height:18px"></div><div class="wbar" style="height:14px"></div>
+          <div class="wbar" style="height:24px"></div>
+        </div>
+        <span class="accent-badge" id="accentBadge"></span>
+      </div>
       <div class="word-card" id="wordCard">
         <div class="word-card-meta">
           <span class="q-counter" id="qCounter">1問目</span>
@@ -929,6 +982,55 @@ document.getElementById('statQ').textContent = DATA.length;
 // ─────────────────────────────────────────
 var STORAGE_KEY = 'wordsup_v1';
 var NUMS = ['A', 'B', 'C', 'D'];
+
+// ─────────────────────────────────────────
+// AUDIO
+// ─────────────────────────────────────────
+var audioEl = new Audio();
+var isPlaying = false;
+var playCount = 0;
+
+var ACCENT_INFO = [
+  { flag: '\uD83C\uDDFA\uD83C\uDDF8', label: '\u7C73\u56FD\u82F1\u8A9E' },
+  { flag: '\uD83C\uDDEC\uD83C\uDDE7', label: '\u82F1\u56FD\u82F1\u8A9E' },
+  { flag: '\uD83C\uDDFA\uD83C\uDDF8', label: '\u7C73\u56FD\u82F1\u8A9E' },
+  { flag: '\uD83C\uDDE6\uD83C\uDDFA', label: '\u8C6A\u5DDE\u82F1\u8A9E' },
+  { flag: '\uD83C\uDDEC\uD83C\uDDE7', label: '\u82F1\u56FD\u82F1\u8A9E' },
+];
+
+audioEl.addEventListener('ended', function() {
+  isPlaying = false;
+  setPlayBtn(false);
+  document.getElementById('waveform').classList.remove('playing');
+});
+
+function setPlayBtn(playing) {
+  var icon = document.getElementById('playIcon');
+  if (playing) {
+    icon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+  } else {
+    icon.innerHTML = '<polygon points="5,3 19,12 5,21"/>';
+  }
+}
+
+function togglePlay() {
+  if (isPlaying) {
+    audioEl.pause();
+    isPlaying = false;
+    setPlayBtn(false);
+    document.getElementById('waveform').classList.remove('playing');
+  } else {
+    if (!audioEl.src || audioEl.ended) {
+      audioEl.src = current.audio;
+    }
+    audioEl.play().then(function() {
+      isPlaying = true;
+      playCount++;
+      setPlayBtn(true);
+      document.getElementById('waveform').classList.add('playing');
+    }).catch(function() {});
+  }
+}
 
 var AXIS_USER_LABELS = {
   meaning: '単語の意味',
@@ -1359,6 +1461,11 @@ function pickQuestion() {
 // ─────────────────────────────────────────
 function loadQ() {
   answered = false;
+  audioEl.pause();
+  audioEl.currentTime = 0;
+  isPlaying = false;
+  setPlayBtn(false);
+  document.getElementById('waveform').classList.remove('playing');
   document.getElementById('loadingView').classList.add('show');
   document.getElementById('questionView').style.display = 'none';
   document.getElementById('explWrap').classList.remove('show');
@@ -1367,6 +1474,7 @@ function loadQ() {
 
   setTimeout(function() {
     current = pickQuestion();
+    playCount = 0;
     render();
     document.getElementById('loadingView').classList.remove('show');
     document.getElementById('questionView').style.display = 'block';
@@ -1379,6 +1487,18 @@ function render() {
   var axisLabel = AXIS_USER_LABELS[current.axis] || current.axis;
   var badge = document.getElementById('axisBadge');
   badge.textContent = current.isReview ? '\uD83D\uDD01 \u5FA9\u7FD2 \u30FB ' + axisLabel : axisLabel;
+
+  // Audio setup
+  audioEl.src = '';
+  setPlayBtn(false);
+  document.getElementById('waveform').classList.remove('playing');
+  if (current.audio) {
+    audioEl.src = current.audio;
+  }
+  // Accent badge
+  var qNum = parseInt((current.audio || '').match(/q(\d+)\.mp3/)?.[1] || '1');
+  var accent = ACCENT_INFO[(qNum - 1) % ACCENT_INFO.length];
+  document.getElementById('accentBadge').textContent = accent.flag + ' ' + accent.label;
 
   // Highlight target word in sentence
   var sentence = current.text;
