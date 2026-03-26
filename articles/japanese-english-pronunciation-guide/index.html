@@ -77,6 +77,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -89,21 +90,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -144,19 +183,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -649,14 +679,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -665,13 +706,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -696,37 +741,28 @@ img { max-width: 100%; height: auto; }
 <h1>日本人が絶対に苦手な英語発音5つと、正しい矯正方法【動画解説付き】</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「Rice（お米）」と言ったつもりが「Lice（シラミ）」に聞こえていた——。こんな経験、ありませんか？</p>
 
 
-
 <p>何度言い直しても伝わらない。相手の困惑した表情を見て、英語で話すこと自体が怖くなってしまう。実はこれ、あなただけの悩みではありません。国際音声学協会（International Phonetic Association）の分類によれば、英語には約44の音素がありますが、日本語の音素は約22種類。つまり、英語の音の約半分は日本語に存在しないのです。</p>
-
 
 
 <p>さらに、Educational Testing Service（ETS）が公開しているTOEFL Speaking スコアデータでは、日本人の平均スコアは30点満点中17点前後と、アジア圏の中でも低い水準にとどまっています。その主な原因の一つが「発音」です。</p>
 
 
-
 <p>しかし裏を返せば、苦手な音を正しく認識し、的確なトレーニングを行えば、発音は必ず改善できます。この記事では、日本人がとくに苦手な5つの発音を取り上げ、具体的な矯正方法を解説します。</p>
-
 
 
 <h2 id="sec-2">日本人が特に苦手な5つの英語発音：LとR・TとD・VとB</h2>
 
 
-
 <h3>① L と R の区別</h3>
 
 
-
 <p>日本人の英語発音で最も有名な弱点がこのペアです。日本語の「ラ行」は舌先が上の歯茎を一瞬はじく「弾き音」であり、英語のLにもRにも該当しません。</p>
-
 
 
 <p>正しい発音のポイント</p>
@@ -737,19 +773,15 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>練習用ミニマルペア：light / right、lead / read、long / wrong</p>
 
 <p>鏡の前で舌の位置を確認しながら、各ペアを1日10回ずつ繰り返してみてください。</p>
 
 
-
 <h3>② T と D の「弾き音化」と「無開放」</h3>
 
 
-
 <p>日本人は T と D をカタカナの「ト」「ド」のように常に母音つきで発音しがちです。しかし英語では、語末の T や D は舌を歯茎につけたまま破裂させずに止める「無開放（unreleased stop）」が一般的です。</p>
-
 
 
 <p>具体例</p>
@@ -760,17 +792,13 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>また、アメリカ英語では母音に挟まれた T が日本語のラ行に近い弾き音（flap t）になります。「water」が「ワラー」のように聞こえるのはこのためです。</p>
-
 
 
 <h3>③ V と B の区別</h3>
 
 
-
 <p>日本語話者は V を B と同じ両唇音で発音してしまいます。しかし英語の V は上の前歯を下唇の内側に軽く当てて振動させる「唇歯摩擦音」です。</p>
-
 
 
 <p>矯正のコツ</p>
@@ -781,73 +809,55 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>前歯が下唇に触れている感覚があれば正解です。「vest」と「best」を交互に10回繰り返す練習が効果的です。</p>
-
 
 
 <h3>④ θ（th）の音</h3>
 
 
-
 <p>「think」の th は舌先を上下の前歯の間に軽く挟んで息を出す無声音です。日本人は「s」で代用しがちですが、ネイティブには「sink（沈む）」に聞こえてしまいます。</p>
-
 
 
 <h3>⑤ æ（アとエの中間母音）</h3>
 
 
-
 <p>「apple」「cat」「map」に含まれるこの母音は、口を横に大きく広げながら「ア」と「エ」の中間を出す音です。日本語の「ア」で代用すると、「bat」と「but」の区別がつかなくなります。</p>
-
 
 
 <h2 id="sec-3">カタカナ英語から抜け出すための3ステップ</h2>
 
 
-
 <p>カタカナ英語が染みついている方に向けて、段階的な脱却法を紹介します。</p>
-
 
 
 <h3>ステップ1：「音の違い」を耳で認識する</h3>
 
 
-
 <p>まず、自分が区別できていない音を特定します。ワシントン大学のPatricia Kuhl教授の研究（2003年）によると、人間の脳は生後12か月頃までに母語にない音の区別能力が急激に低下します。しかし成人でも、意識的なリスニング訓練で音素の識別能力は向上することが同研究で示されています。</p>
-
 
 
 <p>おすすめは、ミニマルペアのリスニングクイズです。「ELSA Speak」や「Minimal Pairs」などのアプリを使い、1日10分、聞き分け練習を行いましょう。</p>
 
 
-
 <h3>ステップ2：口の筋肉を「正しい位置」に覚えさせる</h3>
-
 
 
 <p>聞き分けができたら、次は発音です。ここで重要なのは鏡やスマホのインカメラで口と舌の動きを目視確認することです。英語の発音はスポーツと同じで、正しいフォームの反復が不可欠です。</p>
 
 
-
 <p>YouTubeの「Rachel's English」や「English with Lucy」などのチャンネルでは、口の断面図やスロー映像付きで各音素を解説しており、独学でも正しいフォームを学べます。（※記事冒頭の「動画解説付き」は、これらの無料動画リソースの活用を指しています。）</p>
-
 
 
 <h3>ステップ3：文単位・会話単位で定着させる</h3>
 
 
-
 <p>単音の練習だけでは、実際の会話で使えません。短い文章を使ったシャドーイングで、リズム・イントネーション・連結（リンキング）ごと体に染み込ませます。教材は「TED Talks」の字幕付き動画が最適です。1本3〜5分のスピーチを選び、同じ動画を1週間繰り返しましょう。</p>
-
 
 
 <h2 id="sec-4">発音矯正に強いサービスとその選び方</h2>
 
 
-
 <p>独学に限界を感じたら、プロの力を借りるのが最短ルートです。発音矯正サービスを選ぶ際は、以下の3つの基準をチェックしてください。</p>
-
 
 
 <p>① 音声学の知識を持つ講師がいるか</p>
@@ -855,11 +865,9 @@ img { max-width: 100%; height: auto; }
 <p>単に「ネイティブだから教えられる」ではなく、音素記号や調音方法を論理的に説明できる講師がいるサービスを選びましょう。英語コーチングサービスの中には、音声学の資格（TESOL、Certificateなど）を持つ講師が在籍し、一人ひとりの発音課題を分析した上で個別カリキュラムを組んでくれるところがあります。</p>
 
 
-
 <p>② 録音フィードバック機能があるか</p>
 
 <p>自分の発音を客観的に評価するには、録音→講師のフィードバック→再練習のサイクルが欠かせません。オンライン英会話サービスの中には、レッスン録音が自動保存され、復習に活用できるものがあります。</p>
-
 
 
 <p>③ 短期集中型か、継続型か</p>
@@ -867,13 +875,10 @@ img { max-width: 100%; height: auto; }
 <p>発音改善には「短期間で集中的に口のフォームを矯正→その後はオンライン英会話で実践」という組み合わせが効率的です。英語コーチング（2〜3か月の短期集中）で土台を作り、その後オンライン英会話で会話量を確保するハイブリッド型が、多くの学習者に成果を出しています。</p>
 
 
-
 <h2 id="sec-5">3か月で発音が変わる自主練法</h2>
 
 
-
 <p>最後に、お金をかけずに今日から始められる3か月プランを紹介します。</p>
-
 
 
 <p>【1か月目】音素トレーニング期</p>
@@ -885,7 +890,6 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>【2か月目】シャドーイング期</p>
 
 <ul>
@@ -893,7 +897,6 @@ img { max-width: 100%; height: auto; }
 <li>スマホで自分の声を録音し、原音と聴き比べる</li>
 <li>苦手な単語・フレーズをノートに書き出し、重点的に練習</li>
 </ul>
-
 
 
 <p>【3か月目】実践アウトプット期</p>
@@ -905,13 +908,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>ロンドン大学のリサーチ（<a href="https://www.ucl.ac.uk/news/2009/aug/how-long-does-it-take-form-habit" target="_blank" rel="noopener">Lally et al</a>., 2009年、European Journal of Social Psychology掲載）によれば、新しい習慣が自動化されるまで平均66日かかります。3か月続ければ、正しい発音が「考えなくても出る」状態に近づけるのです。</p>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: 大人になってからでも英語の発音は矯正できますか？</p>
@@ -919,11 +919,9 @@ img { max-width: 100%; height: auto; }
 <p>A: はい、できます。成人の脳にも可塑性があり、意識的な訓練で音素の聞き分け・発音ともに改善することが複数の研究で確認されています。</p>
 
 
-
 <p>Q: 発音矯正にはどのくらいの期間が必要ですか？</p>
 
 <p>A: 個人差はありますが、毎日15〜20分の練習を続ければ、3か月程度で周囲が変化に気づくレベルになる方が多いです。</p>
-
 
 
 <p>Q: LとRの発音を簡単に見分けるコツはありますか？</p>
@@ -931,11 +929,9 @@ img { max-width: 100%; height: auto; }
 <p>A: Lは舌先が前歯の裏に触れ、Rは舌先がどこにも触れません。「舌が触れるかどうか」を基準にすると区別しやすくなります。</p>
 
 
-
 <p>Q: 発音矯正アプリだけで十分ですか？</p>
 
 <p>A: 基礎練習にはアプリが有効ですが、実際の会話で通じるかどうかの確認には、講師からのリアルタイムフィードバックが重要です。アプリと英会話レッスンの併用がおすすめです。</p>
-
 
 
 <p>Q: イギリス英語とアメリカ英語、どちらの発音を学ぶべきですか？</p>
@@ -943,15 +939,12 @@ img { max-width: 100%; height: auto; }
 <p>A: どちらでも構いませんが、学習教材が豊富で日本人に馴染みがあるのはアメリカ英語です。大切なのはどちらかに統一して練習することです。</p>
 
 
-
 <p>Q: カタカナ英語のクセが強すぎて自信がありません。どこから始めるべきですか？</p>
 
 <p>A: まずは本記事のステップ1「音の違いを耳で認識する」から始めてください。聞き分けができるようになるだけで、発音は自然と改善に向かいます。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
-
 
 
 <ul>
@@ -961,7 +954,6 @@ img { max-width: 100%; height: auto; }
 <li>発音矯正サービスは 音声学の知識を持つ講師・録音フィードバック・短期集中型 を基準に選ぶ</li>
 <li>毎日15〜20分、3か月の継続 で発音は確実に変わる</li>
 </ul>
-
 
 
 <p>【次のステップ】</p>
@@ -1058,5 +1050,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

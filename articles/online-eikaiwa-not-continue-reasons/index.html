@@ -41,6 +41,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -53,21 +54,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -108,19 +147,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -683,14 +713,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -699,13 +740,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -730,32 +775,22 @@ img { max-width: 100%; height: auto; }
 <h1>オンライン英会話が続かない12の理由と、3ヶ月以上続けるための対策</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「今度こそ英語を話せるようになる」と意気込んでオンライン英会話に申し込んだのに、気づけば1ヶ月で予約が途絶え、2ヶ月目にはアプリすら開かなくなっていた——。</p>
 
 
-
 <p>もし今、あなたがそんな経験を振り返って自分を責めているなら、まず安心してください。あなただけではありません。</p>
-
 
 
 <p>オンライン英会話サービスの調査によれば、利用者の約8割が半年以内に退会するとも指摘されており（<a href="https://www.sma-world.com/world-english-online/online-frustration/" rel="nofollow" target="_blank">World English Online</a>）、続けることの難しさは多くのユーザーが実感しています。つまり「続かない」のは意志の弱さではなく、仕組みと戦略の問題です。</p>
 
 
-
 <p>この記事では、30代社会人が陥りやすい「続かない理由」を12個に整理し、挫折パターン別の対策、そして3ヶ月以上継続している人だけが実践していることを具体的にお伝えします。</p>
 
 
-
-
-
-
 <h2 id="sec-2">続かない理由TOP12——データと実例で見る挫折の正体</h2>
-
 
 
 <p>オンライン英会話サービスの利用者からよく聞かれる声や、各スクールの公開するよくある相談事例をもとに整理すると、挫折理由は以下の12個に集約されます。</p>
@@ -778,29 +813,19 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>多くのユーザーが短期間でオンライン英会話を離れている実情があります。特に「疲れて後回し」のパターンは、仕事帰りの夜間帯にレッスンを設定している場合に起きやすく、繁忙期に入ると「今日だけ」が常態化して退会につながるケースが多いとされています。</p>
-
-
-
-
 
 
 <h2 id="sec-3">挫折のパターン別・対策法</h2>
 
 
-
 <p>12の理由を大きく3つの挫折パターンに分類し、それぞれ具体的な対策を示します。</p>
-
 
 
 <h3>パターンA：生活リズム型（理由1・4・5・8が該当）</h3>
 
 
-
 <p>「時間がない」「疲れている」が本質です。対策はレッスンの位置づけを"予定"から"習慣"に変えることです。</p>
-
 
 
 <ul>
@@ -810,13 +835,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>パターンB：成長実感不足型（理由2・6・7・9・10が該当）</h3>
 
 
-
 <p>「やっても変わらない気がする」と感じるパターンです。問題の根本は成長の"見える化"ができていないことにあります。</p>
-
 
 
 <ul>
@@ -826,13 +848,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>パターンC：孤独・自走困難型（理由3・11・12が該当）</h3>
 
 
-
 <p>一人で計画を立て、一人で続ける孤独さが原因です。</p>
-
 
 
 <ul>
@@ -841,16 +860,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
-
-
-
 <h2 id="sec-4">3ヶ月継続できる人だけがやっていること</h2>
 
 
-
 <p>オンライン英会話を3ヶ月以上続けている人へのインタビュー（筆者が運営する英語学習ブログで実施・回答者87名）から、共通する行動を3つ抽出しました。</p>
-
 
 
 <p>① レッスンの「ゴール」を毎回1つ決めている</p>
@@ -858,11 +871,9 @@ img { max-width: 100%; height: auto; }
 <p>「今日は過去形を5回使う」「相手に質問を3回する」など、25分の中で小さな達成感を積み上げています。</p>
 
 
-
 <p>②「完璧に話す」を捨てている</p>
 
 <p>ある継続者は「文法ミスをしても会話が成立した瞬間を"成功"とカウントするようにしたら、レッスンが楽しくなった」と語っています。応用言語学者のスティーブン・クラッシェンが提唱した「情意フィルター仮説」でも、不安が低いほど言語習得が進むとされています。</p>
-
 
 
 <p>③ 学習記録を"1行だけ"つけている</p>
@@ -870,12 +881,7 @@ img { max-width: 100%; height: auto; }
 <p>長い日記ではなく、「6:30 Lesson / Topic: Travel / New word: itinerary」のように1行だけ記録する。これだけで「自分は続けている」という自己効力感が生まれます。</p>
 
 
-
-
-
-
 <h2 id="sec-5">自分の継続力に合ったサービスの選び方</h2>
-
 
 
 <p>最後に、挫折パターン別におすすめのサービスタイプを整理します。</p>
@@ -889,17 +895,10 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>大切なのは、「一番人気のサービス」ではなく「自分が続けられるサービス」を選ぶことです。多くのサービスが無料体験を提供しているので、2〜3社を試してから決めても遅くありません。</p>
 
 
-
-
-
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: オンライン英会話は毎日やらないと効果がないですか？</p>
@@ -907,11 +906,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 毎日でなくても効果はあります。週3回でも継続した人の方が、毎日やって1ヶ月で辞めた人より圧倒的に伸びます。大切なのは頻度より継続期間です。</p>
 
 
-
 <p>Q: 話すことがなくて沈黙になるのが怖いのですが？</p>
 
 <p>A: レッスン前に「今日話すネタ」を1つだけ日本語でメモしておくと沈黙を防げます。講師側も慣れているので、沈黙を過度に恐れる必要はありません。</p>
-
 
 
 <p>Q: オンライン英会話だけで英語は話せるようになりますか？</p>
@@ -919,11 +916,9 @@ img { max-width: 100%; height: auto; }
 <p>A: レッスンだけでは不十分です。レッスン外でのインプット（リスニング・単語学習）を組み合わせることで、効果は2〜3倍になるとされています。</p>
 
 
-
 <p>Q: 英語コーチングとオンライン英会話の違いは何ですか？</p>
 
 <p>A: オンライン英会話は「練習の場」、英語コーチングは「計画管理＋練習の場」です。自分で計画を立てられる人は英会話のみで十分ですが、管理が苦手なら短期間コーチングを活用するのが効果的です。</p>
-
 
 
 <p>Q: 挫折した後にもう一度始めるのは意味がありますか？</p>
@@ -931,18 +926,12 @@ img { max-width: 100%; height: auto; }
 <p>A: 大いに意味があります。以前の経験で「自分が続かない原因」がわかっているため、対策を打った上で再開すれば成功確率は格段に上がります。</p>
 
 
-
 <p>Q: 講師は固定した方がいいですか？毎回変えた方がいいですか？</p>
 
 <p>A: 最初の1ヶ月は2〜3人のお気に入り講師を固定し、慣れてきたら色々な講師を試すのがおすすめです。固定講師がいると安心感から継続しやすくなります。</p>
 
 
-
-
-
-
 <h2 id="sec-7">まとめ</h2>
-
 
 
 <ul>
@@ -953,13 +942,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>次のステップ</h3>
 
 
-
 <p>まずは今日、以下の3つだけやってみてください。</p>
-
 
 
 <ol>
@@ -967,7 +953,6 @@ img { max-width: 100%; height: auto; }
 <li>2. 対策を1つだけ選び、スマホのリマインダーに登録する</li>
 <li>3. 気になるサービスの無料体験を1つ予約する</li>
 </ol>
-
 
 
 <p>「続けられなかった過去」は失敗ではなく、次に続けるためのデータです。今度こそ、3ヶ月後に「続いている自分」に出会いましょう。</p>
@@ -1071,5 +1056,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

@@ -39,6 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -51,21 +52,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -106,19 +145,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -648,14 +678,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -664,13 +705,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -695,9 +740,7 @@ img { max-width: 100%; height: auto; }
 <h1>忙しい社会人がオンライン英会話を続ける方法【1日15分でOKな現実プラン】</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「今日も残業で、レッスン予約をキャンセルしてしまった……」</p>
@@ -705,125 +748,94 @@ img { max-width: 100%; height: auto; }
 <p>「月額料金だけ払って、今月まだ1回しか受けていない……」</p>
 
 
-
 <p>もしあなたがこんな経験をしているなら、安心してください。あなただけではありません。</p>
-
 
 
 <p>オンライン英会話サービスの調査では、半年以内に過半数の利用者が学習頻度を大幅に落とすという傾向が複数の調査で報告されています（<a href="https://www.sma-world.com/world-english-online/online-frustration/" rel="nofollow" target="_blank">World English Online調査</a>など）。つまり、「続けられない」のはあなたの意志が弱いからではなく、仕組みの問題です。</p>
 
 
-
 <p>この記事では、残業が多い20〜40代の社会人に向けて、「1日15分・週3回」から無理なくオンライン英会話を続けるための超現実的なプランをお伝えします。精神論ではなく、今日から使える具体策だけをまとめました。</p>
-
 
 
 <h2 id="sec-2">忙しい人がオンライン英会話を諦める「本当の理由」3つ</h2>
 
 
-
 <p>「忙しいから続けられない」——これは表面的な理由にすぎません。本当の原因を掘り下げると、次の3つに集約されます。</p>
-
 
 
 <h3>理由①：1回25分のレッスンが「重い」</h3>
 
 
-
 <p>多くのオンライン英会話サービスは1レッスン25分が標準です。しかし、予約・接続準備・復習まで含めると実質40〜50分かかります。残業後の疲れた体には、この「心理的な重さ」が最大の敵です。学習継続の観点では、1回あたりの負荷を下げることが習慣化のカギとされています。</p>
-
 
 
 <h3>理由②：「毎日やらなきゃ」という完璧主義</h3>
 
 
-
 <p>「せっかく毎日プランに申し込んだのだから、毎日受けないともったいない」。この思考が逆にプレッシャーとなり、1日休むと罪悪感で一気にやめてしまう——いわゆる「全か無か思考」に陥るパターンです。</p>
-
 
 
 <h3>理由③：成長実感がないまま作業化する</h3>
 
 
-
 <p>予習なし・復習なしでレッスンを「こなす」だけでは、英語力の伸びを実感しにくくなります。TESOL（英語教授法）の分野では、学習の定着には「間隔を空けた反復（Spaced Repetition）」が不可欠とされています。レッスンだけ受けて振り返らないのは、穴の空いたバケツに水を注ぐようなものです。</p>
-
 
 
 <p>まずはこの3つの「本当の原因」を自覚することが、続けるための第一歩になります。</p>
 
 
-
 <h2 id="sec-3">週3回・1日15分から始める「超現実的プラン」</h2>
-
 
 
 <p>ここからは、忙しい社会人でも無理なく続けられる具体的なプランを紹介します。ポイントは「ハードルを限界まで下げる」ことです。</p>
 
 
-
 <h3>ステップ1：レッスンは「週3回・15分」に設定する</h3>
-
 
 
 <p>最近は1レッスン10〜15分のコースを用意しているサービスも増えています（後述）。まずは月・水・金など曜日を固定し、週3回だけ確保しましょう。第二言語習得研究の知見では、週2〜3回の短時間学習でも、継続すれば週7回の不定期学習より定着率が高いことが報告されています。</p>
 
 
-
 <h3>ステップ2：レッスン以外の日は「5分の独り言英語」</h3>
-
 
 
 <p>レッスンがない日は、通勤中や入浴中に英語で独り言を言うだけでOKです。「Today was tough, but I finished my report.」のように、その日の出来事を1〜2文つぶやく練習です。これだけで「英語に触れない日をゼロにする」という最低ラインを守れます。</p>
 
 
-
 <h3>ステップ3：月に1回、録音で成長を確認する</h3>
-
 
 
 <p>スマホのボイスメモで「1分間の自己紹介」を毎月録音してください。1ヶ月前の自分と比較すると、語彙・流暢さの変化に必ず気づきます。この小さな成功体験が、継続の最大の燃料になります。</p>
 
 
-
 <h2 id="sec-4">通勤・昼休み・寝る前——時間別スキマ活用法</h2>
-
 
 
 <p>「まとまった時間がない」なら、すでにある生活リズムに英語を組み込むのが最も効果的です。</p>
 
 
-
 <h3>【通勤時間（15〜30分）】インプットの黄金タイム</h3>
-
 
 
 <p>電車通勤なら、シャドーイング（音声を聞きながら少し遅れて真似する練習）が最適です。イヤホンとスマホがあれば完結します。おすすめ教材は「BBC Learning English（無料）」や「ELSA Speak（発音AI分析アプリ）」。車通勤の方は音声をスピーカーで流し、声に出して練習できるのでむしろ好都合です。</p>
 
 
-
 <h3>【昼休み（10〜15分）】短時間レッスンのベストタイミング</h3>
-
 
 
 <p>昼食後の10分でオンライン英会話のレッスンを1本入れるのは、実は非常に効率的です。NativeCamp（ネイティブキャンプ）は予約不要で5分からレッスン可能、Kimini英会話は15分の短時間コースを用意しています。会議室や車の中など、静かな場所を確保できれば昼休みは穴場の学習時間です。</p>
 
 
-
 <h3>【寝る前（10〜15分）】復習＋軽いアウトプット</h3>
-
 
 
 <p>寝る前は新しいことを詰め込むよりも、その日のレッスンで出てきたフレーズを3つだけノートに書く復習が効果的です。記憶研究の分野では、就寝前の学習は睡眠中の記憶定着が促進されることが複数の研究で確認されています（Diekelmann & Born, 2010）。重い勉強ではなく、「3フレーズだけ書いて寝る」をルーティンにしましょう。</p>
 
 
-
 <h2 id="sec-5">忙しい社会人に最も向いているオンライン英会話サービスはどれか</h2>
 
 
-
 <p>すべてのサービスが「忙しい人向け」ではありません。以下の3つの基準で選ぶと失敗しにくくなります。</p>
-
 
 
 <p>① 予約不要で「今すぐ」受けられるか</p>
@@ -831,11 +843,9 @@ img { max-width: 100%; height: auto; }
 <p>→ 残業で予定が読めない人には、予約制よりも「思い立ったらすぐ受けられる」仕組みが必須です。NativeCampはこの点で圧倒的に強く、24時間いつでも予約なしで受講可能です。</p>
 
 
-
 <p>② 1回15分以下のレッスンがあるか</p>
 
 <p>→ Kimini英会話は10分・15分プランを提供。Cambly（キャンブリー）も15分レッスンに対応しており、ネイティブ講師と短時間で集中的に話せます。</p>
-
 
 
 <p>③ 学習の方向性を相談できるサポートがあるか</p>
@@ -843,13 +853,10 @@ img { max-width: 100%; height: auto; }
 <p>→ 独学に不安がある方は、英語コーチングサービス（プログリット、トライズなど）も選択肢に入ります。専属コンサルタントが学習計画を作成し、進捗管理までしてくれるため、「何をやればいいかわからない」という迷いがなくなります。月額は高めですが、忙しい人ほど「迷う時間」をお金で解決する価値はあります。</p>
 
 
-
 <p>まずは無料体験で2〜3社試し、「これなら続けられそう」と直感的に感じたサービスを選ぶのが、結局は最も確実な方法です。</p>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: オンライン英会話は毎日やらないと意味がないですか？</p>
@@ -857,11 +864,9 @@ img { max-width: 100%; height: auto; }
 <p>A: いいえ。週3回でも継続すれば効果はあります。第二言語習得研究では、頻度よりも「長期間にわたって続けること」が重要とされています。</p>
 
 
-
 <p>Q: 1回15分のレッスンで本当に英語力は伸びますか？</p>
 
 <p>A: 伸びます。ただし、レッスン外での5分間の復習をセットにすることで定着率が大幅に向上します。15分のレッスン＋5分の復習を習慣化しましょう。</p>
-
 
 
 <p>Q: 早朝と夜、どちらの時間帯がおすすめですか？</p>
@@ -869,11 +874,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 残業リスクがない早朝のほうがスケジュールが安定しやすいです。ただし、無理な早起きは逆効果なので、自分の生活リズムに合う方を選んでください。</p>
 
 
-
 <p>Q: オンライン英会話と英語コーチング、忙しい社会人にはどちらが向いていますか？</p>
 
 <p>A: 自分で学習管理ができる方はオンライン英会話、何から始めればいいかわからない方は英語コーチングが向いています。コーチングは費用が高い分、時間効率は格段に上がります。</p>
-
 
 
 <p>Q: モチベーションが続かないときはどうすればいいですか？</p>
@@ -881,19 +884,15 @@ img { max-width: 100%; height: auto; }
 <p>A: モチベーションに頼らず、「曜日と時間を固定する」仕組みで対処しましょう。歯磨きと同じように、考えなくても体が動く状態を目指すのがコツです。</p>
 
 
-
 <p>Q: 英語がほとんど話せない初心者でも15分レッスンで大丈夫ですか？</p>
 
 <p>A: 大丈夫です。むしろ初心者は25分間英語を話し続けるのが苦痛になりやすいため、15分の短時間レッスンのほうが挫折しにくくおすすめです。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
 
 
-
 <p>この記事のポイントを整理します。</p>
-
 
 
 <ul>
@@ -905,15 +904,12 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>今日できる「次のステップ」</h3>
-
 
 
 <p>① 気になるサービスの無料体験を1つ申し込む（NativeCamp・Kimini・Camblyなど）</p>
 
 <p>② スマホのカレンダーに「月・水・金の○時」とレッスン枠を登録する</p>
-
 
 
 <p>この2つだけで、「いつか始めよう」が「今日始めた」に変わります。完璧なタイミングを待つ必要はありません。まずは15分だけ、試してみてください。</p>
@@ -1017,5 +1013,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

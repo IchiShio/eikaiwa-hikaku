@@ -77,6 +77,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -89,21 +90,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -144,19 +183,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -649,14 +679,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -665,13 +706,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -696,41 +741,31 @@ img { max-width: 100%; height: auto; }
 <h1>英語スピーキングが伸びない人の3つの共通点と、今日からできる改善法</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「オンライン英会話を3ヶ月以上続けているのに、全然話せるようになった気がしない」——そう感じているのは、あなただけではありません。</p>
 
 
-
 <p>レッスン中は先生の誘導で何とか会話が成立する。でも、いざ自分から話そうとすると言葉が出てこない。毎回同じフレーズばかり使ってしまい、成長している実感がない。こうした悩みは、英会話学習者の大多数が経験するものです。</p>
-
 
 
 <p>実際、英語学習サービスを提供する英会話レッスンを継続しているにも関わらず「スピーキング力の伸びを実感できない」という悩みは非常に多く、「話す練習はしているが上達しない」という声は学習者の間に広く見られます。</p>
 
 
-
 <p>しかし安心してください。伸びないのは才能やセンスの問題ではなく、学習の「やり方」に共通するパターンがあるだけです。本記事では、スピーキングが伸びない人に共通する3つの原因を解き明かし、今日から実践できる具体的な改善法をお伝えします。</p>
-
 
 
 <h2 id="sec-2">【共通点①】インプット不足を「錯覚」している——実は圧倒的に足りていない</h2>
 
 
-
 <p>スピーキングが伸びない人の多くが、「自分はインプットは十分やった。あとはアウトプットの場数を踏めばいい」と考えています。しかし、これは大きな錯覚です。</p>
-
 
 
 <p>第二言語習得研究の第一人者であるスティーブン・クラッシェンは「インプット仮説」の中で、言語習得の基盤は大量の理解可能なインプットにあると提唱しました。さらに、応用言語学者のポール・ネーションによる研究（2007年）では、流暢なスピーキングには少なくとも6,000〜7,000語族の語彙知識が必要とされています。一方、日本の高校卒業時点での平均的な運用語彙は約3,000語前後。つまり、「なんとなく知っている」レベルでは、スピーキングに使える語彙がまったく足りていないのです。</p>
 
 
-
 <p>典型的な「錯覚パターン」はこうです。</p>
-
 
 
 <ul>
@@ -740,25 +775,19 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>「知っている」と「使える」の間には巨大なギャップがあります。このギャップを埋めないまま英会話レッスンに臨んでも、使える表現の幅が広がらないのは当然です。まずは、「自分のインプットは本当に"使えるレベル"に達しているか？」と問い直すことが改善の第一歩になります。</p>
-
 
 
 <h2 id="sec-3">【共通点②】アウトプット「だけ」では伸びない——フィードバックなき練習の落とし穴</h2>
 
 
-
 <p>「とにかく話す量を増やせばいい」という考えも、半分正解で半分不正解です。</p>
-
 
 
 <p>言語学者メリル・スウェインの「アウトプット仮説」では、アウトプットの重要な役割として「自分の言語能力のギャップに気づくこと」を挙げています。つまり、話すこと自体が目的ではなく、話してみて「言えなかった部分」を認識し、修正するプロセスにこそ価値があるのです。</p>
 
 
-
 <p>ところが、多くの学習者のオンライン英会話の受け方はこうなっています。</p>
-
 
 
 <ol>
@@ -769,61 +798,46 @@ img { max-width: 100%; height: auto; }
 </ol>
 
 
-
 <p>このサイクルでは、毎回同じ「快適な範囲（コンフォートゾーン）」の中で話しているだけなので、スピーキング力は停滞します。British Councilの学習ガイドラインでも、効果的な言語学習には「練習→フィードバック→修正→再練習」のサイクルが不可欠だと明記されています。</p>
-
 
 
 <p>英語コーチングサービスが近年注目されている理由の一つは、まさにこの「フィードバックと修正のサイクル」を専門のコーチが設計してくれる点にあります。独学で同じサイクルを回すことも可能ですが、「何を修正すべきか」を客観的に指摘してもらえる環境があるかどうかで、成長スピードは大きく変わります。</p>
 
 
-
 <h2 id="sec-4">【共通点③】レッスン外の「自主練」がゼロ——1日15分で変わる独り言トレーニング</h2>
-
 
 
 <p>3つ目の共通点は、英会話レッスン以外の時間にスピーキング練習をまったくしていないことです。</p>
 
 
-
 <p>考えてみてください。週2回・25分のオンライン英会話を受けたとして、1週間のスピーキング時間はたったの50分です。月に換算しても約3.5時間。これは、英語圏の子どもが1日で母語に触れる時間よりも遥かに少ない量です。</p>
-
 
 
 <p>レッスンだけに頼るのではなく、毎日の「自主練」を組み込むことで初めて上達のスピードが加速します。以下に、今日からすぐに始められる「1日15分の3ステップ自主練法」をご紹介します。</p>
 
 
-
 <h3>ステップ1：独り言スピーキング（5分）</h3>
-
 
 
 <p>目の前の状況や今日の出来事を英語で実況中継します。たとえば、朝の支度をしながら"I'm making coffee now. After this, I'll check my emails and leave home around 8."のように声に出します。正確さより「英語で考える回路を起動する」ことが目的です。</p>
 
 
-
 <h3>ステップ2：瞬間英作文（5分）</h3>
-
 
 
 <p>日本語の短文を見て、瞬時に英語に変換する練習です。市販の教材やアプリを使い、「昨日、友達と映画を見に行った」→ "I went to see a movie with my friend yesterday." のように繰り返します。このトレーニングは、英語講師の森沢洋介氏が提唱し、文法知識を「使える状態」に変換する効果が広く認められています。</p>
 
 
-
 <h3>ステップ3：レッスンの予習・復習（5分）</h3>
-
 
 
 <p>次のレッスンのトピックについて「言いたいこと」を3文だけ英語で準備します。あるいは、前回のレッスンで言えなかった表現を1つ調べてノートに書きます。このたった5分の積み重ねが、レッスンの質を劇的に変えます。</p>
 
 
-
 <h2 id="sec-5">オンライン英会話の効果を3倍にする受け方</h2>
 
 
-
 <p>自主練と組み合わせることで、オンライン英会話レッスンの効果は飛躍的に高まります。以下の4つのポイントを意識してみてください。</p>
-
 
 
 <p>① レッスン前に「今日使いたいフレーズ」を3つ決める</p>
@@ -831,11 +845,9 @@ img { max-width: 100%; height: auto; }
 <p>新しい表現を意識的に使う目標を設定するだけで、レッスンが「ただの雑談」から「練習の場」に変わります。</p>
 
 
-
 <p>② 先生に「間違いを積極的に指摘してほしい」と伝える</p>
 
 <p>多くの講師はデフォルトでは会話を止めません。レッスン冒頭で"Could you correct my mistakes during the lesson?"と一言伝えるだけで、フィードバックの質が格段に上がります。</p>
-
 
 
 <p>③ フリートークよりもテーマ指定型を選ぶ</p>
@@ -843,19 +855,15 @@ img { max-width: 100%; height: auto; }
 <p>自由会話は楽しい反面、毎回同じ話題・同じ表現に偏りがちです。教材やニュース記事を使ったテーマ指定型レッスンにすると、新しい語彙や表現に強制的に触れる機会が増えます。</p>
 
 
-
 <p>④ レッスン後10分以内に振り返りメモを書く</p>
 
 <p>「言えなかった表現」「新しく学んだ表現」を3つずつメモします。記憶が鮮明なうちに書くことが重要で、エビングハウスの忘却曲線の研究が示すように、学習直後の復習は記憶の急速な忘却を防ぎ、定着率を大きく高めます。</p>
 
 
-
 <p>これらの工夫は、レッスン単体の効果を体感的に3倍以上に引き上げてくれます。より体系的に学習サイクルを管理したい方は、専属コーチがつく英語コーチングサービスや、カリキュラムが充実したオンライン英会話（レアジョブ、DMM英会話、Camblyなど）を活用するのも有効な選択肢です。</p>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: 英語のスピーキングはどのくらいの期間で上達しますか？</p>
@@ -863,11 +871,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 個人差はありますが、適切なインプットと毎日15分の自主練を組み合わせた場合、2〜3ヶ月で「言いたいことが少し出てくる」変化を実感する学習者が多いです。</p>
 
 
-
 <p>Q: 英語が口から出てこないのはなぜですか？</p>
 
 <p>A: 最大の原因は「知っているけど使える状態になっていない」知識が多いことです。瞬間英作文や独り言練習で、知識を瞬時に引き出す回路を鍛える必要があります。</p>
-
 
 
 <p>Q: オンライン英会話は毎日やるべきですか？</p>
@@ -875,11 +881,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 毎日受ける必要はありません。週2〜3回のレッスンに加え、毎日15分の自主練習を継続するほうが、毎日レッスンだけ受けるよりも効果的です。</p>
 
 
-
 <p>Q: 独学でスピーキングを伸ばすことはできますか？</p>
 
 <p>A: 可能です。独り言トレーニングや瞬間英作文は一人でもできます。ただし、発音や文法の誤りを修正するためには、定期的に講師やコーチからフィードバックをもらう機会を設けることを推奨します。</p>
-
 
 
 <p>Q: スピーキングとリスニングはどちらを先に鍛えるべきですか？</p>
@@ -887,19 +891,15 @@ img { max-width: 100%; height: auto; }
 <p>A: リスニング（インプット）が土台になるため、まずリスニング力を高めつつ、並行してスピーキング練習を行うのが最も効率的です。</p>
 
 
-
 <p>Q: 英語コーチングとオンライン英会話の違いは何ですか？</p>
 
 <p>A: オンライン英会話は「練習の場」、英語コーチングは「学習全体の設計と管理」を提供するサービスです。目的や予算に応じて使い分ける、または併用するのがおすすめです。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
 
 
-
 <p>英語スピーキングが伸びないと感じる人には、以下の3つの共通点があります。</p>
-
 
 
 <ul>
@@ -909,13 +909,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>さらに、オンライン英会話の受け方を工夫するだけで、同じレッスン数でも得られる効果は大きく変わります。</p>
 
 
-
 <p>【今日からの次のステップ】</p>
-
 
 
 <p>まずは今日、たった5分でいいので「英語で独り言」を試してみてください。夕食の準備をしながら、通勤の電車の中で心の中で、何でも構いません。「英語で考える時間」を毎日の生活に5分だけ組み込む——その小さな一歩が、3ヶ月後のあなたのスピーキング力を確実に変えてくれます。</p>
@@ -1014,5 +1011,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

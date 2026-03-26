@@ -79,6 +79,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -91,21 +92,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -146,19 +185,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -650,14 +680,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -666,13 +707,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -697,41 +742,31 @@ img { max-width: 100%; height: auto; }
 <h1>英語コーチングおすすめランキング【2026年版】社会人向け厳選7社を比較</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「英会話スクールに通ったけど、結局話せるようにならなかった」「独学でアプリや参考書を試したけど、3週間で挫折した」——こんな経験、ありませんか？</p>
 
 
-
 <p>実はこれ、あなただけの問題ではありません。英語学習を始めても「3ヶ月以内に挫折する」というパターンは非常に多く、継続できない理由として「仕事が忙しくて時間が取れない」「成果が見えず方法が合っているか不安」などが挙げられます。共通しているのは「正しい方向に導いてくれる存在がいなかった」ということです。</p>
-
 
 
 <p>そこで今、30〜40代の社会人を中心に急速に支持を集めているのが英語コーチングです。専属のコーチがあなたの課題を分析し、最適な学習計画を設計し、日々の進捗を管理してくれる。いわば「英語学習のパーソナルトレーナー」です。</p>
 
 
-
 <p>本記事では、2026年最新の情報をもとに、本気で英語力を伸ばしたい社会人向けに厳選した7社を比較・ランキング形式でご紹介します。選び方の基準から無料カウンセリングの活用法まで、すべて実践的に解説しますので、ぜひ最後までお読みください。</p>
-
 
 
 <h2 id="sec-2">英語コーチングを選ぶ3つの基準</h2>
 
 
-
 <p>英語コーチングサービスは年々増加しており、2026年現在、主要なサービスだけでも30社以上が存在します。「どれも良さそうに見えて選べない」という声は非常に多いです。ここでは、失敗しないために押さえるべき3つの基準を紹介します。</p>
-
 
 
 <h3>基準①：コーチの質と専門性</h3>
 
 
-
 <p>英語コーチングの成果を最も左右するのは、コーチの質です。確認すべきポイントは以下の3つです。</p>
-
 
 
 <ul>
@@ -741,29 +776,22 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>英語コーチング受講者の声を見ると、コーチとの相性が満足度を大きく左右することが多く報告されています。料金やカリキュラムの良し悪し以上に、担当コーチとの信頼関係が学習継続のカギになります。</p>
-
 
 
 <h3>基準②：学習設計のカスタマイズ性</h3>
 
 
-
 <p>「TOEIC対策」「ビジネス英会話」「海外赴任準備」など、目的は人それぞれです。画一的なカリキュラムではなく、あなたの現在のレベル・目標・使える学習時間に合わせて個別設計してくれるかどうかを必ず確認しましょう。</p>
-
 
 
 <h3>基準③：サポート体制と継続の仕組み</h3>
 
 
-
 <p>社会人にとって最大の敵は「忙しさによる挫折」です。毎日のチャットサポート、週次の進捗面談、学習リマインド機能など、続けられる仕組みが整っているかを見極めてください。</p>
 
 
-
 <h2 id="sec-3">価格帯別おすすめコーチング比較表【厳選7社】</h2>
-
 
 
 <p>2026年時点の情報をもとに、価格帯別に7社を整理しました。</p>
@@ -781,10 +809,7 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>予算別の目安としては、以下のように整理できます。</p>
-
 
 
 <ul>
@@ -794,17 +819,13 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h2 id="sec-4">短期集中型 vs 長期型の選び方</h2>
-
 
 
 <p>英語コーチングには大きく分けて「2〜3か月の短期集中型」と「6〜12か月の長期型」があります。どちらを選ぶべきかは、あなたの目的と現在地によって決まります。</p>
 
 
-
 <h3>短期集中型が向いている人</h3>
-
 
 
 <ul>
@@ -814,13 +835,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>プログリットの公開データによると、受講者のTOEIC平均スコアアップは2か月で約150点。短期間でも正しい方法で集中すれば、目に見える成果が出ます。</p>
 
 
-
 <h3>長期型が向いている人</h3>
-
 
 
 <ul>
@@ -830,65 +848,49 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>トライズが提唱する「1年1,000時間」の学習モデルは、言語習得の専門家が「日本語母語話者が英語を実用レベルで使えるようになるには1,000〜2,000時間程度の学習が必要」と指摘していることを踏まえ、学校教育での既習分を考慮した数値です。スピーキング力をゼロベースから実践レベルに引き上げるには、やはり半年〜1年の継続が現実的です。</p>
-
 
 
 <p>迷ったときの判断基準：「3か月後に具体的な試験や業務上の期限があるか？」を自問してください。Yesなら短期集中型、Noなら長期型で着実に力をつける方が結果的にコストパフォーマンスが高くなります。</p>
 
 
-
 <h2 id="sec-5">無料カウンセリングで確認すべきこと</h2>
-
 
 
 <p>ほとんどの英語コーチングサービスは無料カウンセリング（体験セッション）を提供しています。これは「営業を受ける場」ではなく、あなたがサービスを見極める場です。以下の5つを必ず確認してください。</p>
 
 
-
 <h3>① 自分の課題を具体的に分析してくれるか</h3>
-
 
 
 <p>優れたコーチングでは、カウンセリングの時点であなたの英語力を診断し、「リスニングの中でも音声知覚が弱い」「語彙は十分だが瞬発力が足りない」など具体的な課題を言語化してくれます。「頑張りましょう」としか言わないサービスは避けるべきです。</p>
 
 
-
 <h3>② 学習プランの具体性</h3>
-
 
 
 <p>「1日何時間、何をやるのか」を具体的に提示してくれるかを見ましょう。たとえば「朝30分はシャドーイング、通勤中は単語アプリ、夜45分はオンライン英会話」のように、あなたの生活リズムに落とし込んだプランを提案してくれるかが重要です。</p>
 
 
-
 <h3>③ 担当コーチのプロフィールと変更可否</h3>
-
 
 
 <p>実際に担当するコーチの経歴・得意分野を事前に確認しましょう。また、万が一相性が合わなかった場合にコーチ変更が可能か、追加料金はかかるかも必ず聞いてください。</p>
 
 
-
 <h3>④ 途中解約・返金のポリシー</h3>
-
 
 
 <p>特に高額なサービスでは重要です。「30日間全額返金保証」を謳っていても、条件が厳しい場合があります。書面やメールで条件を確認することをおすすめします。</p>
 
 
-
 <h3>⑤ 卒業後のサポート</h3>
-
 
 
 <p>コーチング期間が終わった後、自走できる仕組みがあるかも確認しましょう。学習習慣の定着や、継続用のオンライン英会話プランの紹介など、卒業後の「独り立ち」を支援してくれるかはサービスの誠実さを測るバロメーターです。</p>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: 英語コーチングと英会話スクールの違いは何ですか？</p>
@@ -896,11 +898,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 英会話スクールは「レッスンの提供」が中心ですが、英語コーチングは「学習計画の設計・進捗管理・課題分析」を含む総合的なサポートを行います。自習の質を最大化する点が最大の違いです。</p>
 
 
-
 <p>Q: 英語コーチングの費用相場はどのくらいですか？</p>
 
 <p>A: 月額5万〜20万円が相場です。2〜3か月の短期集中型で総額30〜60万円、1年間の長期型で総額100〜150万円程度が目安となります。</p>
-
 
 
 <p>Q: 英語コーチングは初心者でも効果がありますか？</p>
@@ -908,11 +908,9 @@ img { max-width: 100%; height: auto; }
 <p>A: はい、効果があります。むしろ初心者ほど「何から始めればいいかわからない」状態を解消できるため、独学よりも効率的に基礎を固められます。</p>
 
 
-
 <p>Q: 仕事が忙しくても英語コーチングを続けられますか？</p>
 
 <p>A: 多くのサービスが1日1〜1.5時間の学習時間を想定して設計しています。通勤時間や昼休みなどのスキマ時間を活用するプランを提案してくれるため、残業が多い方でも継続可能です。</p>
-
 
 
 <p>Q: オンライン完結型と通学型、どちらがおすすめですか？</p>
@@ -920,19 +918,15 @@ img { max-width: 100%; height: auto; }
 <p>A: 2026年現在、大半のサービスがオンライン完結に対応しており、成果に大きな差はありません。通学の移動時間を学習に充てられる分、忙しい社会人にはオンライン型がおすすめです。</p>
 
 
-
 <p>Q: 英語コーチングを受ければTOEICのスコアはどのくらい上がりますか？</p>
 
 <p>A: 個人差はありますが、2〜3か月で100〜200点アップが一般的な成果です。プログリット公開データでは受講者平均で約150点の向上が報告されています。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
 
 
-
 <p>本記事のポイントを整理します。</p>
-
 
 
 <ul>
@@ -944,9 +938,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>次のステップ</h3>
-
 
 
 <p>まずは気になるサービスを2〜3社ピックアップし、今週中に無料カウンセリングを予約してください。比較することで「自分に合うサービス」が驚くほど明確になります。どのサービスも無料カウンセリングだけなら費用はかかりません。「いつか始めよう」ではなく、今日この記事を読んだことをきっかけに、最初の一歩を踏み出しましょう。</p>
@@ -1056,5 +1048,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

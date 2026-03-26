@@ -77,6 +77,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -89,21 +90,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -144,19 +183,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -684,14 +714,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -700,13 +741,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -731,41 +776,31 @@ img { max-width: 100%; height: auto; }
 <h1>トライズの評判・口コミまとめ【1,000時間プログラムの実態と料金を解説】</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「英語学習を何度も始めたけど、いつも3ヶ月で挫折してしまう…」「オンライン英会話を1年続けたのに、仕事で英語が出てこない…」——そんな経験はありませんか？</p>
 
 
-
 <p>実はこれ、あなただけの悩みではありません。言語習得の専門家によれば、日本語母語話者が英語を実用レベルで使えるようになるには1,000〜2,000時間規模の学習が必要とされています。学校教育で約1,200時間を消化していると仮定しても、実用レベルまでの残り時間は決して少なくないのです。</p>
-
 
 
 <p>この「残りの1,000時間」を1年間で集中的に埋めようというのが、英語コーチングスクール「トライズ（TORAIZ）」のコンセプトです。しかし、年間100万円を超える料金設定に「本当にその価値があるの？」と迷う方も多いでしょう。</p>
 
 
-
 <p>本記事では、トライズの1,000時間プログラムの中身、料金の実態、そしてSNS上の受講生のリアルな声を徹底的に調査し、入会を検討しているあなたが後悔しない判断をするための情報をまとめました。</p>
-
 
 
 <h2 id="sec-2">トライズの1,000時間プログラムとは何か</h2>
 
 
-
 <p>トライズの最大の特徴は、「1年間で1,000時間の英語学習を完遂する」という明確なゴール設定にあります。1,000時間を12ヶ月で割ると、1日あたり約3時間の学習が必要です。この数字だけ聞くと途方もなく感じますが、通勤時間や昼休みなどのスキマ時間を活用する設計になっています。</p>
-
 
 
 <h3>プログラムの具体的な内容</h3>
 
 
-
 <p>トライズの学習は大きく3つの柱で構成されています。</p>
-
 
 
 <p>①自己学習（週約20時間）</p>
@@ -773,11 +808,9 @@ img { max-width: 100%; height: auto; }
 <p>シャドーイング、スピーキング練習、リーディングなどを毎日行います。教材は受講生のレベルと目標に合わせて専属コンサルタントが選定します。映画のスクリプトやビジネス英語教材など、実践的な素材が中心です。</p>
 
 
-
 <p>②ネイティブ講師とのレッスン（週3回）</p>
 
 <p>オンラインまたは対面で、1回25〜50分のマンツーマンレッスンを週3回受講します。フリートークではなく、自己学習の内容をアウトプットする場として設計されているのがポイントです。</p>
-
 
 
 <p>③専属コンサルタントとの面談（隔週）</p>
@@ -785,17 +818,13 @@ img { max-width: 100%; height: auto; }
 <p>日本人の専属コンサルタントが学習進捗を管理し、2週間に1回の面談で計画の修正やモチベーション維持をサポートします。毎日の学習報告もコンサルタントに送る仕組みのため、サボりにくい環境が強制的に作られます。</p>
 
 
-
 <p>他の英語コーチングサービスが2〜3ヶ月の短期集中型であるのに対し、トライズは1年間という長期スパンで「本質的な英語力の定着」を目指す点が大きな違いです。</p>
-
 
 
 <h2 id="sec-3">料金と他の英語コーチングとの費用比較</h2>
 
 
-
 <p>トライズの料金は、正直に言って安くありません。入会を検討するうえで最も気になるポイントでしょう。</p>
-
 
 
 <h3>トライズの料金体系（2024年時点の公式情報を基に記載）</h3>
@@ -810,10 +839,7 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>※コースやキャンペーンにより変動があるため、最新の正確な料金は公式サイトの無料カウンセリングで確認してください。</p>
-
 
 
 <h3>主要英語コーチングとの比較</h3>
@@ -828,22 +854,16 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>総額ではトライズが圧倒的に高額ですが、月額換算するとプログリットやライザップイングリッシュよりも実は割安です。さらに、ネイティブ講師との週3回のレッスンが含まれている点を考慮すると、コストパフォーマンスの見え方は変わってきます。</p>
-
 
 
 <p>ただし、月1万円前後で利用できるオンライン英会話と比較すると10倍以上の差があります。「独学やオンライン英会話で何度も挫折した経験がある」「仕事で早急に英語力が必要」という切迫した状況でなければ、まずはオンライン英会話で学習習慣を確認してからの検討でも遅くはありません。</p>
 
 
-
 <h2 id="sec-4">実際の受講生の声（みん評 86件より）</h2>
 
 
-
 <p>口コミサイト「<a href="https://minhyo.jp/toraiz" rel="nofollow" target="_blank">みん評</a>」には86件の口コミが掲載されています（2025年2月時点）。実際の受講生の声から見えてきた傾向をカード形式で紹介します。</p>
-
 
 
 <h3>ポジティブな声（傾向）</h3>
@@ -876,7 +896,6 @@ img { max-width: 100%; height: auto; }
 </div>
 
 
-
 <h3>ネガティブな声（傾向）</h3>
 
 <div class="review-cards">
@@ -899,17 +918,13 @@ img { max-width: 100%; height: auto; }
 </div>
 
 
-
 <p>みん評の口コミ全体を見ると、「1年間やり切った受講生の満足度は高く、途中で学習時間を確保できなくなった受講生の不満が強い」という二極化の傾向が見られます。<strong>自分が毎日3時間確保できるかどうか</strong>が、満足度を決める最大の変数です。</p>
-
 
 
 <h2 id="sec-5">向いている人・向いていない人の特徴</h2>
 
 
-
 <h3>トライズが向いている人</h3>
-
 
 
 <ul>
@@ -920,9 +935,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>トライズが向いていない人</h3>
-
 
 
 <ul>
@@ -932,9 +945,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: トライズで本当に英語が話せるようになりますか？</p>
@@ -942,11 +953,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 公式サイトによると受講生の約97%が1年間の継続に成功しており、VERSANTスコアの平均上昇幅も報告されています。ただし成果には個人差があり、1日3時間の学習を継続できるかが鍵です。</p>
 
 
-
 <p>Q: トライズの途中解約は可能ですか？</p>
 
 <p>A: 入会後30日以内であれば全額返金保証制度があります。それ以降の解約条件は契約内容により異なるため、無料カウンセリング時に必ず確認してください。</p>
-
 
 
 <p>Q: トライズの料金を分割払いにできますか？</p>
@@ -954,11 +963,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 分割払いに対応しています。月々の支払額を抑えられるため、一括払いが難しい方は無料カウンセリングで支払いプランを相談しましょう。</p>
 
 
-
 <p>Q: トライズとプログリットはどちらがおすすめですか？</p>
 
 <p>A: 1年かけてスピーキング力を本質的に伸ばしたいならトライズ、2〜3ヶ月で学習習慣を確立しTOEICスコアも上げたいならプログリットが合っています。目的と期間で選ぶのがポイントです。</p>
-
 
 
 <p>Q: トライズはオンラインだけで受講できますか？</p>
@@ -966,19 +973,15 @@ img { max-width: 100%; height: auto; }
 <p>A: はい、完全オンラインでの受講が可能です。ネイティブ講師とのレッスンもコンサルタント面談もオンラインで完結するため、地方在住の方も問題なく受講できます。</p>
 
 
-
 <p>Q: トライズの学習は仕事と両立できますか？</p>
 
 <p>A: フルタイム勤務の受講生も多くいます。通勤時間にシャドーイング、昼休みにリーディングなど、スキマ時間の活用法をコンサルタントと一緒に設計します。ただし、残業が常態化している方には厳しい面もあります。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
 
 
-
 <p>本記事のポイントを整理します。</p>
-
 
 
 <ul>
@@ -990,9 +993,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>次のステップ</h3>
-
 
 
 <p>まずは<a href="https://px.a8.net/svt/ejp?a8mat=4AXFOG+786GWQ+3N0O+5YRHE" target="_blank" rel="nofollow noopener">トライズの無料カウンセリング</a>を受けてみてください。45分程度で、あなたの現在の英語レベル・目標・生活スタイルに合ったプランを具体的に提案してもらえます。「話を聞いたら入会しなければいけない」ということはありません。複数の英語コーチングサービスのカウンセリングを比較した上で、自分に最適な選択をすることが、英語学習成功への確実な第一歩です。</p>
@@ -1090,5 +1091,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

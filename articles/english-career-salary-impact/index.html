@@ -77,6 +77,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -89,21 +90,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -144,19 +183,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -648,14 +678,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -664,13 +705,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -695,61 +740,46 @@ img { max-width: 100%; height: auto; }
 <h1>英語ができると年収はどれくらい上がる？データで見るキャリアへの影響</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「英語ができたら、もっと良い仕事に就けるのに」——そう思いながらも、忙しい毎日の中で一歩を踏み出せない。30代・40代のビジネスパーソンなら、一度はそんなもどかしさを感じたことがあるのではないでしょうか。</p>
 
 
-
 <p>周囲を見渡せば、英語を使って海外案件を任されている同僚が昇進していく。転職サイトを開けば、「ビジネス英語必須」の求人ほど年収レンジが高い。頭では分かっているけれど、「今さら始めても遅いのでは」「本当に投資に見合うリターンがあるのか」と迷う気持ちも当然です。</p>
-
 
 
 <p>その悩み、あなただけではありません。実はビジネスパーソンの多くが英語力の必要性を感じながらも、実際に継続的な学習ができている人は少数に留まるという傾向があります。つまり、大多数の人が「やらなきゃ」と思いつつ止まっているのが現実です。</p>
 
 
-
 <p>この記事では、英語力と年収の関係を具体的な調査データで明らかにし、「本当に投資する価値があるのか」を数字で検証します。さらに、今から始めて3年後にキャリアを変えるための現実的なプランもご紹介します。</p>
-
 
 
 <h2 id="sec-2">英語力と年収の相関を示す調査データ——「なんとなく有利」ではなく数字で見る</h2>
 
 
-
 <p>英語力が年収に与える影響は、複数の調査で一貫した傾向が示されています。</p>
-
 
 
 <p>複数の調査で、英語力と年収には相関があることが示されています。英語力が低いグループと、ビジネスレベル以上の英語力を持つグループでは、年収帯に明確な差が見られる傾向があります。英語のビジネスレベル到達が、キャリアの選択肢と年収の両方を広げる可能性は十分にあります。</p>
 
 
-
 <p>また、<a href="https://www.nta.go.jp/publication/statistics/kokuzeicho/minkan/top.htm" target="_blank" rel="noopener">国税庁「民間給与実態統計調査」</a>（令和4年）によると、日本人の平均年収は約458万円です。一方、大手転職サイトの求人データを分析すると、「ビジネス英語力必須」の求人は平均提示年収が600〜800万円帯に集中しており、英語不問の同職種と比較して100〜200万円以上高い傾向が見られます。</p>
-
 
 
 <p>さらに注目すべきは、<a href="https://www.iibc-global.org/toeic/official_data.html" target="_blank" rel="noopener">TOEIC公式が公表している</a>企業データです。TOEICスコア800点以上の社員は、600点未満の社員に比べて役職者比率が高いという傾向が複数の企業調査で報告されています。英語力は直接的な年収アップだけでなく、昇進・昇格を通じた間接的な収入増加にもつながるわけです。</p>
 
 
-
 <p>「英語ができると年収が上がる」は、感覚論ではなくデータに裏付けられた事実です。</p>
-
 
 
 <h2 id="sec-3">英語が活きる職種・業界——転職市場のリアルな実態</h2>
 
 
-
 <p>では、具体的にどんな職種・業界で英語力が年収に直結するのでしょうか。転職市場のリアルな実態を見ていきます。</p>
 
 
-
 <p>年収アップに直結しやすい職種トップ5：</p>
-
 
 
 <ol>
@@ -761,25 +791,19 @@ img { max-width: 100%; height: auto; }
 </ol>
 
 
-
 <p>業界別に見ると、外資系企業全般、IT・テクノロジー、製薬・医療機器、金融・保険、コンサルティングが「英語プレミアム」の高い業界です。求人サイトや転職エージェント各社の掲載求人を見ると、英語必須条件が付いたポジションは同職種の日系求人より年収水準が高い傾向があります。</p>
-
 
 
 <p>重要なのは、30〜40代は「専門スキル×英語力」の掛け算が最も評価される年代だということです。20代のようにポテンシャル採用ではなく、すでに持っている実務経験に英語力が加わることで、転職市場での市場価値が一気に跳ね上がります。</p>
 
 
-
 <h2 id="sec-4">英語学習の投資回収期間を計算する——コスパは本当に良いのか？</h2>
-
 
 
 <p>「英語学習にかかるお金と時間は、本当に回収できるのか？」これは極めて合理的な疑問です。具体的に計算してみましょう。</p>
 
 
-
 <p>英語学習にかかる典型的なコスト：</p>
-
 
 
 <ul>
@@ -789,37 +813,28 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>仮に、英語コーチングで50万円＋オンライン英会話1年半で15万円＝合計約65万円と見積もります。</p>
-
 
 
 <p>リターンの試算：</p>
 
 
-
 <p>英語力向上により年収が150万円アップしたと仮定すると、投資回収期間はわずか約5〜6ヶ月です。年収100万円アップでも約8ヶ月で回収できます。しかも、その年収アップはその後何年も続くため、10年間で考えれば1,000万円以上のリターンになる計算です。</p>
-
 
 
 <p>時間コストについても考えてみましょう。TOEIC600点から800点への到達には、一般的に約500〜700時間の学習が必要とされています。1日1時間の学習で約2年。これを「長い」と見るか「たった2年でキャリアが変わる」と見るかで、行動は大きく変わります。</p>
 
 
-
 <p>特に近年は、英語コーチングサービスの進化により、専属コーチが学習プランを設計し進捗管理をしてくれるため、独学よりも格段に効率的かつ短期間で成果を出せる環境が整っています。「忙しくて続かない」という最大の壁を、プロの伴走で乗り越えられる点は大きなメリットです。</p>
-
 
 
 <h2 id="sec-5">今から始めて3年後のキャリアを変える最短プラン</h2>
 
 
-
 <p>最後に、30〜40代のビジネスパーソンが「今日から」始められる3年間のロードマップを提示します。</p>
 
 
-
 <h3>【1年目】基礎固め＋実践慣れ（目標：TOEIC700〜800点レベル）</h3>
-
 
 
 <ul>
@@ -829,9 +844,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>【2年目】実務での活用開始（目標：ビジネスで使えるレベル）</h3>
-
 
 
 <ul>
@@ -841,9 +854,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>【3年目】キャリアチェンジ実行（目標：英語力を武器にした転職 or 昇進）</h3>
-
 
 
 <ul>
@@ -853,13 +864,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>この3年計画の肝は、「1年目に投資を集中させる」ことです。最初の半年で英語コーチングを活用し、独学では3年かかる基礎構築を一気に短縮する。これが3年後の成果を決定的に左右します。</p>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: 英語ができると年収はどれくらい上がりますか？</p>
@@ -867,11 +875,9 @@ img { max-width: 100%; height: auto; }
 <p>A: ビジネスレベルの英語力がある人は、英語力なしの人と比較して年収が高い傾向があります。具体的な差は職種や業界によって異なりますが、英語必須求人は英語不問の同職種と比べ高い年収帯に集中する傾向があります。</p>
 
 
-
 <p>Q: TOEICは何点あれば年収アップにつながりますか？</p>
 
 <p>A: 転職市場では700点以上が一つの基準、800点以上で明確なアドバンテージとなります。ただし、スコアだけでなく実務で使えるスピーキング力も重要です。</p>
-
 
 
 <p>Q: 30代・40代から英語を始めても遅くないですか？</p>
@@ -879,11 +885,9 @@ img { max-width: 100%; height: auto; }
 <p>A: まったく遅くありません。むしろ、すでに持っている専門スキルに英語力を掛け合わせることで、20代にはない強い市場価値を生み出せる年代です。</p>
 
 
-
 <p>Q: 英語学習にかかる費用の相場はどれくらいですか？</p>
 
 <p>A: オンライン英会話は月額6,000〜10,000円、英語コーチングは3〜6ヶ月で30〜60万円が目安です。年収アップ額を考えると、半年〜1年で投資回収が可能です。</p>
-
 
 
 <p>Q: 独学とスクール、どちらが効率的ですか？</p>
@@ -891,15 +895,12 @@ img { max-width: 100%; height: auto; }
 <p>A: 基礎力がある人は独学でも可能ですが、学習習慣が定着していない人や短期間で成果を出したい人は、英語コーチングやスクールの活用が効率的です。</p>
 
 
-
 <p>Q: 英語力を活かせる求人はどこで探せますか？</p>
 
 <p>A: バイリンガル特化の転職エージェント（ロバート・ウォルターズ、マイケル・ペイジなど）やLinkedInが有効です。英語力を条件に検索すると高年収求人が多く見つかります。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
-
 
 
 <ul>
@@ -911,13 +912,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>次のステップ</h3>
 
 
-
 <p>今日できる最初の一歩は、「自分の現在地を知ること」です。まずはTOEICの模試を1回解いてみる、またはオンライン英会話の無料体験レッスンを1つ受けてみてください。現在のレベルが分かれば、3年後のゴールまでの距離が具体的に見えてきます。</p>
-
 
 
 <p>「いつか」ではなく「今日」始めた人だけが、3年後に違う景色を見ることができます。データが示すように、英語力への投資はキャリアにおいて最もリターンの高い自己投資の一つです。</p>
@@ -1013,5 +1011,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

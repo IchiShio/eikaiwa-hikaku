@@ -77,6 +77,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -89,21 +90,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -144,19 +183,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -648,14 +678,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -664,13 +705,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -695,53 +740,40 @@ img { max-width: 100%; height: auto; }
 <h1>英語コーチングとオンライン英会話、どっちを選ぶべきか【費用対効果で判断】</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「英語を本気でやり直したい。でも、何を選べばいいか分からない」——この悩み、あなただけではありません。</p>
 
 
-
 <p>英語コーチングの月額は15万円前後、一方でオンライン英会話は月6,000円台から始められる。価格差は約25倍。「高い方が効果があるに決まっている」と思いつつも、社会人にとって月15万円は簡単に出せる金額ではありません。逆に「安いオンライン英会話で十分なのでは？」と思って始めたものの、3か月で挫折した経験がある方も多いはずです。</p>
-
 
 
 <p>実際、オンライン英会話は「始めても続かない」という悩みが多く、半数以上が半年以内に離脱するという傾向があります（<a href="https://www.sma-world.com/world-english-online/online-frustration/" rel="nofollow" target="_blank">World English Online調査</a>では約8割が半年以内に退会という調査結果も）。一方で、英語コーチングの受講完了率は各社の公表値で80〜95%と高い水準です。</p>
 
 
-
 <p>つまり、単純な「月額の安さ」だけで判断すると、結果的に時間もお金も無駄にするリスクがあります。本記事では、両者の根本的な違いを整理し、費用対効果の観点から「あなたにとってのベストな選択」を見つけるための判断基準を提示します。</p>
-
 
 
 <h2 id="sec-2">英語コーチングとオンライン英会話の根本的な違い</h2>
 
 
-
 <p>まず押さえるべきは、この2つがそもそも別カテゴリのサービスだということです。</p>
-
 
 
 <p>オンライン英会話は「英語を話す場」の提供がメインです。レアジョブ英会話やDMM英会話、ネイティブキャンプなどが代表例で、フィリピン人講師や多国籍講師と1回25分のマンツーマンレッスンを行います。カリキュラムは用意されていますが、「何をどの順番で学ぶか」は基本的に自分で決める必要があります。</p>
 
 
-
 <p>英語コーチングは「英語学習の設計・管理・伴走」を提供するサービスです。PROGRIT、ENGLISH COMPANY、トライズ、RIZAP ENGLISHなどが代表例で、専属コーチが学習計画の策定、日々の進捗管理、弱点分析、モチベーション維持までを一括サポートします。レッスンそのものよりも、レッスン外の自習時間をどう最大化するかに重点を置いている点が最大の特徴です。</p>
-
 
 
 <p>例えるなら、オンライン英会話は「ジムの利用券」、英語コーチングは「パーソナルトレーナー付きのボディメイクプログラム」です。ジムに通っても自己流では成果が出にくいのと同様に、英会話レッスンを受けるだけでは伸び悩む人が少なくありません。</p>
 
 
-
 <h2 id="sec-3">費用・効果・継続率の徹底比較</h2>
 
 
-
 <p>具体的な数字で両者を比較します。</p>
-
 
 
 <h3>費用の比較</h3>
@@ -755,38 +787,28 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <h3>効果の比較</h3>
-
 
 
 <p>PROGRITの公表データでは、受講者のVERSANTスコア（英語スピーキングテスト）が2〜3か月で平均4.3ポイント向上したとされています。VERSANTの1ポイントはTOEICの約30〜40点に相当するとも言われ、短期間での伸びとしては大きい数値です。</p>
 
 
-
 <p>一方、オンライン英会話単体での効果を示す大規模データは限られていますが、レアジョブ英会話がQQ Englishと共同で行った研究では、週2回以上・6か月以上の継続でスピーキング力の有意な向上が確認されています。ただし、この「週2回以上を6か月継続」というハードルが高いのが現実です。</p>
-
 
 
 <h3>継続率の比較</h3>
 
 
-
 <p>先述のとおり、オンライン英会話は多くのユーザーが半年以内に離脱する傾向があります。理由の上位は「効果を実感できなかった」「何を話せばいいか分からなくなった」「仕事が忙しくなった」です。英語コーチングでは、コーチによる毎日の進捗確認やスケジュール調整が行われるため、受講完了率80〜95%という高い数値を維持しています。</p>
-
 
 
 <p>費用対効果の結論: 3か月の短期集中で確実に結果を出したいなら、英語コーチングの投資回収率は高いです。ただし、すでに学習習慣が身についている中上級者にとっては、オンライン英会話の「場」だけで十分伸びるケースもあります。</p>
 
 
-
 <h2 id="sec-4">英語コーチングが向いている人・オンライン英会話が向いている人</h2>
 
 
-
 <h3>英語コーチングが向いている人</h3>
-
 
 
 <ul>
@@ -797,9 +819,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>オンライン英会話が向いている人</h3>
-
 
 
 <ul>
@@ -810,37 +830,28 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h2 id="sec-5">月予算別のおすすめ組み合わせ</h2>
-
 
 
 <h3>月1万円以下の場合</h3>
 
 
-
 <p>オンライン英会話（レアジョブ英会話やDMM英会話の毎日プラン：約6,500〜7,900円）を軸に、無料のシャドーイング教材（YouTube、BBC Learning English等）で自習を補完しましょう。ポイントは「週4回以上のレッスン予約を日曜夜にまとめて入れる」こと。予約を先に入れることで継続率が大幅に上がります。</p>
-
 
 
 <h3>月3〜5万円の場合</h3>
 
 
-
 <p>オンライン英会話＋市販教材＋単発のコーチングセッションという組み合わせが有効です。最近は、スピークバディやフラミンゴなどで単発・短期のコーチングプランが月3〜5万円台で提供されています。「学習計画だけプロに作ってもらい、実行は自分で行う」ハイブリッド型が最もコスパが高い価格帯です。</p>
-
 
 
 <h3>月10〜18万円の場合</h3>
 
 
-
 <p>本格的な英語コーチング（PROGRIT、ENGLISH COMPANY、トライズなど）を2〜3か月集中で受講するのがおすすめです。この場合、コーチング終了後にオンライン英会話へ移行するのが鉄板の流れです。コーチング期間中に身につけた学習習慣と正しい方法論があれば、その後は月7,000円のオンライン英会話だけで成長を維持できます。実はこの「卒業後の移行」まで見据えたプラン設計こそが、費用対効果を最大化する最大のコツです。</p>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: 英語コーチングとオンライン英会話は併用できますか？</p>
@@ -848,11 +859,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 併用可能です。実際にPROGRITなどではオンライン英会話の活用を学習計画に組み込むケースが多く、コーチがレッスンの受け方まで指導してくれます。</p>
 
 
-
 <p>Q: 英語コーチングは本当に3か月で効果が出ますか？</p>
 
 <p>A: 1日2〜3時間の学習を継続できれば、TOEIC100〜200点アップやVERSANT4〜5ポイント向上の事例が各社で報告されています。ただし学習時間の確保が前提です。</p>
-
 
 
 <p>Q: オンライン英会話だけでビジネス英語は身につきますか？</p>
@@ -860,11 +869,9 @@ img { max-width: 100%; height: auto; }
 <p>A: スピーキングの瞬発力は鍛えられますが、ビジネス文書作成やプレゼン構成力は別途の学習が必要です。ビジネス特化教材があるBizmates等を選ぶと効率的です。</p>
 
 
-
 <p>Q: 英語コーチングの費用を安く抑える方法はありますか？</p>
 
 <p>A: <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/kyouiku.html" target="_blank" rel="noopener">一般教育訓練給付金</a>制度の対象コースを選べば、受講料の20%（最大10万円）がハローワークから支給されます。ENGLISH COMPANYやトライズの一部コースが対象です。</p>
-
 
 
 <p>Q: 英語初心者はどちらから始めるべきですか？</p>
@@ -872,19 +879,15 @@ img { max-width: 100%; height: auto; }
 <p>A: 初心者（TOEIC500点以下）は英語コーチングが推奨です。学習の「型」が固まっていない段階でオンライン英会話を始めると、効果を実感できず早期離脱しやすい傾向があります。</p>
 
 
-
 <p>Q: オンライン英会話で挫折しないコツはありますか？</p>
 
 <p>A: 「毎日同じ時間に予約を入れる」「お気に入り講師を3人以上確保する」「月1回スピーキングテストで効果測定する」の3つを実践するだけで継続率は大きく改善します。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
 
 
-
 <p>本記事のポイントを整理します。</p>
-
 
 
 <ul>
@@ -896,13 +899,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>次のステップ</h3>
 
 
-
 <p>まず、今の自分の英語レベルと目標達成の期限を紙に書き出してください。そのうえで、以下のアクションを取りましょう。</p>
-
 
 
 <ol>
@@ -910,7 +910,6 @@ img { max-width: 100%; height: auto; }
 <li>2. 期限が1年以上、または明確な期限がない → オンライン英会話の無料体験を3社試す（レアジョブ、DMM英会話、ネイティブキャンプなど）</li>
 <li>3. どちらか迷う → まずコーチングの無料カウンセリングで「自分に今必要な学習」を診断してもらう（無料なのでリスクゼロです）</li>
 </ol>
-
 
 
 <p>「迷っている時間」が最大のコストです。今日中にどれか1つ、無料体験の予約を入れることから始めてみてください。</p>
@@ -1015,5 +1014,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

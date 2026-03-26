@@ -79,6 +79,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -91,21 +92,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -146,19 +185,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -650,14 +680,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -666,13 +707,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -697,29 +742,22 @@ img { max-width: 100%; height: auto; }
 <h1>プログリット（PROGRIT）の評判は？実際の効果・料金・3ヶ月で変わること</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「英会話スクールに何度も通ったけど、結局続かなかった」「オンライン英会話を契約しても、月に数回しかやらないまま解約した」——こうした経験に心当たりはありませんか？実はこれ、30〜40代の社会人が英語学習で抱える悩みとして非常に多いパターンです。</p>
 
 
-
 <p>英語学習を始めた社会人の多くが短期間で挫折するという傾向は広く知られており、「仕事が忙しい」「やり方が合っていない」「成果が見えない」などが主な理由として挙げられます。「自力で続けるのが難しい」という根本的な課題が、コーチングサービスへのニーズにつながっています。</p>
-
 
 
 <p>そこで注目を集めているのが、英語コーチングサービス「プログリット（PROGRIT）」です。本記事では、プログリットの仕組み・料金・実際の評判を正直にまとめました。「本当に効果があるのか？」「高額な費用に見合うのか？」という疑問に、具体的なデータと受講者の声をもとにお答えします。</p>
 
 
-
 <h2 id="sec-2">プログリットとは何が違うのか——他の英語コーチングとの比較</h2>
 
 
-
 <p>プログリットの最大の特徴は、「レッスンを提供しない」という点です。一般的な英会話スクールやオンライン英会話はネイティブ講師との会話レッスンが中心ですが、プログリットは「学習コンサルティング」に特化しています。専属コンサルタントが受講者の課題を分析し、毎日2〜3時間の自習カリキュラムを設計。LINEでの毎日の進捗報告と週1回の面談で学習を伴走します。</p>
-
 
 
 <p>他の主要な英語コーチングサービスと比較すると、違いが明確になります。</p>
@@ -735,18 +773,13 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>つまり、プログリットは「正しい学習法と習慣を身につけること」にフォーカスしたサービスです。レッスンで英語を教わるのではなく、自分で学び続ける力を3ヶ月で構築するという設計思想が、他のコーチングサービスと根本的に異なります。応用言語学や第二言語習得論（SLA）の知見をカリキュラム設計に取り入れている点も、学術的な裏付けを重視する社会人に評価されています。</p>
-
 
 
 <h2 id="sec-3">料金プランと費用対効果の正直な評価</h2>
 
 
-
 <p>プログリットの料金は、正直に言って安くありません。2024年時点の主なプランは以下のとおりです。</p>
-
 
 
 <ul>
@@ -756,33 +789,25 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>※入会金55,000円が別途必要。分割払い（最大36回）にも対応。</p>
-
 
 
 <p>月額に換算すると約18〜19万円。オンライン英会話の月額6,000〜12,000円と比較すると、数十倍のコストです。ただし、この比較にはフェアではない側面もあります。</p>
 
 
-
 <p>プログリット公式サイトの公開データによると、TOEIC®コース受講者のスコア平均伸び幅は3ヶ月で約150点（※受講者データに基づく平均値）。仮に独学で同じ伸びを達成しようとした場合、一般的に6〜12ヶ月かかるとされています（IIBC「TOEIC® Program DATA & ANALYSIS」参照）。時間短縮の対価として考えると、昇進・海外赴任・転職でTOEICスコアが直接年収に影響する方にとっては、費用対効果が成立するケースは十分にあります。</p>
-
 
 
 <p>一方で、「なんとなく英語力を上げたい」という漠然とした目的の方にとっては、この金額は割高に感じるでしょう。まずは無料カウンセリングで自分の課題と目標を明確にした上で、投資に見合うリターンがあるかを判断することをおすすめします。</p>
 
 
-
 <h2 id="sec-4">受講生の実際の声——良い点・悪い点</h2>
-
 
 
 <p>口コミサイト「<a href="https://minhyo.jp/progrit" rel="nofollow" target="_blank">みん評</a>」には87件の口コミが掲載されています（2025年2月時点）。実際の受講生の声から見えてきた傾向を整理します。</p>
 
 
-
 <h3>良い評判（傾向）</h3>
-
 
 
 <ul>
@@ -792,9 +817,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>悪い評判（傾向）</h3>
-
 
 
 <ul>
@@ -804,21 +827,16 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>総合すると、「自走できる学習者になれた」という構造的な変化を評価する声が目立つ一方、即効的な英会話力を期待した方はギャップを感じやすいといえます。</p>
-
 
 
 <h2 id="sec-5">どんな人に向いていて、向いていないか</h2>
 
 
-
 <p>これまでの情報を踏まえ、プログリットとの相性を整理します。</p>
 
 
-
 <h3>向いている人</h3>
-
 
 
 <ul>
@@ -829,9 +847,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>向いていない人</h3>
-
 
 
 <ul>
@@ -842,9 +858,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: プログリットは3ヶ月でどのくらい効果がありますか？</p>
@@ -852,11 +866,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 公式データではTOEIC®平均150点アップ、Versantスコア平均5〜10点向上が報告されています。ただし個人差があり、学習時間の確保が成果に直結します。</p>
 
 
-
 <p>Q: プログリットの料金は分割払いできますか？</p>
 
 <p>A: はい、最大36回の分割払いに対応しています。月々約18,000円〜（コースにより異なる）から始められます。</p>
-
 
 
 <p>Q: プログリットにレッスンはないのですか？</p>
@@ -864,11 +876,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 英会話レッスンは提供されません。必要に応じてオンライン英会話など外部サービスの併用を推奨されます。学習設計と習慣化に特化したコンサルティングサービスです。</p>
 
 
-
 <p>Q: プログリットの途中解約・返金は可能ですか？</p>
 
 <p>A: 受講開始から30日以内であれば全額返金保証が適用されます。30日を過ぎた場合は、未受講分の一部返金が可能です（詳細は契約条件を確認してください）。</p>
-
 
 
 <p>Q: プログリット卒業後も英語力は維持できますか？</p>
@@ -876,15 +886,12 @@ img { max-width: 100%; height: auto; }
 <p>A: 卒業時に年間の学習計画が提供されます。卒業生向けの継続コース（月額約2万円〜）もあり、学習習慣を維持する仕組みが用意されています。</p>
 
 
-
 <p>Q: 英語初心者でもプログリットは利用できますか？</p>
 
 <p>A: TOEIC®400点以上が目安とされています。完全な初心者の場合は、まず基礎文法や語彙を固めてからの受講が推奨されます。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
-
 
 
 <ul>
@@ -895,9 +902,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>次のステップ</h3>
-
 
 
 <p>まずはプログリットの無料カウンセリング（約60分）を受けてみてください。現在の英語力の診断と、課題に合った学習プランの提案を受けられます。その上で、自分の目標・生活スタイル・予算に合うかどうかを判断しましょう。「とりあえず申し込む」のではなく、「自分に合うか確かめてから決める」——それが50万円以上の投資で後悔しないための、最も確実な第一歩です。</p>
@@ -1001,5 +1006,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

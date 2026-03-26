@@ -39,6 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -51,21 +52,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -106,19 +145,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -648,14 +678,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/" class="active">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger active" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/" class="active">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -664,13 +705,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/" class="active">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>
@@ -695,33 +740,25 @@ img { max-width: 100%; height: auto; }
 <h1>オンライン英会話の月額料金を安い順に徹底比較【2026年最新・コスパ最強はここ】</h1>
 
 
-
 <h2 id="sec-1">はじめに</h2>
-
 
 
 <p>「オンライン英会話を始めたいけど、サービスが多すぎてどれが本当に安いのか分からない……」</p>
 
 
-
 <p>そんな悩みを抱えていませんか？ 料金ページを開くたびに、月額制・チケット制・ポイント制と仕組みがバラバラで、結局どこが一番お得なのか判断できず、比較だけで疲れてしまう——。この気持ち、あなただけではありません。</p>
-
 
 
 <p>オンライン英会話ユーザーの間では、サービス選びで最も重視するポイントとして「月額料金の安さ」を挙げる声が多く聞かれます。一方で、料金だけで選んだ結果、講師の質や予約の取りにくさに不満を感じて短期間で退会してしまうケースも少なくありません。</p>
 
 
-
 <p>つまり、「安い」と「コスパが高い」はまったく別物です。</p>
-
 
 
 <p>本記事では、主要10社の月額料金を1レッスン単価まで換算して比較し、予算別のおすすめサービスと「安いだけで後悔しない」選び方を具体的にお伝えします。</p>
 
 
-
 <h2 id="sec-2">主要10社の月額料金比較表【1レッスン単価換算つき】</h2>
-
 
 
 <p>2026年1月時点の公式サイト情報をもとに、毎日1レッスン（25分）プランを基準に整理しました。毎日プランがないサービスは、最も標準的なプランで算出しています。</p>
@@ -742,22 +779,16 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>> ※料金はプラン・キャンペーンにより変動します。必ず公式サイトで最新情報をご確認ください。</p>
-
 
 
 <p>単価だけで見ると、NativeCampの「受け放題」は圧倒的です。ただし、実際に毎日何度も受講できる人は少数派。自分の学習ペースで比較することが大切です。</p>
 
 
-
 <h2 id="sec-3">安いだけで選ぶと後悔する理由</h2>
 
 
-
 <p>「月額最安値」に飛びつく前に、ぜひ知っておいてほしいことがあります。</p>
-
 
 
 <p>1. 講師の質にばらつきがある</p>
@@ -765,11 +796,9 @@ img { max-width: 100%; height: auto; }
 <p>格安サービスの中には、講師の採用基準が緩く、研修制度が整っていないケースがあります。レッスンがフリートークで終わり、間違いを訂正してもらえないまま25分が過ぎる——。これでは「安かったけど何も身につかなかった」という最悪の結果になりかねません。</p>
 
 
-
 <p>2. 教材・カリキュラムが貧弱</p>
 
 <p>ユーザーの継続率が高いサービスほど「体系的なカリキュラム」と「レベル別教材の充実度」が評価される傾向があります。月額料金が安くても、教材が少なければ自分に合ったレッスンが受けられず、成長実感を得にくくなります。</p>
-
 
 
 <p>3. 予約が取れない・通信が不安定</p>
@@ -777,33 +806,25 @@ img { max-width: 100%; height: auto; }
 <p>人気講師の枠がすぐに埋まる、通信環境の悪い講師に当たりやすい、といった「見えないコスト」も存在します。予約ストレスで学習習慣が途切れれば、支払った月額料金はそのまま無駄になります。</p>
 
 
-
 <p>英語コーチングサービスのように専属トレーナーが学習計画を管理してくれるタイプなら、こうした「質のばらつき問題」を仕組みで解決できるため、短期集中で確実に伸ばしたい人には検討の価値があります。</p>
-
 
 
 <h2 id="sec-4">コスパが本当に高いサービスの見極め方</h2>
 
 
-
 <p>では、料金と品質のバランスが優れた「真にコスパの高い」サービスをどう見極めればよいのでしょうか。チェックすべきポイントは3つです。</p>
-
 
 
 <h3>① 1レッスン単価 ×「自分が実際に受ける回数」で計算する</h3>
 
 
-
 <p>毎日プランが最安でも、週2回しか受講しないなら単価は跳ね上がります。過去1か月の自分のスケジュールを振り返り、現実的に受けられる回数で割り算してください。</p>
-
 
 
 <h3>② 無料体験で「講師の指導力」を体感する</h3>
 
 
-
 <p>多くのサービスが1〜2回の無料体験を提供しています。体験レッスンでは以下を確認しましょう。</p>
-
 
 
 <ul>
@@ -813,21 +834,16 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>③ 継続を支える仕組みがあるか</h3>
-
 
 
 <p>学習リマインド機能、スピーキングテスト、AIによる復習機能など、レッスン外の学習サポートが充実しているサービスは、長期的に見てコスパが高くなります。レアジョブ英会話やDMM英会話はこの点で利用者満足度が高い傾向があります。</p>
 
 
-
 <h2 id="sec-5">予算別おすすめサービス</h2>
 
 
-
 <h3>月2,000円台：まずは気軽に始めたい人向け</h3>
-
 
 
 <ul>
@@ -836,9 +852,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>月5,000円台：バランス重視の本命ゾーン</h3>
-
 
 
 <ul>
@@ -847,9 +861,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>月10,000円以上：短期間で確実に伸ばしたい人向け</h3>
-
 
 
 <ul>
@@ -858,9 +870,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h2 id="sec-6">よくある質問（FAQ）</h2>
-
 
 
 <p>Q: オンライン英会話で一番安いのはどこですか？</p>
@@ -868,11 +878,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 月額料金のみならKimini英会話のウィークデイプラン（約1,210円〜）が最安級です。ただし受講可能時間帯やレッスン回数に制限があるため、条件を必ず確認しましょう。</p>
 
 
-
 <p>Q: 1レッスンあたりの単価が最も安いサービスは？</p>
 
 <p>A: NativeCampは月額約6,480円でレッスン受け放題のため、回数を増やすほど単価が下がります。1日3回受ければ1レッスン約70円です。</p>
-
 
 
 <p>Q: 安いオンライン英会話でも効果はありますか？</p>
@@ -880,11 +888,9 @@ img { max-width: 100%; height: auto; }
 <p>A: 講師の質と教材の充実度が確保されていれば十分に効果があります。無料体験で指導力を確かめてから入会するのがおすすめです。</p>
 
 
-
 <p>Q: 初心者にはどの価格帯がおすすめですか？</p>
 
 <p>A: 月4,000〜6,000円台のサービスが、教材・サポートのバランスが良く初心者に最適です。DMM英会話やレアジョブ英会話が代表的です。</p>
-
 
 
 <p>Q: オンライン英会話と英語コーチングはどちらがコスパが良いですか？</p>
@@ -892,15 +898,12 @@ img { max-width: 100%; height: auto; }
 <p>A: 長期的にマイペースで学ぶならオンライン英会話、短期間で確実に成果を出したいなら英語コーチングがコスパ面で優れます。目的と期限で選びましょう。</p>
 
 
-
 <p>Q: 無料体験だけ複数社試しても大丈夫ですか？</p>
 
 <p>A: まったく問題ありません。むしろ2〜3社を比較してから決めるほうが、自分に合うサービスを見つけやすく、結果的に無駄な出費を防げます。</p>
 
 
-
 <h2 id="sec-7">まとめ</h2>
-
 
 
 <ul>
@@ -911,9 +914,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>次のステップ</h3>
-
 
 
 <p>まずは気になるサービスを2〜3社ピックアップし、今週中に無料体験を予約してみてください。実際にレッスンを受けることで、料金表だけでは分からない「自分との相性」が一発で分かります。比較に時間をかけすぎるより、体験して判断するほうが、英語学習のスタートは確実に早まります。</p>
@@ -1010,5 +1011,26 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>

@@ -149,6 +149,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+    /* ── UNIFIED HEADER ── */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       background: rgba(255,255,255,0.92); backdrop-filter: blur(16px) saturate(180%);
@@ -161,21 +162,59 @@
     .site-header-logo { font-size: 15px; font-weight: 800; color: #111; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
     .site-header-logo svg { width: 18px; height: 18px; color: #F5A623; }
     .site-header-nav { display: flex; align-items: center; gap: 2px; }
-    .site-header-nav a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
-    .site-header-nav a:hover { color: #111; background: rgba(0,0,0,0.04); }
-    .site-header-nav a.active { color: #F5A623; font-weight: 700; }
-    .site-header-nav a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    .site-header-nav > a { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); text-decoration: none; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; position: relative; }
+    .site-header-nav > a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .site-header-nav > a.active { color: #F5A623; font-weight: 700; }
+    .site-header-nav > a.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 16px; height: 2px; border-radius: 1px; background: #F5A623; }
+    /* Dropdown */
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); background: none; border: none; cursor: pointer; padding: 7px 12px; border-radius: 10px; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 3px; font-family: inherit; }
+    .nav-dd-trigger:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-trigger.active { color: #F5A623; font-weight: 700; }
+    .dd-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
+    .nav-dd:hover .dd-chevron, .nav-dd.open .dd-chevron { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06); padding: 6px; margin-top: 4px; z-index: 310; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { display: block; }
+    .nav-dd-menu a { display: block; font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.7); text-decoration: none; padding: 9px 14px; border-radius: 8px; transition: all 0.15s ease; white-space: nowrap; }
+    .nav-dd-menu a:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .nav-dd-menu a.active { color: #F5A623; font-weight: 700; }
+    /* Hamburger */
     .site-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; border-radius: 10px; position: relative; z-index: 302; }
     .site-hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 4px auto; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .site-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .site-hamburger.active span:nth-child(2) { opacity: 0; }
     .site-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity 0.3s; }
+    /* Mobile nav */
+    .site-mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.96); z-index: 301; backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; opacity: 0; transition: opacity 0.3s; }
     .site-mobile-nav.active { display: flex; opacity: 1; }
-    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 40px; border-radius: 14px; width: 260px; text-align: center; }
+    .site-mobile-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 17px; font-weight: 600; padding: 14px 40px; border-radius: 14px; width: 260px; text-align: center; }
     .site-mobile-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .site-mobile-nav a.active { color: #F5A623; }
+    .mobile-nav-label { color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 0 2px; width: 260px; text-align: center; }
     @media (max-width: 768px) { .site-header-nav { display: none; } .site-hamburger { display: block; } }
+    /* ── END UNIFIED HEADER ── */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {   }
 
 :root {
   --primary: #2563eb;
@@ -216,19 +255,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 
 
-
 .site-header .logo span { color: var(--primary); }
 
 
 /* Hamburger menu */
-
-
-
-
-
-
-
-
 
 
 /* Hero */
@@ -880,14 +910,25 @@ img { max-width: 100%; height: auto; }
   <div class="site-header-inner">
     <a href="/" class="site-header-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>native-real</a>
     <nav class="site-header-nav">
-        <a href="/">ListenUp</a>
-        <a href="/grammar/">文法クイズ</a>
-        <a href="/kioku-shinai/">記憶しない英単語</a>
-        <a href="/ranking/">ランキング</a>
-        <a href="/articles/">学習コラム</a>
-        <a href="/real-phrases/">フレーズ集</a>
-        <a href="/prompts/">AIプロンプト</a>
-        <a href="/about/">About</a>
+      <a href="/">ListenUp</a>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">学ぶ<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/grammar/">文法クイズ</a>
+          <a href="/words/">WordsUp</a>
+          <a href="/kioku-shinai/">記憶しない英単語</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-trigger" type="button">読む<svg class="dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5L5 6.5L7.5 3.5"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="/articles/">学習コラム</a>
+          <a href="/real-phrases/">フレーズ集</a>
+          <a href="/prompts/">AIプロンプト</a>
+        </div>
+      </div>
+      <a href="/ranking/">ランキング</a>
+      <a href="/my/">My Progress</a>
     </nav>
     <button class="site-hamburger" id="siteHamburger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -896,13 +937,17 @@ img { max-width: 100%; height: auto; }
 </header>
 <div class="site-mobile-nav" id="siteMobileNav">
   <a href="/">ListenUp</a>
+  <div class="mobile-nav-label">学ぶ</div>
   <a href="/grammar/">文法クイズ</a>
+  <a href="/words/">WordsUp</a>
   <a href="/kioku-shinai/">記憶しない英単語</a>
-  <a href="/ranking/">ランキング</a>
+  <div class="mobile-nav-label">読む</div>
   <a href="/articles/">学習コラム</a>
   <a href="/real-phrases/">フレーズ集</a>
   <a href="/prompts/">AIプロンプト</a>
-  <a href="/about/">About</a>
+  <div class="mobile-nav-label"></div>
+  <a href="/ranking/">ランキング</a>
+  <a href="/my/">My Progress</a>
 </div>
 <div class="breadcrumb container">
   <a href="/">ホーム</a><span>›</span>Bizmates（ビズメイツ）レビュー
@@ -927,7 +972,6 @@ img { max-width: 100%; height: auto; }
 <h1>Bizmates（ビズメイツ）の評判・口コミは？【特徴・料金・デメリットを徹底解説】</h1>
 
 
-
 <p>「仕事で英語が必要になったけど、日常英会話のレッスンではビジネスの場面で使えない…」そんな悩みを抱えるビジネスパーソンに支持されているのが、Bizmates（ビズメイツ）です。この記事では、英語教育業界に10年以上携わってきた筆者が、Bizmatesの特徴・料金・デメリットまで正直に解説します。</p>
 
 <div class="cta-box">
@@ -942,21 +986,16 @@ img { max-width: 100%; height: auto; }
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
 
 
-
 <h2 id="about">Bizmates（ビズメイツ）とは</h2>
-
 
 
 <p>Bizmates（ビズメイツ）は、ビジネス英語に特化したオンライン英会話サービスです。最大の特徴は、在籍する講師全員がビジネス経験者であること。一般的なオンライン英会話では「英語が話せる講師」が教えますが、Bizmatesでは「ビジネスの現場を知っている講師」が、実際の会議・交渉・プレゼンといったリアルなビジネスシーンを想定したレッスンを提供しています。独自の「Bizmatesメソッド」に基づいた体系的なカリキュラムが用意されており、初心者からでも段階的にビジネス英語力を身につけられる設計になっています。</p>
 
 
-
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
 
 
-
 <h2 id="pricing">Bizmates（ビズメイツ）の料金プラン</h2>
-
 
 
 <p>Bizmatesの料金は、1日あたりのレッスン回数によってプランが分かれます。以下は主要なプランです。</p>
@@ -969,44 +1008,33 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>※料金は時期やキャンペーンにより変動する可能性があります。最新情報は公式サイトでご確認ください。</p>
 
 <p>※上記のほかに、特別なレッスンプログラムやビデオレッスンなどのオプションが用意されている場合があります。</p>
 
 
-
 <p>ビジネス特化型としてはリーズナブルな価格帯であり、毎日受講すれば1レッスンあたりワンコイン以下で本格的なビジネス英語レッスンが受けられる計算です。</p>
-
 
 
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
 
 
-
 <h2 id="features">Bizmates（ビズメイツ）の特徴・強み</h2>
-
 
 
 <h3>1. 講師全員が「ビジネス経験者」という徹底したこだわり</h3>
 
 
-
 <p>Bizmatesの最大の差別化ポイントがここです。講師の採用基準として、何らかのビジネス実務経験が必須とされています。元マーケター、元人事担当、元エンジニア、元経営者など、多様な業界バックグラウンドを持つ講師が在籍しているため、単なる英語のやりとりにとどまらず、ビジネスの文脈を理解したうえでのアドバイスが得られます。</p>
-
 
 
 <p>例えば、海外クライアントへのプレゼンを控えている方なら、実際にマーケティング畑で働いていた講師を選ぶことで、英語表現だけでなく内容面のフィードバックまでもらえる可能性があります。これは一般的なオンライン英会話にはない大きな強みです。</p>
 
 
-
 <h3>2. 独自の「Bizmatesメソッド」による体系的なカリキュラム</h3>
 
 
-
 <p>Bizmatesでは、以下の4つのレッスンタイプが用意されています。</p>
-
 
 
 <ul>
@@ -1017,73 +1045,55 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>特にAssist Lessonは、翌日のプレゼン資料を見てもらったり、英文メールの添削を依頼したりと、今まさに直面している仕事の課題をレッスンに持ち込める実用性の高いプログラムです。この柔軟さは、忙しいビジネスパーソンにとって非常にありがたい仕組みです。</p>
-
 
 
 <h3>3. プレゼン・交渉など実践シーンに特化したコース</h3>
 
 
-
 <p>「Other Programs」では、ビジネスの具体的な場面ごとにコースが分かれています。海外赴任前の準備、英語面接対策、電話会議の進め方など、学んだその日から使える内容にフォーカスしている点が特徴です。汎用的なビジネス英語ではなく、自分に必要なシーンに絞って集中的に学べるため、効率よくスキルアップできます。</p>
-
 
 
 <h3>4. 初心者にも対応したレベル設計</h3>
 
 
-
 <p>「ビジネス英語特化」と聞くと上級者向けの印象を受けるかもしれませんが、Bizmatesのカリキュラムはレベル0（初心者）から5段階で設計されています。英語にほとんど自信がない方でも、基本的なビジネスコミュニケーションから始められるので、「いきなりハードルが高い」ということはありません。</p>
 
 
-
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
-
 
 
 <h2 id="demerit">Bizmates（ビズメイツ）のデメリット・注意点</h2>
 
 
-
 <p>信頼できる情報をお伝えするために、デメリットも正直に書きます。</p>
-
 
 
 <h3>1. 日常英会話を楽しみたい人には不向き</h3>
 
 
-
 <p>Bizmatesはビジネス英語に特化しているため、「旅行先で使える英語を学びたい」「海外ドラマの英語を聞き取れるようになりたい」といった目的にはフィットしません。レッスン内容はあくまでビジネスシーンが中心なので、目的が合わない方にとっては窮屈に感じる可能性があります。</p>
-
 
 
 <h3>2. 格安オンライン英会話と比べると料金は高め</h3>
 
 
-
 <p>月額13,200円〜は、月額6,000円台から利用できる一般的なオンライン英会話と比べるとやや高めです。ただし、ビジネス経験者の講師陣や特化型カリキュラムの質を考えると、ビジネス目的であればコストパフォーマンスは十分高いと筆者は感じています。とはいえ、「とにかく安く英語を話す場が欲しい」という方には他の選択肢のほうが合うでしょう。</p>
-
 
 
 <h3>3. 講師はフィリピン人が中心</h3>
 
 
-
 <p>Bizmatesの講師はフィリピン人が中心です。フィリピン人講師はビジネス英語力が高く、ホスピタリティにも定評がありますが、「ネイティブ講師から学びたい」というこだわりがある方には物足りなく感じるかもしれません。ただし、実際のグローバルビジネスでは非ネイティブとのコミュニケーションのほうが圧倒的に多いため、実践的な観点ではむしろメリットとも言えます。</p>
-
 
 
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
 
 
-
 <h2 id="target">こんな人におすすめ・向いていない人</h2>
 
 
-
 <h3>✅ おすすめな人</h3>
-
 
 
 <ul>
@@ -1095,9 +1105,7 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <h3>❌ 向いていない人</h3>
-
 
 
 <ul>
@@ -1107,13 +1115,10 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
 
 
-
 <h2 id="comparison">他サービスとの比較</h2>
-
 
 
 <p>ビジネスパーソンが検討しやすい2社と比較してみます。</p>
@@ -1129,30 +1134,22 @@ img { max-width: 100%; height: auto; }
 </table>
 
 
-
-
 <p>レアジョブはバランスの良い大手サービスで、ビジネスコースも用意されていますが、講師全員がビジネス経験者というわけではありません。ネイティブキャンプはコスパと自由度が魅力ですが、ビジネス英語に体系的に取り組みたい方にはカリキュラムの面でBizmatesに軍配が上がります。</p>
-
 
 
 <p>「ビジネスの現場で本当に使える英語力」を最優先にするなら、Bizmatesの専門性は頭ひとつ抜けていると言えるでしょう。</p>
 
 
-
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
-
 
 
 <h2 id="trial">無料体験・カウンセリングについて</h2>
 
 
-
 <p>Bizmatesでは、無料体験レッスン（25分）を受けることができます。</p>
 
 
-
 <h3>申し込みの流れ</h3>
-
 
 
 <ol>
@@ -1162,9 +1159,7 @@ img { max-width: 100%; height: auto; }
 </ol>
 
 
-
 <h3>体験時に確認すべきポイント</h3>
-
 
 
 <ul>
@@ -1175,21 +1170,16 @@ img { max-width: 100%; height: auto; }
 </ul>
 
 
-
 <p>無料体験後に無理な勧誘があったという声は筆者の調査範囲では見当たりませんので、気軽に試してみることをおすすめします。</p>
-
 
 
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
 
 
-
 <h2>まとめ・総評</h2>
 
 
-
 <p>Bizmates（ビズメイツ）は、「ビジネスの現場で使える英語力」を最短で身につけたい社会人にとって、非常に理にかなったサービスです。</p>
-
 
 
 <p>講師全員がビジネス経験者という唯一無二の強みに加え、仕事の課題をそのままレッスンに持ち込めるAssist Lessonの柔軟性は、実務直結の英語力を求めるビジネスパーソンにとって他の追随を許しません。「英語を学ぶ」より「英語で仕事をする」を目指すなら、Bizmatesは最有力候補のひとつです。無料体験でその価値を実感してみてください。</p>
@@ -1341,5 +1331,26 @@ img { max-width: 100%; height: auto; }
   </div>
 </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('siteHamburger'),n=document.getElementById('siteMobileNav');
+  if(b&&n){
+    b.addEventListener('click',function(){b.classList.toggle('active');n.classList.toggle('active');document.body.style.overflow=n.classList.contains('active')?'hidden':'';});
+    n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('active');b.classList.remove('active');document.body.style.overflow='';}});
+  }
+  var h=document.getElementById('siteHeader');
+  if(h){var t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){h.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});}
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var dd=btn.parentElement;
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){if(d!==dd)d.classList.remove('open');});
+      dd.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dd.open').forEach(function(d){d.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>
