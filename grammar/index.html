@@ -205,7 +205,7 @@
     .level-fill { height: 100%; background: var(--gold); border-radius: 3px; transition: width 0.4s ease; }
     .xp-text { font-size: 10px; color: var(--text-3); font-weight: 600; }
 
-    .question-view { max-width: 720px; margin: 0 auto; padding: 0 20px 40px; }
+    .question-view { display: none; max-width: 720px; margin: 0 auto; padding: 0 20px 40px; }
     .question-view.show { display: flex; flex-direction: column; gap: 20px; }
 
     /* Stem card (replaces audio card) */
@@ -873,6 +873,7 @@ function loadQ() {
 
   setTimeout(() => {
     current = pickQuestion();
+    if (!current) { current = DATA[Math.floor(Math.random() * DATA.length)]; }
     render();
     document.getElementById('loadingView').classList.remove('show');
     document.getElementById('questionView').classList.add('show');
