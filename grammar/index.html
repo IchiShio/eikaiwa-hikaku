@@ -1314,40 +1314,7 @@ function shareToX() {
   try { gtag('event', 'page_view', { page_title: 'GrammarUp', page_location: location.href }); } catch (_) {}
 })();
 
-// ── SITE HEADER HAMBURGER ──
-(function() {
-  const btn = document.getElementById('siteHamburger');
-  const nav = document.getElementById('siteMobileNav');
-  if (!btn || !nav) return;
-  btn.addEventListener('click', function() {
-    btn.classList.toggle('active');
-    nav.classList.toggle('active');
-    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
-  });
-  nav.addEventListener('click', function(e) {
-    if (e.target === nav || e.target.tagName === 'A') {
-      nav.classList.remove('active');
-      btn.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
-})();
-
-// ── SCROLL COMPACT HEADER ──
-(function() {
-  const header = document.getElementById('siteHeader');
-  if (!header) return;
-  let ticking = false;
-  window.addEventListener('scroll', function() {
-    if (!ticking) {
-      requestAnimationFrame(function() {
-        header.classList.toggle('scrolled', window.scrollY > 40);
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-})();
+// hamburger + scroll + dropdown は末尾の別scriptブロックで処理
   </script>
 
 <script>
