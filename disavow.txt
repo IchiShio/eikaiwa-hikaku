@@ -1,19 +1,13 @@
-# native-real.com Disavow File
-# 更新日: 2026-03-22
-# 対象: スパムバックリンク（SEOスパム業者からの自動リンク）
-#
-# 判定根拠:
-#   - anchor: "High Quality SEO Backlinks", "boost my website SEO",
-#             "Rank Higher with Premium Backlinks", "boost +150 leads/month" 等のSEO業者特有の文言
-#   - 全件がSEOスパム自動リンク業者からの自動リンク
-#   - 現時点でGoogleペナルティは未発生だが放置でManual Action対象になるリスクあり
+# Disavow file for native-real.com
+# Generated: 2026-03-26
+# All backlinks are spam/PBN links - disavow entire domains
 
-# スパムドメイン
-domain:backlinks-seorank.com
+domain:itxoft-seo-for-modern-business.site
 domain:fiverr-cost-effective-seo.site
+domain:zoldexlinks.shop
+domain:backlinks-seorank.com
 domain:grow-your.website
 domain:primeseo.xyz
 domain:seo-backlink.agency
 domain:seodaro.com
 domain:seonexi.com
-domain:zoldexlinks.shop
