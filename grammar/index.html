@@ -503,6 +503,16 @@
       <div class="axis-bars" id="missionAxisBars" style="margin-bottom:16px;"></div>
       <div id="missionShareCard"></div>
       <div class="mission-cta-wrap" id="missionCtaWrap"></div>
+      <div class="mission-email-cta" id="missionEmailCta" style="background:linear-gradient(135deg,#1e3a5f,#2d5a8e);border-radius:14px;padding:20px;margin:16px 0;text-align:center;">
+        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;">📩 学習記録を保存しませんか？</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.85);margin-bottom:14px;line-height:1.6;">メール登録で学習データをバックアップ。<br>週1回、あなたの弱点に合った学習ヒントもお届けします。</div>
+        <form id="missionEmailForm" onsubmit="return submitEmailForm(event)" style="display:flex;gap:8px;max-width:320px;margin:0 auto;">
+          <input type="email" id="missionEmailInput" placeholder="メールアドレス" required style="flex:1;padding:10px 14px;border:none;border-radius:8px;font-size:14px;outline:none;">
+          <button type="submit" style="padding:10px 18px;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700;color:#1e3a5f;background:#fbbf24;white-space:nowrap;">登録</button>
+        </form>
+        <div id="missionEmailSuccess" style="display:none;font-size:14px;color:#fbbf24;font-weight:700;padding:12px 0;">✅ 登録完了！</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.6);margin-top:8px;">登録は無料です。いつでも解除できます。<a href="/privacy/" style="color:rgba(255,255,255,0.8);">プライバシーポリシー</a></div>
+      </div>
       <button class="mission-close" onclick="closeMission()">スタートに戻る</button>
     </div>
   </div>
@@ -1251,6 +1261,19 @@ function closeMission() {
   document.getElementById('missionOverlay').classList.remove('show');
   goToStart();
 }
+
+function submitEmailForm(e) {
+  e.preventDefault();
+  var email = document.getElementById('missionEmailInput').value.trim();
+  if (!email) return false;
+  var ML_FORM_URL = '__MAILERLITE_FORM_ACTION__';
+  var ML_GROUP_ID = '__MAILERLITE_GROUP_ID__';
+  fetch(ML_FORM_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, groups: [ML_GROUP_ID] }) })
+    .then(function() { document.getElementById('missionEmailForm').style.display = 'none'; document.getElementById('missionEmailSuccess').style.display = 'block'; localStorage.setItem('listenup_email', email); })
+    .catch(function() { window.open(ML_FORM_URL + '?email=' + encodeURIComponent(email), '_blank'); document.getElementById('missionEmailForm').style.display = 'none'; document.getElementById('missionEmailSuccess').style.display = 'block'; localStorage.setItem('listenup_email', email); });
+  return false;
+}
+if (localStorage.getItem('listenup_email')) { var _ec = document.getElementById('missionEmailCta'); if (_ec) _ec.style.display = 'none'; }
 
 // ─────────────────────────────────────────
 // SHARE
