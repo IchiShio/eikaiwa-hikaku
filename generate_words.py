@@ -45,7 +45,7 @@ BATCH_STATE = REPO_ROOT / "words" / "batch_state.json"
 DEFAULT_MODEL = "claude-sonnet-4-6"
 MAX_TOKENS = 8192
 BATCH_SIZE = 25
-EXCLUDE_LIMIT = 5500
+EXCLUDE_LIMIT = 2000  # Batch APIのペイロードサイズ上限に注意
 
 AXIS_DESCRIPTIONS = {
     "meaning":  "meaning : 基本的な英単語の語義を問う（grateful=感謝している、reluctant=気が進まない 等）",

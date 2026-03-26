@@ -4217,6 +4217,27 @@ function showMissionComplete() {
     ctaTrack('cta_show', { service: 'default', placement: 'mission', accuracy: acc });
   }
 
+  // レベル別サブ推薦（axis推薦と異なるサービスを提案）
+  const LEVEL_SERVICES = [
+    { name: 'DMM英会話', desc: 'まずは安く始めよう・13,000教材で基礎固め', url: 'https://px.a8.net/svt/ejp?a8mat=4AXFOG+LFNBU+5Q2M+5YJRM' },
+    { name: 'DMM英会話', desc: 'まずは安く始めよう・13,000教材で基礎固め', url: 'https://px.a8.net/svt/ejp?a8mat=4AXFOG+LFNBU+5Q2M+5YJRM' },
+    { name: 'Cambly', desc: 'ネイティブ講師で本物の英語に触れる', url: 'https://px.a8.net/svt/ejp?a8mat=44WTZ2+TRP0Y+428Q+HVFKY' },
+    { name: 'Cambly', desc: 'ネイティブ講師で実践力を磨く', url: 'https://px.a8.net/svt/ejp?a8mat=44WTZ2+TRP0Y+428Q+HVFKY' },
+    { name: 'Bizmates', desc: 'ビジネス英語特化・この実力を仕事で活かす', url: 'https://px.a8.net/svt/ejp?a8mat=4AXJKA+3I7XSQ+2QEI+691UQ' },
+    { name: 'Bizmates', desc: 'トップレベルの英語力をビジネスで活かす', url: 'https://px.a8.net/svt/ejp?a8mat=4AXJKA+3I7XSQ+2QEI+691UQ' },
+  ];
+  const lvSvc = LEVEL_SERVICES[sessionLevel] || LEVEL_SERVICES[0];
+  const lvLabel = 'Lv.' + (sessionLevel + 1) + ' ' + LEVEL_DEFS[sessionLevel].name;
+  // axis推薦と異なるサービスの場合のみ表示
+  const axisSvcName = (rows.length >= 2 && SERVICE_BY_AXIS[rows[0].key]) ? SERVICE_BY_AXIS[rows[0].key].name : '';
+  if (lvSvc.name !== axisSvcName) {
+    const lvCard = document.createElement('div');
+    lvCard.className = 'mission-service-reason';
+    lvCard.style.cssText = 'margin-top:12px;padding:12px 16px;background:#f8f9fa;border-radius:10px;text-align:left;';
+    lvCard.innerHTML = '<div style="font-size:13px;font-weight:700;margin-bottom:4px;">🏆 ' + lvLabel + ' のあなたにおすすめ</div><div style="font-size:12px;color:#666;margin-bottom:6px;">' + lvSvc.name + ' — ' + lvSvc.desc + '</div><a href="' + lvSvc.url + '" target="_blank" rel="nofollow noopener" style="display:inline-block;padding:6px 16px;font-size:12px;font-weight:700;color:#fff;background:#6366F1;border-radius:8px;text-decoration:none;">詳しく見る</a>';
+    cardsEl.appendChild(lvCard);
+  }
+
   // クロスプロモカード（アフィリエイトCTAの後に追加）
   const missionBody = document.getElementById('missionServiceCards');
   if (missionBody) {

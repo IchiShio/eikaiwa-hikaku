@@ -661,6 +661,15 @@
     }
     .mission-close-btn:hover { filter: brightness(1.1); }
 
+    /* ── SERVICE CTA ── */
+    .mission-service-cta { margin-top: 20px; text-align: left; }
+    .mission-service-label { font-size: 14px; font-weight: 700; margin-bottom: 10px; text-align: center; }
+    .mission-cta-card { background: #fff; border-radius: 12px; padding: 16px; text-align: left; margin-bottom: 12px; border: 1px solid var(--border); }
+    .mission-cta-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .mission-cta-desc { font-size: 12px; color: var(--text-2); margin-bottom: 8px; }
+    .mission-cta-link { display: inline-block; padding: 8px 20px; font-size: 13px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 8px; text-decoration: none; }
+    .mission-ranking-link { display: block; text-align: center; margin-top: 8px; font-size: 12px; color: var(--text-2); }
+
     /* ── CROSS PROMO ── */
     .cross-promo-cards { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
     .cross-card-mini {
@@ -942,6 +951,12 @@
       </div>
     </div>
 
+    <div class="mission-service-cta" id="missionServiceCta" style="display:none;">
+      <div class="mission-service-label" id="missionServiceLabel"></div>
+      <div id="missionServiceCards"></div>
+      <a class="mission-ranking-link" href="/ranking/">全12サービスをランキングで比較する →</a>
+    </div>
+
     <div class="cross-promo-cards">
       <div class="cross-card-mini" style="border-left: 3px solid #F59E0B;">
         <div class="cross-card-title">&#127911; リスニング力もチェック</div>
@@ -1061,6 +1076,13 @@ var AXIS_USER_MSGS = {
   idiom:   'イディオム・慣用表現に慣れましょう。',
   nuance:  '似た単語の使い分けを意識しましょう。',
   context: '文脈から意味を推測する力を鍛えましょう。'
+};
+var SERVICE_BY_AXIS = {
+  meaning: { name: 'DMM英会話', desc: '13,000以上の教材で語彙を実践的に増やす', url: 'https://px.a8.net/svt/ejp?a8mat=4AXFOG+LFNBU+5Q2M+5YJRM' },
+  phrase:  { name: 'ネイティブキャンプ', desc: '回数無制限でフレーズを実践練習・7日間無料', url: 'https://px.a8.net/svt/ejp?a8mat=44WLF2+BW2OQA+35VG+6LWTE' },
+  idiom:   { name: 'Cambly', desc: 'ネイティブ講師とイディオムを実践で習得', url: 'https://px.a8.net/svt/ejp?a8mat=44WTZ2+TRP0Y+428Q+HVFKY' },
+  nuance:  { name: 'Bizmates', desc: 'ビジネス英語で微妙なニュアンスの違いを体得', url: 'https://px.a8.net/svt/ejp?a8mat=4AXJKA+3I7XSQ+2QEI+691UQ' },
+  context: { name: 'レアジョブ英会話', desc: '毎日25分・文脈理解を会話で鍛える・無料体験あり', url: 'https://px.a8.net/svt/ejp?a8mat=4AXFOG+JNCII+1SVU+686ZM' }
 };
 
 // ─────────────────────────────────────────
@@ -1724,6 +1746,30 @@ function showMissionComplete() {
 
   // Share card
   renderShareCard();
+
+  // Personalized service CTA
+  var ctaWrap = document.getElementById('missionServiceCta');
+  var cardsEl = document.getElementById('missionServiceCards');
+  var labelEl = document.getElementById('missionServiceLabel');
+  var withData = rows.filter(function(r) { return r.rate !== null; });
+  if (withData.length >= 2) {
+    var weakest = withData[0].key;
+    var svc = SERVICE_BY_AXIS[weakest];
+    if (svc) {
+      var acc = withData[0].rate;
+      labelEl.textContent = acc < 50
+        ? '\uD83D\uDD25 語彙力の壁を突破するなら'
+        : acc < 80
+        ? '\uD83D\uDCC8 弱点を克服する最短ルート'
+        : '\uD83C\uDFAF この語彙力、実践で活かそう！';
+      cardsEl.innerHTML = '<div class="mission-cta-card"><div class="mission-cta-title">\uD83D\uDCA1 ' + AXIS_USER_LABELS[weakest] + 'を伸ばすなら</div><div class="mission-cta-desc">' + svc.name + ' \u2014 ' + svc.desc + '</div><a class="mission-cta-link" href="' + svc.url + '" target="_blank" rel="nofollow noopener">無料体験する</a></div>';
+      ctaWrap.style.display = 'block';
+    }
+  } else {
+    labelEl.textContent = '\uD83C\uDFAF 語彙力を実践で活かそう';
+    cardsEl.innerHTML = '<div class="mission-cta-card"><div class="mission-cta-title">\uD83D\uDCA1 オンライン英会話で語彙を定着</div><div class="mission-cta-desc">DMM英会話 \u2014 13,000以上の教材で語彙を実践的に増やす</div><a class="mission-cta-link" href="https://px.a8.net/svt/ejp?a8mat=4AXFOG+LFNBU+5Q2M+5YJRM" target="_blank" rel="nofollow noopener">無料体験する</a></div>';
+    ctaWrap.style.display = 'block';
+  }
 
   document.getElementById('missionOverlay').classList.add('show');
 }
