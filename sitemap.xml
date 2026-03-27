@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://native-real.com/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://native-real.com/words/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://native-real.com/grammar/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://native-real.com/kioku-shinai/</loc>
+    <lastmod>2026-03-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
