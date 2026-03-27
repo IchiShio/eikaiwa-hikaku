@@ -486,7 +486,7 @@
       <div class="cross-card">
         <h3>文法がわかると、聞こえ方が変わる</h3>
         <p>構造が見えると、英語は聞き取れる。ListenUpで1,490問以上のリスニング問題に挑戦。</p>
-        <a href="/">ListenUpを試す</a>
+        <a href="/listening/">ListenUpを試す</a>
       </div>
       <div class="cross-card">
         <h3>語彙を「芋づる式」に増やす</h3>
@@ -496,7 +496,7 @@
     </div>
 
     <footer class="site-footer">
-      <div><a href="/">リスニングクイズ</a><a href="/grammar/">文法クイズ</a><a href="/ranking/">サービス比較</a><a href="/articles/">学習コラム</a><a href="/privacy/">プライバシーポリシー</a></div>
+      <div><a href="/listening/">リスニングクイズ</a><a href="/grammar/">文法クイズ</a><a href="/ranking/">サービス比較</a><a href="/articles/">学習コラム</a><a href="/privacy/">プライバシーポリシー</a></div>
       <div class="copy">&copy; 2026 native-real.com</div>
     </footer>
   </div>
@@ -1152,7 +1152,7 @@ function showAxisFeedback() {
   });
   // Inline cross promo (alternating)
   const promoTexts = [
-    '💡 リスニングも鍛えるなら → <a href="/" style="color:var(--gold);font-weight:700;">ListenUp</a>',
+    '💡 リスニングも鍛えるなら → <a href="/listening/" style="color:var(--gold);font-weight:700;">ListenUp</a>',
     '💡 語彙を増やすなら → <a href="/kioku-shinai/" style="color:#007AFF;font-weight:700;">記憶しない英単語</a>'
   ];
   const promoIdx = Math.floor((total / 5 - 1)) % promoTexts.length;
@@ -1278,7 +1278,7 @@ function showMissionComplete() {
   }
 
   // ListenUp cross promo
-  ctaWrap.innerHTML += '<div class="mission-cta-card"><div class="mission-cta-title">👂 リスニング力も鍛えよう</div><div class="mission-cta-desc">ListenUpでネイティブ英語の聞き取りに挑戦。1,490問+の無料クイズ。</div><a class="mission-cta-link" href="/" style="background:var(--gold)">ListenUpを始める</a></div>';
+  ctaWrap.innerHTML += '<div class="mission-cta-card"><div class="mission-cta-title">👂 リスニング力も鍛えよう</div><div class="mission-cta-desc">ListenUpでネイティブ英語の聞き取りに挑戦。1,490問+の無料クイズ。</div><a class="mission-cta-link" href="/listening/" style="background:var(--gold)">ListenUpを始める</a></div>';
 
   // kioku-shinai cross promo
   ctaWrap.innerHTML += '<div class="mission-cta-card"><div class="mission-cta-title">🧠 語彙を芋づる式に増やそう</div><div class="mission-cta-desc">文法がわかっても語彙が足りないと読めない。30の語根で600語をマスター。</div><a class="mission-cta-link" href="/kioku-shinai/" style="background:#007AFF;">記憶しない英単語を試す</a></div>';
