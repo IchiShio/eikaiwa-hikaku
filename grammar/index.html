@@ -220,6 +220,33 @@
     .cta-btn { display: inline-block; padding: 14px 36px; font-size: 16px; font-weight: 700; color: #fff; background: var(--gold); border: none; border-radius: 28px; cursor: pointer; transition: all var(--t); min-height: 48px; }
     .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px var(--gold-glow); }
 
+    /* ── FEATURE STRIP ── */
+    .feature-strip {
+      display: flex; align-items: stretch; justify-content: center; flex-wrap: wrap; gap: 0;
+      background: rgba(0,0,0,0.03); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .feature-item { display: flex; align-items: center; gap: 16px; padding: 24px 36px; border-right: 1px solid var(--border); }
+    .feature-item:last-child { border-right: none; }
+    .feature-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.14);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold);
+    }
+    .feature-icon svg { width: 22px; height: 22px; }
+    .feature-text strong { display: block; font-size: 15px; font-weight: 700; color: var(--text-1); line-height: 1.4; }
+    @media (max-width: 600px) {
+      .feature-strip { flex-direction: column; }
+      .feature-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .feature-item:last-child { border-bottom: none; }
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip { display: flex; justify-content: center; gap: 0; padding: 32px 0; }
+    .stat-item { text-align: center; padding: 0 40px; }
+    .stat-num { font-size: 36px; font-weight: 800; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: 13px; color: var(--text-3); margin-top: 4px; }
+    .stat-divider { width: 1px; background: var(--border); }
+
     /* ── QUIZ VIEW ── */
     .quiz-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; max-width: 720px; margin: 0 auto; }
     .quiz-counter { font-size: 14px; font-weight: 700; color: var(--text-2); }
@@ -404,7 +431,7 @@
   <div class="screen active" id="startScreen">
     <div class="start-hero">
       <h1>英文法の学び直し —<br><span class="accent">クイズで体に染み込ませる</span></h1>
-      <p class="sub">参考書を読んでも、テストで解けない。<br>「わかる」と「使える」の間には、反復が必要です。<br>896問を繰り返すうちに、正解が見える目が育ちます。</p>
+      <p class="sub">参考書を読んでも、テストで解けない。<br>「わかる」と「使える」の間には、反復が必要です。<br>1,005問を繰り返すうちに、正解が見える目が育ちます。</p>
 
       <div class="stem-mockup">
         <div class="stem-mockup-label">Example</div>
@@ -441,7 +468,53 @@
         <button class="qm-btn" data-mode="revenge" onclick="selectMode('revenge')">リベンジ</button>
       </div>
 
-      <button class="cta-btn" id="freeTrialBtn" onclick="beginQuiz()">無料で始める</button>
+      <button class="cta-btn" id="freeTrialBtn" onclick="beginQuiz()">無料で文法力を試す</button>
+    </div>
+
+    <!-- Feature Strip -->
+    <div class="feature-strip">
+      <div class="feature-item">
+        <span class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </span>
+        <div class="feature-text"><strong>TOEIC・英検対応</strong></div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+        </span>
+        <div class="feature-text"><strong>5段階アダプティブ出題</strong></div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <div class="feature-text"><strong>5軸弱点自動分析</strong></div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon" style="background:rgba(245,166,35,0.08);border-color:rgba(245,166,35,0.16);color:#D97706">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        </span>
+        <div class="feature-text"><strong>1,005問 完全無料</strong></div>
+      </div>
+    </div>
+
+    <!-- Stats Strip -->
+    <div class="stats-strip">
+      <div class="stat-item">
+        <div class="stat-num">1,005</div>
+        <div class="stat-label">収録問題</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">段階レベル</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">軸弱点分析</div>
+      </div>
     </div>
 
     <!-- SEO Article Content -->
