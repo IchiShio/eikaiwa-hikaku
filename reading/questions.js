@@ -641,7 +641,7 @@ const DATA = [
     answer:"ストレスが増え、仕事の満足度が低くなる可能性がある",
     choices:["給与が自動的に上がる", "ストレスが増え、仕事の満足度が低くなる可能性がある", "昇進の機会が必ず得られる", "同僚からの信頼が自動的に得られる"],
     expl:"パッセージは「Good time management also reduces stress and improves job satisfaction」と述べており、逆に言えば時間管理が悪いとストレスが増え満足度が低くなることが推測できる。",
-    kp:["reduces stress and improves job satisfaction"] }
+    kp:["reduces stress and improves job satisfaction"] },
 
   // ── lv2 (131問) ─────────────────────────
   { id:"rp_arts_03_1", pid:"arts_03", diff:"lv2", axis:"main_idea",
@@ -1690,7 +1690,7 @@ const DATA = [
     answer:"従業員の離職率の低下と職場文化の改善",
     choices:["社員の給与の自動上昇", "従業員の離職率の低下と職場文化の改善", "社員数の急速な増加", "営業成績の保証"],
     expl:"「Organizations with active mentorship programs often see higher employee retention rates and improved workplace culture」と明示されている。",
-    kp:["higher employee retention rates and improved workplace culture"] }
+    kp:["higher employee retention rates and improved workplace culture"] },
 
   // ── lv3 (157問) ─────────────────────────
   { id:"rp_arts_06_1", pid:"arts_06", diff:"lv3", axis:"main_idea",
@@ -2947,7 +2947,7 @@ const DATA = [
     answer:"従業員が自由に意見を述べられず、創造性と学習が阻害される",
     choices:["給与が自動的に上がる", "従業員が自由に意見を述べられず、創造性と学習が阻害される", "チームの効率性が必ず向上する", "社員の定着率が必ず高くなる"],
     expl:"「environments where fear of judgment predominates tend to suppress creativity and hinder organizational learning」と述べられており、恐怖心がある環境では創造性と組織学習が抑制される。",
-    kp:["fear of judgment predominates tend to suppress creativity and hinder organizational learning"] }
+    kp:["fear of judgment predominates tend to suppress creativity and hinder organizational learning"] },
 
   // ── lv4 (70問) ─────────────────────────
   { id:"rp_arts_09_1", pid:"arts_09", diff:"lv4", axis:"main_idea",
@@ -3508,7 +3508,7 @@ const DATA = [
     answer:"複雑な問題に対して、複数の視点の正当性を認めつつ、構造的な改善の必要性を指摘している",
     choices:["「クワイエットクイッティング」は完全に非難すべき現象だと主張している", "複雑な問題に対して、複数の視点の正当性を認めつつ、構造的な改善の必要性を指摘している", "使用者の権利のみを支持している", "社員の権利のみを支持している"],
     expl:"著者は「some view this as... others contend that...」で異なる見方を提示し、その上で「dichotomy underscores fundamental tensions」と構造的な問題点を指摘している。複数の視点を認めつつ、システム変革の必要性を示唆している。",
-    kp:["some view this as... others contend that", "fundamental tensions"] }
+    kp:["some view this as... others contend that", "fundamental tensions"] },
 
   // ── lv5 (82問) ─────────────────────────
   { id:"rp_arts_10_1", pid:"arts_10", diff:"lv5", axis:"main_idea",
