@@ -270,10 +270,10 @@
     /* ── HERO ── */
     .lp-hero {
       min-height: calc(100svh - 54px);
-      display: flex; align-items: center; justify-content: center;
+      display: flex; flex-direction: column; align-items: center;
       text-align: center; padding: 64px 20px 80px;
     }
-    .lp-hero-inner { max-width: 720px; margin: 0 auto; }
+    .lp-hero-inner { max-width: 720px; margin: auto; width: 100%; }
 
     .hero-eyebadge {
       display: inline-flex; align-items: center; gap: 6px;
@@ -578,7 +578,7 @@
   <div class="lp-hero-inner">
     <div class="hero-eyebadge">English Reading · Free Quiz</div>
     <h1 class="hero-h1">英語読解 —<br><span class="text-blue">読んで、理解して、伸びる</span></h1>
-    <p class="hero-sub">英文を読んで4択で答えるだけ。<br>語彙・文法・文脈を一度に鍛える読解クイズ。</p>
+    <p class="hero-sub">3〜5文の英文を読んで4択で答えるだけ。<br>主旨・推論・語彙・詳細・トーン——5つの軸で本物の読解力を養う。</p>
 
     <!-- Returning user stats (shown via JS) -->
     <div class="returning-stats" id="returningStats">
@@ -599,14 +599,14 @@
       </div>
       <div class="hm-body">
         <div class="hm-passage">
-          She was <mark>reluctant</mark> to speak in front of the group, even though she knew the answer.
+          Many cities are investing in public transportation to reduce traffic congestion. Studies show that when bus and rail networks improve, more people choose to leave their cars at home.
         </div>
-        <div class="hm-q">"reluctant" の意味として正しいものは？</div>
+        <div class="hm-q">このパッセージの主旨として最も適切なものは？</div>
         <div class="hm-opts">
-          <div class="hm-opt">① 喜んで</div>
-          <div class="hm-opt hm-opt-correct">② 気が進まない ✓</div>
-          <div class="hm-opt">③ 驚いて</div>
-          <div class="hm-opt">④ 急いで</div>
+          <div class="hm-opt">① 車の利用をやめるべきだ</div>
+          <div class="hm-opt hm-opt-correct">② 交通網の充実が車離れにつながる ✓</div>
+          <div class="hm-opt">③ 都市は研究予算を増やすべきだ</div>
+          <div class="hm-opt">④ 渋滞は解決できない問題だ</div>
         </div>
       </div>
     </div>
@@ -642,14 +642,14 @@
     <span class="feature-icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
     </span>
-    <div class="feature-text"><strong><span id="featQCount">50</span>問 完全無料</strong><span>登録・広告なし</span></div>
+    <div class="feature-text"><strong><span id="featQCount">520</span>問 完全無料</strong><span>登録・広告なし</span></div>
   </div>
 </div>
 
 <!-- ── STATS STRIP ── -->
 <div class="stats-strip reveal">
   <div class="stat-item">
-    <div class="stat-num" id="statQ">50</div>
+    <div class="stat-num" id="statQ">520</div>
     <div class="stat-label">収録問題数</div>
   </div>
   <div class="stat-divider"></div>
@@ -659,8 +659,8 @@
   </div>
   <div class="stat-divider"></div>
   <div class="stat-item">
-    <div class="stat-num">2</div>
-    <div class="stat-label">問題タイプ（語彙・文法）</div>
+    <div class="stat-num">5</div>
+    <div class="stat-label">読解軸（主旨・推論・語彙・詳細・トーン）</div>
   </div>
 </div>
 
