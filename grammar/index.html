@@ -356,6 +356,12 @@
     .cross-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
     .cross-card p { font-size: 13px; color: var(--text-2); margin-bottom: 12px; }
     .cross-card a { display: inline-block; padding: 10px 24px; font-size: 14px; font-weight: 700; color: #fff; background: var(--teal); border-radius: 10px; text-decoration: none; }
+    /* ── CROSS PROMO CARDS (mission modal) ── */
+    .cross-promo-cards { margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
+    .cross-card-mini { background: #fff; border-radius: 12px; padding: 14px 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .cross-card-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .cross-card-desc { font-size: 12px; color: rgba(0,0,0,0.6); margin-bottom: 10px; line-height: 1.5; }
+    .cross-card-link { display: inline-block; padding: 8px 20px; font-size: 13px; font-weight: 700; color: #fff; border-radius: 8px; text-decoration: none; }
 
     /* ── FOOTER ── */
     .site-footer { text-align: center; padding: 32px 20px; border-top: 1px solid var(--border); margin-top: 48px; }
@@ -632,6 +638,23 @@
       <div class="axis-bars" id="missionAxisBars" style="margin-bottom:16px;"></div>
       <div id="missionShareCard"></div>
       <div class="mission-cta-wrap" id="missionCtaWrap"></div>
+      <div class="cross-promo-cards">
+        <div class="cross-card-mini" style="border-left: 3px solid #F59E0B;">
+          <div class="cross-card-title">🎧 リスニング力もチェック</div>
+          <div class="cross-card-desc">文法がわかっても聴き取れなければ意味がない。ListenUpで1,000問+に挑戦。</div>
+          <a class="cross-card-link" href="/listening/" style="background:#F59E0B;">ListenUpを試す</a>
+        </div>
+        <div class="cross-card-mini" style="border-left: 3px solid #6366F1;">
+          <div class="cross-card-title">📖 語彙も同時に鍛える</div>
+          <div class="cross-card-desc">聞き取れる単語を増やすと英語が格段に楽になる。WordsUpで頻出1000語に挑戦。</div>
+          <a class="cross-card-link" href="/words/" style="background:#6366F1;">WordsUpを試す</a>
+        </div>
+        <div class="cross-card-mini" style="border-left: 3px solid #007AFF;">
+          <div class="cross-card-title">🧠 語彙を芋づる式に</div>
+          <div class="cross-card-desc">30の語根で600語が読める。語源から覚えるから、忘れない。</div>
+          <a class="cross-card-link" href="/kioku-shinai/" style="background:#007AFF;">記憶しない英単語を試す</a>
+        </div>
+      </div>
       <div class="mission-email-cta" id="missionEmailCta" style="background:linear-gradient(135deg,#1e3a5f,#2d5a8e);border-radius:14px;padding:20px;margin:16px 0;text-align:center;">
         <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;">📩 学習記録を保存しませんか？</div>
         <div style="font-size:12px;color:rgba(255,255,255,0.85);margin-bottom:14px;line-height:1.6;">メール登録で学習データをバックアップ。<br>週1回、あなたの弱点に合った学習ヒントもお届けします。</div>
