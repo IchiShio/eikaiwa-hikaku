@@ -178,7 +178,8 @@ img{max-width:100%;height:auto;}
 .phrase-card-keyword{font-size:0.78rem;font-weight:700;color:var(--accent-dark);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
 .phrase-card-title{font-size:0.97rem;font-weight:700;margin-bottom:6px;color:var(--text);}
 .phrase-card-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.6;}
-@media(max-width:768px){.phrases-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.phrases-grid{grid-template-columns:1fr;}.cat-grid{grid-template-columns:repeat(3,1fr)!important;}}
+@media(max-width:480px){.cat-grid{grid-template-columns:repeat(2,1fr)!important;}}
 @media(min-width:640px) and (max-width:1023px){.phrases-grid{grid-template-columns:repeat(2,1fr);}}
 
   </style>
@@ -236,6 +237,33 @@ img{max-width:100%;height:auto;}
   </div>
 </section>
 <div class="container">
+  <div class="cat-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:28px 0 8px;">
+    <a href="/real-phrases/slang/" style="display:block;background:#f0fdf4;border:1.5px solid #6ee7b7;border-radius:10px;padding:14px 16px;text-decoration:none;text-align:center;">
+      <div style="font-size:1.3rem;margin-bottom:4px;">🤙</div>
+      <div style="font-size:0.85rem;font-weight:700;color:#059669;">英語スラング</div>
+      <div style="font-size:0.75rem;color:#6b7280;margin-top:2px;">27選</div>
+    </a>
+    <a href="/real-phrases/cool/" style="display:block;background:#faf5ff;border:1.5px solid #c084fc;border-radius:10px;padding:14px 16px;text-decoration:none;text-align:center;">
+      <div style="font-size:1.3rem;margin-bottom:4px;">✨</div>
+      <div style="font-size:0.85rem;font-weight:700;color:#9333ea;">かっこいいフレーズ</div>
+      <div style="font-size:0.75rem;color:#6b7280;margin-top:2px;">25選</div>
+    </a>
+    <a href="/real-phrases/business/" style="display:block;background:#eff6ff;border:1.5px solid #93c5fd;border-radius:10px;padding:14px 16px;text-decoration:none;text-align:center;">
+      <div style="font-size:1.3rem;margin-bottom:4px;">💼</div>
+      <div style="font-size:0.85rem;font-weight:700;color:#2563eb;">ビジネス英語</div>
+      <div style="font-size:0.75rem;color:#6b7280;margin-top:2px;">20選</div>
+    </a>
+    <a href="/real-phrases/sns/" style="display:block;background:#fff7ed;border:1.5px solid #fdba74;border-radius:10px;padding:14px 16px;text-decoration:none;text-align:center;">
+      <div style="font-size:1.3rem;margin-bottom:4px;">📱</div>
+      <div style="font-size:0.85rem;font-weight:700;color:#ea580c;">SNS英語</div>
+      <div style="font-size:0.75rem;color:#6b7280;margin-top:2px;">20選</div>
+    </a>
+    <a href="/real-phrases/reaction/" style="display:block;background:#fef2f2;border:1.5px solid #fca5a5;border-radius:10px;padding:14px 16px;text-decoration:none;text-align:center;">
+      <div style="font-size:1.3rem;margin-bottom:4px;">😮</div>
+      <div style="font-size:0.85rem;font-weight:700;color:#dc2626;">リアクション</div>
+      <div style="font-size:0.75rem;color:#6b7280;margin-top:2px;">20選</div>
+    </a>
+  </div>
   <div class="phrases-grid">
     <a href="/real-phrases/a-big-deal/" class="phrase-card">
   <div class="phrase-card-keyword">Big deal 意味</div>
