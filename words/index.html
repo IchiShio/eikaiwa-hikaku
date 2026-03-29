@@ -1852,11 +1852,11 @@ function submitEmailForm(e) {
   e.preventDefault();
   var email = document.getElementById('missionEmailInput').value.trim();
   if (!email) return false;
-  var ML_FORM_URL = '__MAILERLITE_FORM_ACTION__';
-  var ML_GROUP_ID = '__MAILERLITE_GROUP_ID__';
-  fetch(ML_FORM_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, groups: [ML_GROUP_ID] }) })
+  var ML_GROUP_ID = '183233023152489636';
+  var ML_API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZmRiMTAzODJiZDVmYzEzZDgxZTVmODUxMDMxY2U1N2I1OTdiMmQ1NmMyNGQxYjZkMzk5N2FhODI4YWQxNzQyYjc3YTI3N2M3NTI1YjI4MGUiLCJpYXQiOjE3NzQ3NDQ3MTAuMTM1MDEzLCJuYmYiOjE3NzQ3NDQ3MTAuMTM1MDE1LCJleHAiOjQ5MzA0MTgzMTAuMTI4Njc5LCJzdWIiOiIyMjQ1MTU5Iiwic2NvcGVzIjpbXX0.d2Zmb-eUHkWvkBHdRFHP7tlfyt9-eJLUhxkrAcmobPT6kiYS6ErwfkDdPA1HUE1OvCZMDRbctuhn1nD5Hkc2-20AVYI85HYeGs2KeCzzzmlzUWXjoLq92yv6XL37BgeDlj9ZYKEMWG7YszNr1V9o4_QIr-tT_5NTVbCFP_HwV0H-dzUCBCUcsdoENt7N97pLA74Y4LLpJsQXS0SrjlQ_QY6tF1MT92jVr4_i-oPZN2_kwvfFJue5Z-_-qfTAGhC83M33FmZs4DJkTOkFkK7jYx1Qfh1mvwy2zgYihm7SulnDUVkLT_N-ZCJEc_vFqcXMGEpafk4xtNBfwnscB0wbM0fI7FoaL6qd_Dkf7UKphHI_HNuzRn8yxSOQWD9ISIGVfhoqmYuKRd1F3zCgAsP6NfYPGUgHPmhqmeiL12megwFgST7VnyAzw36Z4nLPhn_indqQ0PnKmY1fdpml91ez_tQmL-KHBTQbDiKHzQ8ND_FEBTp_ugqX69m-1B1wLrhgoe-xkTVi8ZJaxXPtEao84EW8gaHuep-d5DqBbyeV9mh5ovoJaK_9ZboXzO-OAAekCW1LX06BQPfb25hr7y27t7zDNr3HCkr7m0qBUequMBKsQ7Gwr1pVb2i50Mlk6DPv9QHeyx27EXaoY62yD4ttKLvg41L1gW4vkh_4IWvsA';
+  fetch('https://connect.mailerlite.com/api/subscribers', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + ML_API_KEY }, body: JSON.stringify({ email: email, groups: [ML_GROUP_ID] }) })
     .then(function() { document.getElementById('missionEmailForm').style.display = 'none'; document.getElementById('missionEmailSuccess').style.display = 'block'; localStorage.setItem('listenup_email', email); })
-    .catch(function() { window.open(ML_FORM_URL + '?email=' + encodeURIComponent(email), '_blank'); document.getElementById('missionEmailForm').style.display = 'none'; document.getElementById('missionEmailSuccess').style.display = 'block'; localStorage.setItem('listenup_email', email); });
+    .catch(function() { document.getElementById('missionEmailForm').style.display = 'none'; document.getElementById('missionEmailSuccess').style.display = 'block'; localStorage.setItem('listenup_email', email); });
   return false;
 }
 if (localStorage.getItem('listenup_email')) { var _ec = document.getElementById('missionEmailCta'); if (_ec) _ec.style.display = 'none'; }
